@@ -10,16 +10,7 @@
 <div class="intent"><input id="intent" placeholder="What are you trying to do? Try: clean a URL, compare text, plan KYC remediation…"><button class="btn" onclick="routeIntent()">Find tool</button></div><div id="intentResult" class="privacy">✓ Core tools process your inputs locally in this browser.</div></div></section>
 <section class="section" id="tools"><div class="wrap"><h2>Tool workspaces</h2><p class="sub">Start with the task. IntelliTools keeps the interface familiar as the problem changes.</p>
 <div class="categories"><div class="cat"><span class="tag">LINKS & WEB</span><h3>Clean & inspect</h3><p>Remove tracking parameters and understand what was stripped.</p></div><div class="cat"><span class="tag">TEXT</span><h3>Clean & compare</h3><p>Normalize messy text or identify exact differences.</p></div><div class="cat"><span class="tag">PRODUCTIVITY</span><h3>Decide & plan</h3><p>Structure decisions using weighted criteria.</p></div><div class="cat" id="compliance"><span class="tag">COMPLIANCE & AML</span><h3>Calculate & document</h3><p>Practical KYC, ownership, QA and remediation utilities.</p></div></div>
-<div class="tools">
-<div class="toolcard"><span class="tag">Links</span><h3>URL Cleaner</h3><p>Strip common tracking parameters while preserving the destination.</p><button class="btn alt" onclick="openTool('url')">Open</button></div>
-<div class="toolcard"><span class="tag">Text</span><h3>Text Cleaner</h3><p>Fix whitespace, line breaks and casing without uploading text.</p><button class="btn alt" onclick="openTool('text')">Open</button></div>
-<div class="toolcard"><span class="tag">Text</span><h3>Compare Text</h3><p>Find additions and removals between two versions.</p><button class="btn alt" onclick="openTool('compare')">Open</button></div>
-<div class="toolcard"><span class="tag">Productivity</span><h3>Decision Matrix</h3><p>Compare options against weighted criteria transparently.</p><button class="btn alt" onclick="openTool('decision')">Open</button></div>
-<div class="toolcard"><span class="tag">Compliance</span><h3>KYC Remediation Planner</h3><p>Translate a remediation population and deadline into capacity needs.</p><button class="btn alt" onclick="openTool('remediation')">Open</button></div>
-<div class="toolcard"><span class="tag">Compliance</span><h3>UBO Ownership Calculator</h3><p>Calculate direct ownership and flag holdings over your chosen threshold.</p><button class="btn alt" onclick="openTool('ubo')">Open</button></div>
-<div class="toolcard"><span class="tag">Compliance</span><h3>KYC QA Checker</h3><p>Run a configurable file-quality checklist and capture remediation gaps.</p><button class="btn alt" onclick="openTool('qa')">Open</button></div>
-</div>
-<div id="workspace" class="workspace"></div>
+<div class="tools" id="toolCatalog"></div>\n<div id="workspace" class="workspace"></div>
 </div></section>
 <section class="section" id="about"><div class="wrap"><h2>Built around useful outcomes</h2><p class="sub">No account is required for these v1 tools. Inputs remain in your browser. Compliance utilities are workflow aids and do not replace applicable law, regulation, policy, screening systems or professional judgment.</p></div></section></main>
-<footer><div class="wrap">© 2026 IntelliTools.online · Browser-first utilities · v1</div></footer><script src="app.js"></script></body></html>
+<footer><div class="wrap">© 2026 IntelliTools.online · 24 browser-first launch tools · v1</div></footer><script src="tools.js"></script></body></html>
