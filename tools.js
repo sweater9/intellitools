@@ -55,3 +55,17 @@ function routeIntent(){let q=$("#intent").value.toLowerCase(),m=tools.find(t=>t.
 document.addEventListener("DOMContentLoaded",renderCatalog);
 function copyResult(){const e=$("#out .result");if(e&&navigator.clipboard)navigator.clipboard.writeText(e.innerText)}
 const _result=result;result=function(x){_result(x);const o=$("#out");if(o&&o.querySelector(".result"))o.insertAdjacentHTML("beforeend",'<div class="actions"><button class="btn alt" onclick="copyResult()">Copy result</button></div>')};
+
+function downloadResult(){
+ const e=$("#out .result"); if(!e)return;
+ const blob=new Blob([e.innerText],{type:"text/plain;charset=utf-8"});
+ const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="intellitools-result.txt";a.click();URL.revokeObjectURL(a.href);
+}
+function clearWorkspace(){
+ document.querySelectorAll("#workspace input").forEach(x=>{if(x.type==="checkbox")x.checked=false;else x.value=""});
+ document.querySelectorAll("#workspace textarea").forEach(x=>x.value="");
+ const o=$("#out");if(o)o.innerHTML="";
+}
+const _result2=result;result=function(x){
+ _result2(x);const o=$("#out");if(o&&!o.querySelector(".export-actions"))o.insertAdjacentHTML("beforeend",'<div class="actions export-actions"><button class="btn alt" onclick="downloadResult()">Download .txt</button><button class="btn alt" onclick="clearWorkspace()">Clear</button></div>');
+};
