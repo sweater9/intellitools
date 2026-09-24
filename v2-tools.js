@@ -11,7 +11,8 @@ const v2Tools=[
   ["pdf-studio","Files & PDF","Private PDF Tools","Merge, split, rotate or optimize PDFs without uploading sensitive documents."],
   ["signature-studio","Business","Email Signature Builder","Design a polished signature with live preview and copy production-ready HTML."],
   ["qr-studio","Links & Web","QR Studio","Generate QR codes for URLs, text, Wi-Fi and contacts, or read one from an image or camera."],
-  ["budget-studio","Money & Calculators","Envelope Budget","Plan a zero-based monthly budget, monitor categories and export your data."]
+  ["budget-studio","Money & Calculators","Envelope Budget","Plan a zero-based monthly budget, monitor categories and export your data."],
+  ["ai-prompt-builder","Productivity","AI Prompt Builder","Turn a rough idea into a clear, structured AI prompt with guided CRISPE sections."]
 ];
 tools.push(...v2Tools);
 const v2Ids=new Set(v2Tools.map(t=>t[0]));
@@ -46,6 +47,7 @@ openTool=function(id){
   if(id==="signature-studio")updateSignature();
   if(id==="qr-studio")initQR();
   if(id==="budget-studio")renderBudget();
+  if(id==="ai-prompt-builder")initPromptBuilder();
 };
 
 function v2Template(id){
@@ -60,6 +62,7 @@ function v2Template(id){
   if(id==="pdf-studio")return pdfTemplate();
   if(id==="signature-studio")return signatureTemplate();
   if(id==="qr-studio")return qrTemplate();
+  if(id==="ai-prompt-builder")return promptBuilderTemplate();
   return budgetTemplate();
 }
 const input=(id,label,value="",type="text",extra="")=>'<div class="field"><label for="'+id+'">'+label+'</label><input id="'+id+'" type="'+type+'" value="'+esc(value)+'" '+extra+'></div>';
@@ -349,3 +352,40 @@ $("#categoryFilter")?.addEventListener("change",()=>document.querySelectorAll(".
 document.addEventListener("keydown",e=>{if(e.key==="/"&&!/input|textarea|select/i.test(document.activeElement.tagName)){e.preventDefault();location.hash="tools";$("#toolSearch")?.focus()}});
 renderCatalog();
 if("serviceWorker"in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));
+
+function promptBuilderTemplate(){
+ const sections=[
+  ["C","Capacity & Role","What expertise or role should the AI take?","You are an experienced product strategist..."],
+  ["R","Request","What exactly do you want the AI to do?","Create a launch plan for..."],
+  ["I","Insight & Context","What background information will help?","The audience is... The constraints are..."],
+  ["S","Steps & Process","How should the AI approach the task?","First analyze..., then compare..., finally..."],
+  ["P","Personality","What tone and style should the response use?","Clear, concise, practical and professional."],
+  ["E","Experiment & Output","What should the final output look like?","Return a table followed by three recommendations..."]
+ ];
+ return '<div class="grid2"><div><div class="result"><strong>Build with CRISPE</strong><br><span class="note">Complete the six guided sections. Everything stays in this browser.</span></div>'+
+ sections.map(s=>'<div class="field"><label for="prompt'+s[0]+'"><strong>'+s[0]+'</strong> — '+s[1]+'</label><textarea id="prompt'+s[0]+'" rows="3" placeholder="'+s[3]+'" oninput="updatePromptBuilder()"></textarea><small class="note">'+s[2]+'</small></div>').join("")+
+ '<div class="actions"><button class="btn" type="button" onclick="copyBuiltPrompt()">Copy prompt</button><button class="btn alt" type="button" onclick="downloadBuiltPrompt()">Download .txt</button><button class="btn alt" type="button" onclick="clearPromptBuilder()">Clear</button></div></div>'+
+ '<div><div class="metricgrid"><div class="metric"><small>Sections complete</small><strong id="promptComplete">0/6</strong></div><div class="metric"><small>Prompt quality</small><strong id="promptQuality">Start</strong></div></div><h3>Live prompt preview</h3><div id="promptPreview" class="result" style="white-space:pre-wrap;min-height:320px"></div><div id="promptHints" class="note"></div></div></div>';
+}
+function promptBuilderData(){
+ const out={};["C","R","I","S","P","E"].forEach(k=>out[k]=document.getElementById("prompt"+k)?.value||"");return out;
+}
+function assembledPrompt(d){
+ const labels={C:"CAPACITY & ROLE",R:"REQUEST",I:"INSIGHT & CONTEXT",S:"STEPS & PROCESS",P:"PERSONALITY",E:"EXPERIMENT & OUTPUT"};
+ return ["C","R","I","S","P","E"].filter(k=>d[k].trim()).map(k=>labels[k]+"\n"+d[k].trim()).join("\n\n");
+}
+function updatePromptBuilder(){
+ const d=promptBuilderData();saveJSON("ai-prompt-builder",d);
+ const filled=Object.values(d).filter(v=>v.trim()).length,total=Object.values(d).join(" ").trim().length;
+ const preview=document.getElementById("promptPreview");if(preview)preview.textContent=assembledPrompt(d)||"Your structured prompt will appear here as you type.";
+ const complete=document.getElementById("promptComplete");if(complete)complete.textContent=filled+"/6";
+ const quality=document.getElementById("promptQuality");if(quality)quality.textContent=filled===6&&total>240?"Strong":filled>=4?"Good":filled>=2?"Building":"Start";
+ const hints=[];if(!d.R.trim())hints.push("Add a specific request.");if(!d.I.trim())hints.push("Add useful context or constraints.");if(!d.E.trim())hints.push("Specify the desired output format.");
+ const h=document.getElementById("promptHints");if(h)h.textContent=hints.length?"Quality check: "+hints.join(" "):"Quality check: all six CRISPE components are present.";
+}
+function initPromptBuilder(){
+ const d=loadJSON("ai-prompt-builder",{});["C","R","I","S","P","E"].forEach(k=>{const el=document.getElementById("prompt"+k);if(el)el.value=d[k]||""});updatePromptBuilder();
+}
+async function copyBuiltPrompt(){const t=assembledPrompt(promptBuilderData());if(!t)return;await navigator.clipboard.writeText(t);const h=document.getElementById("promptHints");if(h)h.textContent="Prompt copied to clipboard."}
+function downloadBuiltPrompt(){const t=assembledPrompt(promptBuilderData());if(t)downloadBlob(new Blob([t],{type:"text/plain"}),"intellitools-ai-prompt.txt")}
+function clearPromptBuilder(){if(!confirm("Clear all six prompt sections?"))return;localStorage.removeItem("it.v2.ai-prompt-builder");["C","R","I","S","P","E"].forEach(k=>{const el=document.getElementById("prompt"+k);if(el)el.value=""});updatePromptBuilder()}
