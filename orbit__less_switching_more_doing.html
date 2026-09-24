@@ -378,7 +378,9 @@
       .app-preview { transform: none; }
     }
   </style>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6129942955275199"\n     crossorigin="anonymous"></script>\n</head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6129942955275199"
+     crossorigin="anonymous"></script>
+</head>
 
 <body>
   <a href="#main" class="skip-link">Skip to content</a>
@@ -810,9 +812,12 @@ if (action === "upper") textInput.value = value.toUpperCase();
           if (action === "lower") textInput.value = value.toLowerCase();
           if (action === "clean") {
             // Preserve line breaks while normalizing horizontal whitespace.
-            textInput.value = value.split("\n")
-              .map(line => line.replace(/[^\S\r\n]+/gu, " ").trim())
-              .join("\n").trim();
+            textInput.value = value.split("
+")
+              .map(line => line.replace(/[^\S\r
+]+/gu, " ").trim())
+              .join("
+").trim();
           }
 
 updateStats();
