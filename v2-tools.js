@@ -1,5 +1,6 @@
 /* IntelliTools v2 workspaces — all processing is local to the browser. */
 const v2Tools=[
+  ["ai-prompt-builder","Productivity","AI Prompt Builder","Turn a rough idea into a clear, structured AI prompt with guided CRISPE sections."],
   ["invoice-studio","Business","Invoice & Receipt Studio","Create professional invoices or receipts with tax, logo, currency, live preview and export."],
   ["image-studio","Images & Design","Image Studio","Convert, resize and compress images or generate a complete favicon pack."],
   ["color-studio","Images & Design","Gradient & Color Studio","Build CSS gradients and generate accessible palettes from a color or image."],
@@ -11,8 +12,7 @@ const v2Tools=[
   ["pdf-studio","Files & PDF","Private PDF Tools","Merge, split, rotate or optimize PDFs without uploading sensitive documents."],
   ["signature-studio","Business","Email Signature Builder","Design a polished signature with live preview and copy production-ready HTML."],
   ["qr-studio","Links & Web","QR Studio","Generate QR codes for URLs, text, Wi-Fi and contacts, or read one from an image or camera."],
-  ["budget-studio","Money & Calculators","Envelope Budget","Plan a zero-based monthly budget, monitor categories and export your data."],
-  ["ai-prompt-builder","Productivity","AI Prompt Builder","Turn a rough idea into a clear, structured AI prompt with guided CRISPE sections."]
+  ["budget-studio","Money & Calculators","Envelope Budget","Plan a zero-based monthly budget, monitor categories and export your data."]
 ];
 tools.push(...v2Tools);
 const v2Ids=new Set(v2Tools.map(t=>t[0]));
