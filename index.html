@@ -4,95 +4,43 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#5746e8">
-  <meta name="description" content="IntelliTools.online — private, browser-based tools for documents, images, text, productivity, money and everyday work.">
+  <meta name="description" content="IntelliTools — private, browser-based tools for documents, images, text, productivity, money and everyday work.">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="v2.css">
-  <title>IntelliTools.online — Everyday tools. One private workspace.</title>
+  <title>IntelliTools — Less switching. More doing.</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6129942955275199" crossorigin="anonymous"></script>
 </head>
 <body>
   <a class="skip" href="#tools">Skip to tools</a>
-  <header>
-    <div class="wrap">
-      <nav aria-label="Main navigation">
-        <a class="brand" href="#top" aria-label="IntelliTools home"><span>Intelli</span>Tools<small>.online</small></a>
-        <div class="navlinks"><a href="#tools">All tools</a><a href="#popular">Popular</a><a href="#privacy">Privacy</a></div>
-        <button class="nav-search" type="button" onclick="document.querySelector('#toolSearch').focus();location.hash='tools'">Find a tool <kbd>/</kbd></button>
-      </nav>
-    </div>
-  </header>
+  <header><div class="wrap"><nav aria-label="Main navigation">
+    <a class="brand" href="#top" aria-label="IntelliTools home"><span>Intelli</span>Tools</a>
+    <div class="navlinks"><a href="#tools">All tools</a><a href="#popular">Popular</a><a href="#about">About</a></div>
+    <button class="nav-search" type="button" onclick="document.querySelector('#toolSearch').focus();location.hash='tools'">Find a tool <kbd>/</kbd></button>
+  </nav></div></header>
   <main id="top">
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div>
-          <span class="eyebrow">IntelliTools v2 · 100% browser-first</span>
-          <h1>Everyday tools.<br><em>Nothing to upload.</em></h1>
-          <p>Make invoices, work with images and PDFs, focus, write, convert and plan — all in one fast, private workspace.</p>
-          <div class="intent-panel">
-            <label for="intent">What do you need to do?</label>
-            <div class="intent"><input id="intent" autocomplete="off" placeholder="Try “make an invoice” or “compress an image”…"><button class="btn" type="button" onclick="routeIntent()">Find my tool</button></div>
-            <div id="intentResult" class="privacy-note" aria-live="polite">Your files and inputs stay in this browser.</div>
-          </div>
-          <div class="hero-stats" aria-label="Product highlights"><span><strong id="activeCount">36</strong> active tools</span><span><strong>0</strong> accounts</span><span><strong>0</strong> uploads</span></div>
-        </div>
-        <aside class="hero-card" aria-label="Popular tools">
-          <p class="mini-label">QUICK START</p>
-          <button type="button" onclick="openTool('invoice-studio')"><span class="tool-icon">▤</span><span><strong>Invoice Studio</strong><small>Create, preview and export</small></span><b>→</b></button>
-          <button type="button" onclick="openTool('image-studio')"><span class="tool-icon">◫</span><span><strong>Image Studio</strong><small>Resize, convert and compress</small></span><b>→</b></button>
-          <button type="button" onclick="openTool('pdf-studio')"><span class="tool-icon">PDF</span><span><strong>Private PDF Tools</strong><small>Merge, split and rotate locally</small></span><b>→</b></button>
-          <button type="button" onclick="openTool('focus-timer')"><span class="tool-icon">◷</span><span><strong>Focus Timer</strong><small>Start a productive session</small></span><b>→</b></button>
-        </aside>
-      </div>
-    </section>
-    <section class="trust-strip" id="privacy">
-      <div class="wrap trust-grid">
-        <div><span>◉</span><strong>Private by design</strong><small>Core processing happens on your device</small></div>
-        <div><span>↯</span><strong>Works offline</strong><small>Reopen after the first successful visit</small></div>
-        <div><span>◇</span><strong>No account</strong><small>Open a tool and get the job done</small></div>
-      </div>
-    </section>
-    <section class="section" id="tools">
-      <div class="wrap">
-        <div class="section-heading">
-          <div><span class="eyebrow">THE TOOLBOX</span><h2>Find the right tool, quickly</h2><p class="sub">Twelve new v2 workspaces plus the focused tools you already use.</p></div>
-          <span class="count-badge"><b id="visibleCount">36</b> tools</span>
-        </div>
-        <div class="toolbar">
-          <div class="search-field"><span>⌕</span><input id="toolSearch" placeholder="Search by task or result…" oninput="renderCatalog()"></div>
-          <select id="categoryFilter" onchange="renderCatalog()" aria-label="Filter tools by category">
-            <option>All categories</option><option>Business</option><option>Images & Design</option><option>Files & PDF</option><option>Writing & Text</option><option>Productivity</option><option>Money & Calculators</option><option>Links & Web</option><option>Developer</option><option>Privacy & Safety</option>
-          </select>
-        </div>
-        <div class="category-chips" aria-label="Quick category filters">
-          <button class="active" data-category="All categories">All</button><button data-category="Business">Business</button><button data-category="Images & Design">Images</button><button data-category="Files & PDF">PDF</button><button data-category="Writing & Text">Writing</button><button data-category="Productivity">Productivity</button><button data-category="Money & Calculators">Money</button><button data-category="Privacy & Safety">Privacy</button>
-        </div>
-        <div class="tools" id="toolCatalog"></div>
-        <div id="workspace" class="workspace" tabindex="-1"></div>
-      </div>
-    </section>
-    <section class="section popular" id="popular">
-      <div class="wrap popular-grid">
-        <div><span class="eyebrow">BUILT FOR REAL WORK</span><h2>One familiar workspace for the tasks that interrupt your day.</h2></div>
-        <div class="feature-list">
-          <div><b>01</b><span><strong>Start immediately</strong><small>No signup, onboarding or trial gate.</small></span></div>
-          <div><b>02</b><span><strong>Keep sensitive files local</strong><small>Images, PDFs and notes are processed in your browser.</small></span></div>
-          <div><b>03</b><span><strong>Take the result with you</strong><small>Copy, print or export in useful formats.</small></span></div>
-        </div>
-      </div>
-    </section>
+    <section class="hero"><div class="wrap hero-grid"><div>
+      <span class="eyebrow">Focused tools. One intelligent workspace.</span>
+      <h1>Less switching.<br><em>More doing.</em></h1>
+      <p>Useful tools for everyday digital work and professional workflows — designed to get you from input to result quickly, with browser-first processing wherever possible.</p>
+      <div class="intent-panel"><label for="intent">What do you need to do?</label><div class="intent"><input id="intent" autocomplete="off" placeholder="Try “build an AI prompt” or “compress an image”…"><button class="btn" type="button" onclick="routeIntent()">Find my tool</button></div><div id="intentResult" class="privacy-note" aria-live="polite">Core tools process your inputs locally in this browser.</div></div>
+      <div class="hero-stats"><span><strong id="activeCount">36+</strong> active tools</span><span><strong>0</strong> accounts required</span><span><strong>Local</strong> processing</span></div>
+    </div><aside class="hero-card" aria-label="Popular tools">
+      <p class="mini-label">QUICK START</p>
+      <button type="button" onclick="openTool('ai-prompt-builder')"><span class="tool-icon">AI</span><span><strong>AI Prompt Builder</strong><small>Turn an idea into a structured prompt</small></span><b>→</b></button>
+      <button type="button" onclick="openTool('invoice-studio')"><span class="tool-icon">▤</span><span><strong>Invoice Studio</strong><small>Create, preview and export</small></span><b>→</b></button>
+      <button type="button" onclick="openTool('image-studio')"><span class="tool-icon">◫</span><span><strong>Image Studio</strong><small>Resize, convert and compress</small></span><b>→</b></button>
+      <button type="button" onclick="openTool('pdf-studio')"><span class="tool-icon">PDF</span><span><strong>Private PDF Tools</strong><small>Merge, split and rotate locally</small></span><b>→</b></button>
+    </aside></div></section>
+    <section class="trust-strip" id="privacy"><div class="wrap trust-grid"><div><span>◉</span><strong>Private by design</strong><small>Core processing happens on your device</small></div><div><span>↯</span><strong>Works offline</strong><small>Supported tools can reopen after the first successful visit</small></div><div><span>◇</span><strong>No account</strong><small>Open a tool and get the job done</small></div></div></section>
+    <section class="section" id="tools"><div class="wrap"><div class="section-heading"><div><span class="eyebrow">THE TOOLBOX</span><h2>Find the right tool, quickly</h2><p class="sub">AI Prompt Builder comes first, followed by focused browser-first workspaces for everyday tasks.</p></div><span class="count-badge"><b id="visibleCount">36+</b> tools</span></div>
+      <div class="toolbar"><div class="search-field"><span>⌕</span><input id="toolSearch" placeholder="Search by task or result…" oninput="renderCatalog()"></div><select id="categoryFilter" onchange="renderCatalog()" aria-label="Filter tools by category"><option>All categories</option><option>Business</option><option>Images & Design</option><option>Files & PDF</option><option>Writing & Text</option><option>Productivity</option><option>Money & Calculators</option><option>Links & Web</option><option>Developer</option><option>Privacy & Safety</option></select></div>
+      <div class="category-chips"><button class="active" data-category="All categories">All</button><button data-category="Productivity">AI & Productivity</button><button data-category="Business">Business</button><button data-category="Images & Design">Images</button><button data-category="Files & PDF">PDF</button><button data-category="Writing & Text">Writing</button><button data-category="Developer">Developer</button><button data-category="Privacy & Safety">Privacy</button></div>
+      <div class="tools" id="toolCatalog"></div><div id="workspace" class="workspace" tabindex="-1"></div>
+    </div></section>
+    <section class="section popular" id="popular"><div class="wrap popular-grid"><div><span class="eyebrow">BUILT FOR REAL WORK</span><h2>One familiar workspace for the tasks that interrupt your day.</h2></div><div class="feature-list"><div><b>01</b><span><strong>Start immediately</strong><small>No signup, onboarding or trial gate.</small></span></div><div><b>02</b><span><strong>Keep sensitive work local</strong><small>Where technically possible, processing stays in your browser.</small></span></div><div><b>03</b><span><strong>Take the result with you</strong><small>Copy, print or export in useful formats.</small></span></div></div></div></section>
+    <section class="section" id="about"><div class="wrap"><span class="eyebrow">ABOUT INTELLITOOLS</span><h2>Small tools. Less friction. Better work.</h2><p class="sub">IntelliTools brings focused utilities together in one consistent experience, with an emphasis on speed, clarity, privacy and genuinely useful outcomes.</p></div></section>
   </main>
-  <footer>
-    <div class="wrap footer-grid">
-      <div><a class="brand" href="#top"><span>Intelli</span>Tools<small>.online</small></a><p>Useful tools that respect your time and your data.</p></div>
-      <div><strong>Product</strong><a href="#tools">All tools</a><a href="#popular">Popular tools</a></div>
-      <div><strong>Company & legal</strong><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="contact.html">Contact & feedback</a></div>
-    </div>
-    <div class="wrap footer-bottom"><span>© 2026 IntelliTools.online</span><span>Version 2.0</span></div>
-  </footer>
-  <script src="vendor/pdf-lib.min.js"></script>
-  <script src="vendor/qrcode.min.js"></script>
-  <script src="vendor/jsqr.min.js"></script>
-  <script src="tools.js"></script>
-  <script src="v2-tools.js"></script>
-</body>
-</html>
+  <footer><div class="wrap footer-grid"><div><a class="brand" href="#top"><span>Intelli</span>Tools</a><p>Focused browser-based tools for everyday digital work. Less switching. More doing.</p></div><div><strong>Product</strong><a href="#tools">All tools</a><a href="#popular">Popular tools</a><a href="#about">About</a></div><div><strong>Company & legal</strong><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="contact.html">Contact & feedback</a></div></div><div class="wrap footer-bottom"><span>© 2026 IntelliTools</span><span>Version 2.0</span></div></footer>
+  <script src="vendor/pdf-lib.min.js"></script><script src="vendor/qrcode.min.js"></script><script src="vendor/jsqr.min.js"></script><script src="tools.js"></script><script src="v2-tools.js"></script>
+</body></html>
