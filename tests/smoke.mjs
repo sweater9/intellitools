@@ -16,7 +16,19 @@ const requiredFiles = [
   "vendor/jsqr.min.js", "sw.js", "CNAME", "THIRD_PARTY_NOTICES.md"
 ];
 
+const growthPages = [
+  "tools/ai-prompt-builder.html","tools/pii-secret-redactor.html","tools/private-pdf-tools.html","tools/invoice-generator.html","tools/image-compressor.html",
+  "tools/curl-token-stripper.html","tools/fact-anchor-checker.html","tools/qr-code-studio.html","tools/password-generator.html","tools/markdown-text-studio.html"
+];
 const failures = [];
+for (const file of ["robots.txt","sitemap.xml",...growthPages]) if (!existsSync(file)) failures.push(`Missing growth file: ${file}`);
+const sitemap = readFileSync("sitemap.xml","utf8");
+for (const file of growthPages) {
+  const page = readFileSync(file,"utf8");
+  if (!page.includes('rel="canonical"') || !page.includes('application/ld+json') || !page.includes("ca-pub-6129942955275199")) failures.push(`SEO metadata missing: ${file}`);
+  if (!sitemap.includes(`https://intellitools.online/${file}`)) failures.push(`Sitemap missing: ${file}`);
+}
+if (!readFileSync("robots.txt","utf8").includes("https://intellitools.online/sitemap.xml")) failures.push("robots.txt sitemap directive missing");
 for (const file of requiredFiles) if (!existsSync(file)) failures.push(`Missing file: ${file}`);
 for (const id of expectedTools) {
   const source = id === "ai-prompt-builder" ? tools : v2;
