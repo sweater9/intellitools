@@ -29,6 +29,11 @@ for (const file of growthPages) {
   if (!sitemap.includes(`https://intellitools.online/${file}`)) failures.push(`Sitemap missing: ${file}`);
 }
 if (!readFileSync("robots.txt","utf8").includes("https://intellitools.online/sitemap.xml")) failures.push("robots.txt sitemap directive missing");
+for (const file of ["tools/ai-prompt-builder.html","tools/pii-secret-redactor.html","tools/private-pdf-tools.html"]) {
+  const page = readFileSync(file,"utf8");
+  for (const marker of ["WHAT IT DOES","HOW TO USE IT","GOOD TO KNOW","RELATED TOOLS"]) if (!page.includes(marker)) failures.push(`Growth V2 content missing: ${file} / ${marker}`);
+  if (!page.includes("Use ") || !page.includes("Continue the workflow.")) failures.push(`Growth V2 CTA missing: ${file}`);
+}
 for (const marker of ["const growthPages=","const relatedTools=","function relatedToolMarkup","function shareToolMarkup"]) if (!v2.includes(marker)) failures.push(`Growth loop missing: ${marker}`);
 for (const file of requiredFiles) if (!existsSync(file)) failures.push(`Missing file: ${file}`);
 for (const id of expectedTools) {
