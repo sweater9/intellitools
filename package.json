@@ -1,0 +1,9 @@
+{
+  "name": "intellitools",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Browser-first everyday utility suite for intellitools.online",
+  "scripts": {
+    "test": "node --check tools.js && node --check v2-tools.js && node --check sw.js && node tests/smoke.mjs"
+  }
+}

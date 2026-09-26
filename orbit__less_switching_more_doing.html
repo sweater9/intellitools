@@ -812,12 +812,9 @@ if (action === "upper") textInput.value = value.toUpperCase();
           if (action === "lower") textInput.value = value.toLowerCase();
           if (action === "clean") {
             // Preserve line breaks while normalizing horizontal whitespace.
-            textInput.value = value.split("
-")
-              .map(line => line.replace(/[^\S\r
-]+/gu, " ").trim())
-              .join("
-").trim();
+            textInput.value = value.split("\\n")
+              .map(line => line.replace(/[^\\S\\r\\n]+/gu, " ").trim())
+              .join("\\n").trim();
           }
 
 updateStats();
