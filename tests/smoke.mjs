@@ -29,6 +29,7 @@ for (const file of growthPages) {
   if (!sitemap.includes(`https://intellitools.online/${file}`)) failures.push(`Sitemap missing: ${file}`);
 }
 if (!readFileSync("robots.txt","utf8").includes("https://intellitools.online/sitemap.xml")) failures.push("robots.txt sitemap directive missing");
+for (const marker of ["const growthPages=","const relatedTools=","function relatedToolMarkup","function shareToolMarkup"]) if (!v2.includes(marker)) failures.push(`Growth loop missing: ${marker}`);
 for (const file of requiredFiles) if (!existsSync(file)) failures.push(`Missing file: ${file}`);
 for (const id of expectedTools) {
   const source = id === "ai-prompt-builder" ? tools : v2;
