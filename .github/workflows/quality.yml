@@ -2,7 +2,7 @@ name: Quality
 
 on:
   push:
-    branches: [main, feature/intellitools-v2]
+    branches: [main, feature/intellitools-v2, release/v2-full-integration]
   pull_request:
     branches: [main]
 
