@@ -56,6 +56,14 @@ for (const marker of ["discoveryShelf","DISCOVERY_RECENT_KEY","DISCOVERY_FAV_KEY
 }
 if (readFileSync("CNAME", "utf8").trim() !== "intellitools.online") failures.push("CNAME does not match intellitools.online");
 
+for (const file of ["assets/product-hunt-thumbnail.svg","docs/PRODUCT-HUNT-ASSET-CAPTURE.md","docs/ACQUISITION-LAUNCH-PLAN.md"]) {
+  if (!existsSync(file)) failures.push(`Launch asset missing: ${file}`);
+}
+const launchThumb = readFileSync("assets/product-hunt-thumbnail.svg","utf8");
+if (!launchThumb.includes('width="240"') || !launchThumb.includes('height="240"') || !launchThumb.includes("IntelliTools")) failures.push("Product Hunt thumbnail source is invalid");
+const launchGuide = readFileSync("docs/PRODUCT-HUNT-ASSET-CAPTURE.md","utf8");
+for (const phrase of ["Homepage discovery","AI Prompt Builder","PII & Secret Redactor","Private PDF Tools","Image Studio","Return workflow","Demo recording"]) if (!launchGuide.includes(phrase)) failures.push(`Launch capture guide missing: ${phrase}`);
+
 if (failures.length) {
   console.error(failures.join("\n"));
   process.exit(1);
