@@ -29,3 +29,10 @@ header{box-shadow:0 8px 30px rgba(26,22,67,.04)}.eyebrow{background:linear-gradi
 
 /* Accessibility and motion hardening */
 :where(a,button,input,select,textarea):focus-visible{outline:3px solid rgba(98,82,243,.32);outline-offset:3px}.favorite-btn:focus-visible,.discovery-card:focus-visible{outline-offset:2px}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.toolcard:hover,.discovery-card:hover,.btn:hover,.category-chips button:hover{transform:none!important}}@media(max-width:620px){.favorite-btn{width:40px;height:40px;right:12px;top:12px}.toolcard{min-height:190px}.hero-card button{min-height:62px}.category-chips{scrollbar-width:none}.category-chips::-webkit-scrollbar{display:none}}
+
+/* Growth loop: contextual next-step tools and shareable acquisition pages */
+.tool-share-link{display:inline-block;margin-top:8px;font-size:.86rem;font-weight:800;color:var(--brand);text-decoration:none}
+.tool-share-link:hover{text-decoration:underline}
+.related-tools{margin-top:28px;padding:22px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(135deg,#fff,rgba(98,82,243,.055))}
+.related-tools h3{margin:5px 0 14px}
+.related-tools .actions{margin-top:0}

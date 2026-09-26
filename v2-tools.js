@@ -27,6 +27,18 @@ function toggleFavorite(id,event){if(event){event.stopPropagation();event.preven
 function discoveryCard(t){const fav=discoveryLoad(DISCOVERY_FAV_KEY).includes(t[0]);return '<button class="discovery-card" type="button" onclick="openTool(\''+t[0]+'\')"><span class="tag">'+esc(t[1])+'</span><strong>'+esc(t[2])+'</strong><small>'+esc(t[3])+'</small><span class="discovery-arrow">Open →</span></button>'}
 function renderDiscoveryShelf(){const box=$("#discoveryShelf");if(!box)return;const fav=discoveryLoad(DISCOVERY_FAV_KEY).map(id=>tools.find(t=>t[0]===id)).filter(Boolean),recent=discoveryLoad(DISCOVERY_RECENT_KEY).map(id=>tools.find(t=>t[0]===id)).filter(Boolean);if(!fav.length&&!recent.length){box.innerHTML='<div class="discovery-empty"><strong>Your shortcuts will appear here.</strong><span>Open tools or tap ☆ on a tool card to build a private, on-device shortlist.</span></div>';return}box.innerHTML=(fav.length?'<div class="discovery-group"><div class="shelf-label">★ Favourites</div><div class="discovery-row">'+fav.map(discoveryCard).join("")+'</div></div>':'')+(recent.length?'<div class="discovery-group"><div class="shelf-label">Recently used</div><div class="discovery-row">'+recent.map(discoveryCard).join("")+'</div></div>':'')}
 const categoryAliases={"Writing & Text":["Writing & Text","Text"],"Money & Calculators":["Money & Calculators"],"Files & PDF":["Files & PDF"],"Images & Design":["Images & Design"],"Business":["Business"]};
+const growthPages={
+"ai-prompt-builder":"ai-prompt-builder","pii-secret-redactor":"pii-secret-redactor","curl-code-sanitizer":"curl-token-stripper","fact-anchor-checker":"fact-anchor-checker",
+"invoice-studio":"invoice-generator","image-studio":"image-compressor","pdf-studio":"private-pdf-tools","qr-studio":"qr-code-studio","password-studio":"password-generator","writing-studio":"markdown-text-studio"
+};
+const relatedTools={
+"ai-prompt-builder":["pii-secret-redactor","fact-anchor-checker"],"pii-secret-redactor":["curl-code-sanitizer","ai-prompt-builder"],"curl-code-sanitizer":["pii-secret-redactor","json-formatter"],
+"fact-anchor-checker":["ai-prompt-builder","writing-studio"],"invoice-studio":["budget-studio","percentage-change"],"image-studio":["qr-studio","color-studio"],
+"pdf-studio":["pii-secret-redactor","invoice-studio"],"qr-studio":["url-cleaner","image-studio"],"password-studio":["metadata","pii-secret-redactor"],"writing-studio":["fact-anchor-checker","ai-prompt-builder"]
+};
+function relatedToolMarkup(id){const items=(relatedTools[id]||[]).map(x=>tools.find(t=>t[0]===x)).filter(Boolean);if(!items.length)return "";return '<aside class="related-tools no-print" aria-label="Related tools"><span class="eyebrow">NEXT STEP</span><h3>Continue your workflow</h3><div class="actions">'+items.map(t=>'<button class="btn alt" type="button" onclick="openTool(\''+t[0]+'\')">'+esc(t[2])+' →</button>').join("")+'</div></aside>'}
+function shareToolMarkup(id){const slug=growthPages[id];if(!slug)return "";const url='https://intellitools.online/tools/'+slug+'.html';return '<a class="tool-share-link no-print" href="'+url+'" title="Open the shareable page for this tool">Shareable tool page ↗</a>'}
+
 
 renderCatalog=function(){
   const box=$("#toolCatalog");if(!box)return;
@@ -39,7 +51,7 @@ renderCatalog=function(){
 };
 
 function v2Shell(t,body){
-  return '<div class="workspace-head"><div><span class="tag">'+esc(t[1])+'</span><span class="tag new-tag">v2</span><h2>'+esc(t[2])+'</h2><p class="desc">'+esc(t[3])+'</p></div><button class="btn alt no-print" type="button" onclick="closeTool()">Close</button></div>'+body+'<div id="out" aria-live="polite"></div>';
+  return '<div class="workspace-head"><div><span class="tag">'+esc(t[1])+'</span><span class="tag new-tag">v2</span><h2>'+esc(t[2])+'</h2><p class="desc">'+esc(t[3])+'</p>'+shareToolMarkup(t[0])+'</div><button class="btn alt no-print" type="button" onclick="closeTool()">Close</button></div>'+body+'<div id="out" aria-live="polite"></div>'+relatedToolMarkup(t[0]);
 }
 openTool=function(id){
   if(!v2Ids.has(id)){rememberTool(id);return legacyOpenTool(id)}
