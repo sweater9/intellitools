@@ -1,6 +1,7 @@
 import { readFileSync, existsSync } from "node:fs";
 
 const html = readFileSync("index.html", "utf8");
+const tools = readFileSync("tools.js", "utf8");
 const v2 = readFileSync("v2-tools.js", "utf8");
 const sw = readFileSync("sw.js", "utf8");
 const expectedTools = [
@@ -17,7 +18,10 @@ const requiredFiles = [
 
 const failures = [];
 for (const file of requiredFiles) if (!existsSync(file)) failures.push(`Missing file: ${file}`);
-for (const id of expectedTools) if (!v2.includes(`["${id}"`)) failures.push(`Missing v2 tool: ${id}`);
+for (const id of expectedTools) {
+  const source = id === "ai-prompt-builder" ? tools : v2;
+  if (!source.includes(`["${id}"`)) failures.push(`Missing tool: ${id}`);
+}
 for (const script of ["vendor/pdf-lib.min.js", "vendor/qrcode.min.js", "vendor/jsqr.min.js", "tools.js", "v2-tools.js"]) {
   if (!html.includes(`src="${script}"`)) failures.push(`index.html does not load ${script}`);
 }
