@@ -54,6 +54,10 @@ for (const marker of ["discoveryShelf","DISCOVERY_RECENT_KEY","DISCOVERY_FAV_KEY
   const source = marker === "discoveryShelf" ? html : v2;
   if (!source.includes(marker)) failures.push(`Discovery feature missing: ${marker}`);
 }
+for (const marker of ["Array.isArray(value)","window.addEventListener(\"storage\"","intellitools-v2-2","freshFirst"]) {
+  const source = marker.startsWith("intellitools") || marker === "freshFirst" ? sw : v2;
+  if (!source.includes(marker)) failures.push(`Favourites persistence hardening missing: ${marker}`);
+}
 if (readFileSync("CNAME", "utf8").trim() !== "intellitools.online") failures.push("CNAME does not match intellitools.online");
 
 for (const file of ["assets/product-hunt-thumbnail.svg","docs/PRODUCT-HUNT-ASSET-CAPTURE.md","docs/ACQUISITION-LAUNCH-PLAN.md"]) {
