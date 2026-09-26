@@ -20,8 +20,9 @@ tools.push(...v2Tools);
 const v2Ids=new Set(v2Tools.map(t=>t[0]));
 const legacyOpenTool=openTool;
 const DISCOVERY_RECENT_KEY="it.discovery.recent",DISCOVERY_FAV_KEY="it.discovery.favorites";
-function discoveryLoad(key){try{return JSON.parse(localStorage.getItem(key))||[]}catch{return []}}
-function discoverySave(key,value){try{localStorage.setItem(key,JSON.stringify(value))}catch{}}
+function discoveryLoad(key){try{const value=JSON.parse(localStorage.getItem(key));return Array.isArray(value)?value.filter(x=>typeof x==="string"):[]}catch{return []}}
+function discoverySave(key,value){try{localStorage.setItem(key,JSON.stringify(value));return true}catch{return false}}
+function discoveryStorageAvailable(){const key="it.discovery.storage-test";try{localStorage.setItem(key,"1");localStorage.removeItem(key);return true}catch{return false}}
 function rememberTool(id){const next=[id,...discoveryLoad(DISCOVERY_RECENT_KEY).filter(x=>x!==id)].slice(0,6);discoverySave(DISCOVERY_RECENT_KEY,next);renderDiscoveryShelf()}
 function toggleFavorite(id,event){if(event){event.stopPropagation();event.preventDefault()}const fav=discoveryLoad(DISCOVERY_FAV_KEY),next=fav.includes(id)?fav.filter(x=>x!==id):[id,...fav].slice(0,12);discoverySave(DISCOVERY_FAV_KEY,next);renderCatalog();renderDiscoveryShelf()}
 function discoveryCard(t){const fav=discoveryLoad(DISCOVERY_FAV_KEY).includes(t[0]);return '<button class="discovery-card" type="button" onclick="openTool(\''+t[0]+'\')"><span class="tag">'+esc(t[1])+'</span><strong>'+esc(t[2])+'</strong><small>'+esc(t[3])+'</small><span class="discovery-arrow">Open →</span></button>'}
@@ -437,4 +438,4 @@ function factAnchorCheck(answer,evidence){const ev=String(evidence||"").toLowerC
 function runFactAnchor(){const rows=factAnchorCheck(document.getElementById("anchorAnswer").value,document.getElementById("anchorEvidence").value);document.getElementById("anchorResults").innerHTML=rows.length?rows.map(r=>'<p><strong>'+esc(r.status)+'</strong><br>'+esc(r.claim)+'</p>').join(""):"No claims found."}
 
 // Discovery keyboard access and local shortcut shelf.
-document.addEventListener("DOMContentLoaded",()=>{renderDiscoveryShelf();document.addEventListener("keydown",e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==="k"){e.preventDefault();const q=$("#toolSearch");if(q){location.hash="tools";q.focus();q.select()}}});});
+document.addEventListener("DOMContentLoaded",()=>{renderDiscoveryShelf();window.addEventListener("storage",e=>{if(e.key===DISCOVERY_FAV_KEY||e.key===DISCOVERY_RECENT_KEY){renderCatalog();renderDiscoveryShelf()}});document.addEventListener("keydown",e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==="k"){e.preventDefault();const q=$("#toolSearch");if(q){location.hash="tools";q.focus();q.select()}}});});
