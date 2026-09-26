@@ -1,6 +1,9 @@
 /* IntelliTools v2 workspaces — all processing is local to the browser. */
 const v2Tools=[
   ["ai-prompt-builder","Productivity","AI Prompt Builder","Turn a rough idea into a clear, structured AI prompt with guided CRISPE sections."],
+  ["pii-secret-redactor","Privacy & Safety","PII & Secret Redactor","Detect and redact common sensitive data from prompts, logs and text before sharing."],
+  ["curl-code-sanitizer","Developer","cURL → Code & Token Stripper","Strip common credentials from cURL requests and create a safer JavaScript fetch example."],
+  ["fact-anchor-checker","Writing & Text","Fact Anchor Checker","Compare claims against supplied evidence and flag what is supported, partial or not found."],
   ["invoice-studio","Business","Invoice & Receipt Studio","Create professional invoices or receipts with tax, logo, currency, live preview and export."],
   ["image-studio","Images & Design","Image Studio","Convert, resize and compress images or generate a complete favicon pack."],
   ["color-studio","Images & Design","Gradient & Color Studio","Build CSS gradients and generate accessible palettes from a color or image."],
@@ -36,6 +39,9 @@ openTool=function(id){
   if(!v2Ids.has(id))return legacyOpenTool(id);
   const t=v2Tools.find(x=>x[0]===id),w=$("#workspace");
   stopCamera();w.innerHTML=v2Shell(t,v2Template(id));w.classList.add("active");w.focus({preventScroll:true});w.scrollIntoView({behavior:"smooth",block:"start"});
+  if(id==="pii-secret-redactor")initRedactor();
+  if(id==="curl-code-sanitizer")initCurlSanitizer();
+  if(id==="fact-anchor-checker")initFactAnchor();
   if(id==="invoice-studio")initInvoice();
   if(id==="image-studio")initImageStudio();
   if(id==="color-studio")updateGradient();
@@ -51,6 +57,9 @@ openTool=function(id){
 };
 
 function v2Template(id){
+  if(id==="pii-secret-redactor")return redactorTemplate();
+  if(id==="curl-code-sanitizer")return curlSanitizerTemplate();
+  if(id==="fact-anchor-checker")return factAnchorTemplate();
   if(id==="invoice-studio")return invoiceTemplate();
   if(id==="image-studio")return imageTemplate();
   if(id==="color-studio")return colorTemplate();
@@ -389,3 +398,22 @@ function initPromptBuilder(){
 async function copyBuiltPrompt(){const t=assembledPrompt(promptBuilderData());if(!t)return;await navigator.clipboard.writeText(t);const h=document.getElementById("promptHints");if(h)h.textContent="Prompt copied to clipboard."}
 function downloadBuiltPrompt(){const t=assembledPrompt(promptBuilderData());if(t)downloadBlob(new Blob([t],{type:"text/plain"}),"intellitools-ai-prompt.txt")}
 function clearPromptBuilder(){if(!confirm("Clear all six prompt sections?"))return;localStorage.removeItem("it.v2.ai-prompt-builder");["C","R","I","S","P","E"].forEach(k=>{const el=document.getElementById("prompt"+k);if(el)el.value=""});updatePromptBuilder()}
+
+
+/* V2 safety and evidence tools */
+function redactorTemplate(){return '<div class="grid2"><div><div class="field"><label for="redactInput">Text, prompt or log</label><textarea id="redactInput" rows="14" placeholder="Paste text here. Processing stays in this browser."></textarea></div><div class="field"><label for="redactMode">Redaction mode</label><select id="redactMode"><option value="replace">Replace with labels</option><option value="mask">Mask values</option><option value="remove">Remove values</option></select></div><div class="actions"><button class="btn" type="button" onclick="runRedactor()">Redact</button><button class="btn alt" type="button" onclick="copyRedacted()">Copy result</button></div></div><div><p class="note">Detects common patterns such as emails, bearer/JWT tokens, API-key assignments, IPv4 addresses, phone-like numbers and database connection strings. Pattern detection can miss or over-match unusual formats.</p><div id="redactSummary" class="result">No text analyzed yet.</div><div id="redactOutput" class="result"></div></div></div>'}
+function initRedactor(){}
+function redactSensitiveText(text,mode="replace"){const patterns=[["JWT",/\beyJ[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\b/g],["Bearer token",/\bBearer\s+[A-Za-z0-9._~+\/-]+=*/gi],["API key",/\b(api[_-]?key|secret|token)\s*[:=]\s*["']?[A-Za-z0-9_\-.]{8,}["']?/gi],["Email",/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/gi],["IPv4",/\b(?:\d{1,3}\.){3}\d{1,3}\b/g],["Phone",/(?<!\w)(?:\+?\d[\d ()-]{7,}\d)(?!\w)/g],["Connection string",/\b(?:postgres(?:ql)?|mysql|mongodb(?:\+srv)?):\/\/[^\s"'<>]+/gi]];const findings=[];let output=String(text||"");patterns.forEach(([label,re])=>{output=output.replace(re,m=>{findings.push(label);if(mode==="remove")return "";if(mode==="mask")return "•".repeat(Math.min(Math.max(m.length,4),24));return "["+label.toUpperCase().replace(/ /g,"_")+"_REDACTED]"})});return {output,findings}}
+function runRedactor(){const r=redactSensitiveText(document.getElementById("redactInput").value,document.getElementById("redactMode").value);document.getElementById("redactOutput").textContent=r.output;const counts={};r.findings.forEach(x=>counts[x]=(counts[x]||0)+1);document.getElementById("redactSummary").textContent=r.findings.length?Object.entries(counts).map(([k,v])=>k+": "+v).join(" · "):"No supported sensitive-data patterns detected."}
+async function copyRedacted(){const t=document.getElementById("redactOutput").textContent;if(t)await navigator.clipboard.writeText(t)}
+
+function curlSanitizerTemplate(){return '<div class="grid2"><div><div class="field"><label for="curlInput">cURL command</label><textarea id="curlInput" rows="14" placeholder="curl https://api.example.com -H &quot;Authorization: Bearer ...&quot;"></textarea></div><div class="actions"><button class="btn" type="button" onclick="runCurlSanitizer()">Sanitize & convert</button></div><p class="note">This is a local sharing-safety helper, not a shell parser. Review the sanitized request before publishing it.</p></div><div><h3>Sanitized cURL</h3><div id="curlSafe" class="result"></div><h3>JavaScript fetch</h3><div id="curlFetch" class="result"></div><div id="curlRemoved" class="note"></div></div></div>'}
+function initCurlSanitizer(){}
+function sanitizeCurlText(input){let text=String(input||""),removed=[];const rules=[["authorization header",/(-H|--header)\s+(["'])Authorization:\s*[^"']+\2/gi],["cookie header",/(-H|--header)\s+(["'])Cookie:\s*[^"']+\2/gi],["API-key header",/(-H|--header)\s+(["'])(?:X-API-Key|API-Key):\s*[^"']+\2/gi],["bearer token",/Bearer\s+[A-Za-z0-9._~+\/-]+=*/gi],["sensitive query parameter",/([?&](?:api[_-]?key|token|access_token|secret|password)=)[^&\s"']+/gi]];rules.forEach(([label,re])=>{text=text.replace(re,m=>{removed.push(label);if(label.includes("header")){const flag=m.match(/^(-H|--header)/i)?.[0]||"-H";const name=label==="authorization header"?"Authorization":label==="cookie header"?"Cookie":"X-API-Key";return flag+' "'+name+': [REDACTED]"'}if(label==="bearer token")return "Bearer [REDACTED]";return m.replace(/=.*/,"=[REDACTED]")})});return {text,removed}}
+function curlToFetch(input){const safe=sanitizeCurlText(input).text;const url=(safe.match(/https?:\/\/[^\s"'\\]+/)||[])[0]||"";const method=(safe.match(/(?:-X|--request)\s+([A-Z]+)/i)||[])[1]||"GET";const headers={};for(const m of safe.matchAll(/(?:-H|--header)\s+(["'])([^:"']+):\s*([^"']*)\1/gi))headers[m[2]]=m[3];const body=(safe.match(/(?:-d|--data(?:-raw)?)\s+(["'])([\s\S]*?)\1/i)||[])[2];const opts={method:method.toUpperCase()};if(Object.keys(headers).length)opts.headers=headers;if(body!==undefined)opts.body=body;return 'fetch('+JSON.stringify(url)+', '+JSON.stringify(opts,null,2)+')\n  .then(r => r.json())\n  .then(console.log);'}
+function runCurlSanitizer(){const raw=document.getElementById("curlInput").value,r=sanitizeCurlText(raw);document.getElementById("curlSafe").textContent=r.text;document.getElementById("curlFetch").textContent=curlToFetch(raw);document.getElementById("curlRemoved").textContent=r.removed.length?"Removed/redacted: "+[...new Set(r.removed)].join(", "):"No supported credential patterns found."}
+
+function factAnchorTemplate(){return '<div class="grid2"><div><div class="field"><label for="anchorAnswer">Claims / AI-generated answer</label><textarea id="anchorAnswer" rows="12"></textarea></div><div class="field"><label for="anchorEvidence">Supplied evidence</label><textarea id="anchorEvidence" rows="12"></textarea></div><button class="btn" type="button" onclick="runFactAnchor()">Check anchors</button></div><div><p class="note">This tool checks textual overlap and numbers. It does not independently verify truth and should not be presented as a definitive hallucination detector.</p><div id="anchorResults" class="result">Add claims and evidence to begin.</div></div></div>'}
+function initFactAnchor(){}
+function factAnchorCheck(answer,evidence){const ev=String(evidence||"").toLowerCase(),words=s=>new Set((s.toLowerCase().match(/[a-z0-9]{3,}/g)||[]).filter(w=>!["the","and","that","with","from","this","have","were","will"].includes(w)));const claims=String(answer||"").split(/(?<=[.!?])\s+|\n+/).map(s=>s.trim()).filter(Boolean);return claims.map(claim=>{const cw=[...words(claim)],hits=cw.filter(w=>ev.includes(w)).length,ratio=cw.length?hits/cw.length:0,nums=claim.match(/\b\d+(?:\.\d+)?%?\b/g)||[],numbersMatch=nums.every(n=>ev.includes(n.toLowerCase()));let status="Not found in supplied evidence";if(ratio>=.72&&numbersMatch)status="Supported";else if(ratio>=.38&&numbersMatch)status="Partially supported";return {claim,status}})}
+function runFactAnchor(){const rows=factAnchorCheck(document.getElementById("anchorAnswer").value,document.getElementById("anchorEvidence").value);document.getElementById("anchorResults").innerHTML=rows.length?rows.map(r=>'<p><strong>'+esc(r.status)+'</strong><br>'+esc(r.claim)+'</p>').join(""):"No claims found."}
