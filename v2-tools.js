@@ -19,6 +19,13 @@ const v2Tools=[
 tools.push(...v2Tools);
 const v2Ids=new Set(v2Tools.map(t=>t[0]));
 const legacyOpenTool=openTool;
+const DISCOVERY_RECENT_KEY="it.discovery.recent",DISCOVERY_FAV_KEY="it.discovery.favorites";
+function discoveryLoad(key){try{return JSON.parse(localStorage.getItem(key))||[]}catch{return []}}
+function discoverySave(key,value){try{localStorage.setItem(key,JSON.stringify(value))}catch{}}
+function rememberTool(id){const next=[id,...discoveryLoad(DISCOVERY_RECENT_KEY).filter(x=>x!==id)].slice(0,6);discoverySave(DISCOVERY_RECENT_KEY,next);renderDiscoveryShelf()}
+function toggleFavorite(id,event){if(event){event.stopPropagation();event.preventDefault()}const fav=discoveryLoad(DISCOVERY_FAV_KEY),next=fav.includes(id)?fav.filter(x=>x!==id):[id,...fav].slice(0,12);discoverySave(DISCOVERY_FAV_KEY,next);renderCatalog();renderDiscoveryShelf()}
+function discoveryCard(t){const fav=discoveryLoad(DISCOVERY_FAV_KEY).includes(t[0]);return '<button class="discovery-card" type="button" onclick="openTool(\''+t[0]+'\')"><span class="tag">'+esc(t[1])+'</span><strong>'+esc(t[2])+'</strong><small>'+esc(t[3])+'</small><span class="discovery-arrow">Open →</span></button>'}
+function renderDiscoveryShelf(){const box=$("#discoveryShelf");if(!box)return;const fav=discoveryLoad(DISCOVERY_FAV_KEY).map(id=>tools.find(t=>t[0]===id)).filter(Boolean),recent=discoveryLoad(DISCOVERY_RECENT_KEY).map(id=>tools.find(t=>t[0]===id)).filter(Boolean);if(!fav.length&&!recent.length){box.innerHTML='<div class="discovery-empty"><strong>Your shortcuts will appear here.</strong><span>Open tools or tap ☆ on a tool card to build a private, on-device shortlist.</span></div>';return}box.innerHTML=(fav.length?'<div class="discovery-group"><div class="shelf-label">★ Favourites</div><div class="discovery-row">'+fav.map(discoveryCard).join("")+'</div></div>':'')+(recent.length?'<div class="discovery-group"><div class="shelf-label">Recently used</div><div class="discovery-row">'+recent.map(discoveryCard).join("")+'</div></div>':'')}
 const categoryAliases={"Writing & Text":["Writing & Text","Text"],"Money & Calculators":["Money & Calculators"],"Files & PDF":["Files & PDF"],"Images & Design":["Images & Design"],"Business":["Business"]};
 
 renderCatalog=function(){
@@ -26,7 +33,7 @@ renderCatalog=function(){
   const q=($("#toolSearch")?.value||"").toLowerCase().trim(),selected=$("#categoryFilter")?.value||"All categories";
   const allowed=categoryAliases[selected]||[selected];
   const visible=tools.filter(t=>t[1]!=="Compliance & AML"&&(selected==="All categories"||allowed.includes(t[1]))&&(!q||t.join(" ").toLowerCase().includes(q)));
-  box.innerHTML=visible.length?visible.map(t=>'<article class="toolcard '+(v2Ids.has(t[0])?'featured':'')+'"><div><span class="tag">'+esc(t[1])+'</span>'+(v2Ids.has(t[0])?'<span class="tag new-tag">v2</span>':'')+'</div><h3>'+esc(t[2])+'</h3><p>'+esc(t[3])+'</p><button class="btn alt" type="button" onclick="openTool(\''+t[0]+'\')">Open tool →</button></article>').join(""):'<div class="empty"><strong>No matching tools.</strong><br>Try a broader task or another category.</div>';
+  box.innerHTML=visible.length?visible.map(t=>{const fav=discoveryLoad(DISCOVERY_FAV_KEY).includes(t[0]);return '<article class="toolcard '+(v2Ids.has(t[0])?'featured':'')+'"><button class="favorite-btn" type="button" aria-pressed="'+(fav?'true':'false')+'" aria-label="'+(fav?'Remove from favourites':'Add to favourites')+'" title="'+(fav?'Remove from favourites':'Add to favourites')+'" onclick="toggleFavorite(\''+t[0]+'\',event)">'+(fav?'★':'☆')+'</button><div><span class="tag">'+esc(t[1])+'</span>'+(v2Ids.has(t[0])?'<span class="tag new-tag">v2</span>':'')+'</div><h3>'+esc(t[2])+'</h3><p>'+esc(t[3])+'</p><button class="btn alt" type="button" onclick="openTool(\''+t[0]+'\')">Open tool →</button></article>'}).join(""):'<div class="empty"><strong>No matching tools.</strong><br>Try a broader task or another category.</div>';
   const count=$("#visibleCount");if(count)count.textContent=visible.length;
   const active=$("#activeCount");if(active)active.textContent=tools.filter(t=>t[1]!=="Compliance & AML").length;
 };
@@ -35,8 +42,8 @@ function v2Shell(t,body){
   return '<div class="workspace-head"><div><span class="tag">'+esc(t[1])+'</span><span class="tag new-tag">v2</span><h2>'+esc(t[2])+'</h2><p class="desc">'+esc(t[3])+'</p></div><button class="btn alt no-print" type="button" onclick="closeTool()">Close</button></div>'+body+'<div id="out" aria-live="polite"></div>';
 }
 openTool=function(id){
-  if(!v2Ids.has(id))return legacyOpenTool(id);
-  const t=v2Tools.find(x=>x[0]===id),w=$("#workspace");
+  if(!v2Ids.has(id)){rememberTool(id);return legacyOpenTool(id)}
+  rememberTool(id);const t=v2Tools.find(x=>x[0]===id),w=$("#workspace");
   stopCamera();w.innerHTML=v2Shell(t,v2Template(id));w.classList.add("active");w.focus({preventScroll:true});w.scrollIntoView({behavior:"smooth",block:"start"});
   if(id==="pii-secret-redactor")initRedactor();
   if(id==="curl-code-sanitizer")initCurlSanitizer();
@@ -416,3 +423,6 @@ function factAnchorTemplate(){return '<div class="grid2"><div><div class="field"
 function initFactAnchor(){}
 function factAnchorCheck(answer,evidence){const ev=String(evidence||"").toLowerCase(),words=s=>new Set((s.toLowerCase().match(/[a-z0-9]{3,}/g)||[]).filter(w=>!["the","and","that","with","from","this","have","were","will"].includes(w)));const claims=String(answer||"").split(/(?<=[.!?])\s+|\n+/).map(s=>s.trim()).filter(Boolean);return claims.map(claim=>{const cw=[...words(claim)],hits=cw.filter(w=>ev.includes(w)).length,ratio=cw.length?hits/cw.length:0,nums=claim.match(/\b\d+(?:\.\d+)?%?\b/g)||[],numbersMatch=nums.every(n=>ev.includes(n.toLowerCase()));let status="Not found in supplied evidence";if(ratio>=.72&&numbersMatch)status="Supported";else if(ratio>=.38&&numbersMatch)status="Partially supported";return {claim,status}})}
 function runFactAnchor(){const rows=factAnchorCheck(document.getElementById("anchorAnswer").value,document.getElementById("anchorEvidence").value);document.getElementById("anchorResults").innerHTML=rows.length?rows.map(r=>'<p><strong>'+esc(r.status)+'</strong><br>'+esc(r.claim)+'</p>').join(""):"No claims found."}
+
+// Discovery keyboard access and local shortcut shelf.
+document.addEventListener("DOMContentLoaded",()=>{renderDiscoveryShelf();document.addEventListener("keydown",e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==="k"){e.preventDefault();const q=$("#toolSearch");if(q){location.hash="tools";q.focus();q.select()}}});});

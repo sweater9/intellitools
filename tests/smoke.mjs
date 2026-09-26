@@ -32,6 +32,10 @@ if (!html.includes("IntelliTools") || html.includes("IntelliTools.online") || !h
 if (!html.includes("ca-pub-6129942955275199")) failures.push("AdSense publisher script is missing");
 if (!html.includes("privacy.html") || !html.includes("terms.html") || !html.includes("contact.html")) failures.push("legal/footer links are missing");
 if (!v2.includes("function redactSensitiveText") || !v2.includes("function sanitizeCurlText") || !v2.includes("function factAnchorCheck")) failures.push("new V2 safety/evidence logic is missing");
+for (const marker of ["discoveryShelf","DISCOVERY_RECENT_KEY","DISCOVERY_FAV_KEY","function rememberTool","function toggleFavorite","e.metaKey||e.ctrlKey"]) {
+  const source = marker === "discoveryShelf" ? html : v2;
+  if (!source.includes(marker)) failures.push(`Discovery feature missing: ${marker}`);
+}
 if (readFileSync("CNAME", "utf8").trim() !== "intellitools.online") failures.push("CNAME does not match intellitools.online");
 
 if (failures.length) {
