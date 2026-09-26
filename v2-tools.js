@@ -1,6 +1,5 @@
 /* IntelliTools v2 workspaces — all processing is local to the browser. */
 const v2Tools=[
-  ["ai-prompt-builder","Productivity","AI Prompt Builder","Turn a rough idea into a clear, structured AI prompt with guided CRISPE sections."],
   ["pii-secret-redactor","Privacy & Safety","PII & Secret Redactor","Detect and redact common sensitive data from prompts, logs and text before sharing."],
   ["curl-code-sanitizer","Developer","cURL → Code & Token Stripper","Strip common credentials from cURL requests and create a safer JavaScript fetch example."],
   ["fact-anchor-checker","Writing & Text","Fact Anchor Checker","Compare claims against supplied evidence and flag what is supported, partial or not found."],
