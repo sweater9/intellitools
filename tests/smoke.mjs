@@ -29,7 +29,7 @@ for (const file of growthPages) {
   if (!sitemap.includes(`https://intellitools.online/${file}`)) failures.push(`Sitemap missing: ${file}`);
 }
 if (!readFileSync("robots.txt","utf8").includes("https://intellitools.online/sitemap.xml")) failures.push("robots.txt sitemap directive missing");
-for (const file of ["tools/ai-prompt-builder.html","tools/pii-secret-redactor.html","tools/private-pdf-tools.html","tools/invoice-generator.html","tools/image-compressor.html","tools/curl-token-stripper.html","tools/fact-anchor-checker.html"]) {
+for (const file of ["tools/ai-prompt-builder.html","tools/pii-secret-redactor.html","tools/private-pdf-tools.html","tools/invoice-generator.html","tools/image-compressor.html","tools/curl-token-stripper.html","tools/fact-anchor-checker.html","tools/qr-code-studio.html","tools/password-generator.html","tools/markdown-text-studio.html"]) {
   const page = readFileSync(file,"utf8");
   for (const marker of ["WHAT IT DOES","HOW TO USE IT","GOOD TO KNOW","RELATED TOOLS"]) if (!page.includes(marker)) failures.push(`Growth V2 content missing: ${file} / ${marker}`);
   if (!page.includes("Use ") || !page.includes("Continue the workflow.")) failures.push(`Growth V2 CTA missing: ${file}`);
