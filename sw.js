@@ -1,4 +1,4 @@
-const CACHE="intellitools-v2-4";
+const CACHE="intellitools-v2-5";
 const ASSETS=["./","./index.html","./v2.css","./tools.js","./v2-tools.js","./v21-tools.js","./manifest.webmanifest","./assets/icon.svg","./vendor/pdf-lib.min.js","./vendor/qrcode.min.js","./vendor/jsqr.min.js"];
 self.addEventListener("install",event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting())));
 self.addEventListener("activate",event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));
