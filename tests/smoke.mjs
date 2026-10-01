@@ -77,3 +77,5 @@ if (failures.length) {
   process.exit(1);
 }
 console.log(`Smoke checks passed: ${expectedTools.length} v2 workspaces, ${requiredFiles.length} required files.`);
+
+if (v2.includes('document.\\naddEventListener') || v2.includes('document.\\\\naddEventListener')) failures.push("Literal escaped newline disabled the runtime count refresh");
