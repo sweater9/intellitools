@@ -16,6 +16,9 @@ const v21Tools=[
 ["expense-splitter","Money & Calculators","Fair Expense & Currency Splitter","Split shared payments and calculate who owes or receives."]
 ];
 tools.push(...v21Tools);
+// V2 rendered the catalogue before this script loaded; refresh counts/cards after V2.1 tools are registered.
+if(typeof renderCatalog==="function")renderCatalog();
+if(typeof renderDiscoveryShelf==="function")renderDiscoveryShelf();
 const v21Ids=new Set(v21Tools.map(t=>t[0])),v21OpenTool=openTool;
 const E=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const V=id=>document.getElementById(id)?.value||"", L=s=>String(s||"").split(/\r?\n/).map(x=>x.trim()).filter(Boolean);
