@@ -6,4 +6,4 @@
   "scripts": {
     "test": "node --check tools.js && node --check v2-tools.js && node --check v21-tools.js && node --check discovery.js && node --check sw.js && node tests/smoke.mjs"
   }
-}\n
+}
