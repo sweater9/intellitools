@@ -57,3 +57,7 @@ case"saas-economics":return F("seCustomers","Customers","100","number")+F("seArp
 case"expense-splitter":return T("esPeople","Participants","Alex\nSam\nRiya",6)+T("esExpenses","Payments (Name:Amount)","Alex:120\nSam:60",8)+F("esRate","Conversion rate","1","number")+B(id);
 default:return"<p>Tool unavailable.</p>"}}
 openTool=function(id){if(!v21Ids.has(id))return v21OpenTool(id);rememberTool(id);const t=v21Tools.find(x=>x[0]===id),w=document.getElementById("workspace");w.innerHTML=v21Shell(t,v21Template(id));w.classList.add("active");w.focus({preventScroll:true});w.scrollIntoView({behavior:"smooth",block:"start"})};
+
+// Refresh catalogue after V2.1 tools are appended so runtime counts include this release.
+renderCatalog();
+renderDiscoveryShelf();
