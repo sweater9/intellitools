@@ -4,6 +4,7 @@ const html = readFileSync("index.html", "utf8");
 const tools = readFileSync("tools.js", "utf8");
 const v2 = readFileSync("v2-tools.js", "utf8");
 const sw = readFileSync("sw.js", "utf8");
+const v21 = readFileSync("v21-tools.js", "utf8");
 const expectedTools = [
   "ai-prompt-builder", "pii-secret-redactor", "curl-code-sanitizer", "fact-anchor-checker",
   "invoice-studio", "image-studio", "color-studio", "converter-studio",
@@ -12,7 +13,7 @@ const expectedTools = [
 ];
 const requiredFiles = [
   "index.html", "tools.js", "v2-tools.js", "v2.css", "manifest.webmanifest",
-  "assets/icon.svg", "vendor/pdf-lib.min.js", "vendor/qrcode.min.js",
+  "assets/icon.svg", "v21-tools.js", "vendor/pdf-lib.min.js", "vendor/qrcode.min.js",
   "vendor/jsqr.min.js", "sw.js", "CNAME", "THIRD_PARTY_NOTICES.md"
 ];
 
@@ -20,7 +21,10 @@ const growthPages = [
   "tools/ai-prompt-builder.html","tools/pii-secret-redactor.html","tools/private-pdf-tools.html","tools/invoice-generator.html","tools/image-compressor.html",
   "tools/curl-token-stripper.html","tools/fact-anchor-checker.html","tools/qr-code-studio.html","tools/password-generator.html","tools/markdown-text-studio.html"
 ];
+const v21Expected=["agentic-workflow-generator","link-fingerprint","oauth-jwt-decoder","cookie-impact-estimator","sql-mock-builder","env-diff","table-formatter","cron-humanizer","prompt-diff","keyword-balancer","email-preview","hourly-rate","saas-economics","expense-splitter"];
 const failures = [];
+for (const id of v21Expected) if (!v21.includes(`["${id}"`)) failures.push(`Missing V2.1 tool: ${id}`);
+for (const marker of ["function runV21","function v21Template","failure_policy"]) if (!v21.includes(marker)) failures.push(`V2.1 implementation missing: ${marker}`);
 for (const file of ["robots.txt","sitemap.xml",...growthPages]) if (!existsSync(file)) failures.push(`Missing growth file: ${file}`);
 const sitemap = readFileSync("sitemap.xml","utf8");
 for (const file of growthPages) {
@@ -40,13 +44,13 @@ for (const id of expectedTools) {
   const source = id === "ai-prompt-builder" ? tools : v2;
   if (!source.includes(`["${id}"`)) failures.push(`Missing tool: ${id}`);
 }
-for (const script of ["vendor/pdf-lib.min.js", "vendor/qrcode.min.js", "vendor/jsqr.min.js", "tools.js", "v2-tools.js"]) {
+for (const script of ["vendor/pdf-lib.min.js", "vendor/qrcode.min.js", "vendor/jsqr.min.js", "tools.js", "v2-tools.js", "v21-tools.js"]) {
   if (!html.includes(`src="${script}"`)) failures.push(`index.html does not load ${script}`);
 }
-for (const asset of ["index.html", "v2.css", "tools.js", "v2-tools.js", "manifest.webmanifest"]) {
+for (const asset of ["index.html", "v2.css", "tools.js", "v2-tools.js", "v21-tools.js", "manifest.webmanifest"]) {
   if (!sw.includes(`./${asset}`)) failures.push(`Offline cache is missing ${asset}`);
 }
-if (!html.includes("IntelliTools") || html.includes("IntelliTools.online") || !html.includes("Less switching.") || !html.includes("Version 2.0")) failures.push("current IntelliTools product identity is missing or stale");
+if (!html.includes("IntelliTools") || html.includes("IntelliTools.online") || !html.includes("Less switching.") || !html.includes("Version 2.1")) failures.push("current IntelliTools product identity is missing or stale");
 if (!html.includes("ca-pub-6129942955275199")) failures.push("AdSense publisher script is missing");
 if (!html.includes("privacy.html") || !html.includes("terms.html") || !html.includes("contact.html")) failures.push("legal/footer links are missing");
 if (!v2.includes("function redactSensitiveText") || !v2.includes("function sanitizeCurlText") || !v2.includes("function factAnchorCheck")) failures.push("new V2 safety/evidence logic is missing");
@@ -54,7 +58,7 @@ for (const marker of ["discoveryShelf","DISCOVERY_RECENT_KEY","DISCOVERY_FAV_KEY
   const source = marker === "discoveryShelf" ? html : v2;
   if (!source.includes(marker)) failures.push(`Discovery feature missing: ${marker}`);
 }
-for (const marker of ["Array.isArray(value)","window.addEventListener(\"storage\"","intellitools-v2-2","freshFirst"]) {
+for (const marker of ["Array.isArray(value)","window.addEventListener(\"storage\"","intellitools-v2-3","freshFirst"]) {
   const source = marker.startsWith("intellitools") || marker === "freshFirst" ? sw : v2;
   if (!source.includes(marker)) failures.push(`Favourites persistence hardening missing: ${marker}`);
 }
