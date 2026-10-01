@@ -379,6 +379,7 @@ document.querySelectorAll(".category-chips button").forEach(b=>b.addEventListene
 $("#categoryFilter")?.addEventListener("change",()=>document.querySelectorAll(".category-chips button").forEach(b=>b.classList.toggle("active",b.dataset.category===$("#categoryFilter").value)));
 document.addEventListener("keydown",e=>{if(e.key==="/"&&!/input|textarea|select/i.test(document.activeElement.tagName)){e.preventDefault();location.hash="tools";$("#toolSearch")?.focus()}});
 renderCatalog();
+// Recalculate after every tool bundle has loaded; V2.1 appends its tools later in the document.\ndocument.addEventListener("DOMContentLoaded",()=>{renderCatalog();renderDiscoveryShelf()});
 if("serviceWorker"in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));
 
 function promptBuilderTemplate(){
