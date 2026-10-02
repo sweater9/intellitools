@@ -1,0 +1,2376 @@
+{
+ "version": 1,
+ "note": "Static index for local Knowledge Search. relatedTools lists ONLY tools that genuinely address the topic; empty means show Knowledge results only.",
+ "pages": [
+  {
+   "id": "what-is-ai",
+   "url": "knowledge/what-is-ai.html",
+   "title": "What is Artificial Intelligence?",
+   "type": "concept",
+   "group": "Foundations",
+   "question": "What is AI and how does it differ from machine learning?",
+   "summary": "AI is the broad field of building software that performs tasks we normally associate with human judgement. Machine learning and generative AI are subsets of it.",
+   "aliases": [
+    "artificial intelligence",
+    "what is artificial intelligence",
+    "AI basics",
+    "AI explained",
+    "machine learning vs AI",
+    "AI for beginners",
+    "AI fundamentals"
+   ],
+   "keywords": [
+    "machine learning",
+    "deep learning",
+    "neural network",
+    "training",
+    "inference",
+    "model",
+    "narrow AI",
+    "rules"
+   ],
+   "related": [
+    "generative-ai",
+    "large-language-models",
+    "transformers",
+    "ai-evaluation"
+   ],
+   "relatedTools": [],
+   "headings": [
+    "What is it?",
+    "Why does it matter?",
+    "How does it work?",
+    "Example",
+    "When should I use it?",
+    "Common mistakes"
+   ],
+   "words": 666
+  },
+  {
+   "id": "generative-ai",
+   "url": "knowledge/generative-ai.html",
+   "title": "What is Generative AI?",
+   "type": "concept",
+   "group": "Foundations",
+   "question": "What is generative AI and what can it do?",
+   "summary": "Generative AI models create new content — text, images, audio, video and code — by learning the patterns in very large training sets.",
+   "aliases": [
+    "gen AI",
+    "genAI",
+    "generative artificial intelligence",
+    "what can generative AI do",
+    "text to image",
+    "AI content generation"
+   ],
+   "keywords": [
+    "diffusion",
+    "language model",
+    "image generation",
+    "foundation model",
+    "synthetic content",
+    "creative AI"
+   ],
+   "related": [
+    "what-is-ai",
+    "large-language-models",
+    "multimodal-ai",
+    "ai-hallucinations"
+   ],
+   "relatedTools": [],
+   "headings": [
+    "What is it?",
+    "Why does it matter?",
+    "How does it work?",
+    "Example",
+    "When should I use it?",
+    "Common mistakes"
+   ],
+   "words": 526
+  },
+  {
+   "id": "large-language-models",
+   "url": "knowledge/large-language-models.html",
+   "title": "What is a Large Language Model (LLM)?",
+   "type": "concept",
+   "group": "Foundations",
+   "question": "What is an LLM and how does it generate text?",
+   "summary": "A large language model is a neural network trained on vast amounts of text to predict the next token, which lets it write, summarise, translate, reason about text and write code.",
+   "aliases": [
+    "LLM",
+    "LLMs",
+    "large language model",
+    "what is an LLM",
+    "how do LLMs work",
+    "language model",
+    "GPT explained",
+    "foundation model"
+   ],
+   "keywords": [
+    "next token prediction",
+    "parameters",
+    "pre-training",
+    "instruction tuning",
+    "inference",
+    "temperature",
+    "sampling",
+    "transformer"
+   ],
+   "related": [
+    "tokens",
+    "context-windows",
+    "transformers",
+    "prompt-engineering",
+    "ai-hallucinations",
+    "fine-tuning"
+   ],
+   "relatedTools": [],
+   "headings": [
+    "What is it?",
+    "Why does it matter?",
+    "How does it work?",
+    "Example",
+    "When should I use it?",
+    "Common mistakes"
+   ],
+   "words": 549
+  },
+  {
+   "id": "tokens",
+   "url": "knowledge/tokens.html",
+   "title": "What are Tokens in AI?",
+   "type": "concept",
+   "group": "Foundations",
+   "question": "What is a token and why do tokens matter for AI cost and limits?",
+   "summary": "Tokens are the chunks of text — whole words, word pieces or punctuation — that language models read and write. Limits and pricing are usually measured in them.",
+   "aliases": [
+    "token",
+    "tokenization",
+    "tokenisation",
+    "tokenizer",
+    "what is a token",
+    "token count",
+    "token limit",
+    "token pricing",
+    "BPE"
+   ],
+   "keywords": [
+    "byte pair encoding",
+    "subword",
+    "vocabulary",
+    "context window",
+    "cost",
+    "input tokens",
+    "output tokens"
+   ],
+   "related": [
+    "large-language-models",
+    "context-windows",
+    "embeddings",
+    "prompt-engineering"
+   ],
+   "relatedTools": [],
+   "headings": [
+    "What is it?",
+    "Why does it matter?",
+    "How does it work?",
+    "Example",
+    "When should I use it?",
+    "Common mistakes"
+   ],
+   "words": 484
+  },
+  {
+   "id": "context-windows",
+   "url": "knowledge/context-windows.html",
+   "title": "What is a Context Window?",
+   "type": "concept",
+   "group": "Foundations",
+   "question": "What is a context window and why does AI forget things?",
+   "summary": "The context window is the maximum amount of text, measured in tokens, that a model can consider in a single request. Anything outside it is invisible to the model.",
+   "aliases": [
+    "context length",
+    "context size",
+    "token limit",
+    "why does AI forget",
+    "AI memory limit",
+    "long context",
+    "context window size",
+    "lost in the middle"
+   ],
+   "keywords": [
+    "tokens",
+    "attention",
+    "conversation history",
+    "truncation",
+    "summarization",
+    "long documents",
+    "rag"
+   ],
+   "related": [
+    "tokens",
+    "large-language-models",
+    "agent-memory",
+    "rag",
+    "chunking",
+    "prompt-engineering"
+   ],
+   "relatedTools": [],
+   "headings": [
+    "What is it?",
+    "Why does it matter?",
+    "How does it work?",
+    "Example",
+    "When should I use it?",
+    "Common mistakes"
+   ],
+   "words": 471
+  },
+  {
+   "id": "transformers",
+   "url": "knowledge/transformers.html",
+   "title": "What is a Transformer? (Attention Explained)",
+   "type": "concept",
+   "group": "Foundations",
+   "question": "What is the transformer architecture and what does attention do?",
+   "summary": "The transformer is the neural-network design behind most modern language models. Its key idea, attention, lets every token weigh how relevant every other token is.",
+   "aliases": [
+    "transformer",
+    "transformer model",
+    "attention",
+    "self-attention",
+    "attention is all you need",
+    "transformer architecture",
+    "what is attention in AI"
+   ],
+   "keywords": [
+    "neural network",
+    "encoder",
+    "decoder",
+    "parallel",
+    "queries keys values",
+    "GPT",
+    "BERT"
+   ],
+   "related": [
+    "large-language-models",
+    "tokens",
+    "embeddings",
+    "context-windows",
+    "generative-ai"
+   ],
+   "relatedTools": [],
+   "headings": [
+    "What is it?",
+    "Why does it matter?",
+    "How does it work?",
+    "Example",
+    "When should I use it?",
+    "Common mistakes"
+   ],
+   "words": 491
+  },
+  {
+   "id": "multimodal-ai",
+   "url": "knowledge/multimodal-ai.html",
+   "title": "What is Multimodal AI?",
+   "type": "concept",
+   "group": "Foundations",
+   "question": "What does multimodal AI mean and what can it do?",
+   "summary": "Multimodal AI models work with more than one type of data — for example text, images, audio and video — in the same system.",
+   "aliases": [
+    "multimodal",
+    "multi-modal AI",
+    "vision language model",
+    "VLM",
+    "image understanding",
+    "AI that sees images",
+    "speech and text AI",
+    "multimodal model"
+   ],
+   "keywords": [
+    "vision",
+    "audio",
+    "OCR",
+    "image captioning",
+    "text to image",
+    "speech recognition",
+    "video"
+   ],
+   "related": [
+    "generative-ai",
+    "large-language-models",
+    "transformers",
+    "embeddings",
+    "ai-privacy-and-security"
+   ],
+   "relatedTools": [],
+   "headings": [
+    "What is it?",
+    "Why does it matter?",
+    "How does it work?",
+    "Example",
+    "When should I use it?",
+    "Common mistakes"
+   ],
+   "words": 404
+  },
+  {
+   "id": "prompt-engineering",
+   "url": "knowledge/prompt-engineering.html",
+   "title": "Prompt Engineering: How to Write Better AI Prompts",
+   "type": "concept",
+   "group": "Prompting",
+   "question": "How do I write effective prompts for AI models?",
+   "summary": "Prompt engineering is the practice of giving a model clear instructions, context, examples and format requirements so it produces useful, reliable output.",
+   "aliases": [
+    "prompt engineering",
+    "how to write prompts",
+    "how do I create better AI prompts",
+    "prompting tips",
+    "prompt techniques",
+    "few-shot prompting",
+    "zero-shot",
+    "chain of thought",
+    "prompt design",
+    "write better prompts"
+   ],
+   "keywords": [
+    "instructions",
+    "few-shot",
+    "examples",
+    "role",
+    "format",
+    "JSON",
+    "iteration",
+    "chain of thought",
+    "structured output"
+   ],
+   "related": [
+    "system-prompts",
+    "common-prompting-mistakes",
+    "context-windows",
+    "ai-hallucinations",
+    "ai-evaluation",
+    "function-calling"
+   ],
+   "relatedTools": [
+    {
+     "id": "ai-prompt-builder",
+     "url": "tools/ai-prompt-builder.html",
+     "reason": "If you want a structure to start from, the AI Prompt Builder walks you through six sections — role, request, context, process, tone and output — and assembles them into a single prompt you can copy into any AI assistant."
+    }
+   ],
+   "headings": [
+    "What is it?",
+    "Why does it matter?",
+    "How does it work?",
+    "Example",
+    "When should I use it?",
+    "Common mistakes"
+   ],
+   "words": 493
+  },
+  {
+   "id": "system-prompts",
+   "url": "knowledge/system-prompts.html",
+   "title": "What is a System Prompt?",
+   "type": "concept",
+   "group": "Prompting",
+   "question": "What is a system prompt and how is it different from a user prompt?",
+   "summary": "A system prompt is the standing set of instructions that defines how an AI model or assistant should behave, separate from what a user types in each message.",
+   "aliases": [
+    "system prompt",
+    "system message",
+    "system instructions",
+    "custom instructions",
+    "developer message",
+    "system prompt vs user prompt",
+    "role prompt",
+    "what is a system prompt"
+   ],
+   "keywords": [
+    "instructions",
+    "persona",
+    "guardrails",
+    "roles",
+    "user prompt",
+    "assistant message",
+    "prompt injection",
+    "leakage"
+   ],
+   "related": [
+    "prompt-engineering",
+    "common-prompting-mistakes",
+    "prompt-injection",
+    "agent-tools",
+    "context-windows"
+   ],
+   "relatedTools": [
+    {
+     "id": "ai-prompt-builder",
+     "url": "tools/ai-prompt-builder.html",
+     "reason": "Drafting the role, context, process and output sections of a system prompt is much like filling in the AI Prompt Builder sections. It can help you organise the text, which you then adapt for your application."
+    }
+   ],
+   "headings": [
+    "What is it?",
+    "Why does it matter?",
+    "How does it work?",
+    "Example",
+    "When should I use it?",
+    "Common mistakes"
+   ],
+   "words": 459
+  },
+  {
+   "id": "common-prompting-mistakes",
+   "url": "knowledge/common-prompting-mistakes.html",
+   "title": "Common Prompting Mistakes (and How to Fix Them)",
+   "type": "concept",
+   "group": "Prompting",
+   "question": "Why are my AI prompts giving bad answers?",
+   "summary": "Most poor AI output traces back to a handful of prompt problems: vague goals, missing context, no format, conflicting instructions and no testing.",
+   "aliases": [
+    "prompt mistakes",
+    "bad prompts",
+    "why is AI giving wrong answers",
+    "prompt troubleshooting",
+    "fix my prompt",
+    "prompt anti-patterns",
+    "AI ignores my instructions"
+   ],
+   "keywords": [
+    "vague",
+    "ambiguity",
+    "format",
+    "negative instructions",
+    "iteration",
+    "testing",
+    "long prompts",
+    "conflicting instructions"
+   ],
+   "related": [
+    "prompt-engineering",
+    "system-prompts",
+    "ai-hallucinations",
+    "how-to-reduce-hallucinations",
+    "context-windows"
+   ],
+   "relatedTools": [
+    {
+     "id": "ai-prompt-builder",
+     "url": "tools/ai-prompt-builder.html",
+     "reason": "Several of these mistakes — missing context, no stated output format, no tone — disappear when each part has its own box. The AI Prompt Builder is one way to check you have filled them in before sending."
+    }
+   ],
+   "headings": [
+    "What is it?",
+    "Why does it matter?",
+    "How does it work?",
+    "Example",
+    "When should I use it?",
+    "Common mistakes"
+   ],
+   "words": 426
+  },
+  {
+   "id": "ai-hallucinations",
+   "url": "knowledge/ai-hallucinations.html",
+   "title": "AI Hallucinations: Why Models Make Things Up",
+   "type": "concept",
+   "group": "Reliability",
+   "question": "What are AI hallucinations and why do they happen?",
+   "summary": "A hallucination is output that sounds plausible but is false, unsupported or fabricated. It follows from how language models generate text.",
+   "aliases": [
+    "hallucination",
+    "hallucinations",
+    "AI making things up",
+    "why does AI lie",
+    "fabricated citations",
+    "AI confabulation",
+    "false AI answers",
+    "LLM hallucination",
+    "AI wrong answers"
+   ],
+   "keywords": [
+    "fabrication",
+    "confabulation",
+    "grounding",
+    "citations",
+    "factuality",
+    "confidence",
+    "verification",
+    "fake references"
+   ],
+   "related": [
+    "how-to-reduce-hallucinations",
+    "rag",
+    "large-language-models",
+    "ai-evaluation",
+    "prompt-engineering"
+   ],
+   "relatedTools": [
+    {
+     "id": "fact-anchor-checker",
+     "url": "tools/fact-anchor-checker.html",
+     "reason": "When you have a model's answer and the source text it should be based on, the Fact Anchor Checker compares each claim against the evidence you supply and flags what is supported, partially supported, or not found. It che"
+    }
+   ],
+   "headings": [
+    "What is it?",
+    "Why does it matter?",
+    "How does it work?",
+    "Example",
+    "When should I use it?",
+    "Common mistakes"
+   ],
+   "words": 469
+  },
+  {
+   "id": "how-to-reduce-hallucinations",
+   "url": "knowledge/how-to-reduce-hallucinations.html",
+   "title": "How to Reduce AI Hallucinations",
+   "type": "concept",
+   "group": "Reliability",
+   "question": "How do I reduce hallucinations in AI answers?",
+   "summary": "You cannot remove hallucinations completely, but you can lower them by grounding answers in sources, constraining the task, allowing \"I don't know\", and verifying output.",
+   "aliases": [
+    "reduce hallucinations",
+    "stop AI making things up",
+    "prevent hallucinations",
+    "avoid AI hallucination",
+    "make AI more accurate",
+    "AI fact checking",
+    "grounded answers",
+    "how do I reduce hallucinations"
+   ],
+   "keywords": [
+    "grounding",
+    "citations",
+    "verification",
+    "temperature",
+    "retrieval",
+    "guardrails",
+    "quote extraction",
+    "human review"
+   ],
+   "related": [
+    "ai-hallucinations",
+    "rag",
+    "prompt-engineering",
+    "ai-evaluation",
+    "agent-tools",
+    "common-prompting-mistakes"
+   ],
+   "relatedTools": [
+    {
+     "id": "fact-anchor-checker",
+     "url": "tools/fact-anchor-checker.html",
+     "reason": "As a lightweight verification step, paste the model's answer and the source passage into the Fact Anchor Checker to see which claims are supported by that evidence and which are not found. It only compares against the te"
+    }
+   ],
+   "headings": [
+    "What is it?",
+    "Why does it matter?",
+    "How does it work?",
+    "Example",
+    "When should I use it?",
+    "Common mistakes"
+   ],
+   "words": 501
+  },
+  {
+   "id": "embeddings",
+   "url": "knowledge/embeddings.html",
+   "title": "What are Embeddings in AI?",
+   "type": "concept",
+   "group": "Retrieval & Customisation",
+   "question": "What is an embedding and how is it used for search?",
+   "summary": "An embedding is a list of numbers that represents the meaning of a piece of content, so similar meanings end up close together and can be found mathematically.",
+   "aliases": [
+    "embedding",
+    "vector embeddings",
+    "text embeddings",
+    "semantic search",
+    "embedding model",
+    "cosine similarity",
+    "what are embeddings",
+    "vectors in AI",
+    "semantic similarity"
+   ],
+   "keywords": [
+    "vector",
+    "similarity",
+    "cosine",
+    "nearest neighbour",
+    "dimensions",
+    "semantic",
+    "meaning",
+    "sentence embeddings"
+   ],
+   "related": [
+    "vector-databases",
+    "rag",
+    "chunking",
+    "transformers",
+    "vector-database-vs-traditional-database"
+   ],
+   "relatedTools": [],
+   "headings": [
+    "What is it?",
+    "Why does it matter?",
+    "How does it work?",
+    "Example",
+    "When should I use it?",
+    "Common mistakes"
+   ],
+   "words": 495
+  },
+  {
+   "id": "vector-databases",
+   "url": "knowledge/vector-databases.html",
+   "title": "What is a Vector Database?",
+   "type": "concept",
+   "group": "Retrieval & Customisation",
+   "question": "What is a vector database and when do I need one?",
+   "summary": "A vector database stores embeddings and quickly finds the ones nearest to a query vector, which is the retrieval step in semantic search and RAG.",
+   "aliases": [
+    "vector database",
+    "vector DB",
+    "vector store",
+    "vector search",
+    "nearest neighbour search",
+    "ANN",
+    "HNSW",
+    "pgvector",
+    "similarity search"
+   ],
+   "keywords": [
+    "index",
+    "approximate nearest neighbor",
+    "metadata filtering",
+    "hybrid search",
+    "embeddings",
+    "scale",
+    "recall"
+   ],
+   "related": [
+    "embeddings",
+    "rag",
+    "chunking",
+    "vector-database-vs-traditional-database",
+    "ai-evaluation"
+   ],
+   "relatedTools": [],
+   "headings": [
+    "What is it?",
+    "Why does it matter?",
+    "How does it work?",
+    "Example",
+    "When should I use it?",
+    "Common mistakes"
+   ],
+   "words": 457
+  },
+  {
+   "id": "chunking",
+   "url": "knowledge/chunking.html",
+   "title": "Chunking: How to Split Documents for RAG",
+   "type": "concept",
+   "group": "Retrieval & Customisation",
+   "question": "How should I split documents into chunks for RAG?",
+   "summary": "Chunking splits long documents into retrievable pieces. Chunk size and boundaries strongly affect whether retrieval finds the right information.",
+   "aliases": [
+    "chunking",
+    "document chunking",
+    "text splitting",
+    "chunk size",
+    "chunk overlap",
+    "split documents for RAG",
+    "RAG chunking strategy",
+    "text splitter"
+   ],
+   "keywords": [
+    "overlap",
+    "tokens",
+    "paragraphs",
+    "headings",
+    "metadata",
+    "retrieval quality",
+    "parent document",
+    "semantic chunking"
+   ],
+   "related": [
+    "rag",
+    "embeddings",
+    "vector-databases",
+    "tokens",
+    "context-windows",
+    "ai-evaluation"
+   ],
+   "relatedTools": [],
+   "headings": [
+    "What is it?",
+    "Why does it matter?",
+    "How does it work?",
+    "Example",
+    "When should I use it?",
+    "Common mistakes"
+   ],
+   "words": 452
+  },
+  {
+   "id": "rag",
+   "url": "knowledge/rag.html",
+   "title": "What is RAG (Retrieval-Augmented Generation)?",
+   "type": "concept",
+   "group": "Retrieval & Customisation",
+   "question": "What is RAG and how does it work?",
+   "summary": "Retrieval-Augmented Generation fetches relevant information from your own data and gives it to a language model so answers are grounded in that material.",
+   "aliases": [
+    "RAG",
+    "retrieval augmented generation",
+    "retrieval-augmented generation",
+    "what is RAG",
+    "how does RAG work",
+    "chat with your documents",
+    "grounding",
+    "RAG pipeline",
+    "RAG architecture",
+    "knowledge base chatbot"
+   ],
+   "keywords": [
+    "retrieval",
+    "embeddings",
+    "vector database",
+    "chunking",
+    "reranking",
+    "citations",
+    "grounded",
+    "hybrid search",
+    "context",
+    "knowledge base"
+   ],
+   "related": [
+    "embeddings",
+    "vector-databases",
+    "chunking",
+    "context-windows",
+    "ai-hallucinations",
+    "ai-evaluation",
+    "rag-vs-fine-tuning",
+    "agent-memory"
+   ],
+   "relatedTools": [],
+   "headings": [
+    "What is it?",
+    "Why does it matter?",
+    "How does it work?",
+    "Example",
+    "When should I use it?",
+    "Common mistakes"
+   ],
+   "words": 555
+  },
+  {
+   "id": "fine-tuning",
+   "url": "knowledge/fine-tuning.html",
+   "title": "What is Fine-Tuning an AI Model?",
+   "type": "concept",
+   "group": "Retrieval & Customisation",
+   "question": "What is fine-tuning and when is it worth doing?",
+   "summary": "Fine-tuning continues training a pre-trained model on your own examples so it adopts a consistent behaviour, format or specialised skill.",
+   "aliases": [
+    "fine tuning",
+    "finetuning",
+    "fine-tune an LLM",
+    "custom model",
+    "LoRA",
+    "PEFT",
+    "supervised fine-tuning",
+    "SFT",
+    "train on my data",
+    "model customization"
+   ],
+   "keywords": [
+    "LoRA",
+    "parameter-efficient",
+    "training data",
+    "instruction tuning",
+    "distillation",
+    "overfitting",
+    "adapters",
+    "RLHF"
+   ],
+   "related": [
+    "rag",
+    "rag-vs-fine-tuning",
+    "large-language-models",
+    "prompt-engineering",
+    "ai-evaluation",
+    "local-ai"
+   ],
+   "relatedTools": [],
+   "headings": [
+    "What is it?",
+    "Why does it matter?",
+    "How does it work?",
+    "Example",
+    "When should I use it?",
+    "Common mistakes"
+   ],
+   "words": 491
+  },
+  {
+   "id": "ai-evaluation",
+   "url": "knowledge/ai-evaluation.html",
+   "title": "How to Evaluate AI Systems and Outputs",
+   "type": "concept",
+   "group": "Reliability",
+   "question": "How do I test whether my AI system is actually good?",
+   "summary": "AI evaluation means measuring quality on representative test cases — with automated checks, human review and, carefully, model-based judges — instead of trusting a few good demos.",
+   "aliases": [
+    "evals",
+    "LLM evaluation",
+    "evaluate AI",
+    "AI testing",
+    "test my prompts",
+    "LLM as judge",
+    "AI benchmarks",
+    "measure AI quality",
+    "golden dataset",
+    "RAG evaluation",
+    "AI quality assurance"
+   ],
+   "keywords": [
+    "golden set",
+    "test cases",
+    "metrics",
+    "groundedness",
+    "recall",
+    "regression",
+    "human review",
+    "LLM-as-judge",
+    "benchmark",
+    "rubric"
+   ],
+   "related": [
+    "ai-hallucinations",
+    "how-to-reduce-hallucinations",
+    "rag",
+    "prompt-engineering",
+    "agentic-workflows",
+    "ai-agents"
+   ],
+   "relatedTools": [
+    {
+     "id": "fact-anchor-checker",
+     "url": "tools/fact-anchor-checker.html",
+     "reason": "For one specific evaluation question — \"is each claim in this answer supported by the source text?\" — the Fact Anchor Checker gives a quick, manual way to compare claims against supplied evidence. It is a spot-check aid "
+    }
+   ],
+   "headings": [
+    "What is it?",
+    "Why does it matter?",
+    "How does it work?",
+    "Example",
+    "When should I use it?",
+    "Common mistakes"
+   ],
+   "words": 552
+  },
+  {
+   "id": "local-ai",
+   "url": "knowledge/local-ai.html",
+   "title": "What is Local AI? Running Models on Your Own Device",
+   "type": "concept",
+   "group": "Safety & Privacy",
+   "question": "Can I run AI models locally on my own computer?",
+   "summary": "Local AI means running models on hardware you control — a laptop, workstation, server or even in the browser — instead of sending data to a hosted service.",
+   "aliases": [
+    "local AI",
+    "local LLM",
+    "run LLM locally",
+    "on-device AI",
+    "offline AI",
+    "private AI",
+    "self-hosted AI",
+    "Ollama",
+    "llama.cpp",
+    "open weights",
+    "run AI on my computer",
+    "WebGPU AI",
+    "browser AI"
+   ],
+   "keywords": [
+    "quantization",
+    "open weights",
+    "GPU",
+    "VRAM",
+    "RAM",
+    "privacy",
+    "offline",
+    "inference",
+    "on-device",
+    "WebGPU",
+    "GGUF"
+   ],
+   "related": [
+    "local-ai-vs-cloud-ai",
+    "ai-privacy-and-security",
+    "large-language-models",
+    "fine-tuning",
+    "multimodal-ai"
+   ],
+   "relatedTools": [],
+   "headings": [
+    "What is it?",
+    "Why does it matter?",
+    "How does it work?",
+    "Example",
+    "When should I use it?",
+    "Common mistakes"
+   ],
+   "words": 515
+  },
+  {
+   "id": "ai-privacy-and-security",
+   "url": "knowledge/ai-privacy-and-security.html",
+   "title": "AI Privacy and Security: What to Know Before You Paste Data",
+   "type": "concept",
+   "group": "Safety & Privacy",
+   "question": "Is it safe to put sensitive data into AI tools?",
+   "summary": "Using AI safely means controlling what data leaves your environment, understanding provider terms, protecting credentials, and defending applications against manipulation.",
+   "aliases": [
+    "AI privacy",
+    "AI security",
+    "is ChatGPT safe",
+    "is it safe to paste data into AI",
+    "AI data privacy",
+    "LLM security",
+    "AI risks",
+    "redact before prompting",
+    "sensitive data in prompts",
+    "AI data leakage",
+    "OWASP LLM"
+   ],
+   "keywords": [
+    "PII",
+    "secrets",
+    "API keys",
+    "data retention",
+    "training on data",
+    "redaction",
+    "least privilege",
+    "prompt injection",
+    "compliance",
+    "GDPR",
+    "data leakage"
+   ],
+   "related": [
+    "prompt-injection",
+    "local-ai",
+    "local-ai-vs-cloud-ai",
+    "agent-tools",
+    "rag",
+    "ai-hallucinations"
+   ],
+   "relatedTools": [
+    {
+     "id": "pii-secret-redactor",
+     "url": "tools/pii-secret-redactor.html",
+     "reason": "Before you paste text into any AI service, the PII & Secret Redactor can detect and mask common sensitive patterns — such as email addresses, phone numbers and API-key-like strings — in prompts, logs and text. It runs in"
+    }
+   ],
+   "headings": [
+    "What is it?",
+    "Why does it matter?",
+    "How does it work?",
+    "Example",
+    "When should I use it?",
+    "Common mistakes"
+   ],
+   "words": 594
+  },
+  {
+   "id": "prompt-injection",
+   "url": "knowledge/prompt-injection.html",
+   "title": "What is Prompt Injection?",
+   "type": "concept",
+   "group": "Safety & Privacy",
+   "question": "What is prompt injection and how do I defend against it?",
+   "summary": "Prompt injection is an attack in which text supplied to a model — directly or hidden in documents, web pages or tool results — tries to override the developer's instructions.",
+   "aliases": [
+    "prompt injection",
+    "indirect prompt injection",
+    "jailbreak",
+    "LLM injection attack",
+    "AI prompt attack",
+    "ignore previous instructions",
+    "prompt leaking",
+    "agent hijacking"
+   ],
+   "keywords": [
+    "untrusted input",
+    "least privilege",
+    "exfiltration",
+    "tool abuse",
+    "sanitisation",
+    "OWASP",
+    "confirmation",
+    "guardrails",
+    "RAG poisoning"
+   ],
+   "related": [
+    "ai-privacy-and-security",
+    "system-prompts",
+    "rag",
+    "agent-tools",
+    "mcp-servers-and-clients",
+    "ai-agents"
+   ],
+   "relatedTools": [],
+   "headings": [
+    "What is it?",
+    "Why does it matter?",
+    "How does it work?",
+    "Example",
+    "When should I use it?",
+    "Common mistakes"
+   ],
+   "words": 480
+  },
+  {
+   "id": "ai-agents",
+   "url": "knowledge/ai-agents.html",
+   "title": "What are AI Agents?",
+   "type": "concept",
+   "group": "Agents & Tools",
+   "question": "What is an AI agent and how does it work?",
+   "summary": "An AI agent is a system in which a language model decides what to do next — calling tools, observing results and repeating — to pursue a goal with limited human direction.",
+   "aliases": [
+    "AI agent",
+    "AI agents",
+    "what is an agent",
+    "agentic AI",
+    "autonomous agent",
+    "LLM agent",
+    "how do AI agents work",
+    "agent loop",
+    "ReAct",
+    "tool-using AI"
+   ],
+   "keywords": [
+    "loop",
+    "planning",
+    "tools",
+    "observation",
+    "autonomy",
+    "goal",
+    "memory",
+    "orchestration",
+    "guardrails"
+   ],
+   "related": [
+    "ai-agent-vs-chatbot",
+    "agent-tools",
+    "function-calling",
+    "agent-memory",
+    "multi-agent-systems",
+    "agentic-workflows",
+    "mcp",
+    "ai-evaluation"
+   ],
+   "relatedTools": [],
+   "headings": [
+    "What is it?",
+    "Why does it matter?",
+    "How does it work?",
+    "Example",
+    "When should I use it?",
+    "Common mistakes"
+   ],
+   "words": 510
+  },
+  {
+   "id": "agent-tools",
+   "url": "knowledge/agent-tools.html",
+   "title": "Agent Tools: How AI Agents Take Actions",
+   "type": "concept",
+   "group": "Agents & Tools",
+   "question": "What are tools in AI agents and how are they designed?",
+   "summary": "Tools are functions or services a model can ask to be run — search, databases, calculators, APIs, file access — which turn a text generator into something that can act.",
+   "aliases": [
+    "tools",
+    "AI tools",
+    "agent tool use",
+    "tool use",
+    "LLM tools",
+    "tool calling",
+    "tool design",
+    "how AI agents use tools"
+   ],
+   "keywords": [
+    "function",
+    "API",
+    "schema",
+    "permissions",
+    "side effects",
+    "search tool",
+    "code execution",
+    "idempotent",
+    "validation"
+   ],
+   "related": [
+    "function-calling",
+    "mcp",
+    "ai-agents",
+    "prompt-injection",
+    "ai-privacy-and-security",
+    "function-calling-vs-mcp"
+   ],
+   "relatedTools": [],
+   "headings": [
+    "What is it?",
+    "Why does it matter?",
+    "How does it work?",
+    "Example",
+    "When should I use it?",
+    "Common mistakes"
+   ],
+   "words": 556
+  },
+  {
+   "id": "function-calling",
+   "url": "knowledge/function-calling.html",
+   "title": "Function Calling (Tool Calling) Explained",
+   "type": "concept",
+   "group": "Agents & Tools",
+   "question": "What is function calling in LLMs and how does it work?",
+   "summary": "Function calling lets a model return a structured request to run a named function with arguments, so applications can connect models to code and data reliably.",
+   "aliases": [
+    "function calling",
+    "tool calling",
+    "tool use API",
+    "LLM function calling",
+    "structured outputs",
+    "JSON mode",
+    "OpenAI function calling",
+    "how function calling works"
+   ],
+   "keywords": [
+    "JSON schema",
+    "arguments",
+    "tool call",
+    "tool result",
+    "structured output",
+    "validation",
+    "parallel tool calls",
+    "API"
+   ],
+   "related": [
+    "agent-tools",
+    "mcp",
+    "function-calling-vs-mcp",
+    "ai-agents",
+    "prompt-engineering",
+    "ai-hallucinations"
+   ],
+   "relatedTools": [],
+   "headings": [
+    "What is it?",
+    "Why does it matter?",
+    "How does it work?",
+    "Example",
+    "When should I use it?",
+    "Common mistakes"
+   ],
+   "words": 504
+  },
+  {
+   "id": "agent-memory",
+   "url": "knowledge/agent-memory.html",
+   "title": "Agent Memory: Short-Term, Long-Term and Beyond",
+   "type": "concept",
+   "group": "Agents & Tools",
+   "question": "How do AI agents remember things?",
+   "summary": "Models have no built-in memory between requests. Agent memory is whatever your system stores and re-inserts into the context: recent messages, summaries, facts and retrieved knowledge.",
+   "aliases": [
+    "agent memory",
+    "AI memory",
+    "long-term memory",
+    "short-term memory",
+    "conversation memory",
+    "chatbot memory",
+    "persistent memory",
+    "LLM memory",
+    "memory for agents"
+   ],
+   "keywords": [
+    "state",
+    "summarisation",
+    "retrieval",
+    "user preferences",
+    "episodic",
+    "semantic memory",
+    "working memory",
+    "vector store",
+    "scratchpad"
+   ],
+   "related": [
+    "context-windows",
+    "rag",
+    "embeddings",
+    "ai-agents",
+    "ai-privacy-and-security",
+    "agentic-workflows"
+   ],
+   "relatedTools": [],
+   "headings": [
+    "What is it?",
+    "Why does it matter?",
+    "How does it work?",
+    "Example",
+    "When should I use it?",
+    "Common mistakes"
+   ],
+   "words": 514
+  },
+  {
+   "id": "multi-agent-systems",
+   "url": "knowledge/multi-agent-systems.html",
+   "title": "Multi-Agent Systems Explained",
+   "type": "concept",
+   "group": "Agents & Tools",
+   "question": "What are multi-agent systems and when are they worth it?",
+   "summary": "A multi-agent system uses several model-driven agents with distinct roles or contexts that coordinate — for example a planner, specialists and a reviewer — to complete a larger task.",
+   "aliases": [
+    "multi-agent",
+    "multi agent systems",
+    "agent orchestration",
+    "multiple agents",
+    "agent swarm",
+    "supervisor agent",
+    "sub-agents",
+    "subagents",
+    "agent collaboration",
+    "orchestrator worker"
+   ],
+   "keywords": [
+    "orchestrator",
+    "delegation",
+    "handoff",
+    "parallel",
+    "specialist",
+    "reviewer",
+    "communication",
+    "coordination",
+    "context isolation"
+   ],
+   "related": [
+    "ai-agents",
+    "agentic-workflows",
+    "agent-memory",
+    "agent-tools",
+    "ai-evaluation",
+    "ai-agent-vs-chatbot"
+   ],
+   "relatedTools": [],
+   "headings": [
+    "What is it?",
+    "Why does it matter?",
+    "How does it work?",
+    "Example",
+    "When should I use it?",
+    "Common mistakes"
+   ],
+   "words": 525
+  },
+  {
+   "id": "agentic-workflows",
+   "url": "knowledge/agentic-workflows.html",
+   "title": "Agentic Workflows: Patterns for Reliable AI Automation",
+   "type": "concept",
+   "group": "Agents & Tools",
+   "question": "What is an agentic workflow and how is it different from an agent?",
+   "summary": "An agentic workflow orchestrates model calls and tools along a designed path — chaining, routing, parallelising, evaluating — giving more predictability than a fully autonomous agent.",
+   "aliases": [
+    "agentic workflow",
+    "agentic workflows",
+    "AI workflow",
+    "LLM workflow",
+    "prompt chaining",
+    "routing",
+    "orchestrator",
+    "workflow vs agent",
+    "AI automation patterns",
+    "evaluator optimizer"
+   ],
+   "keywords": [
+    "prompt chaining",
+    "routing",
+    "parallelisation",
+    "orchestration",
+    "evaluator",
+    "human in the loop",
+    "deterministic",
+    "pipeline",
+    "state machine"
+   ],
+   "related": [
+    "ai-agents",
+    "multi-agent-systems",
+    "function-calling",
+    "ai-evaluation",
+    "agent-memory",
+    "how-to-reduce-hallucinations"
+   ],
+   "relatedTools": [],
+   "headings": [
+    "What is it?",
+    "Why does it matter?",
+    "How does it work?",
+    "Example",
+    "When should I use it?",
+    "Common mistakes"
+   ],
+   "words": 473
+  },
+  {
+   "id": "mcp",
+   "url": "knowledge/mcp.html",
+   "title": "What is MCP (Model Context Protocol)?",
+   "type": "concept",
+   "group": "Agents & Tools",
+   "question": "What is the Model Context Protocol (MCP) and why does it matter?",
+   "summary": "MCP is an open protocol that standardises how AI applications connect to external tools, data sources and prompts, so one integration can work across many AI clients.",
+   "aliases": [
+    "MCP",
+    "Model Context Protocol",
+    "what is MCP",
+    "MCP protocol",
+    "MCP explained",
+    "Anthropic MCP",
+    "model context protocol servers",
+    "USB-C for AI"
+   ],
+   "keywords": [
+    "protocol",
+    "JSON-RPC",
+    "tools",
+    "resources",
+    "prompts",
+    "server",
+    "client",
+    "host",
+    "stdio",
+    "integration",
+    "standard",
+    "connector"
+   ],
+   "related": [
+    "mcp-servers-and-clients",
+    "mcp-vs-api",
+    "function-calling-vs-mcp",
+    "agent-tools",
+    "function-calling",
+    "ai-agents",
+    "ai-privacy-and-security"
+   ],
+   "relatedTools": [],
+   "headings": [
+    "What is it?",
+    "Why does it matter?",
+    "How does it work?",
+    "Example",
+    "When should I use it?",
+    "Common mistakes"
+   ],
+   "words": 560
+  },
+  {
+   "id": "mcp-servers-and-clients",
+   "url": "knowledge/mcp-servers-and-clients.html",
+   "title": "MCP Servers and Clients: Roles, Transports and Setup",
+   "type": "concept",
+   "group": "Agents & Tools",
+   "question": "What is the difference between an MCP server, an MCP client and an MCP host?",
+   "summary": "In MCP, a host application runs clients that each connect to a server; servers expose tools, resources and prompts over a transport such as stdio or HTTP.",
+   "aliases": [
+    "MCP server",
+    "MCP client",
+    "MCP host",
+    "MCP servers and clients",
+    "build an MCP server",
+    "MCP transport",
+    "stdio MCP",
+    "remote MCP server",
+    "MCP architecture",
+    "MCP tools resources prompts"
+   ],
+   "keywords": [
+    "stdio",
+    "streamable HTTP",
+    "SSE",
+    "initialize",
+    "capabilities",
+    "tools/list",
+    "tools/call",
+    "resources",
+    "prompts",
+    "sampling",
+    "SDK",
+    "authorization"
+   ],
+   "related": [
+    "mcp",
+    "mcp-vs-api",
+    "function-calling-vs-mcp",
+    "agent-tools",
+    "prompt-injection",
+    "ai-privacy-and-security"
+   ],
+   "relatedTools": [],
+   "headings": [
+    "What is it?",
+    "Why does it matter?",
+    "How does it work?",
+    "Example",
+    "When should I use it?",
+    "Common mistakes"
+   ],
+   "words": 592
+  },
+  {
+   "id": "rag-vs-fine-tuning",
+   "url": "knowledge/rag-vs-fine-tuning.html",
+   "title": "RAG vs Fine-Tuning: Which Should You Use?",
+   "type": "comparison",
+   "group": "Comparisons",
+   "question": "Should I use RAG or fine-tuning to customise an LLM?",
+   "summary": "RAG gives a model access to information at question time; fine-tuning changes the model's behaviour through additional training. They solve different problems and are often combined.",
+   "aliases": [
+    "RAG vs fine tuning",
+    "RAG or fine-tuning",
+    "fine-tuning vs RAG",
+    "retrieval vs fine-tuning",
+    "how to customize LLM",
+    "should I fine-tune",
+    "RAG versus finetuning"
+   ],
+   "keywords": [
+    "knowledge",
+    "behaviour",
+    "cost",
+    "updates",
+    "citations",
+    "training data",
+    "prompting",
+    "customisation"
+   ],
+   "related": [
+    "rag",
+    "fine-tuning",
+    "prompt-engineering",
+    "ai-evaluation",
+    "ai-hallucinations",
+    "embeddings"
+   ],
+   "relatedTools": [],
+   "headings": [
+    "At a glance",
+    "What is each?",
+    "Key differences",
+    "When to choose which",
+    "Example scenarios",
+    "Common mistakes"
+   ],
+   "words": 625
+  },
+  {
+   "id": "ai-agent-vs-chatbot",
+   "url": "knowledge/ai-agent-vs-chatbot.html",
+   "title": "AI Agent vs Chatbot vs Assistant: What's the Difference?",
+   "type": "comparison",
+   "group": "Comparisons",
+   "question": "What is the difference between an AI agent, a chatbot and an AI assistant?",
+   "summary": "The terms overlap and are used loosely. The practical difference is how much the system can do on its own: converse, help with tasks on request, or pursue goals using tools in a loop.",
+   "aliases": [
+    "agent vs chatbot",
+    "AI agent vs AI assistant",
+    "chatbot vs agent",
+    "difference between chatbot and agent",
+    "assistant vs agent",
+    "is ChatGPT an agent",
+    "copilot vs agent"
+   ],
+   "keywords": [
+    "autonomy",
+    "tools",
+    "loop",
+    "conversation",
+    "goal",
+    "actions",
+    "copilot",
+    "assistant"
+   ],
+   "related": [
+    "ai-agents",
+    "agent-tools",
+    "agentic-workflows",
+    "function-calling",
+    "multi-agent-systems",
+    "large-language-models"
+   ],
+   "relatedTools": [],
+   "headings": [
+    "At a glance",
+    "What is each?",
+    "Key differences",
+    "When to choose which",
+    "Example",
+    "Common mistakes"
+   ],
+   "words": 544
+  },
+  {
+   "id": "mcp-vs-api",
+   "url": "knowledge/mcp-vs-api.html",
+   "title": "MCP vs API: What's the Difference?",
+   "type": "comparison",
+   "group": "Comparisons",
+   "question": "How is MCP different from a regular API?",
+   "summary": "An API is an interface to one service for programmers. MCP is a standard protocol for AI applications to discover and use capabilities, and MCP servers often wrap APIs.",
+   "aliases": [
+    "MCP vs API",
+    "MCP versus REST",
+    "MCP or API",
+    "is MCP an API",
+    "does MCP replace APIs",
+    "MCP vs REST API",
+    "Model Context Protocol vs API"
+   ],
+   "keywords": [
+    "REST",
+    "protocol",
+    "discovery",
+    "integration",
+    "wrapper",
+    "JSON-RPC",
+    "tools",
+    "standardisation",
+    "OpenAPI"
+   ],
+   "related": [
+    "mcp",
+    "mcp-servers-and-clients",
+    "function-calling-vs-mcp",
+    "agent-tools",
+    "function-calling",
+    "ai-agents"
+   ],
+   "relatedTools": [],
+   "headings": [
+    "At a glance",
+    "What is each?",
+    "Key differences",
+    "When to choose which",
+    "Example",
+    "Common mistakes"
+   ],
+   "words": 572
+  },
+  {
+   "id": "vector-database-vs-traditional-database",
+   "url": "knowledge/vector-database-vs-traditional-database.html",
+   "title": "Vector Database vs Traditional Database",
+   "type": "comparison",
+   "group": "Comparisons",
+   "question": "When do I need a vector database instead of SQL or another traditional database?",
+   "summary": "Traditional databases answer exact, structured questions; vector databases answer \"most similar\" questions over embeddings. Many systems need both, and some databases do both.",
+   "aliases": [
+    "vector database vs SQL",
+    "vector DB vs relational database",
+    "vector search vs keyword search",
+    "do I need a vector database",
+    "pgvector vs vector database",
+    "semantic search vs SQL",
+    "vector database vs traditional database"
+   ],
+   "keywords": [
+    "SQL",
+    "relational",
+    "embeddings",
+    "similarity search",
+    "exact match",
+    "ACID",
+    "hybrid search",
+    "full-text search",
+    "pgvector",
+    "indexes"
+   ],
+   "related": [
+    "vector-databases",
+    "embeddings",
+    "rag",
+    "chunking",
+    "ai-evaluation"
+   ],
+   "relatedTools": [],
+   "headings": [
+    "At a glance",
+    "What is each?",
+    "Key differences",
+    "When to choose which",
+    "Example",
+    "Common mistakes"
+   ],
+   "words": 582
+  },
+  {
+   "id": "local-ai-vs-cloud-ai",
+   "url": "knowledge/local-ai-vs-cloud-ai.html",
+   "title": "Local AI vs Cloud AI: Privacy, Cost, Capability",
+   "type": "comparison",
+   "group": "Comparisons",
+   "question": "Should I run AI locally or use a cloud AI service?",
+   "summary": "Local AI keeps data on your device and avoids per-use fees but is limited by your hardware; cloud AI gives access to the most capable models with no setup but means sending data to a provider.",
+   "aliases": [
+    "local vs cloud AI",
+    "local LLM vs ChatGPT",
+    "on-device vs cloud AI",
+    "self-hosted vs API",
+    "private AI vs cloud AI",
+    "should I run LLM locally",
+    "open weights vs hosted models"
+   ],
+   "keywords": [
+    "privacy",
+    "cost",
+    "latency",
+    "hardware",
+    "capability",
+    "offline",
+    "compliance",
+    "scalability",
+    "maintenance"
+   ],
+   "related": [
+    "local-ai",
+    "ai-privacy-and-security",
+    "large-language-models",
+    "fine-tuning",
+    "ai-evaluation"
+   ],
+   "relatedTools": [],
+   "headings": [
+    "At a glance",
+    "What is each?",
+    "Key differences",
+    "When to choose which",
+    "Example",
+    "Common mistakes"
+   ],
+   "words": 537
+  },
+  {
+   "id": "function-calling-vs-mcp",
+   "url": "knowledge/function-calling-vs-mcp.html",
+   "title": "Function Calling vs MCP",
+   "type": "comparison",
+   "group": "Comparisons",
+   "question": "What is the difference between function calling and MCP?",
+   "summary": "Function calling is a model-API feature for requesting structured calls to functions you define. MCP is a protocol for packaging, sharing and discovering tools across AI applications. They work together.",
+   "aliases": [
+    "function calling vs MCP",
+    "tool calling vs MCP",
+    "MCP or function calling",
+    "difference between MCP and tool use",
+    "MCP vs tool calling",
+    "do I need MCP"
+   ],
+   "keywords": [
+    "tool use",
+    "protocol",
+    "schema",
+    "discovery",
+    "integration",
+    "interoperability",
+    "client",
+    "server",
+    "JSON-RPC"
+   ],
+   "related": [
+    "function-calling",
+    "mcp",
+    "agent-tools",
+    "mcp-servers-and-clients",
+    "mcp-vs-api",
+    "ai-agents"
+   ],
+   "relatedTools": [],
+   "headings": [
+    "At a glance",
+    "What is each?",
+    "Key differences",
+    "When to choose which",
+    "Example",
+    "Common mistakes"
+   ],
+   "words": 591
+  }
+ ],
+ "glossary": [
+  {
+   "term": "Agent",
+   "aka": "AI agent",
+   "definition": "A system in which a model pursues a goal by repeatedly choosing actions, calling tools and reading the results until it finishes or hits a limit.",
+   "pages": [
+    "ai-agents",
+    "ai-agent-vs-chatbot"
+   ],
+   "url": "knowledge/glossary.html#agent"
+  },
+  {
+   "term": "Agentic workflow",
+   "aka": "",
+   "definition": "A designed process that combines model calls, tools, checks and sometimes humans along a path the developer defines, as opposed to a model freely choosing every step.",
+   "pages": [
+    "agentic-workflows"
+   ],
+   "url": "knowledge/glossary.html#agentic-workflow"
+  },
+  {
+   "term": "AI (Artificial Intelligence)",
+   "aka": "",
+   "definition": "The broad field of building software that performs tasks normally associated with human judgement, such as perception, language and decision-making.",
+   "pages": [
+    "what-is-ai"
+   ],
+   "url": "knowledge/glossary.html#ai-artificial-intelligence"
+  },
+  {
+   "term": "Alignment",
+   "aka": "",
+   "definition": "Work to make AI systems behave in line with human intentions and values, including being helpful, honest and safe. Training steps such as instruction tuning and preference tuning contribute to it.",
+   "pages": [
+    "large-language-models"
+   ],
+   "url": "knowledge/glossary.html#alignment"
+  },
+  {
+   "term": "Approximate nearest neighbour (ANN)",
+   "aka": "",
+   "definition": "A family of search methods that quickly find vectors that are very likely, though not guaranteed, to be the closest to a query. Used by vector databases to stay fast at scale.",
+   "pages": [
+    "vector-databases"
+   ],
+   "url": "knowledge/glossary.html#approximate-nearest-neighbour-ann"
+  },
+  {
+   "term": "Attention",
+   "aka": "",
+   "definition": "The mechanism in a transformer that lets each token weigh how relevant every other token is when building its representation.",
+   "pages": [
+    "transformers"
+   ],
+   "url": "knowledge/glossary.html#attention"
+  },
+  {
+   "term": "Benchmark",
+   "aka": "",
+   "definition": "A standard test used to compare models on a defined task. Useful for rough comparison, but not a substitute for testing on your own use case.",
+   "pages": [
+    "ai-evaluation"
+   ],
+   "url": "knowledge/glossary.html#benchmark"
+  },
+  {
+   "term": "Chain of thought",
+   "aka": "",
+   "definition": "A prompting technique in which the model is encouraged to work through intermediate reasoning steps before giving its answer. Its usefulness varies by model and task.",
+   "pages": [
+    "prompt-engineering"
+   ],
+   "url": "knowledge/glossary.html#chain-of-thought"
+  },
+  {
+   "term": "Chatbot",
+   "aka": "",
+   "definition": "Software that converses with users. Modern chatbots are usually powered by LLMs; the word says little about whether the system can take actions.",
+   "pages": [
+    "ai-agent-vs-chatbot"
+   ],
+   "url": "knowledge/glossary.html#chatbot"
+  },
+  {
+   "term": "Chunking",
+   "aka": "",
+   "definition": "Splitting documents into smaller passages so each can be embedded and retrieved on its own, as in RAG.",
+   "pages": [
+    "chunking",
+    "rag"
+   ],
+   "url": "knowledge/glossary.html#chunking"
+  },
+  {
+   "term": "Context window",
+   "aka": "context length",
+   "definition": "The maximum amount of text, measured in tokens, a model can consider in one request, covering instructions, conversation, documents and the reply.",
+   "pages": [
+    "context-windows",
+    "tokens"
+   ],
+   "url": "knowledge/glossary.html#context-window"
+  },
+  {
+   "term": "Cosine similarity",
+   "aka": "",
+   "definition": "A measure of how closely two vectors point in the same direction. It is widely used to compare embeddings: values near 1 mean very similar, near 0 mean unrelated.",
+   "pages": [
+    "embeddings"
+   ],
+   "url": "knowledge/glossary.html#cosine-similarity"
+  },
+  {
+   "term": "Deep learning",
+   "aka": "",
+   "definition": "Machine learning that uses neural networks with many layers. It underlies most modern vision, speech and language models.",
+   "pages": [
+    "what-is-ai"
+   ],
+   "url": "knowledge/glossary.html#deep-learning"
+  },
+  {
+   "term": "Diffusion model",
+   "aka": "",
+   "definition": "A generative model, common in image generation, that starts from random noise and refines it step by step into content matching a prompt.",
+   "pages": [
+    "generative-ai"
+   ],
+   "url": "knowledge/glossary.html#diffusion-model"
+  },
+  {
+   "term": "Embedding",
+   "aka": "",
+   "definition": "A list of numbers (a vector) that represents the meaning of content so that similar items are close together. Basis of semantic search and RAG.",
+   "pages": [
+    "embeddings",
+    "vector-databases"
+   ],
+   "url": "knowledge/glossary.html#embedding"
+  },
+  {
+   "term": "Evals",
+   "aka": "evaluations",
+   "definition": "Structured tests that measure how well an AI system performs on tasks you care about, using test cases, graders and tracked scores.",
+   "pages": [
+    "ai-evaluation"
+   ],
+   "url": "knowledge/glossary.html#evals"
+  },
+  {
+   "term": "Few-shot prompting",
+   "aka": "",
+   "definition": "Including a small number of example inputs and outputs in the prompt to show the model the pattern you want. Zero-shot means giving no examples.",
+   "pages": [
+    "prompt-engineering"
+   ],
+   "url": "knowledge/glossary.html#few-shot-prompting"
+  },
+  {
+   "term": "Fine-tuning",
+   "aka": "",
+   "definition": "Further training a pre-trained model on your own examples so it adopts a consistent behaviour, format or skill.",
+   "pages": [
+    "fine-tuning",
+    "rag-vs-fine-tuning"
+   ],
+   "url": "knowledge/glossary.html#fine-tuning"
+  },
+  {
+   "term": "Foundation model",
+   "aka": "",
+   "definition": "A large model trained on broad data that can be adapted to many tasks. Large language models are the best-known example.",
+   "pages": [
+    "large-language-models",
+    "generative-ai"
+   ],
+   "url": "knowledge/glossary.html#foundation-model"
+  },
+  {
+   "term": "Function calling",
+   "aka": "tool calling",
+   "definition": "A model-API feature in which the model returns a structured request to run a named function with arguments. Your code runs it and returns the result.",
+   "pages": [
+    "function-calling",
+    "function-calling-vs-mcp"
+   ],
+   "url": "knowledge/glossary.html#function-calling"
+  },
+  {
+   "term": "Generative AI",
+   "aka": "",
+   "definition": "AI that produces new content such as text, images, audio, video or code.",
+   "pages": [
+    "generative-ai"
+   ],
+   "url": "knowledge/glossary.html#generative-ai"
+  },
+  {
+   "term": "Grounding",
+   "aka": "",
+   "definition": "Tying a model's answer to supplied source material or tool results so claims can be traced and checked.",
+   "pages": [
+    "how-to-reduce-hallucinations",
+    "rag"
+   ],
+   "url": "knowledge/glossary.html#grounding"
+  },
+  {
+   "term": "Guardrails",
+   "aka": "",
+   "definition": "Checks and limits around an AI system, such as input filters, output validation, permission limits and human approvals, that reduce harmful or unwanted behaviour.",
+   "pages": [
+    "ai-privacy-and-security",
+    "prompt-injection"
+   ],
+   "url": "knowledge/glossary.html#guardrails"
+  },
+  {
+   "term": "Hallucination",
+   "aka": "",
+   "definition": "Fluent, confident model output that is false, unsupported by the sources, or invented, such as fake citations or facts.",
+   "pages": [
+    "ai-hallucinations",
+    "how-to-reduce-hallucinations"
+   ],
+   "url": "knowledge/glossary.html#hallucination"
+  },
+  {
+   "term": "Human in the loop",
+   "aka": "",
+   "definition": "A design in which a person reviews or approves AI output or actions at defined points, especially before high-impact or irreversible steps.",
+   "pages": [
+    "agentic-workflows",
+    "ai-agents"
+   ],
+   "url": "knowledge/glossary.html#human-in-the-loop"
+  },
+  {
+   "term": "Hybrid search",
+   "aka": "",
+   "definition": "Combining keyword search with vector similarity (often plus metadata filters), so exact terms and meaning are both covered.",
+   "pages": [
+    "vector-database-vs-traditional-database",
+    "rag"
+   ],
+   "url": "knowledge/glossary.html#hybrid-search"
+  },
+  {
+   "term": "Inference",
+   "aka": "",
+   "definition": "Running a trained model to produce output for new input, as opposed to training it.",
+   "pages": [
+    "large-language-models",
+    "local-ai"
+   ],
+   "url": "knowledge/glossary.html#inference"
+  },
+  {
+   "term": "Instruction tuning",
+   "aka": "",
+   "definition": "Additional training that teaches a pre-trained model to follow instructions and respond helpfully, turning a text predictor into an assistant.",
+   "pages": [
+    "large-language-models",
+    "fine-tuning"
+   ],
+   "url": "knowledge/glossary.html#instruction-tuning"
+  },
+  {
+   "term": "Jailbreak",
+   "aka": "",
+   "definition": "An attempt to get a model to break its safety rules through crafted input. Related to, but distinct from, prompt injection.",
+   "pages": [
+    "prompt-injection"
+   ],
+   "url": "knowledge/glossary.html#jailbreak"
+  },
+  {
+   "term": "Knowledge cut-off",
+   "aka": "",
+   "definition": "The point after which a model's training data contains no information. Later events are unknown to it unless supplied via the prompt, search or tools.",
+   "pages": [
+    "large-language-models"
+   ],
+   "url": "knowledge/glossary.html#knowledge-cut-off"
+  },
+  {
+   "term": "LLM (Large Language Model)",
+   "aka": "",
+   "definition": "A very large neural network trained on text to predict the next token, enabling writing, summarising, translation, question answering and code generation.",
+   "pages": [
+    "large-language-models",
+    "transformers"
+   ],
+   "url": "knowledge/glossary.html#llm-large-language-model"
+  },
+  {
+   "term": "Local AI",
+   "aka": "",
+   "definition": "Running models on hardware you control instead of a hosted service, so data need not leave your device.",
+   "pages": [
+    "local-ai",
+    "local-ai-vs-cloud-ai"
+   ],
+   "url": "knowledge/glossary.html#local-ai"
+  },
+  {
+   "term": "LoRA",
+   "aka": "low-rank adaptation",
+   "definition": "A parameter-efficient fine-tuning method that trains small add-on matrices while the original model stays frozen, greatly reducing training cost.",
+   "pages": [
+    "fine-tuning"
+   ],
+   "url": "knowledge/glossary.html#lora"
+  },
+  {
+   "term": "Machine learning",
+   "aka": "",
+   "definition": "The part of AI in which systems learn patterns from data rather than following hand-written rules.",
+   "pages": [
+    "what-is-ai"
+   ],
+   "url": "knowledge/glossary.html#machine-learning"
+  },
+  {
+   "term": "MCP (Model Context Protocol)",
+   "aka": "",
+   "definition": "An open protocol for connecting AI applications to external tools, data and prompts through servers that clients can discover and call.",
+   "pages": [
+    "mcp",
+    "mcp-servers-and-clients",
+    "mcp-vs-api"
+   ],
+   "url": "knowledge/glossary.html#mcp-model-context-protocol"
+  },
+  {
+   "term": "MCP client",
+   "aka": "",
+   "definition": "The component inside an AI host application that holds a connection to one MCP server and relays requests and results.",
+   "pages": [
+    "mcp-servers-and-clients"
+   ],
+   "url": "knowledge/glossary.html#mcp-client"
+  },
+  {
+   "term": "MCP server",
+   "aka": "",
+   "definition": "A program that exposes tools, resources and prompts to MCP clients, often wrapping an existing API, database or file system.",
+   "pages": [
+    "mcp-servers-and-clients"
+   ],
+   "url": "knowledge/glossary.html#mcp-server"
+  },
+  {
+   "term": "Memory (agent)",
+   "aka": "",
+   "definition": "Information a system stores outside the model and re-inserts into the prompt, such as recent messages, summaries and durable facts, because models themselves retain nothing between requests.",
+   "pages": [
+    "agent-memory"
+   ],
+   "url": "knowledge/glossary.html#memory-agent"
+  },
+  {
+   "term": "Multi-agent system",
+   "aka": "",
+   "definition": "A setup in which several model-driven agents with distinct roles or contexts cooperate on a larger task.",
+   "pages": [
+    "multi-agent-systems"
+   ],
+   "url": "knowledge/glossary.html#multi-agent-system"
+  },
+  {
+   "term": "Multimodal",
+   "aka": "",
+   "definition": "Able to handle more than one type of data, such as text together with images or audio.",
+   "pages": [
+    "multimodal-ai"
+   ],
+   "url": "knowledge/glossary.html#multimodal"
+  },
+  {
+   "term": "Neural network",
+   "aka": "",
+   "definition": "A model made of layers of simple connected units whose strengths (parameters) are adjusted during training. The basis of deep learning.",
+   "pages": [
+    "what-is-ai",
+    "transformers"
+   ],
+   "url": "knowledge/glossary.html#neural-network"
+  },
+  {
+   "term": "Open weights",
+   "aka": "",
+   "definition": "Models whose trained parameters are published for download and local use, subject to the licence. Not always the same as fully open source.",
+   "pages": [
+    "local-ai"
+   ],
+   "url": "knowledge/glossary.html#open-weights"
+  },
+  {
+   "term": "Overfitting",
+   "aka": "",
+   "definition": "When a model or prompt works well on the examples used to build it but poorly on new cases. Held-out test data helps detect it.",
+   "pages": [
+    "ai-evaluation",
+    "fine-tuning"
+   ],
+   "url": "knowledge/glossary.html#overfitting"
+  },
+  {
+   "term": "Parameters",
+   "aka": "weights",
+   "definition": "The numbers inside a model that are adjusted during training and determine its behaviour. Model size is often quoted as a parameter count.",
+   "pages": [
+    "large-language-models"
+   ],
+   "url": "knowledge/glossary.html#parameters"
+  },
+  {
+   "term": "Pre-training",
+   "aka": "",
+   "definition": "The initial, large-scale training stage in which a model learns general patterns from broad data before any specialised adaptation.",
+   "pages": [
+    "large-language-models",
+    "fine-tuning"
+   ],
+   "url": "knowledge/glossary.html#pre-training"
+  },
+  {
+   "term": "Prompt",
+   "aka": "",
+   "definition": "The input given to a model: instructions, context, examples and the user's request.",
+   "pages": [
+    "prompt-engineering",
+    "common-prompting-mistakes"
+   ],
+   "url": "knowledge/glossary.html#prompt"
+  },
+  {
+   "term": "Prompt injection",
+   "aka": "",
+   "definition": "An attack where text supplied to a model, directly or hidden in content it reads, tries to override the developer's instructions.",
+   "pages": [
+    "prompt-injection"
+   ],
+   "url": "knowledge/glossary.html#prompt-injection"
+  },
+  {
+   "term": "Quantisation",
+   "aka": "",
+   "definition": "Storing a model's parameters at lower numeric precision to cut memory use, usually at some cost in quality.",
+   "pages": [
+    "local-ai"
+   ],
+   "url": "knowledge/glossary.html#quantisation"
+  },
+  {
+   "term": "RAG (Retrieval-Augmented Generation)",
+   "aka": "",
+   "definition": "Retrieving relevant passages from your data and giving them to a model so its answer is based on that material.",
+   "pages": [
+    "rag",
+    "rag-vs-fine-tuning"
+   ],
+   "url": "knowledge/glossary.html#rag-retrieval-augmented-generation"
+  },
+  {
+   "term": "Reranking",
+   "aka": "",
+   "definition": "A second, more precise scoring step that reorders retrieved candidates before they are given to the model.",
+   "pages": [
+    "rag"
+   ],
+   "url": "knowledge/glossary.html#reranking"
+  },
+  {
+   "term": "RLHF",
+   "aka": "reinforcement learning from human feedback",
+   "definition": "A training approach that uses human preference judgements to steer a model towards responses people rate as better.",
+   "pages": [
+    "fine-tuning",
+    "large-language-models"
+   ],
+   "url": "knowledge/glossary.html#rlhf"
+  },
+  {
+   "term": "Sampling",
+   "aka": "",
+   "definition": "The step where the next token is chosen from the model's probabilities. Settings such as temperature control how predictable or varied the choice is.",
+   "pages": [
+    "large-language-models"
+   ],
+   "url": "knowledge/glossary.html#sampling"
+  },
+  {
+   "term": "Semantic search",
+   "aka": "",
+   "definition": "Searching by meaning rather than exact words, usually by comparing embeddings.",
+   "pages": [
+    "embeddings",
+    "vector-databases"
+   ],
+   "url": "knowledge/glossary.html#semantic-search"
+  },
+  {
+   "term": "Structured output",
+   "aka": "",
+   "definition": "Model output constrained to a defined format, such as JSON matching a schema, so software can use it directly.",
+   "pages": [
+    "function-calling",
+    "prompt-engineering"
+   ],
+   "url": "knowledge/glossary.html#structured-output"
+  },
+  {
+   "term": "System prompt",
+   "aka": "",
+   "definition": "Standing instructions from the developer that define a model's role, rules and format across a conversation, separate from the user's messages.",
+   "pages": [
+    "system-prompts"
+   ],
+   "url": "knowledge/glossary.html#system-prompt"
+  },
+  {
+   "term": "Temperature",
+   "aka": "",
+   "definition": "A setting that controls randomness when a model picks the next token. Lower values give more predictable output; higher values give more varied output.",
+   "pages": [
+    "large-language-models",
+    "how-to-reduce-hallucinations"
+   ],
+   "url": "knowledge/glossary.html#temperature"
+  },
+  {
+   "term": "Token",
+   "aka": "",
+   "definition": "The unit of text a model reads and writes: a word, part of a word, or punctuation. Limits and prices are commonly measured in tokens.",
+   "pages": [
+    "tokens"
+   ],
+   "url": "knowledge/glossary.html#token"
+  },
+  {
+   "term": "Tokenizer",
+   "aka": "",
+   "definition": "The component that splits text into tokens and maps them to numbers. Different model families use different tokenizers.",
+   "pages": [
+    "tokens"
+   ],
+   "url": "knowledge/glossary.html#tokenizer"
+  },
+  {
+   "term": "Tool",
+   "aka": "agent tool",
+   "definition": "A described capability, such as search, a database query or an API call, that a model can request and that your code executes.",
+   "pages": [
+    "agent-tools",
+    "function-calling"
+   ],
+   "url": "knowledge/glossary.html#tool"
+  },
+  {
+   "term": "Training",
+   "aka": "",
+   "definition": "The process of adjusting a model's parameters using data so its outputs improve on a target task.",
+   "pages": [
+    "what-is-ai",
+    "fine-tuning"
+   ],
+   "url": "knowledge/glossary.html#training"
+  },
+  {
+   "term": "Transformer",
+   "aka": "",
+   "definition": "The neural-network architecture, introduced in 2017, behind most modern language models. Its key feature is attention.",
+   "pages": [
+    "transformers"
+   ],
+   "url": "knowledge/glossary.html#transformer"
+  },
+  {
+   "term": "Vector",
+   "aka": "",
+   "definition": "An ordered list of numbers. In AI, embeddings are vectors, and closeness between vectors reflects similarity in meaning.",
+   "pages": [
+    "embeddings"
+   ],
+   "url": "knowledge/glossary.html#vector"
+  },
+  {
+   "term": "Vector database",
+   "aka": "vector store",
+   "definition": "A system that stores embedding vectors with metadata and finds the closest matches to a query vector quickly.",
+   "pages": [
+    "vector-databases",
+    "vector-database-vs-traditional-database"
+   ],
+   "url": "knowledge/glossary.html#vector-database"
+  },
+  {
+   "term": "Zero-shot prompting",
+   "aka": "",
+   "definition": "Asking a model to perform a task with instructions only and no examples.",
+   "pages": [
+    "prompt-engineering"
+   ],
+   "url": "knowledge/glossary.html#zero-shot-prompting"
+  }
+ ],
+ "paths": [
+  {
+   "title": "From LLMs to AI agents",
+   "blurb": "The full build-up: how language models work, how to steer them, how they use tools, and how agents are assembled.",
+   "steps": [
+    "large-language-models",
+    "tokens",
+    "context-windows",
+    "prompt-engineering",
+    "agent-tools",
+    "function-calling",
+    "mcp",
+    "agent-memory",
+    "rag",
+    "ai-agents",
+    "multi-agent-systems",
+    "agentic-workflows"
+   ]
+  },
+  {
+   "title": "Retrieval and grounding (RAG)",
+   "blurb": "How to make a model answer from your own information, and how to tell whether it worked.",
+   "steps": [
+    "rag",
+    "embeddings",
+    "vector-databases",
+    "chunking",
+    "context-windows",
+    "ai-hallucinations",
+    "ai-evaluation"
+   ]
+  },
+  {
+   "title": "Using AI safely",
+   "blurb": "Reliability, privacy and security for anyone putting AI into real work.",
+   "steps": [
+    "ai-hallucinations",
+    "how-to-reduce-hallucinations",
+    "ai-privacy-and-security",
+    "prompt-injection",
+    "local-ai",
+    "ai-evaluation"
+   ]
+  }
+ ]
+}
