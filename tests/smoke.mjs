@@ -63,7 +63,7 @@ for (const marker of ["discoveryShelf","DISCOVERY_RECENT_KEY","DISCOVERY_FAV_KEY
   const source = marker === "discoveryShelf" ? html : v2;
   if (!source.includes(marker)) failures.push(`Discovery feature missing: ${marker}`);
 }
-for (const marker of ["Array.isArray(value)","window.addEventListener(\"storage\"","intellitools-v2-3","freshFirst"]) {
+for (const marker of ["Array.isArray(value)","window.addEventListener(\"storage\"","intellitools-v2-6","freshFirst"]) {
   const source = marker.startsWith("intellitools") || marker === "freshFirst" ? sw : v2;
   if (!source.includes(marker)) failures.push(`Favourites persistence hardening missing: ${marker}`);
 }
