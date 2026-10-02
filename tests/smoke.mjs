@@ -77,13 +77,10 @@ if (!launchThumb.includes('width="240"') || !launchThumb.includes('height="240"'
 const launchGuide = readFileSync("docs/PRODUCT-HUNT-ASSET-CAPTURE.md","utf8");
 for (const phrase of ["Homepage discovery","AI Prompt Builder","PII & Secret Redactor","Private PDF Tools","Image Studio","Return workflow","Demo recording"]) if (!launchGuide.includes(phrase)) failures.push(`Launch capture guide missing: ${phrase}`);
 
+if (v2.includes('document.\\naddEventListener') || v2.includes('document.\\\\naddEventListener')) failures.push("Literal escaped newline disabled the runtime count refresh");
+
 if (failures.length) {
-  console.error(failures.join("
-"));
+  console.error(failures.join("\\n"));
   process.exit(1);
 }
 console.log(`Smoke checks passed: ${expectedTools.length} v2 workspaces, ${requiredFiles.length} required files.`);
-
-if (v2.includes('document.\
-addEventListener') || v2.includes('document.\\\
-addEventListener')) failures.push("Literal escaped newline disabled the runtime count refresh");
