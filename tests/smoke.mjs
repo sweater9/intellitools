@@ -4,7 +4,8 @@ const html = readFileSync("index.html", "utf8");
 const tools = readFileSync("tools.js", "utf8");
 const v2 = readFileSync("v2-tools.js", "utf8");
 const sw = readFileSync("sw.js", "utf8");
-const v21 = readFileSync("v21-tools.js", "utf8");\nconst discovery = readFileSync("discovery.js", "utf8");
+const v21 = readFileSync("v21-tools.js", "utf8");
+const discovery = readFileSync("discovery.js", "utf8");
 const expectedTools = [
   "ai-prompt-builder", "pii-secret-redactor", "curl-code-sanitizer", "fact-anchor-checker",
   "invoice-studio", "image-studio", "color-studio", "converter-studio",
@@ -38,7 +39,11 @@ for (const file of ["tools/ai-prompt-builder.html","tools/pii-secret-redactor.ht
   for (const marker of ["WHAT IT DOES","HOW TO USE IT","GOOD TO KNOW","RELATED TOOLS"]) if (!page.includes(marker)) failures.push(`Growth V2 content missing: ${file} / ${marker}`);
   if (!page.includes("Use ") || !page.includes("Continue the workflow.")) failures.push(`Growth V2 CTA missing: ${file}`);
 }
-for (const marker of ["knowledgeEntries","function scoreIntent","function intentResults","Learn","Lab"]) if (!discovery.includes(marker)) failures.push(`Discovery foundation missing: ${marker}`);\nfor (const marker of ["Tools. Learn. Labs. Play.","learn/","id=\"labs\"","id=\"play\""]) if (!html.includes(marker)) failures.push(`Product pillar missing: ${marker}`);\nconst learnPage=readFileSync("learn/index.html","utf8");\nfor (const marker of ["Python","JavaScript","React","Node.js","SQL","Regex","Git & GitHub","APIs & OAuth"]) if (!learnPage.includes(marker)) failures.push(`Learn hub missing: ${marker}`);\nfor (const marker of ["const growthPages=","const relatedTools=","function relatedToolMarkup","function shareToolMarkup"]) if (!v2.includes(marker)) failures.push(`Growth loop missing: ${marker}`);
+for (const marker of ["knowledgeEntries","function scoreIntent","function intentResults","Learn","Lab"]) if (!discovery.includes(marker)) failures.push(`Discovery foundation missing: ${marker}`);
+for (const marker of ["Tools. Learn. Labs. Play.","learn/","id=\"labs\"","id=\"play\""]) if (!html.includes(marker)) failures.push(`Product pillar missing: ${marker}`);
+const learnPage=readFileSync("learn/index.html","utf8");
+for (const marker of ["Python","JavaScript","React","Node.js","SQL","Regex","Git & GitHub","APIs & OAuth"]) if (!learnPage.includes(marker)) failures.push(`Learn hub missing: ${marker}`);
+for (const marker of ["const growthPages=","const relatedTools=","function relatedToolMarkup","function shareToolMarkup"]) if (!v2.includes(marker)) failures.push(`Growth loop missing: ${marker}`);
 for (const file of requiredFiles) if (!existsSync(file)) failures.push(`Missing file: ${file}`);
 for (const id of expectedTools) {
   const source = id === "ai-prompt-builder" ? tools : v2;
@@ -73,9 +78,12 @@ const launchGuide = readFileSync("docs/PRODUCT-HUNT-ASSET-CAPTURE.md","utf8");
 for (const phrase of ["Homepage discovery","AI Prompt Builder","PII & Secret Redactor","Private PDF Tools","Image Studio","Return workflow","Demo recording"]) if (!launchGuide.includes(phrase)) failures.push(`Launch capture guide missing: ${phrase}`);
 
 if (failures.length) {
-  console.error(failures.join("\n"));
+  console.error(failures.join("
+"));
   process.exit(1);
 }
 console.log(`Smoke checks passed: ${expectedTools.length} v2 workspaces, ${requiredFiles.length} required files.`);
 
-if (v2.includes('document.\\naddEventListener') || v2.includes('document.\\\\naddEventListener')) failures.push("Literal escaped newline disabled the runtime count refresh");
+if (v2.includes('document.\
+addEventListener') || v2.includes('document.\\\
+addEventListener')) failures.push("Literal escaped newline disabled the runtime count refresh");
