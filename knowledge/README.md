@@ -20,3 +20,6 @@ Static, browser-friendly Knowledge content: 35 articles (29 explainers, 6 compar
 - No analytics, ads or service-worker changes. Add `knowledge/` to the SW precache only if desired.
 - Canonical/og URLs assume `https://intellitools.online/knowledge/…`; adjust for staging if needed.
 - Fast-moving facts (MCP spec details, provider retention/pricing, model sizes) are written version-agnostically and point to current docs. Re-review before launch.
+
+## Search experience
+`search-core.mjs` is the ranker. `search.js` loads `search-index.json` and `search-lexicon.json` in the browser and renders Answer / guide, What you'll need, Learn more, and Use IntelliTools. Nothing is sent off the device. A tool is shown only when the question matches a specific in-house activity (draft a prompt, diff two prompts, check claims against pasted evidence, redact secrets, design a multi-agent workflow, validate JSON). Empty `relatedTools` stays empty. `node tests/knowledge-search.mjs` rewrites `SEARCH-TEST-REPORT.md`. `src/build.mjs` keeps the search box when the HTML is regenerated.
