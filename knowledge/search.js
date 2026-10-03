@@ -74,7 +74,7 @@ function render(query) {
       weak.append(list);
       results.append(weak);
     }
-    status.textContent = "No solid guide for \u201c" + q + "\u201d.";
+    status.textContent = "No solid guide for “" + q + "”.";
     return;
   }
 
