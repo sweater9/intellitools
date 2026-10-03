@@ -10,5 +10,9 @@ export const paths = [
   { title: 'Retrieval and grounding (RAG)', blurb: 'How to make a model answer from your own information, and how to tell whether it worked.',
     steps: ['rag', 'embeddings', 'vector-databases', 'chunking', 'context-windows', 'ai-hallucinations', 'ai-evaluation'] },
   { title: 'Using AI safely', blurb: 'Reliability, privacy and security for anyone putting AI into real work.',
-    steps: ['ai-hallucinations', 'how-to-reduce-hallucinations', 'ai-privacy-and-security', 'prompt-injection', 'local-ai', 'ai-evaluation'] }
+    steps: ['ai-hallucinations', 'how-to-reduce-hallucinations', 'ai-privacy-and-security', 'prompt-injection', 'local-ai', 'ai-evaluation'] },
+  { title: 'Build with Python', blurb: 'Call models, handle data and assemble a small RAG pipeline in Python.',
+    steps: ['python-for-ai', 'calling-ai-apis-with-python', 'python-data-for-ai', 'rag-with-python', 'python-ai-libraries'] },
+  { title: 'Web AI with JavaScript', blurb: 'Keep secrets on a Node server, type the client contract, and stream into a React chat UI.',
+    steps: ['javascript-for-ai', 'nodejs-for-ai', 'typescript-api-client-types', 'react-chatbot-state', 'streaming-ai-with-nodejs'] },
 ];
