@@ -1,1 +1,8 @@
-PLACEHOLDER
+{
+  "version": 1,
+  "minSolidScore": 20,
+  "maxIntentBoost": 56,
+  "glossaryBoost": 6,
+  "stopwords": ["a", "an", "the", "to", "of", "and", "or", "for", "in", "on", "with", "my", "your", "our", "is", "are", "was", "were", "be", "do", "does", "did", "how", "what", "why", "when", "which", "who", "should", "can", "could", "would", "i", "we", "you", "it", "this", "that", "from", "into", "about", "than", "then", "just", "not", "no", "yes", "vs", "versus", "using", "use", "used", "into", "over", "than", "its", "if", "at", "as", "by", "me", "let", "keep", "keeps"],
+  "note": "Placeholder replaced in the next commit if this shortened copy is not byte-identical. Search logic lives in the local file."
+}
