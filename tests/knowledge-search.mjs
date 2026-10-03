@@ -93,15 +93,15 @@ lines.push("");
 lines.push("| Label | Area | Query | Top | Score | Tool | Gap |");
 lines.push("| --- | --- | --- | --- | --- | --- | --- |");
 for (const row of rows) {
-  lines.push("| " + [row.label, row.area, row.q.replaceAll("|", "/"), row.topId, row.topScore, row.tool || "\u2014", row.gap || "\u2014"].join(" | ") + " |");
+  lines.push("| " + [row.label, row.area, row.q.replaceAll("|", "/"), row.topId, row.topScore, row.tool || "—", row.gap || "—"].join(" | ") + " |");
 }
 lines.push("");
 lines.push("## Worked well");
-for (const row of rows.filter((row) => row.label === "pass")) lines.push("- " + row.q + " \u2192 " + row.topId + (row.tool ? " (tool: " + row.tool + ")" : ""));
+for (const row of rows.filter((row) => row.label === "pass")) lines.push("- " + row.q + " → " + row.topId + (row.tool ? " (tool: " + row.tool + ")" : ""));
 lines.push("");
 lines.push("## Insufficient Knowledge coverage");
 for (const row of rows.filter((row) => row.label !== "pass")) {
-  lines.push("- " + row.q + " \u2014 " + (row.gapNote || "weak match") + " Top signal: " + row.topId + " (" + row.topScore + "). Tool: " + (row.tool || "none") + ".");
+  lines.push("- " + row.q + " — " + (row.gapNote || "weak match") + " Top signal: " + row.topId + " (" + row.topScore + "). Tool: " + (row.tool || "none") + ".");
 }
 lines.push("");
 lines.push("## Routing checks");
