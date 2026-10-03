@@ -5,8 +5,8 @@ Run: `node tests/knowledge-search.mjs`
 Judgements are against the guides that actually exist. A related page is not marked pass when the corpus does not answer the question. The solid-match threshold was not lowered to hide those gaps.
 
 Queries: 49
-Pass: 40
-Weak: 9
+Pass: 48
+Weak: 1
 Miss: 0
 
 | Label | Area | Query | Top | Score | Tool | Gap |
@@ -43,22 +43,22 @@ Miss: 0
 | pass | function calling | function calling vs MCP | function-calling-vs-mcp | 129 | — | — |
 | pass | local AI | How do I run an LLM locally? | local-ai | 64 | — | — |
 | pass | local AI | Should I run AI locally or in the cloud? | local-ai-vs-cloud-ai | 93 | — | — |
-| weak | frameworks | Which framework can I use for an AI agent? | ai-agents | 65 | — | no-agent-framework-catalog |
+| pass | frameworks | Which framework can I use for an AI agent? | choosing-an-agent-framework | 116 | — | — |
 | pass | frameworks | Should I use RAG or fine-tuning? | rag-vs-fine-tuning | 126 | — | — |
-| weak | Python | How do I build RAG with Python? | rag | 74 | — | no-language-tutorial |
-| weak | JavaScript/TypeScript | TypeScript types for an API client | mcp-vs-api | 26 | — | no-language-tutorial |
-| weak | JavaScript/TypeScript | React state for a chatbot | ai-agent-vs-chatbot | 27 | — | no-language-tutorial |
-| weak | APIs | Node.js streaming responses from an API | mcp-vs-api | 26 | — | no-language-tutorial |
-| weak | databases | How do I use PostgreSQL with my app? | (none) | 0 | — | no-app-database-tutorial |
+| pass | Python | How do I build RAG with Python? | rag-with-python | 129 | — | — |
+| pass | JavaScript/TypeScript | TypeScript types for an API client | typescript-api-client-types | 166 | — | — |
+| pass | JavaScript/TypeScript | React state for a chatbot | react-chatbot-state | 130 | — | — |
+| pass | APIs | Node.js streaming responses from an API | streaming-ai-with-nodejs | 135 | — | — |
+| pass | databases | How do I use PostgreSQL with my app? | postgresql-for-ai-apps | 105 | — | — |
 | pass | AI security | What is prompt injection? | prompt-injection | 88 | — | — |
 | pass | AI security | How do I stop a jailbreak? | prompt-injection | 41 | — | — |
 | pass | AI security | Is it safe to paste customer data into an AI tool? | ai-privacy-and-security | 97 | — | — |
 | pass | AI security | How do I redact secrets before pasting a prompt? | ai-privacy-and-security | 52 | pii-secret-redactor | — |
-| weak | task | How can an AI agent access Gmail? | agent-tools | 58 | — | no-gmail-setup |
+| pass | task | How can an AI agent access Gmail? | gmail-for-ai-agents | 119 | — | — |
 | pass | task | How do I evaluate a RAG system? | ai-evaluation | 56 | — | — |
 | pass | task | Design a multi-agent workflow with roles and handoffs | agentic-workflows | 66 | agentic-workflow-generator | — |
 | weak | task | Compare two prompt versions | system-prompts | 25 | prompt-diff | — |
-| weak | task | How do I validate JSON? | function-calling | 6 | json-formatter | — |
+| pass | task | How do I validate JSON? | json-validation | 108 | json-formatter | — |
 | pass | task | Can I fine-tune instead of prompting? | rag-vs-fine-tuning | 56 | — | — |
 
 ## Worked well
@@ -94,25 +94,25 @@ Miss: 0
 - function calling vs MCP → function-calling-vs-mcp
 - How do I run an LLM locally? → local-ai
 - Should I run AI locally or in the cloud? → local-ai-vs-cloud-ai
+- Which framework can I use for an AI agent? → choosing-an-agent-framework
 - Should I use RAG or fine-tuning? → rag-vs-fine-tuning
+- How do I build RAG with Python? → rag-with-python
+- TypeScript types for an API client → typescript-api-client-types
+- React state for a chatbot → react-chatbot-state
+- Node.js streaming responses from an API → streaming-ai-with-nodejs
+- How do I use PostgreSQL with my app? → postgresql-for-ai-apps
 - What is prompt injection? → prompt-injection
 - How do I stop a jailbreak? → prompt-injection
 - Is it safe to paste customer data into an AI tool? → ai-privacy-and-security
 - How do I redact secrets before pasting a prompt? → ai-privacy-and-security (tool: pii-secret-redactor)
+- How can an AI agent access Gmail? → gmail-for-ai-agents
 - How do I evaluate a RAG system? → ai-evaluation
 - Design a multi-agent workflow with roles and handoffs → agentic-workflows (tool: agentic-workflow-generator)
+- How do I validate JSON? → json-validation (tool: json-formatter)
 - Can I fine-tune instead of prompting? → rag-vs-fine-tuning
 
 ## Insufficient Knowledge coverage
-- Which framework can I use for an AI agent? — No page names or compares agent frameworks. Top signal: ai-agents (65). Tool: none.
-- How do I build RAG with Python? — RAG is the right idea, but there is no Python tutorial. Top signal: rag (74). Tool: none.
-- TypeScript types for an API client — No TypeScript guide. Top signal: mcp-vs-api (26). Tool: none.
-- React state for a chatbot — No React guide. Top signal: ai-agent-vs-chatbot (27). Tool: none.
-- Node.js streaming responses from an API — No Node.js or streaming-API guide. Top signal: mcp-vs-api (26). Tool: none.
-- How do I use PostgreSQL with my app? — No Postgres tutorial. Vector-vs-SQL is the closest idea and it does not match this query. Top signal: (none) (0). Tool: none.
-- How can an AI agent access Gmail? — Routes to tools, function calling and MCP, but there is no Gmail setup guide. Top signal: agent-tools (58). Tool: none.
 - Compare two prompt versions — No guide about diffing prompts. Prompt Diff is the matching tool. Top signal: system-prompts (25). Tool: prompt-diff.
-- How do I validate JSON? — No JSON guide. JSON Formatter is the matching tool. Top signal: function-calling (6). Tool: json-formatter.
 
 ## Routing checks
 These are the behaviour checks, not a lowered score cutoff. A failure exits non-zero.
