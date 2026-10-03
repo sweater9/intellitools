@@ -38,22 +38,22 @@ const cases = [
   { area: "function calling", q: "function calling vs MCP", top: ["function-calling-vs-mcp"], tool: null, label: "pass" },
   { area: "local AI", q: "How do I run an LLM locally?", top: ["local-ai"], tool: null, label: "pass" },
   { area: "local AI", q: "Should I run AI locally or in the cloud?", top: ["local-ai-vs-cloud-ai", "local-ai"], tool: null, label: "pass" },
-  { area: "frameworks", q: "Which framework can I use for an AI agent?", top: ["ai-agents"], gap: "no-agent-framework-catalog", tool: null, label: "weak", gapNote: "No page names or compares agent frameworks." },
+  { area: "frameworks", q: "Which framework can I use for an AI agent?", top: ["choosing-an-agent-framework"], tool: null, label: "pass" },
   { area: "frameworks", q: "Should I use RAG or fine-tuning?", top: ["rag-vs-fine-tuning"], tool: null, label: "pass" },
-  { area: "Python", q: "How do I build RAG with Python?", top: ["rag"], within: ["embeddings", "chunking"], gap: "no-language-tutorial", tool: null, label: "weak", gapNote: "RAG is the right idea, but there is no Python tutorial." },
-  { area: "JavaScript/TypeScript", q: "TypeScript types for an API client", solid: false, gap: "no-language-tutorial", tool: null, label: "weak", gapNote: "No TypeScript guide." },
-  { area: "JavaScript/TypeScript", q: "React state for a chatbot", solid: false, gap: "no-language-tutorial", tool: null, label: "weak", gapNote: "No React guide." },
-  { area: "APIs", q: "Node.js streaming responses from an API", solid: false, gap: "no-language-tutorial", tool: null, label: "weak", gapNote: "No Node.js or streaming-API guide." },
-  { area: "databases", q: "How do I use PostgreSQL with my app?", solid: false, gap: "no-app-database-tutorial", tool: null, label: "weak", gapNote: "No Postgres tutorial. Vector-vs-SQL is the closest idea and it does not match this query." },
+  { area: "Python", q: "How do I build RAG with Python?", top: ["rag-with-python"], within: ["rag", "chunking"], tool: null, label: "pass" },
+  { area: "JavaScript/TypeScript", q: "TypeScript types for an API client", top: ["typescript-api-client-types"], tool: null, label: "pass" },
+  { area: "JavaScript/TypeScript", q: "React state for a chatbot", top: ["react-chatbot-state"], tool: null, label: "pass" },
+  { area: "APIs", q: "Node.js streaming responses from an API", top: ["streaming-ai-with-nodejs"], tool: null, label: "pass" },
+  { area: "databases", q: "How do I use PostgreSQL with my app?", top: ["postgresql-for-ai-apps"], tool: null, label: "pass" },
   { area: "AI security", q: "What is prompt injection?", top: ["prompt-injection"], tool: null, label: "pass" },
   { area: "AI security", q: "How do I stop a jailbreak?", top: ["prompt-injection"], tool: null, label: "pass" },
   { area: "AI security", q: "Is it safe to paste customer data into an AI tool?", top: ["ai-privacy-and-security"], tool: null, label: "pass" },
   { area: "AI security", q: "How do I redact secrets before pasting a prompt?", top: ["ai-privacy-and-security"], tool: "pii-secret-redactor", label: "pass" },
-  { area: "task", q: "How can an AI agent access Gmail?", top: ["agent-tools", "function-calling", "mcp"], within: ["function-calling", "mcp"], gap: "no-gmail-setup", tool: null, label: "weak", gapNote: "Routes to tools, function calling and MCP, but there is no Gmail setup guide." },
+  { area: "task", q: "How can an AI agent access Gmail?", top: ["gmail-for-ai-agents"], within: ["connecting-agents-to-apps", "oauth-for-ai-agents"], tool: null, label: "pass" },
   { area: "task", q: "How do I evaluate a RAG system?", top: ["ai-evaluation", "rag"], tool: null, label: "pass" },
   { area: "task", q: "Design a multi-agent workflow with roles and handoffs", top: ["agentic-workflows"], tool: "agentic-workflow-generator", label: "pass" },
   { area: "task", q: "Compare two prompt versions", solid: false, tool: "prompt-diff", label: "weak", gapNote: "No guide about diffing prompts. Prompt Diff is the matching tool." },
-  { area: "task", q: "How do I validate JSON?", solid: false, tool: "json-formatter", label: "weak", gapNote: "No JSON guide. JSON Formatter is the matching tool." },
+  { area: "task", q: "How do I validate JSON?", top: ["json-validation"], tool: "json-formatter", label: "pass" },
   { area: "task", q: "Can I fine-tune instead of prompting?", top: ["rag-vs-fine-tuning", "fine-tuning"], tool: null, label: "pass" }
 ];
 
@@ -93,15 +93,15 @@ lines.push("");
 lines.push("| Label | Area | Query | Top | Score | Tool | Gap |");
 lines.push("| --- | --- | --- | --- | --- | --- | --- |");
 for (const row of rows) {
-  lines.push("| " + [row.label, row.area, row.q.replaceAll("|", "/"), row.topId, row.topScore, row.tool || "—", row.gap || "—"].join(" | ") + " |");
+  lines.push("| " + [row.label, row.area, row.q.replaceAll("|", "/"), row.topId, row.topScore, row.tool || "\u2014", row.gap || "\u2014"].join(" | ") + " |");
 }
 lines.push("");
 lines.push("## Worked well");
-for (const row of rows.filter((row) => row.label === "pass")) lines.push("- " + row.q + " → " + row.topId + (row.tool ? " (tool: " + row.tool + ")" : ""));
+for (const row of rows.filter((row) => row.label === "pass")) lines.push("- " + row.q + " \u2192 " + row.topId + (row.tool ? " (tool: " + row.tool + ")" : ""));
 lines.push("");
 lines.push("## Insufficient Knowledge coverage");
 for (const row of rows.filter((row) => row.label !== "pass")) {
-  lines.push("- " + row.q + " — " + (row.gapNote || "weak match") + " Top signal: " + row.topId + " (" + row.topScore + "). Tool: " + (row.tool || "none") + ".");
+  lines.push("- " + row.q + " \u2014 " + (row.gapNote || "weak match") + " Top signal: " + row.topId + " (" + row.topScore + "). Tool: " + (row.tool || "none") + ".");
 }
 lines.push("");
 lines.push("## Routing checks");
