@@ -7,12 +7,14 @@ import { pages as p1 } from './pages-foundations.mjs';
 import { pages as p2 } from './pages-rag.mjs';
 import { pages as p3 } from './pages-agents.mjs';
 import { pages as p4 } from './pages-compare.mjs';
+import { pages as p5 } from './pages-practice.mjs';
+import { pages as p6 } from './pages-building.mjs';
 import { glossary } from './glossary.mjs';
 import { paths, tools } from './meta.mjs';
 
 const OUT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SITE = 'https://intellitools.online/knowledge/';
-const pages = [...p1, ...p2, ...p3, ...p4];
+const pages = [...p1, ...p2, ...p3, ...p4, ...p5, ...p6];
 const bySlug = new Map(pages.map(p => [p.slug, p]));
 const errors = [];
 const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -21,7 +23,7 @@ function inline(s) {
   const codes = [];
   s = s.replace(/`([^`]+)`/g, (_, c) => { codes.push(c); return '\u0000' + (codes.length - 1) + '\u0000'; });
   s = esc(s);
-  s = s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>').replace(/(^|[\s(])\*([^*\s][^*]*)\*/g, '$1<em>$2</em>');
+  s = s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>').replace(/(^|[\s(])\*([^\*\s][^*]*)\*/g, '$1<em>$2</em>');
   s = s.replace(/\[\[([a-z0-9-]+)(?:\|([^\]]+))?\]\]/g, (_, slug, label) => {
     const t = bySlug.get(slug);
     if (!t) { errors.push('broken link [[' + slug + ']]'); return slug; }
