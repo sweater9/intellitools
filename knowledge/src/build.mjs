@@ -1,5 +1,5 @@
 // Static generator for IntelliTools Knowledge. Run: node knowledge/src/build.mjs
-// Reads content modules, validates every cross-link, writes HTML + search-index.json + sitemap fragment.
+// Reads content modules, validates every cross-link, writes HTML + search-index.json + search-lexicon.json + sitemap fragment.
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -20,7 +20,7 @@ const pages = [...p1, ...p2, ...p3, ...p4, ...p5, ...p6, ...p7];
 const glossary = [...glossaryCore, ...glossaryTech];
 const bySlug = new Map(pages.map(p => [p.slug, p]));
 const errors = [];
-const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+const esc = s => s.replace(/&/g, '&').replace(/</g, '<').replace(/>/g, '>').replace(/"/g, '"');
 
 function inline(s) {
   const codes = [];
@@ -168,6 +168,28 @@ for (const p of pages) fs.writeFileSync(path.join(OUT, p.slug + '.html'), articl
 fs.writeFileSync(path.join(OUT, 'glossary.html'), glossaryPage());
 fs.writeFileSync(path.join(OUT, 'index.html'), indexPage());
 
+
+function mergeLexicon() {
+  const dir = path.join(OUT, 'src');
+  const parts = ['lexicon-part-a.json', 'lexicon-part-b.json', 'lexicon-part-c.json'].map(name => JSON.parse(fs.readFileSync(path.join(dir, name), 'utf8')));
+  const arrayKeys = new Set(['stopwords', 'intents', 'concepts', 'coverageGaps', 'tools', 'queryTechnologies']);
+  const objectKeys = new Set(['synonyms', 'pageTechnologies']);
+  const merged = {};
+  for (const part of parts) {
+    for (const [key, value] of Object.entries(part)) {
+      if (arrayKeys.has(key)) merged[key] = (merged[key] || []).concat(value);
+      else if (objectKeys.has(key)) merged[key] = { ...(merged[key] || {}), ...value };
+      else merged[key] = value;
+    }
+  }
+  const order = ['version', 'minSolidScore', 'maxIntentBoost', 'glossaryBoost', 'stopwords', 'synonyms', 'intents', 'concepts', 'coverageGaps', 'tools', 'queryTechnologies', 'pageTechnologies'];
+  const ordered = {};
+  for (const key of order) if (Object.prototype.hasOwnProperty.call(merged, key)) ordered[key] = merged[key];
+  for (const key of Object.keys(merged)) if (!Object.prototype.hasOwnProperty.call(ordered, key)) ordered[key] = merged[key];
+  if (!Array.isArray(ordered.tools) || ordered.tools.length !== 6) errors.push('lexicon tools must stay the existing 6 entries');
+  return ordered;
+}
+
 const index = {
   version: 1,
   note: 'Static index for local Knowledge Search. relatedTools lists ONLY tools that genuinely address the topic; empty means show Knowledge results only.',
@@ -181,6 +203,7 @@ const index = {
   paths
 };
 fs.writeFileSync(path.join(OUT, 'search-index.json'), JSON.stringify(index, null, 1));
+fs.writeFileSync(path.join(OUT, 'search-lexicon.json'), JSON.stringify(mergeLexicon(), null, 2) + '\n');
 const urls = ['index.html', 'glossary.html', ...pages.map(p => p.slug + '.html')];
 fs.writeFileSync(path.join(OUT, 'sitemap-fragment.xml'), '<!-- Merge into sitemap.xml at integration; not wired in automatically. -->\n' + urls.map(u => `<url><loc>${SITE}${u}</loc></url>`).join('\n') + '\n');
 
