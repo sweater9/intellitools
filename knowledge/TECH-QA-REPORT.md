@@ -50,3 +50,4 @@ Miss: 8
 - Kubernetes operations (pods, deployments, ingress) are not a guide. Containers and CI are covered; cluster operations are not.
 - Provider-specific console click-paths and current SKU prices are intentionally omitted.
 - A dedicated prompt-diff guide still does not exist; Prompt Diff remains the tool for comparing prompt text, and that case stays weak in the original search suite.
+
