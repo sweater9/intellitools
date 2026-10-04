@@ -9,12 +9,15 @@ import { pages as p3 } from './pages-agents.mjs';
 import { pages as p4 } from './pages-compare.mjs';
 import { pages as p5 } from './pages-practice.mjs';
 import { pages as p6 } from './pages-building.mjs';
-import { glossary } from './glossary.mjs';
+import { pages as p7 } from './pages-technology.mjs';
+import { glossary as glossaryCore } from './glossary.mjs';
+import { glossary as glossaryTech } from './glossary-technology.mjs';
 import { paths, tools } from './meta.mjs';
 
 const OUT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SITE = 'https://intellitools.online/knowledge/';
-const pages = [...p1, ...p2, ...p3, ...p4, ...p5, ...p6];
+const pages = [...p1, ...p2, ...p3, ...p4, ...p5, ...p6, ...p7];
+const glossary = [...glossaryCore, ...glossaryTech];
 const bySlug = new Map(pages.map(p => [p.slug, p]));
 const errors = [];
 const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
