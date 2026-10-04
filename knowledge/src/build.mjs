@@ -20,7 +20,7 @@ const pages = [...p1, ...p2, ...p3, ...p4, ...p5, ...p6, ...p7];
 const glossary = [...glossaryCore, ...glossaryTech];
 const bySlug = new Map(pages.map(p => [p.slug, p]));
 const errors = [];
-const esc = s => s.replace(/&/g, '&').replace(/</g, '<').replace(/>/g, '>').replace(/"/g, '"');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '"');
 
 function inline(s) {
   const codes = [];
