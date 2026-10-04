@@ -18,7 +18,7 @@
     throw new Error("message required string");
   }
   if (data.temperature !== undefined) {
-    if (typeof data.temperature !== "number" || data.temperature < 0 || data.temperature > 2) {
+    if (typeof data.temperature !== "number" || data.temperature &lt; 0 || data.temperature &gt; 2) {
       throw new Error("temperature out of range");
     }
   }
