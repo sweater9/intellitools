@@ -7,12 +7,14 @@ import { pages as p1 } from './pages-foundations.mjs';
 import { pages as p2 } from './pages-rag.mjs';
 import { pages as p3 } from './pages-agents.mjs';
 import { pages as p4 } from './pages-compare.mjs';
+import { pages as p5 } from './pages-practice.mjs';
+import { pages as p6 } from './pages-building.mjs';
 import { glossary } from './glossary.mjs';
 import { paths, tools } from './meta.mjs';
 
 const OUT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SITE = 'https://intellitools.online/knowledge/';
-const pages = [...p1, ...p2, ...p3, ...p4];
+const pages = [...p1, ...p2, ...p3, ...p4, ...p5, ...p6];
 const bySlug = new Map(pages.map(p => [p.slug, p]));
 const errors = [];
 const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -21,7 +23,7 @@ function inline(s) {
   const codes = [];
   s = s.replace(/`([^`]+)`/g, (_, c) => { codes.push(c); return '\u0000' + (codes.length - 1) + '\u0000'; });
   s = esc(s);
-  s = s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>').replace(/(^|[\s(])\*([^*\s][^*]*)\*/g, '$1<em>$2</em>');
+  s = s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>').replace(/(^|[\s(])\*([^\*\s][^*]*)\*/g, '$1<em>$2</em>');
   s = s.replace(/\[\[([a-z0-9-]+)(?:\|([^\]]+))?\]\]/g, (_, slug, label) => {
     const t = bySlug.get(slug);
     if (!t) { errors.push('broken link [[' + slug + ']]'); return slug; }
@@ -129,13 +131,24 @@ function indexPage() {
   const groups = [...new Set(pages.filter(p => p.kind !== 'comparison').map(p => p.group))];
   const card = t => `<a class="kn-card" href="${t.slug}.html"><span class="kn-kind">${t.kind === 'comparison' ? 'Comparison' : 'Concept'}</span><strong>${esc(t.title)}</strong><small>${esc(plain(t.summary))}</small></a>`;
   const sec = g => `<section class="kn-group"><h2>${esc(g)}</h2><div class="kn-cards">${pages.filter(p => p.group === g && p.kind !== 'comparison').map(card).join('')}</div></section>`;
-  const body = `<main><section class="kn-head"><div class="wrap kn-wrap"><span class="eyebrow">INTELLITOOLS KNOWLEDGE</span><h1>Understand AI, practically</h1><p class="kn-lede">Free, plain-English explainers on how modern AI actually works — written for beginners, useful to developers. No account, no tracking requirement, nothing to install.</p></div></section>
+  const body = `<main><section class="kn-head"><div class="wrap kn-wrap"><span class="eyebrow">INTELLITOOLS KNOWLEDGE</span><h1>Understand AI, practically</h1><p class="kn-lede">Free, plain-English explainers on how modern AI actually works — written for beginners, useful to developers. No account, no tracking requirement, nothing to install.</p>
+<form class="kn-ask" id="kn-search-form" role="search" action="index.html">
+<label for="kn-q">What do you want to know or build?</label>
+<div class="kn-ask-row">
+<input id="kn-q" name="q" type="search" placeholder="What do you want to know or build?" autocomplete="off" enterkeyhint="search" aria-describedby="kn-ask-note">
+<button class="btn" type="submit">Search</button>
+</div>
+<p id="kn-ask-note" class="kn-ask-note">Searches these guides in your browser. Nothing you type is sent to a server.</p>
+</form>
+<div id="kn-search-status" class="kn-sr" aria-live="polite"></div>
+<div id="kn-search-results" class="kn-results"></div>
+</div></section>
 <div class="wrap kn-wrap"><section class="kn-group"><h2>Learning paths</h2><div class="kn-cards">${paths.map(pa => `<div class="kn-card kn-pathcard"><strong>${esc(pa.title)}</strong><small>${esc(pa.blurb)}</small><ol>${pa.steps.map(s => `<li><a href="${s}.html">${esc(bySlug.get(s).title)}</a></li>`).join('')}</ol></div>`).join('')}</div></section>
 ${groups.map(sec).join('')}
 <section class="kn-group"><h2>Comparisons</h2><div class="kn-cards">${pages.filter(p => p.kind === 'comparison').map(card).join('')}</div></section>
 <section class="kn-group"><h2>Reference</h2><div class="kn-cards"><a class="kn-card" href="glossary.html"><span class="kn-kind">Glossary</span><strong>AI Glossary A–Z</strong><small>${glossary.length} terms defined in plain English.</small></a></div></section></div></main>`;
   const ld = { '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'IntelliTools Knowledge', url: SITE, inLanguage: 'en' };
-  return shell({ title: 'Knowledge: understand AI, practically', desc: 'Free practical explainers on LLMs, tokens, RAG, embeddings, AI agents, MCP, prompting, evaluation and AI security.', file: 'index.html', body, ld });
+  return shell({ title: 'Knowledge: understand AI, practically', desc: 'Free practical explainers on LLMs, tokens, RAG, embeddings, AI agents, MCP, prompting, evaluation and AI security.', file: 'index.html', body, ld }).replace('</body>', '<script type="module" src="search.js"></script></body>');
 }
 
 // ---- validation ----
