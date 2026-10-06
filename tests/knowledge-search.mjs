@@ -50,7 +50,7 @@ const cases = [
   { area: "AI security", q: "Is it safe to paste customer data into an AI tool?", top: ["ai-privacy-and-security"], tool: null, label: "pass" },
   { area: "AI security", q: "How do I redact secrets before pasting a prompt?", top: ["ai-privacy-and-security"], tool: "pii-secret-redactor", label: "pass" },
   { area: "task", q: "How can an AI agent access Gmail?", top: ["gmail-for-ai-agents"], within: ["connecting-agents-to-apps", "oauth-for-ai-agents"], tool: null, label: "pass" },
-  { area: "task", q: "How do I evaluate a RAG system?", top: ["ai-evaluation", "rag"], tool: null, label: "pass" },
+  { area: "task", q: "How do I evaluate a RAG system?", top: ["ai-evaluation", "rag", "rag-evaluation"], tool: null, label: "pass" },
   { area: "task", q: "Design a multi-agent workflow with roles and handoffs", top: ["agentic-workflows"], tool: "agentic-workflow-generator", label: "pass" },
   { area: "task", q: "Compare two prompt versions", solid: false, tool: "prompt-diff", label: "weak", gapNote: "No guide about diffing prompts. Prompt Diff is the matching tool." },
   { area: "task", q: "How do I validate JSON?", top: ["json-validation"], tool: "json-formatter", label: "pass" },

@@ -23,3 +23,6 @@ Static, browser-friendly Knowledge content: 35 articles (29 explainers, 6 compar
 
 ## Search experience
 `search-core.mjs` is the ranker. `search.js` loads `search-index.json` and `search-lexicon.json` in the browser and renders Answer / guide, What you'll need, Learn more, and Use IntelliTools. Nothing is sent off the device. A tool is shown only when the question matches a specific in-house activity (draft a prompt, diff two prompts, check claims against pasted evidence, redact secrets, design a multi-agent workflow, validate JSON). Empty `relatedTools` stays empty. `node tests/knowledge-search.mjs` rewrites `SEARCH-TEST-REPORT.md`. `src/build.mjs` keeps the search box when the HTML is regenerated.
+
+## V3 AI ontology (feature/knowledge-ai-v3-ontology)
+140 additional entity pages, `ontology-v3.json`, 52 glossary terms and 7 learning paths, authored from the V3 topic specification (not converted from a V2 file). Nothing is source-verified. See `V3-AI-ONTOLOGY-NOTES.md`, `spec/ENTITY-SCHEMA-V3.md`, `AI-V3-QUERY-REPORT.md`. Tests: `npm run test:ai-v3`.

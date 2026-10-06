@@ -15,7 +15,7 @@ Miss: 0
 | pass | AI fundamentals | What is machine learning versus AI? | what-is-ai | 52 | — | — |
 | pass | AI fundamentals | What is generative AI? | generative-ai | 66 | — | — |
 | pass | LLMs | What is an LLM? | large-language-models | 27 | — | — |
-| pass | LLMs | How do LLMs generate text? | large-language-models | 69 | — | — |
+| pass | LLMs | How do LLMs generate text? | large-language-models | 38 | — | — |
 | pass | LLMs | What is a token? | tokens | 41 | — | — |
 | pass | LLMs | What is a transformer and attention? | transformers | 67 | — | — |
 | pass | prompting | How do I write better prompts? | prompt-engineering | 71 | ai-prompt-builder | — |
@@ -55,7 +55,7 @@ Miss: 0
 | pass | AI security | Is it safe to paste customer data into an AI tool? | ai-privacy-and-security | 97 | — | — |
 | pass | AI security | How do I redact secrets before pasting a prompt? | ai-privacy-and-security | 52 | pii-secret-redactor | — |
 | pass | task | How can an AI agent access Gmail? | gmail-for-ai-agents | 83 | — | — |
-| pass | task | How do I evaluate a RAG system? | ai-evaluation | 56 | — | — |
+| pass | task | How do I evaluate a RAG system? | rag-evaluation | 102 | — | — |
 | pass | task | Design a multi-agent workflow with roles and handoffs | agentic-workflows | 66 | agentic-workflow-generator | — |
 | weak | task | Compare two prompt versions | system-prompts | 25 | prompt-diff | — |
 | pass | task | How do I validate JSON? | json-validation | 52 | json-formatter | — |
@@ -106,7 +106,7 @@ Miss: 0
 - Is it safe to paste customer data into an AI tool? → ai-privacy-and-security
 - How do I redact secrets before pasting a prompt? → ai-privacy-and-security (tool: pii-secret-redactor)
 - How can an AI agent access Gmail? → gmail-for-ai-agents
-- How do I evaluate a RAG system? → ai-evaluation
+- How do I evaluate a RAG system? → rag-evaluation
 - Design a multi-agent workflow with roles and handoffs → agentic-workflows (tool: agentic-workflow-generator)
 - How do I validate JSON? → json-validation (tool: json-formatter)
 - Can I fine-tune instead of prompting? → rag-vs-fine-tuning

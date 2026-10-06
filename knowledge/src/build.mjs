@@ -12,14 +12,22 @@ import { pages as p6 } from './pages-building.mjs';
 import { pages as p7 } from './pages-technology.mjs';
 import { glossary as glossaryCore } from './glossary.mjs';
 import { glossary as glossaryTech } from './glossary-technology.mjs';
+import { glossary as glossaryAiV3 } from './glossary-ai-v3.mjs';
 import { paths, tools } from './meta.mjs';
+import { buildEntities } from './entities.mjs';
 
 const OUT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SITE = 'https://intellitools.online/knowledge/';
-const pages = [...p1, ...p2, ...p3, ...p4, ...p5, ...p6, ...p7];
-const glossary = [...glossaryCore, ...glossaryTech];
+const corePages = [...p1, ...p2, ...p3, ...p4, ...p5, ...p6, ...p7];
+const ent = buildEntities(corePages);
+for (const [slug, patch] of Object.entries(ent.aliasPatches)) {
+  const target = corePages.find(p => p.slug === slug);
+  if (target) { target.aliases = [...new Set([...(target.aliases || []), ...patch.aliases])]; target.keywords = [...new Set([...(target.keywords || []), ...patch.keywords])]; }
+}
+const pages = [...corePages, ...ent.entityPages];
+const glossary = [...glossaryCore, ...glossaryTech, ...glossaryAiV3];
 const bySlug = new Map(pages.map(p => [p.slug, p]));
-const errors = [];
+const errors = [...ent.errors];
 const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '\x26quot;');
 
 function inline(s) {
@@ -103,7 +111,7 @@ function articlePage(p) {
     toolBlock = `<section class="kn-tool" id="try-it-with-intellitools"><h2>Try it with IntelliTools</h2>${md(p.tool.note)}<p><a class="btn" href="../tools/${p.tool.id}.html">Open ${esc(t.name)}</a></p><p class="kn-small">${esc(t.privacy)}</p></section>`;
   }
   const body = `<main><section class="kn-head"><div class="wrap kn-wrap"><nav class="kn-crumb" aria-label="Breadcrumb"><a href="index.html">Knowledge</a> › <span>${p.kind === 'comparison' ? 'Comparisons' : esc(p.group)}</span></nav>
-<span class="eyebrow">${p.kind === 'comparison' ? 'COMPARISON' : 'EXPLAINER'}</span><h1>${esc(p.title)}</h1><p class="kn-lede">${inline(p.summary)}</p>
+<span class="eyebrow">${p.kind === 'comparison' ? 'COMPARISON' : 'EXPLAINER'}</span><h1>${esc(p.title)}</h1>${p.entity ? `<p class="kn-meta"><span>${esc(p.entity.entity_type)}</span><span>freshness: ${esc(p.entity.freshness)}</span><span>sources not yet verified</span></p>` : ''}<p class="kn-lede">${inline(p.summary)}</p>
 <p class="kn-quick"><strong>Short answer:</strong> ${inline(p.short)}</p></div></section>
 <div class="wrap kn-wrap kn-layout"><article class="kn-article">${secs.map(s => `<section id="${s.id}"><h2>${esc(s.h)}</h2>${s.html}</section>`).join('\n')}${toolBlock}
 ${rel ? `<section id="related-concepts"><h2>Related concepts</h2><div class="kn-cards">${rel}</div></section>` : ''}${pn}</article>
@@ -171,7 +179,7 @@ fs.writeFileSync(path.join(OUT, 'index.html'), indexPage());
 
 function mergeLexicon() {
   const dir = path.join(OUT, 'src');
-  const parts = ['lexicon-part-a.json', 'lexicon-part-b.json', 'lexicon-part-c.json'].map(name => JSON.parse(fs.readFileSync(path.join(dir, name), 'utf8')));
+  const parts = ['lexicon-part-a.json', 'lexicon-part-b.json', 'lexicon-part-c.json', 'lexicon-part-d.json'].map(name => JSON.parse(fs.readFileSync(path.join(dir, name), 'utf8')));
   const arrayKeys = new Set(['stopwords', 'intents', 'concepts', 'coverageGaps', 'tools', 'queryTechnologies']);
   const objectKeys = new Set(['synonyms', 'pageTechnologies']);
   const merged = {};
@@ -197,11 +205,12 @@ const index = {
     id: p.slug, url: 'knowledge/' + p.slug + '.html', title: p.title, type: p.kind, group: p.group || 'Comparisons',
     question: p.question, summary: plain(p.summary), aliases: p.aliases, keywords: p.keywords || [],
     related: p.related || [], relatedTools: p.tool ? [{ id: p.tool.id, url: 'tools/' + p.tool.id + '.html', reason: plain(p.tool.note).slice(0, 220) }] : [],
-    headings: p.sections.map(s => s[0]), words: p.sections.map(s => s[1]).join(' ').split(/\s+/).length
+    entity: p.entity || undefined, headings: p.sections.map(s => s[0]), words: p.sections.map(s => s[1]).join(' ').split(/\s+/).length
   })),
   glossary: glossary.map(g => ({ term: g.term, aka: g.aka || '', definition: plain(g.def), pages: g.pages || [], url: 'knowledge/glossary.html#' + slugify(g.term) })),
   paths
 };
+fs.writeFileSync(path.join(OUT, 'ontology-v3.json'), JSON.stringify(ent.ontology, null, 1) + '\n');
 fs.writeFileSync(path.join(OUT, 'search-index.json'), JSON.stringify(index, null, 1));
 fs.writeFileSync(path.join(OUT, 'search-lexicon.json'), JSON.stringify(mergeLexicon(), null, 2) + '\n');
 const urls = ['index.html', 'glossary.html', ...pages.map(p => p.slug + '.html')];
