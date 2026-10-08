@@ -1,0 +1,131 @@
+P|vague|hard|n|emb|embeddings,contrastive-learning-clip|-|represent pictures and sentences so a photo of a dog lands near the word dog
+P|vague|medium|n|rag|rag,how-to-reduce-hallucinations|-|stop the assistant guessing by giving it the relevant handbook pages at question time
+P|vague|hard|n|inference|kv-cache,prompt-caching|-|remember the work already done on earlier tokens so the next one is cheaper
+P|vague|medium|n|local|local-ai,local-llm-runtimes|-|keep all our data on premises but still use a chat model
+P|vague|hard|n|quant|quantization|-|squeeze model weights into fewer bits so it fits in my graphics memory
+P|vague|medium|n|agent|agent-memory|-|assistant forgets my preferences every time i open a new chat
+P|vague|hard|n|agent|agent-planning,agentic-workflows|-|how does an automated assistant decide the order of steps for a big job
+P|vague|medium|n|eval|ai-evaluation,llm-as-a-judge|-|automatic checks that our chatbot answers didn't get worse after a change
+P|vague|medium|n|aisec|prompt-injection|-|someone emailed instructions that tricked our email assistant into forwarding data
+P|vague|medium|n|aisec|ai-guardrails,red-teaming|-|stop the bot from giving out dangerous instructions
+P|vague|hard|n|finetune|lora-and-peft|-|customise a big model cheaply by training tiny add on matrices
+P|vague|medium|n|finetune|fine-tuning|-|teach a model our house writing style using a few hundred examples
+P|vague|hard|n|align|rlhf,preference-optimization|-|people rank two answers and the model learns to prefer the better one
+P|vague|medium|n|align|sycophancy|-|it tells me my bad idea is brilliant every time
+P|vague|hard|n|reasoning|reasoning-models,test-time-compute|-|models that pause and think privately before replying
+P|vague|medium|n|decoding|structured-outputs|-|force the reply into exact fields my code can parse
+P|vague|medium|n|vision|object-detection|-|count people in a camera feed and outline where they are
+P|vague|medium|n|vision|document-understanding-ai|-|read scanned contracts and extract parties and dates
+P|vague|medium|n|speech|speech-ai|-|automatic captions for my videos
+P|vague|hard|n|robotics|sim-to-real-transfer|-|train the robot in a video game world then use it in the factory
+P|vague|medium|n|mlops|model-drift-and-monitoring|-|alert when live inputs start looking different from training data
+P|vague|medium|n|mlops|llm-observability|-|see every prompt and response our app sends in production with timings
+P|vague|medium|n|mlops|llm-cost-optimization,prompt-caching|-|cut the money we spend on model calls without hurting quality
+P|vague|medium|n|api|webhooks|-|have another service call my server when an event happens instead of polling
+P|vague|medium|n|api|rest-apis,what-is-an-api|-|let other programs ask my app for data over http
+P|vague|medium|n|devtools|git|-|keep a history of every change to my code and go back if needed
+P|vague|medium|n|docker|docker,containers|-|package my app with everything it needs so it runs the same on any server
+P|vague|hard|n|k8s|kubernetes|-|restart crashed services automatically and spread them over many machines
+P|vague|medium|n|cicd|cicd|-|every time i push code it should test and deploy itself
+P|vague|medium|n|oauth|oauth,oauth-for-ai-agents|-|sign in with my google account without giving the app my password
+P|vague|medium|n|oauth|json-web-tokens|-|signed token the server checks on each request instead of a session
+P|vague|medium|n|db|vector-databases,choosing-a-vector-store|-|database that finds the closest matches by meaning not exact words
+P|vague|medium|n|db|redis|-|make repeated page loads faster by keeping results in memory
+P|vague|medium|n|m365|microsoft-graph|-|read a user's outlook calendar from my own app
+P|vague|medium|n|sharepoint|sharepoint|-|our intranet where departments keep shared files and news
+P|vague|medium|n|m365|power-platform|-|build simple business apps and automations without coding
+P|vague|medium|n|json|json-schema,json-validation|-|reject incoming data that is missing required fields
+P|vague|hard|n|transformer|transformers|-|architecture from the 2017 paper that replaced recurrence with attention
+P|vague|hard|n|gov|eu-ai-act|-|european law that bans some ai uses and regulates others by risk
+P|vague|medium|n|gov|model-cards|-|a datasheet that explains what a model is for and where it fails
+P|vague|hard|n|science|alphafold|-|the protein structure ai that won a nobel prize
+P|vague|medium|n|mcp|mcp,mcp-servers-and-clients|-|expose my company database to claude desktop as a tool
+P|vague|hard|n|a2a|a2a-protocol|-|let my agent hire another company's agent to finish part of a task
+P|conversational|medium|n|agent|ai-agents,agent-tools|-|i want something that books meetings for me automatically, what tech is that
+P|conversational|medium|n|rag|rag,chunking|-|we have 10 years of support tickets, can a bot answer from them
+P|conversational|medium|n|local|local-ai,ai-privacy-and-security|-|legal says we can't send data to openai, what are our options
+P|incomplete|easy|n|rag|rag|-|rag explained quickly
+P|incomplete|medium|n|emb|embeddings|-|embeddings vs keywords
+P|incomplete|medium|n|agent|function-calling,agent-tools|-|tool calling how does it work
+P|incomplete|medium|n|vdb|pgvector|-|pgvector index
+P|typo|medium|n|rag|rag|-|retreival augmented generation
+P|typo|medium|n|transformer|transformers|-|transfomer architecture explained
+P|typo|medium|n|finetune|fine-tuning|-|finetunning llama on custom data
+P|typo|medium|n|eval|ai-hallucinations|-|why does it halucinate
+P|typo|medium|n|mcp|mcp|-|model contex protocol
+P|typo|medium|n|react|react|-|reactjs hooks usestate tutorial
+P|typo|medium|n|python|python|-|pyhton list comprehension
+P|typo|medium|n|docker|docker|-|dokcer compose up
+G|gap|medium|n|devops|-|-|terraform state file locking
+G|gap|medium|n|devops|-|-|ansible playbook for installing nginx
+G|gap|medium|n|devops|-|-|helm values override per environment
+G|gap|medium|n|devops|-|-|prometheus alertmanager rules
+G|gap|medium|n|devops|-|-|grafana dashboard for cpu usage
+G|gap|medium|n|devops|-|-|istio sidecar injection
+G|gap|medium|n|devops|-|-|nginx 502 bad gateway fix
+G|gap|medium|n|devops|-|-|systemd service keeps restarting
+G|gap|medium|n|devops|-|-|bash script loop over files
+G|gap|medium|n|devops|-|-|ssh permission denied publickey
+G|gap|medium|n|devops|-|-|letsencrypt certificate renewal with certbot
+G|gap|medium|n|devops|-|-|dns cname vs a record
+G|gap|medium|n|data|-|-|apache kafka consumer groups
+G|gap|medium|n|data|-|-|airflow dag scheduling
+G|gap|medium|n|data|-|-|snowflake vs bigquery for analytics
+G|gap|medium|n|data|-|-|dbt models and tests
+G|gap|medium|n|data|-|-|spark dataframe partitioning
+G|gap|medium|n|data|-|-|elasticsearch mapping types
+G|gap|medium|n|data|-|-|power bi dax measures
+G|gap|medium|n|data|-|-|excel vlookup not working
+G|gap|medium|n|web|-|-|vue composition api
+G|gap|medium|n|web|-|-|angular dependency injection
+G|gap|medium|n|web|-|-|svelte stores
+G|gap|medium|n|web|-|-|tailwind css purge config
+G|gap|medium|n|web|-|-|webpack vs vite
+G|gap|medium|n|web|-|-|jest mock a module
+G|gap|medium|n|web|-|-|playwright end to end tests flaky
+G|gap|medium|n|web|-|-|php laravel routing
+G|gap|medium|n|web|-|-|wordpress plugin development
+G|gap|medium|n|mobile|-|-|flutter state management
+G|gap|medium|n|mobile|-|-|kotlin coroutines
+G|gap|medium|n|mobile|-|-|swiftui navigation stack
+G|gap|medium|n|mobile|-|-|react native expo build
+G|gap|medium|n|lang|-|-|c++ smart pointers
+G|gap|medium|n|lang|-|-|haskell monads
+G|gap|medium|n|lang|-|-|ruby on rails active record
+G|gap|medium|n|lang|-|-|regex for matching phone numbers
+G|gap|medium|n|net|-|-|grpc protobuf streaming
+G|gap|medium|n|net|-|-|tcp vs udp
+G|gap|medium|n|net|-|-|load balancer health checks
+G|gap|medium|n|net|-|-|cdn cache invalidation
+G|gap|medium|n|sec|-|-|sql injection prevention in php
+G|gap|medium|n|sec|-|-|xss sanitising user input
+G|gap|medium|n|sec|-|-|password hashing with bcrypt
+G|gap|medium|n|sec|-|-|zero trust network access
+G|gap|medium|n|ml|-|-|xgboost hyperparameter tuning
+G|gap|medium|n|ml|-|-|random forest feature importance
+G|gap|medium|n|ml|-|-|time series anomaly detection with prophet
+G|gap|medium|n|ml|-|-|collaborative filtering for movie recommendations
+G|gap|medium|n|ml|-|-|federated learning across hospitals
+G|gap|medium|n|ml|-|-|differential privacy epsilon budget
+G|gap|medium|n|ml|-|-|causal inference with propensity scores
+G|gap|medium|n|ml|-|-|active learning to reduce labelling cost
+G|gap|medium|n|ml|-|-|jax jit and vmap
+G|gap|medium|n|ml|-|-|tensorflow keras sequential model
+G|gap|medium|n|ml|-|-|optical character recognition with tesseract
+G|gap|medium|n|ml|-|-|sentiment analysis with nltk
+G|gap|medium|n|ml|-|-|tf idf keyword extraction
+G|gap|medium|n|ml|-|-|automl tools comparison
+G|gap|medium|n|tools|-|-|github copilot vs cursor for coding
+G|gap|medium|n|tools|-|-|vs code remote ssh setup
+G|gap|medium|n|tools|-|-|jupyter notebook kernel keeps dying
+G|gap|medium|n|cloud|aws-fundamentals,integration-permissions|-|aws iam policy least privilege example
+G|gap|medium|n|cloud|cicd,azure-fundamentals|-|azure devops yaml pipeline
+G|gap|medium|n|cloud|-|-|cloudflare workers kv
+G|gap|medium|n|cloud|-|-|serverless cold start latency
+G|gap|medium|n|m365|sharepoint|-|sharepoint migration from on premises
+G|gap|medium|n|m365|microsoft-365,power-platform|-|excel online script automation with office scripts
+G|gap|medium|n|m365|microsoft-365|-|outlook rules not running
+G|gap|medium|n|volatile|benchmarks-and-leaderboards|-|which model is number one on the leaderboard today
+G|gap|medium|n|volatile|model-apis,llm-cost-optimization|-|price per million tokens for the newest gpt model
+G|gap|medium|n|volatile|-|-|when is the next llama release
+G|gap|medium|n|volatile|-|-|latest version of node lts right now

@@ -1,0 +1,182 @@
+# kind|style|difficulty|ambiguity|topic|accept|tools|query
+P|beginner|easy|n|ai|what-is-ai|-|whats the actual difference between ai and normal software
+P|vague|medium|n|ai|what-is-ai,supervised-learning|-|computers that improve at a task the more data they see
+P|conversational|easy|n|ai|generative-ai|-|my boss keeps saying genai, what does that cover exactly
+P|vague|medium|n|ai|generative-ai,diffusion-models,video-generation-models|-|tools that produce brand new pictures or music from a typed description
+P|beginner|easy|n|llm|large-language-models|-|how does chatgpt type out answers, what's going on underneath
+P|expert|hard|n|llm|large-language-models,self-supervised-learning|-|pretraining objective for autoregressive language models next token prediction
+P|vague|medium|n|llm|tokens|-|why does the ai charge me per word fragment instead of per word
+P|typo|easy|n|llm|tokens|-|what are tokins in a language model
+P|troubleshooting|medium|n|llm|context-windows|-|my long chat forgot what i said at the start, why
+P|implementation|medium|n|llm|context-windows,chunking|-|my document is bigger than the model limit, how do i feed it in
+P|concept|medium|n|transformer|transformers|-|how does self attention decide which words matter
+P|vague|hard|n|transformer|transformers,positional-encoding|-|every word looks at every other word at once, what is this design called
+P|expert|hard|n|transformer|positional-encoding|-|rotary embeddings versus learned absolute positions
+P|expert|hard|n|transformer|kv-cache|-|why does generation memory grow with each new token during decoding
+P|expert|hard|n|transformer|flash-attention|-|io aware exact attention kernel that avoids materialising the full matrix
+P|comparison|hard|n|transformer|encoder-decoder-vs-decoder-only|-|why are most chat models decoder only rather than encoder decoder like t5
+P|comparison|hard|n|transformer|transformers-vs-state-space-models,state-space-models|-|attention versus selective state space sequence models for long inputs
+P|concept|hard|n|transformer|mixture-of-experts|-|sparse routing where each token only uses a few expert sub networks
+P|vague|medium|n|transformer|mixture-of-experts|-|huge model but only a fraction of it runs for each word, how
+P|concept|medium|n|llm|scaling-laws|-|does making models bigger always make them better
+P|concept|medium|n|llm|multimodal-ai|-|one model that takes audio images and text together
+P|beginner|easy|n|llm|ai-hallucinations|-|why does the bot confidently state wrong facts
+P|troubleshooting|medium|n|llm|how-to-reduce-hallucinations,rag|-|our support bot invents policy details, how do we stop that
+P|vague|medium|n|llm|how-to-reduce-hallucinations,fact-anchor-checker|fact-anchor-checker|did the summary i got make up anything the original document never said
+P|beginner|easy|n|prompt|prompt-engineering|ai-prompt-builder|tips to get better answers from chat assistants
+P|implementation|medium|n|prompt|prompt-engineering,ai-prompt-builder|ai-prompt-builder|help me structure a prompt with role context and output format
+P|concept|easy|n|prompt|system-prompts|-|where do i put rules that apply to the whole conversation
+P|troubleshooting|medium|n|prompt|common-prompting-mistakes,prompt-engineering|-|the model ignores half my instructions, what am i doing wrong
+P|comparison|medium|n|prompt|prompt-diff,prompt-engineering|prompt-diff|see what changed between version 3 and version 4 of my prompt
+P|concept|medium|n|prompt|chain-of-thought|-|asking the model to work it out step by step first
+P|expert|hard|n|reasoning|self-consistency|-|majority vote over multiple sampled reasoning paths
+P|expert|hard|n|reasoning|best-of-n-sampling|-|generate n candidates and keep the one a verifier scores highest
+P|concept|hard|n|reasoning|test-time-compute|-|spending more compute at inference instead of training
+P|concept|medium|n|reasoning|reasoning-models|-|what makes o1 style models different from regular chat models
+P|which|medium|n|reasoning|reasoning-vs-standard-models,reasoning-models|-|should i pay for a thinking model for simple classification tasks
+P|expert|hard|n|reasoning|thinking-budgets|-|capping how many hidden reasoning tokens a model may spend
+P|expert|hard|n|reasoning|process-reward-model,prm-vs-orm|-|rewarding each intermediate step instead of only the final answer
+P|expert|hard|n|reasoning|outcome-reward-model,prm-vs-orm|-|reward model that only scores whether the final answer is right
+P|expert|hard|n|reasoning|search-over-reasoning|-|tree search over partial solutions while the model reasons
+P|concept|hard|n|reasoning|reasoning-transparency,chain-of-thought|-|can we trust the visible reasoning trace to reflect what the model really did
+P|expert|hard|n|reasoning|reinforcement-learning-for-reasoning|-|training models to reason with verifiable rewards like unit tests or math checks
+P|concept|medium|n|decoding|sampling-and-decoding|-|what do temperature and top p actually change
+P|troubleshooting|medium|n|decoding|sampling-and-decoding|-|answers are too random every time i run it
+P|implementation|medium|n|decoding|structured-outputs,json-schema,structured-output-methods-compared|-|make the model always reply in valid json matching my fields
+P|expert|hard|n|decoding|constrained-decoding,grammar-guided-generation|-|mask invalid tokens at each step so output must follow a grammar
+P|expert|hard|n|decoding|gbnf-grammars|-|grammar file format for llama.cpp constrained output
+P|which|hard|n|decoding|structured-output-methods-compared|-|json mode vs function calling vs grammar constraints which is most reliable
+P|concept|medium|n|decoding|outlines|-|python library that guarantees regex or schema shaped generations
+P|expert|hard|n|inference|speculative-decoding|-|use a tiny draft model to speed up a big one without changing outputs
+P|concept|medium|n|inference|prompt-caching|-|providers discount repeated prompt prefixes, how does that work
+P|which|medium|n|inference|llm-cost-optimization|-|our llm bill is too high, where do we start cutting
+P|concept|medium|n|inference|model-serving-and-inference|-|what does it take to serve a model to thousands of users
+P|which|medium|n|inference|vllm,local-runtimes-compared,model-serving-and-inference|-|high throughput open source server for hosting llama on gpus
+P|concept|medium|n|inference|gpus-and-ai-accelerators|-|why do ai workloads need graphics cards
+P|vague|medium|n|inference|gpus-and-ai-accelerators|-|which chips are used to train big models and why are they scarce
+P|concept|medium|n|quant|quantization|-|running a model in 4 bit instead of 16 bit, what do i lose
+P|typo|easy|n|quant|quantization|-|what is quantisation in llms
+P|acronym|medium|n|quant|quantization,llama-cpp|-|gguf q4_k_m meaning
+P|concept|medium|n|quant|knowledge-distillation|-|train a small model to copy the outputs of a large one
+P|concept|medium|n|local|local-ai|-|can i use ai completely offline on my own machine
+P|which|medium|n|local|local-llm-runtimes,local-runtimes-compared|-|easiest way to run an open model on a macbook
+P|comparison|medium|n|local|local-runtimes-compared|-|lm studio or ollama or plain llama.cpp for a laptop
+P|implementation|easy|n|local|ollama|-|ollama pull and run a model from terminal
+P|conversational|medium|n|local|local-ai-vs-cloud-ai|-|is it worth running models locally or just paying for an api
+P|concept|medium|n|local|small-language-models|-|small models that run on a phone are they any good
+P|concept|medium|n|local|open-weights-models|-|difference between open source and open weights models
+P|implementation|medium|n|local|onnx-runtime|-|run an exported model cross platform with onnx
+P|vague|hard|n|local|onnx-runtime|-|portable model file format that runs the same on windows linux and the browser
+P|concept|easy|n|emb|embeddings|-|turn text into vectors so similar meaning ends up close
+P|vague|medium|n|emb|embeddings|-|how can software tell two differently worded questions ask the same thing
+P|implementation|medium|n|emb|embeddings,rag-with-python|-|compute cosine similarity between two sentences in python
+P|concept|medium|n|vdb|vector-databases|-|what is a vector store for
+P|which|medium|n|vdb|choosing-a-vector-store|-|pinecone weaviate qdrant or chroma which one should i pick
+P|comparison|medium|n|vdb|vector-database-vs-traditional-database|-|do i need a special database for embeddings or will my normal one do
+P|implementation|medium|n|vdb|pgvector,postgresql-for-ai-apps|-|add similarity search to an existing postgres table
+P|concept|hard|n|vdb|vector-databases|-|approximate nearest neighbour indexes like hnsw explained
+P|beginner|easy|n|rag|rag|-|how do i make a chatbot answer from my company documents
+P|vague|medium|n|rag|rag|-|look up relevant passages first then let the model write the answer
+P|implementation|medium|n|rag|rag-with-python|-|build a simple retrieval qa pipeline in python
+P|concept|medium|n|rag|chunking|-|what size should my text pieces be before embedding them
+P|troubleshooting|medium|n|rag|chunking,hybrid-search-and-reranking,rag-evaluation|-|retrieval keeps returning half sentences with no context
+P|concept|hard|n|rag|hybrid-search-and-reranking|-|bm25 plus dense retrieval then a cross encoder reranker
+P|concept|hard|n|rag|graph-rag|-|retrieval that walks relationships between entities instead of chunks
+P|concept|hard|n|rag|agentic-rag|-|the model decides when and what to search in multiple rounds
+P|which|medium|n|rag|rag-vs-fine-tuning|-|should i fine tune or use retrieval to teach a model our product catalogue
+P|which|medium|n|rag|rag-frameworks,llamaindex,langchain|-|which framework helps most with document ingestion and retrieval
+P|implementation|medium|n|rag|llamaindex|-|llamaindex query engine over a folder of pdfs
+P|trouble|medium|n|rag|rag-evaluation|-|how do i know if my retrieval system finds the right chunks
+P|concept|medium|n|rag|context-engineering|-|deciding exactly what goes into the prompt window for each call
+P|beginner|easy|n|agent|ai-agents|-|what makes something an ai agent rather than a chatbot
+P|vague|medium|n|agent|ai-agents|-|software that pursues a goal by choosing its own next actions
+P|comparison|easy|n|agent|ai-agent-vs-chatbot|-|chatbot vs agent difference in plain english
+P|concept|medium|n|agent|agent-tools,function-calling|-|how does an assistant use a calculator or search engine
+P|implementation|medium|n|agent|function-calling|-|define a tool schema so the model can request a weather lookup
+P|concept|medium|n|agent|agent-memory|-|give my assistant long term memory of past chats
+P|concept|medium|n|agent|agent-planning|-|assistant should outline the steps of a large job before it starts doing them
+P|concept|hard|n|agent|react-agent-pattern|-|interleaving thought action observation loops
+P|vague|hard|n|agent|react-agent-pattern|-|model thinks, calls a tool, reads the result, thinks again until done
+P|concept|medium|n|agent|multi-agent-systems|-|a planner agent hands work to a researcher agent and a writer agent
+P|architecture|medium|n|agent|agentic-workflows,agentic-workflow-generator|agentic-workflow-generator|design a fixed pipeline of llm steps with checks between them
+P|architecture|medium|n|agent|agentic-workflows,multi-agent-systems,agentic-workflow-generator|agentic-workflow-generator|plan roles and handoffs for an onboarding automation with several agents
+P|concept|hard|n|agent|computer-use-agents|-|ai that controls the mouse and keyboard to use websites
+P|security|hard|n|agent|code-execution-sandboxing|-|safely run python that the model wrote
+P|security|hard|n|agent|integration-permissions,agent-tools|-|limit what my agent is allowed to do in our crm
+P|vague|hard|n|agent|integration-permissions,oauth-for-ai-agents|-|let an assistant act in another app without handing it full control
+P|integration|medium|n|agent|gmail-for-ai-agents|-|agent that drafts replies in my gmail inbox
+P|integration|medium|n|agent|connecting-agents-to-apps|-|hook my agent up to slack jira and google drive
+P|integration|medium|n|agent|oauth-for-ai-agents|-|how should an agent get delegated access to a user's account
+P|which|medium|n|frameworks|choosing-an-agent-framework,agent-frameworks-compared|-|which agent framework should a small team start with
+P|comparison|medium|n|frameworks|agent-frameworks-compared,langgraph,crewai,autogen|-|trade offs between the popular python multi agent libraries from langchain microsoft and crewai
+P|concept|medium|n|frameworks|what-is-an-ai-framework|-|what does an ai framework do that the raw api doesn't
+P|which|medium|n|frameworks|framework-vs-direct-api|-|do i even need a framework or should i just call the model api
+P|concept|medium|n|frameworks|langchain|-|what is langchain used for
+P|implementation|hard|n|frameworks|langgraph|-|stateful graph of nodes with checkpoints for an agent
+P|concept|medium|n|frameworks|crewai|-|role based crews of agents with goals and backstories
+P|concept|medium|n|frameworks|autogen|-|microsoft framework where agents chat with each other to solve tasks
+P|concept|medium|n|frameworks|semantic-kernel|-|microsoft sdk for plugins and planners in c sharp
+P|concept|medium|n|frameworks|openai-agents-sdk|-|openai's own library for agents handoffs and guardrails
+P|concept|hard|n|frameworks|dspy|-|program llm pipelines declaratively and let an optimizer tune the prompts
+P|concept|medium|n|frameworks|ai-sdks|-|official client libraries for calling model providers
+P|concept|medium|n|frameworks|model-apis|-|how do hosted model apis bill and rate limit
+P|concept|medium|n|frameworks|hugging-face|-|where do people download open models and datasets
+P|acronym|easy|n|mcp|mcp|-|what is mcp in ai
+P|vague|medium|n|mcp|mcp|-|open standard so any assistant can plug into any data source or tool
+P|concept|medium|n|mcp|mcp-servers-and-clients|-|how do mcp hosts clients and servers relate
+P|comparison|medium|n|mcp|mcp-vs-api|-|why use mcp instead of just calling a rest api
+P|comparison|hard|n|mcp|function-calling-vs-mcp|-|is mcp just function calling with extra steps
+P|security|hard|n|mcp|mcp-security|-|tool poisoning and rug pulls in model context protocol servers
+P|acronym|medium|n|a2a|a2a-protocol|-|google a2a protocol explained
+P|vague|hard|n|a2a|a2a-protocol,agent-protocol-landscape|-|standard for agents from different vendors to delegate tasks to each other
+P|comparison|hard|n|a2a|a2a-vs-mcp|-|agent to agent protocol versus model context protocol
+P|which|hard|n|a2a|agent-protocol-landscape|-|map of the competing agent interoperability standards
+P|concept|medium|n|eval|ai-evaluation|-|how do we test whether our llm feature is good enough to ship
+P|concept|medium|n|eval|llm-as-a-judge|-|use another model to grade answers automatically
+P|trouble|hard|n|eval|llm-as-a-judge|-|my model grader prefers longer answers, how to correct that bias
+P|concept|medium|n|eval|benchmarks-and-leaderboards|-|how much should i trust public model rankings
+P|concept|hard|n|eval|benchmark-contamination|-|test questions ending up in the training data
+P|acronym|medium|n|eval|mmlu|-|mmlu score meaning
+P|acronym|medium|n|eval|humaneval|-|humaneval pass@1
+P|concept|medium|n|eval|swe-bench|-|evaluation that asks a model to patch actual open source bugs and run the repo tests
+P|acronym|medium|n|eval|gsm8k-and-math-benchmarks|-|gsm8k grade school maths benchmark
+P|comparison|hard|n|eval|llm-benchmarks-vs-task-evals|-|public benchmark scores versus evals on my own tasks
+P|concept|hard|n|eval|agent-evaluation|-|scoring an agent's whole trajectory not just the final answer
+P|concept|medium|n|eval|human-preference-evaluation|-|people vote between two anonymous model answers
+P|concept|medium|n|eval|evaluation-metrics-for-ai|-|my spam filter catches most spam but flags real mail too, which numbers describe that
+P|concept|medium|n|finetune|fine-tuning|-|retrain a model on my own examples
+P|concept|medium|n|finetune|lora-and-peft|-|adapters that train only a small number of extra weights
+P|comparison|hard|n|finetune|lora-vs-full-fine-tuning|-|lora or full parameter tuning for a domain model
+P|concept|medium|n|finetune|instruction-tuning|-|how does a base model become a chat model
+P|concept|medium|n|finetune|transfer-learning|-|reuse what a pretrained network already knows
+P|concept|hard|n|align|rlhf|-|reinforcement learning from human feedback steps
+P|concept|hard|n|align|dpo|-|direct preference optimization without a reward model
+P|comparison|hard|n|align|dpo-vs-rlhf|-|why are labs moving away from ppo style human feedback training toward simpler preference losses
+P|concept|hard|n|align|preference-optimization|-|training models from pairs of preferred and rejected answers
+P|concept|hard|n|align|constitutional-ai-and-rlaif|-|ai feedback guided by a written set of principles
+P|concept|medium|n|align|ai-alignment|-|making ai systems pursue what humans actually intend
+P|concept|hard|n|align|reward-hacking|-|model finds a loophole that maximises reward without doing the task
+P|concept|medium|n|align|sycophancy|-|assistant just agrees with whatever i say
+P|concept|hard|n|align|mechanistic-interpretability|-|reverse engineering features and circuits inside a network
+P|security|medium|n|aisec|prompt-injection|-|hidden text in a webpage hijacks my browsing assistant
+P|security|medium|n|aisec|prompt-injection,ai-guardrails|-|users trying to make the bot ignore its rules
+P|security|medium|n|aisec|ai-privacy-and-security,pii-secret-redactor|pii-secret-redactor|strip customer emails and phone numbers before pasting into an llm
+P|security|medium|n|aisec|ai-privacy-and-security|-|does the ai vendor train on what we type
+P|security|hard|n|aisec|owasp-llm-top-10|-|top security risks list for llm applications
+P|security|medium|n|aisec|red-teaming|-|deliberately attacking our model before launch to find failures
+P|security|medium|n|aisec|ai-guardrails|-|input and output filters around a chatbot
+P|security|medium|n|aisec|api-keys,pii-secret-redactor|pii-secret-redactor|i accidentally pasted an api key into a prompt
+P|concept|medium|n|gov|ai-governance|-|who in a company should approve new ai use cases
+P|concept|medium|n|gov|eu-ai-act|-|which ai systems count as high risk under the eu rules
+P|acronym|hard|n|gov|nist-ai-rmf|-|nist ai risk management framework govern map measure manage
+P|acronym|hard|n|gov|iso-iec-42001|-|iso 42001 certification for ai management
+P|concept|medium|n|gov|model-cards|-|documenting a model's intended use and known limitations
+P|concept|medium|n|gov|ai-bias-and-fairness|-|loan model treats some groups unfairly, how to measure
+P|concept|hard|n|gov|c2pa-content-provenance|-|cryptographically signed metadata saying an image was ai generated
+P|concept|medium|n|gov|gdpr-and-ai|-|does the right to be forgotten apply to trained models
+P|concept|medium|n|mlops|mlops|-|devops but for machine learning models
+P|concept|medium|n|mlops|model-drift-and-monitoring|-|model accuracy slowly drops after deployment
+P|concept|medium|n|mlops|llm-observability|-|trace prompts latency and token usage in production
+P|concept|medium|n|mlops|mlflow|-|track experiments parameters and model versions
+P|concept|hard|n|mlops|ray|-|python framework for scaling training and serving across a cluster
+P|concept|hard|n|mlops|distributed-training|-|data parallel versus tensor parallel training

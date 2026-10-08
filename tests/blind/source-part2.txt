@@ -1,0 +1,117 @@
+P|beginner|easy|n|ml|supervised-learning|-|training with examples that already have the right answers
+P|concept|medium|n|ml|unsupervised-learning|-|grouping customers without labels
+P|concept|hard|n|ml|self-supervised-learning|-|models that create their own labels from raw data
+P|beginner|easy|n|dl|neural-networks|-|how does a neural net actually learn anything
+P|concept|medium|n|dl|deep-learning|-|what makes a network deep and why does stacking layers help
+P|concept|hard|n|dl|backpropagation-and-gradient-descent|-|chain rule to push the error backwards through layers
+P|troubleshooting|medium|n|dl|overfitting-and-regularization|-|training accuracy 99 percent but validation is terrible
+P|concept|medium|n|dl|overfitting-and-regularization|-|dropout and weight decay why
+P|concept|medium|n|dl|convolutional-neural-networks|-|sliding filters over an image to detect edges
+P|concept|medium|n|dl|recurrent-neural-networks|-|lstm networks for sequences
+P|concept|medium|n|vision|vision-transformers|-|transformers applied to images instead of text
+P|comparison|hard|n|vision|cnn-vs-vision-transformer|-|should i use a convnet or a vit for a small image dataset
+P|concept|medium|n|vision|object-detection|-|draw boxes around every car in a photo
+P|acronym|medium|n|vision|object-detection|-|yolo real time detection
+P|concept|medium|n|vision|vision-language-models|-|model that answers questions about a screenshot
+P|concept|hard|n|vision|contrastive-learning-clip|-|matching images and captions in a shared embedding space
+P|concept|medium|n|vision|diffusion-models|-|how does stable diffusion turn noise into a picture
+P|concept|hard|n|vision|generative-adversarial-networks|-|generator versus discriminator training game
+P|concept|hard|n|vision|variational-autoencoders|-|latent space sampling with an encoder and decoder that is probabilistic
+P|concept|medium|n|vision|video-generation-models|-|ai that makes short video clips from text
+P|concept|medium|n|vision|document-understanding-ai|-|pull fields out of invoices and receipts automatically
+P|concept|medium|n|speech|speech-ai|-|turning meeting recordings into text
+P|vague|medium|n|speech|speech-ai|-|make the computer read my article aloud in a natural voice
+P|concept|hard|n|graph|graph-neural-networks|-|learning on molecules represented as atoms and bonds
+P|concept|hard|n|rl|reinforcement-learning|-|learning by trial and error with rewards
+P|concept|hard|n|rl|markov-decision-processes|-|states actions transitions and rewards formalism
+P|acronym|hard|n|rl|proximal-policy-optimization|-|ppo clipped objective
+P|acronym|hard|n|rl|deep-q-networks|-|dqn atari experience replay
+P|concept|hard|n|robotics|embodied-ai|-|ai with a body that acts in the physical world
+P|concept|hard|n|robotics|vision-language-action-models|-|models that map camera images and instructions directly to robot motor commands
+P|concept|hard|n|robotics|world-models|-|learning an internal simulator of how the environment evolves
+P|concept|hard|n|robotics|imitation-learning|-|robot learns by watching human demonstrations
+P|concept|hard|n|robotics|sim-to-real-transfer|-|policies trained in simulation fail on the real robot
+P|acronym|medium|n|robotics|robot-operating-system|-|ros2 topics and nodes
+P|concept|medium|n|science|ai-for-science|-|how is ai speeding up scientific research
+P|concept|medium|n|science|alphafold|-|predicting how proteins fold
+P|concept|hard|n|science|physics-informed-neural-networks|-|neural nets constrained by differential equations
+P|concept|medium|n|science|ai-weather-forecasting|-|machine learning models that predict the weather
+P|concept|medium|n|science|ai-drug-discovery|-|using ai to find new medicines
+P|concept|hard|n|science|ai-materials-discovery|-|discovering new crystal materials with machine learning
+P|beginner|easy|n|python|python|-|is python a good first programming language
+P|which|medium|n|python|python-for-ai,python-ai-libraries|-|what python should i learn before doing machine learning
+P|implementation|medium|n|python|calling-ai-apis-with-python|-|python requests code to get a completion from a cloud llm provider
+P|concept|medium|n|python|python-data-for-ai|-|pandas and numpy for preparing training data
+P|which|medium|n|python|python-ai-libraries|-|scikit learn vs pytorch vs transformers library what each is for
+P|concept|medium|n|python|pytorch|-|meta's tensor library with autograd used by most researchers
+P|troubleshooting|medium|n|python|pytorch,gpus-and-ai-accelerators|-|torch says cuda not available
+P|beginner|easy|n|js|javascript|-|what is javascript used for
+P|implementation|medium|n|js|calling-ai-apis-with-javascript,javascript-for-ai|-|call an llm from javascript with fetch
+P|concept|medium|n|js|javascript-for-ai|-|can i build ai features in plain js
+P|concept|medium|n|ts|typescript|-|why would i use typescript over javascript
+P|implementation|medium|n|ts|typescript-api-client-types,typescript-for-ai|-|typing the json response from a model api in typescript
+P|concept|medium|n|ts|typescript-for-ai|-|typescript for building ai apps
+P|beginner|easy|n|react|react|-|what is react and why is it popular
+P|implementation|medium|n|react|react-ai-interfaces,react-chatbot-state|-|message list and input box component for an llm chat in a react frontend
+P|troubleshooting|medium|n|react|react-chatbot-state|-|messages disappear when my react chat rerenders
+P|implementation|medium|n|react|streaming-ai-responses,react-ai-interfaces|-|show tokens appearing as they stream in a react app
+P|concept|medium|n|react|nextjs|-|next.js server components and routing
+P|beginner|easy|n|node|nodejs|-|what is node and why run javascript on a server
+P|implementation|medium|n|node|streaming-ai-with-nodejs,nodejs-for-ai|-|stream model output from a node backend to the browser
+P|implementation|medium|n|node|express|-|minimal express api with a post route
+P|concept|medium|n|node|package-managers|-|npm vs yarn vs pnpm
+P|concept|medium|n|web|frontend-and-backend|-|what runs in the browser and what runs on the server
+P|beginner|easy|n|web|html-and-css|-|how do web pages get their layout and colours
+P|concept|medium|n|web|websockets|-|keep a two way live connection between browser and server
+P|beginner|easy|n|api|what-is-an-api|-|what does api actually mean
+P|concept|medium|n|api|rest-apis|-|get post put delete and status codes
+P|comparison|medium|n|api|rest-vs-graphql|-|should my new api be rest or graphql
+P|concept|medium|n|api|graphql|-|query exactly the fields you need from one endpoint
+P|security|medium|n|api|api-authentication,api-keys|-|how should clients prove who they are to my api
+P|security|medium|n|api|api-keys,environment-variables|-|where should i store my openai key in a web app
+P|concept|medium|n|api|webhooks|-|get notified by stripe when a payment succeeds
+P|troubleshooting|medium|n|api|cors|-|browser blocked by cors policy no access control allow origin
+P|beginner|easy|n|json|what-is-json|-|what is a json file
+P|troubleshooting|easy|n|json|json-validation,what-is-json|json-formatter|json.parse throws because the server returned an html error page
+P|implementation|easy|n|json|json-validation|json-formatter|check if my json is valid and pretty print it
+P|concept|medium|n|json|json-schema|-|describe the allowed shape of a json document
+P|beginner|easy|n|sql|sql|-|how to write a select query with a where clause
+P|concept|medium|n|sql|sql|-|inner join vs left join
+P|comparison|medium|n|db|sql-vs-nosql|-|relational or document database for a new app
+P|concept|medium|n|db|postgresql|-|why do people like postgres
+P|comparison|medium|n|db|mysql,postgresql|-|mysql or postgres for a web app
+P|concept|easy|n|db|sqlite|-|single file database embedded in an app
+P|concept|medium|n|db|mongodb|-|storing json documents in a nosql database
+P|concept|medium|n|db|redis|-|in memory key value cache for sessions
+P|concept|medium|n|db|prisma-and-orms|-|orm that maps tables to typescript objects
+P|which|medium|n|db|databases-for-ai-apps|-|what database stack for an ai chat app with history and search
+P|beginner|easy|n|git|git|-|undo my last commit
+P|troubleshooting|medium|n|git|git|-|merge conflict how do i resolve it
+P|concept|easy|n|git|github|-|pull requests and code review on github
+P|concept|medium|n|git|cicd,github|-|run tests automatically on every push with github actions
+P|beginner|easy|n|docker|docker|-|what is docker and why would i use it
+P|implementation|medium|n|docker|docker|-|write a dockerfile for a python app
+P|comparison|medium|n|docker|containers|-|containers vs virtual machines
+P|concept|medium|n|k8s|kubernetes|-|pods deployments and services
+P|typo|medium|n|k8s|kubernetes|-|kuberentes autoscaling
+P|concept|medium|n|cicd|cicd|-|continuous integration and continuous delivery explained
+P|concept|medium|n|devtools|environment-variables|-|.env files and secrets per environment
+P|concept|medium|n|cloud|aws-fundamentals|-|ec2 s3 and lambda basics
+P|concept|medium|n|cloud|azure-fundamentals|-|how are things organised and billed in microsoft's cloud
+P|concept|medium|n|cloud|gcp-fundamentals|-|getting started with google's cloud console and permissions
+P|concept|medium|n|m365|microsoft-365|-|what is included in microsoft 365 for business
+P|concept|medium|n|m365|microsoft-graph|-|single api for outlook teams onedrive data
+P|concept|medium|n|m365|microsoft-entra-id|-|what replaced azure active directory
+P|concept|medium|n|m365|teams-development|-|add a custom app inside our microsoft teams channels
+P|concept|medium|n|m365|power-platform|-|microsoft's no code automation and form builder tools
+P|concept|medium|n|sharepoint|sharepoint|-|set up a team site in sharepoint online for a department
+P|acronym|medium|n|spfx|sharepoint-framework|-|spfx meaning for a new microsoft 365 developer
+P|implementation|medium|n|spfx|build-spfx-web-part|-|create my first sharepoint web part with yeoman and gulp
+P|concept|medium|n|oauth|oauth|-|which oauth grant should a single page app use
+P|concept|medium|n|oauth|openid-connect|-|login with google id token
+P|concept|medium|n|oauth|json-web-tokens|-|what is inside a jwt
+P|comparison|easy|n|oauth|authentication-vs-authorization|-|authn vs authz
+P|concept|medium|n|lang|java|-|java spring for enterprise backends
+P|concept|medium|n|lang|csharp|-|c sharp and .net for web apis
+P|concept|medium|n|lang|go-language|-|golang goroutines and channels
+P|concept|medium|n|lang|rust|-|rust borrow checker explained

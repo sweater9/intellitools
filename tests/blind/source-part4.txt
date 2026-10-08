@@ -1,0 +1,140 @@
+N|ambiguous|medium|y|python|-|-|how long do ball pythons live
+N|ambiguous|medium|y|python|-|-|python snake shedding problems
+N|ambiguous|medium|y|python|-|-|monty python holy grail quotes
+N|ambiguous|medium|y|python|-|-|reticulated python biggest ever recorded
+N|ambiguous|medium|y|java|-|-|best java coffee roast
+N|ambiguous|medium|y|java|-|-|things to do in java indonesia
+N|ambiguous|medium|y|java|-|-|java sparrow bird care
+N|ambiguous|medium|y|rust|-|-|how to stop rust on car wheel arches
+N|ambiguous|medium|y|rust|-|-|rust server wipe schedule
+N|ambiguous|medium|y|rust|-|-|rust colour paint for a bedroom
+N|ambiguous|medium|y|go|-|-|should i go to university or get a job
+N|ambiguous|medium|y|go|-|-|go fish card game rules for kids
+N|ambiguous|medium|y|go|-|-|let it go lyrics
+N|ambiguous|medium|y|go|-|-|baduk go joseki for beginners
+N|ambiguous|medium|y|react|-|-|how to react when a friend is grieving
+N|ambiguous|medium|y|react|-|-|allergic reaction to bee sting
+N|ambiguous|medium|y|react|-|-|youtubers react videos copyright
+N|ambiguous|medium|y|swift|-|-|swift car reliability problems
+N|ambiguous|medium|y|swift|-|-|swifts nesting in my roof
+N|ambiguous|medium|y|swift|-|-|swift justice meaning
+N|ambiguous|medium|y|docker|-|-|dockers khakis slim fit
+N|ambiguous|medium|y|docker|-|-|history of dockers at the london docks
+N|ambiguous|medium|y|agent|-|-|how to become a talent agent
+N|ambiguous|medium|y|agent|-|-|insurance agent vs broker
+N|ambiguous|medium|y|agent|-|-|cleaning agent for oven glass
+N|ambiguous|medium|y|agent|-|-|agent orange health effects
+N|ambiguous|medium|y|model|-|-|how to become a runway model
+N|ambiguous|medium|y|model|-|-|tesla model y range in winter
+N|ambiguous|medium|y|model|-|-|airfix model paint brushes
+N|ambiguous|medium|y|model|-|-|role model for teenagers
+N|ambiguous|medium|y|transformer|-|-|transformers rise of the beasts review
+N|ambiguous|medium|y|transformer|-|-|step down transformer for uk appliances in the us
+N|ambiguous|medium|y|transformer|-|-|optimus prime toy collectors edition
+N|ambiguous|medium|y|kernel|-|-|why do some corn kernels stay unpopped in the microwave
+N|ambiguous|medium|y|kernel|-|-|kernel of truth meaning
+N|ambiguous|medium|y|kernel|-|-|colonel sanders recipe
+N|ambiguous|medium|y|mamba|-|-|green mamba vs black mamba
+N|ambiguous|medium|y|mamba|-|-|kobe bryant mamba forever
+N|ambiguous|medium|y|gemini|-|-|gemini horoscope this week
+N|ambiguous|medium|y|gemini|-|-|gemini space program missions
+N|ambiguous|medium|y|claude|-|-|claude debussy clair de lune
+N|ambiguous|medium|y|claude|-|-|jean claude van damme films
+N|ambiguous|medium|y|graph|-|-|graph paper for knitting patterns
+N|ambiguous|medium|y|graph|-|-|how to read a bar graph in year 6 maths
+N|ambiguous|medium|y|vector|-|-|mosquitoes as disease vectors
+N|ambiguous|medium|y|vector|-|-|vector the villain from despicable me
+N|ambiguous|medium|y|token|-|-|bus tokens for students
+N|ambiguous|medium|y|token|-|-|arcade tokens birthday party
+N|ambiguous|medium|y|prompt|-|-|2 10 net 30 early payment discount on supplier invoices
+N|ambiguous|medium|y|prompt|-|-|creative writing prompts for kids
+N|ambiguous|medium|y|chain|-|-|bike chain keeps slipping
+N|ambiguous|medium|y|attention|-|-|adult attention deficit symptoms
+N|ambiguous|medium|y|memory|-|-|how to improve memory for exams
+N|ambiguous|medium|y|memory|-|-|memory foam mattress topper
+N|ambiguous|medium|y|neural|-|-|pinched nerve in neck
+N|ambiguous|medium|y|neural|-|-|neural pathways in the brain when learning a language
+N|ambiguous|medium|y|learning|-|-|learning to drive manual car tips
+N|ambiguous|medium|y|reinforcement|-|-|positive reinforcement dog training
+N|ambiguous|medium|y|reinforcement|-|-|rebar spacing in a concrete garage slab
+N|ambiguous|medium|y|cloud|-|-|types of clouds cumulus stratus
+N|ambiguous|medium|y|container|-|-|shipping container home cost
+N|ambiguous|medium|y|container|-|-|food storage containers microwave safe
+N|ambiguous|medium|y|pipeline|-|-|keystone oil pipeline protests
+N|ambiguous|medium|y|branch|-|-|pruning apple tree branches
+N|ambiguous|medium|y|commit|-|-|how to commit to a fitness routine
+N|ambiguous|medium|y|spring|-|-|spring equinox date
+N|ambiguous|medium|y|bridge|-|-|golden gate bridge history
+N|ambiguous|medium|y|server|-|-|restaurant server tips etiquette
+N|ambiguous|medium|y|cache|-|-|geocaching for beginners
+N|ambiguous|medium|y|bias|-|-|bias tape sewing
+N|ambiguous|medium|y|hallucination|-|-|hallucinations from high fever in children
+N|ambiguous|medium|y|alignment|-|-|wheel alignment cost
+N|ambiguous|medium|y|alignment|-|-|dungeons and dragons alignment chart
+N|ambiguous|medium|y|embedding|-|-|embedding tiles in mortar
+N|ambiguous|medium|y|diffusion|-|-|rogers early adopters and laggards curve
+N|ambiguous|medium|y|diffusion|-|-|osmosis vs diffusion biology
+N|ambiguous|medium|y|llama|-|-|llama vs alpaca differences
+N|ambiguous|medium|y|ollama|-|-|ola llama spanish greeting
+N|ambiguous|medium|y|crew|-|-|cabin crew interview questions
+N|ambiguous|medium|y|copilot|-|-|copilot license for small planes
+N|ambiguous|medium|y|oracle|-|-|oracle cards meaning
+N|ambiguous|medium|y|swarm|-|-|bee swarm on my fence what to do
+N|ambiguous|medium|y|sharepoint|-|-|sharing point of view in essays
+N|ambiguous|medium|y|teams|-|-|team building activities for remote workers
+N|ambiguous|medium|y|express|-|-|express delivery tracking
+N|ambiguous|medium|y|node|-|-|swollen lymph node behind ear
+N|ambiguous|medium|y|redis|-|-|red dish recipes for christmas
+N|ambiguous|medium|y|ruby|-|-|ruby wedding anniversary gift ideas
+N|ambiguous|medium|y|shell|-|-|seashell collecting beaches
+N|ambiguous|medium|y|bash|-|-|surprise birthday bash ideas
+N|ambiguous|medium|y|jupyter|-|-|jupiter moons list
+N|ambiguous|medium|y|hugging|-|-|benefits of hugging for stress
+N|out-of-scope|easy|y|oos|-|-|how to make a lasagne
+N|out-of-scope|easy|y|oos|-|-|best time to visit japan
+N|out-of-scope|easy|y|oos|-|-|how to unclog a drain
+N|out-of-scope|easy|y|oos|-|-|which city is australia's capital, sydney or canberra
+N|out-of-scope|easy|y|oos|-|-|how many calories in a banana
+N|out-of-scope|easy|y|oos|-|-|tax return deadline uk
+N|out-of-scope|easy|y|oos|-|-|how to change a car tyre
+N|out-of-scope|easy|y|oos|-|-|tips for sleeping better
+N|out-of-scope|easy|y|oos|-|-|cover letter opening line for a nursing job
+N|out-of-scope|easy|y|oos|-|-|premier league fixtures this weekend
+N|out-of-scope|medium|y|oos|-|-|is my laptop battery swollen dangerous
+N|out-of-scope|medium|y|oos|-|-|printer says offline windows 11
+N|out-of-scope|medium|y|oos|-|-|iphone storage full photos
+N|out-of-scope|medium|y|oos|-|-|wifi keeps dropping at night
+N|out-of-scope|medium|y|oos|-|-|safest exchange to purchase cryptocurrency in the uk
+N|out-of-scope|medium|y|oos|-|-|elon musk latest tweet
+N|out-of-scope|medium|y|oos|-|-|nvidia share price prediction
+N|out-of-scope|medium|y|oos|-|-|will ai take my job as an accountant
+N|out-of-scope|medium|y|oos|-|-|compose a short rhyming verse about falling leaves
+N|out-of-scope|medium|y|oos|-|-|how do you say good night in italian
+N|out-of-scope|medium|y|oos|-|-|hello
+N|out-of-scope|medium|y|oos|-|-|asdfgh
+N|out-of-scope|medium|y|oos|-|-|thanks that helped
+P|ambiguous-tech|medium|y|python|python|-|python virtual environment setup
+P|ambiguous-tech|medium|y|java|java|-|java garbage collector tuning
+P|ambiguous-tech|medium|y|rust|rust|-|rust cargo build for a cli tool
+P|ambiguous-tech|medium|y|go|go-language|-|go modules and package imports
+P|ambiguous-tech|medium|y|react|react|-|react useeffect runs twice
+P|ambiguous-tech|medium|y|docker|docker,containers|-|docker image too large how to shrink
+P|ambiguous-tech|medium|y|agent|ai-agents,agent-tools|-|ai agent that can browse and fill forms for me
+P|ambiguous-tech|medium|y|model|model-serving-and-inference,model-apis|-|deploy a trained model behind an http endpoint
+P|ambiguous-tech|medium|y|transformer|transformers|-|transformer neural network attention heads
+P|ambiguous-tech|medium|y|mamba|state-space-models,transformers-vs-state-space-models|-|mamba architecture for long sequence modelling
+P|ambiguous-tech|medium|y|gemini|large-language-models,multimodal-ai,model-apis|-|google gemini api multimodal prompts
+P|ambiguous-tech|medium|y|claude|large-language-models,model-apis,mcp|-|claude api tool use
+P|ambiguous-tech|medium|y|graph|graph-neural-networks,graph-rag|-|knowledge graph for retrieval augmented answers
+P|ambiguous-tech|medium|y|vector|vector-databases,embeddings|-|vector search over product descriptions
+P|ambiguous-tech|medium|y|token|tokens|-|token count of a prompt
+P|ambiguous-tech|medium|y|memory|agent-memory|-|memory for llm agents across sessions
+P|ambiguous-tech|medium|y|kernel|flash-attention,gpus-and-ai-accelerators|-|custom cuda kernel for attention
+P|ambiguous-tech|medium|y|express|express|-|express js middleware order
+P|ambiguous-tech|medium|y|node|nodejs|-|node js event loop
+P|ambiguous-tech|medium|y|teams|teams-development|-|microsoft teams bot framework
+P|ambiguous-tech|medium|y|llama|open-weights-models,llama-cpp,local-llm-runtimes|-|run llama 3 locally
+P|ambiguous-tech|medium|y|hugging|hugging-face|-|hugging face transformers pipeline
+P|ambiguous-tech|medium|y|bias|ai-bias-and-fairness|-|bias in hiring algorithms
+P|ambiguous-tech|medium|y|alignment|ai-alignment|-|ai alignment research goals
+P|ambiguous-tech|medium|y|diffusion|diffusion-models|-|diffusion model image generation steps
