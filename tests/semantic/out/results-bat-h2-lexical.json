@@ -1,31 +1,22 @@
 {
  "summary": {
-  "label": "sw-h2",
+  "label": "bat-h2-lexical",
   "datasetSha256": "283ac7b8ba5877f24e5a690db71f1751de8c30a98c5f6215a4c6e7b47d620119",
   "total": 146,
   "pass": 139,
   "weak": 1,
   "miss": 0,
   "falsePositive": 6,
-  "amended": {
-   "pass": 145,
-   "weak": 1,
-   "miss": 0,
-   "falsePositive": 0,
-   "amendedQueries": 13,
-   "passRate": "99.3%",
-   "falsePositiveRate": "0.0%"
-  },
   "retrieval": {
    "pageQueries": 111,
-   "top1": 110,
+   "top1": 111,
    "top3": 111,
    "top5": 111,
-   "top1Rate": "99.1%",
+   "top1Rate": "100.0%",
    "top3Rate": "100.0%",
    "top5Rate": "100.0%"
   },
-  "engine": "gated",
+  "engine": "lexical",
   "passRate": "95.2%",
   "falsePositiveRate": "4.1%"
  },
@@ -38,15 +29,11 @@
    "kind": "neg",
    "expected": [],
    "expectedTool": null,
-   "top": "(weak) how-to-reduce-hallucinations",
+   "top": "(weak) chain-of-thought",
    "solid": false,
-   "score": 24.596658066229157,
+   "score": 6,
    "top5": [
-    "how-to-reduce-hallucinations",
-    "what-is-ai",
-    "common-prompting-mistakes",
-    "ai-evaluation",
-    "git"
+    "chain-of-thought"
    ],
    "learn": [],
    "tool": null,
@@ -55,27 +42,9 @@
    "note": "no confident answer",
    "pathOk": null,
    "rankIds": [
-    "how-to-reduce-hallucinations",
-    "what-is-ai",
-    "common-prompting-mistakes",
-    "ai-evaluation",
-    "git",
-    "ai-agent-vs-chatbot",
-    "chain-of-thought",
-    "agentic-workflows",
-    "mlops",
-    "rag-with-python"
+    "chain-of-thought"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 4,
-    "total": 4,
-    "top": "how-to-reduce-hallucinations",
-    "sim": 0.698,
-    "z": 1.82,
-    "margin": 0.001,
-    "how": ""
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -119,20 +88,9 @@
     "overfitting-and-regularization",
     "unsupervised-learning",
     "csharp",
-    "containers",
-    "embodied-ai",
-    "express"
+    "containers"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 6,
-    "total": 6,
-    "top": "rag-with-python",
-    "sim": 0.426,
-    "z": 1.86,
-    "margin": 0.003,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -175,20 +133,9 @@
     "nist-ai-rmf",
     "embodied-ai",
     "local-ai",
-    "ai-sdks",
-    "constitutional-ai-and-rlaif",
-    "local-ai-vs-cloud-ai"
+    "ai-sdks"
    ],
-   "sem": {
-    "coverage": 0.91,
-    "known": 12,
-    "total": 13,
-    "top": "rag",
-    "sim": 0.649,
-    "z": 1.97,
-    "margin": 0.003,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -232,20 +179,9 @@
     "embodied-ai",
     "local-ai",
     "ai-sdks",
-    "constitutional-ai-and-rlaif",
-    "ai-agent-vs-chatbot",
-    "local-ai-vs-cloud-ai"
+    "constitutional-ai-and-rlaif"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 13,
-    "total": 13,
-    "top": "context-windows",
-    "sim": 0.624,
-    "z": 2.3,
-    "margin": 0.015,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -288,22 +224,11 @@
     "prompt-injection",
     "prompt-engineering",
     "prompt-caching",
-    "common-prompting-mistakes",
     "sampling-and-decoding",
-    "transformers",
-    "contrastive-learning-clip",
-    "speech-ai"
+    "common-prompting-mistakes",
+    "transformers"
    ],
-   "sem": {
-    "coverage": 0.68,
-    "known": 8,
-    "total": 10,
-    "top": "common-prompting-mistakes",
-    "sim": 0.514,
-    "z": 2.88,
-    "margin": 0.038,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -323,8 +248,8 @@
    "score": 79,
    "top5": [
     "deep-learning",
-    "deep-q-networks",
     "neural-networks",
+    "deep-q-networks",
     "graph-neural-networks",
     "convolutional-neural-networks"
    ],
@@ -340,26 +265,15 @@
    "pathOk": null,
    "rankIds": [
     "deep-learning",
-    "deep-q-networks",
     "neural-networks",
+    "deep-q-networks",
     "graph-neural-networks",
     "convolutional-neural-networks",
     "physics-informed-neural-networks",
     "generative-adversarial-networks",
-    "recurrent-neural-networks",
-    "reinforcement-learning",
-    "what-is-ai"
+    "recurrent-neural-networks"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 6,
-    "total": 6,
-    "top": "deep-learning",
-    "sim": 0.879,
-    "z": 3.35,
-    "margin": 0.053,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -399,20 +313,9 @@
     "gpus-and-ai-accelerators",
     "databases-for-ai-apps",
     "vector-databases",
-    "agent-frameworks-compared",
-    "function-calling-vs-mcp",
-    "nist-ai-rmf"
+    "agent-frameworks-compared"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 6,
-    "total": 6,
-    "top": "neural-networks",
-    "sim": 0.772,
-    "z": 4.61,
-    "margin": 0.122,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -456,20 +359,9 @@
     "model-serving-and-inference",
     "process-reward-model",
     "world-models",
-    "outcome-reward-model",
-    "instruction-tuning",
-    "recurrent-neural-networks"
+    "outcome-reward-model"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 6,
-    "total": 6,
-    "top": "backpropagation-and-gradient-descent",
-    "sim": 0.786,
-    "z": 2.64,
-    "margin": 0.023,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -509,21 +401,10 @@
     "gdpr-and-ai",
     "json-validation",
     "fine-tuning",
-    "dpo",
-    "scaling-laws",
     "what-is-ai",
-    "json-schema"
+    "dpo"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 9,
-    "total": 9,
-    "top": "test-time-compute",
-    "sim": 0.709,
-    "z": 2.05,
-    "margin": 0.043,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -567,20 +448,9 @@
     "lora-vs-full-fine-tuning",
     "lora-and-peft",
     "ray",
-    "c2pa-content-provenance",
-    "cnn-vs-vision-transformer",
-    "distributed-training"
+    "c2pa-content-provenance"
    ],
-   "sem": {
-    "coverage": 0.88,
-    "known": 7,
-    "total": 8,
-    "top": "transfer-learning",
-    "sim": 0.833,
-    "z": 2.77,
-    "margin": 0.101,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -623,20 +493,9 @@
     "multi-agent-systems",
     "choosing-an-agent-framework",
     "outcome-reward-model",
-    "agent-frameworks-compared",
-    "process-reward-model",
-    "agent-evaluation"
+    "agent-frameworks-compared"
    ],
-   "sem": {
-    "coverage": 0.84,
-    "known": 10,
-    "total": 10,
-    "top": "rag",
-    "sim": 0.438,
-    "z": 2.47,
-    "margin": 0.006,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -650,51 +509,34 @@
     "vision-transformers"
    ],
    "expectedTool": null,
-   "top": "vision-transformers",
-   "solid": true,
-   "score": 100.06164343560337,
+   "top": "(weak) vision-transformers",
+   "solid": false,
+   "score": 28,
    "top5": [
     "vision-transformers",
-    "cnn-vs-vision-transformer",
-    "convolutional-neural-networks",
     "transformers-vs-state-space-models",
-    "contrastive-learning-clip"
+    "chunking",
+    "hugging-face",
+    "vision-language-models"
    ],
-   "learn": [
-    "cnn-vs-vision-transformer",
-    "vision-language-models",
-    "contrastive-learning-clip",
-    "multimodal-ai",
-    "transfer-learning"
-   ],
+   "learn": [],
    "tool": null,
    "gap": "",
-   "class": "PASS",
-   "note": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
    "pathOk": null,
    "rankIds": [
     "vision-transformers",
-    "cnn-vs-vision-transformer",
-    "convolutional-neural-networks",
     "transformers-vs-state-space-models",
-    "contrastive-learning-clip",
-    "multimodal-ai",
-    "transformers",
-    "object-detection",
+    "chunking",
+    "hugging-face",
     "vision-language-models",
-    "recurrent-neural-networks"
+    "onnx-runtime",
+    "state-space-models",
+    "supervised-learning"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 8,
-    "total": 8,
-    "top": "vision-transformers",
-    "sim": 0.896,
-    "z": 3.4,
-    "margin": 0.125,
-    "how": "semantic-led"
-   },
-   "classAmended": "PASS",
+   "sem": null,
+   "classAmended": "WEAK",
    "amendReason": ""
   },
   {
@@ -733,20 +575,9 @@
     "prompt-engineering",
     "llm-cost-optimization",
     "nextjs",
-    "outcome-reward-model",
-    "reasoning-vs-standard-models",
-    "ai-evaluation"
+    "outcome-reward-model"
    ],
-   "sem": {
-    "coverage": 0.88,
-    "known": 7,
-    "total": 8,
-    "top": "mixture-of-experts",
-    "sim": 0.87,
-    "z": 4.06,
-    "margin": 0.305,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -790,20 +621,9 @@
     "model-cards",
     "model-apis",
     "recurrent-neural-networks",
-    "kv-cache",
-    "model-serving-and-inference",
-    "model-drift-and-monitoring"
+    "kv-cache"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 8,
-    "total": 8,
-    "top": "transformers-vs-state-space-models",
-    "sim": 0.912,
-    "z": 2.73,
-    "margin": 0.017,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -847,20 +667,9 @@
     "mcp",
     "rag",
     "vector-databases",
-    "contrastive-learning-clip",
-    "pgvector",
-    "rag-with-python"
+    "contrastive-learning-clip"
    ],
-   "sem": {
-    "coverage": 0.8,
-    "known": 6,
-    "total": 6,
-    "top": "positional-encoding",
-    "sim": 0.715,
-    "z": 4,
-    "margin": 0.207,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -904,20 +713,9 @@
     "redis",
     "state-space-models",
     "agentic-rag",
-    "llamaindex",
-    "sql",
-    "graphql"
+    "llamaindex"
    ],
-   "sem": {
-    "coverage": 0.83,
-    "known": 7,
-    "total": 7,
-    "top": "kv-cache",
-    "sim": 0.831,
-    "z": 3.82,
-    "margin": 0.228,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -963,20 +761,9 @@
     "model-apis",
     "model-drift-and-monitoring",
     "process-reward-model",
-    "world-models",
-    "outcome-reward-model",
-    "instruction-tuning"
+    "world-models"
    ],
-   "sem": {
-    "coverage": 0.72,
-    "known": 10,
-    "total": 13,
-    "top": "gpus-and-ai-accelerators",
-    "sim": 0.716,
-    "z": 4.1,
-    "margin": 0.078,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -999,7 +786,7 @@
     "lora-vs-full-fine-tuning",
     "distributed-training",
     "gdpr-and-ai",
-    "overfitting-and-regularization"
+    "fine-tuning"
    ],
    "learn": [
     "lora-vs-full-fine-tuning",
@@ -1016,23 +803,12 @@
     "lora-vs-full-fine-tuning",
     "distributed-training",
     "gdpr-and-ai",
-    "overfitting-and-regularization",
     "fine-tuning",
+    "overfitting-and-regularization",
     "what-is-ai",
-    "dpo",
-    "scaling-laws",
-    "backpropagation-and-gradient-descent"
+    "dpo"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 6,
-    "total": 6,
-    "top": "lora-and-peft",
-    "sim": 0.718,
-    "z": 2.27,
-    "margin": 0.002,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -1076,20 +852,9 @@
     "process-reward-model",
     "fine-tuning",
     "model-serving-and-inference",
-    "world-models",
-    "distributed-training",
-    "instruction-tuning"
+    "world-models"
    ],
-   "sem": {
-    "coverage": 0.92,
-    "known": 12,
-    "total": 13,
-    "top": "scaling-laws",
-    "sim": 0.633,
-    "z": 1.91,
-    "margin": 0.011,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -1134,20 +899,9 @@
     "model-drift-and-monitoring",
     "model-serving-and-inference",
     "process-reward-model",
-    "world-models",
-    "outcome-reward-model",
-    "instruction-tuning"
+    "world-models"
    ],
-   "sem": {
-    "coverage": 0.9,
-    "known": 12,
-    "total": 13,
-    "top": "chain-of-thought",
-    "sim": 0.755,
-    "z": 2.49,
-    "margin": 0.088,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -1190,20 +944,9 @@
     "test-time-compute",
     "reward-hacking",
     "a2a-protocol",
-    "react-chatbot-state",
-    "constrained-decoding",
-    "deep-q-networks"
+    "react-chatbot-state"
    ],
-   "sem": {
-    "coverage": 0.75,
-    "known": 7,
-    "total": 9,
-    "top": "best-of-n-sampling",
-    "sim": 0.868,
-    "z": 3.26,
-    "margin": 0.045,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -1246,20 +989,9 @@
     "json-web-tokens",
     "model-apis",
     "process-reward-model",
-    "rest-apis",
-    "sampling-and-decoding",
-    "webhooks"
+    "rest-apis"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 9,
-    "total": 9,
-    "top": "best-of-n-sampling",
-    "sim": 0.909,
-    "z": 3.22,
-    "margin": 0.165,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -1299,20 +1031,9 @@
     "vector-database-vs-traditional-database",
     "sampling-and-decoding",
     "embeddings",
-    "agent-tools",
-    "contrastive-learning-clip",
-    "test-time-compute"
+    "agent-tools"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 7,
-    "total": 7,
-    "top": "search-over-reasoning",
-    "sim": 0.74,
-    "z": 5.51,
-    "margin": 0.256,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -1357,20 +1078,9 @@
     "grammar-guided-generation",
     "prompt-engineering",
     "agent-planning",
-    "chain-of-thought",
-    "function-calling",
-    "mcp-vs-api"
+    "chain-of-thought"
    ],
-   "sem": {
-    "coverage": 0.86,
-    "known": 7,
-    "total": 8,
-    "top": "grammar-guided-generation",
-    "sim": 0.819,
-    "z": 3.15,
-    "margin": 0.025,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -1415,20 +1125,9 @@
     "grammar-guided-generation",
     "json-validation",
     "what-is-json",
-    "local-ai",
-    "json-schema",
-    "local-runtimes-compared"
+    "local-ai"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 6,
-    "total": 6,
-    "top": "gbnf-grammars",
-    "sim": 0.968,
-    "z": 3.6,
-    "margin": 0.122,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -1473,20 +1172,9 @@
     "reasoning-models",
     "reasoning-vs-standard-models",
     "small-language-models",
-    "rag-with-python",
-    "python-for-ai",
-    "world-models"
+    "rag-with-python"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 8,
-    "total": 8,
-    "top": "outlines",
-    "sim": 0.878,
-    "z": 3.34,
-    "margin": 0.09,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -1531,20 +1219,9 @@
     "model-drift-and-monitoring",
     "model-serving-and-inference",
     "process-reward-model",
-    "world-models",
-    "instruction-tuning",
-    "outcome-reward-model"
+    "world-models"
    ],
-   "sem": {
-    "coverage": 0.89,
-    "known": 9,
-    "total": 10,
-    "top": "prompt-engineering",
-    "sim": 0.77,
-    "z": 2.73,
-    "margin": 0.105,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -1585,20 +1262,9 @@
     "common-prompting-mistakes",
     "chain-of-thought",
     "dspy",
-    "context-engineering",
-    "owasp-llm-top-10",
-    "agentic-workflows"
+    "context-engineering"
    ],
-   "sem": {
-    "coverage": 0.86,
-    "known": 9,
-    "total": 10,
-    "top": "prompt-engineering",
-    "sim": 0.68,
-    "z": 3.1,
-    "margin": 0.024,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -1641,20 +1307,9 @@
     "typescript",
     "llm-as-a-judge",
     "agent-evaluation",
-    "authentication-vs-authorization",
-    "benchmark-contamination",
-    "best-of-n-sampling"
+    "authentication-vs-authorization"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 5,
-    "total": 5,
-    "top": "common-prompting-mistakes",
-    "sim": 0.805,
-    "z": 3.92,
-    "margin": 0.182,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -1670,8 +1325,8 @@
     "context-windows"
    ],
    "expectedTool": null,
-   "top": "(weak) context-windows",
-   "solid": false,
+   "top": "context-windows",
+   "solid": true,
    "score": 53,
    "top5": [
     "context-windows",
@@ -1680,11 +1335,17 @@
     "model-apis",
     "model-drift-and-monitoring"
    ],
-   "learn": [],
+   "learn": [
+    "chunking",
+    "large-language-models",
+    "tokens",
+    "agent-memory",
+    "prompt-engineering"
+   ],
    "tool": null,
    "gap": "",
-   "class": "WEAK",
-   "note": "not solid; accepted page in top 5",
+   "class": "PASS",
+   "note": "",
    "pathOk": null,
    "rankIds": [
     "context-windows",
@@ -1694,21 +1355,10 @@
     "model-drift-and-monitoring",
     "model-serving-and-inference",
     "process-reward-model",
-    "world-models",
-    "outcome-reward-model",
-    "instruction-tuning"
+    "world-models"
    ],
-   "sem": {
-    "coverage": 0.89,
-    "known": 11,
-    "total": 12,
-    "top": "document-understanding-ai",
-    "sim": 0.546,
-    "z": 3.18,
-    "margin": 0.054,
-    "how": "contradicted"
-   },
-   "classAmended": "WEAK",
+   "sem": null,
+   "classAmended": "PASS",
    "amendReason": ""
   },
   {
@@ -1751,20 +1401,9 @@
     "search-over-reasoning",
     "pgvector",
     "embeddings",
-    "contrastive-learning-clip",
-    "sampling-and-decoding",
-    "rag"
+    "contrastive-learning-clip"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 5,
-    "total": 5,
-    "top": "hybrid-search-and-reranking",
-    "sim": 0.878,
-    "z": 4.25,
-    "margin": 0.005,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -1809,20 +1448,9 @@
     "build-spfx-web-part",
     "knowledge-distillation",
     "chunking",
-    "human-preference-evaluation",
-    "embeddings",
-    "rag-with-python"
+    "embeddings"
    ],
-   "sem": {
-    "coverage": 0.89,
-    "known": 8,
-    "total": 9,
-    "top": "agent-memory",
-    "sim": 0.516,
-    "z": 2.75,
-    "margin": 0.035,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -1866,20 +1494,9 @@
     "rest-apis",
     "environment-variables",
     "structured-output-methods-compared",
-    "structured-outputs",
-    "rag-with-python",
-    "pgvector"
+    "structured-outputs"
    ],
-   "sem": {
-    "coverage": 0.8,
-    "known": 7,
-    "total": 7,
-    "top": "databases-for-ai-apps",
-    "sim": 0.609,
-    "z": 2.27,
-    "margin": 0.008,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -1925,19 +1542,9 @@
     "vector-database-vs-traditional-database",
     "postgresql",
     "hybrid-search-and-reranking",
-    "agent-tools",
-    "webhooks"
+    "agent-tools"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 6,
-    "total": 6,
-    "top": "choosing-a-vector-store",
-    "sim": 0.87,
-    "z": 2.78,
-    "margin": 0.068,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -1979,20 +1586,9 @@
     "mongodb",
     "function-calling-vs-mcp",
     "sql-vs-nosql",
-    "sharepoint",
-    "a2a-vs-mcp",
-    "ai-agent-vs-chatbot"
+    "sharepoint"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 6,
-    "total": 6,
-    "top": "graph-rag",
-    "sim": 0.906,
-    "z": 6.23,
-    "margin": 0.296,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -2033,20 +1629,9 @@
     "ai-materials-discovery",
     "langchain",
     "llamaindex",
-    "outcome-reward-model",
-    "rag-frameworks",
-    "rest-vs-graphql"
+    "outcome-reward-model"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 5,
-    "total": 5,
-    "top": "rag-with-python",
-    "sim": 0.662,
-    "z": 2.49,
-    "margin": 0.048,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -2089,16 +1674,7 @@
     "integration-permissions",
     "teams-development"
    ],
-   "sem": {
-    "coverage": 0.82,
-    "known": 7,
-    "total": 7,
-    "top": "teams-development",
-    "sim": 0.528,
-    "z": 2.65,
-    "margin": 0.054,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -2144,20 +1720,9 @@
     "choosing-an-agent-framework",
     "agent-frameworks-compared",
     "connecting-agents-to-apps",
-    "agent-evaluation",
-    "oauth-for-ai-agents",
-    "ai-agents"
+    "oauth-for-ai-agents"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 7,
-    "total": 7,
-    "top": "gmail-for-ai-agents",
-    "sim": 0.763,
-    "z": 1.85,
-    "margin": 0.008,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -2181,7 +1746,7 @@
     "ai-agent-vs-chatbot",
     "agent-tools",
     "agent-protocol-landscape",
-    "multi-agent-systems"
+    "oauth-for-ai-agents"
    ],
    "learn": [
     "agent-tools",
@@ -2199,23 +1764,12 @@
     "ai-agent-vs-chatbot",
     "agent-tools",
     "agent-protocol-landscape",
-    "multi-agent-systems",
     "oauth-for-ai-agents",
+    "multi-agent-systems",
     "choosing-an-agent-framework",
-    "gmail-for-ai-agents",
-    "agent-frameworks-compared",
-    "agent-evaluation"
+    "gmail-for-ai-agents"
    ],
-   "sem": {
-    "coverage": 0.83,
-    "known": 6,
-    "total": 7,
-    "top": "authentication-vs-authorization",
-    "sim": 0.671,
-    "z": 1.86,
-    "margin": 0.028,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -2260,20 +1814,9 @@
     "code-execution-sandboxing",
     "system-prompts",
     "speech-ai",
-    "reward-hacking",
-    "calling-ai-apis-with-python",
-    "how-to-reduce-hallucinations"
+    "reward-hacking"
    ],
-   "sem": {
-    "coverage": 0.9,
-    "known": 10,
-    "total": 11,
-    "top": "common-prompting-mistakes",
-    "sim": 0.665,
-    "z": 2.02,
-    "margin": 0.007,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -2314,21 +1857,10 @@
     "multi-agent-systems",
     "choosing-an-agent-framework",
     "agent-frameworks-compared",
-    "agent-evaluation",
     "ai-agents",
-    "react-agent-pattern",
-    "a2a-protocol"
+    "agent-evaluation"
    ],
-   "sem": {
-    "coverage": 0.88,
-    "known": 7,
-    "total": 8,
-    "top": "agent-tools",
-    "sim": 0.559,
-    "z": 1.72,
-    "margin": 0.013,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -2369,20 +1901,9 @@
     "kv-cache",
     "a2a-vs-mcp",
     "api-authentication",
-    "authentication-vs-authorization",
-    "function-calling-vs-mcp",
-    "lora-and-peft"
+    "authentication-vs-authorization"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 9,
-    "total": 9,
-    "top": "ai-agent-vs-chatbot",
-    "sim": 0.588,
-    "z": 3.17,
-    "margin": 0.097,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -2428,20 +1949,9 @@
     "agent-frameworks-compared",
     "gmail-for-ai-agents",
     "choosing-an-agent-framework",
-    "ai-agents",
-    "ai-agent-vs-chatbot",
-    "computer-use-agents"
+    "ai-agents"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 4,
-    "total": 4,
-    "top": "multi-agent-systems",
-    "sim": 0.918,
-    "z": 4.85,
-    "margin": 0.2,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -2482,16 +1992,7 @@
     "cicd",
     "dspy"
    ],
-   "sem": {
-    "coverage": 0.7,
-    "known": 6,
-    "total": 7,
-    "top": "agent-planning",
-    "sim": 0.571,
-    "z": 3.69,
-    "margin": 0.065,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -2536,20 +2037,9 @@
     "llm-as-a-judge",
     "large-language-models",
     "hybrid-search-and-reranking",
-    "llm-cost-optimization",
-    "owasp-llm-top-10",
-    "local-runtimes-compared"
+    "llm-cost-optimization"
    ],
-   "sem": {
-    "coverage": 0.88,
-    "known": 8,
-    "total": 9,
-    "top": "llm-observability",
-    "sim": 0.507,
-    "z": 2.82,
-    "margin": 0.014,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -2594,20 +2084,9 @@
     "microsoft-graph",
     "choosing-an-agent-framework",
     "agent-frameworks-compared",
-    "autogen",
-    "microsoft-365",
-    "multi-agent-systems"
+    "autogen"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 4,
-    "total": 4,
-    "top": "openai-agents-sdk",
-    "sim": 0.839,
-    "z": 1.81,
-    "margin": 0.001,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -2650,20 +2129,9 @@
     "framework-vs-direct-api",
     "sharepoint-framework",
     "agent-frameworks-compared",
-    "state-space-models",
-    "rag-frameworks",
-    "transformers-vs-state-space-models"
+    "state-space-models"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 6,
-    "total": 6,
-    "top": "langgraph",
-    "sim": 0.591,
-    "z": 2.63,
-    "margin": 0.054,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -2707,20 +2175,9 @@
     "python-for-ai",
     "multi-agent-systems",
     "calling-ai-apis-with-python",
-    "python-ai-libraries",
-    "choosing-an-agent-framework",
-    "agent-protocol-landscape"
+    "python-ai-libraries"
    ],
-   "sem": {
-    "coverage": 0.8,
-    "known": 7,
-    "total": 7,
-    "top": "crewai",
-    "sim": 0.719,
-    "z": 4.28,
-    "margin": 0.189,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -2763,22 +2220,11 @@
     "agent-tools",
     "eu-ai-act",
     "nist-ai-rmf",
-    "ai-sdks",
     "mcp-servers-and-clients",
-    "ai-agents",
-    "ai-privacy-and-security",
-    "embodied-ai"
+    "ai-sdks",
+    "ai-agents"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 9,
-    "total": 9,
-    "top": "mcp-vs-api",
-    "sim": 0.819,
-    "z": 1.75,
-    "margin": 0.005,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -2820,20 +2266,9 @@
     "a2a-vs-mcp",
     "mcp-vs-api",
     "typescript-api-client-types",
-    "agent-protocol-landscape",
-    "frontend-and-backend",
-    "model-serving-and-inference"
+    "agent-protocol-landscape"
    ],
-   "sem": {
-    "coverage": 0.88,
-    "known": 8,
-    "total": 9,
-    "top": "mcp-servers-and-clients",
-    "sim": 0.911,
-    "z": 1.98,
-    "margin": 0.045,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -2854,8 +2289,8 @@
     "function-calling-vs-mcp",
     "function-calling",
     "mcp",
-    "mcp-security",
-    "mcp-servers-and-clients"
+    "mcp-servers-and-clients",
+    "mcp-security"
    ],
    "learn": [
     "function-calling",
@@ -2873,24 +2308,13 @@
     "function-calling-vs-mcp",
     "function-calling",
     "mcp",
-    "mcp-security",
     "mcp-servers-and-clients",
+    "mcp-security",
     "a2a-vs-mcp",
     "mcp-vs-api",
-    "agent-protocol-landscape",
-    "calling-ai-apis-with-python",
-    "calling-ai-apis-with-javascript"
+    "agent-protocol-landscape"
    ],
-   "sem": {
-    "coverage": 0.79,
-    "known": 8,
-    "total": 10,
-    "top": "function-calling-vs-mcp",
-    "sim": 0.826,
-    "z": 2.47,
-    "margin": 0.039,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -2933,20 +2357,9 @@
     "function-calling-vs-mcp",
     "agent-evaluation",
     "react-agent-pattern",
-    "connecting-agents-to-apps",
-    "context-engineering",
-    "gmail-for-ai-agents"
+    "connecting-agents-to-apps"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 9,
-    "total": 9,
-    "top": "mcp-servers-and-clients",
-    "sim": 0.735,
-    "z": 1.55,
-    "margin": 0.025,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -2990,20 +2403,9 @@
     "agent-frameworks-compared",
     "gmail-for-ai-agents",
     "choosing-an-agent-framework",
-    "ai-agents",
-    "ai-agent-vs-chatbot",
-    "computer-use-agents"
+    "ai-agents"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 7,
-    "total": 7,
-    "top": "a2a-vs-mcp",
-    "sim": 0.78,
-    "z": 3.17,
-    "margin": 0.009,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -3047,20 +2449,9 @@
     "small-language-models",
     "rag-with-python",
     "python-for-ai",
-    "world-models",
-    "model-apis",
-    "python-ai-libraries"
+    "world-models"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 5,
-    "total": 5,
-    "top": "python",
-    "sim": 0.901,
-    "z": 2.97,
-    "margin": 0.023,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -3102,20 +2493,9 @@
     "llm-cost-optimization",
     "owasp-llm-top-10",
     "llm-benchmarks-vs-task-evals",
-    "local-llm-runtimes",
-    "local-runtimes-compared",
-    "model-serving-and-inference"
+    "local-llm-runtimes"
    ],
-   "sem": {
-    "coverage": 0.81,
-    "known": 5,
-    "total": 6,
-    "top": "python-data-for-ai",
-    "sim": 0.677,
-    "z": 3.42,
-    "margin": 0.106,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -3157,20 +2537,9 @@
     "python-ai-libraries",
     "python-data-for-ai",
     "langchain",
-    "ray",
-    "mmlu",
-    "outlines"
+    "ray"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 8,
-    "total": 8,
-    "top": "python-for-ai",
-    "sim": 0.678,
-    "z": 2.68,
-    "margin": 0.044,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -3215,20 +2584,9 @@
     "framework-vs-direct-api",
     "api-authentication",
     "model-apis",
-    "streaming-ai-with-nodejs",
-    "microsoft-graph",
-    "streaming-ai-responses"
+    "streaming-ai-with-nodejs"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 5,
-    "total": 5,
-    "top": "typescript-api-client-types",
-    "sim": 0.896,
-    "z": 2.5,
-    "margin": 0.035,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -3272,20 +2630,9 @@
     "ai-sdks",
     "websockets",
     "react-ai-interfaces",
-    "javascript-for-ai",
-    "speech-ai",
-    "calling-ai-apis-with-python"
+    "javascript-for-ai"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 5,
-    "total": 5,
-    "top": "streaming-ai-responses",
-    "sim": 0.874,
-    "z": 2.04,
-    "margin": 0.019,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -3329,20 +2676,9 @@
     "json-web-tokens",
     "model-apis",
     "instruction-tuning",
-    "streaming-ai-with-nodejs",
-    "reasoning-transparency",
-    "postgresql-for-ai-apps"
+    "streaming-ai-with-nodejs"
    ],
-   "sem": {
-    "coverage": 0.88,
-    "known": 8,
-    "total": 9,
-    "top": "streaming-ai-responses",
-    "sim": 0.909,
-    "z": 2.42,
-    "margin": 0.104,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -3385,20 +2721,9 @@
     "postgresql-for-ai-apps",
     "react-ai-interfaces",
     "azure-fundamentals",
-    "javascript-for-ai",
-    "microsoft-entra-id",
-    "teams-development"
+    "javascript-for-ai"
    ],
-   "sem": {
-    "coverage": 0.85,
-    "known": 6,
-    "total": 7,
-    "top": "express",
-    "sim": 0.925,
-    "z": 1.85,
-    "margin": 0.024,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -3440,20 +2765,9 @@
     "structured-outputs",
     "express",
     "mcp-servers-and-clients",
-    "model-apis",
-    "python-ai-libraries",
-    "what-is-an-api"
+    "model-apis"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 6,
-    "total": 6,
-    "top": "rest-apis",
-    "sim": 0.905,
-    "z": 1.94,
-    "margin": 0.04,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -3497,20 +2811,9 @@
     "cors",
     "api-authentication",
     "azure-fundamentals",
-    "calling-ai-apis-with-python",
-    "frontend-and-backend",
-    "html-and-css"
+    "calling-ai-apis-with-python"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 7,
-    "total": 7,
-    "top": "api-keys",
-    "sim": 0.891,
-    "z": 1.86,
-    "margin": 0.03,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -3555,20 +2858,9 @@
     "gmail-for-ai-agents",
     "streaming-ai-responses",
     "api-keys",
-    "cors",
-    "reasoning-transparency",
-    "llm-cost-optimization"
+    "cors"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 5,
-    "total": 5,
-    "top": "openid-connect",
-    "sim": 0.846,
-    "z": 2.56,
-    "margin": 0.001,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -3613,20 +2905,9 @@
     "gmail-for-ai-agents",
     "a2a-vs-mcp",
     "authentication-vs-authorization",
-    "function-calling-vs-mcp",
-    "oauth-for-ai-agents",
-    "self-supervised-learning"
+    "function-calling-vs-mcp"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 7,
-    "total": 7,
-    "top": "openid-connect",
-    "sim": 0.849,
-    "z": 3.04,
-    "margin": 0.032,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -3667,20 +2948,9 @@
     "azure-fundamentals",
     "calling-ai-apis-with-python",
     "api-authentication",
-    "nodejs-for-ai",
-    "python-for-ai",
-    "redis"
+    "nodejs-for-ai"
    ],
-   "sem": {
-    "coverage": 0.73,
-    "known": 7,
-    "total": 9,
-    "top": "api-keys",
-    "sim": 0.655,
-    "z": 2.8,
-    "margin": 0.013,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -3720,16 +2990,7 @@
     "mmlu",
     "sql-vs-nosql"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 5,
-    "total": 5,
-    "top": "mongodb",
-    "sim": 0.945,
-    "z": 5,
-    "margin": 0.202,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -3771,20 +3032,9 @@
     "vector-databases",
     "prompt-caching",
     "choosing-a-vector-store",
-    "postgresql",
-    "sqlite",
-    "mongodb"
+    "postgresql"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 8,
-    "total": 8,
-    "top": "redis",
-    "sim": 0.857,
-    "z": 3,
-    "margin": 0.173,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -3829,20 +3079,9 @@
     "vector-databases",
     "postgresql-for-ai-apps",
     "ai-privacy-and-security",
-    "databases-for-ai-apps",
-    "python-data-for-ai",
-    "postgresql"
+    "databases-for-ai-apps"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 7,
-    "total": 7,
-    "top": "vector-database-vs-traditional-database",
-    "sim": 0.926,
-    "z": 2.9,
-    "margin": 0.016,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -3875,16 +3114,7 @@
     "aws-fundamentals",
     "gcp-fundamentals"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 5,
-    "total": 5,
-    "top": "aws-fundamentals",
-    "sim": 0.934,
-    "z": 3.8,
-    "margin": 0.23,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -3925,19 +3155,9 @@
     "aws-fundamentals",
     "cors",
     "ai-bias-and-fairness",
-    "microsoft-graph",
-    "power-platform"
+    "microsoft-graph"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 5,
-    "total": 5,
-    "top": "azure-fundamentals",
-    "sim": 0.931,
-    "z": 2.73,
-    "margin": 0.051,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -3978,20 +3198,9 @@
     "aws-fundamentals",
     "power-platform",
     "azure-fundamentals",
-    "mlflow",
-    "mlops",
-    "a2a-protocol"
+    "mlflow"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 4,
-    "total": 4,
-    "top": "gcp-fundamentals",
-    "sim": 0.963,
-    "z": 2.8,
-    "margin": 0.114,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -4032,20 +3241,9 @@
     "object-detection",
     "a2a-vs-mcp",
     "authentication-vs-authorization",
-    "function-calling-vs-mcp",
-    "kubernetes",
-    "diffusion-models"
+    "function-calling-vs-mcp"
    ],
-   "sem": {
-    "coverage": 0.83,
-    "known": 6,
-    "total": 7,
-    "top": "containers",
-    "sim": 0.745,
-    "z": 3.78,
-    "margin": 0.153,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -4088,20 +3286,9 @@
     "nodejs-for-ai",
     "azure-fundamentals",
     "javascript-for-ai",
-    "microsoft-entra-id",
-    "teams-development",
-    "postgresql-for-ai-apps"
+    "microsoft-entra-id"
    ],
-   "sem": {
-    "coverage": 0.79,
-    "known": 4,
-    "total": 5,
-    "top": "nodejs-for-ai",
-    "sim": 0.782,
-    "z": 1.79,
-    "margin": 0.004,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -4137,16 +3324,7 @@
     "github",
     "environment-variables"
    ],
-   "sem": {
-    "coverage": 0.76,
-    "known": 5,
-    "total": 5,
-    "top": "git",
-    "sim": 0.958,
-    "z": 4.87,
-    "margin": 0.214,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -4188,20 +3366,9 @@
     "agent-tools",
     "outcome-reward-model",
     "humaneval",
-    "vision-language-action-models",
-    "ai-agent-vs-chatbot",
-    "best-of-n-sampling"
+    "vision-language-action-models"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 5,
-    "total": 5,
-    "top": "github",
-    "sim": 0.738,
-    "z": 4.65,
-    "margin": 0.24,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -4243,20 +3410,9 @@
     "microsoft-365",
     "mcp-security",
     "mechanistic-interpretability",
-    "mysql",
-    "what-is-ai",
-    "reinforcement-learning"
+    "mysql"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 8,
-    "total": 8,
-    "top": "sharepoint",
-    "sim": 0.899,
-    "z": 2.28,
-    "margin": 0.017,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -4302,20 +3458,9 @@
     "microsoft-365",
     "framework-vs-direct-api",
     "choosing-an-agent-framework",
-    "graph-rag",
-    "what-is-an-ai-framework",
-    "graph-neural-networks"
+    "graph-rag"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 8,
-    "total": 8,
-    "top": "microsoft-graph",
-    "sim": 0.949,
-    "z": 2,
-    "margin": 0.007,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -4358,20 +3503,9 @@
     "build-spfx-web-part",
     "nextjs",
     "csharp",
-    "gcp-fundamentals",
-    "microsoft-365",
-    "aws-fundamentals"
+    "gcp-fundamentals"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 5,
-    "total": 5,
-    "top": "teams-development",
-    "sim": 0.939,
-    "z": 2.31,
-    "margin": 0.086,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -4414,20 +3548,9 @@
     "gmail-for-ai-agents",
     "oauth-for-ai-agents",
     "build-spfx-web-part",
-    "oauth",
-    "cors",
-    "nextjs"
+    "oauth"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 7,
-    "total": 7,
-    "top": "microsoft-entra-id",
-    "sim": 0.952,
-    "z": 2.28,
-    "margin": 0.067,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -4472,20 +3595,9 @@
     "choosing-an-agent-framework",
     "what-is-an-ai-framework",
     "framework-vs-direct-api",
-    "agent-frameworks-compared",
-    "rag-frameworks",
-    "nist-ai-rmf"
+    "agent-frameworks-compared"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 5,
-    "total": 5,
-    "top": "power-platform",
-    "sim": 0.865,
-    "z": 2.75,
-    "margin": 0.24,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -4531,20 +3643,9 @@
     "reasoning-models",
     "reasoning-vs-standard-models",
     "quantization",
-    "local-ai",
-    "world-models",
-    "model-cards"
+    "local-ai"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 6,
-    "total": 6,
-    "top": "llama-cpp",
-    "sim": 0.909,
-    "z": 3.84,
-    "margin": 0.093,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -4588,20 +3689,9 @@
     "prompt-caching",
     "redis",
     "llamaindex",
-    "model-drift-and-monitoring",
-    "build-spfx-web-part",
-    "llama-cpp"
+    "model-drift-and-monitoring"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 5,
-    "total": 5,
-    "top": "vllm",
-    "sim": 0.911,
-    "z": 4.01,
-    "margin": 0.073,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -4645,20 +3735,9 @@
     "test-time-compute",
     "power-platform",
     "large-language-models",
-    "model-drift-and-monitoring",
-    "process-reward-model",
-    "world-models"
+    "model-drift-and-monitoring"
    ],
-   "sem": {
-    "coverage": 0.86,
-    "known": 6,
-    "total": 7,
-    "top": "onnx-runtime",
-    "sim": 0.818,
-    "z": 3.26,
-    "margin": 0.118,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -4681,8 +3760,8 @@
    "top5": [
     "local-ai",
     "ollama",
-    "local-runtimes-compared",
     "quantization",
+    "local-runtimes-compared",
     "llama-cpp"
    ],
    "learn": [
@@ -4700,25 +3779,14 @@
    "rankIds": [
     "local-ai",
     "ollama",
-    "local-runtimes-compared",
     "quantization",
+    "local-runtimes-compared",
     "llama-cpp",
     "model-cards",
     "model-apis",
-    "gpus-and-ai-accelerators",
-    "model-drift-and-monitoring",
-    "model-serving-and-inference"
+    "gpus-and-ai-accelerators"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 7,
-    "total": 7,
-    "top": "local-ai",
-    "sim": 0.584,
-    "z": 2.41,
-    "margin": 0.033,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -4763,20 +3831,9 @@
     "model-apis",
     "model-cards",
     "gcp-fundamentals",
-    "model-drift-and-monitoring",
-    "ai-privacy-and-security",
-    "model-serving-and-inference"
+    "model-drift-and-monitoring"
    ],
-   "sem": {
-    "coverage": 0.74,
-    "known": 8,
-    "total": 10,
-    "top": "local-ai-vs-cloud-ai",
-    "sim": 0.71,
-    "z": 3.16,
-    "margin": 0.049,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -4819,20 +3876,9 @@
     "diffusion-models",
     "video-generation-models",
     "large-language-models",
-    "chunking",
-    "hybrid-search-and-reranking",
-    "vector-database-vs-traditional-database"
+    "chunking"
    ],
-   "sem": {
-    "coverage": 0.75,
-    "known": 4,
-    "total": 4,
-    "top": "multimodal-ai",
-    "sim": 0.551,
-    "z": 2.31,
-    "margin": 0.026,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -4876,20 +3922,9 @@
     "diffusion-models",
     "transformers-vs-state-space-models",
     "multimodal-ai",
-    "speech-ai",
-    "vision-language-models",
-    "object-detection"
+    "speech-ai"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 7,
-    "total": 7,
-    "top": "contrastive-learning-clip",
-    "sim": 0.836,
-    "z": 3.26,
-    "margin": 0.132,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -4930,20 +3965,9 @@
     "dspy",
     "prompt-caching",
     "world-models",
-    "llm-as-a-judge",
-    "diffusion-models",
-    "pytorch"
+    "llm-as-a-judge"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 4,
-    "total": 4,
-    "top": "video-generation-models",
-    "sim": 0.721,
-    "z": 3.77,
-    "margin": 0.058,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -4984,16 +4008,7 @@
     "gsm8k-and-math-benchmarks",
     "humaneval"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 6,
-    "total": 6,
-    "top": "embodied-ai",
-    "sim": 0.74,
-    "z": 2.2,
-    "margin": 0.024,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -5037,20 +4052,9 @@
     "prompt-engineering",
     "object-detection",
     "vision-language-models",
-    "multimodal-ai",
-    "prompt-injection",
-    "vision-transformers"
+    "multimodal-ai"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 7,
-    "total": 7,
-    "top": "vision-language-action-models",
-    "sim": 0.842,
-    "z": 2.56,
-    "margin": 0.181,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -5093,20 +4097,9 @@
     "model-drift-and-monitoring",
     "outcome-reward-model",
     "model-serving-and-inference",
-    "process-reward-model",
-    "agent-planning",
-    "instruction-tuning"
+    "process-reward-model"
    ],
-   "sem": {
-    "coverage": 0.86,
-    "known": 7,
-    "total": 8,
-    "top": "world-models",
-    "sim": 0.719,
-    "z": 3.4,
-    "margin": 0.17,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -5149,22 +4142,11 @@
     "rag-frameworks",
     "agentic-rag",
     "rag-with-python",
-    "rag-evaluation",
     "rag-vs-fine-tuning",
-    "chunking",
-    "document-understanding-ai",
-    "graph-rag"
+    "rag-evaluation",
+    "chunking"
    ],
-   "sem": {
-    "coverage": 0.89,
-    "known": 9,
-    "total": 10,
-    "top": "rag-with-python",
-    "sim": 0.694,
-    "z": 1.96,
-    "margin": 0.019,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -5206,20 +4188,9 @@
     "model-serving-and-inference",
     "process-reward-model",
     "world-models",
-    "outcome-reward-model",
-    "instruction-tuning",
-    "reasoning-vs-standard-models"
+    "outcome-reward-model"
    ],
-   "sem": {
-    "coverage": 0.81,
-    "known": 10,
-    "total": 12,
-    "top": "ai-privacy-and-security",
-    "sim": 0.655,
-    "z": 1.72,
-    "margin": 0.01,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -5262,20 +4233,9 @@
     "model-serving-and-inference",
     "process-reward-model",
     "world-models",
-    "outcome-reward-model",
-    "instruction-tuning",
-    "reasoning-vs-standard-models"
+    "outcome-reward-model"
    ],
-   "sem": {
-    "coverage": 0.67,
-    "known": 6,
-    "total": 7,
-    "top": "overfitting-and-regularization",
-    "sim": 0.404,
-    "z": 2.27,
-    "margin": 0.008,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -5318,20 +4278,9 @@
     "model-serving-and-inference",
     "process-reward-model",
     "world-models",
-    "outcome-reward-model",
-    "instruction-tuning",
-    "structured-outputs"
+    "outcome-reward-model"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 4,
-    "total": 4,
-    "top": "ai-guardrails",
-    "sim": 0.614,
-    "z": 2.9,
-    "margin": 0.12,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -5373,20 +4322,9 @@
     "video-generation-models",
     "vision-language-models",
     "multimodal-ai",
-    "vision-transformers",
-    "contrastive-learning-clip",
-    "convolutional-neural-networks"
+    "vision-transformers"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 5,
-    "total": 5,
-    "top": "c2pa-content-provenance",
-    "sim": 0.866,
-    "z": 7.1,
-    "margin": 0.316,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -5429,16 +4367,7 @@
     "gcp-fundamentals",
     "webhooks"
    ],
-   "sem": {
-    "coverage": 0.67,
-    "known": 4,
-    "total": 4,
-    "top": "ai-bias-and-fairness",
-    "sim": 0.437,
-    "z": 2.24,
-    "margin": 0.035,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -5482,20 +4411,9 @@
     "model-serving-and-inference",
     "process-reward-model",
     "world-models",
-    "outcome-reward-model",
-    "instruction-tuning",
-    "reasoning-vs-standard-models"
+    "outcome-reward-model"
    ],
-   "sem": {
-    "coverage": 0.76,
-    "known": 7,
-    "total": 9,
-    "top": "llm-as-a-judge",
-    "sim": 0.908,
-    "z": 3.52,
-    "margin": 0.261,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -5536,20 +4454,9 @@
     "transformers",
     "ai-evaluation",
     "vector-databases",
-    "quantization",
-    "deep-learning",
-    "sharepoint-framework"
+    "quantization"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 5,
-    "total": 5,
-    "top": "evaluation-metrics-for-ai",
-    "sim": 0.929,
-    "z": 2.88,
-    "margin": 0.391,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -5593,20 +4500,9 @@
     "multi-agent-systems",
     "react-agent-pattern",
     "ai-agents",
-    "choosing-an-agent-framework",
-    "agent-frameworks-compared",
-    "gmail-for-ai-agents"
+    "choosing-an-agent-framework"
    ],
-   "sem": {
-    "coverage": 0.87,
-    "known": 8,
-    "total": 9,
-    "top": "ai-agents",
-    "sim": 0.783,
-    "z": 3.33,
-    "margin": 0.022,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -5650,20 +4546,9 @@
     "ai-privacy-and-security",
     "model-serving-and-inference",
     "process-reward-model",
-    "world-models",
-    "distributed-training",
-    "knowledge-distillation"
+    "world-models"
    ],
-   "sem": {
-    "coverage": 0.86,
-    "known": 6,
-    "total": 7,
-    "top": "model-drift-and-monitoring",
-    "sim": 0.896,
-    "z": 3.65,
-    "margin": 0.179,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -5708,20 +4593,9 @@
     "json-web-tokens",
     "thinking-budgets",
     "react-agent-pattern",
-    "local-ai-vs-cloud-ai",
-    "model-drift-and-monitoring",
-    "reasoning-transparency"
+    "local-ai-vs-cloud-ai"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 8,
-    "total": 8,
-    "top": "llm-cost-optimization",
-    "sim": 0.781,
-    "z": 4.05,
-    "margin": 0.145,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -5763,20 +4637,9 @@
     "what-is-ai",
     "robot-operating-system",
     "dpo",
-    "scaling-laws",
-    "backpropagation-and-gradient-descent",
-    "graph-neural-networks"
+    "scaling-laws"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 4,
-    "total": 4,
-    "top": "distributed-training",
-    "sim": 0.71,
-    "z": 2.96,
-    "margin": 0.012,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -5821,20 +4684,9 @@
     "local-ai",
     "large-language-models",
     "lora-and-peft",
-    "local-runtimes-compared",
-    "vllm",
-    "distributed-training"
+    "local-runtimes-compared"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 4,
-    "total": 4,
-    "top": "model-serving-and-inference",
-    "sim": 0.882,
-    "z": 3.59,
-    "margin": 0.11,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -5878,20 +4730,9 @@
     "local-ai",
     "ai-sdks",
     "constitutional-ai-and-rlaif",
-    "ai-evaluation",
-    "local-ai-vs-cloud-ai",
-    "ai-alignment"
+    "ai-evaluation"
    ],
-   "sem": {
-    "coverage": 0.76,
-    "known": 9,
-    "total": 10,
-    "top": "eu-ai-act",
-    "sim": 0.664,
-    "z": 3.26,
-    "margin": 0.098,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -5936,20 +4777,9 @@
     "local-ai",
     "ai-sdks",
     "constitutional-ai-and-rlaif",
-    "local-ai-vs-cloud-ai",
-    "ai-alignment",
-    "ai-privacy-and-security"
+    "local-ai-vs-cloud-ai"
    ],
-   "sem": {
-    "coverage": 0.83,
-    "known": 6,
-    "total": 7,
-    "top": "ai-governance",
-    "sim": 0.894,
-    "z": 3.5,
-    "margin": 0.036,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -5993,20 +4823,9 @@
     "model-serving-and-inference",
     "process-reward-model",
     "world-models",
-    "outcome-reward-model",
-    "instruction-tuning",
-    "reasoning-vs-standard-models"
+    "outcome-reward-model"
    ],
-   "sem": {
-    "coverage": 0.83,
-    "known": 6,
-    "total": 7,
-    "top": "ai-governance",
-    "sim": 0.82,
-    "z": 2.85,
-    "margin": 0.021,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -6025,8 +4844,8 @@
    "solid": true,
    "score": 42,
    "top5": [
-    "gdpr-and-ai",
     "rlhf",
+    "gdpr-and-ai",
     "instruction-tuning",
     "ai-agent-vs-chatbot",
     "ai-privacy-and-security"
@@ -6044,27 +4863,16 @@
    "note": "",
    "pathOk": null,
    "rankIds": [
-    "gdpr-and-ai",
     "rlhf",
+    "gdpr-and-ai",
     "instruction-tuning",
     "ai-agent-vs-chatbot",
     "ai-privacy-and-security",
-    "distributed-training",
     "preference-optimization",
-    "react-chatbot-state",
-    "fine-tuning",
-    "python-data-for-ai"
+    "distributed-training",
+    "react-chatbot-state"
    ],
-   "sem": {
-    "coverage": 0.58,
-    "known": 9,
-    "total": 10,
-    "top": "object-detection",
-    "sim": 0.32,
-    "z": 2.42,
-    "margin": 0.005,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -6105,20 +4913,9 @@
     "function-calling-vs-mcp",
     "markov-decision-processes",
     "model-apis",
-    "structured-output-methods-compared",
-    "agent-tools",
-    "deep-q-networks"
+    "structured-output-methods-compared"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 7,
-    "total": 7,
-    "top": "dpo",
-    "sim": 0.704,
-    "z": 3.32,
-    "margin": 0.03,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -6162,20 +4959,9 @@
     "process-reward-model",
     "model-serving-and-inference",
     "world-models",
-    "outcome-reward-model",
-    "instruction-tuning",
-    "reasoning-vs-standard-models"
+    "outcome-reward-model"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 8,
-    "total": 8,
-    "top": "process-reward-model",
-    "sim": 0.735,
-    "z": 1.96,
-    "margin": 0.012,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -6219,20 +5005,9 @@
     "supervised-learning",
     "imitation-learning",
     "unsupervised-learning",
-    "reinforcement-learning-for-reasoning",
-    "self-supervised-learning",
-    "transfer-learning"
+    "reinforcement-learning-for-reasoning"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 5,
-    "total": 5,
-    "top": "alphafold",
-    "sim": 0.863,
-    "z": 2.5,
-    "margin": 0.107,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -6276,20 +5051,9 @@
     "unsupervised-learning",
     "reinforcement-learning-for-reasoning",
     "self-supervised-learning",
-    "transfer-learning",
-    "contrastive-learning-clip",
-    "deep-q-networks"
+    "transfer-learning"
    ],
-   "sem": {
-    "coverage": 0.64,
-    "known": 6,
-    "total": 7,
-    "top": "physics-informed-neural-networks",
-    "sim": 0.639,
-    "z": 4.05,
-    "margin": 0.18,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -6335,18 +5099,9 @@
     "model-serving-and-inference",
     "local-runtimes-compared"
    ],
-   "sem": {
-    "coverage": 0.76,
-    "known": 4,
-    "total": 4,
-    "top": "kubernetes",
-    "sim": 0.937,
-    "z": 5.74,
-    "margin": 0.363,
-    "how": "lexical"
-   },
-   "classAmended": "PASS",
-   "amendReason": "Kubernetes page added"
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
   },
   {
    "id": "H2-114",
@@ -6378,18 +5133,9 @@
     "kubernetes",
     "containers"
    ],
-   "sem": {
-    "coverage": 0.55,
-    "known": 4,
-    "total": 5,
-    "top": "kubernetes",
-    "sim": 0.877,
-    "z": 6.49,
-    "margin": 0.438,
-    "how": "lexical"
-   },
-   "classAmended": "PASS",
-   "amendReason": "Kubernetes page added"
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
   },
   {
    "id": "H2-115",
@@ -6427,18 +5173,9 @@
     "aws-fundamentals",
     "java"
    ],
-   "sem": {
-    "coverage": 0.8,
-    "known": 6,
-    "total": 6,
-    "top": "object-detection",
-    "sim": 0.846,
-    "z": 5.47,
-    "margin": 0.353,
-    "how": "lexical"
-   },
-   "classAmended": "PASS",
-   "amendReason": "object-detection page added"
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
   },
   {
    "id": "H2-116",
@@ -6481,22 +5218,11 @@
     "diffusion-models",
     "world-models",
     "vision-language-models",
-    "model-cards",
-    "model-drift-and-monitoring",
-    "model-apis"
+    "model-cards"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 3,
-    "total": 3,
-    "top": "object-detection",
-    "sim": 0.866,
-    "z": 3.26,
-    "margin": 0.142,
-    "how": "lexical"
-   },
-   "classAmended": "PASS",
-   "amendReason": "object-detection page added"
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
   },
   {
    "id": "H2-117",
@@ -6537,22 +5263,11 @@
     "vision-language-action-models",
     "rag-evaluation",
     "embodied-ai",
-    "graph-neural-networks",
-    "benchmarks-and-leaderboards",
-    "ai-evaluation"
+    "graph-neural-networks"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 6,
-    "total": 6,
-    "top": "robot-operating-system",
-    "sim": 0.973,
-    "z": 6.25,
-    "margin": 0.398,
-    "how": "lexical"
-   },
-   "classAmended": "PASS",
-   "amendReason": "ROS page added"
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
   },
   {
    "id": "H2-118",
@@ -6593,22 +5308,11 @@
     "reinforcement-learning",
     "unsupervised-learning",
     "mlops",
-    "imitation-learning",
-    "ai-for-science",
-    "reinforcement-learning-for-reasoning"
+    "imitation-learning"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 7,
-    "total": 7,
-    "top": "gdpr-and-ai",
-    "sim": 0.868,
-    "z": 3.38,
-    "margin": 0.268,
-    "how": "lexical"
-   },
-   "classAmended": "PASS",
-   "amendReason": "GDPR page added"
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
   },
   {
    "id": "H2-119",
@@ -6620,15 +5324,15 @@
     "nodejs"
    ],
    "expectedTool": null,
-   "top": "(weak) streaming-ai-with-nodejs",
+   "top": "(weak) agent-memory",
    "solid": false,
-   "score": 58.4217007191391,
+   "score": 34,
    "top5": [
-    "streaming-ai-with-nodejs",
+    "agent-memory",
     "nodejs",
+    "streaming-ai-with-nodejs",
     "nodejs-for-ai",
-    "calling-ai-apis-with-javascript",
-    "agent-memory"
+    "flash-attention"
    ],
    "learn": [],
    "tool": null,
@@ -6637,27 +5341,16 @@
    "note": "transparent non-answer",
    "pathOk": null,
    "rankIds": [
-    "streaming-ai-with-nodejs",
-    "nodejs",
-    "nodejs-for-ai",
-    "calling-ai-apis-with-javascript",
     "agent-memory",
-    "express",
-    "javascript-for-ai",
-    "frontend-and-backend",
-    "api-authentication",
-    "gmail-for-ai-agents"
+    "nodejs",
+    "streaming-ai-with-nodejs",
+    "nodejs-for-ai",
+    "flash-attention",
+    "gpus-and-ai-accelerators",
+    "kv-cache",
+    "calling-ai-apis-with-javascript"
    ],
-   "sem": {
-    "coverage": 0.87,
-    "known": 7,
-    "total": 8,
-    "top": "streaming-ai-with-nodejs",
-    "sim": 0.751,
-    "z": 2.11,
-    "margin": 0.018,
-    "how": ""
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -6688,16 +5381,7 @@
     "html-and-css",
     "convolutional-neural-networks"
    ],
-   "sem": {
-    "coverage": 0.77,
-    "known": 4,
-    "total": 4,
-    "top": "html-and-css",
-    "sim": 0.957,
-    "z": 3.72,
-    "margin": 0.265,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -6741,20 +5425,9 @@
     "what-is-json",
     "json-schema",
     "openid-connect",
-    "python-data-for-ai",
-    "structured-outputs",
-    "structured-output-methods-compared"
+    "python-data-for-ai"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 4,
-    "total": 4,
-    "top": "json-web-tokens",
-    "sim": 0.851,
-    "z": 2.08,
-    "margin": 0.014,
-    "how": "lexical"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -6768,13 +5441,13 @@
    "expectedTool": null,
    "top": "(weak) vision-transformers",
    "solid": false,
-   "score": 71.60628488353117,
+   "score": 20,
    "top5": [
     "vision-transformers",
-    "recurrent-neural-networks",
-    "multimodal-ai",
-    "video-generation-models",
-    "transformers-vs-state-space-models"
+    "transformers-vs-state-space-models",
+    "hugging-face",
+    "onnx-runtime",
+    "state-space-models"
    ],
    "learn": [],
    "tool": null,
@@ -6784,26 +5457,15 @@
    "pathOk": null,
    "rankIds": [
     "vision-transformers",
-    "recurrent-neural-networks",
-    "multimodal-ai",
-    "video-generation-models",
     "transformers-vs-state-space-models",
-    "diffusion-models",
-    "contrastive-learning-clip",
-    "vision-language-models",
+    "hugging-face",
+    "onnx-runtime",
     "state-space-models",
-    "transformers"
+    "local-runtimes-compared",
+    "transformers",
+    "contrastive-learning-clip"
    ],
-   "sem": {
-    "coverage": 0.75,
-    "known": 4,
-    "total": 4,
-    "top": "multimodal-ai",
-    "sim": 0.517,
-    "z": 3.18,
-    "margin": 0.004,
-    "how": ""
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -6839,20 +5501,9 @@
     "python-ai-libraries",
     "python-data-for-ai",
     "langchain",
-    "ray",
-    "outlines",
-    "dspy"
+    "ray"
    ],
-   "sem": {
-    "coverage": 0.74,
-    "known": 4,
-    "total": 4,
-    "top": "python",
-    "sim": 0.592,
-    "z": 4.04,
-    "margin": 0.01,
-    "how": ""
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -6872,7 +5523,7 @@
     "agentic-rag",
     "rag-frameworks",
     "rag-with-python",
-    "rag-evaluation"
+    "rag-vs-fine-tuning"
    ],
    "learn": [],
    "tool": null,
@@ -6885,23 +5536,12 @@
     "agentic-rag",
     "rag-frameworks",
     "rag-with-python",
-    "rag-evaluation",
     "rag-vs-fine-tuning",
+    "rag-evaluation",
     "chunking",
-    "graph-rag",
-    "hybrid-search-and-reranking",
-    "llamaindex"
+    "graph-rag"
    ],
-   "sem": {
-    "coverage": 0.44,
-    "known": 6,
-    "total": 6,
-    "top": "agentic-rag",
-    "sim": 0.447,
-    "z": 3.77,
-    "margin": 0.06,
-    "how": ""
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -6937,20 +5577,9 @@
     "transfer-learning",
     "vllm",
     "graph-rag",
-    "mcp-security",
-    "environment-variables",
-    "owasp-llm-top-10"
+    "mcp-security"
    ],
-   "sem": {
-    "coverage": 0.76,
-    "known": 6,
-    "total": 6,
-    "top": "git",
-    "sim": 0.655,
-    "z": 3.25,
-    "margin": 0.022,
-    "how": ""
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -6964,13 +5593,9 @@
    "expectedTool": null,
    "top": "(weak) java",
    "solid": false,
-   "score": 65.81087475220781,
+   "score": 4,
    "top5": [
-    "java",
-    "python-ai-libraries",
-    "speculative-decoding",
-    "prompt-engineering",
-    "hugging-face"
+    "java"
    ],
    "learn": [],
    "tool": null,
@@ -6979,27 +5604,9 @@
    "note": "no confident answer",
    "pathOk": null,
    "rankIds": [
-    "java",
-    "python-ai-libraries",
-    "speculative-decoding",
-    "prompt-engineering",
-    "hugging-face",
-    "mixture-of-experts",
-    "pgvector",
-    "autogen",
-    "kubernetes",
-    "evaluation-metrics-for-ai"
+    "java"
    ],
-   "sem": {
-    "coverage": 0.34,
-    "known": 3,
-    "total": 3,
-    "top": "java",
-    "sim": 0.437,
-    "z": 3.06,
-    "margin": 0.111,
-    "how": ""
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -7011,44 +5618,18 @@
    "kind": "neg",
    "expected": [],
    "expectedTool": null,
-   "top": "(weak) python-data-for-ai",
+   "top": "(weak) none",
    "solid": false,
-   "score": 33.61574492892815,
-   "top5": [
-    "python-data-for-ai",
-    "python-for-ai",
-    "typescript",
-    "python",
-    "go-language"
-   ],
+   "score": 0,
+   "top5": [],
    "learn": [],
    "tool": null,
    "gap": "rt-negative-context",
    "class": "PASS",
    "note": "no confident answer",
    "pathOk": null,
-   "rankIds": [
-    "python-data-for-ai",
-    "python-for-ai",
-    "typescript",
-    "python",
-    "go-language",
-    "javascript",
-    "nodejs",
-    "calling-ai-apis-with-python",
-    "rust",
-    "csharp"
-   ],
-   "sem": {
-    "coverage": 0.71,
-    "known": 2,
-    "total": 3,
-    "top": "python-data-for-ai",
-    "sim": 0.657,
-    "z": 2.12,
-    "margin": 0.023,
-    "how": ""
-   },
+   "rankIds": [],
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -7060,44 +5641,18 @@
    "kind": "neg",
    "expected": [],
    "expectedTool": null,
-   "top": "(weak) backpropagation-and-gradient-descent",
+   "top": "(weak) none",
    "solid": false,
-   "score": 23.830963325046792,
-   "top5": [
-    "backpropagation-and-gradient-descent",
-    "world-models",
-    "ai-materials-discovery",
-    "model-drift-and-monitoring",
-    "generative-adversarial-networks"
-   ],
+   "score": 0,
+   "top5": [],
    "learn": [],
    "tool": null,
    "gap": "",
    "class": "PASS",
    "note": "no confident answer",
    "pathOk": null,
-   "rankIds": [
-    "backpropagation-and-gradient-descent",
-    "world-models",
-    "ai-materials-discovery",
-    "model-drift-and-monitoring",
-    "generative-adversarial-networks",
-    "diffusion-models",
-    "alphafold",
-    "markov-decision-processes",
-    "supervised-learning",
-    "variational-autoencoders"
-   ],
-   "sem": {
-    "coverage": 0,
-    "known": 3,
-    "total": 3,
-    "top": "backpropagation-and-gradient-descent",
-    "sim": 0.434,
-    "z": 1.79,
-    "margin": 0.009,
-    "how": ""
-   },
+   "rankIds": [],
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -7133,20 +5688,9 @@
     "ai-privacy-and-security",
     "ai-evaluation",
     "local-ai-vs-cloud-ai",
-    "reasoning-transparency",
-    "test-time-compute",
-    "local-ai"
+    "reasoning-transparency"
    ],
-   "sem": {
-    "coverage": 0.53,
-    "known": 4,
-    "total": 5,
-    "top": "kubernetes",
-    "sim": 0.349,
-    "z": 4.06,
-    "margin": 0.074,
-    "how": ""
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -7158,15 +5702,13 @@
    "kind": "neg",
    "expected": [],
    "expectedTool": null,
-   "top": "(weak) json-web-tokens",
+   "top": "(weak) api-authentication",
    "solid": false,
-   "score": 36.76348149988412,
+   "score": 6,
    "top5": [
+    "api-authentication",
     "json-web-tokens",
-    "tokens",
-    "api-keys",
-    "openid-connect",
-    "oauth"
+    "api-keys"
    ],
    "learn": [],
    "tool": null,
@@ -7175,27 +5717,11 @@
    "note": "no confident answer",
    "pathOk": null,
    "rankIds": [
-    "json-web-tokens",
-    "tokens",
-    "api-keys",
-    "openid-connect",
-    "oauth",
     "api-authentication",
-    "redis",
-    "python-ai-libraries",
-    "webhooks",
-    "agent-tools"
+    "json-web-tokens",
+    "api-keys"
    ],
-   "sem": {
-    "coverage": 0.34,
-    "known": 8,
-    "total": 8,
-    "top": "json-web-tokens",
-    "sim": 0.357,
-    "z": 2.03,
-    "margin": 0.013,
-    "how": ""
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -7207,44 +5733,18 @@
    "kind": "neg",
    "expected": [],
    "expectedTool": null,
-   "top": "(weak) fine-tuning",
+   "top": "(weak) none",
    "solid": false,
-   "score": 51.42121049054664,
-   "top5": [
-    "fine-tuning",
-    "rag-vs-fine-tuning",
-    "best-of-n-sampling",
-    "lora-vs-full-fine-tuning",
-    "instruction-tuning"
-   ],
+   "score": 0,
+   "top5": [],
    "learn": [],
    "tool": null,
    "gap": "rt-negative-context",
    "class": "PASS",
    "note": "no confident answer",
    "pathOk": null,
-   "rankIds": [
-    "fine-tuning",
-    "rag-vs-fine-tuning",
-    "best-of-n-sampling",
-    "lora-vs-full-fine-tuning",
-    "instruction-tuning",
-    "lora-and-peft",
-    "llm-as-a-judge",
-    "reward-hacking",
-    "transfer-learning",
-    "prm-vs-orm"
-   ],
-   "sem": {
-    "coverage": 0,
-    "known": 3,
-    "total": 3,
-    "top": "fine-tuning",
-    "sim": 0.359,
-    "z": 2.71,
-    "margin": 0.027,
-    "how": ""
-   },
+   "rankIds": [],
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -7258,12 +5758,12 @@
    "expectedTool": null,
    "top": "(weak) ai-agent-vs-chatbot",
    "solid": false,
-   "score": 48.35351872646045,
+   "score": 35,
    "top5": [
     "ai-agent-vs-chatbot",
-    "multi-agent-systems",
     "agent-protocol-landscape",
-    "agent-memory",
+    "multi-agent-systems",
+    "choosing-an-agent-framework",
     "agent-frameworks-compared"
    ],
    "learn": [],
@@ -7274,26 +5774,15 @@
    "pathOk": null,
    "rankIds": [
     "ai-agent-vs-chatbot",
-    "multi-agent-systems",
     "agent-protocol-landscape",
-    "agent-memory",
+    "multi-agent-systems",
+    "choosing-an-agent-framework",
     "agent-frameworks-compared",
-    "gcp-fundamentals",
-    "docker",
     "ai-agents",
-    "autogen",
-    "choosing-an-agent-framework"
+    "agent-evaluation",
+    "a2a-protocol"
    ],
-   "sem": {
-    "coverage": 0.64,
-    "known": 3,
-    "total": 3,
-    "top": "gcp-fundamentals",
-    "sim": 0.399,
-    "z": 2.08,
-    "margin": 0.004,
-    "how": ""
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -7307,13 +5796,10 @@
    "expectedTool": null,
    "top": "(weak) mongodb",
    "solid": false,
-   "score": 63.00098468167221,
+   "score": 17,
    "top5": [
     "mongodb",
-    "gcp-fundamentals",
-    "postgresql-for-ai-apps",
-    "sqlite",
-    "aws-fundamentals"
+    "flash-attention"
    ],
    "learn": [],
    "tool": null,
@@ -7323,26 +5809,9 @@
    "pathOk": null,
    "rankIds": [
     "mongodb",
-    "gcp-fundamentals",
-    "postgresql-for-ai-apps",
-    "sqlite",
-    "aws-fundamentals",
-    "azure-fundamentals",
-    "pgvector",
-    "postgresql",
-    "databases-for-ai-apps",
-    "mysql"
+    "flash-attention"
    ],
-   "sem": {
-    "coverage": 0.4,
-    "known": 4,
-    "total": 4,
-    "top": "mongodb",
-    "sim": 0.463,
-    "z": 2.53,
-    "margin": 0.017,
-    "how": "off-corpus"
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -7373,16 +5842,7 @@
     "kubernetes",
     "ray"
    ],
-   "sem": {
-    "coverage": 0.67,
-    "known": 4,
-    "total": 4,
-    "top": "kubernetes",
-    "sim": 0.544,
-    "z": 2.81,
-    "margin": 0.059,
-    "how": ""
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -7396,13 +5856,13 @@
    "expectedTool": null,
    "top": "(weak) html-and-css",
    "solid": false,
-   "score": 64.81606187481796,
+   "score": 30,
    "top5": [
     "html-and-css",
-    "streaming-ai-responses",
-    "calling-ai-apis-with-python",
-    "rest-apis",
-    "vision-language-models"
+    "backpropagation-and-gradient-descent",
+    "proximal-policy-optimization",
+    "recurrent-neural-networks",
+    "supervised-learning"
    ],
    "learn": [],
    "tool": null,
@@ -7412,26 +5872,12 @@
    "pathOk": null,
    "rankIds": [
     "html-and-css",
-    "streaming-ai-responses",
-    "calling-ai-apis-with-python",
-    "rest-apis",
-    "vision-language-models",
-    "model-apis",
-    "websockets",
-    "python-for-ai",
-    "streaming-ai-with-nodejs",
-    "backpropagation-and-gradient-descent"
+    "backpropagation-and-gradient-descent",
+    "proximal-policy-optimization",
+    "recurrent-neural-networks",
+    "supervised-learning"
    ],
-   "sem": {
-    "coverage": 0.6,
-    "known": 7,
-    "total": 8,
-    "top": "streaming-ai-responses",
-    "sim": 0.442,
-    "z": 2.74,
-    "margin": 0.052,
-    "how": ""
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -7443,15 +5889,15 @@
    "kind": "neg",
    "expected": [],
    "expectedTool": null,
-   "top": "(weak) reinforcement-learning-for-reasoning",
+   "top": "(weak) distributed-training",
    "solid": false,
-   "score": 42.13027431020985,
+   "score": 6,
    "top5": [
-    "reinforcement-learning-for-reasoning",
-    "local-ai",
-    "kubernetes",
+    "distributed-training",
     "ray",
-    "hugging-face"
+    "supervised-learning",
+    "knowledge-distillation",
+    "object-detection"
    ],
    "learn": [],
    "tool": null,
@@ -7460,27 +5906,16 @@
    "note": "no confident answer",
    "pathOk": null,
    "rankIds": [
-    "reinforcement-learning-for-reasoning",
-    "local-ai",
-    "kubernetes",
-    "ray",
-    "hugging-face",
     "distributed-training",
-    "local-ai-vs-cloud-ai",
-    "self-supervised-learning",
-    "mixture-of-experts",
-    "lora-vs-full-fine-tuning"
+    "ray",
+    "supervised-learning",
+    "knowledge-distillation",
+    "object-detection",
+    "prm-vs-orm",
+    "fine-tuning",
+    "generative-adversarial-networks"
    ],
-   "sem": {
-    "coverage": 0.56,
-    "known": 3,
-    "total": 5,
-    "top": "reinforcement-learning-for-reasoning",
-    "sim": 0.578,
-    "z": 2.4,
-    "margin": 0.011,
-    "how": ""
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -7494,13 +5929,11 @@
    "expectedTool": null,
    "top": "(weak) backpropagation-and-gradient-descent",
    "solid": false,
-   "score": 25.597199136782468,
+   "score": 9,
    "top5": [
     "backpropagation-and-gradient-descent",
-    "state-space-models",
-    "reinforcement-learning",
-    "scaling-laws",
-    "overfitting-and-regularization"
+    "dpo",
+    "scaling-laws"
    ],
    "learn": [],
    "tool": null,
@@ -7510,26 +5943,10 @@
    "pathOk": null,
    "rankIds": [
     "backpropagation-and-gradient-descent",
-    "state-space-models",
-    "reinforcement-learning",
-    "scaling-laws",
-    "overfitting-and-regularization",
-    "neural-networks",
-    "alphafold",
-    "deep-learning",
-    "imitation-learning",
-    "sampling-and-decoding"
+    "dpo",
+    "scaling-laws"
    ],
-   "sem": {
-    "coverage": 0.38,
-    "known": 5,
-    "total": 5,
-    "top": "state-space-models",
-    "sim": 0.353,
-    "z": 1.84,
-    "margin": 0.017,
-    "how": ""
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -7541,15 +5958,12 @@
    "kind": "neg",
    "expected": [],
    "expectedTool": null,
-   "top": "(weak) model-apis",
+   "top": "(weak) llm-cost-optimization",
    "solid": false,
-   "score": 30.395260399130343,
+   "score": 6,
    "top5": [
-    "model-apis",
-    "streaming-ai-responses",
-    "local-llm-runtimes",
-    "api-authentication",
-    "streaming-ai-with-nodejs"
+    "llm-cost-optimization",
+    "api-authentication"
    ],
    "learn": [],
    "tool": null,
@@ -7558,27 +5972,10 @@
    "note": "no confident answer",
    "pathOk": null,
    "rankIds": [
-    "model-apis",
-    "streaming-ai-responses",
-    "local-llm-runtimes",
-    "api-authentication",
-    "streaming-ai-with-nodejs",
-    "react-ai-interfaces",
-    "calling-ai-apis-with-javascript",
-    "local-runtimes-compared",
-    "nextjs",
-    "nodejs-for-ai"
+    "llm-cost-optimization",
+    "api-authentication"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 4,
-    "total": 4,
-    "top": "model-apis",
-    "sim": 0.591,
-    "z": 2.01,
-    "margin": 0.059,
-    "how": ""
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -7592,13 +5989,12 @@
    "expectedTool": null,
    "top": "(weak) semantic-kernel",
    "solid": false,
-   "score": 115.03079195349488,
+   "score": 36,
    "top5": [
     "semantic-kernel",
-    "embeddings",
-    "variational-autoencoders",
-    "streaming-ai-with-nodejs",
-    "code-execution-sandboxing"
+    "agent-frameworks-compared",
+    "choosing-an-agent-framework",
+    "containers"
    ],
    "learn": [],
    "tool": null,
@@ -7608,26 +6004,11 @@
    "pathOk": null,
    "rankIds": [
     "semantic-kernel",
-    "embeddings",
-    "variational-autoencoders",
-    "streaming-ai-with-nodejs",
-    "code-execution-sandboxing",
-    "streaming-ai-responses",
-    "databases-for-ai-apps",
-    "prompt-caching",
-    "gpus-and-ai-accelerators",
-    "nodejs-for-ai"
+    "agent-frameworks-compared",
+    "choosing-an-agent-framework",
+    "containers"
    ],
-   "sem": {
-    "coverage": 0.52,
-    "known": 4,
-    "total": 5,
-    "top": "semantic-kernel",
-    "sim": 0.457,
-    "z": 3.63,
-    "margin": 0.125,
-    "how": ""
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -7639,15 +6020,15 @@
    "kind": "neg",
    "expected": [],
    "expectedTool": null,
-   "top": "(weak) preference-optimization",
+   "top": "(weak) reinforcement-learning",
    "solid": false,
-   "score": 53.577319717941116,
+   "score": 22,
    "top5": [
-    "preference-optimization",
+    "reinforcement-learning",
     "reinforcement-learning-for-reasoning",
-    "constitutional-ai-and-rlaif",
-    "search-over-reasoning",
-    "open-weights-models"
+    "rlhf",
+    "dpo-vs-rlhf",
+    "preference-optimization"
    ],
    "learn": [],
    "tool": null,
@@ -7656,27 +6037,16 @@
    "note": "no confident answer",
    "pathOk": null,
    "rankIds": [
-    "preference-optimization",
+    "reinforcement-learning",
     "reinforcement-learning-for-reasoning",
+    "rlhf",
+    "dpo-vs-rlhf",
+    "preference-optimization",
     "constitutional-ai-and-rlaif",
-    "search-over-reasoning",
-    "open-weights-models",
-    "transformers",
-    "object-detection",
-    "chain-of-thought",
-    "red-teaming",
-    "vision-language-action-models"
+    "dpo",
+    "imitation-learning"
    ],
-   "sem": {
-    "coverage": 0.69,
-    "known": 4,
-    "total": 4,
-    "top": "preference-optimization",
-    "sim": 0.261,
-    "z": 2.69,
-    "margin": 0.018,
-    "how": ""
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -7688,15 +6058,15 @@
    "kind": "neg",
    "expected": [],
    "expectedTool": null,
-   "top": "(weak) prompt-injection",
+   "top": "(weak) system-prompts",
    "solid": false,
-   "score": 52.818045180938825,
+   "score": 25,
    "top5": [
-    "prompt-injection",
-    "gdpr-and-ai",
-    "prompt-caching",
     "system-prompts",
-    "markov-decision-processes"
+    "prompt-engineering",
+    "prompt-injection",
+    "prompt-caching",
+    "common-prompting-mistakes"
    ],
    "learn": [],
    "tool": null,
@@ -7705,27 +6075,16 @@
    "note": "no confident answer",
    "pathOk": null,
    "rankIds": [
-    "prompt-injection",
-    "gdpr-and-ai",
-    "prompt-caching",
     "system-prompts",
-    "markov-decision-processes",
-    "integration-permissions",
-    "function-calling",
-    "graph-rag",
-    "structured-output-methods-compared",
-    "tokens"
+    "prompt-engineering",
+    "prompt-injection",
+    "prompt-caching",
+    "common-prompting-mistakes",
+    "dspy",
+    "chain-of-thought",
+    "context-engineering"
    ],
-   "sem": {
-    "coverage": 1,
-    "known": 5,
-    "total": 5,
-    "top": "gdpr-and-ai",
-    "sim": 0.449,
-    "z": 2.65,
-    "margin": 0.016,
-    "how": ""
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -7737,44 +6096,18 @@
    "kind": "neg",
    "expected": [],
    "expectedTool": null,
-   "top": "(weak) ai-agents",
+   "top": "(weak) none",
    "solid": false,
-   "score": 32.44170003049592,
-   "top5": [
-    "ai-agents",
-    "java",
-    "go-language",
-    "rag-vs-fine-tuning",
-    "cnn-vs-vision-transformer"
-   ],
+   "score": 0,
+   "top5": [],
    "learn": [],
    "tool": null,
    "gap": "",
    "class": "PASS",
    "note": "no confident answer",
    "pathOk": null,
-   "rankIds": [
-    "ai-agents",
-    "java",
-    "go-language",
-    "rag-vs-fine-tuning",
-    "cnn-vs-vision-transformer",
-    "rag-frameworks",
-    "rust",
-    "prompt-engineering",
-    "model-cards",
-    "rest-vs-graphql"
-   ],
-   "sem": {
-    "coverage": 0.32,
-    "known": 4,
-    "total": 5,
-    "top": "ai-agents",
-    "sim": 0.463,
-    "z": 2.08,
-    "margin": 0.009,
-    "how": ""
-   },
+   "rankIds": [],
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -7786,44 +6119,18 @@
    "kind": "neg",
    "expected": [],
    "expectedTool": null,
-   "top": "(weak) open-weights-models",
+   "top": "(weak) none",
    "solid": false,
-   "score": 64.69283443462527,
-   "top5": [
-    "open-weights-models",
-    "mixture-of-experts",
-    "function-calling",
-    "lora-and-peft",
-    "autogen"
-   ],
+   "score": 0,
+   "top5": [],
    "learn": [],
    "tool": null,
    "gap": "",
    "class": "PASS",
    "note": "no confident answer",
    "pathOk": null,
-   "rankIds": [
-    "open-weights-models",
-    "mixture-of-experts",
-    "function-calling",
-    "lora-and-peft",
-    "autogen",
-    "agent-memory",
-    "model-serving-and-inference",
-    "hugging-face",
-    "local-ai-vs-cloud-ai",
-    "package-managers"
-   ],
-   "sem": {
-    "coverage": 0.37,
-    "known": 4,
-    "total": 4,
-    "top": "open-weights-models",
-    "sim": 0.371,
-    "z": 3.16,
-    "margin": 0.056,
-    "how": ""
-   },
+   "rankIds": [],
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -7835,44 +6142,18 @@
    "kind": "neg",
    "expected": [],
    "expectedTool": null,
-   "top": "(weak) sycophancy",
+   "top": "(weak) none",
    "solid": false,
-   "score": 56.71169150822309,
-   "top5": [
-    "sycophancy",
-    "ai-hallucinations",
-    "rag-evaluation",
-    "react-agent-pattern",
-    "how-to-reduce-hallucinations"
-   ],
+   "score": 0,
+   "top5": [],
    "learn": [],
    "tool": null,
    "gap": "",
    "class": "PASS",
    "note": "no confident answer",
    "pathOk": null,
-   "rankIds": [
-    "sycophancy",
-    "ai-hallucinations",
-    "rag-evaluation",
-    "react-agent-pattern",
-    "how-to-reduce-hallucinations",
-    "ai-evaluation",
-    "pytorch",
-    "video-generation-models",
-    "embodied-ai",
-    "what-is-an-ai-framework"
-   ],
-   "sem": {
-    "coverage": 0.44,
-    "known": 2,
-    "total": 4,
-    "top": "sycophancy",
-    "sim": 0.554,
-    "z": 2.89,
-    "margin": 0.028,
-    "how": ""
-   },
+   "rankIds": [],
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -7886,13 +6167,13 @@
    "expectedTool": null,
    "top": "(weak) best-of-n-sampling",
    "solid": false,
-   "score": 79.70758281080472,
+   "score": 28,
    "top5": [
     "best-of-n-sampling",
-    "context-windows",
-    "mmlu",
-    "ai-evaluation",
-    "what-is-ai"
+    "local-runtimes-compared",
+    "structured-output-methods-compared",
+    "benchmarks-and-leaderboards",
+    "cnn-vs-vision-transformer"
    ],
    "learn": [],
    "tool": null,
@@ -7902,26 +6183,15 @@
    "pathOk": null,
    "rankIds": [
     "best-of-n-sampling",
+    "local-runtimes-compared",
+    "structured-output-methods-compared",
+    "benchmarks-and-leaderboards",
+    "cnn-vs-vision-transformer",
+    "git",
     "context-windows",
-    "mmlu",
-    "ai-evaluation",
-    "what-is-ai",
-    "generative-ai",
-    "ai-agent-vs-chatbot",
-    "common-prompting-mistakes",
-    "benchmark-contamination",
-    "self-consistency"
+    "react-chatbot-state"
    ],
-   "sem": {
-    "coverage": 0.71,
-    "known": 3,
-    "total": 4,
-    "top": "best-of-n-sampling",
-    "sim": 0.635,
-    "z": 2.72,
-    "margin": 0.044,
-    "how": ""
-   },
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   },
@@ -7933,44 +6203,18 @@
    "kind": "neg",
    "expected": [],
    "expectedTool": null,
-   "top": "(weak) authentication-vs-authorization",
+   "top": "(weak) none",
    "solid": false,
-   "score": 79.01949980353187,
-   "top5": [
-    "authentication-vs-authorization",
-    "integration-permissions",
-    "a2a-protocol",
-    "json-web-tokens",
-    "mcp-security"
-   ],
+   "score": 0,
+   "top5": [],
    "learn": [],
    "tool": null,
    "gap": "",
    "class": "PASS",
    "note": "no confident answer",
    "pathOk": null,
-   "rankIds": [
-    "authentication-vs-authorization",
-    "integration-permissions",
-    "a2a-protocol",
-    "json-web-tokens",
-    "mcp-security",
-    "oauth-for-ai-agents",
-    "openid-connect",
-    "agent-tools",
-    "webhooks",
-    "prompt-injection"
-   ],
-   "sem": {
-    "coverage": 0,
-    "known": 3,
-    "total": 3,
-    "top": "authentication-vs-authorization",
-    "sim": 0.54,
-    "z": 3.63,
-    "margin": 0.027,
-    "how": ""
-   },
+   "rankIds": [],
+   "sem": null,
    "classAmended": "PASS",
    "amendReason": ""
   }

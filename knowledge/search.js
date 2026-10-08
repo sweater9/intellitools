@@ -1,5 +1,9 @@
 // Browser wrapper. Loads the local index and lexicon, then renders searchKnowledge.
 import { searchKnowledge } from "./search-core.mjs";
+// Experimental, opt-in only (?semantic=1). Default behaviour is unchanged lexical search.
+const SEMANTIC = new URLSearchParams(location.search).get("semantic") === "1";
+let semantic = null;
+let searchHybrid = null;
 
 const form = document.querySelector("#kn-search-form");
 const input = document.querySelector("#kn-q");
@@ -46,7 +50,7 @@ function render(query) {
     status.textContent = "";
     return;
   }
-  const found = searchKnowledge(index, lexicon, q);
+  const found = semantic ? searchHybrid(index, lexicon, semantic, q, "gated") : searchKnowledge(index, lexicon, q);
   if (found.gap) {
     const note = el("p", "kn-gap");
     note.textContent = found.gap.message;
@@ -157,6 +161,12 @@ async function load() {
   }
   index = await indexRes.json();
   lexicon = await lexiconRes.json();
+  if (SEMANTIC) {
+    // Lazy: lexical search is usable immediately; the ~1 MB (gzipped) semantic index loads in the background.
+    Promise.all([import("./hybrid-search.mjs"), import("./semantic-core.mjs"), fetch("semantic-index.json").then((r) => r.json())])
+      .then(([h, c, raw]) => { searchHybrid = h.searchHybrid; semantic = c.loadSemantic(raw); if (input.value.trim()) render(input.value); })
+      .catch(() => { semantic = null; });
+  }
   const params = new URLSearchParams(location.search);
   const initial = params.get("q") || "";
   if (initial) {

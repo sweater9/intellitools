@@ -1,33 +1,32 @@
-# Knowledge red-team report — sw-main
+# Knowledge red-team report — bat-main-lexical
 
 Dataset: `tests/redteam/frozen-queries.json` sha256 `4982137be9b08e5b5635cf7da758e43f51f0580d5acdb740ad27513aaf026ec0`
 
-Total 426 · PASS 415 · WEAK 1 · MISS 0 · FALSE POSITIVE 10
-Pass rate 97.4% · False-positive rate 2.3%
-With 13 documented coverage-gap amendments (queries whose topic now has a dedicated page): PASS 422 · WEAK 1 · MISS 0 · FALSE POSITIVE 3 · pass rate 99.1% · FP rate 0.7%
-Retrieval on page-kind queries (304): top-1 99.3% · top-3 100.0% · top-5 100.0%
+Total 426 · PASS 419 · WEAK 0 · MISS 0 · FALSE POSITIVE 7
+Pass rate 98.4% · False-positive rate 1.6%
+Retrieval on page-kind queries (304): top-1 99.7% · top-3 100.0% · top-5 100.0%
 Multi-hop path completeness (answer + learn-more + top results contain every expected stepping-stone page): 3/4
 
 | kind | n | PASS | WEAK | MISS | FP | pass rate |
 | --- | --- | --- | --- | --- | --- | --- |
-| gap | 43 | 35 | 0 | 0 | 8 | 81.4% |
-| neg | 79 | 78 | 0 | 0 | 1 | 98.7% |
-| page | 304 | 302 | 1 | 0 | 1 | 99.3% |
+| gap | 43 | 36 | 0 | 0 | 7 | 83.7% |
+| neg | 79 | 79 | 0 | 0 | 0 | 100.0% |
+| page | 304 | 304 | 0 | 0 | 0 | 100.0% |
 
 | style | n | PASS | WEAK | MISS | FP | pass rate |
 | --- | --- | --- | --- | --- | --- | --- |
 | acronym | 14 | 14 | 0 | 0 | 0 | 100.0% |
-| ambiguous-or-off-topic | 73 | 72 | 0 | 0 | 1 | 98.6% |
+| ambiguous-or-off-topic | 73 | 73 | 0 | 0 | 0 | 100.0% |
 | architecture | 5 | 5 | 0 | 0 | 0 | 100.0% |
 | beginner | 46 | 46 | 0 | 0 | 0 | 100.0% |
 | comparison | 9 | 9 | 0 | 0 | 0 | 100.0% |
 | concept | 74 | 74 | 0 | 0 | 0 | 100.0% |
 | conversational | 3 | 3 | 0 | 0 | 0 | 100.0% |
-| coverage-probe | 39 | 32 | 0 | 0 | 7 | 82.1% |
+| coverage-probe | 39 | 33 | 0 | 0 | 6 | 84.6% |
 | expert | 16 | 16 | 0 | 0 | 0 | 100.0% |
 | implementation | 28 | 28 | 0 | 0 | 0 | 100.0% |
 | integration | 5 | 5 | 0 | 0 | 0 | 100.0% |
-| mixed-natural | 25 | 23 | 1 | 0 | 1 | 92.0% |
+| mixed-natural | 25 | 25 | 0 | 0 | 0 | 100.0% |
 | security | 20 | 20 | 0 | 0 | 0 | 100.0% |
 | tech-selection | 1 | 1 | 0 | 0 | 0 | 100.0% |
 | troubleshooting | 14 | 14 | 0 | 0 | 0 | 100.0% |
@@ -39,8 +38,8 @@ Multi-hop path completeness (answer + learn-more + top results contain every exp
 | --- | --- | --- | --- | --- | --- | --- |
 | a2a | 4 | 4 | 0 | 0 | 0 | 100.0% |
 | agent | 18 | 18 | 0 | 0 | 0 | 100.0% |
-| ai | 37 | 36 | 0 | 0 | 1 | 97.3% |
-| amb | 53 | 52 | 0 | 0 | 1 | 98.1% |
+| ai | 37 | 37 | 0 | 0 | 0 | 100.0% |
+| amb | 53 | 53 | 0 | 0 | 0 | 100.0% |
 | api | 11 | 11 | 0 | 0 | 0 | 100.0% |
 | arch | 6 | 6 | 0 | 0 | 0 | 100.0% |
 | cloud | 5 | 5 | 0 | 0 | 0 | 100.0% |
@@ -59,7 +58,7 @@ Multi-hop path completeness (answer + learn-more + top results contain every exp
 | llm | 30 | 30 | 0 | 0 | 0 | 100.0% |
 | local | 5 | 5 | 0 | 0 | 0 | 100.0% |
 | mcp | 7 | 7 | 0 | 0 | 0 | 100.0% |
-| mixed | 25 | 23 | 1 | 0 | 1 | 92.0% |
+| mixed | 25 | 25 | 0 | 0 | 0 | 100.0% |
 | ml | 7 | 7 | 0 | 0 | 0 | 100.0% |
 | mlops | 8 | 8 | 0 | 0 | 0 | 100.0% |
 | mm | 2 | 2 | 0 | 0 | 0 | 100.0% |
@@ -90,14 +89,10 @@ Multi-hop path completeness (answer + learn-more + top results contain every exp
 - RT290 [gap/typo] "kubenetes basics" → kubernetes (score 88, solid yes) — expected containers|docker; confident unrelated page: kubernetes
 - RT296 [gap/coverage-probe] "how do i run a kubernetes cluster" → kubernetes (score 95, solid yes) — expected containers|docker; confident unrelated page: kubernetes
 - RT297 [gap/coverage-probe] "what is a helm chart" → kubernetes (score 76, solid yes) — expected containers|docker; confident unrelated page: kubernetes
-- RT318 [gap/coverage-probe] "what is causal inference" → encoder-decoder-vs-decoder-only (score 74.32389947212685, solid yes) — expected supervised-learning; confident unrelated page: encoder-decoder-vs-decoder-only
-- RT381 [neg/ambiguous-or-off-topic] "sam altman net worth" → object-detection (score 72.62854641621388, solid yes) — expected none; confident answer for out-of-scope query: object-detection
-- RT409 [page/mixed-natural] "keep an ai agent from deleting my files" → ai-agent-vs-chatbot (score 58, solid yes) — expected integration-permissions|code-execution-sandboxing|agent-tools|ai-guardrails; confident wrong page: ai-agent-vs-chatbot
 
 ## MISS
 
 ## WEAK
-- RT421 [page/mixed-natural] "can i run deepseek or llama privately" → (weak) local-ai (score 54, solid no) — expected local-ai|open-weights-models|ollama; not solid; accepted page in top 5
 
 ## Path completeness failures
 - RT067 "i want an ai agent that can read gmail" top gmail-for-ai-agents; learn agent-tools, oauth-for-ai-agents, connecting-agents-to-apps, ai-privacy-and-security, function-calling
@@ -153,7 +148,7 @@ Multi-hop path completeness (answer + learn-more + top results contain every exp
 | RT046 | PASS | page | make the model return json that always matches my schema | constrained-decoding | 62 | yes | — |  |
 | RT047 | PASS | page | how do grammars restrict which tokens a model can sample | constrained-decoding | 44 | yes | — |  |
 | RT048 | PASS | page | json mode or function calling for extraction | structured-output-methods-compared | 86 | yes | — |  |
-| RT049 | PASS | page | what does temperature do | sampling-and-decoding | 114.77391283619424 | yes | — |  |
+| RT049 | PASS | page | what does temperature do | sampling-and-decoding | 28 | yes | — |  |
 | RT050 | PASS | page | why is the same prompt giving different answers every time | sampling-and-decoding | 56 | yes | — |  |
 | RT051 | PASS | page | what is rag in simple words | rag | 50 | yes | — |  |
 | RT052 | PASS | page | design a pipeline that answers questions from our internal wiki | rag | 47 | yes | — |  |
@@ -220,7 +215,7 @@ Multi-hop path completeness (answer + learn-more + top results contain every exp
 | RT113 | PASS | page | what does restful mean | rest-apis | 46 | yes | — |  |
 | RT114 | PASS | page | where should i keep my api keys | api-keys | 124 | yes | — |  |
 | RT115 | PASS | page | api key versus oauth token | api-keys | 79 | yes | — |  |
-| RT116 | PASS | page | what is json | what-is-json | 104.02388296767404 | yes | — |  |
+| RT116 | PASS | page | what is json | what-is-json | 39 | yes | — |  |
 | RT117 | PASS | page | unexpected token in json at position 0 | json-validation | 79 | yes | json-formatter |  |
 | RT118 | PASS | page | validate an api payload against a schema | json-schema | 75 | yes | — |  |
 | RT119 | PASS | page | pretty print and validate this json | json-validation | 85 | yes | json-formatter |  |
@@ -236,12 +231,12 @@ Multi-hop path completeness (answer + learn-more + top results contain every exp
 | RT129 | PASS | page | postgres or mysql for a new project | postgresql | 67 | yes | — |  |
 | RT130 | PASS | page | sqlite for a small app | sqlite | 53 | yes | — |  |
 | RT131 | PASS | page | what is redis used for | redis | 59 | yes | — |  |
-| RT132 | PASS | page | what is an orm | prisma-and-orms | 156.66682793075364 | yes | — |  |
+| RT132 | PASS | page | what is an orm | prisma-and-orms | 35 | yes | — |  |
 | RT133 | PASS | page | which database should an ai app use | databases-for-ai-apps | 86 | yes | — |  |
 | RT134 | PASS | page | store chat history for an assistant | databases-for-ai-apps | 48 | yes | — |  |
 | RT135 | PASS | page | what is aws and what are its main services | aws-fundamentals | 43 | yes | — |  |
 | RT136 | PASS | page | azure basics for developers | azure-fundamentals | 90 | yes | — |  |
-| RT137 | PASS | page | what is gcp | gcp-fundamentals | 124.10841461009974 | yes | — |  |
+| RT137 | PASS | page | what is gcp | gcp-fundamentals | 29 | yes | — |  |
 | RT138 | PASS | page | aws vs azure vs gcp for hosting a model | aws-fundamentals | 44 | yes | — |  |
 | RT139 | PASS | page | my s3 bucket is public by mistake | aws-fundamentals | 56 | yes | — |  |
 | RT140 | PASS | page | what is docker | docker | 75 | yes | — |  |
@@ -307,7 +302,7 @@ Multi-hop path completeness (answer + learn-more + top results contain every exp
 | RT200 | PASS | page | my policy works in the simulator but not on hardware | sim-to-real-transfer | 57 | yes | — |  |
 | RT201 | PASS | page | ai that imagines future states to plan actions | world-models | 53 | yes | — |  |
 | RT202 | FALSE POSITIVE | gap | how do i program a robot with ros | robot-operating-system | 122 | yes | — | confident unrelated page: robot-operating-system |
-| RT203 | PASS | gap | how do self driving cars work | (weak) open-weights-models | 32.02363930172986 | no | — | transparent non-answer |
+| RT203 | PASS | gap | how do self driving cars work | (weak) self-consistency | 24 | no | — | transparent non-answer |
 | RT204 | PASS | page | text hidden in a web page that tells my assistant to misbehave | prompt-injection | 55 | yes | — |  |
 | RT205 | PASS | page | ignore previous instructions attack | prompt-injection | 77 | yes | — |  |
 | RT206 | PASS | page | is it ok to paste customer data into chatgpt | ai-privacy-and-security | 93 | yes | — |  |
@@ -326,7 +321,7 @@ Multi-hop path completeness (answer + learn-more + top results contain every exp
 | RT219 | PASS | page | build a test set for my rag bot | rag-evaluation | 86 | yes | — |  |
 | RT220 | PASS | page | which metrics for a classifier with rare positives | evaluation-metrics-for-ai | 64 | yes | — |  |
 | RT221 | PASS | page | benchmark where models fix real github issues | swe-bench | 77 | yes | — |  |
-| RT222 | PASS | page | check whether each claim is backed by the source text | how-to-reduce-hallucinations | 67.10642384237713 | yes | fact-anchor-checker |  |
+| RT222 | PASS | page | check whether each claim is backed by the source text | how-to-reduce-hallucinations | 38 | yes | fact-anchor-checker |  |
 | RT223 | PASS | page | how are chatbot elo rankings made | human-preference-evaluation | 79 | yes | — |  |
 | RT224 | PASS | page | how do teams keep ml models running reliably after launch | mlops | 52 | yes | — |  |
 | RT225 | PASS | page | track experiments and register models | mlflow | 55 | yes | — |  |
@@ -335,7 +330,7 @@ Multi-hop path completeness (answer + learn-more + top results contain every exp
 | RT228 | PASS | page | how many gpus do i need to serve a 70b model | gpus-and-ai-accelerators | 86 | yes | — |  |
 | RT229 | PASS | page | how to split training across several gpus | distributed-training | 64 | yes | — |  |
 | RT230 | PASS | page | cut my llm bill | llm-cost-optimization | 72 | yes | — |  |
-| RT231 | PASS | page | what is ray used for | ray | 194.67127787250888 | yes | — |  |
+| RT231 | PASS | page | what is ray used for | ray | 46 | yes | — |  |
 | RT232 | PASS | page | who signs off on ai use inside a company | ai-governance | 98 | yes | — |  |
 | RT233 | PASS | page | does the eu ai act apply to my startup | eu-ai-act | 107 | yes | — |  |
 | RT234 | PASS | page | what is the nist ai risk framework | nist-ai-rmf | 151 | yes | — |  |
@@ -343,7 +338,7 @@ Multi-hop path completeness (answer + learn-more + top results contain every exp
 | RT236 | PASS | page | documentation template for a released model | model-cards | 90 | yes | — |  |
 | RT237 | PASS | page | are my model's error rates different across demographic groups | ai-bias-and-fairness | 54 | yes | — |  |
 | RT238 | FALSE POSITIVE | gap | what is gdpr and does it cover ai training data | gdpr-and-ai | 144 | yes | — | confident unrelated page: gdpr-and-ai |
-| RT239 | PASS | gap | ai regulation in the united states | (weak) eu-ai-act | 140.48273137184827 | no | — | transparent non-answer |
+| RT239 | PASS | gap | ai regulation in the united states | (weak) eu-ai-act | 53 | no | — | transparent non-answer |
 | RT240 | PASS | page | what is sycophancy | sycophancy | 81 | yes | — |  |
 | RT241 | PASS | page | how is dpo different from rlhf | rlhf | 67 | yes | — |  |
 | RT242 | PASS | page | why do chatbots flatter users | sycophancy | 51 | yes | — |  |
@@ -376,19 +371,19 @@ Multi-hop path completeness (answer + learn-more + top results contain every exp
 | RT269 | PASS | page | best way to use ai at work | ai-governance | 76 | yes | — |  |
 | RT270 | PASS | page | vectors | vector-databases | 46 | yes | — |  |
 | RT271 | PASS | page | rag vs | rag | 50 | yes | — |  |
-| RT272 | PASS | neg | models | (weak) small-language-models | 64.3655831244534 | no | — | no confident answer |
-| RT273 | PASS | neg | learning | (weak) deep-learning | 61.00499524560924 | no | — | no confident answer |
-| RT274 | PASS | neg | explain it simply please | (weak) reasoning-transparency | 38.20443735757177 | no | — | no confident answer |
-| RT275 | PASS | neg | best one | (weak) best-of-n-sampling | 115.39898299959744 | no | — | no confident answer |
-| RT276 | PASS | neg | help with my code | (weak) code-execution-sandboxing | 55.36967326767471 | no | — | no confident answer |
-| RT277 | PASS | neg | it does not work | (weak) python-ai-libraries | 28.927527627029367 | no | — | no confident answer |
+| RT272 | PASS | neg | models | (weak) reasoning-models | 40 | no | — | no confident answer |
+| RT273 | PASS | neg | learning | (weak) deep-learning | 34 | no | — | no confident answer |
+| RT274 | PASS | neg | explain it simply please | (weak) reasoning-transparency | 2 | no | — | no confident answer |
+| RT275 | PASS | neg | best one | (weak) best-of-n-sampling | 29 | no | — | no confident answer |
+| RT276 | PASS | neg | help with my code | (weak) code-execution-sandboxing | 34 | no | — | no confident answer |
+| RT277 | PASS | neg | it does not work | (weak) ai-weather-forecasting | 6 | no | — | no confident answer |
 | RT278 | PASS | page | llm rag mcp relationship | mcp | 51 | yes | — |  |
 | RT279 | PASS | gap | what do nlp and nlu mean | (weak) open-weights-models | 4 | no | — | transparent non-answer |
 | RT280 | PASS | page | gpu vs tpu | gpus-and-ai-accelerators | 65 | yes | — |  |
 | RT281 | PASS | page | what is hitl in ai workflows | agentic-workflows | 61 | yes | — |  |
 | RT282 | PASS | page | what is bleu and rouge | evaluation-metrics-for-ai | 67 | yes | — |  |
 | RT283 | PASS | page | asr vs tts | speech-ai | 59 | yes | — |  |
-| RT284 | PASS | gap | spa vs ssr | (weak) nextjs | 61.09108381994371 | no | — | transparent non-answer |
+| RT284 | PASS | gap | spa vs ssr | (weak) nextjs | 4 | no | — | transparent non-answer |
 | RT285 | PASS | page | crud api example | rest-apis | 52 | yes | — |  |
 | RT286 | PASS | gap | sso with saml or oidc | openid-connect | 104 | yes | — | nearby page: openid-connect |
 | RT287 | PASS | page | oss vs proprietary models | open-weights-models | 68 | yes | — |  |
@@ -398,114 +393,114 @@ Multi-hop path completeness (answer + learn-more + top results contain every exp
 | RT291 | PASS | page | langchian agents | langchain | 76 | yes | — |  |
 | RT292 | PASS | page | hugging fase models | hugging-face | 100 | yes | — |  |
 | RT293 | PASS | page | fine tunning vs prompting | fine-tuning | 76 | yes | — |  |
-| RT294 | PASS | page | halucination in llms | ai-hallucinations | 87.84796239042277 | yes | — |  |
+| RT294 | PASS | page | halucination in llms | ai-hallucinations | 34 | yes | — |  |
 | RT295 | PASS | page | guardrials for llm apps | ai-guardrails | 71 | yes | — |  |
 | RT296 | FALSE POSITIVE | gap | how do i run a kubernetes cluster | kubernetes | 95 | yes | — | confident unrelated page: kubernetes |
 | RT297 | FALSE POSITIVE | gap | what is a helm chart | kubernetes | 76 | yes | — | confident unrelated page: kubernetes |
-| RT298 | PASS | gap | terraform vs pulumi | (weak) framework-vs-direct-api | 32.45731394909144 | no | — | transparent non-answer |
-| RT299 | PASS | gap | how do i configure nginx as a reverse proxy | (weak) streaming-ai-with-nodejs | 41.00410266505092 | no | — | transparent non-answer |
-| RT300 | PASS | gap | linux command line cheat sheet | (weak) containers | 29.487621588400994 | no | — | transparent non-answer |
-| RT301 | PASS | gap | what is a service mesh | (weak) gcp-fundamentals | 66.34123721396304 | no | — | transparent non-answer |
-| RT302 | PASS | gap | prometheus and grafana monitoring | (weak) model-drift-and-monitoring | 103.33517964521255 | no | — | transparent non-answer |
-| RT303 | PASS | gap | vue vs angular | (weak) sampling-and-decoding | 33.064738618306954 | no | — | transparent non-answer |
-| RT304 | PASS | gap | how do i write unit tests with jest | (weak) humaneval | 60.790263623568045 | no | — | transparent non-answer |
-| RT305 | PASS | gap | what is a monorepo | (weak) generative-ai | 55.2594673283016 | no | — | transparent non-answer |
+| RT298 | PASS | gap | terraform vs pulumi | (weak) none | 0 | no | — | transparent non-answer |
+| RT299 | PASS | gap | how do i configure nginx as a reverse proxy | (weak) nodejs-for-ai | 6 | no | — | transparent non-answer |
+| RT300 | PASS | gap | linux command line cheat sheet | (weak) containers | 2 | no | — | transparent non-answer |
+| RT301 | PASS | gap | what is a service mesh | (weak) azure-fundamentals | 7 | no | — | transparent non-answer |
+| RT302 | PASS | gap | prometheus and grafana monitoring | (weak) model-drift-and-monitoring | 28 | no | — | transparent non-answer |
+| RT303 | PASS | gap | vue vs angular | (weak) none | 0 | no | — | transparent non-answer |
+| RT304 | PASS | gap | how do i write unit tests with jest | (weak) prompt-engineering | 14 | no | — | transparent non-answer |
+| RT305 | PASS | gap | what is a monorepo | (weak) none | 0 | no | — | transparent non-answer |
 | RT306 | PASS | gap | vs code extensions for python | python | 46 | yes | — | nearby page: python |
-| RT307 | PASS | gap | what is graphql federation | (weak) graphql | 59 | no | — | transparent non-answer |
-| RT308 | PASS | gap | grpc vs rest | (weak) rest-vs-graphql | 77.42322644972381 | no | — | transparent non-answer |
-| RT309 | PASS | gap | how do i set up tls certificates | (weak) authentication-vs-authorization | 44.67687779527719 | no | — | transparent non-answer |
-| RT310 | PASS | gap | what is apache kafka | (weak) openai-agents-sdk | 41.15799471974547 | no | — | transparent non-answer |
-| RT311 | PASS | gap | data warehouse vs data lake | (weak) gcp-fundamentals | 51.56528404032119 | no | — | transparent non-answer |
-| RT312 | PASS | gap | what is federated learning | (weak) deep-learning | 56.43773852916556 | no | — | transparent non-answer |
-| RT313 | PASS | gap | differential privacy explained | (weak) physics-informed-neural-networks | 25.186076972803267 | no | — | transparent non-answer |
-| RT314 | PASS | gap | how does a recommender system work | (weak) structured-outputs | 49.99773956834645 | no | — | transparent non-answer |
-| RT315 | PASS | gap | time series forecasting with arima | (weak) ai-weather-forecasting | 49.698102909380324 | no | — | transparent non-answer |
-| RT316 | PASS | gap | what is automl | (weak) generative-ai | 55.2594673283016 | no | — | transparent non-answer |
-| RT317 | PASS | gap | how do i label training data | (weak) gdpr-and-ai | 42.3504801597598 | no | — | transparent non-answer |
-| RT318 | FALSE POSITIVE | gap | what is causal inference | encoder-decoder-vs-decoder-only | 74.32389947212685 | yes | — | confident unrelated page: encoder-decoder-vs-decoder-only |
+| RT307 | PASS | gap | what is graphql federation | graphql | 59 | yes | — | nearby page: graphql |
+| RT308 | PASS | gap | grpc vs rest | (weak) rest-vs-graphql | 30 | no | — | transparent non-answer |
+| RT309 | PASS | gap | how do i set up tls certificates | (weak) benchmark-contamination | 6 | no | — | transparent non-answer |
+| RT310 | PASS | gap | what is apache kafka | (weak) none | 0 | no | — | transparent non-answer |
+| RT311 | PASS | gap | data warehouse vs data lake | (weak) gdpr-and-ai | 29 | no | — | transparent non-answer |
+| RT312 | PASS | gap | what is federated learning | (weak) deep-learning | 34 | no | — | transparent non-answer |
+| RT313 | PASS | gap | differential privacy explained | (weak) ai-privacy-and-security | 15 | no | — | transparent non-answer |
+| RT314 | PASS | gap | how does a recommender system work | (weak) system-prompts | 26 | no | — | transparent non-answer |
+| RT315 | PASS | gap | time series forecasting with arima | (weak) test-time-compute | 26 | no | — | transparent non-answer |
+| RT316 | PASS | gap | what is automl | (weak) none | 0 | no | — | transparent non-answer |
+| RT317 | PASS | gap | how do i label training data | (weak) gdpr-and-ai | 42 | no | — | transparent non-answer |
+| RT318 | PASS | gap | what is causal inference | (weak) model-serving-and-inference | 25 | no | — | transparent non-answer |
 | RT319 | PASS | gap | classic keyword weighting before neural embeddings | embeddings | 46 | yes | — | nearby page: embeddings |
-| RT320 | PASS | gap | what is the best ai coding assistant | (weak) ai-agent-vs-chatbot | 127.57541395262467 | no | — | transparent non-answer |
-| RT321 | PASS | gap | cursor vs copilot | (weak) html-and-css | 32.744820115656644 | no | — | transparent non-answer |
+| RT320 | PASS | gap | what is the best ai coding assistant | (weak) ai-governance | 50 | no | — | transparent non-answer |
+| RT321 | PASS | gap | cursor vs copilot | (weak) ai-agent-vs-chatbot | 6 | no | — | transparent non-answer |
 | RT322 | PASS | gap | what is the current top model on the leaderboard | benchmarks-and-leaderboards | 47 | yes | — | nearby page: benchmarks-and-leaderboards |
-| RT323 | PASS | gap | how many parameters does the newest model have | (weak) world-models | 90.00135967241731 | no | — | transparent non-answer |
-| RT324 | PASS | gap | when does the next frontier model release | (weak) model-cards | 60.760901415064446 | no | — | transparent non-answer |
-| RT325 | PASS | gap | how do i use azure devops pipelines | (weak) azure-fundamentals | 73.22431398714659 | no | — | transparent non-answer |
+| RT323 | PASS | gap | how many parameters does the newest model have | (weak) model-cards | 28 | no | — | transparent non-answer |
+| RT324 | PASS | gap | when does the next frontier model release | (weak) model-cards | 28 | no | — | transparent non-answer |
+| RT325 | PASS | gap | how do i use azure devops pipelines | (weak) azure-fundamentals | 36 | no | — | transparent non-answer |
 | RT326 | PASS | gap | power bi dashboards | power-platform | 46 | yes | — | nearby page: power-platform |
 | RT327 | PASS | gap | how do i migrate sharepoint on premises to online | sharepoint | 71 | yes | — | nearby page: sharepoint |
 | RT328 | PASS | gap | what is a sharepoint site collection | sharepoint | 99 | yes | — | nearby page: sharepoint |
 | RT329 | PASS | neg | transformer toy | (weak) transformers | 50 | no | — | no confident answer |
-| RT330 | PASS | neg | mamba snake | (weak) state-space-models | 108.57039228076053 | no | — | no confident answer |
+| RT330 | PASS | neg | mamba snake | (weak) state-space-models | 31 | no | — | no confident answer |
 | RT331 | PASS | neg | python pet | (weak) python | 46 | no | — | no confident answer |
 | RT332 | PASS | neg | react to this message | (weak) react | 54 | no | — | no confident answer |
 | RT333 | PASS | neg | docker clothing | (weak) docker | 75 | no | — | no confident answer |
-| RT334 | PASS | neg | agent real estate | (weak) agent-protocol-landscape | 56.664635660269 | no | — | no confident answer |
-| RT335 | PASS | neg | model train hobby | (weak) world-models | 52.75581778701377 | no | — | no confident answer |
+| RT334 | PASS | neg | agent real estate | (weak) ai-agent-vs-chatbot | 35 | no | — | no confident answer |
+| RT335 | PASS | neg | model train hobby | (weak) model-cards | 28 | no | — | no confident answer |
 | RT336 | PASS | neg | java coffee beans | (weak) java | 46 | no | — | no confident answer |
-| RT337 | PASS | neg | ruby gemstone ring price | (weak) ray | 41.38702989648135 | no | — | no confident answer |
-| RT338 | PASS | neg | swift taylor concert tickets | (weak) ai-agents | 40.99929676332539 | no | — | no confident answer |
+| RT337 | PASS | neg | ruby gemstone ring price | (weak) none | 0 | no | — | no confident answer |
+| RT338 | PASS | neg | swift taylor concert tickets | (weak) none | 0 | no | — | no confident answer |
 | RT339 | PASS | neg | rust remover for bike chains | (weak) rust | 46 | no | — | no confident answer |
-| RT340 | PASS | neg | go board game opening strategy | (weak) ai-agents | 54.36295407743774 | no | — | no confident answer |
-| RT341 | PASS | neg | kotlin island vacation | (weak) java | 71.83589389811497 | no | — | no confident answer |
-| RT342 | PASS | neg | oracle of delphi history | (weak) microsoft-365 | 52.02594648002305 | no | — | no confident answer |
-| RT343 | PASS | neg | spark plug gap size | (weak) vision-transformers | 49.53884372552046 | no | — | no confident answer |
-| RT344 | PASS | neg | panda zoo opening hours | (weak) package-managers | 50.86440731163083 | no | — | no confident answer |
+| RT340 | PASS | neg | go board game opening strategy | (weak) search-over-reasoning | 4 | no | — | no confident answer |
+| RT341 | PASS | neg | kotlin island vacation | (weak) none | 0 | no | — | no confident answer |
+| RT342 | PASS | neg | oracle of delphi history | (weak) git | 4 | no | — | no confident answer |
+| RT343 | PASS | neg | spark plug gap size | (weak) sim-to-real-transfer | 7 | no | — | no confident answer |
+| RT344 | PASS | neg | panda zoo opening hours | (weak) none | 0 | no | — | no confident answer |
 | RT345 | PASS | neg | git gud meaning | (weak) git | 54 | no | — | no confident answer |
-| RT346 | PASS | neg | node of ranvier function | (weak) nodejs | 72.71211666737838 | no | — | no confident answer |
-| RT347 | PASS | neg | cloud seeding rain | (weak) local-ai-vs-cloud-ai | 99.61829270257077 | no | — | no confident answer |
-| RT348 | PASS | neg | azure blue paint colour | (weak) azure-fundamentals | 65.92297476217743 | no | — | no confident answer |
-| RT349 | PASS | neg | bert and ernie sesame street | (weak) encoder-decoder-vs-decoder-only | 103.41665149949337 | no | — | no confident answer |
-| RT350 | PASS | neg | llama farm wool prices | (weak) llama-cpp | 106.71336566876317 | no | — | no confident answer |
-| RT351 | PASS | neg | claude monet water lilies | (weak) transformers | 100.85889059632865 | no | — | no confident answer |
-| RT352 | PASS | neg | gemini star sign compatibility | (weak) openid-connect | 35.50981993028741 | no | — | no confident answer |
+| RT346 | PASS | neg | node of ranvier function | (weak) nodejs | 27 | no | — | no confident answer |
+| RT347 | PASS | neg | cloud seeding rain | (weak) gcp-fundamentals | 23 | no | — | no confident answer |
+| RT348 | PASS | neg | azure blue paint colour | (weak) azure-fundamentals | 36 | no | — | no confident answer |
+| RT349 | PASS | neg | bert and ernie sesame street | (weak) encoder-decoder-vs-decoder-only | 10 | no | — | no confident answer |
+| RT350 | PASS | neg | llama farm wool prices | (weak) llama-cpp | 32 | no | — | no confident answer |
+| RT351 | PASS | neg | claude monet water lilies | (weak) none | 0 | no | — | no confident answer |
+| RT352 | PASS | neg | gemini star sign compatibility | (weak) openid-connect | 3 | no | — | no confident answer |
 | RT353 | PASS | neg | rag doll sewing pattern | (weak) rag | 50 | no | — | no confident answer |
-| RT354 | PASS | neg | vector graphics for a logo | (weak) choosing-a-vector-store | 74.10754497174231 | no | — | no confident answer |
+| RT354 | PASS | neg | vector graphics for a logo | (weak) choosing-a-vector-store | 28 | no | — | no confident answer |
 | RT355 | PASS | neg | token of appreciation gift ideas | (weak) tokens | 41 | no | — | no confident answer |
-| RT356 | PASS | neg | agent smith matrix quotes | (weak) ai-agent-vs-chatbot | 92.06285981074107 | no | — | no confident answer |
-| RT357 | PASS | neg | popcorn kernel not popping | (weak) semantic-kernel | 74.15082804079827 | no | — | no confident answer |
-| RT358 | PASS | neg | swarm of bees in my garden | (weak) openai-agents-sdk | 63.71705820380501 | no | — | no confident answer |
-| RT359 | PASS | neg | proxy voting at a shareholder meeting | (weak) self-consistency | 59.709031888621254 | no | — | no confident answer |
-| RT360 | PASS | neg | bearer bonds explained | (weak) api-authentication | 53.06816762689178 | no | — | no confident answer |
-| RT361 | PASS | neg | oil pipeline construction jobs | (weak) distributed-training | 71.00239603384381 | no | — | no confident answer |
-| RT362 | PASS | neg | cookie recipe chocolate chip | (weak) hugging-face | 30.81277411477254 | no | — | no confident answer |
-| RT363 | PASS | neg | diffusion of heat in metal | (weak) diffusion-models | 85.27037834082617 | no | — | no confident answer |
+| RT356 | PASS | neg | agent smith matrix quotes | (weak) ai-agent-vs-chatbot | 35 | no | — | no confident answer |
+| RT357 | PASS | neg | popcorn kernel not popping | (weak) semantic-kernel | 36 | no | — | no confident answer |
+| RT358 | PASS | neg | swarm of bees in my garden | (weak) multi-agent-systems | 2 | no | — | no confident answer |
+| RT359 | PASS | neg | proxy voting at a shareholder meeting | (weak) self-consistency | 16 | no | — | no confident answer |
+| RT360 | PASS | neg | bearer bonds explained | (weak) api-authentication | 6 | no | — | no confident answer |
+| RT361 | PASS | neg | oil pipeline construction jobs | (weak) distributed-training | 8 | no | — | no confident answer |
+| RT362 | PASS | neg | cookie recipe chocolate chip | (weak) none | 0 | no | — | no confident answer |
+| RT363 | PASS | neg | diffusion of heat in metal | (weak) diffusion-models | 34 | no | — | no confident answer |
 | RT364 | PASS | neg | attention deficit in adults | (weak) transformers | 34 | no | — | no confident answer |
-| RT365 | PASS | neg | neural pathways in the brain after stroke | (weak) neural-networks | 66.82189025823581 | no | — | no confident answer |
+| RT365 | PASS | neg | neural pathways in the brain after stroke | (weak) physics-informed-neural-networks | 26 | no | — | no confident answer |
 | RT366 | PASS | neg | reinforcement learning in child psychology rewards | (weak) reinforcement-learning | 90 | no | — | no confident answer |
 | RT367 | PASS | neg | unsupervised learning at home for kids | (weak) unsupervised-learning | 82 | no | — | no confident answer |
 | RT368 | PASS | neg | embedding a youtube video in my wordpress site | (weak) embeddings | 44 | no | — | no confident answer |
-| RT369 | PASS | neg | vector in physics velocity and force | (weak) physics-informed-neural-networks | 60.61713899248149 | no | — | no confident answer |
+| RT369 | PASS | neg | vector in physics velocity and force | (weak) choosing-a-vector-store | 28 | no | — | no confident answer |
 | RT370 | PASS | neg | distillation of whisky at home | (weak) knowledge-distillation | 60 | no | — | no confident answer |
 | RT371 | PASS | neg | dropout rate at university | (weak) overfitting-and-regularization | 55 | no | — | no confident answer |
-| RT372 | PASS | neg | tensor in general relativity | (weak) distributed-training | 84.74991271850143 | no | — | no confident answer |
-| RT373 | PASS | neg | clip art for presentations | (weak) contrastive-learning-clip | 91.43867276268226 | no | — | no confident answer |
-| RT374 | PASS | neg | chain link fence installation | (weak) kubernetes | 65.89643699962096 | no | — | no confident answer |
+| RT372 | PASS | neg | tensor in general relativity | (weak) distributed-training | 10 | no | — | no confident answer |
+| RT373 | PASS | neg | clip art for presentations | (weak) contrastive-learning-clip | 33 | no | — | no confident answer |
+| RT374 | PASS | neg | chain link fence installation | (weak) chain-of-thought | 24 | no | — | no confident answer |
 | RT375 | PASS | neg | whisper in my ear lyrics | (weak) speech-ai | 55 | no | — | no confident answer |
-| RT376 | PASS | neg | llama drama kids book | (weak) go-language | 43.28212751032544 | no | — | no confident answer |
-| RT377 | PASS | neg | mistral wind south of france | (weak) open-weights-models | 47.055973034865424 | no | — | no confident answer |
-| RT378 | PASS | neg | falcon heavy launch schedule | (weak) kubernetes | 58.75729352452463 | no | — | no confident answer |
-| RT379 | PASS | neg | bard of avon poetry | (weak) package-managers | 52.94976146135265 | no | — | no confident answer |
+| RT376 | PASS | neg | llama drama kids book | (weak) llama-cpp | 32 | no | — | no confident answer |
+| RT377 | PASS | neg | mistral wind south of france | (weak) open-weights-models | 4 | no | — | no confident answer |
+| RT378 | PASS | neg | falcon heavy launch schedule | (weak) none | 0 | no | — | no confident answer |
+| RT379 | PASS | neg | bard of avon poetry | (weak) none | 0 | no | — | no confident answer |
 | RT380 | PASS | neg | perplexity about my career choice | (weak) evaluation-metrics-for-ai | 64 | no | — | no confident answer |
-| RT381 | FALSE POSITIVE | neg | sam altman net worth | object-detection | 72.62854641621388 | yes | — | confident answer for out-of-scope query: object-detection |
-| RT382 | PASS | neg | best hiking boots under 150 | (weak) open-weights-models | 94.03222955905375 | no | — | no confident answer |
-| RT383 | PASS | neg | how to file self assessment tax | (weak) eu-ai-act | 84.24820652623251 | no | — | no confident answer |
-| RT384 | PASS | neg | recipe for lasagna | (weak) cnn-vs-vision-transformer | 105.94742810843167 | no | — | no confident answer |
-| RT385 | PASS | neg | who invented the telephone | (weak) agent-memory | 46.462497646338655 | no | — | no confident answer |
-| RT386 | PASS | neg | translate good morning to french | (weak) rag-vs-fine-tuning | 49.36170261641885 | no | — | no confident answer |
-| RT387 | PASS | neg | symptoms of the flu | (weak) red-teaming | 26.995288912657557 | no | — | no confident answer |
-| RT388 | PASS | neg | mortgage rates this week | (weak) redis | 52.53138403158606 | no | — | no confident answer |
-| RT389 | PASS | neg | plan a 10k race pace strategy | (weak) agent-planning | 53.559582905446575 | no | — | no confident answer |
-| RT390 | PASS | neg | football scores tonight | (weak) human-preference-evaluation | 60.38357512556118 | no | — | no confident answer |
-| RT391 | PASS | neg | how to repot a succulent | (weak) sycophancy | 44.77359080745859 | no | — | no confident answer |
-| RT392 | PASS | neg | nvidia stock forecast | (weak) ai-weather-forecasting | 94.95167047734512 | no | — | no confident answer |
-| RT393 | PASS | neg | should i buy bitcoin | (weak) gpus-and-ai-accelerators | 49.53837471888072 | no | — | no confident answer |
-| RT394 | PASS | neg | best laptop for students | (weak) best-of-n-sampling | 60.87134322023175 | no | — | no confident answer |
-| RT395 | PASS | neg | how to write a wedding speech | (weak) speech-ai | 85.37476818929977 | no | — | no confident answer |
-| RT396 | PASS | neg | write me a poem about the sea | (weak) tokens | 69.04286622581532 | no | — | no confident answer |
-| RT397 | PASS | neg | tell me a joke | (weak) ai-hallucinations | 58.572350241454316 | no | — | no confident answer |
-| RT398 | PASS | neg | what is the meaning of life | (weak) embeddings | 50.6491815438879 | no | — | no confident answer |
-| RT399 | PASS | neg | summarise this article for me | (weak) prompt-engineering | 107.9743495360994 | no | — | no confident answer |
-| RT400 | PASS | neg | is it going to rain tomorrow | (weak) java | 40.766304561442745 | no | — | no confident answer |
-| RT401 | PASS | neg | how do i fix a flat bicycle tyre | (weak) local-ai | 52.23461541027482 | no | — | no confident answer |
+| RT381 | PASS | neg | sam altman net worth | (weak) object-detection | 18 | no | — | no confident answer |
+| RT382 | PASS | neg | best hiking boots under 150 | (weak) best-of-n-sampling | 28 | no | — | no confident answer |
+| RT383 | PASS | neg | how to file self assessment tax | (weak) self-consistency | 22 | no | — | no confident answer |
+| RT384 | PASS | neg | recipe for lasagna | (weak) none | 0 | no | — | no confident answer |
+| RT385 | PASS | neg | who invented the telephone | (weak) none | 0 | no | — | no confident answer |
+| RT386 | PASS | neg | translate good morning to french | (weak) ai-evaluation | 5 | no | — | no confident answer |
+| RT387 | PASS | neg | symptoms of the flu | (weak) none | 0 | no | — | no confident answer |
+| RT388 | PASS | neg | mortgage rates this week | (weak) best-of-n-sampling | 1 | no | — | no confident answer |
+| RT389 | PASS | neg | plan a 10k race pace strategy | (weak) agent-planning | 15 | no | — | no confident answer |
+| RT390 | PASS | neg | football scores tonight | (weak) benchmarks-and-leaderboards | 6 | no | — | no confident answer |
+| RT391 | PASS | neg | how to repot a succulent | (weak) none | 0 | no | — | no confident answer |
+| RT392 | PASS | neg | nvidia stock forecast | (weak) ai-weather-forecasting | 6 | no | — | no confident answer |
+| RT393 | PASS | neg | should i buy bitcoin | (weak) none | 0 | no | — | no confident answer |
+| RT394 | PASS | neg | best laptop for students | (weak) best-of-n-sampling | 28 | no | — | no confident answer |
+| RT395 | PASS | neg | how to write a wedding speech | (weak) speech-ai | 22 | no | — | no confident answer |
+| RT396 | PASS | neg | write me a poem about the sea | (weak) prompt-engineering | 14 | no | — | no confident answer |
+| RT397 | PASS | neg | tell me a joke | (weak) video-generation-models | 2 | no | — | no confident answer |
+| RT398 | PASS | neg | what is the meaning of life | (weak) embeddings | 5 | no | — | no confident answer |
+| RT399 | PASS | neg | summarise this article for me | (weak) gdpr-and-ai | 4 | no | — | no confident answer |
+| RT400 | PASS | neg | is it going to rain tomorrow | (weak) transformers-vs-state-space-models | 2 | no | — | no confident answer |
+| RT401 | PASS | neg | how do i fix a flat bicycle tyre | (weak) common-prompting-mistakes | 8 | no | — | no confident answer |
 | RT402 | PASS | page | use a model to check my own answers before sending them to a user | llm-as-a-judge | 35 | yes | — |  |
 | RT403 | PASS | page | how can i make my chatbot cite its sources | rag | 46 | yes | — |  |
 | RT404 | PASS | page | why does my assistant lose context in long chats | context-windows | 76 | yes | — |  |
@@ -513,7 +508,7 @@ Multi-hop path completeness (answer + learn-more + top results contain every exp
 | RT406 | PASS | page | stop the model leaking my system prompt | system-prompts | 106 | yes | — |  |
 | RT407 | PASS | page | compare gpt style and bert style models for classification | encoder-decoder-vs-decoder-only | 95 | yes | — |  |
 | RT408 | PASS | page | trace every tool call my agent makes | agent-evaluation | 56 | yes | — |  |
-| RT409 | FALSE POSITIVE | page | keep an ai agent from deleting my files | ai-agent-vs-chatbot | 58 | yes | — | confident wrong page: ai-agent-vs-chatbot |
+| RT409 | PASS | page | keep an ai agent from deleting my files | integration-permissions | 58 | yes | — |  |
 | RT410 | PASS | page | how do i give an llm access to my database safely | agent-tools | 41 | yes | — |  |
 | RT411 | PASS | page | what is tool calling and how do i implement it | function-calling | 102 | yes | — |  |
 | RT412 | PASS | page | how do i let users log in with microsoft to my ai app | microsoft-entra-id | 70 | yes | — |  |
@@ -524,8 +519,8 @@ Multi-hop path completeness (answer + learn-more + top results contain every exp
 | RT417 | PASS | page | difference between an embedding model and a chat model | embeddings | 78 | yes | — |  |
 | RT418 | PASS | page | what is a good chunk overlap | chunking | 93 | yes | — |  |
 | RT419 | PASS | page | how do i evaluate whether retrieval found the right passage | rag-evaluation | 97 | yes | — |  |
-| RT420 | PASS | page | safe way to let ai write sql | sql | 69.66857000082724 | yes | — |  |
-| RT421 | WEAK | page | can i run deepseek or llama privately | (weak) local-ai | 54 | no | — | not solid; accepted page in top 5 |
+| RT420 | PASS | page | safe way to let ai write sql | sql | 44 | yes | — |  |
+| RT421 | PASS | page | can i run deepseek or llama privately | local-ai | 54 | yes | — |  |
 | RT422 | PASS | page | how do i stop my agent from running up a huge bill | llm-cost-optimization | 46 | yes | — |  |
 | RT423 | PASS | page | model says it cannot see my document but i pasted it | context-windows | 47 | yes | — |  |
 | RT424 | PASS | page | ai to turn meeting recordings into notes | speech-ai | 58 | yes | — |  |

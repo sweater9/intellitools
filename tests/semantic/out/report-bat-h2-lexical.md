@@ -1,11 +1,10 @@
-# Knowledge red-team report — sw-h2
+# Knowledge red-team report — bat-h2-lexical
 
 Dataset: `tests/redteam/frozen-holdout2.json` sha256 `283ac7b8ba5877f24e5a690db71f1751de8c30a98c5f6215a4c6e7b47d620119`
 
 Total 146 · PASS 139 · WEAK 1 · MISS 0 · FALSE POSITIVE 6
 Pass rate 95.2% · False-positive rate 4.1%
-With 13 documented coverage-gap amendments (queries whose topic now has a dedicated page): PASS 145 · WEAK 1 · MISS 0 · FALSE POSITIVE 0 · pass rate 99.3% · FP rate 0.0%
-Retrieval on page-kind queries (111): top-1 99.1% · top-3 100.0% · top-5 100.0%
+Retrieval on page-kind queries (111): top-1 100.0% · top-3 100.0% · top-5 100.0%
 Multi-hop path completeness (answer + learn-more + top results contain every expected stepping-stone page): 0/0
 
 | kind | n | PASS | WEAK | MISS | FP | pass rate |
@@ -20,11 +19,11 @@ Multi-hop path completeness (answer + learn-more + top results contain every exp
 | architecture | 4 | 4 | 0 | 0 | 0 | 100.0% |
 | beginner | 14 | 14 | 0 | 0 | 0 | 100.0% |
 | comparison | 1 | 1 | 0 | 0 | 0 | 100.0% |
-| concept | 45 | 45 | 0 | 0 | 0 | 100.0% |
+| concept | 45 | 44 | 1 | 0 | 0 | 97.8% |
 | conversational | 2 | 2 | 0 | 0 | 0 | 100.0% |
 | coverage-probe | 9 | 3 | 0 | 0 | 6 | 33.3% |
 | expert | 4 | 4 | 0 | 0 | 0 | 100.0% |
-| implementation | 18 | 17 | 1 | 0 | 0 | 94.4% |
+| implementation | 18 | 18 | 0 | 0 | 0 | 100.0% |
 | integration | 3 | 3 | 0 | 0 | 0 | 100.0% |
 | security | 10 | 10 | 0 | 0 | 0 | 100.0% |
 | troubleshooting | 4 | 4 | 0 | 0 | 0 | 100.0% |
@@ -42,7 +41,7 @@ Multi-hop path completeness (answer + learn-more + top results contain every exp
 | db | 4 | 4 | 0 | 0 | 0 | 100.0% |
 | dev | 3 | 3 | 0 | 0 | 0 | 100.0% |
 | devops | 6 | 4 | 0 | 0 | 2 | 66.7% |
-| dl | 8 | 8 | 0 | 0 | 0 | 100.0% |
+| dl | 8 | 7 | 1 | 0 | 0 | 87.5% |
 | eval | 4 | 4 | 0 | 0 | 0 | 100.0% |
 | gov | 4 | 3 | 0 | 0 | 1 | 75.0% |
 | js | 1 | 1 | 0 | 0 | 0 | 100.0% |
@@ -57,7 +56,7 @@ Multi-hop path completeness (answer + learn-more + top results contain every exp
 | off | 5 | 5 | 0 | 0 | 0 | 100.0% |
 | prompt | 3 | 3 | 0 | 0 | 0 | 100.0% |
 | python | 3 | 3 | 0 | 0 | 0 | 100.0% |
-| rag | 7 | 6 | 1 | 0 | 0 | 85.7% |
+| rag | 7 | 7 | 0 | 0 | 0 | 100.0% |
 | react | 1 | 1 | 0 | 0 | 0 | 100.0% |
 | rl | 1 | 1 | 0 | 0 | 0 | 100.0% |
 | robot | 4 | 3 | 0 | 0 | 1 | 75.0% |
@@ -79,14 +78,14 @@ Multi-hop path completeness (answer + learn-more + top results contain every exp
 ## MISS
 
 ## WEAK
-- H2-030 [page/implementation] "my pdf is too long for the model what do i do" → (weak) context-windows (score 53, solid no) — expected chunking|rag|context-windows; not solid; accepted page in top 5
+- H2-012 [page/concept] "why are images split into patches for transformers" → (weak) vision-transformers (score 28, solid no) — expected vision-transformers; not solid; accepted page in top 5
 
 ## Path completeness failures
 
 ## All results
 | id | class | kind | query | top | score | solid | tool | notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| H2-001 | PASS | neg | can computers really think | (weak) how-to-reduce-hallucinations | 24.596658066229157 | no | — | no confident answer |
+| H2-001 | PASS | neg | can computers really think | (weak) chain-of-thought | 6 | no | — | no confident answer |
 | H2-002 | PASS | page | how do machines learn from examples | supervised-learning | 51 | yes | — |  |
 | H2-003 | PASS | page | why does the ai sometimes just invent a source that does not exist | ai-hallucinations | 73 | yes | — |  |
 | H2-004 | PASS | page | whats the limit on how long my conversation with an ai can be | context-windows | 68 | yes | — |  |
@@ -97,7 +96,7 @@ Multi-hop path completeness (answer + learn-more + top results contain every exp
 | H2-009 | PASS | page | training loss goes down but validation loss goes up | overfitting-and-regularization | 59 | yes | — |  |
 | H2-010 | PASS | page | fine tune a pretrained resnet on 500 images | convolutional-neural-networks | 78 | yes | — |  |
 | H2-011 | PASS | page | agent receives reward only at the end of an episode | reinforcement-learning | 60 | yes | — |  |
-| H2-012 | PASS | page | why are images split into patches for transformers | vision-transformers | 100.06164343560337 | yes | — |  |
+| H2-012 | WEAK | page | why are images split into patches for transformers | (weak) vision-transformers | 28 | no | — | not solid; accepted page in top 5 |
 | H2-013 | PASS | page | sparse routing to a few feed forward experts | mixture-of-experts | 81 | yes | — |  |
 | H2-014 | PASS | page | constant memory sequence model that avoids quadratic attention | state-space-models | 57 | yes | — |  |
 | H2-015 | PASS | page | rotary position embeddings and context extension | positional-encoding | 92 | yes | — |  |
@@ -115,7 +114,7 @@ Multi-hop path completeness (answer + learn-more + top results contain every exp
 | H2-027 | PASS | page | how should i structure instructions so the model follows them | prompt-engineering | 52 | yes | — |  |
 | H2-028 | PASS | page | examples in the prompt to show the format i want | prompt-engineering | 80 | yes | — |  |
 | H2-029 | PASS | page | answers are generic and vague | common-prompting-mistakes | 59 | yes | — |  |
-| H2-030 | WEAK | page | my pdf is too long for the model what do i do | (weak) context-windows | 53 | no | — | not solid; accepted page in top 5 |
+| H2-030 | PASS | page | my pdf is too long for the model what do i do | context-windows | 53 | yes | — |  |
 | H2-031 | PASS | page | combine keyword and vector search | hybrid-search-and-reranking | 90 | yes | — |  |
 | H2-032 | PASS | page | build a knowledge base chatbot over help center articles | rag | 71 | yes | — |  |
 | H2-033 | PASS | page | where do embeddings get stored and searched | vector-databases | 53 | yes | — |  |
@@ -204,31 +203,31 @@ Multi-hop path completeness (answer + learn-more + top results contain every exp
 | H2-116 | FALSE POSITIVE | gap | image segmentation models | object-detection | 92 | yes | — | confident unrelated page: object-detection |
 | H2-117 | FALSE POSITIVE | gap | robot operating system nodes and topics | robot-operating-system | 125 | yes | — | confident unrelated page: robot-operating-system |
 | H2-118 | FALSE POSITIVE | gap | gdpr right to erasure and machine learning | gdpr-and-ai | 90 | yes | — | confident unrelated page: gdpr-and-ai |
-| H2-119 | PASS | gap | how do i debug memory leaks in node | (weak) streaming-ai-with-nodejs | 58.4217007191391 | no | — | transparent non-answer |
+| H2-119 | PASS | gap | how do i debug memory leaks in node | (weak) agent-memory | 34 | no | — | transparent non-answer |
 | H2-120 | PASS | gap | css grid vs flexbox | html-and-css | 56 | yes | — | nearby page: html-and-css |
 | H2-121 | PASS | gap | jwt vs session cookies | json-web-tokens | 108 | yes | — | nearby page: json-web-tokens |
-| H2-122 | PASS | neg | transformers movie release order | (weak) vision-transformers | 71.60628488353117 | no | — | no confident answer |
+| H2-122 | PASS | neg | transformers movie release order | (weak) vision-transformers | 20 | no | — | no confident answer |
 | H2-123 | PASS | neg | python snake care guide | (weak) python | 46 | no | — | no confident answer |
 | H2-124 | PASS | neg | rag and bone man tour dates | (weak) rag | 50 | no | — | no confident answer |
 | H2-125 | PASS | neg | git hub of the community garden | (weak) git | 54 | no | — | no confident answer |
-| H2-126 | PASS | neg | spring onion substitute | (weak) java | 65.81087475220781 | no | — | no confident answer |
-| H2-127 | PASS | neg | django unchained cast | (weak) python-data-for-ai | 33.61574492892815 | no | — | no confident answer |
-| H2-128 | PASS | neg | angular momentum conservation | (weak) backpropagation-and-gradient-descent | 23.830963325046792 | no | — | no confident answer |
+| H2-126 | PASS | neg | spring onion substitute | (weak) java | 4 | no | — | no confident answer |
+| H2-127 | PASS | neg | django unchained cast | (weak) none | 0 | no | — | no confident answer |
+| H2-128 | PASS | neg | angular momentum conservation | (weak) none | 0 | no | — | no confident answer |
 | H2-129 | PASS | neg | kubernetes in greek means helmsman | (weak) kubernetes | 80 | no | — | no confident answer |
-| H2-130 | PASS | neg | bearer of the ring lord of the rings | (weak) json-web-tokens | 36.76348149988412 | no | — | no confident answer |
-| H2-131 | PASS | neg | scrum master salary | (weak) fine-tuning | 51.42121049054664 | no | — | no confident answer |
-| H2-132 | PASS | neg | agent orange history | (weak) ai-agent-vs-chatbot | 48.35351872646045 | no | — | no confident answer |
-| H2-133 | PASS | neg | mongo from flash gordon | (weak) mongodb | 63.00098468167221 | no | — | no confident answer |
+| H2-130 | PASS | neg | bearer of the ring lord of the rings | (weak) api-authentication | 6 | no | — | no confident answer |
+| H2-131 | PASS | neg | scrum master salary | (weak) none | 0 | no | — | no confident answer |
+| H2-132 | PASS | neg | agent orange history | (weak) ai-agent-vs-chatbot | 35 | no | — | no confident answer |
+| H2-133 | PASS | neg | mongo from flash gordon | (weak) mongodb | 17 | no | — | no confident answer |
 | H2-134 | PASS | neg | redis cluster of hotels | (weak) redis | 59 | no | — | no confident answer |
-| H2-135 | PASS | neg | gradient colour background css for a wedding invitation | (weak) html-and-css | 64.81606187481796 | no | — | no confident answer |
-| H2-136 | PASS | neg | train a puppy to sit | (weak) reinforcement-learning-for-reasoning | 42.13027431020985 | no | — | no confident answer |
-| H2-137 | PASS | neg | loss of appetite in cats | (weak) backpropagation-and-gradient-descent | 25.597199136782468 | no | — | no confident answer |
-| H2-138 | PASS | neg | batch of cookies recipe | (weak) model-apis | 30.395260399130343 | no | — | no confident answer |
-| H2-139 | PASS | neg | kernel panic on my macbook | (weak) semantic-kernel | 115.03079195349488 | no | — | no confident answer |
-| H2-140 | PASS | neg | reinforcement bars for concrete | (weak) preference-optimization | 53.577319717941116 | no | — | no confident answer |
-| H2-141 | PASS | neg | prompt payment discount invoice terms | (weak) prompt-injection | 52.818045180938825 | no | — | no confident answer |
-| H2-142 | PASS | neg | what should i cook tonight | (weak) ai-agents | 32.44170003049592 | no | — | no confident answer |
-| H2-143 | PASS | neg | cheap hotels in madrid | (weak) open-weights-models | 64.69283443462527 | no | — | no confident answer |
-| H2-144 | PASS | neg | how do i meditate | (weak) sycophancy | 56.71169150822309 | no | — | no confident answer |
-| H2-145 | PASS | neg | best podcasts about history | (weak) best-of-n-sampling | 79.70758281080472 | no | — | no confident answer |
-| H2-146 | PASS | neg | renew passport appointment | (weak) authentication-vs-authorization | 79.01949980353187 | no | — | no confident answer |
+| H2-135 | PASS | neg | gradient colour background css for a wedding invitation | (weak) html-and-css | 30 | no | — | no confident answer |
+| H2-136 | PASS | neg | train a puppy to sit | (weak) distributed-training | 6 | no | — | no confident answer |
+| H2-137 | PASS | neg | loss of appetite in cats | (weak) backpropagation-and-gradient-descent | 9 | no | — | no confident answer |
+| H2-138 | PASS | neg | batch of cookies recipe | (weak) llm-cost-optimization | 6 | no | — | no confident answer |
+| H2-139 | PASS | neg | kernel panic on my macbook | (weak) semantic-kernel | 36 | no | — | no confident answer |
+| H2-140 | PASS | neg | reinforcement bars for concrete | (weak) reinforcement-learning | 22 | no | — | no confident answer |
+| H2-141 | PASS | neg | prompt payment discount invoice terms | (weak) system-prompts | 25 | no | — | no confident answer |
+| H2-142 | PASS | neg | what should i cook tonight | (weak) none | 0 | no | — | no confident answer |
+| H2-143 | PASS | neg | cheap hotels in madrid | (weak) none | 0 | no | — | no confident answer |
+| H2-144 | PASS | neg | how do i meditate | (weak) none | 0 | no | — | no confident answer |
+| H2-145 | PASS | neg | best podcasts about history | (weak) best-of-n-sampling | 28 | no | — | no confident answer |
+| H2-146 | PASS | neg | renew passport appointment | (weak) none | 0 | no | — | no confident answer |

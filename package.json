@@ -6,6 +6,7 @@
   "scripts": {
     "test": "node --check tools.js && node --check v2-tools.js && node --check v21-tools.js && node --check discovery.js && node --check sw.js && node tests/smoke.mjs && node tests/knowledge-search.mjs",
     "test:tech": "node tests/knowledge-tech-qa.mjs",
-    "test:ai-v3": "node tests/knowledge-ontology-v3.mjs && node tests/knowledge-ai-v3-queries.mjs"
+    "test:ai-v3": "node tests/knowledge-ontology-v3.mjs && node tests/knowledge-ai-v3-queries.mjs",
+    "test:semantic": "node tests/semantic/semantic-tests.mjs"
   }
 }

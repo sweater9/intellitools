@@ -1,0 +1,722 @@
+{
+ "name": "Ambiguity / non-technology negatives (semantic prototype)",
+ "version": 1,
+ "note": "Written for the semantic prototype. Negatives use the technology words in their everyday meaning; positives use them with clear technical context.",
+ "queries": [
+  {
+   "id": "AMB-N01",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "transformer toy for my nephew",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N02",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "electrical transformer humming noise",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N03",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "transformers movie cast",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N04",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "mamba mentality basketball quote",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N05",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "black mamba snake bite first aid",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N06",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "python pet snake care",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N07",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "monty python sketch",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N08",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "agent real estate commission",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N09",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "secret agent spy film",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N10",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "travel agent booking tips",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N11",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "fashion model agency",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N12",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "model train layout hobby",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N13",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "scale model aircraft kit",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N14",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "react to a rude comment calmly",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N15",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "chemical reaction rate experiment",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N16",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "docker clothing sale",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N17",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "dock worker union strike",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N18",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "go for a run tonight",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N19",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "go board game opening",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N20",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "rust remover for cast iron pan",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N21",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "rust game survival tips",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N22",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "swift taylor tour dates",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N23",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "swift bird migration",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N24",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "java island travel guide",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N25",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "ruby red lipstick shade",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N26",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "spring boot footwear",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N27",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "spark plug gap setting",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N28",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "pandas habitat bamboo",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N29",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "panda express menu",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N30",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "bear market investing",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N31",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "apple harvest season",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N32",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "oracle bones ancient china",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N33",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "cobra snake venom",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N34",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "llama wool sweater",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N35",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "llama farm visit",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N36",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "claude monet paintings",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N37",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "gemini zodiac traits",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N38",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "bard of avon shakespeare",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N39",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "whisper quietly in class",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N40",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "kernel panic on my laptop",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N41",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "docker whale logo history",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N42",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "embedding a screw in a wall",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N43",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "vector art drawing tutorial",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N44",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "tensor of a physics stress",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N45",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "cloud storage for family photos",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N46",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "nginx hair salon",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N47",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "mongo the movie character",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N48",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "orchestrate a dinner party",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N49",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "prompt delivery service",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-N50",
+   "style": "ambiguous-or-off-topic",
+   "topic": "ambiguity",
+   "q": "token of friendship",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-P01",
+   "style": "ambiguous-tech-context",
+   "topic": "ambiguity",
+   "q": "transformer attention mechanism for language models",
+   "kind": "page",
+   "accept": [
+    "transformers"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-P02",
+   "style": "ambiguous-tech-context",
+   "topic": "ambiguity",
+   "q": "python library for loading pretrained language models",
+   "kind": "page",
+   "accept": [
+    "python-ai-libraries",
+    "hugging-face",
+    "python"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-P03",
+   "style": "ambiguous-tech-context",
+   "topic": "ambiguity",
+   "q": "mamba architecture versus attention models",
+   "kind": "page",
+   "accept": [
+    "state-space-models",
+    "transformers-vs-state-space-models"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-P04",
+   "style": "ambiguous-tech-context",
+   "topic": "ambiguity",
+   "q": "agent that calls tools in a loop",
+   "kind": "page",
+   "accept": [
+    "ai-agents",
+    "agent-tools",
+    "react-agent-pattern"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-P05",
+   "style": "ambiguous-tech-context",
+   "topic": "ambiguity",
+   "q": "react component for streaming chat",
+   "kind": "page",
+   "accept": [
+    "react-ai-interfaces",
+    "react-chatbot-state",
+    "streaming-ai-responses"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-P06",
+   "style": "ambiguous-tech-context",
+   "topic": "ambiguity",
+   "q": "docker container for deploying a model server",
+   "kind": "page",
+   "accept": [
+    "docker",
+    "containers"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-P07",
+   "style": "ambiguous-tech-context",
+   "topic": "ambiguity",
+   "q": "go language for backend services",
+   "kind": "page",
+   "accept": [
+    "go-language"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-P08",
+   "style": "ambiguous-tech-context",
+   "topic": "ambiguity",
+   "q": "rust language ownership and memory safety",
+   "kind": "page",
+   "accept": [
+    "rust"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-P10",
+   "style": "ambiguous-tech-context",
+   "topic": "ambiguity",
+   "q": "model card documentation for responsible release",
+   "kind": "page",
+   "accept": [
+    "model-cards"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-P11",
+   "style": "ambiguous-tech-context",
+   "topic": "ambiguity",
+   "q": "fine tune a llama model with lora",
+   "kind": "page",
+   "accept": [
+    "lora-and-peft",
+    "fine-tuning"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-P12",
+   "style": "ambiguous-tech-context",
+   "topic": "ambiguity",
+   "q": "claude style constitutional training",
+   "kind": "page",
+   "accept": [
+    "constitutional-ai-and-rlaif"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-P13",
+   "style": "ambiguous-tech-context",
+   "topic": "ambiguity",
+   "q": "whisper speech recognition model",
+   "kind": "page",
+   "accept": [
+    "speech-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-P14",
+   "style": "ambiguous-tech-context",
+   "topic": "ambiguity",
+   "q": "embedding vectors for semantic search",
+   "kind": "page",
+   "accept": [
+    "embeddings",
+    "vector-databases"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-P15",
+   "style": "ambiguous-tech-context",
+   "topic": "ambiguity",
+   "q": "prompt injection attack on an agent",
+   "kind": "page",
+   "accept": [
+    "prompt-injection"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-P16",
+   "style": "ambiguous-tech-context",
+   "topic": "ambiguity",
+   "q": "token limits of a language model context",
+   "kind": "page",
+   "accept": [
+    "tokens",
+    "context-windows"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-P17",
+   "style": "ambiguous-tech-context",
+   "topic": "ambiguity",
+   "q": "kernel for neural network convolution filters",
+   "kind": "page",
+   "accept": [
+    "convolutional-neural-networks"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "AMB-P18",
+   "style": "ambiguous-tech-context",
+   "topic": "ambiguity",
+   "q": "spark style distributed training across gpus",
+   "kind": "page",
+   "accept": [
+    "distributed-training"
+   ],
+   "tool": null,
+   "path": []
+  }
+ ]
+}

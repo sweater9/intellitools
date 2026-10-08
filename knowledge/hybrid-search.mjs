@@ -7,7 +7,7 @@ export const DEFAULTS = {
   // fusion: semantic evidence is converted to points from its z-score within the query's own similarity distribution
   zFloor: 1.0,       // z below this adds nothing
   pts: 30,           // points per z above the floor
-  strongScale: 0.2,  // semantic points are scaled down when the lexical leader is already strongly anchored
+  strongScale: 0,  // semantic points are scaled down when the lexical leader is already strongly anchored
   strongScore: 40,
   // arm B (semantic-only) confidence
   bTau: 0.8,
@@ -16,7 +16,10 @@ export const DEFAULTS = {
   dMargin: 0.06,     // and lead the runner-up by this cosine margin
   dMinKnown: 2,      // at least this many query words must be known to the vocabulary
   dMinKnownShare: 0.6,
-  minCoverage: 0.7,  // informative query words that the Knowledge corpus actually uses
+  lexVetoCoverage: 0.7, // a lexical answer with only alias/title/glossary evidence is withheld when the query is mostly about things the guides never discuss
+  dMinLex: 12,       // and the page needs real lexical evidence of its own, not a stray word
+  dMinSim: 0.8,      // raw cosine the semantic candidate must reach before it may lead or override
+  minCoverage: 0.75,  // informative query words that the Knowledge corpus actually uses
   // veto of a lexical answer that semantics clearly disagrees with (only for weakly anchored answers)
   vetoZ: 0.4,
   // override: a clearly better semantic candidate replaces a lexical leader that semantics finds unconvincing
@@ -79,9 +82,11 @@ export function searchHybrid(index, lexicon, sem, rawQuery, mode = "gated", opts
   const minSolid = lex.minSolid;
   const anchored = (r) => r.notes.some((n) => n === "title" || n === "question" || n === "alias" || n.startsWith("intent:") || n.startsWith("concept:") || n.startsWith("glossary:"));
   const guarded = lex.gaps.length > 0; // a coverage-gap / negative-context rule matched: semantics may reorder but never create confidence
+  // In "gated" mode semantic points may reorder candidates but never lift a page over the solid threshold: lexical score alone must clear it.
+  const clears = (r) => (mode === "gated" ? r.lexScore : r.score) >= minSolid;
   let top = guarded ? (lex.solid ? fused.find((r) => r.page.id === lex.answer.page.id) : null)
-                    : (fused.find((r) => anchored(r) && r.score >= minSolid) || null);
-  if (guarded && lex.solid && top) top = fused.find((r) => anchored(r) && r.score >= minSolid) || top; // gap rules already vetted lex answer
+                    : (fused.find((r) => anchored(r) && clears(r)) || null);
+  if (guarded && lex.solid && top) top = fused.find((r) => anchored(r) && clears(r)) || top; // gap rules already vetted lex answer
   let how = top ? "lexical" : "";
 
   if (mode === "gated") {
@@ -90,18 +95,20 @@ export function searchHybrid(index, lexicon, sem, rawQuery, mode = "gated", opts
       const strong = top.notes.some((n) => n === "title" || n === "question" || n === "alias" || n.startsWith("intent:") || n.startsWith("concept:"));
       if (!strong && top.z < o.vetoZ) { top = null; how = "vetoed"; }
     }
+    // D1a: coverage veto for lexical answers without intent/concept evidence (alias/title/glossary hits on everyday words)
+    if (top && !guarded && coverage < o.lexVetoCoverage && !top.notes.some((n) => n.startsWith("intent:") || n.startsWith("concept:"))) { top = null; how = "off-corpus"; }
     // D1b: override a lexical leader (typically a generic hub page such as a language or a broad concept) by a clearly
     // better-supported semantic candidate, provided that candidate also has lexical evidence of its own
     if (top && !guarded && top.page.id !== semTop.id) {
       const cand = fused.find((r) => r.page.id === semTop.id);
-      if (cand && coverage >= o.minCoverage && cand.lexScore > 0 && cand.z >= o.ovZ && info.margin >= o.ovMargin && top.z <= o.ovLeaderZ) { top = cand; how = "semantic-override"; }
+      if (cand && coverage >= o.minCoverage && info.sim >= o.dMinSim && cand.lexScore >= o.dMinLex && cand.z >= o.ovZ && info.margin >= o.ovMargin && top.z <= o.ovLeaderZ) { top = cand; how = "semantic-override"; }
       else if (o.contradictVeto && semTop.id !== top.page.id && info.z >= o.ovZ && info.margin >= o.ovMargin && top.z <= o.ovLeaderZ && !top.notes.some((n) => n === "title" || n === "question")) { top = null; how = "contradicted"; }
     }
     // D2: semantic-led answer, only with lexical evidence, confident z and a clear margin, never under a gap rule
     if (!top && !guarded) {
       const best = fused[0];
       const share = total ? known / total : 0;
-      if (best && coverage >= o.minCoverage && best.lexScore > 0 && best.page.id === semTop.id && best.z >= o.dTauZ && info.margin >= o.dMargin && known >= o.dMinKnown && share >= o.dMinKnownShare) {
+      if (best && coverage >= o.minCoverage && info.sim >= o.dMinSim && best.lexScore >= o.dMinLex && best.page.id === semTop.id && best.z >= o.dTauZ && info.margin >= o.dMargin && known >= o.dMinKnown && share >= o.dMinKnownShare) {
         top = best; how = "semantic-led";
       }
     }
