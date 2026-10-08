@@ -1,0 +1,5232 @@
+{
+ "name": "IntelliTools Knowledge V3 independent red-team set",
+ "version": 1,
+ "frozen": true,
+ "note": "Authored independently of the existing V3 QA suites (see overlap-check.mjs). accept = pages that would genuinely answer the query. kind=gap: corpus has no dedicated page, a transparent non-answer or a solid answer on a listed nearby page is acceptable, a solid answer elsewhere is a false positive. kind=neg: no AI/tech answer should be given.",
+ "queries": [
+  {
+   "id": "RT001",
+   "style": "beginner",
+   "topic": "ai",
+   "q": "ai vs machine learning whats the difference",
+   "kind": "page",
+   "accept": [
+    "what-is-ai",
+    "deep-learning",
+    "supervised-learning"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT002",
+   "style": "beginner",
+   "topic": "ai",
+   "q": "explain neural nets like im five",
+   "kind": "page",
+   "accept": [
+    "neural-networks",
+    "deep-learning"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT003",
+   "style": "beginner",
+   "topic": "llm",
+   "q": "how does chatgpt actually work",
+   "kind": "page",
+   "accept": [
+    "large-language-models",
+    "transformers",
+    "generative-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT004",
+   "style": "beginner",
+   "topic": "llm",
+   "q": "why do language models make stuff up",
+   "kind": "page",
+   "accept": [
+    "ai-hallucinations",
+    "how-to-reduce-hallucinations"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT005",
+   "style": "typo",
+   "topic": "llm",
+   "q": "wats a token in ai",
+   "kind": "page",
+   "accept": [
+    "tokens"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT006",
+   "style": "beginner",
+   "topic": "llm",
+   "q": "how much text can an llm remember in one go",
+   "kind": "page",
+   "accept": [
+    "context-windows",
+    "tokens"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT007",
+   "style": "beginner",
+   "topic": "ai",
+   "q": "what makes a model generative",
+   "kind": "page",
+   "accept": [
+    "generative-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT008",
+   "style": "beginner",
+   "topic": "ml",
+   "q": "is deep learning the same as ml",
+   "kind": "page",
+   "accept": [
+    "deep-learning",
+    "what-is-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT009",
+   "style": "beginner",
+   "topic": "ml",
+   "q": "labelled versus unlabelled data in machine learning",
+   "kind": "page",
+   "accept": [
+    "supervised-learning",
+    "unsupervised-learning"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT010",
+   "style": "concept",
+   "topic": "dl",
+   "q": "how does a neural network adjust itself while training",
+   "kind": "page",
+   "accept": [
+    "backpropagation-and-gradient-descent",
+    "neural-networks"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT011",
+   "style": "troubleshooting",
+   "topic": "ml",
+   "q": "my classifier is 99 percent on training data and 70 percent on new data",
+   "kind": "page",
+   "accept": [
+    "overfitting-and-regularization"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT012",
+   "style": "implementation",
+   "topic": "dl",
+   "q": "reuse imagenet weights for my own photos",
+   "kind": "page",
+   "accept": [
+    "transfer-learning",
+    "convolutional-neural-networks"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT013",
+   "style": "vague",
+   "topic": "rl",
+   "q": "robot dog learning to walk by trial and error",
+   "kind": "page",
+   "accept": [
+    "reinforcement-learning",
+    "sim-to-real-transfer",
+    "embodied-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT014",
+   "style": "concept",
+   "topic": "cv",
+   "q": "how do image classifiers detect edges and shapes",
+   "kind": "page",
+   "accept": [
+    "convolutional-neural-networks"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT015",
+   "style": "comparison",
+   "topic": "dl",
+   "q": "why did transformers replace lstms",
+   "kind": "page",
+   "accept": [
+    "transformers",
+    "recurrent-neural-networks"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT016",
+   "style": "concept",
+   "topic": "llm",
+   "q": "attention is all you need explained simply",
+   "kind": "page",
+   "accept": [
+    "transformers"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT017",
+   "style": "concept",
+   "topic": "dl",
+   "q": "what is a latent space",
+   "kind": "page",
+   "accept": [
+    "variational-autoencoders",
+    "embeddings",
+    "diffusion-models"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT018",
+   "style": "concept",
+   "topic": "dl",
+   "q": "how do generative models make pictures out of noise",
+   "kind": "page",
+   "accept": [
+    "diffusion-models"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT019",
+   "style": "concept",
+   "topic": "dl",
+   "q": "two networks competing to make fake images",
+   "kind": "page",
+   "accept": [
+    "generative-adversarial-networks"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT020",
+   "style": "architecture",
+   "topic": "dl",
+   "q": "which neural network type handles molecules and social networks",
+   "kind": "page",
+   "accept": [
+    "graph-neural-networks"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT021",
+   "style": "expert",
+   "topic": "ml",
+   "q": "why does adam use decoupled weight decay",
+   "kind": "page",
+   "accept": [
+    "backpropagation-and-gradient-descent",
+    "overfitting-and-regularization"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT022",
+   "style": "expert",
+   "topic": "rl",
+   "q": "how does ppo clip the policy update",
+   "kind": "page",
+   "accept": [
+    "proximal-policy-optimization"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT023",
+   "style": "expert",
+   "topic": "rl",
+   "q": "bellman optimality equation intuition",
+   "kind": "page",
+   "accept": [
+    "markov-decision-processes"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT024",
+   "style": "expert",
+   "topic": "rl",
+   "q": "why does dqn need a target network",
+   "kind": "page",
+   "accept": [
+    "deep-q-networks"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT025",
+   "style": "conversational",
+   "topic": "ml",
+   "q": "hey can you tell me what unsupervised learning even is",
+   "kind": "page",
+   "accept": [
+    "unsupervised-learning"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT026",
+   "style": "acronym",
+   "topic": "ml",
+   "q": "sgd vs adam which one",
+   "kind": "page",
+   "accept": [
+    "backpropagation-and-gradient-descent"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT027",
+   "style": "acronym",
+   "topic": "dl",
+   "q": "what is a vae used for",
+   "kind": "page",
+   "accept": [
+    "variational-autoencoders"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT028",
+   "style": "acronym",
+   "topic": "dl",
+   "q": "gnn use cases",
+   "kind": "page",
+   "accept": [
+    "graph-neural-networks"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT029",
+   "style": "acronym",
+   "topic": "dl",
+   "q": "cnn or vit for a small dataset",
+   "kind": "page",
+   "accept": [
+    "cnn-vs-vision-transformer",
+    "convolutional-neural-networks",
+    "transfer-learning"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT030",
+   "style": "typo",
+   "topic": "llm",
+   "q": "transfomer architecure basics",
+   "kind": "page",
+   "accept": [
+    "transformers"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT031",
+   "style": "typo",
+   "topic": "ml",
+   "q": "reinforcment learning explaned",
+   "kind": "page",
+   "accept": [
+    "reinforcement-learning"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT032",
+   "style": "typo",
+   "topic": "llm",
+   "q": "embedings vs tokens",
+   "kind": "page",
+   "accept": [
+    "embeddings",
+    "tokens"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT033",
+   "style": "beginner",
+   "topic": "llm",
+   "q": "what is a prompt and why does wording matter",
+   "kind": "page",
+   "accept": [
+    "prompt-engineering",
+    "system-prompts"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT034",
+   "style": "what-to-use",
+   "topic": "prompt",
+   "q": "i need to write a good prompt for summarising legal contracts",
+   "kind": "page",
+   "accept": [
+    "prompt-engineering",
+    "common-prompting-mistakes"
+   ],
+   "tool": "ai-prompt-builder",
+   "path": []
+  },
+  {
+   "id": "RT035",
+   "style": "implementation",
+   "topic": "prompt",
+   "q": "what goes in a system prompt for a customer support bot",
+   "kind": "page",
+   "accept": [
+    "system-prompts",
+    "prompt-engineering"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT036",
+   "style": "troubleshooting",
+   "topic": "prompt",
+   "q": "the model keeps ignoring my instructions",
+   "kind": "page",
+   "accept": [
+    "common-prompting-mistakes",
+    "system-prompts",
+    "prompt-engineering"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT037",
+   "style": "comparison",
+   "topic": "prompt",
+   "q": "compare my old system prompt with the new one",
+   "kind": "page",
+   "accept": [
+    "system-prompts",
+    "prompt-engineering"
+   ],
+   "tool": "prompt-diff",
+   "path": []
+  },
+  {
+   "id": "RT038",
+   "style": "expert",
+   "topic": "llm",
+   "q": "how do reasoning models spend extra tokens before answering",
+   "kind": "page",
+   "accept": [
+    "reasoning-models",
+    "test-time-compute"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT039",
+   "style": "expert",
+   "topic": "llm",
+   "q": "majority vote across sampled chains of thought",
+   "kind": "page",
+   "accept": [
+    "self-consistency"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT040",
+   "style": "expert",
+   "topic": "llm",
+   "q": "step level verifier for maths solutions",
+   "kind": "page",
+   "accept": [
+    "process-reward-model"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT041",
+   "style": "expert",
+   "topic": "llm",
+   "q": "reward models trained only on final answers",
+   "kind": "page",
+   "accept": [
+    "outcome-reward-model"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT042",
+   "style": "expert",
+   "topic": "llm",
+   "q": "rl with unit test rewards for coding models",
+   "kind": "page",
+   "accept": [
+    "reinforcement-learning-for-reasoning"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT043",
+   "style": "conversational",
+   "topic": "llm",
+   "q": "can i read what the model was thinking before it answered",
+   "kind": "page",
+   "accept": [
+    "reasoning-transparency",
+    "reasoning-models"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT044",
+   "style": "troubleshooting",
+   "topic": "llm",
+   "q": "my output is truncated when using a thinking model",
+   "kind": "page",
+   "accept": [
+    "thinking-budgets",
+    "reasoning-models"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT045",
+   "style": "tech-selection",
+   "topic": "llm",
+   "q": "when is a thinking model worth the extra cost",
+   "kind": "page",
+   "accept": [
+    "reasoning-vs-standard-models",
+    "reasoning-models",
+    "llm-cost-optimization"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT046",
+   "style": "implementation",
+   "topic": "llm",
+   "q": "make the model return json that always matches my schema",
+   "kind": "page",
+   "accept": [
+    "structured-outputs",
+    "constrained-decoding",
+    "json-schema"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT047",
+   "style": "expert",
+   "topic": "llm",
+   "q": "how do grammars restrict which tokens a model can sample",
+   "kind": "page",
+   "accept": [
+    "constrained-decoding",
+    "grammar-guided-generation"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT048",
+   "style": "what-to-use",
+   "topic": "llm",
+   "q": "json mode or function calling for extraction",
+   "kind": "page",
+   "accept": [
+    "structured-output-methods-compared",
+    "structured-outputs",
+    "function-calling"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT049",
+   "style": "beginner",
+   "topic": "llm",
+   "q": "what does temperature do",
+   "kind": "page",
+   "accept": [
+    "sampling-and-decoding"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT050",
+   "style": "troubleshooting",
+   "topic": "llm",
+   "q": "why is the same prompt giving different answers every time",
+   "kind": "page",
+   "accept": [
+    "sampling-and-decoding"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT051",
+   "style": "concept",
+   "topic": "llm",
+   "q": "what is rag in simple words",
+   "kind": "page",
+   "accept": [
+    "rag"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT052",
+   "style": "architecture",
+   "topic": "rag",
+   "q": "design a pipeline that answers questions from our internal wiki",
+   "kind": "page",
+   "accept": [
+    "rag",
+    "chunking",
+    "embeddings",
+    "vector-databases"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT053",
+   "style": "implementation",
+   "topic": "rag",
+   "q": "how big should my chunks be",
+   "kind": "page",
+   "accept": [
+    "chunking"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT054",
+   "style": "troubleshooting",
+   "topic": "rag",
+   "q": "rag answers sound confident but cite the wrong document",
+   "kind": "page",
+   "accept": [
+    "rag-evaluation",
+    "how-to-reduce-hallucinations",
+    "hybrid-search-and-reranking",
+    "rag"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT055",
+   "style": "comparison",
+   "topic": "rag",
+   "q": "should i fine tune or use retrieval for company docs",
+   "kind": "page",
+   "accept": [
+    "rag-vs-fine-tuning"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT056",
+   "style": "expert",
+   "topic": "rag",
+   "q": "reranking with a cross encoder after bm25",
+   "kind": "page",
+   "accept": [
+    "hybrid-search-and-reranking"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT057",
+   "style": "expert",
+   "topic": "rag",
+   "q": "multi hop questions over a knowledge graph",
+   "kind": "page",
+   "accept": [
+    "graph-rag",
+    "agentic-rag"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT058",
+   "style": "concept",
+   "topic": "embed",
+   "q": "how do i measure how similar two documents are numerically",
+   "kind": "page",
+   "accept": [
+    "embeddings"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT059",
+   "style": "concept",
+   "topic": "embed",
+   "q": "how can a computer know two sentences mean the same thing",
+   "kind": "page",
+   "accept": [
+    "embeddings"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT060",
+   "style": "implementation",
+   "topic": "vector",
+   "q": "store embeddings in postgres",
+   "kind": "page",
+   "accept": [
+    "pgvector",
+    "postgresql-for-ai-apps",
+    "vector-databases"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT061",
+   "style": "what-to-use",
+   "topic": "vector",
+   "q": "can plain postgres handle semantic search or must i add a vector store",
+   "kind": "page",
+   "accept": [
+    "vector-database-vs-traditional-database",
+    "vector-databases",
+    "pgvector",
+    "choosing-a-vector-store"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT062",
+   "style": "what-to-use",
+   "topic": "vector",
+   "q": "which vector store should i pick for a prototype",
+   "kind": "page",
+   "accept": [
+    "choosing-a-vector-store",
+    "vector-databases"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT063",
+   "style": "expert",
+   "topic": "vector",
+   "q": "hnsw vs ivf index tradeoffs",
+   "kind": "page",
+   "accept": [
+    "vector-databases",
+    "pgvector"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT064",
+   "style": "typo",
+   "topic": "vector",
+   "q": "vektor databse basics",
+   "kind": "page",
+   "accept": [
+    "vector-databases"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT065",
+   "style": "beginner",
+   "topic": "agent",
+   "q": "what is an ai agent",
+   "kind": "page",
+   "accept": [
+    "ai-agents"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT066",
+   "style": "conversational",
+   "topic": "agent",
+   "q": "is a bot that only answers questions already an agent",
+   "kind": "page",
+   "accept": [
+    "ai-agent-vs-chatbot"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT067",
+   "style": "integration",
+   "topic": "agent",
+   "q": "i want an ai agent that can read gmail",
+   "kind": "page",
+   "accept": [
+    "gmail-for-ai-agents",
+    "connecting-agents-to-apps",
+    "oauth-for-ai-agents"
+   ],
+   "tool": null,
+   "path": [
+    "gmail-for-ai-agents",
+    "oauth-for-ai-agents",
+    "agent-tools",
+    "function-calling",
+    "integration-permissions"
+   ]
+  },
+  {
+   "id": "RT068",
+   "style": "integration",
+   "topic": "agent",
+   "q": "let my assistant send calendar invites on my behalf",
+   "kind": "page",
+   "accept": [
+    "connecting-agents-to-apps",
+    "oauth-for-ai-agents",
+    "integration-permissions",
+    "agent-tools"
+   ],
+   "tool": null,
+   "path": [
+    "oauth-for-ai-agents",
+    "integration-permissions",
+    "agent-tools"
+   ]
+  },
+  {
+   "id": "RT069",
+   "style": "integration",
+   "topic": "agent",
+   "q": "how do i connect an ai agent to slack and jira",
+   "kind": "page",
+   "accept": [
+    "connecting-agents-to-apps",
+    "agent-tools",
+    "mcp"
+   ],
+   "tool": null,
+   "path": [
+    "agent-tools",
+    "oauth-for-ai-agents"
+   ]
+  },
+  {
+   "id": "RT070",
+   "style": "security",
+   "topic": "agent",
+   "q": "what permissions should an email reading agent have",
+   "kind": "page",
+   "accept": [
+    "integration-permissions",
+    "gmail-for-ai-agents",
+    "oauth-for-ai-agents"
+   ],
+   "tool": null,
+   "path": [
+    "integration-permissions",
+    "oauth-for-ai-agents"
+   ]
+  },
+  {
+   "id": "RT071",
+   "style": "security",
+   "topic": "agent",
+   "q": "can a malicious email hijack my agent",
+   "kind": "page",
+   "accept": [
+    "prompt-injection",
+    "gmail-for-ai-agents"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT072",
+   "style": "architecture",
+   "topic": "agent",
+   "q": "how do agents decide which tool to call",
+   "kind": "page",
+   "accept": [
+    "agent-tools",
+    "function-calling",
+    "react-agent-pattern"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT073",
+   "style": "troubleshooting",
+   "topic": "agent",
+   "q": "my agent gets stuck repeating the same step",
+   "kind": "page",
+   "accept": [
+    "react-agent-pattern",
+    "agentic-workflows",
+    "ai-agents"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT074",
+   "style": "troubleshooting",
+   "topic": "agent",
+   "q": "agent forgets what we decided yesterday",
+   "kind": "page",
+   "accept": [
+    "agent-memory",
+    "context-windows"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT075",
+   "style": "architecture",
+   "topic": "agent",
+   "q": "should i use several agents or one",
+   "kind": "page",
+   "accept": [
+    "multi-agent-systems",
+    "agentic-workflows",
+    "ai-agents"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT076",
+   "style": "what-to-use",
+   "topic": "agent",
+   "q": "which framework for a production agent",
+   "kind": "page",
+   "accept": [
+    "agent-frameworks-compared",
+    "choosing-an-agent-framework",
+    "langgraph"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT077",
+   "style": "comparison",
+   "topic": "agent",
+   "q": "langgraph versus crewai",
+   "kind": "page",
+   "accept": [
+    "agent-frameworks-compared",
+    "langgraph",
+    "crewai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT078",
+   "style": "what-to-use",
+   "topic": "agent",
+   "q": "do i even need langchain",
+   "kind": "page",
+   "accept": [
+    "framework-vs-direct-api",
+    "langchain",
+    "agent-frameworks-compared"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT079",
+   "style": "concept",
+   "topic": "agent",
+   "q": "retrieval where the model decides to search again if results look poor",
+   "kind": "page",
+   "accept": [
+    "agentic-rag"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT080",
+   "style": "concept",
+   "topic": "agent",
+   "q": "what is the react prompting pattern for agents",
+   "kind": "page",
+   "accept": [
+    "react-agent-pattern"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT081",
+   "style": "what-to-use",
+   "topic": "agent",
+   "q": "i need a plan for who does what between agents handling support tickets",
+   "kind": "page",
+   "accept": [
+    "agentic-workflows",
+    "multi-agent-systems"
+   ],
+   "tool": "agentic-workflow-generator",
+   "path": []
+  },
+  {
+   "id": "RT082",
+   "style": "expert",
+   "topic": "agent",
+   "q": "how do agent evaluation harnesses score tool trajectories",
+   "kind": "page",
+   "accept": [
+    "agent-evaluation"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT083",
+   "style": "beginner",
+   "topic": "mcp",
+   "q": "i keep hearing about mcp, what problem does it solve",
+   "kind": "page",
+   "accept": [
+    "mcp"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT084",
+   "style": "concept",
+   "topic": "mcp",
+   "q": "why would i build an mcp server",
+   "kind": "page",
+   "accept": [
+    "mcp-servers-and-clients",
+    "mcp"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT085",
+   "style": "comparison",
+   "topic": "mcp",
+   "q": "why not just call the api directly instead of mcp",
+   "kind": "page",
+   "accept": [
+    "mcp-vs-api"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT086",
+   "style": "comparison",
+   "topic": "mcp",
+   "q": "mcp or plain function calling for my app",
+   "kind": "page",
+   "accept": [
+    "function-calling-vs-mcp"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT087",
+   "style": "security",
+   "topic": "mcp",
+   "q": "is it safe to install a random mcp server from github",
+   "kind": "page",
+   "accept": [
+    "mcp-security"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT088",
+   "style": "security",
+   "topic": "mcp",
+   "q": "tool poisoning in mcp",
+   "kind": "page",
+   "accept": [
+    "mcp-security"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT089",
+   "style": "beginner",
+   "topic": "a2a",
+   "q": "what is a2a",
+   "kind": "page",
+   "accept": [
+    "a2a-protocol"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT090",
+   "style": "comparison",
+   "topic": "a2a",
+   "q": "are a2a and mcp competitors",
+   "kind": "page",
+   "accept": [
+    "a2a-vs-mcp"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT091",
+   "style": "architecture",
+   "topic": "a2a",
+   "q": "how would agents from different vendors collaborate",
+   "kind": "page",
+   "accept": [
+    "a2a-protocol",
+    "agent-protocol-landscape"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT092",
+   "style": "expert",
+   "topic": "a2a",
+   "q": "where is the agent card published",
+   "kind": "page",
+   "accept": [
+    "a2a-protocol"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT093",
+   "style": "typo",
+   "topic": "mcp",
+   "q": "modle context protocal",
+   "kind": "page",
+   "accept": [
+    "mcp"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT094",
+   "style": "beginner",
+   "topic": "python",
+   "q": "how do i call an llm api from python",
+   "kind": "page",
+   "accept": [
+    "calling-ai-apis-with-python",
+    "python-for-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT095",
+   "style": "implementation",
+   "topic": "python",
+   "q": "build a small rag app in python",
+   "kind": "page",
+   "accept": [
+    "rag-with-python",
+    "python-ai-libraries"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT096",
+   "style": "implementation",
+   "topic": "python",
+   "q": "read a csv and clean it before sending to a model",
+   "kind": "page",
+   "accept": [
+    "python-data-for-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT097",
+   "style": "what-to-use",
+   "topic": "python",
+   "q": "which python libraries do i need for ai work",
+   "kind": "page",
+   "accept": [
+    "python-ai-libraries",
+    "python-for-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT098",
+   "style": "troubleshooting",
+   "topic": "python",
+   "q": "pip install broke my environment",
+   "kind": "page",
+   "accept": [
+    "package-managers",
+    "python"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT099",
+   "style": "vague",
+   "topic": "python",
+   "q": "python for machine learning where to begin",
+   "kind": "page",
+   "accept": [
+    "python-for-ai",
+    "python"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT100",
+   "style": "implementation",
+   "topic": "js",
+   "q": "call an ai api from javascript without exposing my key",
+   "kind": "page",
+   "accept": [
+    "calling-ai-apis-with-javascript",
+    "javascript-for-ai",
+    "nodejs-for-ai",
+    "api-keys"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT101",
+   "style": "implementation",
+   "topic": "ts",
+   "q": "type the response from my ai endpoint",
+   "kind": "page",
+   "accept": [
+    "typescript-api-client-types",
+    "typescript-for-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT102",
+   "style": "implementation",
+   "topic": "js",
+   "q": "stream tokens to the browser as they arrive",
+   "kind": "page",
+   "accept": [
+    "streaming-ai-responses",
+    "streaming-ai-with-nodejs"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT103",
+   "style": "implementation",
+   "topic": "react",
+   "q": "manage chat message state in react",
+   "kind": "page",
+   "accept": [
+    "react-chatbot-state",
+    "react-ai-interfaces"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT104",
+   "style": "implementation",
+   "topic": "react",
+   "q": "build a chat ui with react",
+   "kind": "page",
+   "accept": [
+    "react-ai-interfaces",
+    "react-chatbot-state"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT105",
+   "style": "beginner",
+   "topic": "react",
+   "q": "what is react used for",
+   "kind": "page",
+   "accept": [
+    "react"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT106",
+   "style": "what-to-use",
+   "topic": "nextjs",
+   "q": "should i use next.js for an ai chat app",
+   "kind": "page",
+   "accept": [
+    "nextjs",
+    "react-ai-interfaces"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT107",
+   "style": "implementation",
+   "topic": "node",
+   "q": "express server that proxies model requests",
+   "kind": "page",
+   "accept": [
+    "nodejs-for-ai",
+    "express"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT108",
+   "style": "typo",
+   "topic": "node",
+   "q": "node js streming response",
+   "kind": "page",
+   "accept": [
+    "streaming-ai-with-nodejs",
+    "nodejs"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT109",
+   "style": "beginner",
+   "topic": "ts",
+   "q": "why use typescript instead of javascript",
+   "kind": "page",
+   "accept": [
+    "typescript",
+    "javascript",
+    "typescript-for-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT110",
+   "style": "what-to-use",
+   "topic": "js",
+   "q": "typescript or javascript for a small tool",
+   "kind": "page",
+   "accept": [
+    "typescript",
+    "javascript"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT111",
+   "style": "beginner",
+   "topic": "api",
+   "q": "what is an api",
+   "kind": "page",
+   "accept": [
+    "what-is-an-api"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT112",
+   "style": "concept",
+   "topic": "api",
+   "q": "rest vs graphql which one",
+   "kind": "page",
+   "accept": [
+    "rest-vs-graphql",
+    "rest-apis",
+    "graphql"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT113",
+   "style": "beginner",
+   "topic": "api",
+   "q": "what does restful mean",
+   "kind": "page",
+   "accept": [
+    "rest-apis"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT114",
+   "style": "security",
+   "topic": "api",
+   "q": "where should i keep my api keys",
+   "kind": "page",
+   "accept": [
+    "api-keys",
+    "environment-variables"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT115",
+   "style": "security",
+   "topic": "api",
+   "q": "api key versus oauth token",
+   "kind": "page",
+   "accept": [
+    "api-keys",
+    "oauth",
+    "api-authentication"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT116",
+   "style": "beginner",
+   "topic": "json",
+   "q": "what is json",
+   "kind": "page",
+   "accept": [
+    "what-is-json"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT117",
+   "style": "troubleshooting",
+   "topic": "json",
+   "q": "unexpected token in json at position 0",
+   "kind": "page",
+   "accept": [
+    "json-validation",
+    "what-is-json"
+   ],
+   "tool": "json-formatter",
+   "path": []
+  },
+  {
+   "id": "RT118",
+   "style": "implementation",
+   "topic": "json",
+   "q": "validate an api payload against a schema",
+   "kind": "page",
+   "accept": [
+    "json-validation",
+    "json-schema"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT119",
+   "style": "what-to-use",
+   "topic": "json",
+   "q": "pretty print and validate this json",
+   "kind": "page",
+   "accept": [
+    "json-validation",
+    "what-is-json"
+   ],
+   "tool": "json-formatter",
+   "path": []
+  },
+  {
+   "id": "RT120",
+   "style": "concept",
+   "topic": "api",
+   "q": "what is a webhook",
+   "kind": "page",
+   "accept": [
+    "webhooks"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT121",
+   "style": "security",
+   "topic": "api",
+   "q": "browser says blocked by cors policy",
+   "kind": "page",
+   "accept": [
+    "cors"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT122",
+   "style": "beginner",
+   "topic": "api",
+   "q": "what is inside a json web token",
+   "kind": "page",
+   "accept": [
+    "json-web-tokens"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT123",
+   "style": "concept",
+   "topic": "api",
+   "q": "difference between authentication and authorization",
+   "kind": "page",
+   "accept": [
+    "authentication-vs-authorization"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT124",
+   "style": "security",
+   "topic": "api",
+   "q": "what is the oauth authorization code flow",
+   "kind": "page",
+   "accept": [
+    "oauth"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT125",
+   "style": "concept",
+   "topic": "api",
+   "q": "openid connect vs oauth",
+   "kind": "page",
+   "accept": [
+    "openid-connect",
+    "oauth"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT126",
+   "style": "beginner",
+   "topic": "db",
+   "q": "when to use sql vs nosql",
+   "kind": "page",
+   "accept": [
+    "sql-vs-nosql",
+    "sql",
+    "mongodb"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT127",
+   "style": "beginner",
+   "topic": "db",
+   "q": "what is a relational database",
+   "kind": "page",
+   "accept": [
+    "sql",
+    "postgresql",
+    "databases-for-ai-apps"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT128",
+   "style": "implementation",
+   "topic": "db",
+   "q": "how do i join two tables",
+   "kind": "page",
+   "accept": [
+    "sql"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT129",
+   "style": "what-to-use",
+   "topic": "db",
+   "q": "postgres or mysql for a new project",
+   "kind": "page",
+   "accept": [
+    "postgresql",
+    "mysql"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT130",
+   "style": "what-to-use",
+   "topic": "db",
+   "q": "sqlite for a small app",
+   "kind": "page",
+   "accept": [
+    "sqlite"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT131",
+   "style": "concept",
+   "topic": "db",
+   "q": "what is redis used for",
+   "kind": "page",
+   "accept": [
+    "redis"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT132",
+   "style": "concept",
+   "topic": "db",
+   "q": "what is an orm",
+   "kind": "page",
+   "accept": [
+    "prisma-and-orms"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT133",
+   "style": "what-to-use",
+   "topic": "db",
+   "q": "which database should an ai app use",
+   "kind": "page",
+   "accept": [
+    "databases-for-ai-apps",
+    "postgresql-for-ai-apps",
+    "choosing-a-vector-store"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT134",
+   "style": "implementation",
+   "topic": "db",
+   "q": "store chat history for an assistant",
+   "kind": "page",
+   "accept": [
+    "databases-for-ai-apps",
+    "postgresql-for-ai-apps",
+    "agent-memory"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT135",
+   "style": "beginner",
+   "topic": "cloud",
+   "q": "what is aws and what are its main services",
+   "kind": "page",
+   "accept": [
+    "aws-fundamentals"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT136",
+   "style": "beginner",
+   "topic": "cloud",
+   "q": "azure basics for developers",
+   "kind": "page",
+   "accept": [
+    "azure-fundamentals"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT137",
+   "style": "beginner",
+   "topic": "cloud",
+   "q": "what is gcp",
+   "kind": "page",
+   "accept": [
+    "gcp-fundamentals"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT138",
+   "style": "what-to-use",
+   "topic": "cloud",
+   "q": "aws vs azure vs gcp for hosting a model",
+   "kind": "page",
+   "accept": [
+    "aws-fundamentals",
+    "azure-fundamentals",
+    "gcp-fundamentals"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT139",
+   "style": "security",
+   "topic": "cloud",
+   "q": "my s3 bucket is public by mistake",
+   "kind": "page",
+   "accept": [
+    "aws-fundamentals"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT140",
+   "style": "beginner",
+   "topic": "devops",
+   "q": "what is docker",
+   "kind": "page",
+   "accept": [
+    "docker",
+    "containers"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT141",
+   "style": "concept",
+   "topic": "devops",
+   "q": "container versus virtual machine",
+   "kind": "page",
+   "accept": [
+    "containers",
+    "docker"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT142",
+   "style": "beginner",
+   "topic": "devops",
+   "q": "what is ci cd",
+   "kind": "page",
+   "accept": [
+    "cicd"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT143",
+   "style": "beginner",
+   "topic": "devops",
+   "q": "git basics for beginners",
+   "kind": "page",
+   "accept": [
+    "git"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT144",
+   "style": "troubleshooting",
+   "topic": "devops",
+   "q": "git says i have a merge conflict",
+   "kind": "page",
+   "accept": [
+    "git",
+    "github"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT145",
+   "style": "beginner",
+   "topic": "devops",
+   "q": "what is github and how is it different from git",
+   "kind": "page",
+   "accept": [
+    "github",
+    "git"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT146",
+   "style": "implementation",
+   "topic": "devops",
+   "q": "set up automatic tests on every pull request",
+   "kind": "page",
+   "accept": [
+    "cicd",
+    "github"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT147",
+   "style": "beginner",
+   "topic": "devops",
+   "q": "what are environment variables for",
+   "kind": "page",
+   "accept": [
+    "environment-variables"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT148",
+   "style": "implementation",
+   "topic": "devops",
+   "q": "package an app so it runs the same everywhere",
+   "kind": "page",
+   "accept": [
+    "docker",
+    "containers"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT149",
+   "style": "troubleshooting",
+   "topic": "devops",
+   "q": "npm install fails with dependency errors",
+   "kind": "page",
+   "accept": [
+    "package-managers",
+    "nodejs"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT150",
+   "style": "beginner",
+   "topic": "ms",
+   "q": "what is sharepoint",
+   "kind": "page",
+   "accept": [
+    "sharepoint"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT151",
+   "style": "beginner",
+   "topic": "ms",
+   "q": "what is spfx",
+   "kind": "page",
+   "accept": [
+    "sharepoint-framework"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT152",
+   "style": "implementation",
+   "topic": "ms",
+   "q": "build my first spfx web part",
+   "kind": "page",
+   "accept": [
+    "build-spfx-web-part",
+    "sharepoint-framework"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT153",
+   "style": "typo",
+   "topic": "ms",
+   "q": "sharepont framwork webpart",
+   "kind": "page",
+   "accept": [
+    "sharepoint-framework",
+    "build-spfx-web-part",
+    "sharepoint"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT154",
+   "style": "concept",
+   "topic": "ms",
+   "q": "what is microsoft graph",
+   "kind": "page",
+   "accept": [
+    "microsoft-graph"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT155",
+   "style": "integration",
+   "topic": "ms",
+   "q": "read a user's calendar through microsoft graph",
+   "kind": "page",
+   "accept": [
+    "microsoft-graph",
+    "microsoft-entra-id"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT156",
+   "style": "concept",
+   "topic": "ms",
+   "q": "what is entra id",
+   "kind": "page",
+   "accept": [
+    "microsoft-entra-id"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT157",
+   "style": "beginner",
+   "topic": "ms",
+   "q": "what is power automate and power apps",
+   "kind": "page",
+   "accept": [
+    "power-platform"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT158",
+   "style": "implementation",
+   "topic": "ms",
+   "q": "build a teams tab or bot",
+   "kind": "page",
+   "accept": [
+    "teams-development"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT159",
+   "style": "beginner",
+   "topic": "ms",
+   "q": "what is microsoft 365",
+   "kind": "page",
+   "accept": [
+    "microsoft-365"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT160",
+   "style": "integration",
+   "topic": "ms",
+   "q": "let a daemon service call graph without a user",
+   "kind": "page",
+   "accept": [
+    "microsoft-graph",
+    "microsoft-entra-id",
+    "oauth"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT161",
+   "style": "what-to-use",
+   "topic": "ms",
+   "q": "spfx or power apps for an intranet form",
+   "kind": "page",
+   "accept": [
+    "sharepoint-framework",
+    "power-platform",
+    "sharepoint"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT162",
+   "style": "beginner",
+   "topic": "fw",
+   "q": "what is an ai framework",
+   "kind": "page",
+   "accept": [
+    "what-is-an-ai-framework"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT163",
+   "style": "beginner",
+   "topic": "fw",
+   "q": "what is hugging face",
+   "kind": "page",
+   "accept": [
+    "hugging-face"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT164",
+   "style": "what-to-use",
+   "topic": "fw",
+   "q": "which sdk should i use to call different models",
+   "kind": "page",
+   "accept": [
+    "ai-sdks",
+    "model-apis",
+    "framework-vs-direct-api"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT165",
+   "style": "beginner",
+   "topic": "fw",
+   "q": "what is llamaindex for",
+   "kind": "page",
+   "accept": [
+    "llamaindex"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT166",
+   "style": "what-to-use",
+   "topic": "fw",
+   "q": "langchain or llamaindex for rag",
+   "kind": "page",
+   "accept": [
+    "rag-frameworks",
+    "langchain",
+    "llamaindex"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT167",
+   "style": "concept",
+   "topic": "fw",
+   "q": "framework where you declare modules and let an optimizer tune the prompts",
+   "kind": "page",
+   "accept": [
+    "dspy"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT168",
+   "style": "concept",
+   "topic": "fw",
+   "q": "microsoft sdk for plugging llms into dotnet apps",
+   "kind": "page",
+   "accept": [
+    "semantic-kernel"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT169",
+   "style": "concept",
+   "topic": "fw",
+   "q": "what is the openai agents sdk",
+   "kind": "page",
+   "accept": [
+    "openai-agents-sdk"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT170",
+   "style": "concept",
+   "topic": "fw",
+   "q": "what is autogen",
+   "kind": "page",
+   "accept": [
+    "autogen"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT171",
+   "style": "beginner",
+   "topic": "runtime",
+   "q": "easiest way to pull and chat with an open model on my own pc",
+   "kind": "page",
+   "accept": [
+    "ollama",
+    "local-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT172",
+   "style": "what-to-use",
+   "topic": "runtime",
+   "q": "run an llm on my laptop without a gpu",
+   "kind": "page",
+   "accept": [
+    "llama-cpp",
+    "ollama",
+    "local-ai",
+    "quantization"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT173",
+   "style": "what-to-use",
+   "topic": "runtime",
+   "q": "serve a model to hundreds of users",
+   "kind": "page",
+   "accept": [
+    "vllm",
+    "model-serving-and-inference",
+    "local-runtimes-compared"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT174",
+   "style": "comparison",
+   "topic": "runtime",
+   "q": "ollama versus vllm",
+   "kind": "page",
+   "accept": [
+    "local-runtimes-compared",
+    "ollama",
+    "vllm"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT175",
+   "style": "concept",
+   "topic": "runtime",
+   "q": "what is gguf",
+   "kind": "page",
+   "accept": [
+    "llama-cpp",
+    "quantization"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT176",
+   "style": "concept",
+   "topic": "runtime",
+   "q": "what is onnx",
+   "kind": "page",
+   "accept": [
+    "onnx-runtime"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT177",
+   "style": "what-to-use",
+   "topic": "runtime",
+   "q": "how do i run a model in the browser",
+   "kind": "page",
+   "accept": [
+    "onnx-runtime",
+    "local-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT178",
+   "style": "concept",
+   "topic": "runtime",
+   "q": "why use pytorch",
+   "kind": "page",
+   "accept": [
+    "pytorch"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT179",
+   "style": "troubleshooting",
+   "topic": "runtime",
+   "q": "cuda out of memory when loading a 13b model",
+   "kind": "page",
+   "accept": [
+    "quantization",
+    "gpus-and-ai-accelerators",
+    "model-serving-and-inference"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT180",
+   "style": "beginner",
+   "topic": "local",
+   "q": "can i run ai privately on my own machine",
+   "kind": "page",
+   "accept": [
+    "local-ai",
+    "local-ai-vs-cloud-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT181",
+   "style": "comparison",
+   "topic": "local",
+   "q": "local model or cloud api for sensitive documents",
+   "kind": "page",
+   "accept": [
+    "local-ai-vs-cloud-ai",
+    "ai-privacy-and-security"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT182",
+   "style": "concept",
+   "topic": "local",
+   "q": "are downloadable models the same as open source",
+   "kind": "page",
+   "accept": [
+    "open-weights-models"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT183",
+   "style": "concept",
+   "topic": "local",
+   "q": "tiny llms that run on a phone",
+   "kind": "page",
+   "accept": [
+    "small-language-models"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT184",
+   "style": "concept",
+   "topic": "local",
+   "q": "what does 4 bit quantization do",
+   "kind": "page",
+   "accept": [
+    "quantization"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT185",
+   "style": "beginner",
+   "topic": "mm",
+   "q": "what is multimodal ai",
+   "kind": "page",
+   "accept": [
+    "multimodal-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT186",
+   "style": "concept",
+   "topic": "mm",
+   "q": "how do models understand images and text together",
+   "kind": "page",
+   "accept": [
+    "vision-language-models",
+    "multimodal-ai",
+    "contrastive-learning-clip"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT187",
+   "style": "concept",
+   "topic": "cv",
+   "q": "what is clip in computer vision",
+   "kind": "page",
+   "accept": [
+    "contrastive-learning-clip"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT188",
+   "style": "implementation",
+   "topic": "cv",
+   "q": "extract text from scanned invoices",
+   "kind": "page",
+   "accept": [
+    "document-understanding-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT189",
+   "style": "concept",
+   "topic": "cv",
+   "q": "vision transformer vs resnet",
+   "kind": "page",
+   "accept": [
+    "cnn-vs-vision-transformer",
+    "vision-transformers"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT190",
+   "style": "coverage-probe",
+   "topic": "cv",
+   "q": "how does object detection like yolo work",
+   "kind": "gap",
+   "accept": [
+    "convolutional-neural-networks",
+    "vision-transformers"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT191",
+   "style": "coverage-probe",
+   "topic": "cv",
+   "q": "opencv tutorial for face detection",
+   "kind": "gap",
+   "accept": [
+    "convolutional-neural-networks"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT192",
+   "style": "beginner",
+   "topic": "speech",
+   "q": "how does speech to text work",
+   "kind": "page",
+   "accept": [
+    "speech-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT193",
+   "style": "implementation",
+   "topic": "speech",
+   "q": "build a voice assistant with an llm",
+   "kind": "page",
+   "accept": [
+    "speech-ai",
+    "ai-agents"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT194",
+   "style": "security",
+   "topic": "speech",
+   "q": "can ai clone my voice",
+   "kind": "page",
+   "accept": [
+    "speech-ai",
+    "c2pa-content-provenance"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT195",
+   "style": "concept",
+   "topic": "speech",
+   "q": "what is whisper",
+   "kind": "page",
+   "accept": [
+    "speech-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT196",
+   "style": "concept",
+   "topic": "video",
+   "q": "how do text to video models work",
+   "kind": "page",
+   "accept": [
+    "video-generation-models",
+    "diffusion-models"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT197",
+   "style": "beginner",
+   "topic": "robot",
+   "q": "how do robots learn from ai",
+   "kind": "page",
+   "accept": [
+    "embodied-ai",
+    "imitation-learning",
+    "reinforcement-learning"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT198",
+   "style": "concept",
+   "topic": "robot",
+   "q": "what is a vla model",
+   "kind": "page",
+   "accept": [
+    "vision-language-action-models"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT199",
+   "style": "concept",
+   "topic": "robot",
+   "q": "teaching a robot by demonstration",
+   "kind": "page",
+   "accept": [
+    "imitation-learning"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT200",
+   "style": "troubleshooting",
+   "topic": "robot",
+   "q": "my policy works in the simulator but not on hardware",
+   "kind": "page",
+   "accept": [
+    "sim-to-real-transfer"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT201",
+   "style": "concept",
+   "topic": "robot",
+   "q": "ai that imagines future states to plan actions",
+   "kind": "page",
+   "accept": [
+    "world-models"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT202",
+   "style": "coverage-probe",
+   "topic": "robot",
+   "q": "how do i program a robot with ros",
+   "kind": "gap",
+   "accept": [
+    "embodied-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT203",
+   "style": "coverage-probe",
+   "topic": "robot",
+   "q": "how do self driving cars work",
+   "kind": "gap",
+   "accept": [
+    "embodied-ai",
+    "convolutional-neural-networks"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT204",
+   "style": "security",
+   "topic": "sec",
+   "q": "text hidden in a web page that tells my assistant to misbehave",
+   "kind": "page",
+   "accept": [
+    "prompt-injection"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT205",
+   "style": "security",
+   "topic": "sec",
+   "q": "ignore previous instructions attack",
+   "kind": "page",
+   "accept": [
+    "prompt-injection"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT206",
+   "style": "security",
+   "topic": "sec",
+   "q": "is it ok to paste customer data into chatgpt",
+   "kind": "page",
+   "accept": [
+    "ai-privacy-and-security"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT207",
+   "style": "security",
+   "topic": "sec",
+   "q": "remove secrets from a log before sharing it with an ai",
+   "kind": "page",
+   "accept": [
+    "ai-privacy-and-security",
+    "llm-observability"
+   ],
+   "tool": "pii-secret-redactor",
+   "path": []
+  },
+  {
+   "id": "RT208",
+   "style": "security",
+   "topic": "sec",
+   "q": "standard checklist of security risks for generative ai apps",
+   "kind": "page",
+   "accept": [
+    "owasp-llm-top-10"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT209",
+   "style": "security",
+   "topic": "sec",
+   "q": "how do i red team my chatbot",
+   "kind": "page",
+   "accept": [
+    "red-teaming"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT210",
+   "style": "security",
+   "topic": "sec",
+   "q": "how do guardrails stop harmful output",
+   "kind": "page",
+   "accept": [
+    "ai-guardrails"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT211",
+   "style": "security",
+   "topic": "sec",
+   "q": "how do i sandbox code the model writes",
+   "kind": "page",
+   "accept": [
+    "code-execution-sandboxing"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT212",
+   "style": "security",
+   "topic": "sec",
+   "q": "can i tell if an image was made by ai",
+   "kind": "page",
+   "accept": [
+    "c2pa-content-provenance"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT213",
+   "style": "security",
+   "topic": "sec",
+   "q": "what is jailbreaking a model",
+   "kind": "page",
+   "accept": [
+    "prompt-injection",
+    "red-teaming"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT214",
+   "style": "expert",
+   "topic": "sec",
+   "q": "least privilege design for tool using agents",
+   "kind": "page",
+   "accept": [
+    "integration-permissions",
+    "agent-tools",
+    "prompt-injection"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT215",
+   "style": "beginner",
+   "topic": "eval",
+   "q": "how do i know if my ai feature is any good",
+   "kind": "page",
+   "accept": [
+    "ai-evaluation",
+    "llm-benchmarks-vs-task-evals"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT216",
+   "style": "concept",
+   "topic": "eval",
+   "q": "what does a high score on the 57 subject multiple choice benchmark tell me",
+   "kind": "page",
+   "accept": [
+    "mmlu"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT217",
+   "style": "concept",
+   "topic": "eval",
+   "q": "why are leaderboard rankings misleading",
+   "kind": "page",
+   "accept": [
+    "benchmarks-and-leaderboards",
+    "benchmark-contamination"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT218",
+   "style": "concept",
+   "topic": "eval",
+   "q": "using one model to grade another",
+   "kind": "page",
+   "accept": [
+    "llm-as-a-judge"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT219",
+   "style": "implementation",
+   "topic": "eval",
+   "q": "build a test set for my rag bot",
+   "kind": "page",
+   "accept": [
+    "rag-evaluation",
+    "ai-evaluation"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT220",
+   "style": "what-to-use",
+   "topic": "eval",
+   "q": "which metrics for a classifier with rare positives",
+   "kind": "page",
+   "accept": [
+    "evaluation-metrics-for-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT221",
+   "style": "concept",
+   "topic": "eval",
+   "q": "benchmark where models fix real github issues",
+   "kind": "page",
+   "accept": [
+    "swe-bench"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT222",
+   "style": "what-to-use",
+   "topic": "eval",
+   "q": "check whether each claim is backed by the source text",
+   "kind": "page",
+   "accept": [
+    "how-to-reduce-hallucinations",
+    "ai-hallucinations",
+    "rag-evaluation"
+   ],
+   "tool": "fact-anchor-checker",
+   "path": []
+  },
+  {
+   "id": "RT223",
+   "style": "concept",
+   "topic": "eval",
+   "q": "how are chatbot elo rankings made",
+   "kind": "page",
+   "accept": [
+    "human-preference-evaluation"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT224",
+   "style": "beginner",
+   "topic": "mlops",
+   "q": "how do teams keep ml models running reliably after launch",
+   "kind": "page",
+   "accept": [
+    "mlops"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT225",
+   "style": "implementation",
+   "topic": "mlops",
+   "q": "track experiments and register models",
+   "kind": "page",
+   "accept": [
+    "mlflow",
+    "mlops"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT226",
+   "style": "troubleshooting",
+   "topic": "mlops",
+   "q": "my model got worse after three months in production",
+   "kind": "page",
+   "accept": [
+    "model-drift-and-monitoring"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT227",
+   "style": "implementation",
+   "topic": "mlops",
+   "q": "log prompts and tokens in production",
+   "kind": "page",
+   "accept": [
+    "llm-observability"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT228",
+   "style": "what-to-use",
+   "topic": "mlops",
+   "q": "how many gpus do i need to serve a 70b model",
+   "kind": "page",
+   "accept": [
+    "gpus-and-ai-accelerators",
+    "model-serving-and-inference",
+    "quantization"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT229",
+   "style": "concept",
+   "topic": "mlops",
+   "q": "how to split training across several gpus",
+   "kind": "page",
+   "accept": [
+    "distributed-training"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT230",
+   "style": "implementation",
+   "topic": "mlops",
+   "q": "cut my llm bill",
+   "kind": "page",
+   "accept": [
+    "llm-cost-optimization",
+    "prompt-caching"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT231",
+   "style": "concept",
+   "topic": "mlops",
+   "q": "what is ray used for",
+   "kind": "page",
+   "accept": [
+    "ray"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT232",
+   "style": "beginner",
+   "topic": "gov",
+   "q": "who signs off on ai use inside a company",
+   "kind": "page",
+   "accept": [
+    "ai-governance"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT233",
+   "style": "beginner",
+   "topic": "gov",
+   "q": "does the eu ai act apply to my startup",
+   "kind": "page",
+   "accept": [
+    "eu-ai-act"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT234",
+   "style": "concept",
+   "topic": "gov",
+   "q": "what is the nist ai risk framework",
+   "kind": "page",
+   "accept": [
+    "nist-ai-rmf"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT235",
+   "style": "concept",
+   "topic": "gov",
+   "q": "certifiable standard for managing ai in an organisation",
+   "kind": "page",
+   "accept": [
+    "iso-iec-42001"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT236",
+   "style": "concept",
+   "topic": "gov",
+   "q": "documentation template for a released model",
+   "kind": "page",
+   "accept": [
+    "model-cards"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT237",
+   "style": "concept",
+   "topic": "gov",
+   "q": "are my model's error rates different across demographic groups",
+   "kind": "page",
+   "accept": [
+    "ai-bias-and-fairness"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT238",
+   "style": "coverage-probe",
+   "topic": "gov",
+   "q": "what is gdpr and does it cover ai training data",
+   "kind": "gap",
+   "accept": [
+    "ai-privacy-and-security",
+    "ai-governance"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT239",
+   "style": "coverage-probe",
+   "topic": "gov",
+   "q": "ai regulation in the united states",
+   "kind": "gap",
+   "accept": [
+    "ai-governance",
+    "nist-ai-rmf"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT240",
+   "style": "concept",
+   "topic": "safety",
+   "q": "what is sycophancy",
+   "kind": "page",
+   "accept": [
+    "sycophancy"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT241",
+   "style": "concept",
+   "topic": "safety",
+   "q": "how is dpo different from rlhf",
+   "kind": "page",
+   "accept": [
+    "dpo-vs-rlhf",
+    "dpo",
+    "rlhf"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT242",
+   "style": "concept",
+   "topic": "safety",
+   "q": "why do chatbots flatter users",
+   "kind": "page",
+   "accept": [
+    "sycophancy",
+    "rlhf"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT243",
+   "style": "concept",
+   "topic": "safety",
+   "q": "what does alignment mean for ai",
+   "kind": "page",
+   "accept": [
+    "ai-alignment"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT244",
+   "style": "concept",
+   "topic": "safety",
+   "q": "reward hacking examples",
+   "kind": "page",
+   "accept": [
+    "reward-hacking"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT245",
+   "style": "concept",
+   "topic": "safety",
+   "q": "ai critiques its own answers using written principles",
+   "kind": "page",
+   "accept": [
+    "constitutional-ai-and-rlaif"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT246",
+   "style": "concept",
+   "topic": "safety",
+   "q": "can we see inside a neural network",
+   "kind": "page",
+   "accept": [
+    "mechanistic-interpretability"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT247",
+   "style": "concept",
+   "topic": "science",
+   "q": "predict 3d structure from an amino acid sequence",
+   "kind": "page",
+   "accept": [
+    "alphafold"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT248",
+   "style": "concept",
+   "topic": "science",
+   "q": "neural networks that respect physics equations",
+   "kind": "page",
+   "accept": [
+    "physics-informed-neural-networks"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT249",
+   "style": "concept",
+   "topic": "science",
+   "q": "can machine learning forecast weather",
+   "kind": "page",
+   "accept": [
+    "ai-weather-forecasting"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT250",
+   "style": "concept",
+   "topic": "science",
+   "q": "ai for finding new battery materials",
+   "kind": "page",
+   "accept": [
+    "ai-materials-discovery"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT251",
+   "style": "concept",
+   "topic": "science",
+   "q": "ai in drug discovery",
+   "kind": "page",
+   "accept": [
+    "ai-drug-discovery"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT252",
+   "style": "concept",
+   "topic": "arch",
+   "q": "model with many experts but only a few active per token",
+   "kind": "page",
+   "accept": [
+    "mixture-of-experts"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT253",
+   "style": "concept",
+   "topic": "arch",
+   "q": "what are state space models and mamba",
+   "kind": "page",
+   "accept": [
+    "state-space-models"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT254",
+   "style": "concept",
+   "topic": "arch",
+   "q": "how does a kv cache save compute",
+   "kind": "page",
+   "accept": [
+    "kv-cache"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT255",
+   "style": "concept",
+   "topic": "arch",
+   "q": "what is flash attention",
+   "kind": "page",
+   "accept": [
+    "flash-attention"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT256",
+   "style": "concept",
+   "topic": "arch",
+   "q": "how do transformers know word order",
+   "kind": "page",
+   "accept": [
+    "positional-encoding"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT257",
+   "style": "concept",
+   "topic": "arch",
+   "q": "bert versus gpt style models",
+   "kind": "page",
+   "accept": [
+    "encoder-decoder-vs-decoder-only"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT258",
+   "style": "concept",
+   "topic": "llm",
+   "q": "does making llms bigger improve them predictably",
+   "kind": "page",
+   "accept": [
+    "scaling-laws"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT259",
+   "style": "concept",
+   "topic": "llm",
+   "q": "how are base models turned into chat assistants",
+   "kind": "page",
+   "accept": [
+    "instruction-tuning",
+    "rlhf"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT260",
+   "style": "implementation",
+   "topic": "llm",
+   "q": "fine tune a 7b model on a single consumer gpu",
+   "kind": "page",
+   "accept": [
+    "lora-and-peft",
+    "fine-tuning"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT261",
+   "style": "concept",
+   "topic": "llm",
+   "q": "distilling a big model into a small one",
+   "kind": "page",
+   "accept": [
+    "knowledge-distillation"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT262",
+   "style": "concept",
+   "topic": "llm",
+   "q": "small draft model proposes tokens a big model verifies",
+   "kind": "page",
+   "accept": [
+    "speculative-decoding"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT263",
+   "style": "concept",
+   "topic": "llm",
+   "q": "how does prompt caching reduce cost",
+   "kind": "page",
+   "accept": [
+    "prompt-caching"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT264",
+   "style": "implementation",
+   "topic": "llm",
+   "q": "manage what goes into the context window for a long running agent",
+   "kind": "page",
+   "accept": [
+    "context-engineering",
+    "context-windows",
+    "agent-memory"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT265",
+   "style": "concept",
+   "topic": "llm",
+   "q": "what are open source models like llama",
+   "kind": "page",
+   "accept": [
+    "open-weights-models",
+    "local-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT266",
+   "style": "vague",
+   "topic": "ai",
+   "q": "how do i get started with ai",
+   "kind": "page",
+   "accept": [
+    "what-is-ai",
+    "python-for-ai",
+    "large-language-models"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT267",
+   "style": "vague",
+   "topic": "ai",
+   "q": "tell me about agents",
+   "kind": "page",
+   "accept": [
+    "ai-agents"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT268",
+   "style": "vague",
+   "topic": "ai",
+   "q": "ai security",
+   "kind": "page",
+   "accept": [
+    "ai-privacy-and-security",
+    "prompt-injection",
+    "owasp-llm-top-10"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT269",
+   "style": "vague",
+   "topic": "ai",
+   "q": "best way to use ai at work",
+   "kind": "page",
+   "accept": [
+    "ai-privacy-and-security",
+    "prompt-engineering",
+    "ai-governance"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT270",
+   "style": "vague",
+   "topic": "ai",
+   "q": "vectors",
+   "kind": "page",
+   "accept": [
+    "embeddings",
+    "vector-databases"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT271",
+   "style": "vague",
+   "topic": "ai",
+   "q": "rag vs",
+   "kind": "page",
+   "accept": [
+    "rag-vs-fine-tuning",
+    "rag"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT272",
+   "style": "vague",
+   "topic": "ai",
+   "q": "models",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT273",
+   "style": "vague",
+   "topic": "ai",
+   "q": "learning",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT274",
+   "style": "vague",
+   "topic": "ai",
+   "q": "explain it simply please",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT275",
+   "style": "vague",
+   "topic": "ai",
+   "q": "best one",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT276",
+   "style": "vague",
+   "topic": "dev",
+   "q": "help with my code",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT277",
+   "style": "vague",
+   "topic": "dev",
+   "q": "it does not work",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT278",
+   "style": "acronym",
+   "topic": "ai",
+   "q": "llm rag mcp relationship",
+   "kind": "page",
+   "accept": [
+    "rag",
+    "mcp",
+    "large-language-models"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT279",
+   "style": "acronym",
+   "topic": "ai",
+   "q": "what do nlp and nlu mean",
+   "kind": "gap",
+   "accept": [
+    "what-is-ai",
+    "large-language-models"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT280",
+   "style": "acronym",
+   "topic": "ai",
+   "q": "gpu vs tpu",
+   "kind": "page",
+   "accept": [
+    "gpus-and-ai-accelerators"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT281",
+   "style": "acronym",
+   "topic": "ai",
+   "q": "what is hitl in ai workflows",
+   "kind": "page",
+   "accept": [
+    "agentic-workflows",
+    "ai-agents"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT282",
+   "style": "acronym",
+   "topic": "eval",
+   "q": "what is bleu and rouge",
+   "kind": "page",
+   "accept": [
+    "evaluation-metrics-for-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT283",
+   "style": "acronym",
+   "topic": "ai",
+   "q": "asr vs tts",
+   "kind": "page",
+   "accept": [
+    "speech-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT284",
+   "style": "acronym",
+   "topic": "dev",
+   "q": "spa vs ssr",
+   "kind": "gap",
+   "accept": [
+    "nextjs",
+    "react",
+    "frontend-and-backend"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT285",
+   "style": "acronym",
+   "topic": "dev",
+   "q": "crud api example",
+   "kind": "page",
+   "accept": [
+    "rest-apis",
+    "what-is-an-api"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT286",
+   "style": "acronym",
+   "topic": "dev",
+   "q": "sso with saml or oidc",
+   "kind": "gap",
+   "accept": [
+    "openid-connect",
+    "oauth",
+    "microsoft-entra-id"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT287",
+   "style": "acronym",
+   "topic": "ai",
+   "q": "oss vs proprietary models",
+   "kind": "page",
+   "accept": [
+    "open-weights-models"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT288",
+   "style": "typo",
+   "topic": "dev",
+   "q": "dockr container networking",
+   "kind": "page",
+   "accept": [
+    "docker",
+    "containers"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT289",
+   "style": "typo",
+   "topic": "dev",
+   "q": "postgress vs mysql",
+   "kind": "page",
+   "accept": [
+    "postgresql",
+    "mysql"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT290",
+   "style": "typo",
+   "topic": "dev",
+   "q": "kubenetes basics",
+   "kind": "gap",
+   "accept": [
+    "containers",
+    "docker"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT291",
+   "style": "typo",
+   "topic": "ai",
+   "q": "langchian agents",
+   "kind": "page",
+   "accept": [
+    "langchain",
+    "agent-frameworks-compared"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT292",
+   "style": "typo",
+   "topic": "ai",
+   "q": "hugging fase models",
+   "kind": "page",
+   "accept": [
+    "hugging-face"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT293",
+   "style": "typo",
+   "topic": "ai",
+   "q": "fine tunning vs prompting",
+   "kind": "page",
+   "accept": [
+    "fine-tuning",
+    "rag-vs-fine-tuning",
+    "prompt-engineering"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT294",
+   "style": "typo",
+   "topic": "ai",
+   "q": "halucination in llms",
+   "kind": "page",
+   "accept": [
+    "ai-hallucinations"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT295",
+   "style": "typo",
+   "topic": "ai",
+   "q": "guardrials for llm apps",
+   "kind": "page",
+   "accept": [
+    "ai-guardrails"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT296",
+   "style": "coverage-probe",
+   "topic": "devops",
+   "q": "how do i run a kubernetes cluster",
+   "kind": "gap",
+   "accept": [
+    "containers",
+    "docker"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT297",
+   "style": "coverage-probe",
+   "topic": "devops",
+   "q": "what is a helm chart",
+   "kind": "gap",
+   "accept": [
+    "containers",
+    "docker"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT298",
+   "style": "coverage-probe",
+   "topic": "devops",
+   "q": "terraform vs pulumi",
+   "kind": "gap",
+   "accept": [
+    "cicd",
+    "aws-fundamentals"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT299",
+   "style": "coverage-probe",
+   "topic": "devops",
+   "q": "how do i configure nginx as a reverse proxy",
+   "kind": "gap",
+   "accept": [
+    "frontend-and-backend",
+    "express"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT300",
+   "style": "coverage-probe",
+   "topic": "devops",
+   "q": "linux command line cheat sheet",
+   "kind": "gap",
+   "accept": [
+    "git"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT301",
+   "style": "coverage-probe",
+   "topic": "devops",
+   "q": "what is a service mesh",
+   "kind": "gap",
+   "accept": [
+    "containers"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT302",
+   "style": "coverage-probe",
+   "topic": "devops",
+   "q": "prometheus and grafana monitoring",
+   "kind": "gap",
+   "accept": [
+    "llm-observability",
+    "model-drift-and-monitoring"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT303",
+   "style": "coverage-probe",
+   "topic": "dev",
+   "q": "vue vs angular",
+   "kind": "gap",
+   "accept": [
+    "react",
+    "frontend-and-backend"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT304",
+   "style": "coverage-probe",
+   "topic": "dev",
+   "q": "how do i write unit tests with jest",
+   "kind": "gap",
+   "accept": [
+    "javascript",
+    "typescript"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT305",
+   "style": "coverage-probe",
+   "topic": "dev",
+   "q": "what is a monorepo",
+   "kind": "gap",
+   "accept": [
+    "git",
+    "package-managers"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT306",
+   "style": "coverage-probe",
+   "topic": "dev",
+   "q": "vs code extensions for python",
+   "kind": "gap",
+   "accept": [
+    "python"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT307",
+   "style": "coverage-probe",
+   "topic": "dev",
+   "q": "what is graphql federation",
+   "kind": "gap",
+   "accept": [
+    "graphql"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT308",
+   "style": "coverage-probe",
+   "topic": "dev",
+   "q": "grpc vs rest",
+   "kind": "gap",
+   "accept": [
+    "rest-apis",
+    "what-is-an-api"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT309",
+   "style": "coverage-probe",
+   "topic": "dev",
+   "q": "how do i set up tls certificates",
+   "kind": "gap",
+   "accept": [
+    "api-authentication",
+    "cors"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT310",
+   "style": "coverage-probe",
+   "topic": "data",
+   "q": "what is apache kafka",
+   "kind": "gap",
+   "accept": [
+    "webhooks",
+    "databases-for-ai-apps"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT311",
+   "style": "coverage-probe",
+   "topic": "data",
+   "q": "data warehouse vs data lake",
+   "kind": "gap",
+   "accept": [
+    "databases-for-ai-apps",
+    "sql"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT312",
+   "style": "coverage-probe",
+   "topic": "ai",
+   "q": "what is federated learning",
+   "kind": "gap",
+   "accept": [
+    "ai-privacy-and-security",
+    "distributed-training"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT313",
+   "style": "coverage-probe",
+   "topic": "ai",
+   "q": "differential privacy explained",
+   "kind": "gap",
+   "accept": [
+    "ai-privacy-and-security"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT314",
+   "style": "coverage-probe",
+   "topic": "ai",
+   "q": "how does a recommender system work",
+   "kind": "gap",
+   "accept": [
+    "embeddings",
+    "supervised-learning"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT315",
+   "style": "coverage-probe",
+   "topic": "ai",
+   "q": "time series forecasting with arima",
+   "kind": "gap",
+   "accept": [
+    "supervised-learning"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT316",
+   "style": "coverage-probe",
+   "topic": "ai",
+   "q": "what is automl",
+   "kind": "gap",
+   "accept": [
+    "supervised-learning",
+    "mlops"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT317",
+   "style": "coverage-probe",
+   "topic": "ai",
+   "q": "how do i label training data",
+   "kind": "gap",
+   "accept": [
+    "supervised-learning"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT318",
+   "style": "coverage-probe",
+   "topic": "ai",
+   "q": "what is causal inference",
+   "kind": "gap",
+   "accept": [
+    "supervised-learning"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT319",
+   "style": "coverage-probe",
+   "topic": "ai",
+   "q": "classic keyword weighting before neural embeddings",
+   "kind": "gap",
+   "accept": [
+    "embeddings",
+    "hybrid-search-and-reranking"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT320",
+   "style": "coverage-probe",
+   "topic": "ai",
+   "q": "what is the best ai coding assistant",
+   "kind": "gap",
+   "accept": [
+    "swe-bench",
+    "agent-evaluation"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT321",
+   "style": "coverage-probe",
+   "topic": "ai",
+   "q": "cursor vs copilot",
+   "kind": "gap",
+   "accept": [
+    "swe-bench"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT322",
+   "style": "coverage-probe",
+   "topic": "ai",
+   "q": "what is the current top model on the leaderboard",
+   "kind": "gap",
+   "accept": [
+    "benchmarks-and-leaderboards"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT323",
+   "style": "coverage-probe",
+   "topic": "ai",
+   "q": "how many parameters does the newest model have",
+   "kind": "gap",
+   "accept": [
+    "large-language-models"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT324",
+   "style": "coverage-probe",
+   "topic": "ai",
+   "q": "when does the next frontier model release",
+   "kind": "gap",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT325",
+   "style": "coverage-probe",
+   "topic": "ms",
+   "q": "how do i use azure devops pipelines",
+   "kind": "gap",
+   "accept": [
+    "cicd",
+    "azure-fundamentals"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT326",
+   "style": "coverage-probe",
+   "topic": "ms",
+   "q": "power bi dashboards",
+   "kind": "gap",
+   "accept": [
+    "power-platform",
+    "microsoft-365"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT327",
+   "style": "coverage-probe",
+   "topic": "ms",
+   "q": "how do i migrate sharepoint on premises to online",
+   "kind": "gap",
+   "accept": [
+    "sharepoint",
+    "microsoft-365"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT328",
+   "style": "coverage-probe",
+   "topic": "ms",
+   "q": "what is a sharepoint site collection",
+   "kind": "gap",
+   "accept": [
+    "sharepoint"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT329",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "transformer toy",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT330",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "mamba snake",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT331",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "python pet",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT332",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "react to this message",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT333",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "docker clothing",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT334",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "agent real estate",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT335",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "model train hobby",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT336",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "java coffee beans",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT337",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "ruby gemstone ring price",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT338",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "swift taylor concert tickets",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT339",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "rust remover for bike chains",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT340",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "go board game opening strategy",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT341",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "kotlin island vacation",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT342",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "oracle of delphi history",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT343",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "spark plug gap size",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT344",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "panda zoo opening hours",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT345",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "git gud meaning",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT346",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "node of ranvier function",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT347",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "cloud seeding rain",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT348",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "azure blue paint colour",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT349",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "bert and ernie sesame street",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT350",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "llama farm wool prices",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT351",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "claude monet water lilies",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT352",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "gemini star sign compatibility",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT353",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "rag doll sewing pattern",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT354",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "vector graphics for a logo",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT355",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "token of appreciation gift ideas",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT356",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "agent smith matrix quotes",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT357",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "popcorn kernel not popping",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT358",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "swarm of bees in my garden",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT359",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "proxy voting at a shareholder meeting",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT360",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "bearer bonds explained",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT361",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "oil pipeline construction jobs",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT362",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "cookie recipe chocolate chip",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT363",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "diffusion of heat in metal",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT364",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "attention deficit in adults",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT365",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "neural pathways in the brain after stroke",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT366",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "reinforcement learning in child psychology rewards",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT367",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "unsupervised learning at home for kids",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT368",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "embedding a youtube video in my wordpress site",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT369",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "vector in physics velocity and force",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT370",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "distillation of whisky at home",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT371",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "dropout rate at university",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT372",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "tensor in general relativity",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT373",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "clip art for presentations",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT374",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "chain link fence installation",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT375",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "whisper in my ear lyrics",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT376",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "llama drama kids book",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT377",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "mistral wind south of france",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT378",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "falcon heavy launch schedule",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT379",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "bard of avon poetry",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT380",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "perplexity about my career choice",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT381",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "sam altman net worth",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT382",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "q": "best hiking boots under 150",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT383",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "q": "how to file self assessment tax",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT384",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "q": "recipe for lasagna",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT385",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "q": "who invented the telephone",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT386",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "q": "translate good morning to french",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT387",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "q": "symptoms of the flu",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT388",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "q": "mortgage rates this week",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT389",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "q": "plan a 10k race pace strategy",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT390",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "q": "football scores tonight",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT391",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "q": "how to repot a succulent",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT392",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "q": "nvidia stock forecast",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT393",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "q": "should i buy bitcoin",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT394",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "q": "best laptop for students",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT395",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "q": "how to write a wedding speech",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT396",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "q": "write me a poem about the sea",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT397",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "q": "tell me a joke",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT398",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "q": "what is the meaning of life",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT399",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "q": "summarise this article for me",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT400",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "q": "is it going to rain tomorrow",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT401",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "q": "how do i fix a flat bicycle tyre",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT402",
+   "style": "mixed-natural",
+   "topic": "mixed",
+   "q": "use a model to check my own answers before sending them to a user",
+   "kind": "page",
+   "accept": [
+    "ai-guardrails",
+    "llm-as-a-judge",
+    "how-to-reduce-hallucinations"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT403",
+   "style": "mixed-natural",
+   "topic": "mixed",
+   "q": "how can i make my chatbot cite its sources",
+   "kind": "page",
+   "accept": [
+    "rag",
+    "how-to-reduce-hallucinations"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT404",
+   "style": "mixed-natural",
+   "topic": "mixed",
+   "q": "why does my assistant lose context in long chats",
+   "kind": "page",
+   "accept": [
+    "context-windows",
+    "agent-memory"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT405",
+   "style": "mixed-natural",
+   "topic": "mixed",
+   "q": "a model that sees my screen and clicks buttons",
+   "kind": "page",
+   "accept": [
+    "computer-use-agents"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT406",
+   "style": "mixed-natural",
+   "topic": "mixed",
+   "q": "stop the model leaking my system prompt",
+   "kind": "page",
+   "accept": [
+    "system-prompts",
+    "prompt-injection"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT407",
+   "style": "mixed-natural",
+   "topic": "mixed",
+   "q": "compare gpt style and bert style models for classification",
+   "kind": "page",
+   "accept": [
+    "encoder-decoder-vs-decoder-only"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT408",
+   "style": "mixed-natural",
+   "topic": "mixed",
+   "q": "trace every tool call my agent makes",
+   "kind": "page",
+   "accept": [
+    "llm-observability",
+    "agent-evaluation"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT409",
+   "style": "mixed-natural",
+   "topic": "mixed",
+   "q": "keep an ai agent from deleting my files",
+   "kind": "page",
+   "accept": [
+    "integration-permissions",
+    "code-execution-sandboxing",
+    "agent-tools",
+    "ai-guardrails"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT410",
+   "style": "mixed-natural",
+   "topic": "mixed",
+   "q": "how do i give an llm access to my database safely",
+   "kind": "page",
+   "accept": [
+    "agent-tools",
+    "integration-permissions",
+    "databases-for-ai-apps",
+    "function-calling"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT411",
+   "style": "mixed-natural",
+   "topic": "mixed",
+   "q": "what is tool calling and how do i implement it",
+   "kind": "page",
+   "accept": [
+    "function-calling",
+    "agent-tools"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT412",
+   "style": "mixed-natural",
+   "topic": "mixed",
+   "q": "how do i let users log in with microsoft to my ai app",
+   "kind": "page",
+   "accept": [
+    "microsoft-entra-id",
+    "oauth",
+    "openid-connect"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT413",
+   "style": "mixed-natural",
+   "topic": "mixed",
+   "q": "difference between ai assistant copilot and agent",
+   "kind": "page",
+   "accept": [
+    "ai-agent-vs-chatbot",
+    "ai-agents"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT414",
+   "style": "mixed-natural",
+   "topic": "mixed",
+   "q": "how do i chunk pdfs for retrieval",
+   "kind": "page",
+   "accept": [
+    "chunking",
+    "document-understanding-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT415",
+   "style": "mixed-natural",
+   "topic": "mixed",
+   "q": "speed up llm responses without hurting quality",
+   "kind": "page",
+   "accept": [
+    "speculative-decoding",
+    "model-serving-and-inference",
+    "kv-cache"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT416",
+   "style": "mixed-natural",
+   "topic": "mixed",
+   "q": "why does inference get slower with longer prompts",
+   "kind": "page",
+   "accept": [
+    "kv-cache",
+    "context-windows",
+    "model-serving-and-inference"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT417",
+   "style": "mixed-natural",
+   "topic": "mixed",
+   "q": "difference between an embedding model and a chat model",
+   "kind": "page",
+   "accept": [
+    "embeddings",
+    "encoder-decoder-vs-decoder-only",
+    "large-language-models"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT418",
+   "style": "mixed-natural",
+   "topic": "mixed",
+   "q": "what is a good chunk overlap",
+   "kind": "page",
+   "accept": [
+    "chunking"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT419",
+   "style": "mixed-natural",
+   "topic": "mixed",
+   "q": "how do i evaluate whether retrieval found the right passage",
+   "kind": "page",
+   "accept": [
+    "rag-evaluation"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT420",
+   "style": "mixed-natural",
+   "topic": "mixed",
+   "q": "safe way to let ai write sql",
+   "kind": "page",
+   "accept": [
+    "sql",
+    "agent-tools",
+    "code-execution-sandboxing",
+    "prompt-injection"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT421",
+   "style": "mixed-natural",
+   "topic": "mixed",
+   "q": "can i run deepseek or llama privately",
+   "kind": "page",
+   "accept": [
+    "local-ai",
+    "open-weights-models",
+    "ollama"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT422",
+   "style": "mixed-natural",
+   "topic": "mixed",
+   "q": "how do i stop my agent from running up a huge bill",
+   "kind": "page",
+   "accept": [
+    "llm-cost-optimization",
+    "react-agent-pattern",
+    "agentic-workflows"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT423",
+   "style": "mixed-natural",
+   "topic": "mixed",
+   "q": "model says it cannot see my document but i pasted it",
+   "kind": "page",
+   "accept": [
+    "context-windows",
+    "tokens"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT424",
+   "style": "mixed-natural",
+   "topic": "mixed",
+   "q": "ai to turn meeting recordings into notes",
+   "kind": "page",
+   "accept": [
+    "speech-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT425",
+   "style": "mixed-natural",
+   "topic": "mixed",
+   "q": "how do i know the model was not trained on my benchmark",
+   "kind": "page",
+   "accept": [
+    "benchmark-contamination"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "RT426",
+   "style": "mixed-natural",
+   "topic": "mixed",
+   "q": "how to get consistent structured data out of messy emails",
+   "kind": "page",
+   "accept": [
+    "structured-outputs",
+    "document-understanding-ai",
+    "constrained-decoding"
+   ],
+   "tool": null,
+   "path": []
+  }
+ ]
+}
