@@ -54,6 +54,201 @@
   },
   "intents": [
     {
+      "id": "qa-agent-evaluation",
+      "phrases": [
+        "agent completes tasks reliably",
+        "agent completion reliability",
+        "measure agent reliability",
+        "evaluate agent task completion"
+      ],
+      "pages": [
+        {
+          "id": "agent-evaluation",
+          "boost": 52
+        }
+      ]
+    },
+    {
+      "id": "qa-langgraph-state-machine",
+      "phrases": [
+        "state machine style orchestration",
+        "state machine orchestration",
+        "stateful agent orchestration",
+        "graph based agent orchestration"
+      ],
+      "pages": [
+        {
+          "id": "langgraph",
+          "boost": 52
+        },
+        {
+          "id": "agent-frameworks-compared",
+          "boost": 20
+        }
+      ]
+    },
+    {
+      "id": "qa-dspy-prompt-optimization",
+      "phrases": [
+        "automatically optimise my prompts",
+        "automatically optimize my prompts",
+        "optimize prompts with a metric",
+        "optimise prompts with a metric",
+        "metric driven prompt optimization"
+      ],
+      "pages": [
+        {
+          "id": "dspy",
+          "boost": 52
+        }
+      ]
+    },
+    {
+      "id": "qa-agent-rewards",
+      "phrases": [
+        "agents learn from rewards",
+        "agent learn from rewards",
+        "learn from rewards"
+      ],
+      "pages": [
+        {
+          "id": "reinforcement-learning",
+          "boost": 50
+        }
+      ]
+    },
+    {
+      "id": "qa-vision-patches",
+      "phrases": [
+        "image models use patches",
+        "images into patches",
+        "why use image patches",
+        "vision transformer patches"
+      ],
+      "pages": [
+        {
+          "id": "vision-transformers",
+          "boost": 52
+        }
+      ]
+    },
+    {
+      "id": "qa-faster-same-output",
+      "phrases": [
+        "inference faster without changing outputs",
+        "make llm inference faster",
+        "speed up llm inference",
+        "faster llm inference"
+      ],
+      "pages": [
+        {
+          "id": "speculative-decoding",
+          "boost": 46
+        },
+        {
+          "id": "flash-attention",
+          "boost": 34
+        },
+        {
+          "id": "kv-cache",
+          "boost": 30
+        }
+      ]
+    },
+    {
+      "id": "qa-meeting-transcription",
+      "phrases": [
+        "transcribe meetings",
+        "transcribe meeting",
+        "meeting transcription",
+        "automatically transcribe"
+      ],
+      "pages": [
+        {
+          "id": "speech-ai",
+          "boost": 52
+        }
+      ]
+    },
+    {
+      "id": "qa-invoice-fields",
+      "phrases": [
+        "structured fields out of invoices",
+        "fields from invoices",
+        "extract invoice fields",
+        "extract structured data from invoices"
+      ],
+      "pages": [
+        {
+          "id": "document-understanding-ai",
+          "boost": 52
+        },
+        {
+          "id": "structured-outputs",
+          "boost": 20
+        }
+      ]
+    },
+    {
+      "id": "qa-content-provenance",
+      "phrases": [
+        "tamper evident labels",
+        "tamper-evident labels",
+        "provenance labels",
+        "ai generated media provenance",
+        "content provenance"
+      ],
+      "pages": [
+        {
+          "id": "c2pa-content-provenance",
+          "boost": 52
+        }
+      ]
+    },
+    {
+      "id": "qa-why-gpu",
+      "phrases": [
+        "why is a gpu needed",
+        "why gpu for neural networks",
+        "why use gpu for ai",
+        "why do neural networks need gpu"
+      ],
+      "pages": [
+        {
+          "id": "gpus-and-ai-accelerators",
+          "boost": 52
+        }
+      ]
+    },
+    {
+      "id": "qa-runtime-comparison",
+      "phrases": [
+        "ollama vs vllm",
+        "vllm vs llama cpp",
+        "ollama vs vllm vs llama cpp"
+      ],
+      "pages": [
+        {
+          "id": "local-runtimes-compared",
+          "boost": 58
+        }
+      ]
+    },
+    {
+      "id": "qa-agent-framework-comparison",
+      "phrases": [
+        "langgraph vs crewai",
+        "crewai vs autogen",
+        "langgraph vs crewai vs autogen"
+      ],
+      "pages": [
+        {
+          "id": "agent-frameworks-compared",
+          "boost": 58
+        }
+      ]
+    },
+    {
       "id": "v3-invalid-json",
       "phrases": [
         "invalid json",
