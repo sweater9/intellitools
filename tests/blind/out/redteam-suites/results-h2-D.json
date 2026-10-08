@@ -1,0 +1,7969 @@
+{
+ "summary": {
+  "label": "h2-D",
+  "datasetSha256": "283ac7b8ba5877f24e5a690db71f1751de8c30a98c5f6215a4c6e7b47d620119",
+  "total": 146,
+  "pass": 139,
+  "weak": 1,
+  "miss": 0,
+  "falsePositive": 6,
+  "retrieval": {
+   "pageQueries": 111,
+   "top1": 110,
+   "top3": 111,
+   "top5": 111,
+   "top1Rate": "99.1%",
+   "top3Rate": "100.0%",
+   "top5Rate": "100.0%"
+  },
+  "engine": "gated",
+  "passRate": "95.2%",
+  "falsePositiveRate": "4.1%"
+ },
+ "results": [
+  {
+   "id": "H2-001",
+   "q": "can computers really think",
+   "style": "beginner",
+   "topic": "ai",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) what-is-ai",
+   "solid": false,
+   "score": 25.467391715453726,
+   "top5": [
+    "what-is-ai",
+    "how-to-reduce-hallucinations",
+    "ai-evaluation",
+    "chain-of-thought",
+    "common-prompting-mistakes"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "what-is-ai",
+    "how-to-reduce-hallucinations",
+    "ai-evaluation",
+    "chain-of-thought",
+    "common-prompting-mistakes",
+    "agentic-workflows",
+    "ai-agent-vs-chatbot",
+    "reasoning-transparency",
+    "mlops",
+    "git"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 4,
+    "total": 4,
+    "top": "what-is-ai",
+    "sim": 0.722,
+    "z": 1.85,
+    "margin": 0.016,
+    "how": ""
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-002",
+   "q": "how do machines learn from examples",
+   "style": "beginner",
+   "topic": "ml",
+   "kind": "page",
+   "expected": [
+    "supervised-learning",
+    "what-is-ai",
+    "neural-networks"
+   ],
+   "expectedTool": null,
+   "top": "supervised-learning",
+   "solid": true,
+   "score": 51,
+   "top5": [
+    "supervised-learning",
+    "prompt-engineering",
+    "evaluation-metrics-for-ai",
+    "html-and-css",
+    "overfitting-and-regularization"
+   ],
+   "learn": [
+    "overfitting-and-regularization",
+    "unsupervised-learning",
+    "neural-networks"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "supervised-learning",
+    "prompt-engineering",
+    "evaluation-metrics-for-ai",
+    "html-and-css",
+    "overfitting-and-regularization",
+    "unsupervised-learning",
+    "csharp",
+    "containers",
+    "embodied-ai",
+    "express"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 6,
+    "total": 6,
+    "top": "rag-with-python",
+    "sim": 0.464,
+    "z": 1.84,
+    "margin": 0.01,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-003",
+   "q": "why does the ai sometimes just invent a source that does not exist",
+   "style": "conversational",
+   "topic": "llm",
+   "kind": "page",
+   "expected": [
+    "ai-hallucinations",
+    "how-to-reduce-hallucinations"
+   ],
+   "expectedTool": null,
+   "top": "ai-hallucinations",
+   "solid": true,
+   "score": 73,
+   "top5": [
+    "ai-hallucinations",
+    "ai-governance",
+    "eu-ai-act",
+    "how-to-reduce-hallucinations",
+    "nist-ai-rmf"
+   ],
+   "learn": [
+    "how-to-reduce-hallucinations",
+    "ai-evaluation",
+    "prompt-engineering"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "ai-hallucinations",
+    "ai-governance",
+    "eu-ai-act",
+    "how-to-reduce-hallucinations",
+    "nist-ai-rmf",
+    "embodied-ai",
+    "local-ai",
+    "ai-sdks",
+    "constitutional-ai-and-rlaif",
+    "local-ai-vs-cloud-ai"
+   ],
+   "sem": {
+    "coverage": 0.91,
+    "known": 12,
+    "total": 13,
+    "top": "rag",
+    "sim": 0.672,
+    "z": 2.01,
+    "margin": 0.009,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-004",
+   "q": "whats the limit on how long my conversation with an ai can be",
+   "style": "conversational",
+   "topic": "llm",
+   "kind": "page",
+   "expected": [
+    "context-windows",
+    "tokens"
+   ],
+   "expectedTool": null,
+   "top": "context-windows",
+   "solid": true,
+   "score": 68,
+   "top5": [
+    "context-windows",
+    "ai-governance",
+    "eu-ai-act",
+    "nist-ai-rmf",
+    "embodied-ai"
+   ],
+   "learn": [
+    "tokens",
+    "agent-memory",
+    "prompt-engineering",
+    "chunking"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "context-windows",
+    "ai-governance",
+    "eu-ai-act",
+    "nist-ai-rmf",
+    "embodied-ai",
+    "local-ai",
+    "ai-sdks",
+    "constitutional-ai-and-rlaif",
+    "ai-agent-vs-chatbot",
+    "local-ai-vs-cloud-ai"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 13,
+    "total": 13,
+    "top": "context-windows",
+    "sim": 0.632,
+    "z": 2.17,
+    "margin": 0.003,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-005",
+   "q": "how do text predictors turn a prompt into a paragraph",
+   "style": "concept",
+   "topic": "llm",
+   "kind": "page",
+   "expected": [
+    "large-language-models",
+    "sampling-and-decoding"
+   ],
+   "expectedTool": null,
+   "top": "large-language-models",
+   "solid": true,
+   "score": 51,
+   "top5": [
+    "large-language-models",
+    "system-prompts",
+    "prompt-injection",
+    "prompt-engineering",
+    "prompt-caching"
+   ],
+   "learn": [
+    "prompt-engineering",
+    "transformers",
+    "ai-hallucinations",
+    "tokens",
+    "context-windows"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "large-language-models",
+    "system-prompts",
+    "prompt-injection",
+    "prompt-engineering",
+    "prompt-caching",
+    "common-prompting-mistakes",
+    "sampling-and-decoding",
+    "transformers",
+    "contrastive-learning-clip",
+    "speech-ai"
+   ],
+   "sem": {
+    "coverage": 0.68,
+    "known": 8,
+    "total": 10,
+    "top": "common-prompting-mistakes",
+    "sim": 0.641,
+    "z": 2.61,
+    "margin": 0.05,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-006",
+   "q": "why are deep networks called deep",
+   "style": "concept",
+   "topic": "dl",
+   "kind": "page",
+   "expected": [
+    "deep-learning",
+    "neural-networks"
+   ],
+   "expectedTool": null,
+   "top": "deep-learning",
+   "solid": true,
+   "score": 79,
+   "top5": [
+    "deep-learning",
+    "deep-q-networks",
+    "neural-networks",
+    "graph-neural-networks",
+    "convolutional-neural-networks"
+   ],
+   "learn": [
+    "neural-networks",
+    "convolutional-neural-networks",
+    "what-is-ai"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "deep-learning",
+    "deep-q-networks",
+    "neural-networks",
+    "graph-neural-networks",
+    "convolutional-neural-networks",
+    "physics-informed-neural-networks",
+    "generative-adversarial-networks",
+    "recurrent-neural-networks",
+    "reinforcement-learning",
+    "what-is-ai"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 6,
+    "total": 6,
+    "top": "deep-learning",
+    "sim": 0.882,
+    "z": 3.2,
+    "margin": 0.059,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-007",
+   "q": "why do we need activation functions",
+   "style": "concept",
+   "topic": "dl",
+   "kind": "page",
+   "expected": [
+    "neural-networks"
+   ],
+   "expectedTool": null,
+   "top": "neural-networks",
+   "solid": true,
+   "score": 54,
+   "top5": [
+    "neural-networks",
+    "rag-frameworks",
+    "vector-database-vs-traditional-database",
+    "azure-fundamentals",
+    "gpus-and-ai-accelerators"
+   ],
+   "learn": [
+    "transformers"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "neural-networks",
+    "rag-frameworks",
+    "vector-database-vs-traditional-database",
+    "azure-fundamentals",
+    "gpus-and-ai-accelerators",
+    "databases-for-ai-apps",
+    "vector-databases",
+    "agent-frameworks-compared",
+    "function-calling-vs-mcp",
+    "nist-ai-rmf"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 6,
+    "total": 6,
+    "top": "neural-networks",
+    "sim": 0.745,
+    "z": 4.29,
+    "margin": 0.126,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-008",
+   "q": "gradients vanish in my recurrent model",
+   "style": "troubleshooting",
+   "topic": "dl",
+   "kind": "page",
+   "expected": [
+    "recurrent-neural-networks",
+    "backpropagation-and-gradient-descent"
+   ],
+   "expectedTool": null,
+   "top": "backpropagation-and-gradient-descent",
+   "solid": true,
+   "score": 47,
+   "top5": [
+    "backpropagation-and-gradient-descent",
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference"
+   ],
+   "learn": [
+    "neural-networks",
+    "distributed-training",
+    "overfitting-and-regularization",
+    "transfer-learning"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "backpropagation-and-gradient-descent",
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference",
+    "process-reward-model",
+    "world-models",
+    "outcome-reward-model",
+    "instruction-tuning",
+    "recurrent-neural-networks"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 6,
+    "total": 6,
+    "top": "backpropagation-and-gradient-descent",
+    "sim": 0.823,
+    "z": 2.6,
+    "margin": 0.05,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-009",
+   "q": "training loss goes down but validation loss goes up",
+   "style": "troubleshooting",
+   "topic": "dl",
+   "kind": "page",
+   "expected": [
+    "overfitting-and-regularization"
+   ],
+   "expectedTool": null,
+   "top": "overfitting-and-regularization",
+   "solid": true,
+   "score": 59,
+   "top5": [
+    "overfitting-and-regularization",
+    "backpropagation-and-gradient-descent",
+    "distributed-training",
+    "gdpr-and-ai",
+    "json-validation"
+   ],
+   "learn": [
+    "backpropagation-and-gradient-descent",
+    "supervised-learning"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "overfitting-and-regularization",
+    "backpropagation-and-gradient-descent",
+    "distributed-training",
+    "gdpr-and-ai",
+    "json-validation",
+    "fine-tuning",
+    "dpo",
+    "scaling-laws",
+    "what-is-ai",
+    "json-schema"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 9,
+    "total": 9,
+    "top": "test-time-compute",
+    "sim": 0.759,
+    "z": 2.07,
+    "margin": 0.034,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-010",
+   "q": "fine tune a pretrained resnet on 500 images",
+   "style": "implementation",
+   "topic": "dl",
+   "kind": "page",
+   "expected": [
+    "transfer-learning",
+    "convolutional-neural-networks"
+   ],
+   "expectedTool": null,
+   "top": "convolutional-neural-networks",
+   "solid": true,
+   "score": 78,
+   "top5": [
+    "convolutional-neural-networks",
+    "transfer-learning",
+    "rag-vs-fine-tuning",
+    "fine-tuning",
+    "lora-vs-full-fine-tuning"
+   ],
+   "learn": [
+    "transfer-learning",
+    "cnn-vs-vision-transformer",
+    "multimodal-ai",
+    "vision-transformers"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "convolutional-neural-networks",
+    "transfer-learning",
+    "rag-vs-fine-tuning",
+    "fine-tuning",
+    "lora-vs-full-fine-tuning",
+    "lora-and-peft",
+    "ray",
+    "c2pa-content-provenance",
+    "cnn-vs-vision-transformer",
+    "distributed-training"
+   ],
+   "sem": {
+    "coverage": 0.88,
+    "known": 7,
+    "total": 8,
+    "top": "transfer-learning",
+    "sim": 0.848,
+    "z": 2.66,
+    "margin": 0.098,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-011",
+   "q": "agent receives reward only at the end of an episode",
+   "style": "concept",
+   "topic": "rl",
+   "kind": "page",
+   "expected": [
+    "reinforcement-learning",
+    "markov-decision-processes"
+   ],
+   "expectedTool": null,
+   "top": "reinforcement-learning",
+   "solid": true,
+   "score": 60,
+   "top5": [
+    "reinforcement-learning",
+    "ai-agent-vs-chatbot",
+    "reward-hacking",
+    "agent-protocol-landscape",
+    "multi-agent-systems"
+   ],
+   "learn": [
+    "markov-decision-processes",
+    "rlhf",
+    "imitation-learning"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "reinforcement-learning",
+    "ai-agent-vs-chatbot",
+    "reward-hacking",
+    "agent-protocol-landscape",
+    "multi-agent-systems",
+    "choosing-an-agent-framework",
+    "outcome-reward-model",
+    "agent-frameworks-compared",
+    "process-reward-model",
+    "agent-evaluation"
+   ],
+   "sem": {
+    "coverage": 0.84,
+    "known": 10,
+    "total": 10,
+    "top": "langgraph",
+    "sim": 0.502,
+    "z": 2.25,
+    "margin": 0.005,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-012",
+   "q": "why are images split into patches for transformers",
+   "style": "concept",
+   "topic": "dl",
+   "kind": "page",
+   "expected": [
+    "vision-transformers"
+   ],
+   "expectedTool": null,
+   "top": "(weak) vision-transformers",
+   "solid": false,
+   "score": 95.25833296105083,
+   "top5": [
+    "vision-transformers",
+    "convolutional-neural-networks",
+    "cnn-vs-vision-transformer",
+    "transformers-vs-state-space-models",
+    "contrastive-learning-clip"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "vision-transformers",
+    "convolutional-neural-networks",
+    "cnn-vs-vision-transformer",
+    "transformers-vs-state-space-models",
+    "contrastive-learning-clip",
+    "transformers",
+    "recurrent-neural-networks",
+    "object-detection",
+    "multimodal-ai",
+    "state-space-models"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 8,
+    "total": 8,
+    "top": "vision-transformers",
+    "sim": 0.896,
+    "z": 3.24,
+    "margin": 0.123,
+    "how": ""
+   },
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-013",
+   "q": "sparse routing to a few feed forward experts",
+   "style": "expert",
+   "topic": "dl",
+   "kind": "page",
+   "expected": [
+    "mixture-of-experts"
+   ],
+   "expectedTool": null,
+   "top": "mixture-of-experts",
+   "solid": true,
+   "score": 81,
+   "top5": [
+    "mixture-of-experts",
+    "agentic-workflows",
+    "mechanistic-interpretability",
+    "chain-of-thought",
+    "prompt-engineering"
+   ],
+   "learn": [
+    "agentic-workflows"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "mixture-of-experts",
+    "agentic-workflows",
+    "mechanistic-interpretability",
+    "chain-of-thought",
+    "prompt-engineering",
+    "llm-cost-optimization",
+    "nextjs",
+    "outcome-reward-model",
+    "reasoning-vs-standard-models",
+    "ai-evaluation"
+   ],
+   "sem": {
+    "coverage": 0.88,
+    "known": 7,
+    "total": 8,
+    "top": "mixture-of-experts",
+    "sim": 0.859,
+    "z": 3.62,
+    "margin": 0.255,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-014",
+   "q": "constant memory sequence model that avoids quadratic attention",
+   "style": "expert",
+   "topic": "dl",
+   "kind": "page",
+   "expected": [
+    "state-space-models"
+   ],
+   "expectedTool": null,
+   "top": "state-space-models",
+   "solid": true,
+   "score": 57,
+   "top5": [
+    "state-space-models",
+    "transformers",
+    "agent-memory",
+    "flash-attention",
+    "model-cards"
+   ],
+   "learn": [
+    "transformers",
+    "flash-attention",
+    "recurrent-neural-networks",
+    "kv-cache",
+    "transformers-vs-state-space-models"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "state-space-models",
+    "transformers",
+    "agent-memory",
+    "flash-attention",
+    "model-cards",
+    "model-apis",
+    "recurrent-neural-networks",
+    "kv-cache",
+    "model-serving-and-inference",
+    "model-drift-and-monitoring"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 8,
+    "total": 8,
+    "top": "transformers-vs-state-space-models",
+    "sim": 0.915,
+    "z": 2.49,
+    "margin": 0.018,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-015",
+   "q": "rotary position embeddings and context extension",
+   "style": "expert",
+   "topic": "llm",
+   "kind": "page",
+   "expected": [
+    "positional-encoding"
+   ],
+   "expectedTool": null,
+   "top": "positional-encoding",
+   "solid": true,
+   "score": 92,
+   "top5": [
+    "positional-encoding",
+    "embeddings",
+    "context-engineering",
+    "context-windows",
+    "mcp"
+   ],
+   "learn": [
+    "context-windows",
+    "kv-cache",
+    "tokens",
+    "embeddings",
+    "rag"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "positional-encoding",
+    "embeddings",
+    "context-engineering",
+    "context-windows",
+    "mcp",
+    "rag",
+    "vector-databases",
+    "contrastive-learning-clip",
+    "pgvector",
+    "rag-with-python"
+   ],
+   "sem": {
+    "coverage": 0.8,
+    "known": 6,
+    "total": 6,
+    "top": "positional-encoding",
+    "sim": 0.766,
+    "z": 3.64,
+    "margin": 0.188,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-016",
+   "q": "grouped query attention shrinks the kv cache",
+   "style": "expert",
+   "topic": "llm",
+   "kind": "page",
+   "expected": [
+    "kv-cache"
+   ],
+   "expectedTool": null,
+   "top": "kv-cache",
+   "solid": true,
+   "score": 116,
+   "top5": [
+    "kv-cache",
+    "transformers",
+    "flash-attention",
+    "prompt-caching",
+    "redis"
+   ],
+   "learn": [
+    "transformers",
+    "flash-attention",
+    "prompt-caching",
+    "state-space-models",
+    "context-windows"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "kv-cache",
+    "transformers",
+    "flash-attention",
+    "prompt-caching",
+    "redis",
+    "state-space-models",
+    "agentic-rag",
+    "llamaindex",
+    "sql",
+    "graphql"
+   ],
+   "sem": {
+    "coverage": 0.83,
+    "known": 7,
+    "total": 7,
+    "top": "kv-cache",
+    "sim": 0.88,
+    "z": 3.64,
+    "margin": 0.235,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-017",
+   "q": "how do i shrink a model so it fits in 8gb of vram",
+   "style": "what-to-use",
+   "topic": "llm",
+   "kind": "page",
+   "expected": [
+    "quantization",
+    "small-language-models",
+    "gpus-and-ai-accelerators"
+   ],
+   "expectedTool": null,
+   "top": "gpus-and-ai-accelerators",
+   "solid": true,
+   "score": 77,
+   "top5": [
+    "gpus-and-ai-accelerators",
+    "quantization",
+    "model-serving-and-inference",
+    "model-cards",
+    "model-apis"
+   ],
+   "learn": [
+    "quantization",
+    "model-serving-and-inference",
+    "llm-cost-optimization",
+    "distributed-training",
+    "local-ai"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "gpus-and-ai-accelerators",
+    "quantization",
+    "model-serving-and-inference",
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "process-reward-model",
+    "world-models",
+    "outcome-reward-model",
+    "instruction-tuning"
+   ],
+   "sem": {
+    "coverage": 0.72,
+    "known": 10,
+    "total": 13,
+    "top": "gpus-and-ai-accelerators",
+    "sim": 0.707,
+    "z": 3.69,
+    "margin": 0.097,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-018",
+   "q": "adapter training or updating every weight",
+   "style": "what-to-use",
+   "topic": "llm",
+   "kind": "page",
+   "expected": [
+    "lora-vs-full-fine-tuning",
+    "lora-and-peft"
+   ],
+   "expectedTool": null,
+   "top": "lora-and-peft",
+   "solid": true,
+   "score": 47,
+   "top5": [
+    "lora-and-peft",
+    "lora-vs-full-fine-tuning",
+    "distributed-training",
+    "gdpr-and-ai",
+    "overfitting-and-regularization"
+   ],
+   "learn": [
+    "lora-vs-full-fine-tuning",
+    "fine-tuning",
+    "instruction-tuning"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "lora-and-peft",
+    "lora-vs-full-fine-tuning",
+    "distributed-training",
+    "gdpr-and-ai",
+    "overfitting-and-regularization",
+    "fine-tuning",
+    "what-is-ai",
+    "dpo",
+    "scaling-laws",
+    "backpropagation-and-gradient-descent"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 6,
+    "total": 6,
+    "top": "lora-vs-full-fine-tuning",
+    "sim": 0.71,
+    "z": 2.02,
+    "margin": 0.021,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-019",
+   "q": "how do labs pick model size and dataset size for a training budget",
+   "style": "concept",
+   "topic": "llm",
+   "kind": "page",
+   "expected": [
+    "scaling-laws"
+   ],
+   "expectedTool": null,
+   "top": "scaling-laws",
+   "solid": true,
+   "score": 61,
+   "top5": [
+    "scaling-laws",
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "process-reward-model"
+   ],
+   "learn": [
+    "distributed-training",
+    "large-language-models",
+    "knowledge-distillation",
+    "small-language-models",
+    "test-time-compute"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "scaling-laws",
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "process-reward-model",
+    "fine-tuning",
+    "model-serving-and-inference",
+    "world-models",
+    "distributed-training",
+    "instruction-tuning"
+   ],
+   "sem": {
+    "coverage": 0.92,
+    "known": 12,
+    "total": 13,
+    "top": "scaling-laws",
+    "sim": 0.644,
+    "z": 1.75,
+    "margin": 0.005,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-020",
+   "q": "what is the point of letting a model think longer before it replies",
+   "style": "concept",
+   "topic": "llm",
+   "kind": "page",
+   "expected": [
+    "test-time-compute",
+    "reasoning-models"
+   ],
+   "expectedTool": null,
+   "top": "reasoning-models",
+   "solid": true,
+   "score": 45,
+   "top5": [
+    "reasoning-models",
+    "test-time-compute",
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring"
+   ],
+   "learn": [
+    "test-time-compute",
+    "process-reward-model",
+    "reasoning-vs-standard-models",
+    "large-language-models",
+    "chain-of-thought"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "reasoning-models",
+    "test-time-compute",
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference",
+    "process-reward-model",
+    "world-models",
+    "outcome-reward-model",
+    "instruction-tuning"
+   ],
+   "sem": {
+    "coverage": 0.9,
+    "known": 12,
+    "total": 13,
+    "top": "chain-of-thought",
+    "sim": 0.76,
+    "z": 2.41,
+    "margin": 0.066,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-021",
+   "q": "a verifier that rates each line of a proof",
+   "style": "concept",
+   "topic": "llm",
+   "kind": "page",
+   "expected": [
+    "process-reward-model"
+   ],
+   "expectedTool": null,
+   "top": "process-reward-model",
+   "solid": true,
+   "score": 57,
+   "top5": [
+    "process-reward-model",
+    "best-of-n-sampling",
+    "outcome-reward-model",
+    "prm-vs-orm",
+    "test-time-compute"
+   ],
+   "learn": [
+    "best-of-n-sampling",
+    "outcome-reward-model",
+    "prm-vs-orm",
+    "reward-hacking"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "process-reward-model",
+    "best-of-n-sampling",
+    "outcome-reward-model",
+    "prm-vs-orm",
+    "test-time-compute",
+    "reward-hacking",
+    "a2a-protocol",
+    "react-chatbot-state",
+    "constrained-decoding",
+    "deep-q-networks"
+   ],
+   "sem": {
+    "coverage": 0.75,
+    "known": 7,
+    "total": 9,
+    "top": "best-of-n-sampling",
+    "sim": 0.87,
+    "z": 3.04,
+    "margin": 0.035,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-022",
+   "q": "generate many candidates and keep the highest scoring one",
+   "style": "concept",
+   "topic": "llm",
+   "kind": "page",
+   "expected": [
+    "best-of-n-sampling"
+   ],
+   "expectedTool": null,
+   "top": "best-of-n-sampling",
+   "solid": true,
+   "score": 50,
+   "top5": [
+    "best-of-n-sampling",
+    "rag-frameworks",
+    "api-keys",
+    "grammar-guided-generation",
+    "json-web-tokens"
+   ],
+   "learn": [
+    "process-reward-model",
+    "sampling-and-decoding",
+    "self-consistency",
+    "reward-hacking"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "best-of-n-sampling",
+    "rag-frameworks",
+    "api-keys",
+    "grammar-guided-generation",
+    "json-web-tokens",
+    "model-apis",
+    "process-reward-model",
+    "rest-apis",
+    "sampling-and-decoding",
+    "webhooks"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 9,
+    "total": 9,
+    "top": "best-of-n-sampling",
+    "sim": 0.911,
+    "z": 3.1,
+    "margin": 0.143,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-023",
+   "q": "search tree of partial solutions for puzzles",
+   "style": "concept",
+   "topic": "llm",
+   "kind": "page",
+   "expected": [
+    "search-over-reasoning"
+   ],
+   "expectedTool": null,
+   "top": "search-over-reasoning",
+   "solid": true,
+   "score": 95,
+   "top5": [
+    "search-over-reasoning",
+    "hybrid-search-and-reranking",
+    "pgvector",
+    "vector-databases",
+    "vector-database-vs-traditional-database"
+   ],
+   "learn": [
+    "test-time-compute"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "search-over-reasoning",
+    "hybrid-search-and-reranking",
+    "pgvector",
+    "vector-databases",
+    "vector-database-vs-traditional-database",
+    "sampling-and-decoding",
+    "embeddings",
+    "agent-tools",
+    "contrastive-learning-clip",
+    "test-time-compute"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 7,
+    "total": 7,
+    "top": "search-over-reasoning",
+    "sim": 0.762,
+    "z": 5.21,
+    "margin": 0.229,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-024",
+   "q": "force the output to follow a regular expression",
+   "style": "implementation",
+   "topic": "llm",
+   "kind": "page",
+   "expected": [
+    "constrained-decoding",
+    "grammar-guided-generation"
+   ],
+   "expectedTool": null,
+   "top": "constrained-decoding",
+   "solid": true,
+   "score": 58,
+   "top5": [
+    "constrained-decoding",
+    "structured-outputs",
+    "structured-output-methods-compared",
+    "ai-materials-discovery",
+    "grammar-guided-generation"
+   ],
+   "learn": [
+    "structured-outputs",
+    "structured-output-methods-compared",
+    "grammar-guided-generation",
+    "function-calling",
+    "tokens"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "constrained-decoding",
+    "structured-outputs",
+    "structured-output-methods-compared",
+    "ai-materials-discovery",
+    "grammar-guided-generation",
+    "prompt-engineering",
+    "agent-planning",
+    "chain-of-thought",
+    "function-calling",
+    "mcp-vs-api"
+   ],
+   "sem": {
+    "coverage": 0.86,
+    "known": 7,
+    "total": 8,
+    "top": "grammar-guided-generation",
+    "sim": 0.83,
+    "z": 2.9,
+    "margin": 0.008,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-025",
+   "q": "llama.cpp grammar file for json",
+   "style": "implementation",
+   "topic": "llm",
+   "kind": "page",
+   "expected": [
+    "gbnf-grammars",
+    "constrained-decoding"
+   ],
+   "expectedTool": null,
+   "top": "gbnf-grammars",
+   "solid": true,
+   "score": 102,
+   "top5": [
+    "gbnf-grammars",
+    "llama-cpp",
+    "local-llm-runtimes",
+    "constrained-decoding",
+    "grammar-guided-generation"
+   ],
+   "learn": [
+    "llama-cpp",
+    "constrained-decoding",
+    "grammar-guided-generation",
+    "json-schema",
+    "structured-outputs"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "gbnf-grammars",
+    "llama-cpp",
+    "local-llm-runtimes",
+    "constrained-decoding",
+    "grammar-guided-generation",
+    "json-validation",
+    "what-is-json",
+    "local-ai",
+    "json-schema",
+    "local-runtimes-compared"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 6,
+    "total": 6,
+    "top": "gbnf-grammars",
+    "sim": 0.969,
+    "z": 3.25,
+    "margin": 0.134,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-026",
+   "q": "python library for guided generation with pydantic models",
+   "style": "implementation",
+   "topic": "llm",
+   "kind": "page",
+   "expected": [
+    "outlines",
+    "structured-outputs"
+   ],
+   "expectedTool": null,
+   "top": "outlines",
+   "solid": true,
+   "score": 88,
+   "top5": [
+    "outlines",
+    "constrained-decoding",
+    "python",
+    "calling-ai-apis-with-python",
+    "reasoning-models"
+   ],
+   "learn": [
+    "constrained-decoding",
+    "structured-outputs",
+    "grammar-guided-generation",
+    "hugging-face",
+    "json-schema"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "outlines",
+    "constrained-decoding",
+    "python",
+    "calling-ai-apis-with-python",
+    "reasoning-models",
+    "reasoning-vs-standard-models",
+    "small-language-models",
+    "rag-with-python",
+    "python-for-ai",
+    "world-models"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 8,
+    "total": 8,
+    "top": "outlines",
+    "sim": 0.884,
+    "z": 3.21,
+    "margin": 0.08,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-027",
+   "q": "how should i structure instructions so the model follows them",
+   "style": "implementation",
+   "topic": "prompt",
+   "kind": "page",
+   "expected": [
+    "prompt-engineering",
+    "system-prompts"
+   ],
+   "expectedTool": null,
+   "top": "prompt-engineering",
+   "solid": true,
+   "score": 52,
+   "top5": [
+    "prompt-engineering",
+    "model-cards",
+    "model-apis",
+    "system-prompts",
+    "model-drift-and-monitoring"
+   ],
+   "learn": [
+    "system-prompts",
+    "common-prompting-mistakes",
+    "ai-hallucinations",
+    "function-calling",
+    "ai-evaluation"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "prompt-engineering",
+    "model-cards",
+    "model-apis",
+    "system-prompts",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference",
+    "process-reward-model",
+    "world-models",
+    "instruction-tuning",
+    "outcome-reward-model"
+   ],
+   "sem": {
+    "coverage": 0.89,
+    "known": 9,
+    "total": 10,
+    "top": "prompt-engineering",
+    "sim": 0.791,
+    "z": 2.63,
+    "margin": 0.043,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-028",
+   "q": "examples in the prompt to show the format i want",
+   "style": "implementation",
+   "topic": "prompt",
+   "kind": "page",
+   "expected": [
+    "prompt-engineering"
+   ],
+   "expectedTool": null,
+   "top": "prompt-engineering",
+   "solid": true,
+   "score": 80,
+   "top5": [
+    "prompt-engineering",
+    "system-prompts",
+    "prompt-injection",
+    "prompt-caching",
+    "common-prompting-mistakes"
+   ],
+   "learn": [
+    "system-prompts",
+    "common-prompting-mistakes"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "prompt-engineering",
+    "system-prompts",
+    "prompt-injection",
+    "prompt-caching",
+    "common-prompting-mistakes",
+    "chain-of-thought",
+    "dspy",
+    "context-engineering",
+    "owasp-llm-top-10",
+    "agentic-workflows"
+   ],
+   "sem": {
+    "coverage": 0.86,
+    "known": 9,
+    "total": 10,
+    "top": "prompt-engineering",
+    "sim": 0.668,
+    "z": 2.82,
+    "margin": 0.009,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-029",
+   "q": "answers are generic and vague",
+   "style": "troubleshooting",
+   "topic": "prompt",
+   "kind": "page",
+   "expected": [
+    "common-prompting-mistakes",
+    "prompt-engineering"
+   ],
+   "expectedTool": null,
+   "top": "common-prompting-mistakes",
+   "solid": true,
+   "score": 59,
+   "top5": [
+    "common-prompting-mistakes",
+    "prompt-engineering",
+    "how-to-reduce-hallucinations",
+    "ai-hallucinations",
+    "typescript"
+   ],
+   "learn": [
+    "prompt-engineering",
+    "how-to-reduce-hallucinations",
+    "ai-hallucinations"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "common-prompting-mistakes",
+    "prompt-engineering",
+    "how-to-reduce-hallucinations",
+    "ai-hallucinations",
+    "typescript",
+    "llm-as-a-judge",
+    "agent-evaluation",
+    "authentication-vs-authorization",
+    "benchmark-contamination",
+    "best-of-n-sampling"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 5,
+    "total": 5,
+    "top": "common-prompting-mistakes",
+    "sim": 0.805,
+    "z": 3.64,
+    "margin": 0.133,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-030",
+   "q": "my pdf is too long for the model what do i do",
+   "style": "implementation",
+   "topic": "rag",
+   "kind": "page",
+   "expected": [
+    "chunking",
+    "rag",
+    "context-windows"
+   ],
+   "expectedTool": null,
+   "top": "context-windows",
+   "solid": true,
+   "score": 53,
+   "top5": [
+    "context-windows",
+    "chunking",
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring"
+   ],
+   "learn": [
+    "chunking",
+    "large-language-models",
+    "tokens",
+    "agent-memory",
+    "prompt-engineering"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "context-windows",
+    "chunking",
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference",
+    "process-reward-model",
+    "world-models",
+    "outcome-reward-model",
+    "instruction-tuning"
+   ],
+   "sem": {
+    "coverage": 0.89,
+    "known": 11,
+    "total": 12,
+    "top": "python-data-for-ai",
+    "sim": 0.517,
+    "z": 2.51,
+    "margin": 0.013,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-031",
+   "q": "combine keyword and vector search",
+   "style": "implementation",
+   "topic": "rag",
+   "kind": "page",
+   "expected": [
+    "hybrid-search-and-reranking"
+   ],
+   "expectedTool": null,
+   "top": "hybrid-search-and-reranking",
+   "solid": true,
+   "score": 90,
+   "top5": [
+    "hybrid-search-and-reranking",
+    "vector-databases",
+    "vector-database-vs-traditional-database",
+    "choosing-a-vector-store",
+    "search-over-reasoning"
+   ],
+   "learn": [
+    "vector-databases",
+    "vector-database-vs-traditional-database",
+    "pgvector",
+    "embeddings",
+    "rag"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "hybrid-search-and-reranking",
+    "vector-databases",
+    "vector-database-vs-traditional-database",
+    "choosing-a-vector-store",
+    "search-over-reasoning",
+    "pgvector",
+    "embeddings",
+    "contrastive-learning-clip",
+    "sampling-and-decoding",
+    "rag"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 5,
+    "total": 5,
+    "top": "hybrid-search-and-reranking",
+    "sim": 0.885,
+    "z": 4.18,
+    "margin": 0.017,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-032",
+   "q": "build a knowledge base chatbot over help center articles",
+   "style": "implementation",
+   "topic": "rag",
+   "kind": "page",
+   "expected": [
+    "rag",
+    "chunking",
+    "embeddings"
+   ],
+   "expectedTool": null,
+   "top": "rag",
+   "solid": true,
+   "score": 71,
+   "top5": [
+    "rag",
+    "ai-agent-vs-chatbot",
+    "graph-rag",
+    "react-chatbot-state",
+    "build-spfx-web-part"
+   ],
+   "learn": [
+    "chunking",
+    "embeddings",
+    "rag-vs-fine-tuning",
+    "agent-memory"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "rag",
+    "ai-agent-vs-chatbot",
+    "graph-rag",
+    "react-chatbot-state",
+    "build-spfx-web-part",
+    "knowledge-distillation",
+    "chunking",
+    "human-preference-evaluation",
+    "embeddings",
+    "rag-with-python"
+   ],
+   "sem": {
+    "coverage": 0.89,
+    "known": 8,
+    "total": 9,
+    "top": "agent-protocol-landscape",
+    "sim": 0.538,
+    "z": 2.82,
+    "margin": 0.002,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-033",
+   "q": "where do embeddings get stored and searched",
+   "style": "architecture",
+   "topic": "rag",
+   "kind": "page",
+   "expected": [
+    "vector-databases",
+    "embeddings",
+    "pgvector"
+   ],
+   "expectedTool": null,
+   "top": "vector-databases",
+   "solid": true,
+   "score": 53,
+   "top5": [
+    "vector-databases",
+    "embeddings",
+    "contrastive-learning-clip",
+    "rag",
+    "rest-apis"
+   ],
+   "learn": [
+    "embeddings",
+    "rag",
+    "vector-database-vs-traditional-database"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "vector-databases",
+    "embeddings",
+    "contrastive-learning-clip",
+    "rag",
+    "rest-apis",
+    "environment-variables",
+    "structured-output-methods-compared",
+    "structured-outputs",
+    "rag-with-python",
+    "pgvector"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 7,
+    "total": 7,
+    "top": "vector-databases",
+    "sim": 0.84,
+    "z": 2.54,
+    "margin": 0.007,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-034",
+   "q": "pinecone or pgvector or something else",
+   "style": "what-to-use",
+   "topic": "rag",
+   "kind": "page",
+   "expected": [
+    "choosing-a-vector-store",
+    "pgvector",
+    "vector-databases"
+   ],
+   "expectedTool": null,
+   "top": "pgvector",
+   "solid": true,
+   "score": 93,
+   "top5": [
+    "pgvector",
+    "vector-databases",
+    "choosing-a-vector-store",
+    "postgresql-for-ai-apps",
+    "vector-database-vs-traditional-database"
+   ],
+   "learn": [
+    "vector-databases",
+    "choosing-a-vector-store",
+    "postgresql-for-ai-apps",
+    "vector-database-vs-traditional-database",
+    "postgresql"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "pgvector",
+    "vector-databases",
+    "choosing-a-vector-store",
+    "postgresql-for-ai-apps",
+    "vector-database-vs-traditional-database",
+    "postgresql",
+    "hybrid-search-and-reranking",
+    "agent-tools",
+    "webhooks"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 6,
+    "total": 6,
+    "top": "choosing-a-vector-store",
+    "sim": 0.834,
+    "z": 2.26,
+    "margin": 0.056,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-035",
+   "q": "relationships between entities across many documents",
+   "style": "concept",
+   "topic": "rag",
+   "kind": "page",
+   "expected": [
+    "graph-rag"
+   ],
+   "expectedTool": null,
+   "top": "graph-rag",
+   "solid": true,
+   "score": 52,
+   "top5": [
+    "graph-rag",
+    "document-understanding-ai",
+    "chunking",
+    "agentic-rag",
+    "mongodb"
+   ],
+   "learn": [
+    "agentic-rag",
+    "rag",
+    "graph-neural-networks"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "graph-rag",
+    "document-understanding-ai",
+    "chunking",
+    "agentic-rag",
+    "mongodb",
+    "function-calling-vs-mcp",
+    "sql-vs-nosql",
+    "sharepoint",
+    "a2a-vs-mcp",
+    "ai-agent-vs-chatbot"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 6,
+    "total": 6,
+    "top": "graph-rag",
+    "sim": 0.921,
+    "z": 5.84,
+    "margin": 0.33,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-036",
+   "q": "retriever misses exact product codes",
+   "style": "troubleshooting",
+   "topic": "rag",
+   "kind": "page",
+   "expected": [
+    "hybrid-search-and-reranking",
+    "embeddings"
+   ],
+   "expectedTool": null,
+   "top": "hybrid-search-and-reranking",
+   "solid": true,
+   "score": 46,
+   "top5": [
+    "hybrid-search-and-reranking",
+    "flash-attention",
+    "rest-apis",
+    "vector-database-vs-traditional-database",
+    "ai-materials-discovery"
+   ],
+   "learn": [
+    "vector-database-vs-traditional-database"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "hybrid-search-and-reranking",
+    "flash-attention",
+    "rest-apis",
+    "vector-database-vs-traditional-database",
+    "ai-materials-discovery",
+    "langchain",
+    "llamaindex",
+    "outcome-reward-model",
+    "rag-frameworks",
+    "rest-vs-graphql"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 5,
+    "total": 5,
+    "top": "rag-with-python",
+    "sim": 0.671,
+    "z": 2.09,
+    "margin": 0.042,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-037",
+   "q": "can my bot book meetings in outlook",
+   "style": "integration",
+   "topic": "agent",
+   "kind": "page",
+   "expected": [
+    "connecting-agents-to-apps",
+    "microsoft-graph",
+    "oauth-for-ai-agents"
+   ],
+   "expectedTool": null,
+   "top": "connecting-agents-to-apps",
+   "solid": true,
+   "score": 48,
+   "top5": [
+    "connecting-agents-to-apps",
+    "oauth-for-ai-agents",
+    "agent-tools",
+    "integration-permissions",
+    "teams-development"
+   ],
+   "learn": [
+    "oauth-for-ai-agents",
+    "agent-tools",
+    "integration-permissions"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "connecting-agents-to-apps",
+    "oauth-for-ai-agents",
+    "agent-tools",
+    "integration-permissions",
+    "teams-development"
+   ],
+   "sem": {
+    "coverage": 0.82,
+    "known": 7,
+    "total": 7,
+    "top": "teams-development",
+    "sim": 0.609,
+    "z": 2.35,
+    "margin": 0.062,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-038",
+   "q": "agent reads my inbox and drafts replies",
+   "style": "integration",
+   "topic": "agent",
+   "kind": "page",
+   "expected": [
+    "gmail-for-ai-agents",
+    "connecting-agents-to-apps",
+    "agent-tools"
+   ],
+   "expectedTool": null,
+   "top": "gmail-for-ai-agents",
+   "solid": true,
+   "score": 70,
+   "top5": [
+    "gmail-for-ai-agents",
+    "ai-agent-vs-chatbot",
+    "agent-protocol-landscape",
+    "multi-agent-systems",
+    "choosing-an-agent-framework"
+   ],
+   "learn": [
+    "connecting-agents-to-apps",
+    "oauth-for-ai-agents",
+    "agent-tools",
+    "integration-permissions",
+    "prompt-injection"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "gmail-for-ai-agents",
+    "ai-agent-vs-chatbot",
+    "agent-protocol-landscape",
+    "multi-agent-systems",
+    "choosing-an-agent-framework",
+    "agent-frameworks-compared",
+    "connecting-agents-to-apps",
+    "agent-evaluation",
+    "oauth-for-ai-agents",
+    "ai-agents"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 7,
+    "total": 7,
+    "top": "authentication-vs-authorization",
+    "sim": 0.781,
+    "z": 1.73,
+    "margin": 0.008,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-039",
+   "q": "give an agent access to our crm",
+   "style": "integration",
+   "topic": "agent",
+   "kind": "page",
+   "expected": [
+    "connecting-agents-to-apps",
+    "agent-tools",
+    "integration-permissions"
+   ],
+   "expectedTool": null,
+   "top": "connecting-agents-to-apps",
+   "solid": true,
+   "score": 55,
+   "top5": [
+    "connecting-agents-to-apps",
+    "ai-agent-vs-chatbot",
+    "agent-tools",
+    "agent-protocol-landscape",
+    "multi-agent-systems"
+   ],
+   "learn": [
+    "agent-tools",
+    "oauth-for-ai-agents",
+    "gmail-for-ai-agents",
+    "integration-permissions"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "connecting-agents-to-apps",
+    "ai-agent-vs-chatbot",
+    "agent-tools",
+    "agent-protocol-landscape",
+    "multi-agent-systems",
+    "oauth-for-ai-agents",
+    "choosing-an-agent-framework",
+    "gmail-for-ai-agents",
+    "agent-frameworks-compared",
+    "agent-evaluation"
+   ],
+   "sem": {
+    "coverage": 0.83,
+    "known": 6,
+    "total": 7,
+    "top": "authentication-vs-authorization",
+    "sim": 0.689,
+    "z": 1.81,
+    "margin": 0.031,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-040",
+   "q": "how do i prevent the assistant from sending emails without asking",
+   "style": "security",
+   "topic": "agent",
+   "kind": "page",
+   "expected": [
+    "integration-permissions",
+    "ai-guardrails",
+    "agent-tools"
+   ],
+   "expectedTool": null,
+   "top": "integration-permissions",
+   "solid": true,
+   "score": 42,
+   "top5": [
+    "integration-permissions",
+    "ai-guardrails",
+    "agent-tools",
+    "ai-agent-vs-chatbot",
+    "code-execution-sandboxing"
+   ],
+   "learn": [
+    "agent-tools",
+    "oauth-for-ai-agents",
+    "ai-guardrails",
+    "code-execution-sandboxing"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "integration-permissions",
+    "ai-guardrails",
+    "agent-tools",
+    "ai-agent-vs-chatbot",
+    "code-execution-sandboxing",
+    "system-prompts",
+    "speech-ai",
+    "reward-hacking",
+    "calling-ai-apis-with-python",
+    "how-to-reduce-hallucinations"
+   ],
+   "sem": {
+    "coverage": 0.9,
+    "known": 10,
+    "total": 11,
+    "top": "rag",
+    "sim": 0.674,
+    "z": 1.9,
+    "margin": 0.003,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-041",
+   "q": "hidden instructions inside a pdf the agent reads",
+   "style": "security",
+   "topic": "agent",
+   "kind": "page",
+   "expected": [
+    "prompt-injection"
+   ],
+   "expectedTool": null,
+   "top": "prompt-injection",
+   "solid": true,
+   "score": 58,
+   "top5": [
+    "prompt-injection",
+    "ai-agent-vs-chatbot",
+    "agent-protocol-landscape",
+    "multi-agent-systems",
+    "choosing-an-agent-framework"
+   ],
+   "learn": [
+    "ai-agents",
+    "agent-tools",
+    "system-prompts"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "prompt-injection",
+    "ai-agent-vs-chatbot",
+    "agent-protocol-landscape",
+    "multi-agent-systems",
+    "choosing-an-agent-framework",
+    "agent-frameworks-compared",
+    "agent-evaluation",
+    "ai-agents",
+    "react-agent-pattern",
+    "a2a-protocol"
+   ],
+   "sem": {
+    "coverage": 0.88,
+    "known": 7,
+    "total": 8,
+    "top": "rag-with-python",
+    "sim": 0.616,
+    "z": 1.78,
+    "margin": 0.009,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-042",
+   "q": "how does an assistant remember my preferences between sessions",
+   "style": "architecture",
+   "topic": "agent",
+   "kind": "page",
+   "expected": [
+    "agent-memory"
+   ],
+   "expectedTool": null,
+   "top": "agent-memory",
+   "solid": true,
+   "score": 89,
+   "top5": [
+    "agent-memory",
+    "ai-agent-vs-chatbot",
+    "flash-attention",
+    "gpus-and-ai-accelerators",
+    "kv-cache"
+   ],
+   "learn": [
+    "ai-agents",
+    "context-windows"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "agent-memory",
+    "ai-agent-vs-chatbot",
+    "flash-attention",
+    "gpus-and-ai-accelerators",
+    "kv-cache",
+    "a2a-vs-mcp",
+    "api-authentication",
+    "authentication-vs-authorization",
+    "function-calling-vs-mcp",
+    "lora-and-peft"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 9,
+    "total": 9,
+    "top": "ai-agent-vs-chatbot",
+    "sim": 0.606,
+    "z": 3.21,
+    "margin": 0.069,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-043",
+   "q": "planner and worker agents",
+   "style": "architecture",
+   "topic": "agent",
+   "kind": "page",
+   "expected": [
+    "multi-agent-systems",
+    "agent-planning",
+    "agentic-workflows"
+   ],
+   "expectedTool": null,
+   "top": "multi-agent-systems",
+   "solid": true,
+   "score": 78,
+   "top5": [
+    "multi-agent-systems",
+    "agentic-workflows",
+    "openai-agents-sdk",
+    "agent-protocol-landscape",
+    "agent-frameworks-compared"
+   ],
+   "learn": [
+    "agentic-workflows",
+    "ai-agents",
+    "ai-agent-vs-chatbot",
+    "agent-tools",
+    "agent-memory"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "multi-agent-systems",
+    "agentic-workflows",
+    "openai-agents-sdk",
+    "agent-protocol-landscape",
+    "agent-frameworks-compared",
+    "gmail-for-ai-agents",
+    "choosing-an-agent-framework",
+    "ai-agents",
+    "ai-agent-vs-chatbot",
+    "computer-use-agents"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 4,
+    "total": 4,
+    "top": "multi-agent-systems",
+    "sim": 0.921,
+    "z": 4.76,
+    "margin": 0.168,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-044",
+   "q": "break a big goal into subtasks automatically",
+   "style": "architecture",
+   "topic": "agent",
+   "kind": "page",
+   "expected": [
+    "agent-planning"
+   ],
+   "expectedTool": null,
+   "top": "agent-planning",
+   "solid": true,
+   "score": 52,
+   "top5": [
+    "agent-planning",
+    "benchmarks-and-leaderboards",
+    "ai-agents",
+    "ai-agent-vs-chatbot",
+    "best-of-n-sampling"
+   ],
+   "learn": [
+    "ai-agents"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "agent-planning",
+    "benchmarks-and-leaderboards",
+    "ai-agents",
+    "ai-agent-vs-chatbot",
+    "best-of-n-sampling",
+    "cicd",
+    "dspy"
+   ],
+   "sem": {
+    "coverage": 0.7,
+    "known": 6,
+    "total": 7,
+    "top": "agent-planning",
+    "sim": 0.672,
+    "z": 2.86,
+    "margin": 0.051,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-045",
+   "q": "an llm that calls a calculator or search engine",
+   "style": "concept",
+   "topic": "agent",
+   "kind": "page",
+   "expected": [
+    "function-calling",
+    "agent-tools"
+   ],
+   "expectedTool": null,
+   "top": "agent-tools",
+   "solid": true,
+   "score": 45,
+   "top5": [
+    "agent-tools",
+    "function-calling",
+    "llm-observability",
+    "search-over-reasoning",
+    "llm-as-a-judge"
+   ],
+   "learn": [
+    "function-calling",
+    "ai-privacy-and-security",
+    "ai-agents",
+    "prompt-injection",
+    "function-calling-vs-mcp"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "agent-tools",
+    "function-calling",
+    "llm-observability",
+    "search-over-reasoning",
+    "llm-as-a-judge",
+    "large-language-models",
+    "hybrid-search-and-reranking",
+    "llm-cost-optimization",
+    "owasp-llm-top-10",
+    "local-runtimes-compared"
+   ],
+   "sem": {
+    "coverage": 0.88,
+    "known": 8,
+    "total": 9,
+    "top": "llm-cost-optimization",
+    "sim": 0.529,
+    "z": 2.49,
+    "margin": 0.011,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-046",
+   "q": "microsoft stack agent sdk",
+   "style": "what-to-use",
+   "topic": "agent",
+   "kind": "page",
+   "expected": [
+    "semantic-kernel",
+    "agent-frameworks-compared"
+   ],
+   "expectedTool": null,
+   "top": "semantic-kernel",
+   "solid": true,
+   "score": 58,
+   "top5": [
+    "semantic-kernel",
+    "openai-agents-sdk",
+    "ai-agent-vs-chatbot",
+    "agent-protocol-landscape",
+    "microsoft-graph"
+   ],
+   "learn": [
+    "agent-frameworks-compared",
+    "autogen",
+    "agent-tools",
+    "azure-fundamentals",
+    "langchain"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "semantic-kernel",
+    "openai-agents-sdk",
+    "ai-agent-vs-chatbot",
+    "agent-protocol-landscape",
+    "microsoft-graph",
+    "choosing-an-agent-framework",
+    "agent-frameworks-compared",
+    "autogen",
+    "microsoft-365",
+    "multi-agent-systems"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 4,
+    "total": 4,
+    "top": "openai-agents-sdk",
+    "sim": 0.845,
+    "z": 1.7,
+    "margin": 0.001,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-047",
+   "q": "state machine style framework with checkpoints",
+   "style": "what-to-use",
+   "topic": "agent",
+   "kind": "page",
+   "expected": [
+    "langgraph"
+   ],
+   "expectedTool": null,
+   "top": "langgraph",
+   "solid": true,
+   "score": 63,
+   "top5": [
+    "langgraph",
+    "choosing-an-agent-framework",
+    "react-chatbot-state",
+    "what-is-an-ai-framework",
+    "framework-vs-direct-api"
+   ],
+   "learn": [
+    "agent-frameworks-compared",
+    "agentic-workflows",
+    "langchain",
+    "agent-memory"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "langgraph",
+    "choosing-an-agent-framework",
+    "react-chatbot-state",
+    "what-is-an-ai-framework",
+    "framework-vs-direct-api",
+    "sharepoint-framework",
+    "agent-frameworks-compared",
+    "state-space-models",
+    "rag-frameworks",
+    "transformers-vs-state-space-models"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 6,
+    "total": 6,
+    "top": "langgraph",
+    "sim": 0.604,
+    "z": 2.41,
+    "margin": 0.003,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-048",
+   "q": "role based crew of agents in python",
+   "style": "what-to-use",
+   "topic": "agent",
+   "kind": "page",
+   "expected": [
+    "crewai"
+   ],
+   "expectedTool": null,
+   "top": "crewai",
+   "solid": true,
+   "score": 71,
+   "top5": [
+    "crewai",
+    "python",
+    "openai-agents-sdk",
+    "rag-with-python",
+    "python-for-ai"
+   ],
+   "learn": [
+    "multi-agent-systems",
+    "agent-frameworks-compared",
+    "ai-agents",
+    "autogen",
+    "langgraph"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "crewai",
+    "python",
+    "openai-agents-sdk",
+    "rag-with-python",
+    "python-for-ai",
+    "multi-agent-systems",
+    "calling-ai-apis-with-python",
+    "python-ai-libraries",
+    "choosing-an-agent-framework",
+    "agent-protocol-landscape"
+   ],
+   "sem": {
+    "coverage": 0.8,
+    "known": 7,
+    "total": 7,
+    "top": "crewai",
+    "sim": 0.76,
+    "z": 3.51,
+    "margin": 0.097,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-049",
+   "q": "standard way to expose tools to any ai client",
+   "style": "concept",
+   "topic": "mcp",
+   "kind": "page",
+   "expected": [
+    "mcp",
+    "mcp-servers-and-clients"
+   ],
+   "expectedTool": null,
+   "top": "mcp",
+   "solid": true,
+   "score": 58,
+   "top5": [
+    "mcp",
+    "ai-governance",
+    "agent-tools",
+    "eu-ai-act",
+    "nist-ai-rmf"
+   ],
+   "learn": [
+    "agent-tools",
+    "mcp-servers-and-clients",
+    "ai-agents",
+    "ai-privacy-and-security",
+    "function-calling-vs-mcp"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "mcp",
+    "ai-governance",
+    "agent-tools",
+    "eu-ai-act",
+    "nist-ai-rmf",
+    "ai-sdks",
+    "mcp-servers-and-clients",
+    "ai-agents",
+    "ai-privacy-and-security",
+    "embodied-ai"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 9,
+    "total": 9,
+    "top": "mcp",
+    "sim": 0.839,
+    "z": 1.66,
+    "margin": 0.002,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-050",
+   "q": "how does a client talk to an mcp server",
+   "style": "concept",
+   "topic": "mcp",
+   "kind": "page",
+   "expected": [
+    "mcp-servers-and-clients"
+   ],
+   "expectedTool": null,
+   "top": "mcp-servers-and-clients",
+   "solid": true,
+   "score": 99,
+   "top5": [
+    "mcp-servers-and-clients",
+    "mcp",
+    "mcp-security",
+    "function-calling-vs-mcp",
+    "a2a-vs-mcp"
+   ],
+   "learn": [
+    "mcp",
+    "function-calling-vs-mcp",
+    "mcp-vs-api"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "mcp-servers-and-clients",
+    "mcp",
+    "mcp-security",
+    "function-calling-vs-mcp",
+    "a2a-vs-mcp",
+    "mcp-vs-api",
+    "typescript-api-client-types",
+    "agent-protocol-landscape",
+    "frontend-and-backend",
+    "model-serving-and-inference"
+   ],
+   "sem": {
+    "coverage": 0.88,
+    "known": 8,
+    "total": 9,
+    "top": "mcp-servers-and-clients",
+    "sim": 0.909,
+    "z": 1.82,
+    "margin": 0.036,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-051",
+   "q": "do i need mcp if i already have function calling",
+   "style": "comparison",
+   "topic": "mcp",
+   "kind": "page",
+   "expected": [
+    "function-calling-vs-mcp"
+   ],
+   "expectedTool": null,
+   "top": "function-calling-vs-mcp",
+   "solid": true,
+   "score": 146,
+   "top5": [
+    "function-calling-vs-mcp",
+    "function-calling",
+    "mcp",
+    "mcp-security",
+    "mcp-servers-and-clients"
+   ],
+   "learn": [
+    "function-calling",
+    "mcp",
+    "mcp-servers-and-clients",
+    "mcp-vs-api",
+    "agent-tools"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "function-calling-vs-mcp",
+    "function-calling",
+    "mcp",
+    "mcp-security",
+    "mcp-servers-and-clients",
+    "a2a-vs-mcp",
+    "mcp-vs-api",
+    "agent-protocol-landscape",
+    "calling-ai-apis-with-python",
+    "calling-ai-apis-with-javascript"
+   ],
+   "sem": {
+    "coverage": 0.79,
+    "known": 8,
+    "total": 10,
+    "top": "function-calling-vs-mcp",
+    "sim": 0.822,
+    "z": 2.2,
+    "margin": 0.035,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-052",
+   "q": "what can go wrong with third party tool servers",
+   "style": "security",
+   "topic": "mcp",
+   "kind": "page",
+   "expected": [
+    "mcp-security"
+   ],
+   "expectedTool": null,
+   "top": "mcp-security",
+   "solid": true,
+   "score": 58,
+   "top5": [
+    "mcp-security",
+    "function-calling",
+    "agent-tools",
+    "mcp-servers-and-clients",
+    "function-calling-vs-mcp"
+   ],
+   "learn": [
+    "agent-tools",
+    "mcp-servers-and-clients",
+    "prompt-injection",
+    "mcp"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "mcp-security",
+    "function-calling",
+    "agent-tools",
+    "mcp-servers-and-clients",
+    "function-calling-vs-mcp",
+    "agent-evaluation",
+    "react-agent-pattern",
+    "connecting-agents-to-apps",
+    "context-engineering",
+    "gmail-for-ai-agents"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 9,
+    "total": 9,
+    "top": "mcp-servers-and-clients",
+    "sim": 0.755,
+    "z": 1.48,
+    "margin": 0.025,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-053",
+   "q": "how do independent agents discover each other",
+   "style": "concept",
+   "topic": "a2a",
+   "kind": "page",
+   "expected": [
+    "a2a-protocol"
+   ],
+   "expectedTool": null,
+   "top": "a2a-protocol",
+   "solid": true,
+   "score": 69,
+   "top5": [
+    "a2a-protocol",
+    "agent-protocol-landscape",
+    "openai-agents-sdk",
+    "multi-agent-systems",
+    "agent-frameworks-compared"
+   ],
+   "learn": [
+    "agent-protocol-landscape",
+    "multi-agent-systems",
+    "agent-frameworks-compared",
+    "ai-agents",
+    "agentic-workflows"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "a2a-protocol",
+    "agent-protocol-landscape",
+    "openai-agents-sdk",
+    "multi-agent-systems",
+    "agent-frameworks-compared",
+    "gmail-for-ai-agents",
+    "choosing-an-agent-framework",
+    "ai-agents",
+    "ai-agent-vs-chatbot",
+    "computer-use-agents"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 7,
+    "total": 7,
+    "top": "a2a-vs-mcp",
+    "sim": 0.789,
+    "z": 3.14,
+    "margin": 0.017,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-054",
+   "q": "python tutorial for calling models",
+   "style": "beginner",
+   "topic": "python",
+   "kind": "page",
+   "expected": [
+    "calling-ai-apis-with-python",
+    "python-for-ai"
+   ],
+   "expectedTool": null,
+   "top": "calling-ai-apis-with-python",
+   "solid": true,
+   "score": 110,
+   "top5": [
+    "calling-ai-apis-with-python",
+    "python",
+    "reasoning-models",
+    "reasoning-vs-standard-models",
+    "small-language-models"
+   ],
+   "learn": [
+    "rag-with-python",
+    "python-for-ai",
+    "python-data-for-ai",
+    "what-is-an-api"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "calling-ai-apis-with-python",
+    "python",
+    "reasoning-models",
+    "reasoning-vs-standard-models",
+    "small-language-models",
+    "rag-with-python",
+    "python-for-ai",
+    "world-models",
+    "model-apis",
+    "python-ai-libraries"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 5,
+    "total": 5,
+    "top": "python",
+    "sim": 0.898,
+    "z": 2.73,
+    "margin": 0.026,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-055",
+   "q": "pandas dataframe to feed an llm",
+   "style": "implementation",
+   "topic": "python",
+   "kind": "page",
+   "expected": [
+    "python-data-for-ai"
+   ],
+   "expectedTool": null,
+   "top": "python-data-for-ai",
+   "solid": true,
+   "score": 52,
+   "top5": [
+    "python-data-for-ai",
+    "llm-observability",
+    "llm-as-a-judge",
+    "large-language-models",
+    "llm-cost-optimization"
+   ],
+   "learn": [
+    "calling-ai-apis-with-python",
+    "python-ai-libraries",
+    "large-language-models"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "python-data-for-ai",
+    "llm-observability",
+    "llm-as-a-judge",
+    "large-language-models",
+    "llm-cost-optimization",
+    "owasp-llm-top-10",
+    "llm-benchmarks-vs-task-evals",
+    "local-llm-runtimes",
+    "local-runtimes-compared",
+    "model-serving-and-inference"
+   ],
+   "sem": {
+    "coverage": 0.81,
+    "known": 5,
+    "total": 6,
+    "top": "python-data-for-ai",
+    "sim": 0.676,
+    "z": 2.95,
+    "margin": 0.09,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-056",
+   "q": "typical jobs where python is the right choice",
+   "style": "beginner",
+   "topic": "python",
+   "kind": "page",
+   "expected": [
+    "python"
+   ],
+   "expectedTool": null,
+   "top": "python",
+   "solid": true,
+   "score": 47,
+   "top5": [
+    "python",
+    "rag-with-python",
+    "python-for-ai",
+    "calling-ai-apis-with-python",
+    "python-ai-libraries"
+   ],
+   "learn": [
+    "python-for-ai",
+    "calling-ai-apis-with-python",
+    "environment-variables"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "python",
+    "rag-with-python",
+    "python-for-ai",
+    "calling-ai-apis-with-python",
+    "python-ai-libraries",
+    "python-data-for-ai",
+    "langchain",
+    "ray",
+    "mmlu",
+    "outlines"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 8,
+    "total": 8,
+    "top": "go-language",
+    "sim": 0.687,
+    "z": 2.42,
+    "margin": 0.032,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-057",
+   "q": "generic types for api responses",
+   "style": "implementation",
+   "topic": "ts",
+   "kind": "page",
+   "expected": [
+    "typescript-api-client-types",
+    "typescript"
+   ],
+   "expectedTool": null,
+   "top": "typescript-api-client-types",
+   "solid": true,
+   "score": 96,
+   "top5": [
+    "typescript-api-client-types",
+    "api-keys",
+    "mcp-vs-api",
+    "what-is-an-api",
+    "framework-vs-direct-api"
+   ],
+   "learn": [
+    "what-is-an-api",
+    "api-authentication",
+    "typescript-for-ai",
+    "calling-ai-apis-with-javascript",
+    "rest-apis"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "typescript-api-client-types",
+    "api-keys",
+    "mcp-vs-api",
+    "what-is-an-api",
+    "framework-vs-direct-api",
+    "api-authentication",
+    "model-apis",
+    "streaming-ai-with-nodejs",
+    "microsoft-graph",
+    "streaming-ai-responses"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 5,
+    "total": 5,
+    "top": "typescript-api-client-types",
+    "sim": 0.906,
+    "z": 2.37,
+    "margin": 0.02,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-058",
+   "q": "fetch with streaming response body",
+   "style": "implementation",
+   "topic": "js",
+   "kind": "page",
+   "expected": [
+    "streaming-ai-responses",
+    "javascript-for-ai"
+   ],
+   "expectedTool": null,
+   "top": "streaming-ai-responses",
+   "solid": true,
+   "score": 72,
+   "top5": [
+    "streaming-ai-responses",
+    "streaming-ai-with-nodejs",
+    "typescript-api-client-types",
+    "calling-ai-apis-with-javascript",
+    "ai-sdks"
+   ],
+   "learn": [
+    "streaming-ai-with-nodejs",
+    "calling-ai-apis-with-javascript",
+    "react-ai-interfaces",
+    "react-chatbot-state"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "streaming-ai-responses",
+    "streaming-ai-with-nodejs",
+    "typescript-api-client-types",
+    "calling-ai-apis-with-javascript",
+    "ai-sdks",
+    "websockets",
+    "react-ai-interfaces",
+    "javascript-for-ai",
+    "speech-ai",
+    "calling-ai-apis-with-python"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 5,
+    "total": 5,
+    "top": "streaming-ai-responses",
+    "sim": 0.887,
+    "z": 1.97,
+    "margin": 0.019,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-059",
+   "q": "show tokens as they stream into a chat component",
+   "style": "implementation",
+   "topic": "react",
+   "kind": "page",
+   "expected": [
+    "react-chatbot-state",
+    "react-ai-interfaces",
+    "streaming-ai-responses"
+   ],
+   "expectedTool": null,
+   "top": "react-ai-interfaces",
+   "solid": true,
+   "score": 51,
+   "top5": [
+    "react-ai-interfaces",
+    "react-chatbot-state",
+    "tokens",
+    "streaming-ai-responses",
+    "json-web-tokens"
+   ],
+   "learn": [
+    "react-chatbot-state",
+    "streaming-ai-responses",
+    "tokens"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "react-ai-interfaces",
+    "react-chatbot-state",
+    "tokens",
+    "streaming-ai-responses",
+    "json-web-tokens",
+    "model-apis",
+    "instruction-tuning",
+    "streaming-ai-with-nodejs",
+    "reasoning-transparency",
+    "postgresql-for-ai-apps"
+   ],
+   "sem": {
+    "coverage": 0.88,
+    "known": 8,
+    "total": 9,
+    "top": "streaming-ai-responses",
+    "sim": 0.921,
+    "z": 2.26,
+    "margin": 0.088,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-060",
+   "q": "backend for a chat app with express",
+   "style": "implementation",
+   "topic": "node",
+   "kind": "page",
+   "expected": [
+    "nodejs-for-ai",
+    "express"
+   ],
+   "expectedTool": null,
+   "top": "express",
+   "solid": true,
+   "score": 78,
+   "top5": [
+    "express",
+    "nodejs-for-ai",
+    "frontend-and-backend",
+    "streaming-ai-responses",
+    "postgresql-for-ai-apps"
+   ],
+   "learn": [
+    "frontend-and-backend",
+    "nodejs",
+    "nodejs-for-ai"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "express",
+    "nodejs-for-ai",
+    "frontend-and-backend",
+    "streaming-ai-responses",
+    "postgresql-for-ai-apps",
+    "react-ai-interfaces",
+    "azure-fundamentals",
+    "javascript-for-ai",
+    "microsoft-entra-id",
+    "teams-development"
+   ],
+   "sem": {
+    "coverage": 0.85,
+    "known": 6,
+    "total": 7,
+    "top": "express",
+    "sim": 0.927,
+    "z": 1.75,
+    "margin": 0.012,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-061",
+   "q": "http methods get post put delete",
+   "style": "beginner",
+   "topic": "api",
+   "kind": "page",
+   "expected": [
+    "rest-apis",
+    "what-is-an-api"
+   ],
+   "expectedTool": null,
+   "top": "rest-apis",
+   "solid": true,
+   "score": 68,
+   "top5": [
+    "rest-apis",
+    "structured-output-methods-compared",
+    "calling-ai-apis-with-python",
+    "webhooks",
+    "structured-outputs"
+   ],
+   "learn": [
+    "what-is-an-api",
+    "what-is-json"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "rest-apis",
+    "structured-output-methods-compared",
+    "calling-ai-apis-with-python",
+    "webhooks",
+    "structured-outputs",
+    "express",
+    "mcp-servers-and-clients",
+    "model-apis",
+    "python-ai-libraries",
+    "what-is-an-api"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 6,
+    "total": 6,
+    "top": "rest-apis",
+    "sim": 0.916,
+    "z": 1.81,
+    "margin": 0.027,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-062",
+   "q": "should the browser hold my secret key",
+   "style": "security",
+   "topic": "api",
+   "kind": "page",
+   "expected": [
+    "api-keys",
+    "environment-variables"
+   ],
+   "expectedTool": null,
+   "top": "api-keys",
+   "solid": true,
+   "score": 71,
+   "top5": [
+    "api-keys",
+    "environment-variables",
+    "computer-use-agents",
+    "javascript-for-ai",
+    "cors"
+   ],
+   "learn": [
+    "environment-variables",
+    "api-authentication",
+    "frontend-and-backend",
+    "oauth"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "api-keys",
+    "environment-variables",
+    "computer-use-agents",
+    "javascript-for-ai",
+    "cors",
+    "api-authentication",
+    "azure-fundamentals",
+    "calling-ai-apis-with-python",
+    "frontend-and-backend",
+    "html-and-css"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 7,
+    "total": 7,
+    "top": "api-keys",
+    "sim": 0.907,
+    "z": 1.78,
+    "margin": 0.022,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-063",
+   "q": "refresh tokens and access tokens",
+   "style": "security",
+   "topic": "api",
+   "kind": "page",
+   "expected": [
+    "oauth",
+    "json-web-tokens"
+   ],
+   "expectedTool": null,
+   "top": "oauth",
+   "solid": true,
+   "score": 54,
+   "top5": [
+    "oauth",
+    "json-web-tokens",
+    "openid-connect",
+    "oauth-for-ai-agents",
+    "gmail-for-ai-agents"
+   ],
+   "learn": [
+    "json-web-tokens",
+    "openid-connect",
+    "oauth-for-ai-agents",
+    "api-keys",
+    "microsoft-entra-id"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "oauth",
+    "json-web-tokens",
+    "openid-connect",
+    "oauth-for-ai-agents",
+    "gmail-for-ai-agents",
+    "streaming-ai-responses",
+    "api-keys",
+    "cors",
+    "reasoning-transparency",
+    "llm-cost-optimization"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 5,
+    "total": 5,
+    "top": "openid-connect",
+    "sim": 0.86,
+    "z": 2.41,
+    "margin": 0.014,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-064",
+   "q": "difference between id token and access token",
+   "style": "concept",
+   "topic": "api",
+   "kind": "page",
+   "expected": [
+    "openid-connect",
+    "oauth"
+   ],
+   "expectedTool": null,
+   "top": "openid-connect",
+   "solid": true,
+   "score": 80,
+   "top5": [
+    "openid-connect",
+    "oauth",
+    "json-web-tokens",
+    "ai-agent-vs-chatbot",
+    "gmail-for-ai-agents"
+   ],
+   "learn": [
+    "oauth",
+    "json-web-tokens",
+    "authentication-vs-authorization",
+    "api-keys",
+    "microsoft-entra-id"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "openid-connect",
+    "oauth",
+    "json-web-tokens",
+    "ai-agent-vs-chatbot",
+    "gmail-for-ai-agents",
+    "a2a-vs-mcp",
+    "authentication-vs-authorization",
+    "function-calling-vs-mcp",
+    "oauth-for-ai-agents",
+    "self-supervised-learning"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 7,
+    "total": 7,
+    "top": "openid-connect",
+    "sim": 0.855,
+    "z": 2.83,
+    "margin": 0.024,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-065",
+   "q": "what is a primary key and a foreign key",
+   "style": "beginner",
+   "topic": "db",
+   "kind": "page",
+   "expected": [
+    "sql"
+   ],
+   "expectedTool": null,
+   "top": "sql",
+   "solid": true,
+   "score": 46,
+   "top5": [
+    "sql",
+    "api-keys",
+    "postgresql",
+    "javascript-for-ai",
+    "azure-fundamentals"
+   ],
+   "learn": [
+    "postgresql",
+    "sql-vs-nosql"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "sql",
+    "api-keys",
+    "postgresql",
+    "javascript-for-ai",
+    "azure-fundamentals",
+    "calling-ai-apis-with-python",
+    "api-authentication",
+    "nodejs-for-ai",
+    "python-for-ai",
+    "redis"
+   ],
+   "sem": {
+    "coverage": 0.73,
+    "known": 7,
+    "total": 9,
+    "top": "api-keys",
+    "sim": 0.687,
+    "z": 2.7,
+    "margin": 0.028,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-066",
+   "q": "what is mongodb good for",
+   "style": "beginner",
+   "topic": "db",
+   "kind": "page",
+   "expected": [
+    "mongodb"
+   ],
+   "expectedTool": null,
+   "top": "mongodb",
+   "solid": true,
+   "score": 53,
+   "top5": [
+    "mongodb",
+    "ai-evaluation",
+    "lora-vs-full-fine-tuning",
+    "llm-as-a-judge",
+    "mmlu"
+   ],
+   "learn": [
+    "sql-vs-nosql"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "mongodb",
+    "ai-evaluation",
+    "lora-vs-full-fine-tuning",
+    "llm-as-a-judge",
+    "mmlu",
+    "sql-vs-nosql"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 5,
+    "total": 5,
+    "top": "mongodb",
+    "sim": 0.896,
+    "z": 4.6,
+    "margin": 0.175,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-067",
+   "q": "cache with redis or just use the database",
+   "style": "what-to-use",
+   "topic": "db",
+   "kind": "page",
+   "expected": [
+    "redis",
+    "databases-for-ai-apps"
+   ],
+   "expectedTool": null,
+   "top": "redis",
+   "solid": true,
+   "score": 110,
+   "top5": [
+    "redis",
+    "vector-database-vs-traditional-database",
+    "kv-cache",
+    "databases-for-ai-apps",
+    "vector-databases"
+   ],
+   "learn": [
+    "postgresql",
+    "mongodb"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "redis",
+    "vector-database-vs-traditional-database",
+    "kv-cache",
+    "databases-for-ai-apps",
+    "vector-databases",
+    "prompt-caching",
+    "choosing-a-vector-store",
+    "postgresql",
+    "sqlite",
+    "mongodb"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 8,
+    "total": 8,
+    "top": "redis",
+    "sim": 0.862,
+    "z": 2.79,
+    "margin": 0.181,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-068",
+   "q": "embeddings and relational data in one database",
+   "style": "implementation",
+   "topic": "db",
+   "kind": "page",
+   "expected": [
+    "pgvector",
+    "postgresql-for-ai-apps"
+   ],
+   "expectedTool": null,
+   "top": "pgvector",
+   "solid": true,
+   "score": 61,
+   "top5": [
+    "pgvector",
+    "embeddings",
+    "vector-database-vs-traditional-database",
+    "gdpr-and-ai",
+    "vector-databases"
+   ],
+   "learn": [
+    "embeddings",
+    "vector-database-vs-traditional-database",
+    "vector-databases",
+    "postgresql-for-ai-apps",
+    "postgresql"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "pgvector",
+    "embeddings",
+    "vector-database-vs-traditional-database",
+    "gdpr-and-ai",
+    "vector-databases",
+    "postgresql-for-ai-apps",
+    "ai-privacy-and-security",
+    "databases-for-ai-apps",
+    "python-data-for-ai",
+    "postgresql"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 7,
+    "total": 7,
+    "top": "pgvector",
+    "sim": 0.938,
+    "z": 2.85,
+    "margin": 0.002,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-069",
+   "q": "what does aws lambda do",
+   "style": "beginner",
+   "topic": "cloud",
+   "kind": "page",
+   "expected": [
+    "aws-fundamentals"
+   ],
+   "expectedTool": null,
+   "top": "aws-fundamentals",
+   "solid": true,
+   "score": 77,
+   "top5": [
+    "aws-fundamentals",
+    "gcp-fundamentals"
+   ],
+   "learn": [
+    "gcp-fundamentals"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "aws-fundamentals",
+    "gcp-fundamentals"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 5,
+    "total": 5,
+    "top": "aws-fundamentals",
+    "sim": 0.929,
+    "z": 3.09,
+    "margin": 0.195,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-070",
+   "q": "what are azure resource groups",
+   "style": "beginner",
+   "topic": "cloud",
+   "kind": "page",
+   "expected": [
+    "azure-fundamentals"
+   ],
+   "expectedTool": null,
+   "top": "azure-fundamentals",
+   "solid": true,
+   "score": 86,
+   "top5": [
+    "azure-fundamentals",
+    "microsoft-entra-id",
+    "csharp",
+    "semantic-kernel",
+    "aws-fundamentals"
+   ],
+   "learn": [
+    "microsoft-entra-id",
+    "aws-fundamentals"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "azure-fundamentals",
+    "microsoft-entra-id",
+    "csharp",
+    "semantic-kernel",
+    "aws-fundamentals",
+    "cors",
+    "ai-bias-and-fairness",
+    "microsoft-graph",
+    "power-platform"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 5,
+    "total": 5,
+    "top": "azure-fundamentals",
+    "sim": 0.927,
+    "z": 2.49,
+    "margin": 0.045,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-071",
+   "q": "google cloud iam basics",
+   "style": "beginner",
+   "topic": "cloud",
+   "kind": "page",
+   "expected": [
+    "gcp-fundamentals"
+   ],
+   "expectedTool": null,
+   "top": "gcp-fundamentals",
+   "solid": true,
+   "score": 99,
+   "top5": [
+    "gcp-fundamentals",
+    "local-ai-vs-cloud-ai",
+    "gmail-for-ai-agents",
+    "gpus-and-ai-accelerators",
+    "aws-fundamentals"
+   ],
+   "learn": [
+    "aws-fundamentals",
+    "azure-fundamentals"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "gcp-fundamentals",
+    "local-ai-vs-cloud-ai",
+    "gmail-for-ai-agents",
+    "gpus-and-ai-accelerators",
+    "aws-fundamentals",
+    "power-platform",
+    "azure-fundamentals",
+    "mlflow",
+    "mlops",
+    "a2a-protocol"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 4,
+    "total": 4,
+    "top": "gcp-fundamentals",
+    "sim": 0.968,
+    "z": 2.56,
+    "margin": 0.087,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-072",
+   "q": "difference between an image and a container",
+   "style": "beginner",
+   "topic": "devops",
+   "kind": "page",
+   "expected": [
+    "docker",
+    "containers"
+   ],
+   "expectedTool": null,
+   "top": "docker",
+   "solid": true,
+   "score": 62,
+   "top5": [
+    "docker",
+    "containers",
+    "ai-agent-vs-chatbot",
+    "contrastive-learning-clip",
+    "object-detection"
+   ],
+   "learn": [
+    "containers"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "docker",
+    "containers",
+    "ai-agent-vs-chatbot",
+    "contrastive-learning-clip",
+    "object-detection",
+    "a2a-vs-mcp",
+    "authentication-vs-authorization",
+    "function-calling-vs-mcp",
+    "kubernetes",
+    "diffusion-models"
+   ],
+   "sem": {
+    "coverage": 0.83,
+    "known": 6,
+    "total": 7,
+    "top": "containers",
+    "sim": 0.743,
+    "z": 3.35,
+    "margin": 0.116,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-073",
+   "q": "dockerfile for a node app",
+   "style": "implementation",
+   "topic": "devops",
+   "kind": "page",
+   "expected": [
+    "docker",
+    "nodejs"
+   ],
+   "expectedTool": null,
+   "top": "docker",
+   "solid": true,
+   "score": 81,
+   "top5": [
+    "docker",
+    "containers",
+    "nodejs",
+    "streaming-ai-with-nodejs",
+    "nodejs-for-ai"
+   ],
+   "learn": [
+    "containers",
+    "nodejs",
+    "environment-variables"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "docker",
+    "containers",
+    "nodejs",
+    "streaming-ai-with-nodejs",
+    "nodejs-for-ai",
+    "azure-fundamentals",
+    "javascript-for-ai",
+    "microsoft-entra-id",
+    "teams-development",
+    "postgresql-for-ai-apps"
+   ],
+   "sem": {
+    "coverage": 0.79,
+    "known": 4,
+    "total": 5,
+    "top": "nodejs-for-ai",
+    "sim": 0.838,
+    "z": 1.73,
+    "margin": 0.007,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-074",
+   "q": "what does git rebase do",
+   "style": "beginner",
+   "topic": "devops",
+   "kind": "page",
+   "expected": [
+    "git"
+   ],
+   "expectedTool": null,
+   "top": "git",
+   "solid": true,
+   "score": 104,
+   "top5": [
+    "git",
+    "github",
+    "environment-variables"
+   ],
+   "learn": [
+    "github",
+    "environment-variables"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "git",
+    "github",
+    "environment-variables"
+   ],
+   "sem": {
+    "coverage": 0.76,
+    "known": 5,
+    "total": 5,
+    "top": "git",
+    "sim": 0.945,
+    "z": 4.29,
+    "margin": 0.234,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-075",
+   "q": "github actions workflow for tests",
+   "style": "implementation",
+   "topic": "devops",
+   "kind": "page",
+   "expected": [
+    "cicd",
+    "github"
+   ],
+   "expectedTool": null,
+   "top": "github",
+   "solid": true,
+   "score": 84,
+   "top5": [
+    "github",
+    "cicd",
+    "agentic-workflows",
+    "swe-bench",
+    "agent-tools"
+   ],
+   "learn": [
+    "cicd",
+    "git"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "github",
+    "cicd",
+    "agentic-workflows",
+    "swe-bench",
+    "agent-tools",
+    "outcome-reward-model",
+    "humaneval",
+    "vision-language-action-models",
+    "ai-agent-vs-chatbot",
+    "best-of-n-sampling"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 5,
+    "total": 5,
+    "top": "github",
+    "sim": 0.701,
+    "z": 3.74,
+    "margin": 0.134,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-076",
+   "q": "how do lists and libraries differ in sharepoint",
+   "style": "beginner",
+   "topic": "ms",
+   "kind": "page",
+   "expected": [
+    "sharepoint"
+   ],
+   "expectedTool": null,
+   "top": "sharepoint",
+   "solid": true,
+   "score": 96,
+   "top5": [
+    "sharepoint",
+    "sharepoint-framework",
+    "python-ai-libraries",
+    "build-spfx-web-part",
+    "microsoft-365"
+   ],
+   "learn": [
+    "sharepoint-framework",
+    "build-spfx-web-part",
+    "microsoft-365"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "sharepoint",
+    "sharepoint-framework",
+    "python-ai-libraries",
+    "build-spfx-web-part",
+    "microsoft-365",
+    "mcp-security",
+    "mechanistic-interpretability",
+    "mysql",
+    "what-is-ai",
+    "reinforcement-learning"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 8,
+    "total": 8,
+    "top": "sharepoint",
+    "sim": 0.89,
+    "z": 2.15,
+    "margin": 0.011,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-077",
+   "q": "call microsoft graph from an spfx web part",
+   "style": "implementation",
+   "topic": "ms",
+   "kind": "page",
+   "expected": [
+    "microsoft-graph",
+    "sharepoint-framework",
+    "build-spfx-web-part"
+   ],
+   "expectedTool": null,
+   "top": "build-spfx-web-part",
+   "solid": true,
+   "score": 155,
+   "top5": [
+    "build-spfx-web-part",
+    "sharepoint-framework",
+    "microsoft-graph",
+    "sharepoint",
+    "microsoft-365"
+   ],
+   "learn": [
+    "sharepoint-framework",
+    "microsoft-graph",
+    "sharepoint",
+    "microsoft-365",
+    "react"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "build-spfx-web-part",
+    "sharepoint-framework",
+    "microsoft-graph",
+    "sharepoint",
+    "microsoft-365",
+    "framework-vs-direct-api",
+    "choosing-an-agent-framework",
+    "graph-rag",
+    "what-is-an-ai-framework",
+    "graph-neural-networks"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 8,
+    "total": 8,
+    "top": "microsoft-graph",
+    "sim": 0.953,
+    "z": 1.89,
+    "margin": 0.008,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-078",
+   "q": "teams app manifest and tabs",
+   "style": "beginner",
+   "topic": "ms",
+   "kind": "page",
+   "expected": [
+    "teams-development"
+   ],
+   "expectedTool": null,
+   "top": "teams-development",
+   "solid": true,
+   "score": 108,
+   "top5": [
+    "teams-development",
+    "azure-fundamentals",
+    "microsoft-entra-id",
+    "postgresql-for-ai-apps",
+    "build-spfx-web-part"
+   ],
+   "learn": [
+    "azure-fundamentals",
+    "microsoft-entra-id",
+    "microsoft-365",
+    "microsoft-graph"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "teams-development",
+    "azure-fundamentals",
+    "microsoft-entra-id",
+    "postgresql-for-ai-apps",
+    "build-spfx-web-part",
+    "nextjs",
+    "csharp",
+    "gcp-fundamentals",
+    "microsoft-365",
+    "aws-fundamentals"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 5,
+    "total": 5,
+    "top": "teams-development",
+    "sim": 0.945,
+    "z": 2.16,
+    "margin": 0.072,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-079",
+   "q": "what are conditional access and app registrations",
+   "style": "concept",
+   "topic": "ms",
+   "kind": "page",
+   "expected": [
+    "microsoft-entra-id"
+   ],
+   "expectedTool": null,
+   "top": "microsoft-entra-id",
+   "solid": true,
+   "score": 74,
+   "top5": [
+    "microsoft-entra-id",
+    "azure-fundamentals",
+    "teams-development",
+    "postgresql-for-ai-apps",
+    "gmail-for-ai-agents"
+   ],
+   "learn": [
+    "azure-fundamentals",
+    "oauth",
+    "openid-connect",
+    "microsoft-graph"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "microsoft-entra-id",
+    "azure-fundamentals",
+    "teams-development",
+    "postgresql-for-ai-apps",
+    "gmail-for-ai-agents",
+    "oauth-for-ai-agents",
+    "build-spfx-web-part",
+    "oauth",
+    "cors",
+    "nextjs"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 7,
+    "total": 7,
+    "top": "microsoft-entra-id",
+    "sim": 0.964,
+    "z": 2.16,
+    "margin": 0.052,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-080",
+   "q": "power automate flows vs spfx",
+   "style": "concept",
+   "topic": "ms",
+   "kind": "page",
+   "expected": [
+    "power-platform",
+    "sharepoint-framework"
+   ],
+   "expectedTool": null,
+   "top": "sharepoint-framework",
+   "solid": true,
+   "score": 142,
+   "top5": [
+    "sharepoint-framework",
+    "power-platform",
+    "build-spfx-web-part",
+    "sharepoint",
+    "choosing-an-agent-framework"
+   ],
+   "learn": [
+    "build-spfx-web-part",
+    "sharepoint",
+    "microsoft-365",
+    "teams-development",
+    "react"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "sharepoint-framework",
+    "power-platform",
+    "build-spfx-web-part",
+    "sharepoint",
+    "choosing-an-agent-framework",
+    "what-is-an-ai-framework",
+    "framework-vs-direct-api",
+    "agent-frameworks-compared",
+    "rag-frameworks",
+    "nist-ai-rmf"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 5,
+    "total": 5,
+    "top": "power-platform",
+    "sim": 0.885,
+    "z": 2.51,
+    "margin": 0.195,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-081",
+   "q": "run llama models on apple silicon",
+   "style": "concept",
+   "topic": "runtime",
+   "kind": "page",
+   "expected": [
+    "llama-cpp",
+    "ollama",
+    "local-ai"
+   ],
+   "expectedTool": null,
+   "top": "llama-cpp",
+   "solid": true,
+   "score": 78,
+   "top5": [
+    "llama-cpp",
+    "local-runtimes-compared",
+    "small-language-models",
+    "ollama",
+    "reasoning-models"
+   ],
+   "learn": [
+    "local-runtimes-compared",
+    "small-language-models",
+    "ollama",
+    "quantization",
+    "local-ai"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "llama-cpp",
+    "local-runtimes-compared",
+    "small-language-models",
+    "ollama",
+    "reasoning-models",
+    "reasoning-vs-standard-models",
+    "quantization",
+    "local-ai",
+    "world-models",
+    "model-cards"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 6,
+    "total": 6,
+    "top": "llama-cpp",
+    "sim": 0.911,
+    "z": 3.58,
+    "margin": 0.074,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-082",
+   "q": "paged kv cache serving engine",
+   "style": "concept",
+   "topic": "runtime",
+   "kind": "page",
+   "expected": [
+    "vllm",
+    "kv-cache"
+   ],
+   "expectedTool": null,
+   "top": "kv-cache",
+   "solid": true,
+   "score": 92,
+   "top5": [
+    "kv-cache",
+    "vllm",
+    "model-serving-and-inference",
+    "local-runtimes-compared",
+    "prompt-caching"
+   ],
+   "learn": [
+    "vllm",
+    "model-serving-and-inference",
+    "prompt-caching",
+    "local-runtimes-compared"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "kv-cache",
+    "vllm",
+    "model-serving-and-inference",
+    "local-runtimes-compared",
+    "prompt-caching",
+    "redis",
+    "llamaindex",
+    "model-drift-and-monitoring",
+    "build-spfx-web-part",
+    "llama-cpp"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 5,
+    "total": 5,
+    "top": "vllm",
+    "sim": 0.912,
+    "z": 3.75,
+    "margin": 0.077,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-083",
+   "q": "export a model for cross platform inference",
+   "style": "concept",
+   "topic": "runtime",
+   "kind": "page",
+   "expected": [
+    "onnx-runtime"
+   ],
+   "expectedTool": null,
+   "top": "onnx-runtime",
+   "solid": true,
+   "score": 54,
+   "top5": [
+    "onnx-runtime",
+    "model-serving-and-inference",
+    "model-apis",
+    "model-cards",
+    "test-time-compute"
+   ],
+   "learn": [
+    "model-serving-and-inference",
+    "hugging-face",
+    "quantization",
+    "local-ai",
+    "local-runtimes-compared"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "onnx-runtime",
+    "model-serving-and-inference",
+    "model-apis",
+    "model-cards",
+    "test-time-compute",
+    "power-platform",
+    "large-language-models",
+    "model-drift-and-monitoring",
+    "process-reward-model",
+    "world-models"
+   ],
+   "sem": {
+    "coverage": 0.86,
+    "known": 6,
+    "total": 7,
+    "top": "onnx-runtime",
+    "sim": 0.822,
+    "z": 3.04,
+    "margin": 0.113,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-084",
+   "q": "why is my local model so slow",
+   "style": "concept",
+   "topic": "runtime",
+   "kind": "page",
+   "expected": [
+    "quantization",
+    "llama-cpp",
+    "gpus-and-ai-accelerators",
+    "local-ai"
+   ],
+   "expectedTool": null,
+   "top": "local-ai",
+   "solid": true,
+   "score": 72,
+   "top5": [
+    "local-ai",
+    "ollama",
+    "local-runtimes-compared",
+    "quantization",
+    "llama-cpp"
+   ],
+   "learn": [
+    "local-ai-vs-cloud-ai",
+    "large-language-models",
+    "fine-tuning",
+    "multimodal-ai",
+    "ollama"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "local-ai",
+    "ollama",
+    "local-runtimes-compared",
+    "quantization",
+    "llama-cpp",
+    "model-cards",
+    "model-apis",
+    "gpus-and-ai-accelerators",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 7,
+    "total": 7,
+    "top": "local-ai",
+    "sim": 0.587,
+    "z": 2.25,
+    "margin": 0.008,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-085",
+   "q": "is a local model as good as a cloud one",
+   "style": "concept",
+   "topic": "local",
+   "kind": "page",
+   "expected": [
+    "local-ai-vs-cloud-ai",
+    "local-ai"
+   ],
+   "expectedTool": null,
+   "top": "local-ai-vs-cloud-ai",
+   "solid": true,
+   "score": 86,
+   "top5": [
+    "local-ai-vs-cloud-ai",
+    "local-ai",
+    "ollama",
+    "local-runtimes-compared",
+    "model-apis"
+   ],
+   "learn": [
+    "local-ai",
+    "ai-privacy-and-security",
+    "large-language-models",
+    "fine-tuning",
+    "ai-evaluation"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "local-ai-vs-cloud-ai",
+    "local-ai",
+    "ollama",
+    "local-runtimes-compared",
+    "model-apis",
+    "model-cards",
+    "gcp-fundamentals",
+    "model-drift-and-monitoring",
+    "ai-privacy-and-security",
+    "model-serving-and-inference"
+   ],
+   "sem": {
+    "coverage": 0.74,
+    "known": 8,
+    "total": 10,
+    "top": "local-ai-vs-cloud-ai",
+    "sim": 0.709,
+    "z": 3.04,
+    "margin": 0.039,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-086",
+   "q": "reading text inside photos",
+   "style": "concept",
+   "topic": "mm",
+   "kind": "page",
+   "expected": [
+    "document-understanding-ai",
+    "vision-language-models"
+   ],
+   "expectedTool": null,
+   "top": "document-understanding-ai",
+   "solid": true,
+   "score": 46,
+   "top5": [
+    "document-understanding-ai",
+    "contrastive-learning-clip",
+    "speech-ai",
+    "multimodal-ai",
+    "diffusion-models"
+   ],
+   "learn": [
+    "multimodal-ai",
+    "chunking",
+    "vision-language-models"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "document-understanding-ai",
+    "contrastive-learning-clip",
+    "speech-ai",
+    "multimodal-ai",
+    "diffusion-models",
+    "video-generation-models",
+    "large-language-models",
+    "chunking",
+    "hybrid-search-and-reranking",
+    "vector-database-vs-traditional-database"
+   ],
+   "sem": {
+    "coverage": 0.75,
+    "known": 4,
+    "total": 4,
+    "top": "databases-for-ai-apps",
+    "sim": 0.607,
+    "z": 2.04,
+    "margin": 0,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-087",
+   "q": "image and text embeddings in one space",
+   "style": "concept",
+   "topic": "mm",
+   "kind": "page",
+   "expected": [
+    "contrastive-learning-clip"
+   ],
+   "expectedTool": null,
+   "top": "contrastive-learning-clip",
+   "solid": true,
+   "score": 84,
+   "top5": [
+    "contrastive-learning-clip",
+    "embeddings",
+    "state-space-models",
+    "vector-databases",
+    "diffusion-models"
+   ],
+   "learn": [
+    "embeddings",
+    "vector-databases",
+    "diffusion-models",
+    "multimodal-ai",
+    "vision-language-models"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "contrastive-learning-clip",
+    "embeddings",
+    "state-space-models",
+    "vector-databases",
+    "diffusion-models",
+    "transformers-vs-state-space-models",
+    "multimodal-ai",
+    "speech-ai",
+    "vision-language-models",
+    "object-detection"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 7,
+    "total": 7,
+    "top": "contrastive-learning-clip",
+    "sim": 0.843,
+    "z": 3.16,
+    "margin": 0.133,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-088",
+   "q": "automatic captions for video",
+   "style": "concept",
+   "topic": "speech",
+   "kind": "page",
+   "expected": [
+    "speech-ai"
+   ],
+   "expectedTool": null,
+   "top": "speech-ai",
+   "solid": true,
+   "score": 47,
+   "top5": [
+    "speech-ai",
+    "video-generation-models",
+    "c2pa-content-provenance",
+    "multimodal-ai",
+    "dspy"
+   ],
+   "learn": [
+    "c2pa-content-provenance",
+    "multimodal-ai"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "speech-ai",
+    "video-generation-models",
+    "c2pa-content-provenance",
+    "multimodal-ai",
+    "dspy",
+    "prompt-caching",
+    "world-models",
+    "llm-as-a-judge",
+    "diffusion-models",
+    "pytorch"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 4,
+    "total": 4,
+    "top": "video-generation-models",
+    "sim": 0.748,
+    "z": 3.59,
+    "margin": 0.029,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-089",
+   "q": "why is robotics harder than chatbots",
+   "style": "concept",
+   "topic": "robot",
+   "kind": "page",
+   "expected": [
+    "embodied-ai"
+   ],
+   "expectedTool": null,
+   "top": "embodied-ai",
+   "solid": true,
+   "score": 52,
+   "top5": [
+    "embodied-ai",
+    "imitation-learning",
+    "reinforcement-learning",
+    "ai-alignment",
+    "gsm8k-and-math-benchmarks"
+   ],
+   "learn": [
+    "imitation-learning",
+    "reinforcement-learning"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "embodied-ai",
+    "imitation-learning",
+    "reinforcement-learning",
+    "ai-alignment",
+    "gsm8k-and-math-benchmarks",
+    "humaneval"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 6,
+    "total": 6,
+    "top": "ai-alignment",
+    "sim": 0.754,
+    "z": 2.12,
+    "margin": 0.01,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-090",
+   "q": "policies conditioned on camera images and instructions",
+   "style": "concept",
+   "topic": "robot",
+   "kind": "page",
+   "expected": [
+    "vision-language-action-models"
+   ],
+   "expectedTool": null,
+   "top": "vision-language-action-models",
+   "solid": true,
+   "score": 56,
+   "top5": [
+    "vision-language-action-models",
+    "system-prompts",
+    "common-prompting-mistakes",
+    "c2pa-content-provenance",
+    "prompt-engineering"
+   ],
+   "learn": [
+    "vision-language-models",
+    "multimodal-ai",
+    "diffusion-models",
+    "embodied-ai",
+    "sim-to-real-transfer"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "vision-language-action-models",
+    "system-prompts",
+    "common-prompting-mistakes",
+    "c2pa-content-provenance",
+    "prompt-engineering",
+    "object-detection",
+    "vision-language-models",
+    "multimodal-ai",
+    "prompt-injection",
+    "vision-transformers"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 7,
+    "total": 7,
+    "top": "vision-language-action-models",
+    "sim": 0.849,
+    "z": 2.41,
+    "margin": 0.161,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-091",
+   "q": "planning inside a learned model of the environment",
+   "style": "concept",
+   "topic": "robot",
+   "kind": "page",
+   "expected": [
+    "world-models"
+   ],
+   "expectedTool": null,
+   "top": "world-models",
+   "solid": true,
+   "score": 76,
+   "top5": [
+    "world-models",
+    "model-cards",
+    "model-apis",
+    "environment-variables",
+    "model-drift-and-monitoring"
+   ],
+   "learn": [
+    "diffusion-models",
+    "reinforcement-learning",
+    "vision-language-action-models",
+    "video-generation-models"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "world-models",
+    "model-cards",
+    "model-apis",
+    "environment-variables",
+    "model-drift-and-monitoring",
+    "outcome-reward-model",
+    "model-serving-and-inference",
+    "process-reward-model",
+    "agent-planning",
+    "instruction-tuning"
+   ],
+   "sem": {
+    "coverage": 0.86,
+    "known": 7,
+    "total": 8,
+    "top": "world-models",
+    "sim": 0.733,
+    "z": 3.31,
+    "margin": 0.144,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-092",
+   "q": "an attacker puts instructions in a document retrieved by rag",
+   "style": "security",
+   "topic": "sec",
+   "kind": "page",
+   "expected": [
+    "prompt-injection",
+    "rag"
+   ],
+   "expectedTool": null,
+   "top": "prompt-injection",
+   "solid": true,
+   "score": 59,
+   "top5": [
+    "prompt-injection",
+    "rag",
+    "rag-frameworks",
+    "agentic-rag",
+    "rag-with-python"
+   ],
+   "learn": [
+    "rag",
+    "system-prompts",
+    "rag-vs-fine-tuning",
+    "chunking",
+    "embeddings"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "prompt-injection",
+    "rag",
+    "rag-frameworks",
+    "agentic-rag",
+    "rag-with-python",
+    "rag-evaluation",
+    "rag-vs-fine-tuning",
+    "chunking",
+    "document-understanding-ai",
+    "graph-rag"
+   ],
+   "sem": {
+    "coverage": 0.89,
+    "known": 9,
+    "total": 10,
+    "top": "rag-with-python",
+    "sim": 0.72,
+    "z": 1.97,
+    "margin": 0.037,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-093",
+   "q": "what do i need to redact before using a third party model",
+   "style": "security",
+   "topic": "sec",
+   "kind": "page",
+   "expected": [
+    "ai-privacy-and-security"
+   ],
+   "expectedTool": "pii-secret-redactor",
+   "top": "ai-privacy-and-security",
+   "solid": true,
+   "score": 56,
+   "top5": [
+    "ai-privacy-and-security",
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference"
+   ],
+   "learn": [
+    "agent-tools",
+    "prompt-injection",
+    "rag"
+   ],
+   "tool": "pii-secret-redactor",
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "ai-privacy-and-security",
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference",
+    "process-reward-model",
+    "world-models",
+    "outcome-reward-model",
+    "instruction-tuning",
+    "reasoning-vs-standard-models"
+   ],
+   "sem": {
+    "coverage": 0.81,
+    "known": 10,
+    "total": 12,
+    "top": "oauth-for-ai-agents",
+    "sim": 0.673,
+    "z": 1.61,
+    "margin": 0.001,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-094",
+   "q": "testing a model for jailbreaks before release",
+   "style": "security",
+   "topic": "sec",
+   "kind": "page",
+   "expected": [
+    "red-teaming"
+   ],
+   "expectedTool": null,
+   "top": "red-teaming",
+   "solid": true,
+   "score": 62,
+   "top5": [
+    "red-teaming",
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference"
+   ],
+   "learn": [
+    "ai-privacy-and-security",
+    "ai-evaluation",
+    "agent-evaluation",
+    "prompt-injection"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "red-teaming",
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference",
+    "process-reward-model",
+    "world-models",
+    "outcome-reward-model",
+    "instruction-tuning",
+    "reasoning-vs-standard-models"
+   ],
+   "sem": {
+    "coverage": 0.67,
+    "known": 6,
+    "total": 7,
+    "top": "mlflow",
+    "sim": 0.436,
+    "z": 1.97,
+    "margin": 0.017,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-095",
+   "q": "filtering unsafe model outputs",
+   "style": "security",
+   "topic": "sec",
+   "kind": "page",
+   "expected": [
+    "ai-guardrails"
+   ],
+   "expectedTool": null,
+   "top": "ai-guardrails",
+   "solid": true,
+   "score": 46,
+   "top5": [
+    "ai-guardrails",
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference"
+   ],
+   "learn": [
+    "structured-outputs",
+    "agent-tools",
+    "system-prompts",
+    "prompt-injection"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "ai-guardrails",
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference",
+    "process-reward-model",
+    "world-models",
+    "outcome-reward-model",
+    "instruction-tuning",
+    "structured-outputs"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 4,
+    "total": 4,
+    "top": "ai-guardrails",
+    "sim": 0.633,
+    "z": 2.63,
+    "margin": 0.112,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-096",
+   "q": "signed provenance on generated images",
+   "style": "security",
+   "topic": "sec",
+   "kind": "page",
+   "expected": [
+    "c2pa-content-provenance"
+   ],
+   "expectedTool": null,
+   "top": "c2pa-content-provenance",
+   "solid": true,
+   "score": 79,
+   "top5": [
+    "c2pa-content-provenance",
+    "code-execution-sandboxing",
+    "object-detection",
+    "constitutional-ai-and-rlaif",
+    "video-generation-models"
+   ],
+   "learn": [
+    "video-generation-models",
+    "diffusion-models",
+    "generative-ai"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "c2pa-content-provenance",
+    "code-execution-sandboxing",
+    "object-detection",
+    "constitutional-ai-and-rlaif",
+    "video-generation-models",
+    "vision-language-models",
+    "multimodal-ai",
+    "vision-transformers",
+    "contrastive-learning-clip",
+    "convolutional-neural-networks"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 5,
+    "total": 5,
+    "top": "c2pa-content-provenance",
+    "sim": 0.866,
+    "z": 6.42,
+    "margin": 0.303,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-097",
+   "q": "are public leaderboards gamed",
+   "style": "concept",
+   "topic": "eval",
+   "kind": "page",
+   "expected": [
+    "benchmarks-and-leaderboards",
+    "benchmark-contamination"
+   ],
+   "expectedTool": null,
+   "top": "benchmarks-and-leaderboards",
+   "solid": true,
+   "score": 70,
+   "top5": [
+    "benchmarks-and-leaderboards",
+    "benchmark-contamination",
+    "llm-benchmarks-vs-task-evals",
+    "human-preference-evaluation",
+    "gcp-fundamentals"
+   ],
+   "learn": [
+    "benchmark-contamination",
+    "llm-benchmarks-vs-task-evals",
+    "human-preference-evaluation"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "benchmarks-and-leaderboards",
+    "benchmark-contamination",
+    "llm-benchmarks-vs-task-evals",
+    "human-preference-evaluation",
+    "gcp-fundamentals",
+    "webhooks"
+   ],
+   "sem": {
+    "coverage": 0.67,
+    "known": 4,
+    "total": 4,
+    "top": "ai-bias-and-fairness",
+    "sim": 0.528,
+    "z": 1.93,
+    "margin": 0.027,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-098",
+   "q": "grading answers with a rubric and a strong model",
+   "style": "concept",
+   "topic": "eval",
+   "kind": "page",
+   "expected": [
+    "llm-as-a-judge"
+   ],
+   "expectedTool": null,
+   "top": "llm-as-a-judge",
+   "solid": true,
+   "score": 68,
+   "top5": [
+    "llm-as-a-judge",
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference"
+   ],
+   "learn": [
+    "benchmarks-and-leaderboards",
+    "ai-evaluation",
+    "ai-hallucinations",
+    "best-of-n-sampling",
+    "agent-evaluation"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "llm-as-a-judge",
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference",
+    "process-reward-model",
+    "world-models",
+    "outcome-reward-model",
+    "instruction-tuning",
+    "reasoning-vs-standard-models"
+   ],
+   "sem": {
+    "coverage": 0.76,
+    "known": 7,
+    "total": 9,
+    "top": "llm-as-a-judge",
+    "sim": 0.907,
+    "z": 3.16,
+    "margin": 0.199,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-099",
+   "q": "precision recall and f1 explained",
+   "style": "concept",
+   "topic": "eval",
+   "kind": "page",
+   "expected": [
+    "evaluation-metrics-for-ai"
+   ],
+   "expectedTool": null,
+   "top": "evaluation-metrics-for-ai",
+   "solid": true,
+   "score": 56,
+   "top5": [
+    "evaluation-metrics-for-ai",
+    "rag-evaluation",
+    "function-calling",
+    "multi-agent-systems",
+    "transformers"
+   ],
+   "learn": [
+    "rag-evaluation",
+    "ai-evaluation"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "evaluation-metrics-for-ai",
+    "rag-evaluation",
+    "function-calling",
+    "multi-agent-systems",
+    "transformers",
+    "ai-evaluation",
+    "vector-databases",
+    "quantization",
+    "deep-learning",
+    "sharepoint-framework"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 5,
+    "total": 5,
+    "top": "evaluation-metrics-for-ai",
+    "sim": 0.926,
+    "z": 2.53,
+    "margin": 0.348,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-100",
+   "q": "how do i test an agent that uses tools",
+   "style": "concept",
+   "topic": "eval",
+   "kind": "page",
+   "expected": [
+    "agent-evaluation"
+   ],
+   "expectedTool": null,
+   "top": "agent-evaluation",
+   "solid": true,
+   "score": 90,
+   "top5": [
+    "agent-evaluation",
+    "agent-tools",
+    "ai-agent-vs-chatbot",
+    "agent-protocol-landscape",
+    "multi-agent-systems"
+   ],
+   "learn": [
+    "react-agent-pattern",
+    "ai-agents",
+    "ai-evaluation",
+    "agentic-workflows",
+    "swe-bench"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "agent-evaluation",
+    "agent-tools",
+    "ai-agent-vs-chatbot",
+    "agent-protocol-landscape",
+    "multi-agent-systems",
+    "react-agent-pattern",
+    "ai-agents",
+    "choosing-an-agent-framework",
+    "agent-frameworks-compared",
+    "gmail-for-ai-agents"
+   ],
+   "sem": {
+    "coverage": 0.87,
+    "known": 8,
+    "total": 9,
+    "top": "ai-agents",
+    "sim": 0.809,
+    "z": 3.35,
+    "margin": 0.036,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-101",
+   "q": "monitoring a deployed model for data drift",
+   "style": "concept",
+   "topic": "mlops",
+   "kind": "page",
+   "expected": [
+    "model-drift-and-monitoring"
+   ],
+   "expectedTool": null,
+   "top": "model-drift-and-monitoring",
+   "solid": true,
+   "score": 127,
+   "top5": [
+    "model-drift-and-monitoring",
+    "gdpr-and-ai",
+    "model-cards",
+    "model-apis",
+    "ai-privacy-and-security"
+   ],
+   "learn": [
+    "llm-observability",
+    "overfitting-and-regularization",
+    "mlops",
+    "mlflow",
+    "supervised-learning"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "model-drift-and-monitoring",
+    "gdpr-and-ai",
+    "model-cards",
+    "model-apis",
+    "ai-privacy-and-security",
+    "model-serving-and-inference",
+    "process-reward-model",
+    "world-models",
+    "distributed-training",
+    "knowledge-distillation"
+   ],
+   "sem": {
+    "coverage": 0.86,
+    "known": 6,
+    "total": 7,
+    "top": "model-drift-and-monitoring",
+    "sim": 0.884,
+    "z": 3.29,
+    "margin": 0.16,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-102",
+   "q": "how to reduce tokens and cost in production",
+   "style": "concept",
+   "topic": "mlops",
+   "kind": "page",
+   "expected": [
+    "llm-cost-optimization",
+    "prompt-caching"
+   ],
+   "expectedTool": null,
+   "top": "llm-cost-optimization",
+   "solid": true,
+   "score": 81,
+   "top5": [
+    "llm-cost-optimization",
+    "tokens",
+    "how-to-reduce-hallucinations",
+    "prompt-caching",
+    "json-web-tokens"
+   ],
+   "learn": [
+    "tokens",
+    "prompt-caching",
+    "thinking-budgets",
+    "llm-observability",
+    "model-serving-and-inference"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "llm-cost-optimization",
+    "tokens",
+    "how-to-reduce-hallucinations",
+    "prompt-caching",
+    "json-web-tokens",
+    "thinking-budgets",
+    "react-agent-pattern",
+    "local-ai-vs-cloud-ai",
+    "model-drift-and-monitoring",
+    "reasoning-transparency"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 8,
+    "total": 8,
+    "top": "llm-cost-optimization",
+    "sim": 0.8,
+    "z": 3.92,
+    "margin": 0.145,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-103",
+   "q": "distributed training across nodes",
+   "style": "concept",
+   "topic": "mlops",
+   "kind": "page",
+   "expected": [
+    "distributed-training"
+   ],
+   "expectedTool": null,
+   "top": "distributed-training",
+   "solid": true,
+   "score": 61,
+   "top5": [
+    "distributed-training",
+    "gdpr-and-ai",
+    "ray",
+    "fine-tuning",
+    "what-is-ai"
+   ],
+   "learn": [
+    "ray",
+    "scaling-laws",
+    "backpropagation-and-gradient-descent"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "distributed-training",
+    "gdpr-and-ai",
+    "ray",
+    "fine-tuning",
+    "what-is-ai",
+    "robot-operating-system",
+    "dpo",
+    "scaling-laws",
+    "backpropagation-and-gradient-descent",
+    "graph-neural-networks"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 4,
+    "total": 4,
+    "top": "distributed-training",
+    "sim": 0.741,
+    "z": 2.83,
+    "margin": 0.02,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-104",
+   "q": "which gpu for inference",
+   "style": "concept",
+   "topic": "mlops",
+   "kind": "page",
+   "expected": [
+    "gpus-and-ai-accelerators",
+    "model-serving-and-inference"
+   ],
+   "expectedTool": null,
+   "top": "gpus-and-ai-accelerators",
+   "solid": true,
+   "score": 68,
+   "top5": [
+    "gpus-and-ai-accelerators",
+    "model-serving-and-inference",
+    "quantization",
+    "test-time-compute",
+    "local-ai"
+   ],
+   "learn": [
+    "model-serving-and-inference",
+    "quantization",
+    "local-ai",
+    "distributed-training",
+    "flash-attention"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "gpus-and-ai-accelerators",
+    "model-serving-and-inference",
+    "quantization",
+    "test-time-compute",
+    "local-ai",
+    "large-language-models",
+    "lora-and-peft",
+    "local-runtimes-compared",
+    "vllm",
+    "distributed-training"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 4,
+    "total": 4,
+    "top": "model-serving-and-inference",
+    "sim": 0.916,
+    "z": 3.49,
+    "margin": 0.108,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-105",
+   "q": "what counts as a high risk ai system in europe",
+   "style": "concept",
+   "topic": "gov",
+   "kind": "page",
+   "expected": [
+    "eu-ai-act"
+   ],
+   "expectedTool": null,
+   "top": "eu-ai-act",
+   "solid": true,
+   "score": 118,
+   "top5": [
+    "eu-ai-act",
+    "ai-governance",
+    "nist-ai-rmf",
+    "embodied-ai",
+    "local-ai"
+   ],
+   "learn": [
+    "ai-governance",
+    "nist-ai-rmf",
+    "ai-privacy-and-security",
+    "iso-iec-42001",
+    "ai-bias-and-fairness"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "eu-ai-act",
+    "ai-governance",
+    "nist-ai-rmf",
+    "embodied-ai",
+    "local-ai",
+    "ai-sdks",
+    "constitutional-ai-and-rlaif",
+    "ai-evaluation",
+    "local-ai-vs-cloud-ai",
+    "ai-alignment"
+   ],
+   "sem": {
+    "coverage": 0.76,
+    "known": 9,
+    "total": 10,
+    "top": "eu-ai-act",
+    "sim": 0.734,
+    "z": 3.02,
+    "margin": 0.112,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-106",
+   "q": "checklist for responsible ai in a company",
+   "style": "concept",
+   "topic": "gov",
+   "kind": "page",
+   "expected": [
+    "ai-governance",
+    "nist-ai-rmf"
+   ],
+   "expectedTool": null,
+   "top": "ai-governance",
+   "solid": true,
+   "score": 70,
+   "top5": [
+    "ai-governance",
+    "eu-ai-act",
+    "nist-ai-rmf",
+    "embodied-ai",
+    "local-ai"
+   ],
+   "learn": [
+    "eu-ai-act",
+    "nist-ai-rmf",
+    "ai-alignment",
+    "ai-privacy-and-security",
+    "ai-bias-and-fairness"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "ai-governance",
+    "eu-ai-act",
+    "nist-ai-rmf",
+    "embodied-ai",
+    "local-ai",
+    "ai-sdks",
+    "constitutional-ai-and-rlaif",
+    "local-ai-vs-cloud-ai",
+    "ai-alignment",
+    "ai-privacy-and-security"
+   ],
+   "sem": {
+    "coverage": 0.83,
+    "known": 6,
+    "total": 7,
+    "top": "ai-governance",
+    "sim": 0.892,
+    "z": 3.42,
+    "margin": 0.024,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-107",
+   "q": "can a model be audited for fairness",
+   "style": "concept",
+   "topic": "gov",
+   "kind": "page",
+   "expected": [
+    "ai-bias-and-fairness"
+   ],
+   "expectedTool": null,
+   "top": "ai-bias-and-fairness",
+   "solid": true,
+   "score": 70,
+   "top5": [
+    "ai-bias-and-fairness",
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference"
+   ],
+   "learn": [
+    "model-cards",
+    "ai-governance",
+    "mechanistic-interpretability",
+    "ai-evaluation",
+    "supervised-learning"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "ai-bias-and-fairness",
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference",
+    "process-reward-model",
+    "world-models",
+    "outcome-reward-model",
+    "instruction-tuning",
+    "reasoning-vs-standard-models"
+   ],
+   "sem": {
+    "coverage": 0.83,
+    "known": 6,
+    "total": 7,
+    "top": "ai-governance",
+    "sim": 0.815,
+    "z": 2.66,
+    "margin": 0.004,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-108",
+   "q": "training a chatbot on thumbs up and thumbs down data",
+   "style": "concept",
+   "topic": "safety",
+   "kind": "page",
+   "expected": [
+    "rlhf",
+    "preference-optimization"
+   ],
+   "expectedTool": null,
+   "top": "rlhf",
+   "solid": true,
+   "score": 42,
+   "top5": [
+    "gdpr-and-ai",
+    "rlhf",
+    "instruction-tuning",
+    "ai-agent-vs-chatbot",
+    "ai-privacy-and-security"
+   ],
+   "learn": [
+    "instruction-tuning",
+    "preference-optimization",
+    "human-preference-evaluation",
+    "dpo",
+    "sycophancy"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "gdpr-and-ai",
+    "rlhf",
+    "instruction-tuning",
+    "ai-agent-vs-chatbot",
+    "ai-privacy-and-security",
+    "distributed-training",
+    "preference-optimization",
+    "react-chatbot-state",
+    "fine-tuning",
+    "python-data-for-ai"
+   ],
+   "sem": {
+    "coverage": 0.88,
+    "known": 9,
+    "total": 10,
+    "top": "tokens",
+    "sim": 0.631,
+    "z": 2.6,
+    "margin": 0.045,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-109",
+   "q": "loss function over chosen and rejected completions",
+   "style": "concept",
+   "topic": "safety",
+   "kind": "page",
+   "expected": [
+    "dpo"
+   ],
+   "expectedTool": null,
+   "top": "dpo",
+   "solid": true,
+   "score": 63,
+   "top5": [
+    "dpo",
+    "backpropagation-and-gradient-descent",
+    "preference-optimization",
+    "function-calling",
+    "function-calling-vs-mcp"
+   ],
+   "learn": [
+    "preference-optimization",
+    "backpropagation-and-gradient-descent"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "dpo",
+    "backpropagation-and-gradient-descent",
+    "preference-optimization",
+    "function-calling",
+    "function-calling-vs-mcp",
+    "markov-decision-processes",
+    "model-apis",
+    "structured-output-methods-compared",
+    "agent-tools",
+    "deep-q-networks"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 7,
+    "total": 7,
+    "top": "dpo",
+    "sim": 0.725,
+    "z": 3.05,
+    "margin": 0.037,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-110",
+   "q": "model optimises the metric instead of the goal",
+   "style": "concept",
+   "topic": "safety",
+   "kind": "page",
+   "expected": [
+    "reward-hacking"
+   ],
+   "expectedTool": null,
+   "top": "reward-hacking",
+   "solid": true,
+   "score": 61,
+   "top5": [
+    "reward-hacking",
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "process-reward-model"
+   ],
+   "learn": [
+    "rlhf",
+    "dpo",
+    "best-of-n-sampling",
+    "ai-evaluation",
+    "sycophancy"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "reward-hacking",
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "process-reward-model",
+    "model-serving-and-inference",
+    "world-models",
+    "outcome-reward-model",
+    "instruction-tuning",
+    "reasoning-vs-standard-models"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 8,
+    "total": 8,
+    "top": "process-reward-model",
+    "sim": 0.765,
+    "z": 1.91,
+    "margin": 0.002,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-111",
+   "q": "protein folding with deep learning",
+   "style": "concept",
+   "topic": "science",
+   "kind": "page",
+   "expected": [
+    "alphafold"
+   ],
+   "expectedTool": null,
+   "top": "alphafold",
+   "solid": true,
+   "score": 75,
+   "top5": [
+    "alphafold",
+    "deep-learning",
+    "deep-q-networks",
+    "reinforcement-learning",
+    "supervised-learning"
+   ],
+   "learn": [
+    "ai-for-science",
+    "graph-neural-networks",
+    "ai-drug-discovery",
+    "ai-materials-discovery",
+    "diffusion-models"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "alphafold",
+    "deep-learning",
+    "deep-q-networks",
+    "reinforcement-learning",
+    "supervised-learning",
+    "imitation-learning",
+    "unsupervised-learning",
+    "reinforcement-learning-for-reasoning",
+    "self-supervised-learning",
+    "transfer-learning"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 5,
+    "total": 5,
+    "top": "alphafold",
+    "sim": 0.843,
+    "z": 2.11,
+    "margin": 0.076,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-112",
+   "q": "learning the solution operator of a pde",
+   "style": "concept",
+   "topic": "science",
+   "kind": "page",
+   "expected": [
+    "physics-informed-neural-networks"
+   ],
+   "expectedTool": null,
+   "top": "physics-informed-neural-networks",
+   "solid": true,
+   "score": 60,
+   "top5": [
+    "physics-informed-neural-networks",
+    "reinforcement-learning",
+    "supervised-learning",
+    "imitation-learning",
+    "unsupervised-learning"
+   ],
+   "learn": [
+    "ai-for-science",
+    "backpropagation-and-gradient-descent",
+    "ai-weather-forecasting",
+    "graph-neural-networks",
+    "ai-materials-discovery"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "physics-informed-neural-networks",
+    "reinforcement-learning",
+    "supervised-learning",
+    "imitation-learning",
+    "unsupervised-learning",
+    "reinforcement-learning-for-reasoning",
+    "self-supervised-learning",
+    "transfer-learning",
+    "contrastive-learning-clip",
+    "deep-q-networks"
+   ],
+   "sem": {
+    "coverage": 0.64,
+    "known": 6,
+    "total": 7,
+    "top": "physics-informed-neural-networks",
+    "sim": 0.737,
+    "z": 3.56,
+    "margin": 0.169,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-113",
+   "q": "kubernetes deployment vs statefulset",
+   "style": "coverage-probe",
+   "topic": "devops",
+   "kind": "gap",
+   "expected": [
+    "containers",
+    "docker"
+   ],
+   "expectedTool": null,
+   "top": "kubernetes",
+   "solid": true,
+   "score": 88,
+   "top5": [
+    "kubernetes",
+    "mlops",
+    "containers",
+    "object-detection",
+    "onnx-runtime"
+   ],
+   "learn": [
+    "mlops",
+    "containers",
+    "cicd",
+    "model-serving-and-inference"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident unrelated page: kubernetes",
+   "pathOk": null,
+   "rankIds": [
+    "kubernetes",
+    "mlops",
+    "containers",
+    "object-detection",
+    "onnx-runtime",
+    "cicd",
+    "model-serving-and-inference",
+    "local-runtimes-compared"
+   ],
+   "sem": {
+    "coverage": 0.76,
+    "known": 4,
+    "total": 4,
+    "top": "kubernetes",
+    "sim": 0.938,
+    "z": 5.01,
+    "margin": 0.3,
+    "how": "lexical"
+   },
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-114",
+   "q": "how do i autoscale pods",
+   "style": "coverage-probe",
+   "topic": "devops",
+   "kind": "gap",
+   "expected": [
+    "containers",
+    "docker"
+   ],
+   "expectedTool": null,
+   "top": "kubernetes",
+   "solid": true,
+   "score": 80,
+   "top5": [
+    "kubernetes",
+    "containers"
+   ],
+   "learn": [
+    "containers"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident unrelated page: kubernetes",
+   "pathOk": null,
+   "rankIds": [
+    "kubernetes",
+    "containers"
+   ],
+   "sem": {
+    "coverage": 0.55,
+    "known": 4,
+    "total": 5,
+    "top": "kubernetes",
+    "sim": 0.878,
+    "z": 5.27,
+    "margin": 0.353,
+    "how": "lexical"
+   },
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-115",
+   "q": "object detection bounding boxes and iou",
+   "style": "coverage-probe",
+   "topic": "cv",
+   "kind": "gap",
+   "expected": [
+    "convolutional-neural-networks"
+   ],
+   "expectedTool": null,
+   "top": "object-detection",
+   "solid": true,
+   "score": 108,
+   "top5": [
+    "object-detection",
+    "benchmark-contamination",
+    "gdpr-and-ai",
+    "c2pa-content-provenance",
+    "prisma-and-orms"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident unrelated page: object-detection",
+   "pathOk": null,
+   "rankIds": [
+    "object-detection",
+    "benchmark-contamination",
+    "gdpr-and-ai",
+    "c2pa-content-provenance",
+    "prisma-and-orms",
+    "unsupervised-learning",
+    "aws-fundamentals",
+    "java"
+   ],
+   "sem": {
+    "coverage": 0.8,
+    "known": 6,
+    "total": 6,
+    "top": "object-detection",
+    "sim": 0.909,
+    "z": 5.2,
+    "margin": 0.344,
+    "how": "lexical"
+   },
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-116",
+   "q": "image segmentation models",
+   "style": "coverage-probe",
+   "topic": "cv",
+   "kind": "gap",
+   "expected": [
+    "convolutional-neural-networks",
+    "vision-transformers"
+   ],
+   "expectedTool": null,
+   "top": "object-detection",
+   "solid": true,
+   "score": 92,
+   "top5": [
+    "object-detection",
+    "reasoning-models",
+    "reasoning-vs-standard-models",
+    "small-language-models",
+    "diffusion-models"
+   ],
+   "learn": [
+    "vision-language-models",
+    "cnn-vs-vision-transformer",
+    "transfer-learning",
+    "vision-transformers",
+    "convolutional-neural-networks"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident unrelated page: object-detection",
+   "pathOk": null,
+   "rankIds": [
+    "object-detection",
+    "reasoning-models",
+    "reasoning-vs-standard-models",
+    "small-language-models",
+    "diffusion-models",
+    "world-models",
+    "vision-language-models",
+    "model-cards",
+    "model-drift-and-monitoring",
+    "model-apis"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 3,
+    "total": 3,
+    "top": "object-detection",
+    "sim": 0.87,
+    "z": 2.94,
+    "margin": 0.107,
+    "how": "lexical"
+   },
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-117",
+   "q": "robot operating system nodes and topics",
+   "style": "coverage-probe",
+   "topic": "robot",
+   "kind": "gap",
+   "expected": [
+    "embodied-ai"
+   ],
+   "expectedTool": null,
+   "top": "robot-operating-system",
+   "solid": true,
+   "score": 125,
+   "top5": [
+    "robot-operating-system",
+    "system-prompts",
+    "iso-iec-42001",
+    "sim-to-real-transfer",
+    "vision-language-action-models"
+   ],
+   "learn": [
+    "sim-to-real-transfer",
+    "vision-language-action-models",
+    "embodied-ai",
+    "imitation-learning"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident unrelated page: robot-operating-system",
+   "pathOk": null,
+   "rankIds": [
+    "robot-operating-system",
+    "system-prompts",
+    "iso-iec-42001",
+    "sim-to-real-transfer",
+    "vision-language-action-models",
+    "rag-evaluation",
+    "embodied-ai",
+    "graph-neural-networks",
+    "benchmarks-and-leaderboards",
+    "ai-evaluation"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 6,
+    "total": 6,
+    "top": "robot-operating-system",
+    "sim": 0.972,
+    "z": 5.54,
+    "margin": 0.378,
+    "how": "lexical"
+   },
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-118",
+   "q": "gdpr right to erasure and machine learning",
+   "style": "coverage-probe",
+   "topic": "gov",
+   "kind": "gap",
+   "expected": [
+    "ai-privacy-and-security",
+    "ai-governance"
+   ],
+   "expectedTool": null,
+   "top": "gdpr-and-ai",
+   "solid": true,
+   "score": 90,
+   "top5": [
+    "gdpr-and-ai",
+    "deep-learning",
+    "what-is-ai",
+    "supervised-learning",
+    "reinforcement-learning"
+   ],
+   "learn": [
+    "ai-privacy-and-security",
+    "ai-bias-and-fairness",
+    "what-is-ai"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident unrelated page: gdpr-and-ai",
+   "pathOk": null,
+   "rankIds": [
+    "gdpr-and-ai",
+    "deep-learning",
+    "what-is-ai",
+    "supervised-learning",
+    "reinforcement-learning",
+    "unsupervised-learning",
+    "mlops",
+    "imitation-learning",
+    "ai-for-science",
+    "reinforcement-learning-for-reasoning"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 7,
+    "total": 7,
+    "top": "gdpr-and-ai",
+    "sim": 0.879,
+    "z": 3.24,
+    "margin": 0.274,
+    "how": "lexical"
+   },
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-119",
+   "q": "how do i debug memory leaks in node",
+   "style": "coverage-probe",
+   "topic": "dev",
+   "kind": "gap",
+   "expected": [
+    "nodejs"
+   ],
+   "expectedTool": null,
+   "top": "(weak) streaming-ai-with-nodejs",
+   "solid": false,
+   "score": 56.25599311642142,
+   "top5": [
+    "streaming-ai-with-nodejs",
+    "nodejs-for-ai",
+    "nodejs",
+    "agent-memory",
+    "calling-ai-apis-with-javascript"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "transparent non-answer",
+   "pathOk": null,
+   "rankIds": [
+    "streaming-ai-with-nodejs",
+    "nodejs-for-ai",
+    "nodejs",
+    "agent-memory",
+    "calling-ai-apis-with-javascript",
+    "gmail-for-ai-agents",
+    "frontend-and-backend",
+    "express",
+    "javascript-for-ai",
+    "api-authentication"
+   ],
+   "sem": {
+    "coverage": 0.87,
+    "known": 7,
+    "total": 8,
+    "top": "streaming-ai-with-nodejs",
+    "sim": 0.766,
+    "z": 2.04,
+    "margin": 0.035,
+    "how": ""
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-120",
+   "q": "css grid vs flexbox",
+   "style": "coverage-probe",
+   "topic": "dev",
+   "kind": "gap",
+   "expected": [
+    "html-and-css"
+   ],
+   "expectedTool": null,
+   "top": "html-and-css",
+   "solid": true,
+   "score": 56,
+   "top5": [
+    "html-and-css",
+    "convolutional-neural-networks"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "nearby page: html-and-css",
+   "pathOk": null,
+   "rankIds": [
+    "html-and-css",
+    "convolutional-neural-networks"
+   ],
+   "sem": {
+    "coverage": 0.77,
+    "known": 4,
+    "total": 4,
+    "top": "html-and-css",
+    "sim": 0.937,
+    "z": 3.31,
+    "margin": 0.228,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-121",
+   "q": "jwt vs session cookies",
+   "style": "coverage-probe",
+   "topic": "dev",
+   "kind": "gap",
+   "expected": [
+    "json-web-tokens",
+    "authentication-vs-authorization"
+   ],
+   "expectedTool": null,
+   "top": "json-web-tokens",
+   "solid": true,
+   "score": 108,
+   "top5": [
+    "json-web-tokens",
+    "oauth",
+    "build-spfx-web-part",
+    "json-validation",
+    "what-is-json"
+   ],
+   "learn": [
+    "oauth",
+    "openid-connect",
+    "api-keys",
+    "authentication-vs-authorization"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "nearby page: json-web-tokens",
+   "pathOk": null,
+   "rankIds": [
+    "json-web-tokens",
+    "oauth",
+    "build-spfx-web-part",
+    "json-validation",
+    "what-is-json",
+    "json-schema",
+    "openid-connect",
+    "python-data-for-ai",
+    "structured-outputs",
+    "structured-output-methods-compared"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 4,
+    "total": 4,
+    "top": "api-authentication",
+    "sim": 0.872,
+    "z": 1.93,
+    "margin": 0.009,
+    "how": "lexical"
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-122",
+   "q": "transformers movie release order",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) vision-transformers",
+   "solid": false,
+   "score": 71.31301941331384,
+   "top5": [
+    "vision-transformers",
+    "recurrent-neural-networks",
+    "transformers-vs-state-space-models",
+    "multimodal-ai",
+    "video-generation-models"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "rt-negative-context",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "vision-transformers",
+    "recurrent-neural-networks",
+    "transformers-vs-state-space-models",
+    "multimodal-ai",
+    "video-generation-models",
+    "state-space-models",
+    "diffusion-models",
+    "positional-encoding",
+    "transformers",
+    "contrastive-learning-clip"
+   ],
+   "sem": {
+    "coverage": 0.75,
+    "known": 4,
+    "total": 4,
+    "top": "recurrent-neural-networks",
+    "sim": 0.551,
+    "z": 3.09,
+    "margin": 0.019,
+    "how": ""
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-123",
+   "q": "python snake care guide",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) python",
+   "solid": false,
+   "score": 46,
+   "top5": [
+    "python",
+    "rag-with-python",
+    "python-for-ai",
+    "calling-ai-apis-with-python",
+    "python-ai-libraries"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "v3-not-ai-context",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "python",
+    "rag-with-python",
+    "python-for-ai",
+    "calling-ai-apis-with-python",
+    "python-ai-libraries",
+    "python-data-for-ai",
+    "langchain",
+    "ray",
+    "outlines",
+    "dspy"
+   ],
+   "sem": {
+    "coverage": 0.78,
+    "known": 3,
+    "total": 4,
+    "top": "python",
+    "sim": 0.636,
+    "z": 4.07,
+    "margin": 0.051,
+    "how": ""
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-124",
+   "q": "rag and bone man tour dates",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) rag",
+   "solid": false,
+   "score": 50,
+   "top5": [
+    "rag",
+    "agentic-rag",
+    "rag-frameworks",
+    "rag-with-python",
+    "rag-evaluation"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "rt-negative-context",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "rag",
+    "agentic-rag",
+    "rag-frameworks",
+    "rag-with-python",
+    "rag-evaluation",
+    "rag-vs-fine-tuning",
+    "chunking",
+    "graph-rag",
+    "hybrid-search-and-reranking",
+    "llamaindex"
+   ],
+   "sem": {
+    "coverage": 0.44,
+    "known": 6,
+    "total": 6,
+    "top": "agentic-rag",
+    "sim": 0.484,
+    "z": 4.26,
+    "margin": 0.079,
+    "how": ""
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-125",
+   "q": "git hub of the community garden",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) git",
+   "solid": false,
+   "score": 54,
+   "top5": [
+    "git",
+    "github",
+    "hugging-face",
+    "open-weights-models",
+    "transfer-learning"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "rt-negative-context",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "git",
+    "github",
+    "hugging-face",
+    "open-weights-models",
+    "transfer-learning",
+    "vllm",
+    "graph-rag",
+    "mcp-security",
+    "environment-variables",
+    "owasp-llm-top-10"
+   ],
+   "sem": {
+    "coverage": 0.76,
+    "known": 6,
+    "total": 6,
+    "top": "git",
+    "sim": 0.685,
+    "z": 2.95,
+    "margin": 0.028,
+    "how": ""
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-126",
+   "q": "spring onion substitute",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) java",
+   "solid": false,
+   "score": 53.65581838769052,
+   "top5": [
+    "java",
+    "evaluation-metrics-for-ai",
+    "autogen",
+    "gpus-and-ai-accelerators",
+    "choosing-an-agent-framework"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "java",
+    "evaluation-metrics-for-ai",
+    "autogen",
+    "gpus-and-ai-accelerators",
+    "choosing-an-agent-framework",
+    "python-ai-libraries",
+    "cicd",
+    "pgvector",
+    "package-managers",
+    "model-drift-and-monitoring"
+   ],
+   "sem": {
+    "coverage": 0.36,
+    "known": 2,
+    "total": 3,
+    "top": "java",
+    "sim": 0.509,
+    "z": 2.66,
+    "margin": 0.041,
+    "how": ""
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-127",
+   "q": "django unchained cast",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) python-data-for-ai",
+   "solid": false,
+   "score": 32.30305177290024,
+   "top5": [
+    "python-data-for-ai",
+    "typescript",
+    "python-for-ai",
+    "python",
+    "go-language"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "rt-negative-context",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "python-data-for-ai",
+    "typescript",
+    "python-for-ai",
+    "python",
+    "go-language",
+    "html-and-css",
+    "rust",
+    "javascript",
+    "java",
+    "calling-ai-apis-with-python"
+   ],
+   "sem": {
+    "coverage": 0.71,
+    "known": 2,
+    "total": 3,
+    "top": "python-data-for-ai",
+    "sim": 0.69,
+    "z": 2.08,
+    "margin": 0.035,
+    "how": ""
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-128",
+   "q": "angular momentum conservation",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) markov-decision-processes",
+   "solid": false,
+   "score": 31.777104782310317,
+   "top5": [
+    "markov-decision-processes",
+    "scaling-laws",
+    "model-drift-and-monitoring",
+    "world-models",
+    "ai-for-science"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "markov-decision-processes",
+    "scaling-laws",
+    "model-drift-and-monitoring",
+    "world-models",
+    "ai-for-science",
+    "ai-materials-discovery",
+    "reinforcement-learning",
+    "proximal-policy-optimization",
+    "alphafold",
+    "mlops"
+   ],
+   "sem": {
+    "coverage": 0,
+    "known": 2,
+    "total": 3,
+    "top": "markov-decision-processes",
+    "sim": 0.41,
+    "z": 2.06,
+    "margin": 0.004,
+    "how": ""
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-129",
+   "q": "kubernetes in greek means helmsman",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) kubernetes",
+   "solid": false,
+   "score": 80,
+   "top5": [
+    "kubernetes",
+    "containers",
+    "unsupervised-learning",
+    "agent-evaluation",
+    "ai-privacy-and-security"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "rt-negative-context",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "kubernetes",
+    "containers",
+    "unsupervised-learning",
+    "agent-evaluation",
+    "ai-privacy-and-security",
+    "ai-evaluation",
+    "local-ai-vs-cloud-ai",
+    "reasoning-transparency",
+    "test-time-compute",
+    "local-ai"
+   ],
+   "sem": {
+    "coverage": 0.53,
+    "known": 4,
+    "total": 5,
+    "top": "kubernetes",
+    "sim": 0.487,
+    "z": 4.4,
+    "margin": 0.13,
+    "how": ""
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-130",
+   "q": "bearer of the ring lord of the rings",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) json-web-tokens",
+   "solid": false,
+   "score": 31.59614026197728,
+   "top5": [
+    "json-web-tokens",
+    "api-keys",
+    "openid-connect",
+    "python-ai-libraries",
+    "webhooks"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "json-web-tokens",
+    "api-keys",
+    "openid-connect",
+    "python-ai-libraries",
+    "webhooks",
+    "oauth",
+    "agent-tools",
+    "api-authentication",
+    "javascript-for-ai",
+    "model-apis"
+   ],
+   "sem": {
+    "coverage": 0.34,
+    "known": 8,
+    "total": 8,
+    "top": "json-web-tokens",
+    "sim": 0.427,
+    "z": 1.85,
+    "margin": 0.013,
+    "how": ""
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-131",
+   "q": "scrum master salary",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) fine-tuning",
+   "solid": false,
+   "score": 46.28768840478267,
+   "top5": [
+    "fine-tuning",
+    "model-serving-and-inference",
+    "llm-cost-optimization",
+    "knowledge-distillation",
+    "autogen"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "rt-negative-context",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "fine-tuning",
+    "model-serving-and-inference",
+    "llm-cost-optimization",
+    "knowledge-distillation",
+    "autogen",
+    "reasoning-models",
+    "llm-as-a-judge",
+    "lora-vs-full-fine-tuning",
+    "instruction-tuning",
+    "gsm8k-and-math-benchmarks"
+   ],
+   "sem": {
+    "coverage": 0,
+    "known": 2,
+    "total": 3,
+    "top": "fine-tuning",
+    "sim": 0.323,
+    "z": 2.54,
+    "margin": 0.008,
+    "how": ""
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-132",
+   "q": "agent orange history",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) multi-agent-systems",
+   "solid": false,
+   "score": 60.49368406842477,
+   "top5": [
+    "multi-agent-systems",
+    "ai-agent-vs-chatbot",
+    "agent-protocol-landscape",
+    "agent-frameworks-compared",
+    "agent-memory"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "multi-agent-systems",
+    "ai-agent-vs-chatbot",
+    "agent-protocol-landscape",
+    "agent-frameworks-compared",
+    "agent-memory",
+    "autogen",
+    "a2a-protocol",
+    "choosing-an-agent-framework",
+    "ai-agents",
+    "langgraph"
+   ],
+   "sem": {
+    "coverage": 0.64,
+    "known": 3,
+    "total": 3,
+    "top": "multi-agent-systems",
+    "sim": 0.486,
+    "z": 2.08,
+    "margin": 0.031,
+    "how": ""
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-133",
+   "q": "mongo from flash gordon",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) mongodb",
+   "solid": false,
+   "score": 52.08703871365829,
+   "top5": [
+    "mongodb",
+    "gcp-fundamentals",
+    "postgresql-for-ai-apps",
+    "databases-for-ai-apps",
+    "sqlite"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "mongodb",
+    "gcp-fundamentals",
+    "postgresql-for-ai-apps",
+    "databases-for-ai-apps",
+    "sqlite",
+    "pgvector",
+    "postgresql",
+    "aws-fundamentals",
+    "vector-database-vs-traditional-database",
+    "azure-fundamentals"
+   ],
+   "sem": {
+    "coverage": 0.4,
+    "known": 4,
+    "total": 4,
+    "top": "gcp-fundamentals",
+    "sim": 0.55,
+    "z": 2.38,
+    "margin": 0.019,
+    "how": ""
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-134",
+   "q": "redis cluster of hotels",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) redis",
+   "solid": false,
+   "score": 59,
+   "top5": [
+    "redis",
+    "kubernetes",
+    "ray"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "rt-negative-context",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "redis",
+    "kubernetes",
+    "ray"
+   ],
+   "sem": {
+    "coverage": 0.67,
+    "known": 4,
+    "total": 4,
+    "top": "kubernetes",
+    "sim": 0.643,
+    "z": 2.91,
+    "margin": 0.059,
+    "how": ""
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-135",
+   "q": "gradient colour background css for a wedding invitation",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) html-and-css",
+   "solid": false,
+   "score": 72.03135356618503,
+   "top5": [
+    "html-and-css",
+    "streaming-ai-responses",
+    "vision-language-models",
+    "instruction-tuning",
+    "calling-ai-apis-with-python"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "rt-negative-context",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "html-and-css",
+    "streaming-ai-responses",
+    "vision-language-models",
+    "instruction-tuning",
+    "calling-ai-apis-with-python",
+    "speech-ai",
+    "contrastive-learning-clip",
+    "backpropagation-and-gradient-descent",
+    "streaming-ai-with-nodejs",
+    "javascript"
+   ],
+   "sem": {
+    "coverage": 0.6,
+    "known": 7,
+    "total": 8,
+    "top": "html-and-css",
+    "sim": 0.468,
+    "z": 2.4,
+    "margin": 0.009,
+    "how": ""
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-136",
+   "q": "train a puppy to sit",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) local-ai",
+   "solid": false,
+   "score": 44.858494029042774,
+   "top5": [
+    "local-ai",
+    "hugging-face",
+    "kubernetes",
+    "reinforcement-learning-for-reasoning",
+    "ray"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "local-ai",
+    "hugging-face",
+    "kubernetes",
+    "reinforcement-learning-for-reasoning",
+    "ray",
+    "local-ai-vs-cloud-ai",
+    "distributed-training",
+    "ollama",
+    "cicd",
+    "lora-and-peft"
+   ],
+   "sem": {
+    "coverage": 0.56,
+    "known": 3,
+    "total": 5,
+    "top": "local-ai",
+    "sim": 0.609,
+    "z": 2.5,
+    "margin": 0.007,
+    "how": ""
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-137",
+   "q": "loss of appetite in cats",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) object-detection",
+   "solid": false,
+   "score": 49.41131308725424,
+   "top5": [
+    "object-detection",
+    "transformers-vs-state-space-models",
+    "contrastive-learning-clip",
+    "flash-attention",
+    "vision-transformers"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "object-detection",
+    "transformers-vs-state-space-models",
+    "contrastive-learning-clip",
+    "flash-attention",
+    "vision-transformers",
+    "state-space-models",
+    "transformers",
+    "generative-adversarial-networks",
+    "recurrent-neural-networks",
+    "mixture-of-experts"
+   ],
+   "sem": {
+    "coverage": 0.73,
+    "known": 4,
+    "total": 5,
+    "top": "object-detection",
+    "sim": 0.67,
+    "z": 2.65,
+    "margin": 0.068,
+    "how": ""
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-138",
+   "q": "batch of cookies recipe",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) model-apis",
+   "solid": false,
+   "score": 25.256889392930926,
+   "top5": [
+    "model-apis",
+    "local-llm-runtimes",
+    "streaming-ai-with-nodejs",
+    "streaming-ai-responses",
+    "local-runtimes-compared"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "rt-negative-context",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "model-apis",
+    "local-llm-runtimes",
+    "streaming-ai-with-nodejs",
+    "streaming-ai-responses",
+    "local-runtimes-compared",
+    "api-authentication",
+    "calling-ai-apis-with-javascript",
+    "react-ai-interfaces",
+    "nodejs",
+    "nextjs"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 4,
+    "total": 4,
+    "top": "model-apis",
+    "sim": 0.6,
+    "z": 1.84,
+    "margin": 0.017,
+    "how": ""
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-139",
+   "q": "kernel panic on my macbook",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) semantic-kernel",
+   "solid": false,
+   "score": 100.77797147224872,
+   "top5": [
+    "semantic-kernel",
+    "what-is-json",
+    "what-is-an-api",
+    "javascript-for-ai",
+    "gpus-and-ai-accelerators"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "rt-negative-context",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "semantic-kernel",
+    "what-is-json",
+    "what-is-an-api",
+    "javascript-for-ai",
+    "gpus-and-ai-accelerators",
+    "javascript",
+    "python-data-for-ai",
+    "typescript-for-ai",
+    "calling-ai-apis-with-javascript",
+    "model-apis"
+   ],
+   "sem": {
+    "coverage": 0.55,
+    "known": 3,
+    "total": 5,
+    "top": "semantic-kernel",
+    "sim": 0.92,
+    "z": 3.16,
+    "margin": 0.253,
+    "how": ""
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-140",
+   "q": "reinforcement bars for concrete",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) reinforcement-learning-for-reasoning",
+   "solid": false,
+   "score": 56.99548077007197,
+   "top5": [
+    "reinforcement-learning-for-reasoning",
+    "preference-optimization",
+    "reinforcement-learning",
+    "rlhf",
+    "constitutional-ai-and-rlaif"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "reinforcement-learning-for-reasoning",
+    "preference-optimization",
+    "reinforcement-learning",
+    "rlhf",
+    "constitutional-ai-and-rlaif",
+    "search-over-reasoning",
+    "instruction-tuning",
+    "vision-language-action-models",
+    "imitation-learning",
+    "dpo-vs-rlhf"
+   ],
+   "sem": {
+    "coverage": 0.69,
+    "known": 4,
+    "total": 4,
+    "top": "reinforcement-learning-for-reasoning",
+    "sim": 0.313,
+    "z": 2.3,
+    "margin": 0.008,
+    "how": ""
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-141",
+   "q": "prompt payment discount invoice terms",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) system-prompts",
+   "solid": false,
+   "score": 56.19257539198941,
+   "top5": [
+    "system-prompts",
+    "prompt-caching",
+    "prompt-injection",
+    "gdpr-and-ai",
+    "integration-permissions"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "system-prompts",
+    "prompt-caching",
+    "prompt-injection",
+    "gdpr-and-ai",
+    "integration-permissions",
+    "markov-decision-processes",
+    "function-calling",
+    "graph-rag",
+    "tokens",
+    "prm-vs-orm"
+   ],
+   "sem": {
+    "coverage": 1,
+    "known": 5,
+    "total": 5,
+    "top": "gdpr-and-ai",
+    "sim": 0.496,
+    "z": 2.71,
+    "margin": 0.054,
+    "how": ""
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-142",
+   "q": "what should i cook tonight",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) ai-agents",
+   "solid": false,
+   "score": 34.56170688543441,
+   "top5": [
+    "ai-agents",
+    "rust",
+    "go-language",
+    "java",
+    "prompt-engineering"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "ai-agents",
+    "rust",
+    "go-language",
+    "java",
+    "prompt-engineering",
+    "rag-vs-fine-tuning",
+    "rag-with-python",
+    "model-cards",
+    "lora-and-peft",
+    "llm-observability"
+   ],
+   "sem": {
+    "coverage": 0.32,
+    "known": 4,
+    "total": 5,
+    "top": "ai-agents",
+    "sim": 0.503,
+    "z": 2.15,
+    "margin": 0.039,
+    "how": ""
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-143",
+   "q": "cheap hotels in madrid",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) open-weights-models",
+   "solid": false,
+   "score": 64.2218705880409,
+   "top5": [
+    "open-weights-models",
+    "hugging-face",
+    "lora-and-peft",
+    "model-serving-and-inference",
+    "mixture-of-experts"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "open-weights-models",
+    "hugging-face",
+    "lora-and-peft",
+    "model-serving-and-inference",
+    "mixture-of-experts",
+    "scaling-laws",
+    "local-ai-vs-cloud-ai",
+    "instruction-tuning",
+    "lora-vs-full-fine-tuning",
+    "reinforcement-learning-for-reasoning"
+   ],
+   "sem": {
+    "coverage": 0.37,
+    "known": 4,
+    "total": 4,
+    "top": "open-weights-models",
+    "sim": 0.436,
+    "z": 3.14,
+    "margin": 0.026,
+    "how": ""
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-144",
+   "q": "how do i meditate",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) sycophancy",
+   "solid": false,
+   "score": 60.367871858993034,
+   "top5": [
+    "sycophancy",
+    "ai-hallucinations",
+    "rag-evaluation",
+    "react-agent-pattern",
+    "ai-evaluation"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "sycophancy",
+    "ai-hallucinations",
+    "rag-evaluation",
+    "react-agent-pattern",
+    "ai-evaluation",
+    "how-to-reduce-hallucinations",
+    "pytorch",
+    "ai-agents",
+    "embodied-ai",
+    "video-generation-models"
+   ],
+   "sem": {
+    "coverage": 0.44,
+    "known": 2,
+    "total": 4,
+    "top": "sycophancy",
+    "sim": 0.597,
+    "z": 3.01,
+    "margin": 0.021,
+    "how": ""
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-145",
+   "q": "best podcasts about history",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) best-of-n-sampling",
+   "solid": false,
+   "score": 79.46222211477462,
+   "top5": [
+    "best-of-n-sampling",
+    "context-windows",
+    "mmlu",
+    "ai-evaluation",
+    "what-is-ai"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "best-of-n-sampling",
+    "context-windows",
+    "mmlu",
+    "ai-evaluation",
+    "what-is-ai",
+    "human-preference-evaluation",
+    "ai-agent-vs-chatbot",
+    "generative-ai",
+    "benchmark-contamination",
+    "self-consistency"
+   ],
+   "sem": {
+    "coverage": 0.71,
+    "known": 3,
+    "total": 4,
+    "top": "best-of-n-sampling",
+    "sim": 0.639,
+    "z": 2.72,
+    "margin": 0.037,
+    "how": ""
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H2-146",
+   "q": "renew passport appointment",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) eu-ai-act",
+   "solid": false,
+   "score": 23.69451283225134,
+   "top5": [
+    "eu-ai-act",
+    "system-prompts",
+    "outcome-reward-model",
+    "agent-planning",
+    "generative-ai"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "eu-ai-act",
+    "system-prompts",
+    "outcome-reward-model",
+    "agent-planning",
+    "generative-ai",
+    "ai-agent-vs-chatbot",
+    "ai-agents",
+    "process-reward-model",
+    "llm-as-a-judge",
+    "agent-evaluation"
+   ],
+   "sem": {
+    "coverage": 0,
+    "known": 1,
+    "total": 3,
+    "top": "eu-ai-act",
+    "sim": 0.422,
+    "z": 1.79,
+    "margin": 0.041,
+    "how": ""
+   },
+   "classAmended": "PASS",
+   "amendReason": ""
+  }
+ ]
+}

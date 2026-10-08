@@ -1,0 +1,8444 @@
+{
+ "summary": {
+  "label": "h3-A",
+  "datasetSha256": "c46fc1bbac641b81ab592df006669547e2fea124568bd4b0d27bd3487766f1b5",
+  "total": 211,
+  "pass": 71,
+  "weak": 54,
+  "miss": 53,
+  "falsePositive": 33,
+  "retrieval": {
+   "pageQueries": 157,
+   "top1": 51,
+   "top3": 85,
+   "top5": 92,
+   "top1Rate": "32.5%",
+   "top3Rate": "54.1%",
+   "top5Rate": "58.6%"
+  },
+  "engine": "lexical",
+  "passRate": "33.6%",
+  "falsePositiveRate": "15.6%"
+ },
+ "results": [
+  {
+   "id": "H3-001",
+   "q": "im new here, what even is artificial intelligence",
+   "style": "beginner",
+   "topic": "ai",
+   "kind": "page",
+   "expected": [
+    "what-is-ai"
+   ],
+   "expectedTool": null,
+   "top": "what-is-ai",
+   "solid": true,
+   "score": 30,
+   "top5": [
+    "what-is-ai",
+    "generative-ai",
+    "ai-materials-discovery",
+    "embodied-ai",
+    "neural-networks"
+   ],
+   "learn": [
+    "generative-ai"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "what-is-ai",
+    "generative-ai",
+    "ai-materials-discovery",
+    "embodied-ai",
+    "neural-networks",
+    "ai-alignment",
+    "aws-fundamentals",
+    "html-and-css"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-002",
+   "q": "why does my chat assistant sometimes confidently say wrong things",
+   "style": "beginner",
+   "topic": "llm",
+   "kind": "page",
+   "expected": [
+    "ai-hallucinations",
+    "how-to-reduce-hallucinations"
+   ],
+   "expectedTool": null,
+   "top": "(weak) ai-agent-vs-chatbot",
+   "solid": false,
+   "score": 18,
+   "top5": [
+    "ai-agent-vs-chatbot",
+    "streaming-ai-responses",
+    "react-ai-interfaces",
+    "ai-hallucinations",
+    "instruction-tuning"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "ai-agent-vs-chatbot",
+    "streaming-ai-responses",
+    "react-ai-interfaces",
+    "ai-hallucinations",
+    "instruction-tuning",
+    "model-apis",
+    "postgresql-for-ai-apps",
+    "system-prompts"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-003",
+   "q": "what are the little chunks of text a model reads called",
+   "style": "beginner",
+   "topic": "llm",
+   "kind": "page",
+   "expected": [
+    "tokens"
+   ],
+   "expectedTool": null,
+   "top": "(weak) chunking",
+   "solid": false,
+   "score": 30,
+   "top5": [
+    "chunking",
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "chunking",
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference",
+    "process-reward-model",
+    "world-models",
+    "large-language-models"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-004",
+   "q": "is there a cap on how many words i can paste into the assistant",
+   "style": "beginner",
+   "topic": "llm",
+   "kind": "page",
+   "expected": [
+    "context-windows",
+    "tokens"
+   ],
+   "expectedTool": null,
+   "top": "(weak) ai-agent-vs-chatbot",
+   "solid": false,
+   "score": 18,
+   "top5": [
+    "ai-agent-vs-chatbot",
+    "ai-privacy-and-security",
+    "system-prompts",
+    "speech-ai",
+    "instruction-tuning"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "ai-agent-vs-chatbot",
+    "ai-privacy-and-security",
+    "system-prompts",
+    "speech-ai",
+    "instruction-tuning",
+    "agent-protocol-landscape",
+    "diffusion-models",
+    "humaneval"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-005",
+   "q": "teaching software with examples that already have answers",
+   "style": "concept",
+   "topic": "ml",
+   "kind": "page",
+   "expected": [
+    "supervised-learning"
+   ],
+   "expectedTool": null,
+   "top": "(weak) swe-bench",
+   "solid": false,
+   "score": 8,
+   "top5": [
+    "swe-bench",
+    "how-to-reduce-hallucinations",
+    "common-prompting-mistakes",
+    "prompt-engineering",
+    "ai-hallucinations"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "swe-bench",
+    "how-to-reduce-hallucinations",
+    "common-prompting-mistakes",
+    "prompt-engineering",
+    "ai-hallucinations",
+    "ai-drug-discovery",
+    "llm-as-a-judge",
+    "supervised-learning"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-006",
+   "q": "software that discovers groups by itself in raw data",
+   "style": "concept",
+   "topic": "ml",
+   "kind": "page",
+   "expected": [
+    "unsupervised-learning"
+   ],
+   "expectedTool": null,
+   "top": "(weak) gdpr-and-ai",
+   "solid": false,
+   "score": 29,
+   "top5": [
+    "gdpr-and-ai",
+    "ai-privacy-and-security",
+    "distributed-training",
+    "python-data-for-ai",
+    "benchmark-contamination"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "gdpr-and-ai",
+    "ai-privacy-and-security",
+    "distributed-training",
+    "python-data-for-ai",
+    "benchmark-contamination",
+    "swe-bench",
+    "ray",
+    "document-understanding-ai"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-007",
+   "q": "stacked layers of simple math units that learn patterns",
+   "style": "concept",
+   "topic": "dl",
+   "kind": "page",
+   "expected": [
+    "neural-networks",
+    "deep-learning"
+   ],
+   "expectedTool": null,
+   "top": "(weak) gsm8k-and-math-benchmarks",
+   "solid": false,
+   "score": 26,
+   "top5": [
+    "gsm8k-and-math-benchmarks",
+    "neural-networks",
+    "agentic-workflows",
+    "agent-protocol-landscape",
+    "deep-learning"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "gsm8k-and-math-benchmarks",
+    "neural-networks",
+    "agentic-workflows",
+    "agent-protocol-landscape",
+    "deep-learning",
+    "reinforcement-learning-for-reasoning",
+    "unsupervised-learning",
+    "evaluation-metrics-for-ai"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-008",
+   "q": "how the error signal flows backwards through the layers",
+   "style": "concept",
+   "topic": "dl",
+   "kind": "page",
+   "expected": [
+    "backpropagation-and-gradient-descent"
+   ],
+   "expectedTool": null,
+   "top": "(weak) agent-protocol-landscape",
+   "solid": false,
+   "score": 5,
+   "top5": [
+    "agent-protocol-landscape",
+    "react-ai-interfaces",
+    "deep-learning",
+    "neural-networks",
+    "typescript-api-client-types"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "agent-protocol-landscape",
+    "react-ai-interfaces",
+    "deep-learning",
+    "neural-networks",
+    "typescript-api-client-types",
+    "calling-ai-apis-with-python",
+    "llm-cost-optimization",
+    "computer-use-agents"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-009",
+   "q": "accuracy looks perfect in my notebook but tanks after deployment",
+   "style": "troubleshooting",
+   "topic": "ml",
+   "kind": "page",
+   "expected": [
+    "overfitting-and-regularization",
+    "model-drift-and-monitoring"
+   ],
+   "expectedTool": null,
+   "top": "(weak) evaluation-metrics-for-ai",
+   "solid": false,
+   "score": 9,
+   "top5": [
+    "evaluation-metrics-for-ai",
+    "mlops",
+    "agent-evaluation",
+    "kubernetes",
+    "object-detection"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "evaluation-metrics-for-ai",
+    "mlops",
+    "agent-evaluation",
+    "kubernetes",
+    "object-detection",
+    "onnx-runtime",
+    "test-time-compute",
+    "cicd"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-010",
+   "q": "my network outputs nan after a few steps",
+   "style": "troubleshooting",
+   "topic": "dl",
+   "kind": "page",
+   "expected": [
+    "backpropagation-and-gradient-descent"
+   ],
+   "expectedTool": null,
+   "top": "(weak) structured-outputs",
+   "solid": false,
+   "score": 14,
+   "top5": [
+    "structured-outputs",
+    "neural-networks",
+    "convolutional-neural-networks",
+    "graph-neural-networks",
+    "chain-of-thought"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "structured-outputs",
+    "neural-networks",
+    "convolutional-neural-networks",
+    "graph-neural-networks",
+    "chain-of-thought",
+    "deep-q-networks",
+    "ai-evaluation",
+    "physics-informed-neural-networks"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-011",
+   "q": "take a model trained on millions of photos and adapt it to x-rays",
+   "style": "implementation",
+   "topic": "dl",
+   "kind": "page",
+   "expected": [
+    "transfer-learning"
+   ],
+   "expectedTool": null,
+   "top": "(weak) model-cards",
+   "solid": false,
+   "score": 28,
+   "top5": [
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "process-reward-model",
+    "model-serving-and-inference"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "process-reward-model",
+    "model-serving-and-inference",
+    "world-models",
+    "instruction-tuning",
+    "outcome-reward-model"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-012",
+   "q": "software learns a policy by being scored on outcomes",
+   "style": "concept",
+   "topic": "rl",
+   "kind": "page",
+   "expected": [
+    "reinforcement-learning"
+   ],
+   "expectedTool": null,
+   "top": "reinforcement-learning",
+   "solid": true,
+   "score": 21,
+   "top5": [
+    "proximal-policy-optimization",
+    "reinforcement-learning",
+    "imitation-learning",
+    "ai-governance",
+    "swe-bench"
+   ],
+   "learn": [
+    "proximal-policy-optimization",
+    "imitation-learning",
+    "reinforcement-learning-for-reasoning",
+    "markov-decision-processes",
+    "deep-q-networks"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "proximal-policy-optimization",
+    "reinforcement-learning",
+    "imitation-learning",
+    "ai-governance",
+    "swe-bench",
+    "ai-guardrails",
+    "reinforcement-learning-for-reasoning",
+    "ai-drug-discovery"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-013",
+   "q": "why convolutions suit pictures",
+   "style": "concept",
+   "topic": "dl",
+   "kind": "page",
+   "expected": [
+    "convolutional-neural-networks"
+   ],
+   "expectedTool": null,
+   "top": "convolutional-neural-networks",
+   "solid": true,
+   "score": 46,
+   "top5": [
+    "convolutional-neural-networks",
+    "small-language-models"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "convolutional-neural-networks",
+    "small-language-models"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-014",
+   "q": "self attention versus recurrence for sequences",
+   "style": "concept",
+   "topic": "dl",
+   "kind": "page",
+   "expected": [
+    "transformers",
+    "recurrent-neural-networks"
+   ],
+   "expectedTool": null,
+   "top": "transformers",
+   "solid": true,
+   "score": 50,
+   "top5": [
+    "transformers",
+    "flash-attention",
+    "self-consistency",
+    "self-supervised-learning",
+    "agentic-rag"
+   ],
+   "learn": [
+    "context-windows"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "transformers",
+    "flash-attention",
+    "self-consistency",
+    "self-supervised-learning",
+    "agentic-rag",
+    "local-runtimes-compared",
+    "kv-cache",
+    "constitutional-ai-and-rlaif"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-015",
+   "q": "noise to picture generators",
+   "style": "concept",
+   "topic": "dl",
+   "kind": "page",
+   "expected": [
+    "diffusion-models"
+   ],
+   "expectedTool": null,
+   "top": "(weak) diffusion-models",
+   "solid": false,
+   "score": 5,
+   "top5": [
+    "diffusion-models",
+    "world-models"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "diffusion-models",
+    "world-models"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-016",
+   "q": "autoencoder with a probabilistic bottleneck",
+   "style": "concept",
+   "topic": "dl",
+   "kind": "page",
+   "expected": [
+    "variational-autoencoders"
+   ],
+   "expectedTool": null,
+   "top": "variational-autoencoders",
+   "solid": true,
+   "score": 62,
+   "top5": [
+    "variational-autoencoders",
+    "mechanistic-interpretability",
+    "self-supervised-learning"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "variational-autoencoders",
+    "mechanistic-interpretability",
+    "self-supervised-learning"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-017",
+   "q": "networks for data that is linked together like friendships",
+   "style": "concept",
+   "topic": "dl",
+   "kind": "page",
+   "expected": [
+    "graph-neural-networks"
+   ],
+   "expectedTool": null,
+   "top": "(weak) gdpr-and-ai",
+   "solid": false,
+   "score": 29,
+   "top5": [
+    "gdpr-and-ai",
+    "ai-privacy-and-security",
+    "graph-neural-networks",
+    "convolutional-neural-networks",
+    "distributed-training"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "gdpr-and-ai",
+    "ai-privacy-and-security",
+    "graph-neural-networks",
+    "convolutional-neural-networks",
+    "distributed-training",
+    "python-data-for-ai",
+    "physics-informed-neural-networks",
+    "neural-networks"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-018",
+   "q": "memory cost of storing past attention states while generating",
+   "style": "concept",
+   "topic": "arch",
+   "kind": "page",
+   "expected": [
+    "kv-cache"
+   ],
+   "expectedTool": null,
+   "top": "transformers",
+   "solid": true,
+   "score": 34,
+   "top5": [
+    "transformers",
+    "agent-memory",
+    "flash-attention",
+    "kv-cache",
+    "llm-cost-optimization"
+   ],
+   "learn": [
+    "tokens",
+    "context-windows"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident wrong page: transformers",
+   "pathOk": null,
+   "rankIds": [
+    "transformers",
+    "agent-memory",
+    "flash-attention",
+    "kv-cache",
+    "llm-cost-optimization",
+    "local-ai-vs-cloud-ai",
+    "gpus-and-ai-accelerators",
+    "prompt-caching"
+   ],
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-019",
+   "q": "how does a model keep track of where each word sits in the sentence",
+   "style": "concept",
+   "topic": "arch",
+   "kind": "page",
+   "expected": [
+    "positional-encoding"
+   ],
+   "expectedTool": null,
+   "top": "(weak) model-cards",
+   "solid": false,
+   "score": 28,
+   "top5": [
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "process-reward-model",
+    "model-serving-and-inference"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "process-reward-model",
+    "model-serving-and-inference",
+    "world-models",
+    "outcome-reward-model",
+    "instruction-tuning"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-020",
+   "q": "architectures with many specialised subnetworks",
+   "style": "concept",
+   "topic": "arch",
+   "kind": "page",
+   "expected": [
+    "mixture-of-experts"
+   ],
+   "expectedTool": null,
+   "top": "(weak) diffusion-models",
+   "solid": false,
+   "score": 2,
+   "top5": [
+    "diffusion-models",
+    "imitation-learning",
+    "llm-benchmarks-vs-task-evals",
+    "scaling-laws",
+    "self-consistency"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "diffusion-models",
+    "imitation-learning",
+    "llm-benchmarks-vs-task-evals",
+    "scaling-laws",
+    "self-consistency",
+    "ai-weather-forecasting",
+    "alphafold",
+    "deep-learning"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-021",
+   "q": "a more efficient sequence layer than attention for very long inputs",
+   "style": "concept",
+   "topic": "arch",
+   "kind": "page",
+   "expected": [
+    "state-space-models"
+   ],
+   "expectedTool": null,
+   "top": "transformers",
+   "solid": true,
+   "score": 34,
+   "top5": [
+    "transformers",
+    "flash-attention",
+    "state-space-models",
+    "kv-cache",
+    "transformers-vs-state-space-models"
+   ],
+   "learn": [
+    "context-windows",
+    "generative-ai"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident wrong page: transformers",
+   "pathOk": null,
+   "rankIds": [
+    "transformers",
+    "flash-attention",
+    "state-space-models",
+    "kv-cache",
+    "transformers-vs-state-space-models",
+    "context-windows",
+    "agent-memory",
+    "lora-and-peft"
+   ],
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-022",
+   "q": "what does it mean to train longer on more text",
+   "style": "concept",
+   "topic": "llm",
+   "kind": "page",
+   "expected": [
+    "scaling-laws"
+   ],
+   "expectedTool": null,
+   "top": "(weak) multimodal-ai",
+   "solid": false,
+   "score": 12,
+   "top5": [
+    "multimodal-ai",
+    "contrastive-learning-clip",
+    "speech-ai",
+    "test-time-compute",
+    "diffusion-models"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "multimodal-ai",
+    "contrastive-learning-clip",
+    "speech-ai",
+    "test-time-compute",
+    "diffusion-models",
+    "distributed-training",
+    "ray",
+    "video-generation-models"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-023",
+   "q": "making the assistant polite and instruction following after pretraining",
+   "style": "concept",
+   "topic": "llm",
+   "kind": "page",
+   "expected": [
+    "instruction-tuning",
+    "rlhf"
+   ],
+   "expectedTool": null,
+   "top": "(weak) instruction-tuning",
+   "solid": false,
+   "score": 22,
+   "top5": [
+    "instruction-tuning",
+    "ai-agent-vs-chatbot",
+    "self-supervised-learning",
+    "system-prompts",
+    "speech-ai"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "instruction-tuning",
+    "ai-agent-vs-chatbot",
+    "self-supervised-learning",
+    "system-prompts",
+    "speech-ai",
+    "large-language-models",
+    "fine-tuning",
+    "ai-hallucinations"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-024",
+   "q": "cheaper way to specialise a big model than retraining everything",
+   "style": "what-to-use",
+   "topic": "llm",
+   "kind": "page",
+   "expected": [
+    "lora-and-peft",
+    "lora-vs-full-fine-tuning"
+   ],
+   "expectedTool": null,
+   "top": "(weak) model-cards",
+   "solid": false,
+   "score": 28,
+   "top5": [
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference",
+    "process-reward-model"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference",
+    "process-reward-model",
+    "world-models",
+    "benchmarks-and-leaderboards",
+    "outcome-reward-model"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-025",
+   "q": "make a model fit on a small graphics card",
+   "style": "what-to-use",
+   "topic": "llm",
+   "kind": "page",
+   "expected": [
+    "quantization",
+    "gpus-and-ai-accelerators"
+   ],
+   "expectedTool": null,
+   "top": "(weak) model-cards",
+   "solid": false,
+   "score": 48,
+   "top5": [
+    "model-cards",
+    "small-language-models",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "model-cards",
+    "small-language-models",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference",
+    "process-reward-model",
+    "world-models",
+    "outcome-reward-model"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-026",
+   "q": "smaller model copying a larger one",
+   "style": "concept",
+   "topic": "llm",
+   "kind": "page",
+   "expected": [
+    "knowledge-distillation"
+   ],
+   "expectedTool": null,
+   "top": "quantization",
+   "solid": true,
+   "score": 54,
+   "top5": [
+    "quantization",
+    "model-apis",
+    "model-cards",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference"
+   ],
+   "learn": [
+    "model-serving-and-inference",
+    "knowledge-distillation",
+    "large-language-models",
+    "lora-and-peft",
+    "llama-cpp"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident wrong page: quantization",
+   "pathOk": null,
+   "rankIds": [
+    "quantization",
+    "model-apis",
+    "model-cards",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference",
+    "process-reward-model",
+    "world-models",
+    "outcome-reward-model"
+   ],
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-027",
+   "q": "guess several words ahead and verify them",
+   "style": "concept",
+   "topic": "llm",
+   "kind": "page",
+   "expected": [
+    "speculative-decoding"
+   ],
+   "expectedTool": null,
+   "top": "(weak) common-prompting-mistakes",
+   "solid": false,
+   "score": 6,
+   "top5": [
+    "common-prompting-mistakes",
+    "speculative-decoding",
+    "physics-informed-neural-networks",
+    "websockets",
+    "process-reward-model"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "common-prompting-mistakes",
+    "speculative-decoding",
+    "physics-informed-neural-networks",
+    "websockets",
+    "process-reward-model",
+    "search-over-reasoning",
+    "self-consistency",
+    "webhooks"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-028",
+   "q": "compact models for edge devices",
+   "style": "concept",
+   "topic": "llm",
+   "kind": "page",
+   "expected": [
+    "small-language-models"
+   ],
+   "expectedTool": null,
+   "top": "(weak) small-language-models",
+   "solid": false,
+   "score": 47,
+   "top5": [
+    "small-language-models",
+    "reasoning-models",
+    "reasoning-vs-standard-models",
+    "world-models",
+    "model-cards"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "small-language-models",
+    "reasoning-models",
+    "reasoning-vs-standard-models",
+    "world-models",
+    "model-cards",
+    "model-drift-and-monitoring",
+    "model-apis",
+    "diffusion-models"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-029",
+   "q": "can i legally use downloadable model weights in a product",
+   "style": "concept",
+   "topic": "llm",
+   "kind": "page",
+   "expected": [
+    "open-weights-models"
+   ],
+   "expectedTool": null,
+   "top": "(weak) model-cards",
+   "solid": false,
+   "score": 28,
+   "top5": [
+    "model-cards",
+    "model-apis",
+    "open-weights-models",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "model-cards",
+    "model-apis",
+    "open-weights-models",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference",
+    "process-reward-model",
+    "large-language-models",
+    "world-models"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-030",
+   "q": "letting a model deliberate longer for harder questions",
+   "style": "concept",
+   "topic": "reason",
+   "kind": "page",
+   "expected": [
+    "test-time-compute",
+    "reasoning-models"
+   ],
+   "expectedTool": null,
+   "top": "(weak) model-cards",
+   "solid": false,
+   "score": 28,
+   "top5": [
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference",
+    "process-reward-model"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference",
+    "process-reward-model",
+    "world-models",
+    "outcome-reward-model",
+    "instruction-tuning"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-031",
+   "q": "sample a bunch of solutions and go with the consensus",
+   "style": "concept",
+   "topic": "reason",
+   "kind": "page",
+   "expected": [
+    "self-consistency"
+   ],
+   "expectedTool": null,
+   "top": "(weak) best-of-n-sampling",
+   "solid": false,
+   "score": 2,
+   "top5": [
+    "best-of-n-sampling",
+    "sharepoint"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "best-of-n-sampling",
+    "sharepoint"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-032",
+   "q": "a scorer that checks each intermediate step",
+   "style": "concept",
+   "topic": "reason",
+   "kind": "page",
+   "expected": [
+    "process-reward-model"
+   ],
+   "expectedTool": null,
+   "top": "(weak) chain-of-thought",
+   "solid": false,
+   "score": 22,
+   "top5": [
+    "chain-of-thought",
+    "process-reward-model",
+    "prm-vs-orm",
+    "constrained-decoding",
+    "reasoning-models"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "chain-of-thought",
+    "process-reward-model",
+    "prm-vs-orm",
+    "constrained-decoding",
+    "reasoning-models",
+    "search-over-reasoning",
+    "a2a-protocol",
+    "ai-guardrails"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-033",
+   "q": "training with rewards that come from automatic checkers",
+   "style": "concept",
+   "topic": "reason",
+   "kind": "page",
+   "expected": [
+    "reinforcement-learning-for-reasoning"
+   ],
+   "expectedTool": null,
+   "top": "(weak) reinforcement-learning-for-reasoning",
+   "solid": false,
+   "score": 17,
+   "top5": [
+    "reinforcement-learning-for-reasoning",
+    "distributed-training",
+    "gdpr-and-ai",
+    "fine-tuning",
+    "what-is-ai"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "reinforcement-learning-for-reasoning",
+    "distributed-training",
+    "gdpr-and-ai",
+    "fine-tuning",
+    "what-is-ai",
+    "dpo",
+    "scaling-laws",
+    "backpropagation-and-gradient-descent"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-034",
+   "q": "privacy of a model's inner deliberation",
+   "style": "concept",
+   "topic": "reason",
+   "kind": "page",
+   "expected": [
+    "reasoning-transparency"
+   ],
+   "expectedTool": null,
+   "top": "(weak) reasoning-models",
+   "solid": false,
+   "score": 44,
+   "top5": [
+    "reasoning-models",
+    "reasoning-vs-standard-models",
+    "small-language-models",
+    "world-models",
+    "model-cards"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "reasoning-models",
+    "reasoning-vs-standard-models",
+    "small-language-models",
+    "world-models",
+    "model-cards",
+    "model-drift-and-monitoring",
+    "model-apis",
+    "diffusion-models"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-035",
+   "q": "should i pick a deliberating model or a quick one",
+   "style": "concept",
+   "topic": "reason",
+   "kind": "page",
+   "expected": [
+    "reasoning-vs-standard-models",
+    "reasoning-models"
+   ],
+   "expectedTool": null,
+   "top": "(weak) model-apis",
+   "solid": false,
+   "score": 30,
+   "top5": [
+    "model-apis",
+    "model-cards",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference",
+    "process-reward-model"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "model-apis",
+    "model-cards",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference",
+    "process-reward-model",
+    "world-models",
+    "outcome-reward-model",
+    "instruction-tuning"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-036",
+   "q": "get typed objects back from an llm call",
+   "style": "implementation",
+   "topic": "struct",
+   "kind": "page",
+   "expected": [
+    "structured-outputs",
+    "constrained-decoding"
+   ],
+   "expectedTool": null,
+   "top": "large-language-models",
+   "solid": true,
+   "score": 27,
+   "top5": [
+    "llm-observability",
+    "llm-as-a-judge",
+    "large-language-models",
+    "llm-cost-optimization",
+    "owasp-llm-top-10"
+   ],
+   "learn": [
+    "ai-hallucinations",
+    "fine-tuning"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident wrong page: large-language-models",
+   "pathOk": null,
+   "rankIds": [
+    "llm-observability",
+    "llm-as-a-judge",
+    "large-language-models",
+    "llm-cost-optimization",
+    "owasp-llm-top-10",
+    "structured-outputs",
+    "llm-benchmarks-vs-task-evals",
+    "local-llm-runtimes"
+   ],
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-037",
+   "q": "force an llm to stay inside a json schema",
+   "style": "implementation",
+   "topic": "struct",
+   "kind": "page",
+   "expected": [
+    "constrained-decoding",
+    "structured-outputs",
+    "json-schema"
+   ],
+   "expectedTool": null,
+   "top": "json-schema",
+   "solid": true,
+   "score": 104,
+   "top5": [
+    "json-schema",
+    "json-validation",
+    "structured-outputs",
+    "what-is-json",
+    "llm-observability"
+   ],
+   "learn": [
+    "json-validation",
+    "structured-outputs",
+    "constrained-decoding",
+    "function-calling",
+    "agent-tools"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "json-schema",
+    "json-validation",
+    "structured-outputs",
+    "what-is-json",
+    "llm-observability",
+    "llm-as-a-judge",
+    "large-language-models",
+    "constrained-decoding"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-038",
+   "q": "how do sampling knobs shape the text a model writes",
+   "style": "concept",
+   "topic": "struct",
+   "kind": "page",
+   "expected": [
+    "sampling-and-decoding"
+   ],
+   "expectedTool": null,
+   "top": "(weak) large-language-models",
+   "solid": false,
+   "score": 28,
+   "top5": [
+    "large-language-models",
+    "model-cards",
+    "model-apis",
+    "best-of-n-sampling",
+    "model-drift-and-monitoring"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "large-language-models",
+    "model-cards",
+    "model-apis",
+    "best-of-n-sampling",
+    "model-drift-and-monitoring",
+    "sampling-and-decoding",
+    "model-serving-and-inference",
+    "process-reward-model"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-039",
+   "q": "how do i word my request so the answer comes out right",
+   "style": "implementation",
+   "topic": "prompt",
+   "kind": "page",
+   "expected": [
+    "prompt-engineering",
+    "common-prompting-mistakes"
+   ],
+   "expectedTool": null,
+   "top": "(weak) gsm8k-and-math-benchmarks",
+   "solid": false,
+   "score": 11,
+   "top5": [
+    "gsm8k-and-math-benchmarks",
+    "outcome-reward-model",
+    "rag-evaluation",
+    "typescript-api-client-types",
+    "gdpr-and-ai"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "gsm8k-and-math-benchmarks",
+    "outcome-reward-model",
+    "rag-evaluation",
+    "typescript-api-client-types",
+    "gdpr-and-ai",
+    "github",
+    "benchmark-contamination",
+    "self-consistency"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-040",
+   "q": "setting the personality and rules for an assistant",
+   "style": "implementation",
+   "topic": "prompt",
+   "kind": "page",
+   "expected": [
+    "system-prompts"
+   ],
+   "expectedTool": null,
+   "top": "(weak) ai-agent-vs-chatbot",
+   "solid": false,
+   "score": 18,
+   "top5": [
+    "ai-agent-vs-chatbot",
+    "system-prompts",
+    "speech-ai",
+    "what-is-ai",
+    "thinking-budgets"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "ai-agent-vs-chatbot",
+    "system-prompts",
+    "speech-ai",
+    "what-is-ai",
+    "thinking-budgets",
+    "humaneval",
+    "instruction-tuning",
+    "sampling-and-decoding"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-041",
+   "q": "why do my prompts work on some inputs and fail on others",
+   "style": "troubleshooting",
+   "topic": "prompt",
+   "kind": "page",
+   "expected": [
+    "common-prompting-mistakes",
+    "prompt-engineering",
+    "ai-evaluation"
+   ],
+   "expectedTool": null,
+   "top": "(weak) prompt-engineering",
+   "solid": false,
+   "score": 34,
+   "top5": [
+    "prompt-engineering",
+    "system-prompts",
+    "prompt-caching",
+    "prompt-injection",
+    "common-prompting-mistakes"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "prompt-engineering",
+    "system-prompts",
+    "prompt-caching",
+    "prompt-injection",
+    "common-prompting-mistakes",
+    "dspy",
+    "chain-of-thought",
+    "context-engineering"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-042",
+   "q": "let a model answer from the files on my drive",
+   "style": "implementation",
+   "topic": "rag",
+   "kind": "page",
+   "expected": [
+    "rag"
+   ],
+   "expectedTool": null,
+   "top": "(weak) model-cards",
+   "solid": false,
+   "score": 28,
+   "top5": [
+    "model-cards",
+    "model-apis",
+    "outcome-reward-model",
+    "document-understanding-ai",
+    "model-drift-and-monitoring"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "model-cards",
+    "model-apis",
+    "outcome-reward-model",
+    "document-understanding-ai",
+    "model-drift-and-monitoring",
+    "process-reward-model",
+    "model-serving-and-inference",
+    "world-models"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-043",
+   "q": "splitting large documents sensibly before indexing",
+   "style": "implementation",
+   "topic": "rag",
+   "kind": "page",
+   "expected": [
+    "chunking"
+   ],
+   "expectedTool": null,
+   "top": "(weak) document-understanding-ai",
+   "solid": false,
+   "score": 26,
+   "top5": [
+    "document-understanding-ai",
+    "chunking",
+    "large-language-models",
+    "mongodb",
+    "ai-privacy-and-security"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "document-understanding-ai",
+    "chunking",
+    "large-language-models",
+    "mongodb",
+    "ai-privacy-and-security",
+    "sql-vs-nosql",
+    "sharepoint",
+    "databases-for-ai-apps"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-044",
+   "q": "numbers that capture the meaning of a sentence",
+   "style": "concept",
+   "topic": "rag",
+   "kind": "page",
+   "expected": [
+    "embeddings"
+   ],
+   "expectedTool": null,
+   "top": "(weak) embeddings",
+   "solid": false,
+   "score": 10,
+   "top5": [
+    "embeddings",
+    "what-is-json",
+    "llm-benchmarks-vs-task-evals",
+    "quantization"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "embeddings",
+    "what-is-json",
+    "llm-benchmarks-vs-task-evals",
+    "quantization"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-045",
+   "q": "a database built for finding nearest vectors",
+   "style": "implementation",
+   "topic": "rag",
+   "kind": "page",
+   "expected": [
+    "vector-databases"
+   ],
+   "expectedTool": null,
+   "top": "vector-databases",
+   "solid": true,
+   "score": 66,
+   "top5": [
+    "vector-databases",
+    "vector-database-vs-traditional-database",
+    "embeddings",
+    "choosing-a-vector-store",
+    "databases-for-ai-apps"
+   ],
+   "learn": [
+    "vector-database-vs-traditional-database",
+    "embeddings",
+    "rag"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "vector-databases",
+    "vector-database-vs-traditional-database",
+    "embeddings",
+    "choosing-a-vector-store",
+    "databases-for-ai-apps",
+    "pgvector",
+    "contrastive-learning-clip",
+    "postgresql"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-046",
+   "q": "use my existing postgres for similarity search",
+   "style": "implementation",
+   "topic": "rag",
+   "kind": "page",
+   "expected": [
+    "pgvector",
+    "postgresql-for-ai-apps"
+   ],
+   "expectedTool": null,
+   "top": "vector-databases",
+   "solid": true,
+   "score": 69,
+   "top5": [
+    "vector-databases",
+    "postgresql",
+    "postgresql-for-ai-apps",
+    "pgvector",
+    "sql"
+   ],
+   "learn": [
+    "vector-database-vs-traditional-database",
+    "embeddings",
+    "rag",
+    "postgresql",
+    "postgresql-for-ai-apps"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident wrong page: vector-databases",
+   "pathOk": null,
+   "rankIds": [
+    "vector-databases",
+    "postgresql",
+    "postgresql-for-ai-apps",
+    "pgvector",
+    "sql",
+    "search-over-reasoning",
+    "sql-vs-nosql",
+    "hybrid-search-and-reranking"
+   ],
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-047",
+   "q": "good documents indexed but answers still miss the point",
+   "style": "troubleshooting",
+   "topic": "rag",
+   "kind": "page",
+   "expected": [
+    "rag-evaluation",
+    "hybrid-search-and-reranking",
+    "chunking"
+   ],
+   "expectedTool": null,
+   "top": "(weak) document-understanding-ai",
+   "solid": false,
+   "score": 26,
+   "top5": [
+    "document-understanding-ai",
+    "chunking",
+    "mongodb",
+    "how-to-reduce-hallucinations",
+    "sql-vs-nosql"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "document-understanding-ai",
+    "chunking",
+    "mongodb",
+    "how-to-reduce-hallucinations",
+    "sql-vs-nosql",
+    "sharepoint",
+    "common-prompting-mistakes",
+    "databases-for-ai-apps"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-048",
+   "q": "retrieval that follows links between concepts",
+   "style": "concept",
+   "topic": "rag",
+   "kind": "page",
+   "expected": [
+    "graph-rag"
+   ],
+   "expectedTool": null,
+   "top": "(weak) agentic-rag",
+   "solid": false,
+   "score": 44,
+   "top5": [
+    "agentic-rag",
+    "rag-evaluation",
+    "rag",
+    "rag-with-python",
+    "rag-frameworks"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "agentic-rag",
+    "rag-evaluation",
+    "rag",
+    "rag-with-python",
+    "rag-frameworks",
+    "graph-rag",
+    "rag-vs-fine-tuning",
+    "chunking"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-049",
+   "q": "measuring whether my retrieval is any good",
+   "style": "implementation",
+   "topic": "rag",
+   "kind": "page",
+   "expected": [
+    "rag-evaluation"
+   ],
+   "expectedTool": null,
+   "top": "ai-evaluation",
+   "solid": true,
+   "score": 50,
+   "top5": [
+    "ai-evaluation",
+    "agentic-rag",
+    "rag-evaluation",
+    "rag",
+    "rag-with-python"
+   ],
+   "learn": [
+    "rag",
+    "how-to-reduce-hallucinations",
+    "llm-benchmarks-vs-task-evals"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident wrong page: ai-evaluation",
+   "pathOk": null,
+   "rankIds": [
+    "ai-evaluation",
+    "agentic-rag",
+    "rag-evaluation",
+    "rag",
+    "rag-with-python",
+    "rag-frameworks",
+    "graph-rag",
+    "rag-vs-fine-tuning"
+   ],
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-050",
+   "q": "assistant that can look through my mailbox and summarise it",
+   "style": "integration",
+   "topic": "agent",
+   "kind": "page",
+   "expected": [
+    "gmail-for-ai-agents",
+    "connecting-agents-to-apps"
+   ],
+   "expectedTool": null,
+   "top": "(weak) ai-agent-vs-chatbot",
+   "solid": false,
+   "score": 18,
+   "top5": [
+    "ai-agent-vs-chatbot",
+    "system-prompts",
+    "speech-ai",
+    "humaneval",
+    "instruction-tuning"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": false,
+   "rankIds": [
+    "ai-agent-vs-chatbot",
+    "system-prompts",
+    "speech-ai",
+    "humaneval",
+    "instruction-tuning",
+    "recurrent-neural-networks",
+    "backpropagation-and-gradient-descent",
+    "computer-use-agents"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-051",
+   "q": "let a bot create tickets in our issue tracker",
+   "style": "integration",
+   "topic": "agent",
+   "kind": "page",
+   "expected": [
+    "connecting-agents-to-apps",
+    "agent-tools",
+    "function-calling"
+   ],
+   "expectedTool": null,
+   "top": "(weak) teams-development",
+   "solid": false,
+   "score": 6,
+   "top5": [
+    "teams-development",
+    "github",
+    "ai-governance",
+    "build-spfx-web-part",
+    "mlflow"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "teams-development",
+    "github",
+    "ai-governance",
+    "build-spfx-web-part",
+    "mlflow",
+    "pgvector",
+    "prompt-engineering",
+    "generative-ai"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-052",
+   "q": "which scopes does an assistant need to read my calendar",
+   "style": "integration",
+   "topic": "agent",
+   "kind": "page",
+   "expected": [
+    "oauth-for-ai-agents",
+    "integration-permissions",
+    "connecting-agents-to-apps"
+   ],
+   "expectedTool": null,
+   "top": "(weak) ai-agent-vs-chatbot",
+   "solid": false,
+   "score": 18,
+   "top5": [
+    "ai-agent-vs-chatbot",
+    "rag-frameworks",
+    "vector-database-vs-traditional-database",
+    "gpus-and-ai-accelerators",
+    "databases-for-ai-apps"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "ai-agent-vs-chatbot",
+    "rag-frameworks",
+    "vector-database-vs-traditional-database",
+    "gpus-and-ai-accelerators",
+    "databases-for-ai-apps",
+    "microsoft-graph",
+    "integration-permissions",
+    "vision-language-models"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-053",
+   "q": "what could go wrong if an assistant can send emails by itself",
+   "style": "security",
+   "topic": "agent",
+   "kind": "page",
+   "expected": [
+    "integration-permissions",
+    "prompt-injection",
+    "gmail-for-ai-agents"
+   ],
+   "expectedTool": null,
+   "top": "(weak) ai-agent-vs-chatbot",
+   "solid": false,
+   "score": 18,
+   "top5": [
+    "ai-agent-vs-chatbot",
+    "system-prompts",
+    "speech-ai",
+    "ai-hallucinations",
+    "common-prompting-mistakes"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "ai-agent-vs-chatbot",
+    "system-prompts",
+    "speech-ai",
+    "ai-hallucinations",
+    "common-prompting-mistakes",
+    "gdpr-and-ai",
+    "humaneval",
+    "instruction-tuning"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-054",
+   "q": "software that plans acts and checks its own progress",
+   "style": "concept",
+   "topic": "agent",
+   "kind": "page",
+   "expected": [
+    "ai-agents",
+    "react-agent-pattern",
+    "agent-planning"
+   ],
+   "expectedTool": null,
+   "top": "(weak) local-ai",
+   "solid": false,
+   "score": 10,
+   "top5": [
+    "local-ai",
+    "swe-bench",
+    "agent-planning",
+    "ai-drug-discovery",
+    "llm-benchmarks-vs-task-evals"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "local-ai",
+    "swe-bench",
+    "agent-planning",
+    "ai-drug-discovery",
+    "llm-benchmarks-vs-task-evals",
+    "object-detection",
+    "ai-agent-vs-chatbot",
+    "ai-guardrails"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-055",
+   "q": "how to coordinate a researcher agent and a writer agent",
+   "style": "architecture",
+   "topic": "agent",
+   "kind": "page",
+   "expected": [
+    "multi-agent-systems",
+    "agentic-workflows"
+   ],
+   "expectedTool": null,
+   "top": "(weak) ai-agent-vs-chatbot",
+   "solid": false,
+   "score": 35,
+   "top5": [
+    "ai-agent-vs-chatbot",
+    "agent-protocol-landscape",
+    "multi-agent-systems",
+    "choosing-an-agent-framework",
+    "agent-frameworks-compared"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "ai-agent-vs-chatbot",
+    "agent-protocol-landscape",
+    "multi-agent-systems",
+    "choosing-an-agent-framework",
+    "agent-frameworks-compared",
+    "ai-agents",
+    "agent-evaluation",
+    "a2a-protocol"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-056",
+   "q": "giving a model the ability to run functions",
+   "style": "concept",
+   "topic": "agent",
+   "kind": "page",
+   "expected": [
+    "function-calling",
+    "agent-tools"
+   ],
+   "expectedTool": null,
+   "top": "(weak) model-cards",
+   "solid": false,
+   "score": 28,
+   "top5": [
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "process-reward-model",
+    "model-serving-and-inference"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "process-reward-model",
+    "model-serving-and-inference",
+    "world-models",
+    "outcome-reward-model",
+    "instruction-tuning"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-057",
+   "q": "keeping a long conversation history manageable for an agent",
+   "style": "architecture",
+   "topic": "agent",
+   "kind": "page",
+   "expected": [
+    "agent-memory",
+    "context-windows",
+    "context-engineering"
+   ],
+   "expectedTool": null,
+   "top": "(weak) ai-agent-vs-chatbot",
+   "solid": false,
+   "score": 39,
+   "top5": [
+    "ai-agent-vs-chatbot",
+    "agent-protocol-landscape",
+    "multi-agent-systems",
+    "choosing-an-agent-framework",
+    "agent-memory"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "ai-agent-vs-chatbot",
+    "agent-protocol-landscape",
+    "multi-agent-systems",
+    "choosing-an-agent-framework",
+    "agent-memory",
+    "agent-frameworks-compared",
+    "ai-agents",
+    "agent-evaluation"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-058",
+   "q": "my assistant calls the wrong tool half the time",
+   "style": "troubleshooting",
+   "topic": "agent",
+   "kind": "page",
+   "expected": [
+    "agent-tools",
+    "function-calling",
+    "agent-evaluation"
+   ],
+   "expectedTool": null,
+   "top": "(weak) test-time-compute",
+   "solid": false,
+   "score": 26,
+   "top5": [
+    "test-time-compute",
+    "function-calling",
+    "agent-tools",
+    "ai-agent-vs-chatbot",
+    "agent-evaluation"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "test-time-compute",
+    "function-calling",
+    "agent-tools",
+    "ai-agent-vs-chatbot",
+    "agent-evaluation",
+    "function-calling-vs-mcp",
+    "mcp-security",
+    "react-agent-pattern"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-059",
+   "q": "pick a library for building agent loops",
+   "style": "what-to-use",
+   "topic": "agent",
+   "kind": "page",
+   "expected": [
+    "agent-frameworks-compared",
+    "choosing-an-agent-framework"
+   ],
+   "expectedTool": null,
+   "top": "react-agent-pattern",
+   "solid": true,
+   "score": 58,
+   "top5": [
+    "react-agent-pattern",
+    "ai-agents",
+    "ai-agent-vs-chatbot",
+    "agent-protocol-landscape",
+    "agent-planning"
+   ],
+   "learn": [
+    "ai-agents",
+    "agent-planning",
+    "agentic-workflows",
+    "agent-frameworks-compared",
+    "agent-tools"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident wrong page: react-agent-pattern",
+   "pathOk": null,
+   "rankIds": [
+    "react-agent-pattern",
+    "ai-agents",
+    "ai-agent-vs-chatbot",
+    "agent-protocol-landscape",
+    "agent-planning",
+    "choosing-an-agent-framework",
+    "multi-agent-systems",
+    "agentic-workflows"
+   ],
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-060",
+   "q": "protocol that lets assistants plug into external services",
+   "style": "concept",
+   "topic": "mcp",
+   "kind": "page",
+   "expected": [
+    "mcp"
+   ],
+   "expectedTool": null,
+   "top": "(weak) mcp",
+   "solid": false,
+   "score": 22,
+   "top5": [
+    "mcp",
+    "a2a-protocol",
+    "agent-protocol-landscape",
+    "connecting-agents-to-apps",
+    "calling-ai-apis-with-javascript"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "mcp",
+    "a2a-protocol",
+    "agent-protocol-landscape",
+    "connecting-agents-to-apps",
+    "calling-ai-apis-with-javascript",
+    "aws-fundamentals",
+    "mcp-vs-api",
+    "function-calling-vs-mcp"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-061",
+   "q": "building a server that offers tools to ai apps",
+   "style": "concept",
+   "topic": "mcp",
+   "kind": "page",
+   "expected": [
+    "mcp-servers-and-clients"
+   ],
+   "expectedTool": null,
+   "top": "agent-tools",
+   "solid": true,
+   "score": 47,
+   "top5": [
+    "ai-governance",
+    "agent-tools",
+    "eu-ai-act",
+    "nist-ai-rmf",
+    "ai-agents"
+   ],
+   "learn": [
+    "ai-agents",
+    "ai-privacy-and-security",
+    "function-calling-vs-mcp",
+    "function-calling",
+    "mcp"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident wrong page: agent-tools",
+   "pathOk": null,
+   "rankIds": [
+    "ai-governance",
+    "agent-tools",
+    "eu-ai-act",
+    "nist-ai-rmf",
+    "ai-agents",
+    "local-ai",
+    "ai-privacy-and-security",
+    "databases-for-ai-apps"
+   ],
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-062",
+   "q": "could a connected tool server steal my data",
+   "style": "security",
+   "topic": "mcp",
+   "kind": "page",
+   "expected": [
+    "mcp-security"
+   ],
+   "expectedTool": null,
+   "top": "mcp-security",
+   "solid": true,
+   "score": 62,
+   "top5": [
+    "mcp-security",
+    "gdpr-and-ai",
+    "ai-privacy-and-security",
+    "function-calling",
+    "agent-tools"
+   ],
+   "learn": [
+    "ai-privacy-and-security",
+    "agent-tools",
+    "mcp-servers-and-clients",
+    "mcp",
+    "prompt-injection"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "mcp-security",
+    "gdpr-and-ai",
+    "ai-privacy-and-security",
+    "function-calling",
+    "agent-tools",
+    "function-calling-vs-mcp",
+    "distributed-training",
+    "python-data-for-ai"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-063",
+   "q": "protocol for agents built by different companies to cooperate",
+   "style": "concept",
+   "topic": "a2a",
+   "kind": "page",
+   "expected": [
+    "a2a-protocol",
+    "agent-protocol-landscape"
+   ],
+   "expectedTool": null,
+   "top": "(weak) agent-protocol-landscape",
+   "solid": false,
+   "score": 46,
+   "top5": [
+    "agent-protocol-landscape",
+    "a2a-protocol",
+    "openai-agents-sdk",
+    "multi-agent-systems",
+    "agent-frameworks-compared"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "agent-protocol-landscape",
+    "a2a-protocol",
+    "openai-agents-sdk",
+    "multi-agent-systems",
+    "agent-frameworks-compared",
+    "gmail-for-ai-agents",
+    "choosing-an-agent-framework",
+    "ai-agents"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-064",
+   "q": "send a prompt to a hosted model with the python sdk",
+   "style": "implementation",
+   "topic": "python",
+   "kind": "page",
+   "expected": [
+    "calling-ai-apis-with-python"
+   ],
+   "expectedTool": null,
+   "top": "python",
+   "solid": true,
+   "score": 46,
+   "top5": [
+    "calling-ai-apis-with-python",
+    "python",
+    "openai-agents-sdk",
+    "rag-with-python",
+    "python-for-ai"
+   ],
+   "learn": [
+    "calling-ai-apis-with-python",
+    "python-for-ai"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident wrong page: python",
+   "pathOk": null,
+   "rankIds": [
+    "calling-ai-apis-with-python",
+    "python",
+    "openai-agents-sdk",
+    "rag-with-python",
+    "python-for-ai",
+    "model-apis",
+    "ai-sdks",
+    "python-data-for-ai"
+   ],
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-065",
+   "q": "prepare tabular data for an llm in python",
+   "style": "implementation",
+   "topic": "python",
+   "kind": "page",
+   "expected": [
+    "python-data-for-ai"
+   ],
+   "expectedTool": null,
+   "top": "python",
+   "solid": true,
+   "score": 47,
+   "top5": [
+    "python",
+    "python-data-for-ai",
+    "calling-ai-apis-with-python",
+    "python-for-ai",
+    "rag-with-python"
+   ],
+   "learn": [
+    "calling-ai-apis-with-python",
+    "python-for-ai",
+    "large-language-models"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident wrong page: python",
+   "pathOk": null,
+   "rankIds": [
+    "python",
+    "python-data-for-ai",
+    "calling-ai-apis-with-python",
+    "python-for-ai",
+    "rag-with-python",
+    "python-ai-libraries",
+    "llm-observability",
+    "gdpr-and-ai"
+   ],
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-066",
+   "q": "browser app talking to a model through my own backend",
+   "style": "implementation",
+   "topic": "js",
+   "kind": "page",
+   "expected": [
+    "calling-ai-apis-with-javascript",
+    "nodejs-for-ai",
+    "api-keys"
+   ],
+   "expectedTool": null,
+   "top": "(weak) model-cards",
+   "solid": false,
+   "score": 28,
+   "top5": [
+    "model-cards",
+    "model-apis",
+    "frontend-and-backend",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "model-cards",
+    "model-apis",
+    "frontend-and-backend",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference",
+    "process-reward-model",
+    "world-models",
+    "javascript-for-ai"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-067",
+   "q": "make my api client type safe",
+   "style": "implementation",
+   "topic": "ts",
+   "kind": "page",
+   "expected": [
+    "typescript-api-client-types",
+    "typescript-for-ai"
+   ],
+   "expectedTool": null,
+   "top": "(weak) typescript-api-client-types",
+   "solid": false,
+   "score": 54,
+   "top5": [
+    "typescript-api-client-types",
+    "api-keys",
+    "what-is-an-api",
+    "mcp-vs-api",
+    "framework-vs-direct-api"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "typescript-api-client-types",
+    "api-keys",
+    "what-is-an-api",
+    "mcp-vs-api",
+    "framework-vs-direct-api",
+    "api-authentication",
+    "model-apis",
+    "microsoft-graph"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-068",
+   "q": "ui components for a chat assistant",
+   "style": "implementation",
+   "topic": "react",
+   "kind": "page",
+   "expected": [
+    "react-ai-interfaces",
+    "react-chatbot-state"
+   ],
+   "expectedTool": null,
+   "top": "(weak) streaming-ai-responses",
+   "solid": false,
+   "score": 23,
+   "top5": [
+    "streaming-ai-responses",
+    "react-ai-interfaces",
+    "ai-agent-vs-chatbot",
+    "react-chatbot-state",
+    "instruction-tuning"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "streaming-ai-responses",
+    "react-ai-interfaces",
+    "ai-agent-vs-chatbot",
+    "react-chatbot-state",
+    "instruction-tuning",
+    "model-apis",
+    "postgresql-for-ai-apps",
+    "nextjs"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-069",
+   "q": "run a model proxy on express",
+   "style": "implementation",
+   "topic": "node",
+   "kind": "page",
+   "expected": [
+    "nodejs-for-ai",
+    "express"
+   ],
+   "expectedTool": null,
+   "top": "express",
+   "solid": true,
+   "score": 52,
+   "top5": [
+    "express",
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference"
+   ],
+   "learn": [
+    "nodejs"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "express",
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference",
+    "process-reward-model",
+    "world-models",
+    "reward-hacking"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-070",
+   "q": "how do two programs talk over http",
+   "style": "concept",
+   "topic": "api",
+   "kind": "page",
+   "expected": [
+    "what-is-an-api",
+    "rest-apis"
+   ],
+   "expectedTool": null,
+   "top": "(weak) calling-ai-apis-with-python",
+   "solid": false,
+   "score": 7,
+   "top5": [
+    "calling-ai-apis-with-python",
+    "rest-apis",
+    "express",
+    "mcp-servers-and-clients",
+    "model-apis"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "calling-ai-apis-with-python",
+    "rest-apis",
+    "express",
+    "mcp-servers-and-clients",
+    "model-apis",
+    "python-ai-libraries",
+    "what-is-an-api",
+    "a2a-protocol"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-071",
+   "q": "querying exactly the fields i need from an api",
+   "style": "concept",
+   "topic": "api",
+   "kind": "page",
+   "expected": [
+    "graphql",
+    "rest-vs-graphql"
+   ],
+   "expectedTool": null,
+   "top": "(weak) api-keys",
+   "solid": false,
+   "score": 34,
+   "top5": [
+    "api-keys",
+    "mcp-vs-api",
+    "typescript-api-client-types",
+    "what-is-an-api",
+    "framework-vs-direct-api"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "api-keys",
+    "mcp-vs-api",
+    "typescript-api-client-types",
+    "what-is-an-api",
+    "framework-vs-direct-api",
+    "api-authentication",
+    "model-apis",
+    "microsoft-graph"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-072",
+   "q": "where do i put credentials so they do not leak into git",
+   "style": "security",
+   "topic": "api",
+   "kind": "page",
+   "expected": [
+    "environment-variables",
+    "api-keys"
+   ],
+   "expectedTool": null,
+   "top": "git",
+   "solid": true,
+   "score": 54,
+   "top5": [
+    "git",
+    "github",
+    "c2pa-content-provenance",
+    "environment-variables",
+    "api-keys"
+   ],
+   "learn": [
+    "github",
+    "environment-variables"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident wrong page: git",
+   "pathOk": null,
+   "rankIds": [
+    "git",
+    "github",
+    "c2pa-content-provenance",
+    "environment-variables",
+    "api-keys",
+    "ai-privacy-and-security",
+    "cors",
+    "agent-tools"
+   ],
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-073",
+   "q": "login with google or microsoft for my web app",
+   "style": "security",
+   "topic": "api",
+   "kind": "page",
+   "expected": [
+    "openid-connect",
+    "oauth"
+   ],
+   "expectedTool": null,
+   "top": "(weak) build-spfx-web-part",
+   "solid": false,
+   "score": 39,
+   "top5": [
+    "build-spfx-web-part",
+    "microsoft-graph",
+    "microsoft-365",
+    "microsoft-entra-id",
+    "gcp-fundamentals"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "build-spfx-web-part",
+    "microsoft-graph",
+    "microsoft-365",
+    "microsoft-entra-id",
+    "gcp-fundamentals",
+    "teams-development",
+    "azure-fundamentals",
+    "autogen"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-074",
+   "q": "signed tokens that carry claims",
+   "style": "concept",
+   "topic": "api",
+   "kind": "page",
+   "expected": [
+    "json-web-tokens"
+   ],
+   "expectedTool": null,
+   "top": "tokens",
+   "solid": true,
+   "score": 34,
+   "top5": [
+    "tokens",
+    "json-web-tokens",
+    "streaming-ai-responses",
+    "reasoning-transparency",
+    "llm-cost-optimization"
+   ],
+   "learn": [
+    "context-windows"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident wrong page: tokens",
+   "pathOk": null,
+   "rankIds": [
+    "tokens",
+    "json-web-tokens",
+    "streaming-ai-responses",
+    "reasoning-transparency",
+    "llm-cost-optimization",
+    "model-apis",
+    "context-windows",
+    "chunking"
+   ],
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-075",
+   "q": "why does my browser refuse the response from another domain",
+   "style": "concept",
+   "topic": "api",
+   "kind": "page",
+   "expected": [
+    "cors"
+   ],
+   "expectedTool": null,
+   "top": "(weak) computer-use-agents",
+   "solid": false,
+   "score": 14,
+   "top5": [
+    "computer-use-agents",
+    "sim-to-real-transfer",
+    "cors",
+    "javascript-for-ai",
+    "typescript-api-client-types"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "computer-use-agents",
+    "sim-to-real-transfer",
+    "cors",
+    "javascript-for-ai",
+    "typescript-api-client-types",
+    "html-and-css",
+    "javascript",
+    "onnx-runtime"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-076",
+   "q": "server calls me when something happens",
+   "style": "concept",
+   "topic": "api",
+   "kind": "page",
+   "expected": [
+    "webhooks"
+   ],
+   "expectedTool": null,
+   "top": "webhooks",
+   "solid": true,
+   "score": 32,
+   "top5": [
+    "webhooks",
+    "mcp-servers-and-clients",
+    "model-serving-and-inference",
+    "nodejs-for-ai",
+    "frontend-and-backend"
+   ],
+   "learn": [
+    "api-keys",
+    "authentication-vs-authorization"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "webhooks",
+    "mcp-servers-and-clients",
+    "model-serving-and-inference",
+    "nodejs-for-ai",
+    "frontend-and-backend",
+    "mcp-security",
+    "function-calling-vs-mcp",
+    "llm-observability"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-077",
+   "q": "structured query language for relational data",
+   "style": "concept",
+   "topic": "db",
+   "kind": "page",
+   "expected": [
+    "sql"
+   ],
+   "expectedTool": null,
+   "top": "sql",
+   "solid": true,
+   "score": 77,
+   "top5": [
+    "sql",
+    "gdpr-and-ai",
+    "structured-outputs",
+    "small-language-models",
+    "vision-language-action-models"
+   ],
+   "learn": [
+    "postgresql",
+    "databases-for-ai-apps",
+    "sql-vs-nosql",
+    "prisma-and-orms",
+    "mysql"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "sql",
+    "gdpr-and-ai",
+    "structured-outputs",
+    "small-language-models",
+    "vision-language-action-models",
+    "ai-privacy-and-security",
+    "structured-output-methods-compared",
+    "go-language"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-078",
+   "q": "document store or relational tables for flexible records",
+   "style": "what-to-use",
+   "topic": "db",
+   "kind": "page",
+   "expected": [
+    "sql-vs-nosql",
+    "mongodb"
+   ],
+   "expectedTool": null,
+   "top": "(weak) document-understanding-ai",
+   "solid": false,
+   "score": 24,
+   "top5": [
+    "document-understanding-ai",
+    "choosing-a-vector-store",
+    "mongodb",
+    "sql-vs-nosql",
+    "postgresql"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "document-understanding-ai",
+    "choosing-a-vector-store",
+    "mongodb",
+    "sql-vs-nosql",
+    "postgresql",
+    "databases-for-ai-apps",
+    "sharepoint",
+    "api-keys"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-079",
+   "q": "lightweight embedded database",
+   "style": "what-to-use",
+   "topic": "db",
+   "kind": "page",
+   "expected": [
+    "sqlite"
+   ],
+   "expectedTool": null,
+   "top": "sqlite",
+   "solid": true,
+   "score": 27,
+   "top5": [
+    "vector-database-vs-traditional-database",
+    "sqlite",
+    "databases-for-ai-apps",
+    "vector-databases",
+    "choosing-a-vector-store"
+   ],
+   "learn": [
+    "databases-for-ai-apps",
+    "postgresql",
+    "mysql",
+    "prisma-and-orms"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "vector-database-vs-traditional-database",
+    "sqlite",
+    "databases-for-ai-apps",
+    "vector-databases",
+    "choosing-a-vector-store",
+    "postgresql",
+    "mongodb",
+    "alphafold"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-080",
+   "q": "in memory key value store",
+   "style": "concept",
+   "topic": "db",
+   "kind": "page",
+   "expected": [
+    "redis"
+   ],
+   "expectedTool": null,
+   "top": "(weak) agent-memory",
+   "solid": false,
+   "score": 38,
+   "top5": [
+    "agent-memory",
+    "api-keys",
+    "choosing-a-vector-store",
+    "redis",
+    "kv-cache"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "agent-memory",
+    "api-keys",
+    "choosing-a-vector-store",
+    "redis",
+    "kv-cache",
+    "flash-attention",
+    "gpus-and-ai-accelerators",
+    "deep-q-networks"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-081",
+   "q": "mapping database rows to objects in code",
+   "style": "concept",
+   "topic": "db",
+   "kind": "page",
+   "expected": [
+    "prisma-and-orms"
+   ],
+   "expectedTool": null,
+   "top": "(weak) code-execution-sandboxing",
+   "solid": false,
+   "score": 34,
+   "top5": [
+    "code-execution-sandboxing",
+    "vector-database-vs-traditional-database",
+    "databases-for-ai-apps",
+    "humaneval",
+    "vector-databases"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "code-execution-sandboxing",
+    "vector-database-vs-traditional-database",
+    "databases-for-ai-apps",
+    "humaneval",
+    "vector-databases",
+    "choosing-a-vector-store",
+    "postgresql",
+    "sqlite"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-082",
+   "q": "what can i host on amazon web services",
+   "style": "beginner",
+   "topic": "cloud",
+   "kind": "page",
+   "expected": [
+    "aws-fundamentals"
+   ],
+   "expectedTool": null,
+   "top": "aws-fundamentals",
+   "solid": true,
+   "score": 26,
+   "top5": [
+    "build-spfx-web-part",
+    "aws-fundamentals",
+    "json-web-tokens",
+    "calling-ai-apis-with-javascript",
+    "mcp-servers-and-clients"
+   ],
+   "learn": [
+    "azure-fundamentals",
+    "gcp-fundamentals",
+    "containers"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "build-spfx-web-part",
+    "aws-fundamentals",
+    "json-web-tokens",
+    "calling-ai-apis-with-javascript",
+    "mcp-servers-and-clients",
+    "sharepoint-framework",
+    "local-runtimes-compared",
+    "onnx-runtime"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-083",
+   "q": "microsoft cloud basics for a developer",
+   "style": "beginner",
+   "topic": "cloud",
+   "kind": "page",
+   "expected": [
+    "azure-fundamentals"
+   ],
+   "expectedTool": null,
+   "top": "(weak) microsoft-graph",
+   "solid": false,
+   "score": 32,
+   "top5": [
+    "microsoft-graph",
+    "microsoft-365",
+    "gcp-fundamentals",
+    "local-ai-vs-cloud-ai",
+    "microsoft-entra-id"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "microsoft-graph",
+    "microsoft-365",
+    "gcp-fundamentals",
+    "local-ai-vs-cloud-ai",
+    "microsoft-entra-id",
+    "autogen",
+    "teams-development",
+    "power-platform"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-084",
+   "q": "googles cloud platform overview",
+   "style": "beginner",
+   "topic": "cloud",
+   "kind": "page",
+   "expected": [
+    "gcp-fundamentals"
+   ],
+   "expectedTool": null,
+   "top": "(weak) gcp-fundamentals",
+   "solid": false,
+   "score": 25,
+   "top5": [
+    "gcp-fundamentals",
+    "power-platform",
+    "local-ai-vs-cloud-ai",
+    "mlops",
+    "mlflow"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "gcp-fundamentals",
+    "power-platform",
+    "local-ai-vs-cloud-ai",
+    "mlops",
+    "mlflow",
+    "gpus-and-ai-accelerators",
+    "aws-fundamentals",
+    "mysql"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-085",
+   "q": "which cloud gives gpus for model hosting",
+   "style": "what-to-use",
+   "topic": "cloud",
+   "kind": "page",
+   "expected": [
+    "aws-fundamentals",
+    "azure-fundamentals",
+    "gcp-fundamentals",
+    "gpus-and-ai-accelerators"
+   ],
+   "expectedTool": null,
+   "top": "(weak) gpus-and-ai-accelerators",
+   "solid": false,
+   "score": 28,
+   "top5": [
+    "gpus-and-ai-accelerators",
+    "model-cards",
+    "model-serving-and-inference",
+    "model-apis",
+    "gcp-fundamentals"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "gpus-and-ai-accelerators",
+    "model-cards",
+    "model-serving-and-inference",
+    "model-apis",
+    "gcp-fundamentals",
+    "local-ai-vs-cloud-ai",
+    "model-drift-and-monitoring",
+    "process-reward-model"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-086",
+   "q": "wrap my app so it runs identically on any server",
+   "style": "beginner",
+   "topic": "devops",
+   "kind": "page",
+   "expected": [
+    "docker",
+    "containers"
+   ],
+   "expectedTool": null,
+   "top": "(weak) mcp-servers-and-clients",
+   "solid": false,
+   "score": 12,
+   "top5": [
+    "mcp-servers-and-clients",
+    "azure-fundamentals",
+    "nextjs",
+    "postgresql-for-ai-apps",
+    "microsoft-entra-id"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "mcp-servers-and-clients",
+    "azure-fundamentals",
+    "nextjs",
+    "postgresql-for-ai-apps",
+    "microsoft-entra-id",
+    "teams-development",
+    "model-serving-and-inference",
+    "frontend-and-backend"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-087",
+   "q": "keep track of changes to my code and collaborate",
+   "style": "beginner",
+   "topic": "devops",
+   "kind": "page",
+   "expected": [
+    "git",
+    "github"
+   ],
+   "expectedTool": null,
+   "top": "(weak) code-execution-sandboxing",
+   "solid": false,
+   "score": 34,
+   "top5": [
+    "code-execution-sandboxing",
+    "humaneval",
+    "power-platform",
+    "oauth",
+    "autogen"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "code-execution-sandboxing",
+    "humaneval",
+    "power-platform",
+    "oauth",
+    "autogen",
+    "agent-tools",
+    "github",
+    "reasoning-models"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-088",
+   "q": "run checks automatically whenever i push",
+   "style": "implementation",
+   "topic": "devops",
+   "kind": "page",
+   "expected": [
+    "cicd",
+    "github"
+   ],
+   "expectedTool": null,
+   "top": "(weak) llama-cpp",
+   "solid": false,
+   "score": 8,
+   "top5": [
+    "llama-cpp",
+    "local-ai",
+    "code-execution-sandboxing",
+    "gcp-fundamentals",
+    "local-ai-vs-cloud-ai"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "llama-cpp",
+    "local-ai",
+    "code-execution-sandboxing",
+    "gcp-fundamentals",
+    "local-ai-vs-cloud-ai",
+    "ollama",
+    "gpus-and-ai-accelerators",
+    "local-runtimes-compared"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-089",
+   "q": "my deployment keeps crashing and restarting in the cluster",
+   "style": "troubleshooting",
+   "topic": "devops",
+   "kind": "page",
+   "expected": [
+    "kubernetes",
+    "containers"
+   ],
+   "expectedTool": null,
+   "top": "(weak) kubernetes",
+   "solid": false,
+   "score": 14,
+   "top5": [
+    "kubernetes",
+    "mlops",
+    "ray",
+    "object-detection",
+    "onnx-runtime"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "kubernetes",
+    "mlops",
+    "ray",
+    "object-detection",
+    "onnx-runtime",
+    "cicd",
+    "model-serving-and-inference",
+    "local-runtimes-compared"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-090",
+   "q": "managing many containers across machines",
+   "style": "concept",
+   "topic": "devops",
+   "kind": "page",
+   "expected": [
+    "kubernetes"
+   ],
+   "expectedTool": null,
+   "top": "containers",
+   "solid": true,
+   "score": 32,
+   "top5": [
+    "containers",
+    "code-execution-sandboxing",
+    "mcp-security",
+    "kubernetes",
+    "llm-benchmarks-vs-task-evals"
+   ],
+   "learn": [
+    "azure-fundamentals",
+    "docker"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident wrong page: containers",
+   "pathOk": null,
+   "rankIds": [
+    "containers",
+    "code-execution-sandboxing",
+    "mcp-security",
+    "kubernetes",
+    "llm-benchmarks-vs-task-evals",
+    "context-engineering",
+    "diffusion-models",
+    "distributed-training"
+   ],
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-091",
+   "q": "team intranet platform from microsoft",
+   "style": "beginner",
+   "topic": "ms",
+   "kind": "page",
+   "expected": [
+    "sharepoint"
+   ],
+   "expectedTool": null,
+   "top": "(weak) microsoft-graph",
+   "solid": false,
+   "score": 32,
+   "top5": [
+    "microsoft-graph",
+    "power-platform",
+    "microsoft-365",
+    "microsoft-entra-id",
+    "autogen"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "microsoft-graph",
+    "power-platform",
+    "microsoft-365",
+    "microsoft-entra-id",
+    "autogen",
+    "teams-development",
+    "sharepoint",
+    "azure-fundamentals"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-092",
+   "q": "custom client side components for modern sharepoint pages",
+   "style": "implementation",
+   "topic": "ms",
+   "kind": "page",
+   "expected": [
+    "sharepoint-framework",
+    "build-spfx-web-part"
+   ],
+   "expectedTool": null,
+   "top": "sharepoint",
+   "solid": true,
+   "score": 70,
+   "top5": [
+    "sharepoint",
+    "sharepoint-framework",
+    "typescript-api-client-types",
+    "llm-benchmarks-vs-task-evals",
+    "build-spfx-web-part"
+   ],
+   "learn": [
+    "sharepoint-framework",
+    "build-spfx-web-part",
+    "microsoft-365"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident wrong page: sharepoint",
+   "pathOk": null,
+   "rankIds": [
+    "sharepoint",
+    "sharepoint-framework",
+    "typescript-api-client-types",
+    "llm-benchmarks-vs-task-evals",
+    "build-spfx-web-part",
+    "frontend-and-backend",
+    "mcp-servers-and-clients",
+    "typescript-for-ai"
+   ],
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-093",
+   "q": "fetch mail and files from a users microsoft account",
+   "style": "integration",
+   "topic": "ms",
+   "kind": "page",
+   "expected": [
+    "microsoft-graph"
+   ],
+   "expectedTool": null,
+   "top": "(weak) microsoft-graph",
+   "solid": false,
+   "score": 35,
+   "top5": [
+    "microsoft-graph",
+    "microsoft-365",
+    "document-understanding-ai",
+    "microsoft-entra-id",
+    "autogen"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "microsoft-graph",
+    "microsoft-365",
+    "document-understanding-ai",
+    "microsoft-entra-id",
+    "autogen",
+    "teams-development",
+    "sharepoint",
+    "mongodb"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-094",
+   "q": "microsofts identity platform for sign in and permissions",
+   "style": "concept",
+   "topic": "ms",
+   "kind": "page",
+   "expected": [
+    "microsoft-entra-id"
+   ],
+   "expectedTool": null,
+   "top": "(weak) integration-permissions",
+   "solid": false,
+   "score": 25,
+   "top5": [
+    "integration-permissions",
+    "power-platform",
+    "agent-tools",
+    "microsoft-graph",
+    "openid-connect"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "integration-permissions",
+    "power-platform",
+    "agent-tools",
+    "microsoft-graph",
+    "openid-connect",
+    "agent-protocol-landscape",
+    "aws-fundamentals",
+    "azure-fundamentals"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-095",
+   "q": "automate approvals without writing code",
+   "style": "implementation",
+   "topic": "ms",
+   "kind": "page",
+   "expected": [
+    "power-platform"
+   ],
+   "expectedTool": null,
+   "top": "(weak) code-execution-sandboxing",
+   "solid": false,
+   "score": 34,
+   "top5": [
+    "code-execution-sandboxing",
+    "power-platform",
+    "humaneval",
+    "oauth",
+    "agent-tools"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "code-execution-sandboxing",
+    "power-platform",
+    "humaneval",
+    "oauth",
+    "agent-tools",
+    "autogen",
+    "github",
+    "reasoning-models"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-096",
+   "q": "build an app that lives inside microsoft teams",
+   "style": "implementation",
+   "topic": "ms",
+   "kind": "page",
+   "expected": [
+    "teams-development"
+   ],
+   "expectedTool": null,
+   "top": "(weak) teams-development",
+   "solid": false,
+   "score": 67,
+   "top5": [
+    "teams-development",
+    "microsoft-365",
+    "microsoft-graph",
+    "build-spfx-web-part",
+    "microsoft-entra-id"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "teams-development",
+    "microsoft-365",
+    "microsoft-graph",
+    "build-spfx-web-part",
+    "microsoft-entra-id",
+    "azure-fundamentals",
+    "autogen",
+    "sharepoint"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-097",
+   "q": "libraries that help assemble llm apps",
+   "style": "beginner",
+   "topic": "fw",
+   "kind": "page",
+   "expected": [
+    "what-is-an-ai-framework",
+    "ai-sdks"
+   ],
+   "expectedTool": null,
+   "top": "large-language-models",
+   "solid": true,
+   "score": 27,
+   "top5": [
+    "llm-observability",
+    "llm-as-a-judge",
+    "large-language-models",
+    "python-ai-libraries",
+    "llm-cost-optimization"
+   ],
+   "learn": [
+    "ai-hallucinations",
+    "fine-tuning"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident wrong page: large-language-models",
+   "pathOk": null,
+   "rankIds": [
+    "llm-observability",
+    "llm-as-a-judge",
+    "large-language-models",
+    "python-ai-libraries",
+    "llm-cost-optimization",
+    "owasp-llm-top-10",
+    "llm-benchmarks-vs-task-evals",
+    "local-llm-runtimes"
+   ],
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-098",
+   "q": "the hub where people share pretrained models",
+   "style": "concept",
+   "topic": "fw",
+   "kind": "page",
+   "expected": [
+    "hugging-face"
+   ],
+   "expectedTool": null,
+   "top": "transfer-learning",
+   "solid": true,
+   "score": 27,
+   "top5": [
+    "reasoning-models",
+    "reasoning-vs-standard-models",
+    "small-language-models",
+    "world-models",
+    "model-cards"
+   ],
+   "learn": [
+    "hugging-face",
+    "fine-tuning",
+    "overfitting-and-regularization",
+    "lora-and-peft",
+    "neural-networks"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident wrong page: transfer-learning",
+   "pathOk": null,
+   "rankIds": [
+    "reasoning-models",
+    "reasoning-vs-standard-models",
+    "small-language-models",
+    "world-models",
+    "model-cards",
+    "hugging-face",
+    "model-drift-and-monitoring",
+    "transfer-learning"
+   ],
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-099",
+   "q": "run open models offline on my machine",
+   "style": "concept",
+   "topic": "runtime",
+   "kind": "page",
+   "expected": [
+    "local-ai",
+    "ollama",
+    "llama-cpp"
+   ],
+   "expectedTool": null,
+   "top": "open-weights-models",
+   "solid": true,
+   "score": 108,
+   "top5": [
+    "open-weights-models",
+    "local-ai",
+    "reasoning-models",
+    "small-language-models",
+    "reasoning-vs-standard-models"
+   ],
+   "learn": [
+    "local-ai",
+    "small-language-models",
+    "large-language-models",
+    "hugging-face",
+    "local-ai-vs-cloud-ai"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident wrong page: open-weights-models",
+   "pathOk": null,
+   "rankIds": [
+    "open-weights-models",
+    "local-ai",
+    "reasoning-models",
+    "small-language-models",
+    "reasoning-vs-standard-models",
+    "world-models",
+    "model-cards",
+    "model-drift-and-monitoring"
+   ],
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-100",
+   "q": "serving engine with continuous batching",
+   "style": "what-to-use",
+   "topic": "runtime",
+   "kind": "page",
+   "expected": [
+    "vllm"
+   ],
+   "expectedTool": null,
+   "top": "vllm",
+   "solid": true,
+   "score": 82,
+   "top5": [
+    "vllm",
+    "model-serving-and-inference",
+    "local-runtimes-compared",
+    "cicd",
+    "llamaindex"
+   ],
+   "learn": [
+    "model-serving-and-inference",
+    "local-runtimes-compared",
+    "llama-cpp"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "vllm",
+    "model-serving-and-inference",
+    "local-runtimes-compared",
+    "cicd",
+    "llamaindex",
+    "model-drift-and-monitoring",
+    "prompt-caching",
+    "build-spfx-web-part"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-101",
+   "q": "quantized model format for cpu inference",
+   "style": "concept",
+   "topic": "runtime",
+   "kind": "page",
+   "expected": [
+    "llama-cpp",
+    "quantization"
+   ],
+   "expectedTool": null,
+   "top": "(weak) model-serving-and-inference",
+   "solid": false,
+   "score": 45,
+   "top5": [
+    "model-serving-and-inference",
+    "model-apis",
+    "model-cards",
+    "test-time-compute",
+    "large-language-models"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "model-serving-and-inference",
+    "model-apis",
+    "model-cards",
+    "test-time-compute",
+    "large-language-models",
+    "model-drift-and-monitoring",
+    "process-reward-model",
+    "world-models"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-102",
+   "q": "portable inference format for many platforms",
+   "style": "concept",
+   "topic": "runtime",
+   "kind": "page",
+   "expected": [
+    "onnx-runtime"
+   ],
+   "expectedTool": null,
+   "top": "(weak) model-serving-and-inference",
+   "solid": false,
+   "score": 25,
+   "top5": [
+    "model-serving-and-inference",
+    "test-time-compute",
+    "large-language-models",
+    "local-ai",
+    "local-runtimes-compared"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "model-serving-and-inference",
+    "test-time-compute",
+    "large-language-models",
+    "local-ai",
+    "local-runtimes-compared",
+    "onnx-runtime",
+    "llm-benchmarks-vs-task-evals",
+    "common-prompting-mistakes"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-103",
+   "q": "which deep learning library is most widely used for research",
+   "style": "concept",
+   "topic": "runtime",
+   "kind": "page",
+   "expected": [
+    "pytorch"
+   ],
+   "expectedTool": null,
+   "top": "deep-learning",
+   "solid": true,
+   "score": 100,
+   "top5": [
+    "deep-learning",
+    "deep-q-networks",
+    "reinforcement-learning",
+    "supervised-learning",
+    "what-is-ai"
+   ],
+   "learn": [
+    "what-is-ai",
+    "transfer-learning",
+    "backpropagation-and-gradient-descent",
+    "convolutional-neural-networks",
+    "neural-networks"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident wrong page: deep-learning",
+   "pathOk": null,
+   "rankIds": [
+    "deep-learning",
+    "deep-q-networks",
+    "reinforcement-learning",
+    "supervised-learning",
+    "what-is-ai",
+    "imitation-learning",
+    "unsupervised-learning",
+    "self-supervised-learning"
+   ],
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-104",
+   "q": "model that reads pictures and answers questions about them",
+   "style": "concept",
+   "topic": "mm",
+   "kind": "page",
+   "expected": [
+    "vision-language-models"
+   ],
+   "expectedTool": null,
+   "top": "(weak) model-cards",
+   "solid": false,
+   "score": 28,
+   "top5": [
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference",
+    "process-reward-model"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference",
+    "process-reward-model",
+    "world-models",
+    "outcome-reward-model",
+    "instruction-tuning"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-105",
+   "q": "turn recorded speech into text",
+   "style": "concept",
+   "topic": "mm",
+   "kind": "page",
+   "expected": [
+    "speech-ai"
+   ],
+   "expectedTool": null,
+   "top": "(weak) speech-ai",
+   "solid": false,
+   "score": 33,
+   "top5": [
+    "speech-ai",
+    "multimodal-ai",
+    "contrastive-learning-clip",
+    "diffusion-models",
+    "video-generation-models"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "speech-ai",
+    "multimodal-ai",
+    "contrastive-learning-clip",
+    "diffusion-models",
+    "video-generation-models",
+    "large-language-models",
+    "chunking",
+    "hybrid-search-and-reranking"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-106",
+   "q": "pull fields from scanned forms",
+   "style": "concept",
+   "topic": "mm",
+   "kind": "page",
+   "expected": [
+    "document-understanding-ai"
+   ],
+   "expectedTool": null,
+   "top": "(weak) github",
+   "solid": false,
+   "score": 7,
+   "top5": [
+    "github",
+    "json-validation",
+    "ai-materials-discovery",
+    "reasoning-transparency",
+    "thinking-budgets"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "github",
+    "json-validation",
+    "ai-materials-discovery",
+    "reasoning-transparency",
+    "thinking-budgets",
+    "document-understanding-ai",
+    "calling-ai-apis-with-python",
+    "graphql"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-107",
+   "q": "generating clips from a text description",
+   "style": "concept",
+   "topic": "mm",
+   "kind": "page",
+   "expected": [
+    "video-generation-models"
+   ],
+   "expectedTool": null,
+   "top": "(weak) contrastive-learning-clip",
+   "solid": false,
+   "score": 11,
+   "top5": [
+    "contrastive-learning-clip",
+    "speech-ai",
+    "multimodal-ai",
+    "diffusion-models",
+    "video-generation-models"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "contrastive-learning-clip",
+    "speech-ai",
+    "multimodal-ai",
+    "diffusion-models",
+    "video-generation-models",
+    "large-language-models",
+    "chunking",
+    "hybrid-search-and-reranking"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-108",
+   "q": "locating and naming objects in photos",
+   "style": "concept",
+   "topic": "cv",
+   "kind": "page",
+   "expected": [
+    "object-detection"
+   ],
+   "expectedTool": null,
+   "top": "(weak) what-is-json",
+   "solid": false,
+   "score": 7,
+   "top5": [
+    "what-is-json",
+    "object-detection",
+    "vision-language-models",
+    "express",
+    "prisma-and-orms"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "what-is-json",
+    "object-detection",
+    "vision-language-models",
+    "express",
+    "prisma-and-orms"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-109",
+   "q": "software layer that connects sensors and motors in a robot",
+   "style": "concept",
+   "topic": "robot",
+   "kind": "page",
+   "expected": [
+    "robot-operating-system",
+    "embodied-ai"
+   ],
+   "expectedTool": null,
+   "top": "(weak) robot-operating-system",
+   "solid": false,
+   "score": 27,
+   "top5": [
+    "robot-operating-system",
+    "vision-language-action-models",
+    "swe-bench",
+    "sim-to-real-transfer",
+    "embodied-ai"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "robot-operating-system",
+    "vision-language-action-models",
+    "swe-bench",
+    "sim-to-real-transfer",
+    "embodied-ai",
+    "ai-drug-discovery",
+    "imitation-learning",
+    "ai-guardrails"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-110",
+   "q": "policy that maps pictures and words to motor commands",
+   "style": "concept",
+   "topic": "robot",
+   "kind": "page",
+   "expected": [
+    "vision-language-action-models"
+   ],
+   "expectedTool": null,
+   "top": "reinforcement-learning",
+   "solid": true,
+   "score": 21,
+   "top5": [
+    "proximal-policy-optimization",
+    "reinforcement-learning",
+    "imitation-learning",
+    "ai-governance",
+    "ai-guardrails"
+   ],
+   "learn": [
+    "proximal-policy-optimization",
+    "imitation-learning",
+    "reinforcement-learning-for-reasoning",
+    "markov-decision-processes"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident wrong page: reinforcement-learning",
+   "pathOk": null,
+   "rankIds": [
+    "proximal-policy-optimization",
+    "reinforcement-learning",
+    "imitation-learning",
+    "ai-governance",
+    "ai-guardrails",
+    "reinforcement-learning-for-reasoning",
+    "authentication-vs-authorization",
+    "vision-language-action-models"
+   ],
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-111",
+   "q": "teach manipulation by copying human operators",
+   "style": "concept",
+   "topic": "robot",
+   "kind": "page",
+   "expected": [
+    "imitation-learning"
+   ],
+   "expectedTool": null,
+   "top": "(weak) human-preference-evaluation",
+   "solid": false,
+   "score": 18,
+   "top5": [
+    "human-preference-evaluation",
+    "rlhf",
+    "preference-optimization",
+    "ai-evaluation",
+    "langgraph"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "human-preference-evaluation",
+    "rlhf",
+    "preference-optimization",
+    "ai-evaluation",
+    "langgraph",
+    "agentic-workflows",
+    "how-to-reduce-hallucinations",
+    "physics-informed-neural-networks"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-112",
+   "q": "transferring skills from a physics simulator to a real machine",
+   "style": "concept",
+   "topic": "robot",
+   "kind": "page",
+   "expected": [
+    "sim-to-real-transfer"
+   ],
+   "expectedTool": null,
+   "top": "(weak) physics-informed-neural-networks",
+   "solid": false,
+   "score": 25,
+   "top5": [
+    "physics-informed-neural-networks",
+    "sim-to-real-transfer",
+    "mlops",
+    "what-is-ai",
+    "ai-materials-discovery"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "physics-informed-neural-networks",
+    "sim-to-real-transfer",
+    "mlops",
+    "what-is-ai",
+    "ai-materials-discovery",
+    "ai-for-science",
+    "containers",
+    "gdpr-and-ai"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-113",
+   "q": "a learned simulator used for planning",
+   "style": "concept",
+   "topic": "robot",
+   "kind": "page",
+   "expected": [
+    "world-models"
+   ],
+   "expectedTool": null,
+   "top": "world-models",
+   "solid": true,
+   "score": 58,
+   "top5": [
+    "world-models",
+    "agent-planning",
+    "outcome-reward-model",
+    "ai-materials-discovery",
+    "scaling-laws"
+   ],
+   "learn": [
+    "sim-to-real-transfer"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "world-models",
+    "agent-planning",
+    "outcome-reward-model",
+    "ai-materials-discovery",
+    "scaling-laws",
+    "ai-agents",
+    "robot-operating-system",
+    "sim-to-real-transfer"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-114",
+   "q": "attack where crafted text overrides my assistants rules",
+   "style": "security",
+   "topic": "sec",
+   "kind": "page",
+   "expected": [
+    "prompt-injection"
+   ],
+   "expectedTool": null,
+   "top": "(weak) speech-ai",
+   "solid": false,
+   "score": 12,
+   "top5": [
+    "speech-ai",
+    "contrastive-learning-clip",
+    "multimodal-ai",
+    "diffusion-models",
+    "environment-variables"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "speech-ai",
+    "contrastive-learning-clip",
+    "multimodal-ai",
+    "diffusion-models",
+    "environment-variables",
+    "video-generation-models",
+    "prompt-injection",
+    "large-language-models"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-115",
+   "q": "what personal data should never go into a public chatbot",
+   "style": "security",
+   "topic": "sec",
+   "kind": "page",
+   "expected": [
+    "ai-privacy-and-security",
+    "gdpr-and-ai"
+   ],
+   "expectedTool": null,
+   "top": "(weak) gdpr-and-ai",
+   "solid": false,
+   "score": 42,
+   "top5": [
+    "gdpr-and-ai",
+    "ai-agent-vs-chatbot",
+    "ai-privacy-and-security",
+    "react-chatbot-state",
+    "distributed-training"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "gdpr-and-ai",
+    "ai-agent-vs-chatbot",
+    "ai-privacy-and-security",
+    "react-chatbot-state",
+    "distributed-training",
+    "human-preference-evaluation",
+    "python-data-for-ai",
+    "benchmark-contamination"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-116",
+   "q": "probing my own assistant for weaknesses before launch",
+   "style": "security",
+   "topic": "sec",
+   "kind": "page",
+   "expected": [
+    "red-teaming"
+   ],
+   "expectedTool": null,
+   "top": "(weak) ai-agent-vs-chatbot",
+   "solid": false,
+   "score": 19,
+   "top5": [
+    "ai-agent-vs-chatbot",
+    "mechanistic-interpretability",
+    "local-ai",
+    "ai-privacy-and-security",
+    "json-validation"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "ai-agent-vs-chatbot",
+    "mechanistic-interpretability",
+    "local-ai",
+    "ai-privacy-and-security",
+    "json-validation",
+    "system-prompts",
+    "llm-benchmarks-vs-task-evals",
+    "speech-ai"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-117",
+   "q": "runtime checks on what the model is allowed to say",
+   "style": "security",
+   "topic": "sec",
+   "kind": "page",
+   "expected": [
+    "ai-guardrails"
+   ],
+   "expectedTool": null,
+   "top": "(weak) model-cards",
+   "solid": false,
+   "score": 28,
+   "top5": [
+    "model-cards",
+    "onnx-runtime",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "model-cards",
+    "onnx-runtime",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference",
+    "process-reward-model",
+    "world-models",
+    "outcome-reward-model"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-118",
+   "q": "running untrusted generated scripts without risking my machine",
+   "style": "security",
+   "topic": "sec",
+   "kind": "page",
+   "expected": [
+    "code-execution-sandboxing"
+   ],
+   "expectedTool": null,
+   "top": "(weak) code-execution-sandboxing",
+   "solid": false,
+   "score": 15,
+   "top5": [
+    "code-execution-sandboxing",
+    "local-ai",
+    "mlops",
+    "what-is-ai",
+    "llama-cpp"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "code-execution-sandboxing",
+    "local-ai",
+    "mlops",
+    "what-is-ai",
+    "llama-cpp",
+    "c2pa-content-provenance",
+    "ai-for-science",
+    "containers"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-119",
+   "q": "labelling content as machine made",
+   "style": "security",
+   "topic": "sec",
+   "kind": "page",
+   "expected": [
+    "c2pa-content-provenance"
+   ],
+   "expectedTool": null,
+   "top": "(weak) c2pa-content-provenance",
+   "solid": false,
+   "score": 27,
+   "top5": [
+    "c2pa-content-provenance",
+    "mlops",
+    "what-is-ai",
+    "ai-for-science",
+    "containers"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "c2pa-content-provenance",
+    "mlops",
+    "what-is-ai",
+    "ai-for-science",
+    "containers",
+    "generative-ai",
+    "gdpr-and-ai",
+    "ai-materials-discovery"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-120",
+   "q": "top vulnerabilities for generative ai applications",
+   "style": "security",
+   "topic": "sec",
+   "kind": "page",
+   "expected": [
+    "owasp-llm-top-10"
+   ],
+   "expectedTool": null,
+   "top": "generative-ai",
+   "solid": true,
+   "score": 52,
+   "top5": [
+    "generative-ai",
+    "ai-governance",
+    "nist-ai-rmf",
+    "eu-ai-act",
+    "javascript-for-ai"
+   ],
+   "learn": [
+    "ai-hallucinations",
+    "what-is-ai",
+    "multimodal-ai"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident wrong page: generative-ai",
+   "pathOk": null,
+   "rankIds": [
+    "generative-ai",
+    "ai-governance",
+    "nist-ai-rmf",
+    "eu-ai-act",
+    "javascript-for-ai",
+    "nodejs-for-ai",
+    "databases-for-ai-apps",
+    "typescript-for-ai"
+   ],
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-121",
+   "q": "are the scores on public model rankings reliable",
+   "style": "concept",
+   "topic": "eval",
+   "kind": "page",
+   "expected": [
+    "benchmarks-and-leaderboards",
+    "benchmark-contamination"
+   ],
+   "expectedTool": null,
+   "top": "benchmarks-and-leaderboards",
+   "solid": true,
+   "score": 29,
+   "top5": [
+    "benchmarks-and-leaderboards",
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference"
+   ],
+   "learn": [
+    "large-language-models",
+    "human-preference-evaluation",
+    "llm-benchmarks-vs-task-evals",
+    "swe-bench",
+    "benchmark-contamination"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "benchmarks-and-leaderboards",
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference",
+    "process-reward-model",
+    "world-models",
+    "outcome-reward-model"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-122",
+   "q": "have a stronger model score weaker model answers",
+   "style": "concept",
+   "topic": "eval",
+   "kind": "page",
+   "expected": [
+    "llm-as-a-judge"
+   ],
+   "expectedTool": null,
+   "top": "(weak) model-cards",
+   "solid": false,
+   "score": 28,
+   "top5": [
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference",
+    "process-reward-model"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference",
+    "process-reward-model",
+    "world-models",
+    "outcome-reward-model",
+    "instruction-tuning"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-123",
+   "q": "which numbers describe a classifier on imbalanced data",
+   "style": "concept",
+   "topic": "eval",
+   "kind": "page",
+   "expected": [
+    "evaluation-metrics-for-ai"
+   ],
+   "expectedTool": null,
+   "top": "evaluation-metrics-for-ai",
+   "solid": true,
+   "score": 46,
+   "top5": [
+    "evaluation-metrics-for-ai",
+    "gdpr-and-ai",
+    "ai-privacy-and-security",
+    "distributed-training",
+    "python-data-for-ai"
+   ],
+   "learn": [
+    "overfitting-and-regularization",
+    "supervised-learning"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "evaluation-metrics-for-ai",
+    "gdpr-and-ai",
+    "ai-privacy-and-security",
+    "distributed-training",
+    "python-data-for-ai",
+    "benchmark-contamination",
+    "ray",
+    "document-understanding-ai"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-124",
+   "q": "how do i test my llm application end to end",
+   "style": "concept",
+   "topic": "eval",
+   "kind": "page",
+   "expected": [
+    "ai-evaluation"
+   ],
+   "expectedTool": null,
+   "top": "large-language-models",
+   "solid": true,
+   "score": 27,
+   "top5": [
+    "llm-observability",
+    "llm-as-a-judge",
+    "large-language-models",
+    "llm-cost-optimization",
+    "owasp-llm-top-10"
+   ],
+   "learn": [
+    "ai-hallucinations",
+    "fine-tuning"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident wrong page: large-language-models",
+   "pathOk": null,
+   "rankIds": [
+    "llm-observability",
+    "llm-as-a-judge",
+    "large-language-models",
+    "llm-cost-optimization",
+    "owasp-llm-top-10",
+    "test-time-compute",
+    "ai-evaluation",
+    "llm-benchmarks-vs-task-evals"
+   ],
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-125",
+   "q": "is a coding benchmark of real repository bugs useful",
+   "style": "concept",
+   "topic": "eval",
+   "kind": "page",
+   "expected": [
+    "swe-bench"
+   ],
+   "expectedTool": null,
+   "top": "benchmarks-and-leaderboards",
+   "solid": true,
+   "score": 34,
+   "top5": [
+    "benchmarks-and-leaderboards",
+    "swe-bench",
+    "ai-evaluation",
+    "benchmark-contamination",
+    "humaneval"
+   ],
+   "learn": [
+    "swe-bench",
+    "ai-evaluation",
+    "benchmark-contamination",
+    "humaneval",
+    "gsm8k-and-math-benchmarks"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident wrong page: benchmarks-and-leaderboards",
+   "pathOk": null,
+   "rankIds": [
+    "benchmarks-and-leaderboards",
+    "swe-bench",
+    "ai-evaluation",
+    "benchmark-contamination",
+    "humaneval",
+    "sim-to-real-transfer",
+    "gsm8k-and-math-benchmarks",
+    "github"
+   ],
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-126",
+   "q": "operational discipline for machine learning teams",
+   "style": "concept",
+   "topic": "mlops",
+   "kind": "page",
+   "expected": [
+    "mlops"
+   ],
+   "expectedTool": null,
+   "top": "what-is-ai",
+   "solid": true,
+   "score": 28,
+   "top5": [
+    "deep-learning",
+    "teams-development",
+    "what-is-ai",
+    "supervised-learning",
+    "reinforcement-learning"
+   ],
+   "learn": [
+    "generative-ai"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident wrong page: what-is-ai",
+   "pathOk": null,
+   "rankIds": [
+    "deep-learning",
+    "teams-development",
+    "what-is-ai",
+    "supervised-learning",
+    "reinforcement-learning",
+    "mlops",
+    "unsupervised-learning",
+    "imitation-learning"
+   ],
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-127",
+   "q": "detect that live data no longer looks like training data",
+   "style": "concept",
+   "topic": "mlops",
+   "kind": "page",
+   "expected": [
+    "model-drift-and-monitoring"
+   ],
+   "expectedTool": null,
+   "top": "(weak) gdpr-and-ai",
+   "solid": false,
+   "score": 42,
+   "top5": [
+    "gdpr-and-ai",
+    "ai-privacy-and-security",
+    "distributed-training",
+    "fine-tuning",
+    "python-data-for-ai"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "gdpr-and-ai",
+    "ai-privacy-and-security",
+    "distributed-training",
+    "fine-tuning",
+    "python-data-for-ai",
+    "benchmark-contamination",
+    "scaling-laws",
+    "what-is-ai"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-128",
+   "q": "record every prompt response and cost in production",
+   "style": "concept",
+   "topic": "mlops",
+   "kind": "page",
+   "expected": [
+    "llm-observability"
+   ],
+   "expectedTool": null,
+   "top": "(weak) prompt-caching",
+   "solid": false,
+   "score": 31,
+   "top5": [
+    "prompt-caching",
+    "system-prompts",
+    "prompt-engineering",
+    "prompt-injection",
+    "llm-cost-optimization"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "prompt-caching",
+    "system-prompts",
+    "prompt-engineering",
+    "prompt-injection",
+    "llm-cost-optimization",
+    "common-prompting-mistakes",
+    "dspy",
+    "local-ai-vs-cloud-ai"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-129",
+   "q": "reduce what i pay per request to a hosted model",
+   "style": "concept",
+   "topic": "mlops",
+   "kind": "page",
+   "expected": [
+    "llm-cost-optimization",
+    "prompt-caching"
+   ],
+   "expectedTool": null,
+   "top": "(weak) model-cards",
+   "solid": false,
+   "score": 28,
+   "top5": [
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference",
+    "process-reward-model"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference",
+    "process-reward-model",
+    "how-to-reduce-hallucinations",
+    "world-models",
+    "llm-cost-optimization"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-130",
+   "q": "split a big training job across accelerators",
+   "style": "concept",
+   "topic": "mlops",
+   "kind": "page",
+   "expected": [
+    "distributed-training"
+   ],
+   "expectedTool": null,
+   "top": "(weak) distributed-training",
+   "solid": false,
+   "score": 15,
+   "top5": [
+    "distributed-training",
+    "gdpr-and-ai",
+    "chunking",
+    "gpus-and-ai-accelerators",
+    "fine-tuning"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "distributed-training",
+    "gdpr-and-ai",
+    "chunking",
+    "gpus-and-ai-accelerators",
+    "fine-tuning",
+    "what-is-ai",
+    "scaling-laws",
+    "supervised-learning"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-131",
+   "q": "choose accelerators for inference",
+   "style": "concept",
+   "topic": "mlops",
+   "kind": "page",
+   "expected": [
+    "gpus-and-ai-accelerators"
+   ],
+   "expectedTool": null,
+   "top": "(weak) model-serving-and-inference",
+   "solid": false,
+   "score": 25,
+   "top5": [
+    "model-serving-and-inference",
+    "test-time-compute",
+    "gpus-and-ai-accelerators",
+    "large-language-models",
+    "local-ai"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "model-serving-and-inference",
+    "test-time-compute",
+    "gpus-and-ai-accelerators",
+    "large-language-models",
+    "local-ai",
+    "choosing-an-agent-framework",
+    "local-runtimes-compared",
+    "hugging-face"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-132",
+   "q": "logging runs and comparing model versions",
+   "style": "concept",
+   "topic": "mlops",
+   "kind": "page",
+   "expected": [
+    "mlflow"
+   ],
+   "expectedTool": null,
+   "top": "(weak) model-cards",
+   "solid": false,
+   "score": 28,
+   "top5": [
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference",
+    "process-reward-model"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference",
+    "process-reward-model",
+    "world-models",
+    "outcome-reward-model",
+    "instruction-tuning"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-133",
+   "q": "company policy for using generative ai",
+   "style": "concept",
+   "topic": "gov",
+   "kind": "page",
+   "expected": [
+    "ai-governance"
+   ],
+   "expectedTool": null,
+   "top": "generative-ai",
+   "solid": true,
+   "score": 52,
+   "top5": [
+    "ai-governance",
+    "generative-ai",
+    "nist-ai-rmf",
+    "eu-ai-act",
+    "embodied-ai"
+   ],
+   "learn": [
+    "ai-hallucinations",
+    "what-is-ai",
+    "multimodal-ai",
+    "reinforcement-learning"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident wrong page: generative-ai",
+   "pathOk": null,
+   "rankIds": [
+    "ai-governance",
+    "generative-ai",
+    "nist-ai-rmf",
+    "eu-ai-act",
+    "embodied-ai",
+    "local-ai",
+    "ai-drug-discovery",
+    "ai-sdks"
+   ],
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-134",
+   "q": "european law classing ai by risk level",
+   "style": "concept",
+   "topic": "gov",
+   "kind": "page",
+   "expected": [
+    "eu-ai-act"
+   ],
+   "expectedTool": null,
+   "top": "(weak) ai-governance",
+   "solid": false,
+   "score": 56,
+   "top5": [
+    "ai-governance",
+    "eu-ai-act",
+    "nist-ai-rmf",
+    "embodied-ai",
+    "local-ai"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "ai-governance",
+    "eu-ai-act",
+    "nist-ai-rmf",
+    "embodied-ai",
+    "local-ai",
+    "ai-sdks",
+    "constitutional-ai-and-rlaif",
+    "local-ai-vs-cloud-ai"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-135",
+   "q": "us government framework for managing ai risk",
+   "style": "concept",
+   "topic": "gov",
+   "kind": "page",
+   "expected": [
+    "nist-ai-rmf"
+   ],
+   "expectedTool": null,
+   "top": "(weak) nist-ai-rmf",
+   "solid": false,
+   "score": 66,
+   "top5": [
+    "nist-ai-rmf",
+    "ai-governance",
+    "eu-ai-act",
+    "what-is-an-ai-framework",
+    "choosing-an-agent-framework"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "nist-ai-rmf",
+    "ai-governance",
+    "eu-ai-act",
+    "what-is-an-ai-framework",
+    "choosing-an-agent-framework",
+    "framework-vs-direct-api",
+    "agent-frameworks-compared",
+    "embodied-ai"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-136",
+   "q": "auditable management system standard for ai",
+   "style": "concept",
+   "topic": "gov",
+   "kind": "page",
+   "expected": [
+    "iso-iec-42001"
+   ],
+   "expectedTool": null,
+   "top": "iso-iec-42001",
+   "solid": true,
+   "score": 93,
+   "top5": [
+    "iso-iec-42001",
+    "ai-governance",
+    "nist-ai-rmf",
+    "eu-ai-act",
+    "embodied-ai"
+   ],
+   "learn": [
+    "ai-governance",
+    "nist-ai-rmf",
+    "eu-ai-act",
+    "ai-bias-and-fairness",
+    "model-cards"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "iso-iec-42001",
+    "ai-governance",
+    "nist-ai-rmf",
+    "eu-ai-act",
+    "embodied-ai",
+    "local-ai",
+    "ai-sdks",
+    "constitutional-ai-and-rlaif"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-137",
+   "q": "do models treat different groups unequally",
+   "style": "concept",
+   "topic": "gov",
+   "kind": "page",
+   "expected": [
+    "ai-bias-and-fairness"
+   ],
+   "expectedTool": null,
+   "top": "(weak) reasoning-models",
+   "solid": false,
+   "score": 42,
+   "top5": [
+    "reasoning-models",
+    "reasoning-vs-standard-models",
+    "small-language-models",
+    "world-models",
+    "model-cards"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "reasoning-models",
+    "reasoning-vs-standard-models",
+    "small-language-models",
+    "world-models",
+    "model-cards",
+    "model-drift-and-monitoring",
+    "model-apis",
+    "diffusion-models"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-138",
+   "q": "how do i document what my model can and cannot do",
+   "style": "concept",
+   "topic": "gov",
+   "kind": "page",
+   "expected": [
+    "model-cards"
+   ],
+   "expectedTool": null,
+   "top": "(weak) model-cards",
+   "solid": false,
+   "score": 28,
+   "top5": [
+    "model-cards",
+    "model-apis",
+    "document-understanding-ai",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "model-cards",
+    "model-apis",
+    "document-understanding-ai",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference",
+    "process-reward-model",
+    "world-models",
+    "outcome-reward-model"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-139",
+   "q": "tuning on pairs of preferred and dispreferred answers without a reward model",
+   "style": "concept",
+   "topic": "safety",
+   "kind": "page",
+   "expected": [
+    "dpo",
+    "preference-optimization"
+   ],
+   "expectedTool": null,
+   "top": "rlhf",
+   "solid": true,
+   "score": 32,
+   "top5": [
+    "reward-hacking",
+    "process-reward-model",
+    "outcome-reward-model",
+    "instruction-tuning",
+    "fine-tuning"
+   ],
+   "learn": [
+    "reward-hacking",
+    "instruction-tuning",
+    "dpo",
+    "preference-optimization",
+    "constitutional-ai-and-rlaif"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident wrong page: rlhf",
+   "pathOk": null,
+   "rankIds": [
+    "reward-hacking",
+    "process-reward-model",
+    "outcome-reward-model",
+    "instruction-tuning",
+    "fine-tuning",
+    "rlhf",
+    "model-cards",
+    "prm-vs-orm"
+   ],
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-140",
+   "q": "models agreeing with whatever the user says",
+   "style": "concept",
+   "topic": "safety",
+   "kind": "page",
+   "expected": [
+    "sycophancy"
+   ],
+   "expectedTool": null,
+   "top": "(weak) reasoning-models",
+   "solid": false,
+   "score": 40,
+   "top5": [
+    "reasoning-models",
+    "reasoning-vs-standard-models",
+    "small-language-models",
+    "world-models",
+    "model-cards"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "reasoning-models",
+    "reasoning-vs-standard-models",
+    "small-language-models",
+    "world-models",
+    "model-cards",
+    "model-drift-and-monitoring",
+    "model-apis",
+    "diffusion-models"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-141",
+   "q": "exploiting a flawed scoring rule",
+   "style": "concept",
+   "topic": "safety",
+   "kind": "page",
+   "expected": [
+    "reward-hacking"
+   ],
+   "expectedTool": null,
+   "top": "(weak) process-reward-model",
+   "solid": false,
+   "score": 4,
+   "top5": [
+    "process-reward-model",
+    "reward-hacking",
+    "reinforcement-learning-for-reasoning",
+    "benchmarks-and-leaderboards",
+    "benchmark-contamination"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "process-reward-model",
+    "reward-hacking",
+    "reinforcement-learning-for-reasoning",
+    "benchmarks-and-leaderboards",
+    "benchmark-contamination",
+    "cors"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-142",
+   "q": "making models follow human values",
+   "style": "concept",
+   "topic": "safety",
+   "kind": "page",
+   "expected": [
+    "ai-alignment"
+   ],
+   "expectedTool": null,
+   "top": "(weak) reasoning-models",
+   "solid": false,
+   "score": 40,
+   "top5": [
+    "reasoning-models",
+    "reasoning-vs-standard-models",
+    "small-language-models",
+    "world-models",
+    "model-cards"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "reasoning-models",
+    "reasoning-vs-standard-models",
+    "small-language-models",
+    "world-models",
+    "model-cards",
+    "model-drift-and-monitoring",
+    "model-apis",
+    "rlhf"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-143",
+   "q": "ml systems that predict how proteins fold",
+   "style": "concept",
+   "topic": "science",
+   "kind": "page",
+   "expected": [
+    "alphafold"
+   ],
+   "expectedTool": null,
+   "top": "(weak) multi-agent-systems",
+   "solid": false,
+   "score": 17,
+   "top5": [
+    "multi-agent-systems",
+    "eu-ai-act",
+    "ai-evaluation",
+    "red-teaming",
+    "ai-weather-forecasting"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "MISS",
+   "note": "no accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "multi-agent-systems",
+    "eu-ai-act",
+    "ai-evaluation",
+    "red-teaming",
+    "ai-weather-forecasting",
+    "alphafold",
+    "ai-alignment",
+    "ai-bias-and-fairness"
+   ],
+   "sem": null,
+   "classAmended": "MISS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-144",
+   "q": "neural nets as fast stand ins for physics simulations",
+   "style": "concept",
+   "topic": "science",
+   "kind": "page",
+   "expected": [
+    "physics-informed-neural-networks",
+    "ai-for-science"
+   ],
+   "expectedTool": null,
+   "top": "(weak) physics-informed-neural-networks",
+   "solid": false,
+   "score": 49,
+   "top5": [
+    "physics-informed-neural-networks",
+    "neural-networks",
+    "convolutional-neural-networks",
+    "graph-neural-networks",
+    "recurrent-neural-networks"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "rt-negative-context",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "physics-informed-neural-networks",
+    "neural-networks",
+    "convolutional-neural-networks",
+    "graph-neural-networks",
+    "recurrent-neural-networks",
+    "deep-learning",
+    "speech-ai",
+    "transformers"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-145",
+   "q": "kuberntes pods keep restarting",
+   "style": "typo",
+   "topic": "dev",
+   "kind": "page",
+   "expected": [
+    "kubernetes"
+   ],
+   "expectedTool": null,
+   "top": "(weak) kubernetes",
+   "solid": false,
+   "score": 13,
+   "top5": [
+    "kubernetes"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "kubernetes"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-146",
+   "q": "doker compose networking",
+   "style": "typo",
+   "topic": "dev",
+   "kind": "page",
+   "expected": [
+    "docker",
+    "containers"
+   ],
+   "expectedTool": null,
+   "top": "docker",
+   "solid": true,
+   "score": 79,
+   "top5": [
+    "docker",
+    "containers",
+    "code-execution-sandboxing",
+    "autogen",
+    "robot-operating-system"
+   ],
+   "learn": [
+    "containers"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "docker",
+    "containers",
+    "code-execution-sandboxing",
+    "autogen",
+    "robot-operating-system",
+    "swe-bench",
+    "kubernetes"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-147",
+   "q": "retreival augmented generaton",
+   "style": "typo",
+   "topic": "ai",
+   "kind": "page",
+   "expected": [
+    "rag"
+   ],
+   "expectedTool": null,
+   "top": "(weak) rag",
+   "solid": false,
+   "score": 51,
+   "top5": [
+    "rag",
+    "agentic-rag",
+    "rag-with-python",
+    "rag-evaluation",
+    "rag-frameworks"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "rag",
+    "agentic-rag",
+    "rag-with-python",
+    "rag-evaluation",
+    "rag-frameworks",
+    "graph-rag",
+    "rag-vs-fine-tuning",
+    "chunking"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-148",
+   "q": "embeding model choise",
+   "style": "typo",
+   "topic": "ai",
+   "kind": "page",
+   "expected": [
+    "embeddings"
+   ],
+   "expectedTool": null,
+   "top": "embeddings",
+   "solid": true,
+   "score": 78,
+   "top5": [
+    "embeddings",
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference"
+   ],
+   "learn": [
+    "vector-databases",
+    "rag",
+    "transformers"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "embeddings",
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference",
+    "process-reward-model",
+    "world-models",
+    "outcome-reward-model"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-149",
+   "q": "chain of thougth prompting",
+   "style": "typo",
+   "topic": "ai",
+   "kind": "page",
+   "expected": [
+    "chain-of-thought"
+   ],
+   "expectedTool": null,
+   "top": "(weak) chain-of-thought",
+   "solid": false,
+   "score": 39,
+   "top5": [
+    "chain-of-thought",
+    "common-prompting-mistakes",
+    "prompt-engineering",
+    "reasoning-transparency",
+    "mcp-security"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "chain-of-thought",
+    "common-prompting-mistakes",
+    "prompt-engineering",
+    "reasoning-transparency",
+    "mcp-security",
+    "langchain",
+    "rag-vs-fine-tuning",
+    "reasoning-models"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-150",
+   "q": "reasonning models explained",
+   "style": "typo",
+   "topic": "ai",
+   "kind": "page",
+   "expected": [
+    "reasoning-models"
+   ],
+   "expectedTool": null,
+   "top": "(weak) reasoning-models",
+   "solid": false,
+   "score": 40,
+   "top5": [
+    "reasoning-models",
+    "reasoning-vs-standard-models",
+    "small-language-models",
+    "world-models",
+    "model-cards"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "reasoning-models",
+    "reasoning-vs-standard-models",
+    "small-language-models",
+    "world-models",
+    "model-cards",
+    "model-drift-and-monitoring",
+    "model-apis",
+    "diffusion-models"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-151",
+   "q": "vecotr search in postgress",
+   "style": "typo",
+   "topic": "ai",
+   "kind": "page",
+   "expected": [
+    "pgvector",
+    "vector-databases"
+   ],
+   "expectedTool": null,
+   "top": "postgresql",
+   "solid": true,
+   "score": 67,
+   "top5": [
+    "postgresql",
+    "postgresql-for-ai-apps",
+    "pgvector",
+    "sql",
+    "search-over-reasoning"
+   ],
+   "learn": [
+    "postgresql-for-ai-apps",
+    "sql",
+    "sql-vs-nosql",
+    "mysql",
+    "vector-databases"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident wrong page: postgresql",
+   "pathOk": null,
+   "rankIds": [
+    "postgresql",
+    "postgresql-for-ai-apps",
+    "pgvector",
+    "sql",
+    "search-over-reasoning",
+    "sql-vs-nosql",
+    "hybrid-search-and-reranking",
+    "vector-database-vs-traditional-database"
+   ],
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-152",
+   "q": "multimodel ai basics",
+   "style": "typo",
+   "topic": "ai",
+   "kind": "page",
+   "expected": [
+    "multimodal-ai",
+    "vision-language-models"
+   ],
+   "expectedTool": null,
+   "top": "what-is-ai",
+   "solid": true,
+   "score": 66,
+   "top5": [
+    "what-is-ai",
+    "multimodal-ai",
+    "ai-governance",
+    "eu-ai-act",
+    "nist-ai-rmf"
+   ],
+   "learn": [
+    "generative-ai",
+    "ai-evaluation",
+    "transformers",
+    "multimodal-ai"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident wrong page: what-is-ai",
+   "pathOk": null,
+   "rankIds": [
+    "what-is-ai",
+    "multimodal-ai",
+    "ai-governance",
+    "eu-ai-act",
+    "nist-ai-rmf",
+    "generative-ai",
+    "embodied-ai",
+    "local-ai"
+   ],
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-153",
+   "q": "llama indxe vs langchan",
+   "style": "typo",
+   "topic": "ai",
+   "kind": "page",
+   "expected": [
+    "llamaindex",
+    "langchain",
+    "rag-frameworks"
+   ],
+   "expectedTool": null,
+   "top": "langchain",
+   "solid": true,
+   "score": 71,
+   "top5": [
+    "langchain",
+    "llama-cpp",
+    "rag-frameworks",
+    "gbnf-grammars",
+    "llamaindex"
+   ],
+   "learn": [
+    "rag-frameworks",
+    "llamaindex",
+    "choosing-an-agent-framework",
+    "framework-vs-direct-api"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "langchain",
+    "llama-cpp",
+    "rag-frameworks",
+    "gbnf-grammars",
+    "llamaindex",
+    "local-runtimes-compared",
+    "local-llm-runtimes",
+    "agent-frameworks-compared"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-154",
+   "q": "agentc workflows",
+   "style": "typo",
+   "topic": "ai",
+   "kind": "page",
+   "expected": [
+    "agentic-workflows"
+   ],
+   "expectedTool": null,
+   "top": "agentic-workflows",
+   "solid": true,
+   "score": 47,
+   "top5": [
+    "agentic-workflows",
+    "agentic-rag",
+    "ai-agents",
+    "ai-agent-vs-chatbot",
+    "langgraph"
+   ],
+   "learn": [
+    "ai-agents",
+    "ai-agent-vs-chatbot"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "agentic-workflows",
+    "agentic-rag",
+    "ai-agents",
+    "ai-agent-vs-chatbot",
+    "langgraph",
+    "openai-agents-sdk",
+    "power-platform"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-155",
+   "q": "ai",
+   "style": "vague",
+   "topic": "ai",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) ai-governance",
+   "solid": false,
+   "score": 50,
+   "top5": [
+    "ai-governance",
+    "eu-ai-act",
+    "nist-ai-rmf",
+    "embodied-ai",
+    "local-ai"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "ai-governance",
+    "eu-ai-act",
+    "nist-ai-rmf",
+    "embodied-ai",
+    "local-ai",
+    "ai-sdks",
+    "constitutional-ai-and-rlaif",
+    "local-ai-vs-cloud-ai"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-156",
+   "q": "prompts",
+   "style": "vague",
+   "topic": "ai",
+   "kind": "page",
+   "expected": [
+    "prompt-engineering"
+   ],
+   "expectedTool": null,
+   "top": "(weak) prompt-engineering",
+   "solid": false,
+   "score": 34,
+   "top5": [
+    "prompt-engineering",
+    "system-prompts",
+    "prompt-caching",
+    "prompt-injection",
+    "common-prompting-mistakes"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "prompt-engineering",
+    "system-prompts",
+    "prompt-caching",
+    "prompt-injection",
+    "common-prompting-mistakes",
+    "dspy",
+    "chain-of-thought",
+    "context-engineering"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-157",
+   "q": "embeddings and stuff",
+   "style": "vague",
+   "topic": "ai",
+   "kind": "page",
+   "expected": [
+    "embeddings"
+   ],
+   "expectedTool": null,
+   "top": "embeddings",
+   "solid": true,
+   "score": 46,
+   "top5": [
+    "embeddings",
+    "vector-databases",
+    "contrastive-learning-clip",
+    "rag",
+    "rag-with-python"
+   ],
+   "learn": [
+    "vector-databases",
+    "rag",
+    "vector-database-vs-traditional-database"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "",
+   "pathOk": null,
+   "rankIds": [
+    "embeddings",
+    "vector-databases",
+    "contrastive-learning-clip",
+    "rag",
+    "rag-with-python",
+    "pgvector",
+    "python-ai-libraries",
+    "vector-database-vs-traditional-database"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-158",
+   "q": "devops",
+   "style": "vague",
+   "topic": "dev",
+   "kind": "gap",
+   "expected": [
+    "cicd",
+    "docker",
+    "containers",
+    "git"
+   ],
+   "expectedTool": null,
+   "top": "(weak) mlops",
+   "solid": false,
+   "score": 2,
+   "top5": [
+    "mlops"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "transparent non-answer",
+   "pathOk": null,
+   "rankIds": [
+    "mlops"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-159",
+   "q": "something with tokens",
+   "style": "vague",
+   "topic": "dev",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "tokens",
+   "solid": true,
+   "score": 34,
+   "top5": [
+    "tokens",
+    "json-web-tokens",
+    "streaming-ai-responses",
+    "reasoning-transparency",
+    "llm-cost-optimization"
+   ],
+   "learn": [
+    "context-windows"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident answer for out-of-scope query: tokens",
+   "pathOk": null,
+   "rankIds": [
+    "tokens",
+    "json-web-tokens",
+    "streaming-ai-responses",
+    "reasoning-transparency",
+    "llm-cost-optimization",
+    "model-apis",
+    "context-windows",
+    "chunking"
+   ],
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-160",
+   "q": "safety",
+   "style": "vague",
+   "topic": "ai",
+   "kind": "page",
+   "expected": [
+    "ai-alignment",
+    "ai-privacy-and-security",
+    "prompt-injection",
+    "ai-guardrails"
+   ],
+   "expectedTool": null,
+   "top": "(weak) ai-alignment",
+   "solid": false,
+   "score": 8,
+   "top5": [
+    "ai-alignment",
+    "ai-guardrails",
+    "rust",
+    "constitutional-ai-and-rlaif",
+    "red-teaming"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "WEAK",
+   "note": "not solid; accepted page in top 5",
+   "pathOk": null,
+   "rankIds": [
+    "ai-alignment",
+    "ai-guardrails",
+    "rust",
+    "constitutional-ai-and-rlaif",
+    "red-teaming",
+    "agent-evaluation",
+    "ai-drug-discovery",
+    "reasoning-transparency"
+   ],
+   "sem": null,
+   "classAmended": "WEAK",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-161",
+   "q": "ansible vs chef",
+   "style": "coverage-probe",
+   "topic": "devops",
+   "kind": "gap",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) none",
+   "solid": false,
+   "score": 0,
+   "top5": [],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "transparent non-answer",
+   "pathOk": null,
+   "rankIds": [],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-162",
+   "q": "ssh key setup",
+   "style": "coverage-probe",
+   "topic": "devops",
+   "kind": "gap",
+   "expected": [
+    "git",
+    "github"
+   ],
+   "expectedTool": null,
+   "top": "(weak) api-keys",
+   "solid": false,
+   "score": 21,
+   "top5": [
+    "api-keys",
+    "javascript-for-ai",
+    "mcp-servers-and-clients",
+    "azure-fundamentals",
+    "calling-ai-apis-with-python"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "transparent non-answer",
+   "pathOk": null,
+   "rankIds": [
+    "api-keys",
+    "javascript-for-ai",
+    "mcp-servers-and-clients",
+    "azure-fundamentals",
+    "calling-ai-apis-with-python",
+    "api-authentication",
+    "nodejs-for-ai",
+    "python-for-ai"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-163",
+   "q": "how do i debounce a function",
+   "style": "coverage-probe",
+   "topic": "dev",
+   "kind": "gap",
+   "expected": [
+    "javascript"
+   ],
+   "expectedTool": null,
+   "top": "(weak) function-calling",
+   "solid": false,
+   "score": 24,
+   "top5": [
+    "function-calling",
+    "function-calling-vs-mcp",
+    "markov-decision-processes",
+    "structured-output-methods-compared",
+    "agent-tools"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "transparent non-answer",
+   "pathOk": null,
+   "rankIds": [
+    "function-calling",
+    "function-calling-vs-mcp",
+    "markov-decision-processes",
+    "structured-output-methods-compared",
+    "agent-tools",
+    "deep-q-networks",
+    "neural-networks",
+    "backpropagation-and-gradient-descent"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-164",
+   "q": "python decorators explained",
+   "style": "coverage-probe",
+   "topic": "dev",
+   "kind": "gap",
+   "expected": [
+    "python"
+   ],
+   "expectedTool": null,
+   "top": "python",
+   "solid": true,
+   "score": 46,
+   "top5": [
+    "python",
+    "rag-with-python",
+    "python-for-ai",
+    "calling-ai-apis-with-python",
+    "python-ai-libraries"
+   ],
+   "learn": [
+    "python-for-ai",
+    "calling-ai-apis-with-python"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "nearby page: python",
+   "pathOk": null,
+   "rankIds": [
+    "python",
+    "rag-with-python",
+    "python-for-ai",
+    "calling-ai-apis-with-python",
+    "python-ai-libraries",
+    "python-data-for-ai",
+    "langchain",
+    "ray"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-165",
+   "q": "how to write a regex for emails",
+   "style": "coverage-probe",
+   "topic": "dev",
+   "kind": "gap",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) grammar-guided-generation",
+   "solid": false,
+   "score": 14,
+   "top5": [
+    "grammar-guided-generation",
+    "prompt-engineering",
+    "outlines",
+    "self-consistency",
+    "typescript-api-client-types"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "transparent non-answer",
+   "pathOk": null,
+   "rankIds": [
+    "grammar-guided-generation",
+    "prompt-engineering",
+    "outlines",
+    "self-consistency",
+    "typescript-api-client-types",
+    "json-schema",
+    "llm-as-a-judge",
+    "code-execution-sandboxing"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-166",
+   "q": "svelte vs react",
+   "style": "coverage-probe",
+   "topic": "dev",
+   "kind": "gap",
+   "expected": [
+    "react",
+    "frontend-and-backend"
+   ],
+   "expectedTool": null,
+   "top": "react",
+   "solid": true,
+   "score": 54,
+   "top5": [
+    "react",
+    "react-ai-interfaces",
+    "react-agent-pattern",
+    "react-chatbot-state",
+    "ai-agents"
+   ],
+   "learn": [
+    "react-ai-interfaces",
+    "react-chatbot-state",
+    "sharepoint-framework",
+    "nextjs",
+    "html-and-css"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "nearby page: react",
+   "pathOk": null,
+   "rankIds": [
+    "react",
+    "react-ai-interfaces",
+    "react-agent-pattern",
+    "react-chatbot-state",
+    "ai-agents",
+    "sharepoint-framework",
+    "build-spfx-web-part",
+    "nextjs"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-167",
+   "q": "how do i build a recommendation engine",
+   "style": "coverage-probe",
+   "topic": "ai",
+   "kind": "gap",
+   "expected": [
+    "embeddings",
+    "supervised-learning"
+   ],
+   "expectedTool": null,
+   "top": "(weak) build-spfx-web-part",
+   "solid": false,
+   "score": 20,
+   "top5": [
+    "build-spfx-web-part",
+    "rag-with-python",
+    "llamaindex",
+    "local-runtimes-compared",
+    "teams-development"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "transparent non-answer",
+   "pathOk": null,
+   "rankIds": [
+    "build-spfx-web-part",
+    "rag-with-python",
+    "llamaindex",
+    "local-runtimes-compared",
+    "teams-development",
+    "llm-benchmarks-vs-task-evals",
+    "react-ai-interfaces",
+    "vllm"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-168",
+   "q": "speech synthesis voices that sound human",
+   "style": "coverage-probe",
+   "topic": "ai",
+   "kind": "gap",
+   "expected": [
+    "speech-ai"
+   ],
+   "expectedTool": null,
+   "top": "(weak) speech-ai",
+   "solid": false,
+   "score": 22,
+   "top5": [
+    "speech-ai",
+    "human-preference-evaluation",
+    "rlhf",
+    "preference-optimization",
+    "multimodal-ai"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "transparent non-answer",
+   "pathOk": null,
+   "rankIds": [
+    "speech-ai",
+    "human-preference-evaluation",
+    "rlhf",
+    "preference-optimization",
+    "multimodal-ai",
+    "ai-evaluation",
+    "langgraph",
+    "agentic-workflows"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-169",
+   "q": "which gpu to buy this year",
+   "style": "coverage-probe",
+   "topic": "ai",
+   "kind": "gap",
+   "expected": [
+    "gpus-and-ai-accelerators"
+   ],
+   "expectedTool": null,
+   "top": "gpus-and-ai-accelerators",
+   "solid": true,
+   "score": 68,
+   "top5": [
+    "gpus-and-ai-accelerators",
+    "quantization",
+    "model-serving-and-inference",
+    "lora-and-peft",
+    "distributed-training"
+   ],
+   "learn": [
+    "quantization",
+    "model-serving-and-inference",
+    "distributed-training",
+    "flash-attention",
+    "pytorch"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "nearby page: gpus-and-ai-accelerators",
+   "pathOk": null,
+   "rankIds": [
+    "gpus-and-ai-accelerators",
+    "quantization",
+    "model-serving-and-inference",
+    "lora-and-peft",
+    "distributed-training",
+    "flash-attention",
+    "local-llm-runtimes",
+    "pytorch"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-170",
+   "q": "tensorflow lite for microcontrollers",
+   "style": "coverage-probe",
+   "topic": "ai",
+   "kind": "gap",
+   "expected": [
+    "onnx-runtime",
+    "pytorch",
+    "small-language-models"
+   ],
+   "expectedTool": null,
+   "top": "(weak) pytorch",
+   "solid": false,
+   "score": 8,
+   "top5": [
+    "pytorch",
+    "deep-learning",
+    "neural-networks",
+    "recurrent-neural-networks"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "transparent non-answer",
+   "pathOk": null,
+   "rankIds": [
+    "pytorch",
+    "deep-learning",
+    "neural-networks",
+    "recurrent-neural-networks"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-171",
+   "q": "what is jax",
+   "style": "coverage-probe",
+   "topic": "ai",
+   "kind": "gap",
+   "expected": [
+    "pytorch"
+   ],
+   "expectedTool": null,
+   "top": "(weak) ai-for-science",
+   "solid": false,
+   "score": 4,
+   "top5": [
+    "ai-for-science",
+    "backpropagation-and-gradient-descent",
+    "deep-learning",
+    "neural-networks",
+    "physics-informed-neural-networks"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "transparent non-answer",
+   "pathOk": null,
+   "rankIds": [
+    "ai-for-science",
+    "backpropagation-and-gradient-descent",
+    "deep-learning",
+    "neural-networks",
+    "physics-informed-neural-networks",
+    "pytorch"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-172",
+   "q": "what does the nobel prize in chemistry have to do with ai",
+   "style": "coverage-probe",
+   "topic": "ai",
+   "kind": "gap",
+   "expected": [
+    "alphafold"
+   ],
+   "expectedTool": null,
+   "top": "(weak) ai-governance",
+   "solid": false,
+   "score": 50,
+   "top5": [
+    "ai-governance",
+    "eu-ai-act",
+    "nist-ai-rmf",
+    "embodied-ai",
+    "local-ai"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "transparent non-answer",
+   "pathOk": null,
+   "rankIds": [
+    "ai-governance",
+    "eu-ai-act",
+    "nist-ai-rmf",
+    "embodied-ai",
+    "local-ai",
+    "ai-sdks",
+    "constitutional-ai-and-rlaif",
+    "local-ai-vs-cloud-ai"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-173",
+   "q": "what is azure openai service pricing",
+   "style": "coverage-probe",
+   "topic": "ms",
+   "kind": "gap",
+   "expected": [
+    "azure-fundamentals",
+    "model-apis"
+   ],
+   "expectedTool": null,
+   "top": "azure-fundamentals",
+   "solid": true,
+   "score": 44,
+   "top5": [
+    "azure-fundamentals",
+    "openai-agents-sdk",
+    "microsoft-entra-id",
+    "semantic-kernel",
+    "ai-sdks"
+   ],
+   "learn": [
+    "microsoft-entra-id",
+    "aws-fundamentals"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "nearby page: azure-fundamentals",
+   "pathOk": null,
+   "rankIds": [
+    "azure-fundamentals",
+    "openai-agents-sdk",
+    "microsoft-entra-id",
+    "semantic-kernel",
+    "ai-sdks",
+    "csharp",
+    "agent-frameworks-compared",
+    "llamaindex"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-174",
+   "q": "how to build a power bi report",
+   "style": "coverage-probe",
+   "topic": "ms",
+   "kind": "gap",
+   "expected": [
+    "power-platform"
+   ],
+   "expectedTool": null,
+   "top": "power-platform",
+   "solid": true,
+   "score": 46,
+   "top5": [
+    "power-platform",
+    "build-spfx-web-part",
+    "rag-with-python",
+    "teams-development",
+    "llm-benchmarks-vs-task-evals"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "nearby page: power-platform",
+   "pathOk": null,
+   "rankIds": [
+    "power-platform",
+    "build-spfx-web-part",
+    "rag-with-python",
+    "teams-development",
+    "llm-benchmarks-vs-task-evals",
+    "react-ai-interfaces",
+    "speech-ai",
+    "benchmark-contamination"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-175",
+   "q": "transformer cosplay costume",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "transformers",
+   "solid": true,
+   "score": 50,
+   "top5": [
+    "transformers",
+    "cnn-vs-vision-transformer",
+    "vision-transformers",
+    "transformers-vs-state-space-models",
+    "mixture-of-experts"
+   ],
+   "learn": [
+    "large-language-models"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident answer for out-of-scope query: transformers",
+   "pathOk": null,
+   "rankIds": [
+    "transformers",
+    "cnn-vs-vision-transformer",
+    "vision-transformers",
+    "transformers-vs-state-space-models",
+    "mixture-of-experts",
+    "encoder-decoder-vs-decoder-only",
+    "large-language-models",
+    "diffusion-models"
+   ],
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-176",
+   "q": "mamba mentality tshirt",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) state-space-models",
+   "solid": false,
+   "score": 31,
+   "top5": [
+    "state-space-models",
+    "transformers-vs-state-space-models"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "rt-negative-context",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "state-space-models",
+    "transformers-vs-state-space-models"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-177",
+   "q": "python regius ball care",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "python",
+   "solid": true,
+   "score": 46,
+   "top5": [
+    "python",
+    "rag-with-python",
+    "python-for-ai",
+    "calling-ai-apis-with-python",
+    "python-ai-libraries"
+   ],
+   "learn": [
+    "python-for-ai",
+    "calling-ai-apis-with-python"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident answer for out-of-scope query: python",
+   "pathOk": null,
+   "rankIds": [
+    "python",
+    "rag-with-python",
+    "python-for-ai",
+    "calling-ai-apis-with-python",
+    "python-ai-libraries",
+    "python-data-for-ai",
+    "langchain",
+    "ray"
+   ],
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-178",
+   "q": "react native vs flutter",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "gap",
+   "expected": [
+    "react",
+    "frontend-and-backend"
+   ],
+   "expectedTool": null,
+   "top": "react",
+   "solid": true,
+   "score": 54,
+   "top5": [
+    "react",
+    "react-agent-pattern",
+    "react-ai-interfaces",
+    "react-chatbot-state",
+    "ai-agents"
+   ],
+   "learn": [
+    "react-ai-interfaces",
+    "react-chatbot-state",
+    "sharepoint-framework",
+    "nextjs",
+    "html-and-css"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "nearby page: react",
+   "pathOk": null,
+   "rankIds": [
+    "react",
+    "react-agent-pattern",
+    "react-ai-interfaces",
+    "react-chatbot-state",
+    "ai-agents",
+    "sharepoint-framework",
+    "build-spfx-web-part",
+    "nextjs"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-179",
+   "q": "docker pants waterproof",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) docker",
+   "solid": false,
+   "score": 75,
+   "top5": [
+    "docker",
+    "containers",
+    "code-execution-sandboxing",
+    "autogen",
+    "robot-operating-system"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "rt-negative-context",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "docker",
+    "containers",
+    "code-execution-sandboxing",
+    "autogen",
+    "robot-operating-system",
+    "swe-bench",
+    "kubernetes"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-180",
+   "q": "estate agent fees when selling a flat",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) ai-agent-vs-chatbot",
+   "solid": false,
+   "score": 35,
+   "top5": [
+    "ai-agent-vs-chatbot",
+    "agent-protocol-landscape",
+    "multi-agent-systems",
+    "choosing-an-agent-framework",
+    "agent-frameworks-compared"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "ai-agent-vs-chatbot",
+    "agent-protocol-landscape",
+    "multi-agent-systems",
+    "choosing-an-agent-framework",
+    "agent-frameworks-compared",
+    "ai-agents",
+    "agent-evaluation",
+    "a2a-protocol"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-181",
+   "q": "scale model train layouts",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) model-cards",
+   "solid": false,
+   "score": 28,
+   "top5": [
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference",
+    "process-reward-model"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "model-cards",
+    "model-apis",
+    "model-drift-and-monitoring",
+    "model-serving-and-inference",
+    "process-reward-model",
+    "world-models",
+    "outcome-reward-model",
+    "instruction-tuning"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-182",
+   "q": "java island travel tips",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "java",
+   "solid": true,
+   "score": 46,
+   "top5": [
+    "java",
+    "semantic-kernel",
+    "csharp",
+    "prompt-engineering"
+   ],
+   "learn": [
+    "csharp"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident answer for out-of-scope query: java",
+   "pathOk": null,
+   "rankIds": [
+    "java",
+    "semantic-kernel",
+    "csharp",
+    "prompt-engineering"
+   ],
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-183",
+   "q": "go kart racing near me",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) none",
+   "solid": false,
+   "score": 0,
+   "top5": [],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-184",
+   "q": "spring break destinations",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) java",
+   "solid": false,
+   "score": 4,
+   "top5": [
+    "java",
+    "agent-planning"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "java",
+    "agent-planning"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-185",
+   "q": "swift bird migration",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) prisma-and-orms",
+   "solid": false,
+   "score": 4,
+   "top5": [
+    "prisma-and-orms"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "prisma-and-orms"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-186",
+   "q": "gemini constellation stars",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) none",
+   "solid": false,
+   "score": 0,
+   "top5": [],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-187",
+   "q": "falcon bird of prey training",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) distributed-training",
+   "solid": false,
+   "score": 13,
+   "top5": [
+    "distributed-training",
+    "gdpr-and-ai",
+    "fine-tuning",
+    "what-is-ai",
+    "dpo"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "distributed-training",
+    "gdpr-and-ai",
+    "fine-tuning",
+    "what-is-ai",
+    "dpo",
+    "scaling-laws",
+    "backpropagation-and-gradient-descent",
+    "overfitting-and-regularization"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-188",
+   "q": "bert lahr wizard of oz",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) encoder-decoder-vs-decoder-only",
+   "solid": false,
+   "score": 10,
+   "top5": [
+    "encoder-decoder-vs-decoder-only",
+    "self-supervised-learning",
+    "transformers"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "encoder-decoder-vs-decoder-only",
+    "self-supervised-learning",
+    "transformers"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-189",
+   "q": "llama trekking in peru",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) llama-cpp",
+   "solid": false,
+   "score": 32,
+   "top5": [
+    "llama-cpp",
+    "gbnf-grammars",
+    "local-runtimes-compared",
+    "local-llm-runtimes",
+    "ai-guardrails"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "llama-cpp",
+    "gbnf-grammars",
+    "local-runtimes-compared",
+    "local-llm-runtimes",
+    "ai-guardrails",
+    "open-weights-models",
+    "constrained-decoding",
+    "dpo"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-190",
+   "q": "claude debussy piano pieces",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) chunking",
+   "solid": false,
+   "score": 1,
+   "top5": [
+    "chunking",
+    "tokens"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "chunking",
+    "tokens"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-191",
+   "q": "mistral breeze sailing",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) open-weights-models",
+   "solid": false,
+   "score": 4,
+   "top5": [
+    "open-weights-models"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "open-weights-models"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-192",
+   "q": "agent provocateur meaning",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) ai-agent-vs-chatbot",
+   "solid": false,
+   "score": 35,
+   "top5": [
+    "ai-agent-vs-chatbot",
+    "agent-protocol-landscape",
+    "multi-agent-systems",
+    "choosing-an-agent-framework",
+    "agent-frameworks-compared"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "ai-agent-vs-chatbot",
+    "agent-protocol-landscape",
+    "multi-agent-systems",
+    "choosing-an-agent-framework",
+    "agent-frameworks-compared",
+    "ai-agents",
+    "agent-evaluation",
+    "a2a-protocol"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-193",
+   "q": "perplexed expression synonyms",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) langchain",
+   "solid": false,
+   "score": 2,
+   "top5": [
+    "langchain",
+    "grammar-guided-generation"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "langchain",
+    "grammar-guided-generation"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-194",
+   "q": "training for a triathlon",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) distributed-training",
+   "solid": false,
+   "score": 13,
+   "top5": [
+    "distributed-training",
+    "gdpr-and-ai",
+    "fine-tuning",
+    "what-is-ai",
+    "dpo"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "distributed-training",
+    "gdpr-and-ai",
+    "fine-tuning",
+    "what-is-ai",
+    "dpo",
+    "scaling-laws",
+    "backpropagation-and-gradient-descent",
+    "overfitting-and-regularization"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-195",
+   "q": "attention to detail resume tips",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "transformers",
+   "solid": true,
+   "score": 34,
+   "top5": [
+    "transformers",
+    "flash-attention",
+    "kv-cache",
+    "state-space-models",
+    "transformers-vs-state-space-models"
+   ],
+   "learn": [
+    "context-windows"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident answer for out-of-scope query: transformers",
+   "pathOk": null,
+   "rankIds": [
+    "transformers",
+    "flash-attention",
+    "kv-cache",
+    "state-space-models",
+    "transformers-vs-state-space-models",
+    "context-windows",
+    "graph-neural-networks",
+    "prompt-engineering"
+   ],
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-196",
+   "q": "vector illustration of birds",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) choosing-a-vector-store",
+   "solid": false,
+   "score": 28,
+   "top5": [
+    "choosing-a-vector-store",
+    "vector-database-vs-traditional-database",
+    "vector-databases",
+    "pgvector",
+    "embeddings"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "choosing-a-vector-store",
+    "vector-database-vs-traditional-database",
+    "vector-databases",
+    "pgvector",
+    "embeddings",
+    "python-ai-libraries",
+    "agent-memory",
+    "rag-with-python"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-197",
+   "q": "cookie consent banner wording for my shop",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) oauth",
+   "solid": false,
+   "score": 4,
+   "top5": [
+    "oauth",
+    "oauth-for-ai-agents"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "oauth",
+    "oauth-for-ai-agents"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-198",
+   "q": "gradient descent hiking trail name",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "backpropagation-and-gradient-descent",
+   "solid": true,
+   "score": 102,
+   "top5": [
+    "backpropagation-and-gradient-descent",
+    "neural-networks",
+    "proximal-policy-optimization",
+    "physics-informed-neural-networks",
+    "recurrent-neural-networks"
+   ],
+   "learn": [
+    "neural-networks",
+    "proximal-policy-optimization"
+   ],
+   "tool": null,
+   "gap": "",
+   "class": "FALSE POSITIVE",
+   "note": "confident answer for out-of-scope query: backpropagation-and-gradient-descent",
+   "pathOk": null,
+   "rankIds": [
+    "backpropagation-and-gradient-descent",
+    "neural-networks",
+    "proximal-policy-optimization",
+    "physics-informed-neural-networks",
+    "recurrent-neural-networks",
+    "supervised-learning",
+    "rest-vs-graphql"
+   ],
+   "sem": null,
+   "classAmended": "FALSE POSITIVE",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-199",
+   "q": "how to apply for a visa",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) ai-governance",
+   "solid": false,
+   "score": 2,
+   "top5": [
+    "ai-governance",
+    "eu-ai-act",
+    "gdpr-and-ai"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "ai-governance",
+    "eu-ai-act",
+    "gdpr-and-ai"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-200",
+   "q": "best way to learn guitar",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) best-of-n-sampling",
+   "solid": false,
+   "score": 28,
+   "top5": [
+    "best-of-n-sampling",
+    "structured-output-methods-compared",
+    "local-runtimes-compared",
+    "cnn-vs-vision-transformer",
+    "benchmarks-and-leaderboards"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "best-of-n-sampling",
+    "structured-output-methods-compared",
+    "local-runtimes-compared",
+    "cnn-vs-vision-transformer",
+    "benchmarks-and-leaderboards",
+    "evaluation-metrics-for-ai",
+    "html-and-css",
+    "overfitting-and-regularization"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-201",
+   "q": "what causes inflation",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) none",
+   "solid": false,
+   "score": 0,
+   "top5": [],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-202",
+   "q": "traffic on the m25 right now",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) gdpr-and-ai",
+   "solid": false,
+   "score": 6,
+   "top5": [
+    "gdpr-and-ai",
+    "benchmarks-and-leaderboards",
+    "java",
+    "mongodb",
+    "chunking"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "gdpr-and-ai",
+    "benchmarks-and-leaderboards",
+    "java",
+    "mongodb",
+    "chunking",
+    "flash-attention",
+    "gsm8k-and-math-benchmarks",
+    "json-web-tokens"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-203",
+   "q": "cheapest flights to rome in march",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) none",
+   "solid": false,
+   "score": 0,
+   "top5": [],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-204",
+   "q": "pasta carbonara authentic recipe",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) none",
+   "solid": false,
+   "score": 0,
+   "top5": [],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-205",
+   "q": "bake a chocolate cake without eggs",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) calling-ai-apis-with-python",
+   "solid": false,
+   "score": 2,
+   "top5": [
+    "calling-ai-apis-with-python",
+    "self-supervised-learning",
+    "cnn-vs-vision-transformer",
+    "dpo",
+    "oauth"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "calling-ai-apis-with-python",
+    "self-supervised-learning",
+    "cnn-vs-vision-transformer",
+    "dpo",
+    "oauth",
+    "oauth-for-ai-agents",
+    "reasoning-transparency",
+    "reward-hacking"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-206",
+   "q": "the score of last nights basketball game",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) evaluation-metrics-for-ai",
+   "solid": false,
+   "score": 12,
+   "top5": [
+    "evaluation-metrics-for-ai",
+    "mmlu",
+    "search-over-reasoning",
+    "benchmark-contamination",
+    "diffusion-models"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "evaluation-metrics-for-ai",
+    "mmlu",
+    "search-over-reasoning",
+    "benchmark-contamination",
+    "diffusion-models",
+    "deep-q-networks",
+    "prm-vs-orm"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-207",
+   "q": "biggest city in canada",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) owasp-llm-top-10",
+   "solid": false,
+   "score": 2,
+   "top5": [
+    "owasp-llm-top-10"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "owasp-llm-top-10"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-208",
+   "q": "how long does it take to boil an egg",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) agent-memory",
+   "solid": false,
+   "score": 8,
+   "top5": [
+    "agent-memory",
+    "agent-tools",
+    "transformers-vs-state-space-models",
+    "context-windows",
+    "positional-encoding"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "agent-memory",
+    "agent-tools",
+    "transformers-vs-state-space-models",
+    "context-windows",
+    "positional-encoding",
+    "state-space-models",
+    "common-prompting-mistakes",
+    "prompt-caching"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-209",
+   "q": "should i invest in the latest ai company stock",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) ai-governance",
+   "solid": false,
+   "score": 52,
+   "top5": [
+    "ai-governance",
+    "eu-ai-act",
+    "nist-ai-rmf",
+    "embodied-ai",
+    "local-ai"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "ai-governance",
+    "eu-ai-act",
+    "nist-ai-rmf",
+    "embodied-ai",
+    "local-ai",
+    "ai-sdks",
+    "constitutional-ai-and-rlaif",
+    "local-ai-vs-cloud-ai"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-210",
+   "q": "which is the smartest ai right now",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) ai-governance",
+   "solid": false,
+   "score": 50,
+   "top5": [
+    "ai-governance",
+    "eu-ai-act",
+    "nist-ai-rmf",
+    "embodied-ai",
+    "local-ai"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "ai-governance",
+    "eu-ai-act",
+    "nist-ai-rmf",
+    "embodied-ai",
+    "local-ai",
+    "ai-sdks",
+    "constitutional-ai-and-rlaif",
+    "local-ai-vs-cloud-ai"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  },
+  {
+   "id": "H3-211",
+   "q": "write a cover email for a job",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "kind": "neg",
+   "expected": [],
+   "expectedTool": null,
+   "top": "(weak) prompt-engineering",
+   "solid": false,
+   "score": 14,
+   "top5": [
+    "prompt-engineering",
+    "gdpr-and-ai",
+    "typescript-api-client-types",
+    "json-schema",
+    "llm-as-a-judge"
+   ],
+   "learn": [],
+   "tool": null,
+   "gap": "",
+   "class": "PASS",
+   "note": "no confident answer",
+   "pathOk": null,
+   "rankIds": [
+    "prompt-engineering",
+    "gdpr-and-ai",
+    "typescript-api-client-types",
+    "json-schema",
+    "llm-as-a-judge",
+    "code-execution-sandboxing",
+    "humaneval",
+    "integration-permissions"
+   ],
+   "sem": null,
+   "classAmended": "PASS",
+   "amendReason": ""
+  }
+ ]
+}
