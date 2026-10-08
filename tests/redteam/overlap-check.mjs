@@ -8,7 +8,10 @@ for (const f of ["tests/knowledge-search.mjs", "tests/knowledge-ai-v3-queries.mj
   const src = readFileSync(new URL(f, root), "utf8");
   for (const m of src.matchAll(/(?:Q\("[a-z-]+",\s*|q:\s*)"((?:[^"\\]|\\.)*)"/g)) existing.push(m[1]);
 }
-const data = JSON.parse(readFileSync(new URL("tests/redteam/frozen-queries.json", root), "utf8")).queries;
+const main = JSON.parse(readFileSync(new URL("tests/redteam/frozen-queries.json", root), "utf8")).queries;
+const h2 = JSON.parse(readFileSync(new URL("tests/redteam/frozen-holdout2.json", root), "utf8")).queries;
+for (const q of main) existing.push(q.q);
+const data = h2;
 let bad = 0;
 for (const q of data) {
   const a = toks(q.q);
@@ -18,5 +21,5 @@ for (const q of data) {
     if (norm(q.q) === norm(e) || (a.size >= 3 && j >= 0.6)) { console.log("OVERLAP", q.id, JSON.stringify(q.q), "~", JSON.stringify(e), j.toFixed(2)); bad++; }
   }
 }
-console.log(`existing queries compared: ${existing.length}; frozen queries: ${data.length}; overlaps: ${bad}`);
+console.log(`existing queries compared: ${existing.length}; holdout-2 queries: ${data.length}; overlaps: ${bad}`);
 process.exit(bad ? 1 : 0);

@@ -1,4 +1,4 @@
-// Independent red-team runner. Usage: node tests/redteam/run.mjs <label> [--baseline-file results.json]
+// Independent red-team runner. Usage: node tests/redteam/run.mjs <label> [dataset-file-in-tests/redteam, default frozen-queries.json]
 // Classification (fixed before the baseline run):
 //   kind=page : solid answer in accept -> PASS; solid answer elsewhere -> FALSE POSITIVE;
 //               not solid, accepted page in top-5/learn-more -> WEAK; else MISS.
@@ -12,7 +12,8 @@ import { searchKnowledge } from "../../knowledge/search-core.mjs";
 
 const root = new URL("../../", import.meta.url);
 const label = process.argv[2] || "run";
-const dataRaw = readFileSync(new URL("tests/redteam/frozen-queries.json", root), "utf8");
+const datasetFile = process.argv[3] || "frozen-queries.json";
+const dataRaw = readFileSync(new URL("tests/redteam/" + datasetFile, root), "utf8");
 const data = JSON.parse(dataRaw);
 const datasetSha = createHash("sha256").update(dataRaw).digest("hex");
 const index = JSON.parse(readFileSync(new URL("knowledge/search-index.json", root), "utf8"));
@@ -58,7 +59,7 @@ const by = (key) => { const m = {}; for (const r of results) { (m[r[key]] = m[r[
 const table = (key) => ["| " + key + " | n | PASS | WEAK | MISS | FP | pass rate |", "| --- | --- | --- | --- | --- | --- | --- |", ...Object.entries(by(key)).sort().map(([k, a]) => `| ${k} | ${a.length} | ${count(a, "PASS")} | ${count(a, "WEAK")} | ${count(a, "MISS")} | ${count(a, "FALSE POSITIVE")} | ${pct(count(a, "PASS"), a.length)} |`)];
 const pathRows = results.filter((r) => r.pathOk !== null);
 const L = [];
-L.push(`# Knowledge red-team report — ${label}`, "", `Dataset: \`tests/redteam/frozen-queries.json\` sha256 \`${datasetSha}\``, "");
+L.push(`# Knowledge red-team report — ${label}`, "", `Dataset: \`tests/redteam/${datasetFile}\` sha256 \`${datasetSha}\``, "");
 L.push(`Total ${summary.total} · PASS ${summary.pass} · WEAK ${summary.weak} · MISS ${summary.miss} · FALSE POSITIVE ${summary.falsePositive}`);
 L.push(`Pass rate ${summary.passRate} · False-positive rate ${summary.falsePositiveRate}`);
 L.push(`Multi-hop path completeness (answer + learn-more + top results contain every expected stepping-stone page): ${pathRows.filter((r) => r.pathOk).length}/${pathRows.length}`, "");
