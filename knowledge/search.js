@@ -50,7 +50,18 @@ function render(query) {
     status.textContent = "";
     return;
   }
-  const found = semantic ? searchHybrid(index, lexicon, semantic, q, "gated") : searchKnowledge(index, lexicon, q);
+  const found = semantic
+    ? searchHybrid(index, lexicon, semantic, q, "gated", {
+        // Release mode: semantics improves ranking / Closest pages only.
+        // It must never create, withhold, or swap a confident lexical answer.
+        vetoZ: -1e9,
+        lexVetoCoverage: 0,
+        ovZ: 1e9,
+        contradictVeto: false,
+        dTauZ: 1e9,
+        limitedConfidence: true
+      })
+    : searchKnowledge(index, lexicon, q);
   if (found.gap) {
     const note = el("p", "kn-gap");
     note.textContent = found.gap.message;
