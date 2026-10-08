@@ -1,0 +1,2159 @@
+{
+ "name": "Calibration set (semantic prototype) \u2014 NOT H3",
+ "version": 1,
+ "note": "Written independently of H3 for gate calibration. Content-derived paraphrases of page topics, non-tech ambiguous negatives, gap queries.",
+ "queries": [
+  {
+   "id": "CAL-001",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "a program that learns from examples instead of explicit rules",
+   "kind": "page",
+   "accept": [
+    "what-is-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-002",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "software that writes new text and images on its own",
+   "kind": "page",
+   "accept": [
+    "generative-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-003",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "chatbots like the ones everyone talks about, how are they built",
+   "kind": "page",
+   "accept": [
+    "large-language-models"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-004",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "why do language models chop words into pieces",
+   "kind": "page",
+   "accept": [
+    "tokens"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-005",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "how much text can a model remember in one conversation",
+   "kind": "page",
+   "accept": [
+    "context-windows"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-006",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "the architecture behind modern chat models that looks at all words at once",
+   "kind": "page",
+   "accept": [
+    "transformers"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-007",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "models that understand pictures as well as words",
+   "kind": "page",
+   "accept": [
+    "multimodal-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-008",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "how to phrase instructions so the model does what i want",
+   "kind": "page",
+   "accept": [
+    "prompt-engineering"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-009",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "the hidden instructions that set the assistant's personality",
+   "kind": "page",
+   "accept": [
+    "system-prompts"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-010",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "my assistant keeps making up facts, why",
+   "kind": "page",
+   "accept": [
+    "ai-hallucinations"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-011",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "ways to stop a chatbot inventing sources",
+   "kind": "page",
+   "accept": [
+    "how-to-reduce-hallucinations"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-012",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "turning sentences into lists of numbers so similar ones cluster",
+   "kind": "page",
+   "accept": [
+    "embeddings"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-013",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "database designed to find nearest neighbours of numeric representations",
+   "kind": "page",
+   "accept": [
+    "vector-databases"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-014",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "how should i split long documents before indexing them",
+   "kind": "page",
+   "accept": [
+    "chunking"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-015",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "letting a model look things up in my own documents before answering",
+   "kind": "page",
+   "accept": [
+    "rag"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-016",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "teaching an existing model my company's style with more training",
+   "kind": "page",
+   "accept": [
+    "fine-tuning"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-017",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "run a language model on my own laptop without internet",
+   "kind": "page",
+   "accept": [
+    "local-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-018",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "is it safe to give a chatbot confidential company information",
+   "kind": "page",
+   "accept": [
+    "ai-privacy-and-security"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-019",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "a malicious web page tells my assistant to ignore its rules",
+   "kind": "page",
+   "accept": [
+    "prompt-injection"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-020",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "a model that plans steps and uses software on its own to finish a goal",
+   "kind": "page",
+   "accept": [
+    "ai-agents"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-021",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "how can a model press buttons in other programs",
+   "kind": "page",
+   "accept": [
+    "agent-tools"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-022",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "getting the model to return a call to my function with arguments",
+   "kind": "page",
+   "accept": [
+    "function-calling"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-023",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "how does an assistant remember things between sessions",
+   "kind": "page",
+   "accept": [
+    "agent-memory"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-024",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "several specialised bots cooperating on a job",
+   "kind": "page",
+   "accept": [
+    "multi-agent-systems"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-025",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "a standard way for assistants to plug into external data sources",
+   "kind": "page",
+   "accept": [
+    "mcp"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-026",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "which is better for adding knowledge, retrieval or extra training",
+   "kind": "page",
+   "accept": [
+    "rag-vs-fine-tuning"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-027",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "difference between a simple chat bot and an autonomous one",
+   "kind": "page",
+   "accept": [
+    "ai-agent-vs-chatbot"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-028",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "using python to call a hosted language model",
+   "kind": "page",
+   "accept": [
+    "calling-ai-apis-with-python"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-029",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "which python packages should i learn for machine learning work",
+   "kind": "page",
+   "accept": [
+    "python-ai-libraries"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-030",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "showing the answer word by word as it is generated",
+   "kind": "page",
+   "accept": [
+    "streaming-ai-responses"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-031",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "building a chat window in a javascript ui library",
+   "kind": "page",
+   "accept": [
+    "react-ai-interfaces"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-032",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "which toolkit to pick for building an assistant with tools",
+   "kind": "page",
+   "accept": [
+    "choosing-an-agent-framework"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-033",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "where should i keep records for an ai powered app",
+   "kind": "page",
+   "accept": [
+    "databases-for-ai-apps"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-034",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "how does a bot get permission to read my email",
+   "kind": "page",
+   "accept": [
+    "oauth-for-ai-agents"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-035",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "a format for data made of curly braces and key value pairs",
+   "kind": "page",
+   "accept": [
+    "what-is-json"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-036",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "how do two programs talk to each other over the web",
+   "kind": "page",
+   "accept": [
+    "what-is-an-api"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-037",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "proving who you are when calling a web service",
+   "kind": "page",
+   "accept": [
+    "api-authentication"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-038",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "microsoft's workplace intranet and document libraries",
+   "kind": "page",
+   "accept": [
+    "sharepoint"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-039",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "custom components for microsoft's intranet written in typescript",
+   "kind": "page",
+   "accept": [
+    "sharepoint-framework"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-040",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "microsoft's api for accessing mail, files and calendars of users",
+   "kind": "page",
+   "accept": [
+    "microsoft-graph"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-041",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "low code apps and automations from microsoft",
+   "kind": "page",
+   "accept": [
+    "power-platform"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-042",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "microsoft's cloud identity and sign in service",
+   "kind": "page",
+   "accept": [
+    "microsoft-entra-id"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-043",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "hosted open model hub and libraries for transformers",
+   "kind": "page",
+   "accept": [
+    "hugging-face"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-044",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "popular toolkit for chaining llm calls together",
+   "kind": "page",
+   "accept": [
+    "langchain"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-045",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "programs that load and serve open models on a personal computer",
+   "kind": "page",
+   "accept": [
+    "local-llm-runtimes"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-046",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "a language that adds types on top of the web scripting language",
+   "kind": "page",
+   "accept": [
+    "typescript"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-047",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "systems language focused on memory safety without garbage collection",
+   "kind": "page",
+   "accept": [
+    "rust"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-048",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "the markup and styling languages every web page uses",
+   "kind": "page",
+   "accept": [
+    "html-and-css"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-049",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "server side runtime that runs scripts outside the browser",
+   "kind": "page",
+   "accept": [
+    "nodejs"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-050",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "query language for asking relational tables questions",
+   "kind": "page",
+   "accept": [
+    "sql"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-051",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "relational database with a strong extension ecosystem",
+   "kind": "page",
+   "accept": [
+    "postgresql"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-052",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "storing documents as flexible json instead of tables",
+   "kind": "page",
+   "accept": [
+    "mongodb"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-053",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "fast in memory store used for caching",
+   "kind": "page",
+   "accept": [
+    "redis"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-054",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "versioning code and collaborating with branches",
+   "kind": "page",
+   "accept": [
+    "git"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-055",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "packaging apps with all dependencies to run anywhere",
+   "kind": "page",
+   "accept": [
+    "docker"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-056",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "automatically testing and deploying every commit",
+   "kind": "page",
+   "accept": [
+    "cicd"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-057",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "secrets kept outside source code as configuration",
+   "kind": "page",
+   "accept": [
+    "environment-variables"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-058",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "signed tokens a server hands out after login",
+   "kind": "page",
+   "accept": [
+    "json-web-tokens"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-059",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "browser rule that blocks requests to other websites",
+   "kind": "page",
+   "accept": [
+    "cors"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-060",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "a server calls my url when something happens",
+   "kind": "page",
+   "accept": [
+    "webhooks"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-061",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "letting the model think longer before replying improves answers",
+   "kind": "page",
+   "accept": [
+    "test-time-compute"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-062",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "models that show step by step thinking before the final answer",
+   "kind": "page",
+   "accept": [
+    "reasoning-models"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-063",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "asking the model to explain its steps in sequence",
+   "kind": "page",
+   "accept": [
+    "chain-of-thought"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-064",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "sampling many answers and picking the most common",
+   "kind": "page",
+   "accept": [
+    "self-consistency"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-065",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "controlling randomness when a model picks the next word",
+   "kind": "page",
+   "accept": [
+    "sampling-and-decoding"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-066",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "forcing output to follow a defined shape",
+   "kind": "page",
+   "accept": [
+    "structured-outputs"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-067",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "a description of allowed fields and types for data",
+   "kind": "page",
+   "accept": [
+    "json-schema"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-068",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "learning from labelled input output pairs",
+   "kind": "page",
+   "accept": [
+    "supervised-learning"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-069",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "finding patterns in data without answers provided",
+   "kind": "page",
+   "accept": [
+    "unsupervised-learning"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-070",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "layers of connected units that learn weights",
+   "kind": "page",
+   "accept": [
+    "neural-networks"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-071",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "how weights are adjusted by following the slope of the error",
+   "kind": "page",
+   "accept": [
+    "backpropagation-and-gradient-descent"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-072",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "when a model memorises training data and fails on new data",
+   "kind": "page",
+   "accept": [
+    "overfitting-and-regularization"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-073",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "reusing a pretrained network for a new task",
+   "kind": "page",
+   "accept": [
+    "transfer-learning"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-074",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "agents that learn by trial reward and penalty",
+   "kind": "page",
+   "accept": [
+    "reinforcement-learning"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-075",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "networks designed for grids of pixels",
+   "kind": "page",
+   "accept": [
+    "convolutional-neural-networks"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-076",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "networks that process sequences one step at a time with a hidden state",
+   "kind": "page",
+   "accept": [
+    "recurrent-neural-networks"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-077",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "splitting images into patches and applying attention",
+   "kind": "page",
+   "accept": [
+    "vision-transformers"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-078",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "only some specialist subnetworks are activated per input",
+   "kind": "page",
+   "accept": [
+    "mixture-of-experts"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-079",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "sequence models that avoid quadratic attention cost",
+   "kind": "page",
+   "accept": [
+    "state-space-models"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-080",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "systems that generate images by gradually removing noise",
+   "kind": "page",
+   "accept": [
+    "diffusion-models"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-081",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "two networks competing, one forging and one detecting",
+   "kind": "page",
+   "accept": [
+    "generative-adversarial-networks"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-082",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "networks that operate on nodes and edges",
+   "kind": "page",
+   "accept": [
+    "graph-neural-networks"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-083",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "caching attention keys and values to speed generation",
+   "kind": "page",
+   "accept": [
+    "kv-cache"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-084",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "encoding the order of words in a sequence",
+   "kind": "page",
+   "accept": [
+    "positional-encoding"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-085",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "how performance improves as models and data grow",
+   "kind": "page",
+   "accept": [
+    "scaling-laws"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-086",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "training a base model to follow user instructions",
+   "kind": "page",
+   "accept": [
+    "instruction-tuning"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-087",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "cheap adaptation by training small low rank matrices",
+   "kind": "page",
+   "accept": [
+    "lora-and-peft"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-088",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "shrinking model weights to fewer bits to save memory",
+   "kind": "page",
+   "accept": [
+    "quantization"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-089",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "a small student model learns to imitate a big teacher",
+   "kind": "page",
+   "accept": [
+    "knowledge-distillation"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-090",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "small draft model proposes tokens a bigger model verifies",
+   "kind": "page",
+   "accept": [
+    "speculative-decoding"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-091",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "compact models that run on phones",
+   "kind": "page",
+   "accept": [
+    "small-language-models"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-092",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "models whose parameters you can download",
+   "kind": "page",
+   "accept": [
+    "open-weights-models"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-093",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "models that answer questions about pictures",
+   "kind": "page",
+   "accept": [
+    "vision-language-models"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-094",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "converting spoken audio to text and back",
+   "kind": "page",
+   "accept": [
+    "speech-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-095",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "extracting information from scanned forms and pdfs",
+   "kind": "page",
+   "accept": [
+    "document-understanding-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-096",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "agents talking to each other using a shared protocol from google",
+   "kind": "page",
+   "accept": [
+    "a2a-protocol"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-097",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "security risks when assistants connect to tool servers",
+   "kind": "page",
+   "accept": [
+    "mcp-security"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-098",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "graph based framework for stateful agent workflows",
+   "kind": "page",
+   "accept": [
+    "langgraph"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-099",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "serving models fast with paged attention",
+   "kind": "page",
+   "accept": [
+    "vllm"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-100",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "loading quantised models in plain c plus plus",
+   "kind": "page",
+   "accept": [
+    "llama-cpp"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-101",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "simple command line tool to download and chat with local models",
+   "kind": "page",
+   "accept": [
+    "ollama"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-102",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "a library for training deep networks popular in research",
+   "kind": "page",
+   "accept": [
+    "pytorch"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-103",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "alternate between thinking and acting with observations",
+   "kind": "page",
+   "accept": [
+    "react-agent-pattern"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-104",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "agents that click and type on a computer screen",
+   "kind": "page",
+   "accept": [
+    "computer-use-agents"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-105",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "running generated code safely in isolation",
+   "kind": "page",
+   "accept": [
+    "code-execution-sandboxing"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-106",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "combine keyword and meaning search then reorder results",
+   "kind": "page",
+   "accept": [
+    "hybrid-search-and-reranking"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-107",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "retrieval over a network of connected entities",
+   "kind": "page",
+   "accept": [
+    "graph-rag"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-108",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "deciding what information goes into the model's window",
+   "kind": "page",
+   "accept": [
+    "context-engineering"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-109",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "public scoreboards comparing models",
+   "kind": "page",
+   "accept": [
+    "benchmarks-and-leaderboards"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-110",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "test questions leaking into training data",
+   "kind": "page",
+   "accept": [
+    "benchmark-contamination"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-111",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "using a strong model to grade other model answers",
+   "kind": "page",
+   "accept": [
+    "llm-as-a-judge"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-112",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "measuring how good retrieval and answers are in a rag system",
+   "kind": "page",
+   "accept": [
+    "rag-evaluation"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-113",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "deploying models to production and keeping them healthy",
+   "kind": "page",
+   "accept": [
+    "mlops"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-114",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "chips that make training fast",
+   "kind": "page",
+   "accept": [
+    "gpus-and-ai-accelerators"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-115",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "splitting training across many machines",
+   "kind": "page",
+   "accept": [
+    "distributed-training"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-116",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "seeing what happens inside every model call in production",
+   "kind": "page",
+   "accept": [
+    "llm-observability"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-117",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "input data changing so a deployed model gets worse",
+   "kind": "page",
+   "accept": [
+    "model-drift-and-monitoring"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-118",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "reusing repeated prompt prefixes to save money",
+   "kind": "page",
+   "accept": [
+    "prompt-caching"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-119",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "making a model behave in line with human values",
+   "kind": "page",
+   "accept": [
+    "ai-alignment"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-120",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "training from human comparisons of two answers",
+   "kind": "page",
+   "accept": [
+    "rlhf"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-121",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "model flatters the user instead of being accurate",
+   "kind": "page",
+   "accept": [
+    "sycophancy"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-122",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "attacking a system on purpose to find its weaknesses",
+   "kind": "page",
+   "accept": [
+    "red-teaming"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-123",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "filters that block unsafe inputs and outputs",
+   "kind": "page",
+   "accept": [
+    "ai-guardrails"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-124",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "studying circuits inside networks to understand them",
+   "kind": "page",
+   "accept": [
+    "mechanistic-interpretability"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-125",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "unfair outcomes for certain groups from automated decisions",
+   "kind": "page",
+   "accept": [
+    "ai-bias-and-fairness"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-126",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "rules and oversight for responsible ai in organisations",
+   "kind": "page",
+   "accept": [
+    "ai-governance"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-127",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "european law classifying systems by risk",
+   "kind": "page",
+   "accept": [
+    "eu-ai-act"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-128",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "documentation describing a model's intended use and limits",
+   "kind": "page",
+   "accept": [
+    "model-cards"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-129",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "list of the top vulnerabilities for llm applications",
+   "kind": "page",
+   "accept": [
+    "owasp-llm-top-10"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-130",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "predicting three dimensional protein shapes",
+   "kind": "page",
+   "accept": [
+    "alphafold"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-131",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "systems that physically interact with the world using perception and action",
+   "kind": "page",
+   "accept": [
+    "embodied-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-132",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "learning from demonstrations by an expert",
+   "kind": "page",
+   "accept": [
+    "imitation-learning"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-133",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "moving a policy from simulation to a physical robot",
+   "kind": "page",
+   "accept": [
+    "sim-to-real-transfer"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-134",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "orchestrating containers across many machines",
+   "kind": "page",
+   "accept": [
+    "kubernetes"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-135",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "finding and locating items in pictures with boxes",
+   "kind": "page",
+   "accept": [
+    "object-detection"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-136",
+   "style": "paraphrase",
+   "topic": "cal",
+   "q": "european privacy regulation and automated processing",
+   "kind": "page",
+   "accept": [
+    "gdpr-and-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N01",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "toy transformer robot for kids birthday",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N02",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "are mamba snakes dangerous",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N03",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "can my python pet eat mice",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N04",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "react to this message politely",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N05",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "docker is a clothing brand right",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N06",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "find a real estate agent near me",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N07",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "buy a model train set",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N08",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "how to bake sourdough bread",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N09",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "best pizza in rome",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N10",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "cheapest flights to lisbon",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N11",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "how do i fix a leaking tap",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N12",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "symptoms of the flu",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N13",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "who won the world cup in 2010",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N14",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "knit a scarf for beginners",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N15",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "go for a walk after dinner",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N16",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "swift flight of a bird",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N17",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "rust on my bicycle chain how to remove",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N18",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "java coffee beans origin",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N19",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "ruby gemstone value",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N20",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "agent 007 movie order",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N21",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "fashion model portfolio tips",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N22",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "how to train for a marathon",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N23",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "token of appreciation gift ideas",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N24",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "embedding a screw in drywall",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N25",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "cloud formations explained for kids",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N26",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "apple pie recipe",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N27",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "what is the weather tomorrow",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N28",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "stock market tips for beginners",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N29",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "learn guitar chords fast",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N30",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "mortgage rates today",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N31",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "tips for a job interview",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N32",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "how to grow tomatoes",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N33",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "ambassador reception dress code",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N34",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "spark plug replacement steps",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N35",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "bridge card game rules",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N36",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "sage herb cooking uses",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N37",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "oracle of delphi history",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N38",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "chrome plated bumper cleaning",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N39",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "spring cleaning checklist",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-N40",
+   "style": "ambiguous-or-off-topic",
+   "topic": "cal",
+   "q": "kernel of corn popcorn tips",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-G01",
+   "style": "gap",
+   "topic": "cal",
+   "q": "how do i set up terraform modules",
+   "kind": "gap",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-G02",
+   "style": "gap",
+   "topic": "cal",
+   "q": "what is a service mesh like istio",
+   "kind": "gap",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-G03",
+   "style": "gap",
+   "topic": "cal",
+   "q": "explain apache kafka partitions",
+   "kind": "gap",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-G04",
+   "style": "gap",
+   "topic": "cal",
+   "q": "write an ansible playbook",
+   "kind": "gap",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-G05",
+   "style": "gap",
+   "topic": "cal",
+   "q": "best linux distro for servers",
+   "kind": "gap",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-G06",
+   "style": "gap",
+   "topic": "cal",
+   "q": "federated learning on phones",
+   "kind": "gap",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-G07",
+   "style": "gap",
+   "topic": "cal",
+   "q": "differential privacy for datasets",
+   "kind": "gap",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-G08",
+   "style": "gap",
+   "topic": "cal",
+   "q": "time series forecasting with prophet",
+   "kind": "gap",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-G09",
+   "style": "gap",
+   "topic": "cal",
+   "q": "how do recommender systems rank movies",
+   "kind": "gap",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-G10",
+   "style": "gap",
+   "topic": "cal",
+   "q": "configuring nginx reverse proxy",
+   "kind": "gap",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-G11",
+   "style": "gap",
+   "topic": "cal",
+   "q": "angular vs vue for a new project",
+   "kind": "gap",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "CAL-G12",
+   "style": "gap",
+   "topic": "cal",
+   "q": "setting up tls certificates with letsencrypt",
+   "kind": "gap",
+   "accept": [],
+   "tool": null,
+   "path": []
+  }
+ ]
+}

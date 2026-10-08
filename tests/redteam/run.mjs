@@ -9,6 +9,8 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { searchKnowledge } from "../../knowledge/search-core.mjs";
+import { searchHybrid } from "../../knowledge/hybrid-search.mjs";
+import { loadSemantic } from "../../knowledge/semantic-core.mjs";
 
 const root = new URL("../../", import.meta.url);
 const label = process.argv[2] || "run";
@@ -18,6 +20,11 @@ const data = JSON.parse(dataRaw);
 const datasetSha = createHash("sha256").update(dataRaw).digest("hex");
 const index = JSON.parse(readFileSync(new URL("knowledge/search-index.json", root), "utf8"));
 const lexicon = JSON.parse(readFileSync(new URL("knowledge/search-lexicon.json", root), "utf8"));
+// ENGINE=lexical (default) | semantic | hybrid | gated ; SEM=path to semantic index ; OUT=output dir (relative to repo root)
+const engine = process.env.ENGINE || "lexical";
+const outDir = process.env.OUT || "tests/redteam";
+const sem = engine === "lexical" ? null : loadSemantic(JSON.parse(readFileSync(new URL(process.env.SEM || "knowledge/semantic-index.json", root), "utf8")));
+const hybridOpts = process.env.HOPTS ? JSON.parse(process.env.HOPTS) : {};
 const pageIds = new Set(index.pages.map((p) => p.id));
 for (const q of data.queries) for (const a of [...q.accept, ...q.path]) if (!pageIds.has(a)) { if (process.env.ALLOW_UNKNOWN_PAGES) continue; console.error("unknown page id in dataset:", q.id, a); process.exit(2); }
 
@@ -26,11 +33,12 @@ const amendFile = process.argv[4];
 const amendments = amendFile ? JSON.parse(readFileSync(new URL("tests/redteam/" + amendFile, root), "utf8")) : {};
 const results = [];
 for (const q of data.queries) {
-  const r = searchKnowledge(index, lexicon, q.q);
+  const r = engine === "lexical" ? searchKnowledge(index, lexicon, q.q) : searchHybrid(index, lexicon, sem, q.q, engine, hybridOpts);
   const topId = r.answer?.page.id || null;
   const topRanked = r.ranked[0]?.page.id || null;
   const score = r.answer?.score ?? r.ranked[0]?.score ?? 0;
   const top5 = r.ranked.slice(0, 5).map((x) => x.page.id);
+  const rankIds = r.ranked.map((x) => x.page.id);
   const learn = r.learnMore.map((x) => x.page.id);
   const tool = r.tools[0]?.id || null;
   const classify = (acceptList) => {
@@ -57,13 +65,19 @@ for (const q of data.queries) {
   const amended = amend ? classify([...q.accept, ...amend.accept]) : strict;
   let pathOk = null;
   if (q.path.length) { const have = new Set([topId, ...learn, ...top5.slice(0, 8)]); pathOk = q.path.every((p) => have.has(p)); }
-  results.push({ id: q.id, q: q.q, style: q.style, topic: q.topic, kind: q.kind, expected: q.accept, expectedTool: q.tool, top: topId || ("(weak) " + (topRanked || "none")), solid: r.solid, score, top5, learn, tool, gap: r.gap?.id || "", class: cls, note, pathOk, classAmended: amended.cls, amendReason: amend ? amend.reason : "" });
+  results.push({ id: q.id, q: q.q, style: q.style, topic: q.topic, kind: q.kind, expected: q.accept, expectedTool: q.tool, top: topId || ("(weak) " + (topRanked || "none")), solid: r.solid, score, top5, learn, tool, gap: r.gap?.id || "", class: cls, note, pathOk, rankIds, sem: r.semantic || null, classAmended: amended.cls, amendReason: amend ? amend.reason : "" });
 }
 
 const count = (arr, c) => arr.filter((x) => x.class === c).length;
 const pct = (n, d) => d ? (100 * n / d).toFixed(1) + "%" : "n/a";
 const summary = { label, datasetSha256: datasetSha, total: results.length, pass: count(results, "PASS"), weak: count(results, "WEAK"), miss: count(results, "MISS"), falsePositive: count(results, "FALSE POSITIVE") };
 if (amendFile) { summary.amended = { pass: results.filter((x) => x.classAmended === "PASS").length, weak: results.filter((x) => x.classAmended === "WEAK").length, miss: results.filter((x) => x.classAmended === "MISS").length, falsePositive: results.filter((x) => x.classAmended === "FALSE POSITIVE").length, amendedQueries: Object.keys(amendments).length }; summary.amended.passRate = pct(summary.amended.pass, summary.total); summary.amended.falsePositiveRate = pct(summary.amended.falsePositive, summary.total); }
+{
+  const pq = results.filter((x) => x.kind === "page");
+  const at = (k) => pq.filter((x) => x.rankIds.slice(0, k).some((id) => x.expected.includes(id))).length;
+  summary.retrieval = { pageQueries: pq.length, top1: at(1), top3: at(3), top5: at(5), top1Rate: pct(at(1), pq.length), top3Rate: pct(at(3), pq.length), top5Rate: pct(at(5), pq.length) };
+}
+summary.engine = engine;
 summary.passRate = pct(summary.pass, summary.total);
 summary.falsePositiveRate = pct(summary.falsePositive, summary.total);
 const by = (key) => { const m = {}; for (const r of results) { (m[r[key]] = m[r[key]] || []).push(r); } return m; };
@@ -74,6 +88,7 @@ L.push(`# Knowledge red-team report — ${label}`, "", `Dataset: \`tests/redteam
 L.push(`Total ${summary.total} · PASS ${summary.pass} · WEAK ${summary.weak} · MISS ${summary.miss} · FALSE POSITIVE ${summary.falsePositive}`);
 L.push(`Pass rate ${summary.passRate} · False-positive rate ${summary.falsePositiveRate}`);
 if (summary.amended) L.push(`With ${summary.amended.amendedQueries} documented coverage-gap amendments (queries whose topic now has a dedicated page): PASS ${summary.amended.pass} · WEAK ${summary.amended.weak} · MISS ${summary.amended.miss} · FALSE POSITIVE ${summary.amended.falsePositive} · pass rate ${summary.amended.passRate} · FP rate ${summary.amended.falsePositiveRate}`);
+L.push(`Retrieval on page-kind queries (${summary.retrieval.pageQueries}): top-1 ${summary.retrieval.top1Rate} · top-3 ${summary.retrieval.top3Rate} · top-5 ${summary.retrieval.top5Rate}`);
 L.push(`Multi-hop path completeness (answer + learn-more + top results contain every expected stepping-stone page): ${pathRows.filter((r) => r.pathOk).length}/${pathRows.length}`, "");
 L.push(...table("kind"), "", ...table("style"), "", ...table("topic"), "");
 for (const c of ["FALSE POSITIVE", "MISS", "WEAK"]) {
@@ -85,6 +100,6 @@ L.push("## Path completeness failures");
 for (const r of pathRows.filter((x) => !x.pathOk)) L.push(`- ${r.id} "${r.q}" top ${r.top}; learn ${r.learn.join(", ") || "-"}`);
 L.push("", "## All results", "| id | class | kind | query | top | score | solid | tool | notes |", "| --- | --- | --- | --- | --- | --- | --- | --- | --- |");
 for (const r of results) L.push(`| ${r.id} | ${r.class} | ${r.kind} | ${r.q.replaceAll("|", "/")} | ${r.top} | ${r.score} | ${r.solid ? "yes" : "no"} | ${r.tool || "—"} | ${r.note.replaceAll("|", "/")} |`);
-writeFileSync(new URL(`tests/redteam/report-${label}.md`, root), L.join("\n") + "\n");
-writeFileSync(new URL(`tests/redteam/results-${label}.json`, root), JSON.stringify({ summary, results }, null, 1) + "\n");
+writeFileSync(new URL(`${outDir}/report-${label}.md`, root), L.join("\n") + "\n");
+writeFileSync(new URL(`${outDir}/results-${label}.json`, root), JSON.stringify({ summary, results }, null, 1) + "\n");
 console.log(JSON.stringify(summary, null, 1));
