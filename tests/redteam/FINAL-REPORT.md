@@ -16,7 +16,7 @@ Branch `qa/knowledge-v3-search-redteam` (from V3 tip da370dd). Nothing merged, d
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Main 426 | 253/68/46/59 | 59.4% | 13.8% | 419/0/0/7 | 98.4% | 1.6% | 426/0/0/0 (100%) |
 | Holdout2 146 | 63/31/30/22 | 43.2% | 15.1% | 139/1/0/6 | 95.2% | 4.1% | 145/1/0/0 (99.3%) |
-| Holdout3 211 | 60/57/62/32 | 28.4% | 15.2% | 71/…  see report-h3-final.md | 33.6% | 15.6% | n/a |
+| Holdout3 211 | 60/57/62/32 | 28.4% | 15.2% | 71/54/53/33 | 33.6% | 15.6% | n/a |
 
 **Honest reading:** main/H2 gains are largely tuning; H3 (unseen paraphrase) barely moved (28.4% → 33.6%). Phrase-anchored lexical routing does not generalise to pure paraphrase. Recommendation: a semantic layer (static embeddings / LSA) for the main workstream rather than more phrase families.
 
@@ -37,5 +37,5 @@ lexicon-part-e (192 reusable intent→concept→page families, 143 spellings, ne
 ## Remaining
 - Main: 7 strict FP = the gap→page cases above; 0 weak, 0 miss.
 - H2: 1 weak (H2-012 patches/vision transformers), 6 strict FP = gap→page cases.
-- H3: 54 weak, 53 miss, 34 FP (see `report-h3-final.md`, `failure-analysis-h3-after.md`); dominated by pure paraphrase, generic hub intrusion (model-cards, ai-governance), ambiguous acronyms.
+- H3: 54 weak, 53 miss, 33 FP (see `report-h3-final.md`, `failure-analysis-h3-after.md`); dominated by pure paraphrase, generic hub intrusion (model-cards, ai-governance), ambiguous acronyms.
 - Genuine coverage gaps still open: terraform/ansible/nginx/linux CLI/service mesh/kafka/data warehouse/federated learning/differential privacy/recommenders/time series/AutoML/data labeling/causal inference/TF-IDF/NLP acronyms/AI coding assistants/Azure DevOps/Power BI/jest/vue-angular-svelte/grpc/TLS/SSH/JAX/TF-Lite, plus volatile "current leaderboard" questions (correctly refused). Filled this round: kubernetes/helm, object detection, ROS, GDPR.
