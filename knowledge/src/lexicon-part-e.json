@@ -1,0 +1,4809 @@
+{
+  "version": 1,
+  "synonyms": {},
+  "spelling": {
+    "transfomer": "transformer",
+    "transfromer": "transformer",
+    "tranformer": "transformer",
+    "transformr": "transformer",
+    "transformes": "transformers",
+    "transfomers": "transformers",
+    "architecure": "architecture",
+    "architechture": "architecture",
+    "archetecture": "architecture",
+    "architecutre": "architecture",
+    "embedings": "embeddings",
+    "embeding": "embedding",
+    "embeddigns": "embeddings",
+    "embbeddings": "embeddings",
+    "vektor": "vector",
+    "vecter": "vector",
+    "vektors": "vectors",
+    "databse": "database",
+    "databae": "database",
+    "datbase": "database",
+    "databses": "databases",
+    "halucination": "hallucination",
+    "halucinations": "hallucinations",
+    "hallucinaton": "hallucination",
+    "hallucinatin": "hallucination",
+    "halucinate": "hallucinate",
+    "guardrials": "guardrails",
+    "gaurdrails": "guardrails",
+    "guardrail": "guardrails",
+    "langchian": "langchain",
+    "langchan": "langchain",
+    "lanchain": "langchain",
+    "llamaindx": "llamaindex",
+    "lamaindex": "llamaindex",
+    "kubenetes": "kubernetes",
+    "kubernets": "kubernetes",
+    "kuberentes": "kubernetes",
+    "kubernates": "kubernetes",
+    "dockr": "docker",
+    "doker": "docker",
+    "dcoker": "docker",
+    "postgress": "postgres",
+    "postgre": "postgres",
+    "postgresl": "postgresql",
+    "sharepont": "sharepoint",
+    "sharepiont": "sharepoint",
+    "sharpoint": "sharepoint",
+    "framwork": "framework",
+    "frameowrk": "framework",
+    "reinforcment": "reinforcement",
+    "reinforcemnt": "reinforcement",
+    "reinforcemen": "reinforcement",
+    "explaned": "explained",
+    "explaind": "explained",
+    "algorithim": "algorithm",
+    "algoritm": "algorithm",
+    "algorith": "algorithm",
+    "neual": "neural",
+    "nueral": "neural",
+    "netwrok": "network",
+    "netwroks": "networks",
+    "machien": "machine",
+    "machne": "machine",
+    "lerning": "learning",
+    "learnin": "learning",
+    "finetuning": "fine tuning",
+    "tunning": "tuning",
+    "finetune": "fine tune",
+    "modle": "model",
+    "modles": "models",
+    "protocal": "protocol",
+    "protocl": "protocol",
+    "promt": "prompt",
+    "promts": "prompts",
+    "pormpt": "prompt",
+    "retreival": "retrieval",
+    "retrival": "retrieval",
+    "retriveal": "retrieval",
+    "retreive": "retrieve",
+    "similiarity": "similarity",
+    "simmilar": "similar",
+    "authentcation": "authentication",
+    "authentification": "authentication",
+    "autherization": "authorization",
+    "authorisation": "authorization",
+    "oauth2": "oauth",
+    "toekn": "token",
+    "toekns": "tokens",
+    "quantisation": "quantization",
+    "optimisation": "optimization",
+    "behaviour": "behavior",
+    "regularisation": "regularization",
+    "generalisation": "generalization",
+    "normalisation": "normalization",
+    "summarisation": "summarization",
+    "labelled": "labeled",
+    "unlabelled": "unlabeled",
+    "modelling": "modeling",
+    "fase": "face",
+    "pytorh": "pytorch",
+    "pythorch": "pytorch",
+    "tensorlfow": "tensorflow",
+    "javscript": "javascript",
+    "javacsript": "javascript",
+    "typscript": "typescript",
+    "typescirpt": "typescript",
+    "reat": "react",
+    "nodejs": "node js",
+    "ollamma": "ollama",
+    "antropic": "anthropic",
+    "opnai": "openai",
+    "chatgtp": "chatgpt",
+    "chatgbt": "chatgpt",
+    "gpt4": "gpt 4",
+    "lamma": "llama",
+    "agnet": "agent",
+    "agnets": "agents",
+    "agentc": "agentic",
+    "multimodel": "multimodal",
+    "multimdal": "multimodal",
+    "diffusoin": "diffusion",
+    "difussion": "diffusion",
+    "distilation": "distillation",
+    "quantizaton": "quantization",
+    "quantiztion": "quantization",
+    "finetunning": "fine tuning",
+    "hybrd": "hybrid",
+    "rerankin": "reranking",
+    "evalution": "evaluation",
+    "evalutation": "evaluation",
+    "benchmak": "benchmark",
+    "benchmarcks": "benchmarks",
+    "govenance": "governance",
+    "goverance": "governance",
+    "complience": "compliance",
+    "compliace": "compliance",
+    "alingment": "alignment",
+    "aligment": "alignment",
+    "interpretablity": "interpretability",
+    "sycophany": "sycophancy",
+    "sycophancey": "sycophancy",
+    "jailbrake": "jailbreak",
+    "jailbrak": "jailbreak"
+  },
+  "intents": [
+    {
+      "id": "rt-ai-vs-ml",
+      "phrases": [
+        "ai vs machine learning",
+        "ai versus machine learning",
+        "machine learning vs ai",
+        "difference between ai and machine learning",
+        "ai and ml difference",
+        "difference between ai and ml"
+      ],
+      "pages": [
+        {
+          "id": "what-is-ai",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-why-deep",
+      "phrases": [
+        "deep learning the same as",
+        "deep learning vs machine learning",
+        "deep learning versus ml",
+        "why are deep networks called deep",
+        "what makes a model deep",
+        "what makes a network deep",
+        "why is it called deep learning",
+        "deep vs shallow"
+      ],
+      "pages": [
+        {
+          "id": "deep-learning",
+          "boost": 46
+        },
+        {
+          "id": "neural-networks",
+          "boost": 14
+        }
+      ]
+    },
+    {
+      "id": "rt-nn-simple",
+      "phrases": [
+        "explain neural nets",
+        "neural nets like",
+        "how do neural networks work",
+        "how does a neural network work",
+        "neural networks explained",
+        "neural network basics",
+        "why do we need activation functions",
+        "what is an activation function"
+      ],
+      "pages": [
+        {
+          "id": "neural-networks",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-how-llm-works",
+      "phrases": [
+        "how does chatgpt work",
+        "how chatgpt works",
+        "how does chatgpt actually work",
+        "how do chatbots like chatgpt work",
+        "how does gpt work",
+        "how do llms work",
+        "how does a language model work",
+        "how do language models work",
+        "text predictors turn",
+        "predict the next word",
+        "next word prediction",
+        "how ai writes text",
+        "how does ai generate text",
+        "how do text predictors"
+      ],
+      "pages": [
+        {
+          "id": "large-language-models",
+          "boost": 46
+        },
+        {
+          "id": "transformers",
+          "boost": 14
+        },
+        {
+          "id": "sampling-and-decoding",
+          "boost": 12
+        }
+      ]
+    },
+    {
+      "id": "rt-makes-stuff-up",
+      "phrases": [
+        "make stuff up",
+        "makes stuff up",
+        "making stuff up",
+        "make things up",
+        "makes things up",
+        "made up facts",
+        "made up sources",
+        "invent facts",
+        "invents facts",
+        "invent a source",
+        "invents a source",
+        "invented sources",
+        "fabricate",
+        "fabricated citations",
+        "fake citations",
+        "fake sources",
+        "source that does not exist",
+        "citation that does not exist",
+        "confidently wrong",
+        "wrong but confident",
+        "incorrect facts",
+        "lies to me",
+        "stating false things",
+        "false facts"
+      ],
+      "pages": [
+        {
+          "id": "ai-hallucinations",
+          "boost": 48
+        },
+        {
+          "id": "how-to-reduce-hallucinations",
+          "boost": 24
+        }
+      ]
+    },
+    {
+      "id": "rt-token-basics",
+      "phrases": [
+        "whats a token",
+        "what is a token",
+        "token in ai",
+        "tokens in ai",
+        "how are words split into tokens",
+        "word pieces",
+        "subword",
+        "byte pair encoding",
+        "tokenization",
+        "tokenisation",
+        "how many tokens",
+        "count tokens"
+      ],
+      "pages": [
+        {
+          "id": "tokens",
+          "boost": 42
+        }
+      ]
+    },
+    {
+      "id": "rt-context-limit",
+      "phrases": [
+        "remember in one go",
+        "how much text can",
+        "how long can a conversation",
+        "maximum conversation length",
+        "conversation length limit",
+        "limit on how long",
+        "input length limit",
+        "maximum input length",
+        "text limit",
+        "how many words can",
+        "cannot see my document",
+        "can not see my document",
+        "cannot see the document",
+        "too long for the model",
+        "too long for the context",
+        "document too long",
+        "pdf is too long",
+        "long pdf",
+        "lose context",
+        "loses context",
+        "losing context",
+        "forgets earlier messages",
+        "forget earlier messages",
+        "long chats",
+        "context limit",
+        "context length"
+      ],
+      "pages": [
+        {
+          "id": "context-windows",
+          "boost": 46
+        },
+        {
+          "id": "tokens",
+          "boost": 10
+        }
+      ]
+    },
+    {
+      "id": "rt-generative-def",
+      "phrases": [
+        "what makes a model generative",
+        "what does generative mean",
+        "generative vs discriminative",
+        "what is generative",
+        "generative models explained",
+        "generative ai basics"
+      ],
+      "pages": [
+        {
+          "id": "generative-ai",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-supervised",
+      "phrases": [
+        "learn from examples",
+        "learns from examples",
+        "learning from examples",
+        "labelled data",
+        "classification vs regression",
+        "classification and regression",
+        "train on labelled",
+        "predict from labelled examples",
+        "training examples with answers"
+      ],
+      "pages": [
+        {
+          "id": "supervised-learning",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-unsupervised",
+      "phrases": [
+        "unlabelled data",
+        "unlabeled data",
+        "without labels",
+        "no labels",
+        "find groups in data",
+        "find structure in data",
+        "group similar items",
+        "clustering"
+      ],
+      "pages": [
+        {
+          "id": "unsupervised-learning",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-sup-vs-unsup",
+      "phrases": [
+        "labelled versus unlabelled",
+        "labelled vs unlabelled",
+        "labeled vs unlabeled",
+        "labeled versus unlabeled",
+        "supervised vs unsupervised"
+      ],
+      "pages": [
+        {
+          "id": "supervised-learning",
+          "boost": 42
+        },
+        {
+          "id": "unsupervised-learning",
+          "boost": 42
+        }
+      ]
+    },
+    {
+      "id": "rt-training-mechanics",
+      "phrases": [
+        "adjust itself while training",
+        "how neural networks learn",
+        "how do neural networks learn",
+        "how does training work",
+        "weights get updated",
+        "update the weights",
+        "gradient descent",
+        "optimizer",
+        "learning rate",
+        "adam vs sgd",
+        "sgd vs adam",
+        "sgd or adam",
+        "vanishing gradient",
+        "gradients vanish",
+        "exploding gradient",
+        "decoupled weight decay",
+        "adamw"
+      ],
+      "pages": [
+        {
+          "id": "backpropagation-and-gradient-descent",
+          "boost": 46
+        },
+        {
+          "id": "neural-networks",
+          "boost": 10
+        }
+      ]
+    },
+    {
+      "id": "rt-overfit-symptoms2",
+      "phrases": [
+        "on training data",
+        "training accuracy",
+        "training loss goes down",
+        "validation loss goes up",
+        "validation accuracy",
+        "overfit",
+        "underfit",
+        "memorize the training",
+        "memorise the training",
+        "fits the training data",
+        "worse on new data",
+        "worse on unseen data",
+        "performs poorly on new data",
+        "bias variance"
+      ],
+      "pages": [
+        {
+          "id": "overfitting-and-regularization",
+          "boost": 48
+        }
+      ]
+    },
+    {
+      "id": "rt-transfer",
+      "phrases": [
+        "pretrained weights",
+        "pre trained weights",
+        "imagenet weights",
+        "reuse a pretrained",
+        "reuse pretrained",
+        "fine tune a pretrained",
+        "finetune a pretrained",
+        "start from a pretrained",
+        "pretrained resnet",
+        "use a pretrained",
+        "reuse weights",
+        "reuse a model for",
+        "transfer learning",
+        "pretrained model for my"
+      ],
+      "pages": [
+        {
+          "id": "transfer-learning",
+          "boost": 46
+        },
+        {
+          "id": "convolutional-neural-networks",
+          "boost": 12
+        }
+      ]
+    },
+    {
+      "id": "rt-rl-basics",
+      "phrases": [
+        "trial and error",
+        "learning by trial and error",
+        "learn from rewards",
+        "learns from rewards",
+        "reward only at the end",
+        "reward at the end of",
+        "learn through rewards",
+        "rewards and penalties",
+        "reward signal",
+        "maximise reward",
+        "maximize reward",
+        "episode",
+        "agent environment",
+        "exploration vs exploitation"
+      ],
+      "pages": [
+        {
+          "id": "reinforcement-learning",
+          "boost": 44
+        },
+        {
+          "id": "markov-decision-processes",
+          "boost": 12
+        }
+      ]
+    },
+    {
+      "id": "rt-robot-walk",
+      "phrases": [
+        "learning to walk",
+        "learn to walk",
+        "robot dog",
+        "robot learning to",
+        "legged robot",
+        "walking robot"
+      ],
+      "pages": [
+        {
+          "id": "reinforcement-learning",
+          "boost": 30
+        },
+        {
+          "id": "sim-to-real-transfer",
+          "boost": 30
+        },
+        {
+          "id": "embodied-ai",
+          "boost": 30
+        }
+      ]
+    },
+    {
+      "id": "rt-cnn",
+      "phrases": [
+        "detect edges",
+        "edges and shapes",
+        "image classifiers",
+        "image classification",
+        "convolution",
+        "convolutions",
+        "filters slide",
+        "kernel over image",
+        "pooling layer",
+        "resnet",
+        "vgg",
+        "alexnet",
+        "imagenet classifier"
+      ],
+      "pages": [
+        {
+          "id": "convolutional-neural-networks",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-attention-vs-rnn",
+      "phrases": [
+        "replace lstms",
+        "replaced lstms",
+        "replace rnns",
+        "instead of lstm",
+        "lstms vs transformers",
+        "lstm vs transformer",
+        "rnn vs transformer",
+        "why transformers",
+        "attention is all you need",
+        "self attention explained",
+        "what is attention",
+        "how attention works",
+        "attention mechanism",
+        "transformer architecture"
+      ],
+      "pages": [
+        {
+          "id": "transformers",
+          "boost": 46
+        },
+        {
+          "id": "recurrent-neural-networks",
+          "boost": 20
+        }
+      ]
+    },
+    {
+      "id": "rt-latent",
+      "phrases": [
+        "latent space",
+        "latent variables",
+        "latent representation",
+        "compress to a latent",
+        "bottleneck representation"
+      ],
+      "pages": [
+        {
+          "id": "variational-autoencoders",
+          "boost": 42
+        },
+        {
+          "id": "embeddings",
+          "boost": 10
+        },
+        {
+          "id": "diffusion-models",
+          "boost": 10
+        }
+      ]
+    },
+    {
+      "id": "rt-diffusion",
+      "phrases": [
+        "pictures out of noise",
+        "images out of noise",
+        "from noise",
+        "denoising",
+        "text to image",
+        "image generator",
+        "stable diffusion",
+        "midjourney",
+        "dall e",
+        "dalle",
+        "how image generators work",
+        "generate images from text",
+        "image generation"
+      ],
+      "pages": [
+        {
+          "id": "diffusion-models",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-gan",
+      "phrases": [
+        "two networks competing",
+        "generator and discriminator",
+        "fake images",
+        "fake faces",
+        "adversarial networks",
+        "competing networks",
+        "networks compete"
+      ],
+      "pages": [
+        {
+          "id": "generative-adversarial-networks",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-gnn",
+      "phrases": [
+        "molecules and social networks",
+        "social networks and molecules",
+        "graph data",
+        "nodes and edges",
+        "neural network on a graph",
+        "networks over graphs",
+        "molecule graph",
+        "road network"
+      ],
+      "pages": [
+        {
+          "id": "graph-neural-networks",
+          "boost": 44
+        }
+      ]
+    },
+    {
+      "id": "rt-ppo-algo",
+      "phrases": [
+        "clip the policy update",
+        "clipped objective",
+        "policy update",
+        "ppo clip",
+        "policy gradient",
+        "trust region"
+      ],
+      "pages": [
+        {
+          "id": "proximal-policy-optimization",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-bellman",
+      "phrases": [
+        "bellman",
+        "optimality equation",
+        "value iteration",
+        "policy iteration",
+        "discount factor",
+        "markov"
+      ],
+      "pages": [
+        {
+          "id": "markov-decision-processes",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-dqn-parts",
+      "phrases": [
+        "target network",
+        "experience replay",
+        "q values",
+        "q table",
+        "q network",
+        "deep q"
+      ],
+      "pages": [
+        {
+          "id": "deep-q-networks",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-moe-sparse",
+      "phrases": [
+        "sparse routing",
+        "routing to a few",
+        "few feed forward experts",
+        "feed forward experts",
+        "experts per token",
+        "only a few experts",
+        "many experts"
+      ],
+      "pages": [
+        {
+          "id": "mixture-of-experts",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-ssm-linear",
+      "phrases": [
+        "avoids quadratic attention",
+        "quadratic attention",
+        "constant memory sequence",
+        "linear time sequence",
+        "linear attention",
+        "long sequences cheaply"
+      ],
+      "pages": [
+        {
+          "id": "state-space-models",
+          "boost": 44
+        },
+        {
+          "id": "transformers-vs-state-space-models",
+          "boost": 16
+        }
+      ]
+    },
+    {
+      "id": "rt-rope-gqa",
+      "phrases": [
+        "rotary position",
+        "rotary embeddings",
+        "extend the context",
+        "context extension",
+        "position embeddings",
+        "how transformers know word order",
+        "word order in transformers"
+      ],
+      "pages": [
+        {
+          "id": "positional-encoding",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-gqa-kv",
+      "phrases": [
+        "grouped query attention",
+        "shrinks the kv cache",
+        "kv cache",
+        "memory grows with context",
+        "key value cache"
+      ],
+      "pages": [
+        {
+          "id": "kv-cache",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-prompt-basics",
+      "phrases": [
+        "what is a prompt",
+        "why does wording matter",
+        "wording matter",
+        "how to word a prompt",
+        "how should i word",
+        "structure instructions",
+        "structure my instructions",
+        "instructions so the model follows",
+        "model follows them",
+        "examples in the prompt",
+        "show the format i want",
+        "few shot",
+        "one shot",
+        "zero shot",
+        "prompt tips",
+        "better prompts",
+        "good prompt",
+        "good prompts",
+        "write a good prompt",
+        "craft a prompt",
+        "phrase my prompt",
+        "prompt wording"
+      ],
+      "pages": [
+        {
+          "id": "prompt-engineering",
+          "boost": 46
+        },
+        {
+          "id": "system-prompts",
+          "boost": 14
+        }
+      ]
+    },
+    {
+      "id": "rt-system-prompt-content",
+      "phrases": [
+        "system prompt for",
+        "what goes in a system prompt",
+        "system message for",
+        "persona for a bot",
+        "bot instructions",
+        "instructions for a bot"
+      ],
+      "pages": [
+        {
+          "id": "system-prompts",
+          "boost": 46
+        },
+        {
+          "id": "prompt-engineering",
+          "boost": 14
+        }
+      ]
+    },
+    {
+      "id": "rt-ignores-instructions",
+      "phrases": [
+        "ignoring my instructions",
+        "ignores my instructions",
+        "ignores instructions",
+        "does not follow instructions",
+        "doesnt follow instructions",
+        "not following my instructions",
+        "wont follow instructions",
+        "answers are generic",
+        "generic answers",
+        "vague answers",
+        "bland answers",
+        "not what i asked",
+        "wrong format"
+      ],
+      "pages": [
+        {
+          "id": "common-prompting-mistakes",
+          "boost": 48
+        },
+        {
+          "id": "prompt-engineering",
+          "boost": 20
+        }
+      ]
+    },
+    {
+      "id": "rt-leak-system-prompt",
+      "phrases": [
+        "leaking my system prompt",
+        "leak my system prompt",
+        "reveal my system prompt",
+        "expose the system prompt",
+        "system prompt leak",
+        "prompt leaking",
+        "protect my system prompt",
+        "hide my system prompt"
+      ],
+      "pages": [
+        {
+          "id": "prompt-injection",
+          "boost": 42
+        },
+        {
+          "id": "system-prompts",
+          "boost": 38
+        }
+      ]
+    },
+    {
+      "id": "rt-think-longer",
+      "phrases": [
+        "think longer before",
+        "thinking longer",
+        "think before answering",
+        "think before it replies",
+        "extra tokens before answering",
+        "reasoning before answering",
+        "spend more compute",
+        "longer to answer",
+        "why are reasoning",
+        "thinking model",
+        "think step by step before",
+        "let a model think"
+      ],
+      "pages": [
+        {
+          "id": "reasoning-models",
+          "boost": 38
+        },
+        {
+          "id": "test-time-compute",
+          "boost": 34
+        }
+      ]
+    },
+    {
+      "id": "rt-read-thinking",
+      "phrases": [
+        "read what the model was thinking",
+        "what the model was thinking",
+        "see the thinking",
+        "see its thinking",
+        "see the reasoning",
+        "view the reasoning",
+        "see the chain of thought",
+        "show me its reasoning",
+        "raw reasoning",
+        "thinking process hidden",
+        "hidden reasoning"
+      ],
+      "pages": [
+        {
+          "id": "reasoning-transparency",
+          "boost": 48
+        },
+        {
+          "id": "reasoning-models",
+          "boost": 16
+        }
+      ]
+    },
+    {
+      "id": "rt-thinking-trunc",
+      "phrases": [
+        "thinking model",
+        "truncated when using",
+        "cut off when using",
+        "response is cut off",
+        "reasoning budget",
+        "reasoning tokens used",
+        "blank answer",
+        "empty response from"
+      ],
+      "pages": [
+        {
+          "id": "thinking-budgets",
+          "boost": 42
+        },
+        {
+          "id": "reasoning-models",
+          "boost": 20
+        }
+      ]
+    },
+    {
+      "id": "rt-prm-ish",
+      "phrases": [
+        "verifier that rates each",
+        "rates each line",
+        "each line of a proof",
+        "grade each line",
+        "step by step grading",
+        "each step of the solution",
+        "score each step",
+        "scores every step",
+        "step verifier",
+        "verify each step",
+        "step level"
+      ],
+      "pages": [
+        {
+          "id": "process-reward-model",
+          "boost": 48
+        }
+      ]
+    },
+    {
+      "id": "rt-orm-ish",
+      "phrases": [
+        "trained only on final answers",
+        "final answers only",
+        "reward for the final answer",
+        "only the final answer is scored",
+        "judge the final answer",
+        "grades only the answer",
+        "answer only reward"
+      ],
+      "pages": [
+        {
+          "id": "outcome-reward-model",
+          "boost": 48
+        }
+      ]
+    },
+    {
+      "id": "rt-bon-ish",
+      "phrases": [
+        "generate many candidates",
+        "many candidates and keep",
+        "keep the best",
+        "highest scoring",
+        "pick the highest",
+        "rerank candidates",
+        "candidate answers and rank",
+        "sample n answers",
+        "verifier picks"
+      ],
+      "pages": [
+        {
+          "id": "best-of-n-sampling",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-tree-search",
+      "phrases": [
+        "search tree",
+        "tree of partial",
+        "partial solutions",
+        "explore multiple paths",
+        "explore several reasoning paths",
+        "backtracking",
+        "lookahead search",
+        "puzzle solving with llms",
+        "game tree"
+      ],
+      "pages": [
+        {
+          "id": "search-over-reasoning",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-constrain",
+      "phrases": [
+        "follow a regular expression",
+        "match a regex",
+        "regular expression",
+        "output only valid",
+        "only valid values",
+        "only allowed values",
+        "enum values",
+        "always matches my schema",
+        "matches my schema",
+        "always valid json",
+        "never invalid json",
+        "restrict which tokens",
+        "restrict tokens",
+        "limit the tokens",
+        "allowed tokens"
+      ],
+      "pages": [
+        {
+          "id": "constrained-decoding",
+          "boost": 44
+        },
+        {
+          "id": "structured-outputs",
+          "boost": 24
+        }
+      ]
+    },
+    {
+      "id": "rt-grammar-file",
+      "phrases": [
+        "grammar file",
+        "grammar for json",
+        "json grammar",
+        "llama cpp grammar"
+      ],
+      "pages": [
+        {
+          "id": "gbnf-grammars",
+          "boost": 48
+        },
+        {
+          "id": "constrained-decoding",
+          "boost": 16
+        }
+      ]
+    },
+    {
+      "id": "rt-guided-lib",
+      "phrases": [
+        "library for guided generation",
+        "python library for guided",
+        "guided generation with pydantic",
+        "pydantic models for generation"
+      ],
+      "pages": [
+        {
+          "id": "outlines",
+          "boost": 48
+        },
+        {
+          "id": "structured-outputs",
+          "boost": 18
+        }
+      ]
+    },
+    {
+      "id": "rt-nondeterminism",
+      "phrases": [
+        "different answers every time",
+        "different answer every time",
+        "same prompt different answers",
+        "same prompt gives different",
+        "not deterministic",
+        "non deterministic",
+        "nondeterministic",
+        "randomness in llm",
+        "make output deterministic",
+        "consistent outputs",
+        "temperature and top p",
+        "creativity setting",
+        "turn probabilities",
+        "pick the next token",
+        "next token probabilities"
+      ],
+      "pages": [
+        {
+          "id": "sampling-and-decoding",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-rag-build",
+      "phrases": [
+        "answer questions from our",
+        "answers questions from our",
+        "questions from our internal",
+        "internal wiki",
+        "company wiki",
+        "knowledge base chatbot",
+        "chat with our documents",
+        "chat with my documents",
+        "chat with pdfs",
+        "answer from our docs",
+        "answers from our docs",
+        "search our documents",
+        "help center articles",
+        "faq bot",
+        "documentation assistant",
+        "cite sources",
+        "cite its sources",
+        "show sources",
+        "give references",
+        "chatbot cite",
+        "ground the answers in",
+        "grounded answers",
+        "answers from my files",
+        "over my own documents"
+      ],
+      "pages": [
+        {
+          "id": "rag",
+          "boost": 44
+        },
+        {
+          "id": "chunking",
+          "boost": 14
+        },
+        {
+          "id": "embeddings",
+          "boost": 12
+        }
+      ]
+    },
+    {
+      "id": "rt-chunk-how",
+      "phrases": [
+        "how big should chunks",
+        "how big should my chunks",
+        "chunk size",
+        "chunks be",
+        "split documents",
+        "split a pdf",
+        "split long documents",
+        "chunk pdfs",
+        "overlap between chunks",
+        "chunk overlap",
+        "splitting text",
+        "my pdf is too long"
+      ],
+      "pages": [
+        {
+          "id": "chunking",
+          "boost": 48
+        }
+      ]
+    },
+    {
+      "id": "rt-similarity",
+      "phrases": [
+        "how similar two documents",
+        "similar two documents",
+        "measure similarity",
+        "text similarity",
+        "document similarity",
+        "sentence similarity",
+        "same meaning",
+        "mean the same thing",
+        "semantic similarity",
+        "similar meaning",
+        "related documents",
+        "numeric representation of text",
+        "turn text into numbers",
+        "text into vectors",
+        "vector representation",
+        "embedding model",
+        "embedding and chat model",
+        "encode text",
+        "cosine"
+      ],
+      "pages": [
+        {
+          "id": "embeddings",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-vector-store-use",
+      "phrases": [
+        "where do embeddings get stored",
+        "store embeddings",
+        "storing embeddings",
+        "embeddings database",
+        "similarity search",
+        "nearest neighbour",
+        "nearest neighbor",
+        "ann index",
+        "hnsw",
+        "index for vectors",
+        "vector store",
+        "vector search",
+        "pinecone",
+        "weaviate",
+        "qdrant",
+        "milvus",
+        "chroma",
+        "faiss"
+      ],
+      "pages": [
+        {
+          "id": "vector-databases",
+          "boost": 42
+        }
+      ]
+    },
+    {
+      "id": "rt-pgvector-use",
+      "phrases": [
+        "embeddings in postgres",
+        "embeddings and relational data",
+        "postgres embeddings",
+        "vectors in postgres",
+        "pgvector",
+        "embeddings in sql",
+        "embeddings in one database",
+        "vector column"
+      ],
+      "pages": [
+        {
+          "id": "pgvector",
+          "boost": 52
+        },
+        {
+          "id": "postgresql-for-ai-apps",
+          "boost": 24
+        }
+      ]
+    },
+    {
+      "id": "rt-pick-store",
+      "phrases": [
+        "which vector store",
+        "pinecone or pgvector",
+        "vector db for a prototype",
+        "prototype vector",
+        "which vector database",
+        "pick a vector"
+      ],
+      "pages": [
+        {
+          "id": "choosing-a-vector-store",
+          "boost": 48
+        }
+      ]
+    },
+    {
+      "id": "rt-hybrid",
+      "phrases": [
+        "keyword and vector",
+        "keyword plus vector",
+        "keyword and semantic",
+        "semantic and keyword",
+        "bm25",
+        "exact product codes",
+        "misses exact",
+        "exact matches",
+        "exact terms",
+        "rerank",
+        "reranker",
+        "cross encoder",
+        "improve retrieval",
+        "retrieval accuracy",
+        "retriever misses",
+        "retrieval misses"
+      ],
+      "pages": [
+        {
+          "id": "hybrid-search-and-reranking",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-kg",
+      "phrases": [
+        "relationships between entities",
+        "entities across documents",
+        "knowledge graph",
+        "multi hop",
+        "multi-hop"
+      ],
+      "pages": [
+        {
+          "id": "graph-rag",
+          "boost": 42
+        },
+        {
+          "id": "agentic-rag",
+          "boost": 18
+        }
+      ]
+    },
+    {
+      "id": "rt-retrieval-eval",
+      "phrases": [
+        "retrieval found the right passage",
+        "found the right passage",
+        "right passage",
+        "evaluate retrieval",
+        "test set for my rag",
+        "test set for rag",
+        "rag test set",
+        "retrieval metrics",
+        "recall at k",
+        "evaluate whether retrieval"
+      ],
+      "pages": [
+        {
+          "id": "rag-evaluation",
+          "boost": 48
+        }
+      ]
+    },
+    {
+      "id": "rt-agent-def",
+      "phrases": [
+        "what is an ai agent",
+        "what are ai agents",
+        "what are agents",
+        "tell me about agents",
+        "explain ai agents",
+        "ai agents explained",
+        "agentic ai explained",
+        "agent basics",
+        "how do ai agents work",
+        "what is an agent in ai",
+        "define ai agent"
+      ],
+      "pages": [
+        {
+          "id": "ai-agents",
+          "boost": 52
+        }
+      ]
+    },
+    {
+      "id": "rt-agent-vs-bot",
+      "phrases": [
+        "only answers questions",
+        "just answers questions",
+        "is a chatbot an agent",
+        "bot that only answers",
+        "chatbot or agent",
+        "assistant copilot and agent",
+        "assistant and agent",
+        "copilot vs agent",
+        "copilot and agent",
+        "agent or assistant"
+      ],
+      "pages": [
+        {
+          "id": "ai-agent-vs-chatbot",
+          "boost": 48
+        },
+        {
+          "id": "ai-agents",
+          "boost": 20
+        }
+      ]
+    },
+    {
+      "id": "rt-gmail",
+      "phrases": [
+        "gmail",
+        "google mail",
+        "email inbox",
+        "read email",
+        "read my email",
+        "read my inbox",
+        "my inbox",
+        "draft replies",
+        "drafts replies",
+        "reply to emails",
+        "read emails"
+      ],
+      "pages": [
+        {
+          "id": "gmail-for-ai-agents",
+          "boost": 52
+        },
+        {
+          "id": "connecting-agents-to-apps",
+          "boost": 18
+        },
+        {
+          "id": "oauth-for-ai-agents",
+          "boost": 18
+        }
+      ]
+    },
+    {
+      "id": "rt-app-connect",
+      "phrases": [
+        "calendar invites",
+        "send calendar",
+        "book meetings",
+        "book a meeting",
+        "schedule meetings",
+        "google calendar",
+        "outlook",
+        "slack",
+        "jira",
+        "crm",
+        "salesforce",
+        "hubspot",
+        "notion",
+        "google drive",
+        "drive files",
+        "connect an ai agent to",
+        "connect my agent to",
+        "access to our",
+        "give an agent access",
+        "give my agent access",
+        "integrate an agent with",
+        "integrate my assistant"
+      ],
+      "pages": [
+        {
+          "id": "connecting-agents-to-apps",
+          "boost": 48
+        },
+        {
+          "id": "oauth-for-ai-agents",
+          "boost": 20
+        },
+        {
+          "id": "agent-tools",
+          "boost": 18
+        },
+        {
+          "id": "integration-permissions",
+          "boost": 16
+        }
+      ]
+    },
+    {
+      "id": "rt-agent-permissions",
+      "phrases": [
+        "without asking",
+        "without confirmation",
+        "require approval",
+        "human approval",
+        "ask before",
+        "confirm before",
+        "prevent the assistant from",
+        "stop the assistant from",
+        "stop my agent from",
+        "keep an agent from",
+        "keep an ai agent from",
+        "delete my files",
+        "deleting my files",
+        "delete files",
+        "destructive actions",
+        "dangerous actions",
+        "irreversible actions",
+        "limit what the agent can do",
+        "what the agent can access",
+        "agent permissions",
+        "permissions should",
+        "least privilege",
+        "read only access"
+      ],
+      "pages": [
+        {
+          "id": "integration-permissions",
+          "boost": 42
+        },
+        {
+          "id": "ai-guardrails",
+          "boost": 24
+        },
+        {
+          "id": "agent-tools",
+          "boost": 18
+        },
+        {
+          "id": "code-execution-sandboxing",
+          "boost": 12
+        }
+      ]
+    },
+    {
+      "id": "rt-hijack",
+      "phrases": [
+        "malicious email",
+        "hijack my agent",
+        "hijack the agent",
+        "hidden instructions",
+        "instructions hidden",
+        "text hidden in",
+        "instructions inside a pdf",
+        "instructions in a document",
+        "instructions in a web page",
+        "hidden text",
+        "tells my assistant to",
+        "poisoned document",
+        "untrusted content",
+        "indirect injection",
+        "jailbreak",
+        "jailbreaking",
+        "ignore previous instructions",
+        "ignore your instructions",
+        "override the instructions"
+      ],
+      "pages": [
+        {
+          "id": "prompt-injection",
+          "boost": 52
+        }
+      ]
+    },
+    {
+      "id": "rt-agent-loop-stuck",
+      "phrases": [
+        "stuck repeating",
+        "gets stuck",
+        "stuck in a loop",
+        "repeats the same step",
+        "repeating the same",
+        "same step over and over",
+        "infinite loop",
+        "never finishes",
+        "keeps looping",
+        "runs forever"
+      ],
+      "pages": [
+        {
+          "id": "react-agent-pattern",
+          "boost": 38
+        },
+        {
+          "id": "agentic-workflows",
+          "boost": 24
+        },
+        {
+          "id": "ai-agents",
+          "boost": 20
+        }
+      ]
+    },
+    {
+      "id": "rt-bill",
+      "phrases": [
+        "running up a huge bill",
+        "huge bill",
+        "runaway costs",
+        "runaway cost",
+        "token spend",
+        "cost spirals",
+        "bill is too high",
+        "spending too much",
+        "reduce my bill",
+        "cut my bill",
+        "cut my llm bill",
+        "lower my bill",
+        "costs too much",
+        "too expensive",
+        "reduce costs",
+        "reduce cost",
+        "reduce tokens and cost",
+        "cheaper to run"
+      ],
+      "pages": [
+        {
+          "id": "llm-cost-optimization",
+          "boost": 46
+        },
+        {
+          "id": "react-agent-pattern",
+          "boost": 12
+        }
+      ]
+    },
+    {
+      "id": "rt-memory",
+      "phrases": [
+        "remember my preferences",
+        "remembers my preferences",
+        "between sessions",
+        "across sessions",
+        "next session",
+        "long term memory",
+        "remember me",
+        "persistent memory",
+        "forget what we decided",
+        "forgets what we decided"
+      ],
+      "pages": [
+        {
+          "id": "agent-memory",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-multi-agent",
+      "phrases": [
+        "planner and worker",
+        "several agents or one",
+        "one agent or several",
+        "multiple agents or one",
+        "who does what between agents",
+        "agents handling",
+        "hand off between agents",
+        "handoff",
+        "orchestrator",
+        "supervisor agent",
+        "team of agents",
+        "roles for agents",
+        "who does what",
+        "agents working together"
+      ],
+      "pages": [
+        {
+          "id": "multi-agent-systems",
+          "boost": 42
+        },
+        {
+          "id": "agentic-workflows",
+          "boost": 32
+        }
+      ]
+    },
+    {
+      "id": "rt-planning",
+      "phrases": [
+        "break a big goal",
+        "break down a goal",
+        "break a goal",
+        "subtasks",
+        "sub tasks",
+        "task breakdown",
+        "decompose",
+        "plan steps",
+        "planning steps",
+        "make a plan"
+      ],
+      "pages": [
+        {
+          "id": "agent-planning",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-tool-calls",
+      "phrases": [
+        "calls a calculator",
+        "call a calculator",
+        "call a search engine",
+        "tool calling",
+        "call tools",
+        "use tools",
+        "tool use",
+        "how do agents decide which tool",
+        "decide which tool",
+        "choose which tool",
+        "pick a tool",
+        "tool selection",
+        "llm that calls"
+      ],
+      "pages": [
+        {
+          "id": "agent-tools",
+          "boost": 38
+        },
+        {
+          "id": "function-calling",
+          "boost": 32
+        },
+        {
+          "id": "react-agent-pattern",
+          "boost": 14
+        }
+      ]
+    },
+    {
+      "id": "rt-fw-ms",
+      "phrases": [
+        "microsoft stack",
+        "dotnet",
+        "c# llm",
+        "c# agent",
+        "microsoft sdk",
+        "net apps",
+        "plugging llms into"
+      ],
+      "pages": [
+        {
+          "id": "semantic-kernel",
+          "boost": 48
+        }
+      ]
+    },
+    {
+      "id": "rt-fw-graph",
+      "phrases": [
+        "state machine style",
+        "state machine framework",
+        "checkpoints and",
+        "graph based agent",
+        "stateful agent",
+        "persistence for agents"
+      ],
+      "pages": [
+        {
+          "id": "langgraph",
+          "boost": 48
+        }
+      ]
+    },
+    {
+      "id": "rt-fw-crew",
+      "phrases": [
+        "role based crew",
+        "crew of agents",
+        "role based agents",
+        "role playing agents"
+      ],
+      "pages": [
+        {
+          "id": "crewai",
+          "boost": 48
+        }
+      ]
+    },
+    {
+      "id": "rt-fw-dspy",
+      "phrases": [
+        "declare modules",
+        "optimizer tune the prompts",
+        "optimize prompts automatically",
+        "prompt optimizer",
+        "automatic prompt optimization",
+        "compile prompts"
+      ],
+      "pages": [
+        {
+          "id": "dspy",
+          "boost": 48
+        }
+      ]
+    },
+    {
+      "id": "rt-fw-pick",
+      "phrases": [
+        "production agent",
+        "framework for production",
+        "best framework for agents",
+        "which agent framework",
+        "framework for a production"
+      ],
+      "pages": [
+        {
+          "id": "agent-frameworks-compared",
+          "boost": 48
+        },
+        {
+          "id": "choosing-an-agent-framework",
+          "boost": 20
+        }
+      ]
+    },
+    {
+      "id": "rt-observe",
+      "phrases": [
+        "trace every tool call",
+        "trace tool calls",
+        "log every call",
+        "audit trail",
+        "observability",
+        "monitor my agent",
+        "what my agent did",
+        "see what the agent did",
+        "log tool calls",
+        "debug my agent"
+      ],
+      "pages": [
+        {
+          "id": "llm-observability",
+          "boost": 42
+        },
+        {
+          "id": "agent-evaluation",
+          "boost": 22
+        }
+      ]
+    },
+    {
+      "id": "rt-agent-test",
+      "phrases": [
+        "test an agent that uses tools",
+        "agent tests",
+        "how good is my agent",
+        "score my agent",
+        "tool using agent"
+      ],
+      "pages": [
+        {
+          "id": "agent-evaluation",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-mcp-generic",
+      "phrases": [
+        "expose tools to any ai client",
+        "tools to any client",
+        "standard way to expose",
+        "standard for connecting tools",
+        "connect tools to ai"
+      ],
+      "pages": [
+        {
+          "id": "mcp",
+          "boost": 42
+        },
+        {
+          "id": "mcp-servers-and-clients",
+          "boost": 20
+        }
+      ]
+    },
+    {
+      "id": "rt-mcp-client",
+      "phrases": [
+        "how does a client talk to",
+        "client talks to",
+        "mcp client",
+        "mcp server"
+      ],
+      "pages": [
+        {
+          "id": "mcp-servers-and-clients",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-mcp-vs-fc",
+      "phrases": [
+        "already have function calling",
+        "if i already have",
+        "need mcp",
+        "mcp or function calling"
+      ],
+      "pages": [
+        {
+          "id": "function-calling-vs-mcp",
+          "boost": 48
+        }
+      ]
+    },
+    {
+      "id": "rt-mcp-sec",
+      "phrases": [
+        "third party tool servers",
+        "third party mcp",
+        "random mcp server",
+        "community mcp",
+        "install a random",
+        "untrusted server",
+        "tool server",
+        "what can go wrong with"
+      ],
+      "pages": [
+        {
+          "id": "mcp-security",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-a2a-ish",
+      "phrases": [
+        "agents discover each other",
+        "independent agents",
+        "agents from different vendors",
+        "agents from different companies",
+        "different vendors collaborate",
+        "agent to agent",
+        "agent2agent",
+        "cross vendor agents",
+        "agents talk to each other",
+        "agents communicate",
+        "interoperable agents"
+      ],
+      "pages": [
+        {
+          "id": "a2a-protocol",
+          "boost": 46
+        },
+        {
+          "id": "agent-protocol-landscape",
+          "boost": 30
+        }
+      ]
+    },
+    {
+      "id": "rt-py-call",
+      "phrases": [
+        "call an llm api from python",
+        "call a model from python",
+        "python and llm",
+        "python llm api",
+        "python sdk for models",
+        "python tutorial for calling",
+        "calling models in python",
+        "call an ai api from python",
+        "api from python",
+        "use an llm in python"
+      ],
+      "pages": [
+        {
+          "id": "calling-ai-apis-with-python",
+          "boost": 52
+        }
+      ]
+    },
+    {
+      "id": "rt-py-libs",
+      "phrases": [
+        "python libraries for ai",
+        "libraries do i need for ai",
+        "python ai libraries",
+        "python packages for ml",
+        "libraries for machine learning",
+        "numpy and pandas",
+        "which python libraries"
+      ],
+      "pages": [
+        {
+          "id": "python-ai-libraries",
+          "boost": 48
+        }
+      ]
+    },
+    {
+      "id": "rt-py-rag",
+      "phrases": [
+        "build a rag app in python",
+        "rag app in python",
+        "rag in python",
+        "python rag",
+        "small rag app"
+      ],
+      "pages": [
+        {
+          "id": "rag-with-python",
+          "boost": 50
+        }
+      ]
+    },
+    {
+      "id": "rt-py-data",
+      "phrases": [
+        "pandas dataframe",
+        "dataframe",
+        "csv and clean",
+        "read a csv",
+        "clean a csv",
+        "clean data before",
+        "load csv"
+      ],
+      "pages": [
+        {
+          "id": "python-data-for-ai",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-py-start",
+      "phrases": [
+        "python for machine learning",
+        "python for ai",
+        "python for ml",
+        "learn python for ai",
+        "where to begin with python",
+        "python machine learning tutorial"
+      ],
+      "pages": [
+        {
+          "id": "python-for-ai",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-js-call",
+      "phrases": [
+        "call an ai api from javascript",
+        "from javascript without exposing",
+        "without exposing my key",
+        "hide my api key",
+        "javascript fetch ai",
+        "browser calls the model",
+        "node proxy for model"
+      ],
+      "pages": [
+        {
+          "id": "calling-ai-apis-with-javascript",
+          "boost": 50
+        },
+        {
+          "id": "api-keys",
+          "boost": 24
+        },
+        {
+          "id": "nodejs-for-ai",
+          "boost": 20
+        }
+      ]
+    },
+    {
+      "id": "rt-stream",
+      "phrases": [
+        "stream tokens",
+        "streaming tokens",
+        "stream the response",
+        "stream responses",
+        "streaming response",
+        "tokens as they arrive",
+        "as they stream in",
+        "server sent events",
+        "sse",
+        "fetch with streaming",
+        "streaming body",
+        "readablestream"
+      ],
+      "pages": [
+        {
+          "id": "streaming-ai-responses",
+          "boost": 48
+        },
+        {
+          "id": "streaming-ai-with-nodejs",
+          "boost": 30
+        }
+      ]
+    },
+    {
+      "id": "rt-ts-types",
+      "phrases": [
+        "type the response",
+        "typed response",
+        "types for my api",
+        "api response types",
+        "generic types for api",
+        "typescript types for responses",
+        "typing api responses",
+        "zod",
+        "type safe api client"
+      ],
+      "pages": [
+        {
+          "id": "typescript-api-client-types",
+          "boost": 48
+        }
+      ]
+    },
+    {
+      "id": "rt-react-chat",
+      "phrases": [
+        "chat message state",
+        "message state in react",
+        "chat ui in react",
+        "build a chat ui",
+        "chat component",
+        "react chat",
+        "usestate for messages",
+        "stream into a chat component",
+        "tokens into a chat"
+      ],
+      "pages": [
+        {
+          "id": "react-chatbot-state",
+          "boost": 46
+        },
+        {
+          "id": "react-ai-interfaces",
+          "boost": 38
+        }
+      ]
+    },
+    {
+      "id": "rt-node-back",
+      "phrases": [
+        "backend for a chat app",
+        "express server",
+        "proxy model requests",
+        "server that proxies",
+        "node backend for ai"
+      ],
+      "pages": [
+        {
+          "id": "nodejs-for-ai",
+          "boost": 42
+        },
+        {
+          "id": "express",
+          "boost": 26
+        }
+      ]
+    },
+    {
+      "id": "rt-json-err",
+      "phrases": [
+        "unexpected token in json",
+        "unexpected token",
+        "json parse error",
+        "json parse",
+        "cannot parse json",
+        "syntaxerror json",
+        "position 0"
+      ],
+      "pages": [
+        {
+          "id": "json-validation",
+          "boost": 48
+        },
+        {
+          "id": "what-is-json",
+          "boost": 24
+        }
+      ]
+    },
+    {
+      "id": "rt-rest-ish",
+      "phrases": [
+        "what does restful mean",
+        "restful",
+        "rest api basics",
+        "http methods",
+        "get post put delete",
+        "crud"
+      ],
+      "pages": [
+        {
+          "id": "rest-apis",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-secrets-browser",
+      "phrases": [
+        "secret key in the browser",
+        "should the browser hold",
+        "keep my api key",
+        "where should i keep",
+        "hide api keys",
+        "api key safe",
+        "api key security"
+      ],
+      "pages": [
+        {
+          "id": "api-keys",
+          "boost": 42
+        },
+        {
+          "id": "environment-variables",
+          "boost": 28
+        }
+      ]
+    },
+    {
+      "id": "rt-sql-ish",
+      "phrases": [
+        "structured query language",
+        "relational database",
+        "primary key",
+        "foreign key",
+        "join two tables",
+        "join tables",
+        "joins in sql",
+        "inner join",
+        "left join"
+      ],
+      "pages": [
+        {
+          "id": "sql",
+          "boost": 46
+        },
+        {
+          "id": "postgresql",
+          "boost": 14
+        }
+      ]
+    },
+    {
+      "id": "rt-chat-history",
+      "phrases": [
+        "chat history",
+        "store conversations",
+        "conversation storage",
+        "save conversations",
+        "message history",
+        "store messages",
+        "history for an assistant"
+      ],
+      "pages": [
+        {
+          "id": "databases-for-ai-apps",
+          "boost": 42
+        },
+        {
+          "id": "postgresql-for-ai-apps",
+          "boost": 30
+        },
+        {
+          "id": "agent-memory",
+          "boost": 20
+        }
+      ]
+    },
+    {
+      "id": "rt-db-for-ai",
+      "phrases": [
+        "which database for an ai app",
+        "database for an ai app",
+        "database should an ai app",
+        "database for llm app",
+        "database for ai"
+      ],
+      "pages": [
+        {
+          "id": "databases-for-ai-apps",
+          "boost": 48
+        }
+      ]
+    },
+    {
+      "id": "rt-redis-ish",
+      "phrases": [
+        "cache with redis",
+        "redis or the database",
+        "redis cache",
+        "use redis"
+      ],
+      "pages": [
+        {
+          "id": "redis",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-docker-ish",
+      "phrases": [
+        "runs the same everywhere",
+        "same everywhere",
+        "works on my machine",
+        "package an app",
+        "package my app",
+        "ship my app in a container",
+        "dockerfile",
+        "image and a container",
+        "container image"
+      ],
+      "pages": [
+        {
+          "id": "docker",
+          "boost": 46
+        },
+        {
+          "id": "containers",
+          "boost": 30
+        }
+      ]
+    },
+    {
+      "id": "rt-vm-vs",
+      "phrases": [
+        "container versus virtual machine",
+        "container vs vm",
+        "vm vs container",
+        "virtual machine vs container"
+      ],
+      "pages": [
+        {
+          "id": "containers",
+          "boost": 46
+        },
+        {
+          "id": "docker",
+          "boost": 20
+        }
+      ]
+    },
+    {
+      "id": "rt-git-ish",
+      "phrases": [
+        "rebase",
+        "merge conflict",
+        "git branch",
+        "git stash",
+        "git commit"
+      ],
+      "pages": [
+        {
+          "id": "git",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-ci-ish",
+      "phrases": [
+        "github actions",
+        "workflow for tests",
+        "tests on every pull request",
+        "automatic tests",
+        "on every push"
+      ],
+      "pages": [
+        {
+          "id": "cicd",
+          "boost": 46
+        },
+        {
+          "id": "github",
+          "boost": 26
+        }
+      ]
+    },
+    {
+      "id": "rt-pkg-ish",
+      "phrases": [
+        "pip install",
+        "virtualenv",
+        "venv",
+        "dependency errors",
+        "dependency conflicts",
+        "npm install fails",
+        "npm install",
+        "node modules",
+        "package manager"
+      ],
+      "pages": [
+        {
+          "id": "package-managers",
+          "boost": 46
+        },
+        {
+          "id": "python",
+          "boost": 14
+        },
+        {
+          "id": "nodejs",
+          "boost": 14
+        }
+      ]
+    },
+    {
+      "id": "rt-aws-ish",
+      "phrases": [
+        "aws lambda",
+        "lambda function",
+        "s3 bucket",
+        "ec2",
+        "iam role aws"
+      ],
+      "pages": [
+        {
+          "id": "aws-fundamentals",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-azure-ish",
+      "phrases": [
+        "resource group",
+        "resource groups",
+        "azure subscription",
+        "azure basics"
+      ],
+      "pages": [
+        {
+          "id": "azure-fundamentals",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-gcp-ish",
+      "phrases": [
+        "google cloud",
+        "gcp iam",
+        "cloud run",
+        "bigquery",
+        "gke"
+      ],
+      "pages": [
+        {
+          "id": "gcp-fundamentals",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-sp-ish",
+      "phrases": [
+        "sharepoint list",
+        "lists and libraries",
+        "document library",
+        "site collection",
+        "sharepoint site"
+      ],
+      "pages": [
+        {
+          "id": "sharepoint",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-spfx-ish",
+      "phrases": [
+        "spfx",
+        "web part",
+        "webpart",
+        "sharepoint framework",
+        "extension customizer"
+      ],
+      "pages": [
+        {
+          "id": "sharepoint-framework",
+          "boost": 46
+        },
+        {
+          "id": "build-spfx-web-part",
+          "boost": 20
+        }
+      ]
+    },
+    {
+      "id": "rt-graph-spfx",
+      "phrases": [
+        "graph from an spfx",
+        "graph client in spfx",
+        "msgraphclient",
+        "aadhttpclient"
+      ],
+      "pages": [
+        {
+          "id": "microsoft-graph",
+          "boost": 42
+        },
+        {
+          "id": "sharepoint-framework",
+          "boost": 30
+        }
+      ]
+    },
+    {
+      "id": "rt-teams-ish",
+      "phrases": [
+        "teams app",
+        "teams tab",
+        "teams bot",
+        "app manifest",
+        "teams manifest",
+        "teams tabs"
+      ],
+      "pages": [
+        {
+          "id": "teams-development",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-entra-ish",
+      "phrases": [
+        "conditional access",
+        "app registration",
+        "app registrations",
+        "entra",
+        "azure ad",
+        "tenant",
+        "service principal",
+        "managed identity"
+      ],
+      "pages": [
+        {
+          "id": "microsoft-entra-id",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-power-ish",
+      "phrases": [
+        "power automate",
+        "power apps",
+        "power platform",
+        "flows vs",
+        "dataverse"
+      ],
+      "pages": [
+        {
+          "id": "power-platform",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-ms-login",
+      "phrases": [
+        "log in with microsoft",
+        "sign in with microsoft",
+        "login with microsoft",
+        "microsoft login",
+        "microsoft sign in",
+        "azure ad login"
+      ],
+      "pages": [
+        {
+          "id": "microsoft-entra-id",
+          "boost": 42
+        },
+        {
+          "id": "oauth",
+          "boost": 24
+        },
+        {
+          "id": "openid-connect",
+          "boost": 24
+        }
+      ]
+    },
+    {
+      "id": "rt-daemon-graph",
+      "phrases": [
+        "without a user",
+        "daemon",
+        "app only",
+        "application permissions",
+        "client credentials"
+      ],
+      "pages": [
+        {
+          "id": "microsoft-graph",
+          "boost": 36
+        },
+        {
+          "id": "oauth",
+          "boost": 30
+        }
+      ]
+    },
+    {
+      "id": "rt-local-easy",
+      "phrases": [
+        "pull and chat with an open model",
+        "chat with an open model",
+        "own pc",
+        "on my own pc",
+        "run llama locally",
+        "run models locally",
+        "run llms locally",
+        "local llm",
+        "local model",
+        "run an open model",
+        "download a model and run",
+        "open model on my laptop"
+      ],
+      "pages": [
+        {
+          "id": "local-ai",
+          "boost": 38
+        },
+        {
+          "id": "ollama",
+          "boost": 36
+        },
+        {
+          "id": "local-runtimes-compared",
+          "boost": 20
+        }
+      ]
+    },
+    {
+      "id": "rt-local-slow",
+      "phrases": [
+        "local model is slow",
+        "local model so slow",
+        "slow local model",
+        "slow on my laptop",
+        "too slow locally",
+        "speed up local",
+        "running slowly"
+      ],
+      "pages": [
+        {
+          "id": "local-ai",
+          "boost": 30
+        },
+        {
+          "id": "quantization",
+          "boost": 30
+        },
+        {
+          "id": "llama-cpp",
+          "boost": 24
+        },
+        {
+          "id": "gpus-and-ai-accelerators",
+          "boost": 24
+        }
+      ]
+    },
+    {
+      "id": "rt-private-ai",
+      "phrases": [
+        "run ai privately",
+        "privately on my own",
+        "private ai",
+        "run deepseek",
+        "run llama privately",
+        "offline ai",
+        "without internet",
+        "on my own machine",
+        "self host",
+        "self hosted",
+        "airgapped",
+        "on premises model"
+      ],
+      "pages": [
+        {
+          "id": "local-ai",
+          "boost": 44
+        },
+        {
+          "id": "local-ai-vs-cloud-ai",
+          "boost": 20
+        },
+        {
+          "id": "open-weights-models",
+          "boost": 20
+        }
+      ]
+    },
+    {
+      "id": "rt-local-vs-cloud2",
+      "phrases": [
+        "local model or cloud",
+        "local or cloud",
+        "local vs cloud",
+        "sensitive documents",
+        "confidential documents",
+        "as good as a cloud",
+        "good as cloud",
+        "on prem or cloud"
+      ],
+      "pages": [
+        {
+          "id": "local-ai-vs-cloud-ai",
+          "boost": 48
+        },
+        {
+          "id": "ai-privacy-and-security",
+          "boost": 20
+        }
+      ]
+    },
+    {
+      "id": "rt-browser-model",
+      "phrases": [
+        "model in the browser",
+        "in the browser",
+        "webgpu",
+        "webassembly",
+        "transformers js",
+        "export a model",
+        "cross platform inference",
+        "cross platform"
+      ],
+      "pages": [
+        {
+          "id": "onnx-runtime",
+          "boost": 42
+        }
+      ]
+    },
+    {
+      "id": "rt-on-phone",
+      "phrases": [
+        "run on a phone",
+        "on a phone",
+        "on my phone",
+        "mobile device",
+        "edge device",
+        "raspberry pi",
+        "tiny llms"
+      ],
+      "pages": [
+        {
+          "id": "small-language-models",
+          "boost": 40
+        },
+        {
+          "id": "local-ai",
+          "boost": 20
+        },
+        {
+          "id": "onnx-runtime",
+          "boost": 14
+        }
+      ]
+    },
+    {
+      "id": "rt-serve-scale",
+      "phrases": [
+        "serve a model to hundreds",
+        "serve to hundreds",
+        "hundreds of users",
+        "thousands of users",
+        "many concurrent",
+        "high concurrency",
+        "serve an llm in production",
+        "production serving",
+        "inference at scale",
+        "paged kv cache",
+        "serving engine"
+      ],
+      "pages": [
+        {
+          "id": "vllm",
+          "boost": 40
+        },
+        {
+          "id": "model-serving-and-inference",
+          "boost": 36
+        },
+        {
+          "id": "local-runtimes-compared",
+          "boost": 24
+        }
+      ]
+    },
+    {
+      "id": "rt-gpu-mem",
+      "phrases": [
+        "fit in 8gb",
+        "in 8gb of vram",
+        "vram",
+        "gpu memory",
+        "gb of vram",
+        "out of memory",
+        "oom",
+        "cuda out of memory",
+        "memory error",
+        "not enough memory",
+        "fits on my gpu",
+        "which gpu",
+        "what gpu",
+        "how many gpus",
+        "gpu for inference",
+        "gpu for training"
+      ],
+      "pages": [
+        {
+          "id": "gpus-and-ai-accelerators",
+          "boost": 42
+        },
+        {
+          "id": "quantization",
+          "boost": 30
+        },
+        {
+          "id": "model-serving-and-inference",
+          "boost": 20
+        }
+      ]
+    },
+    {
+      "id": "rt-shrink",
+      "phrases": [
+        "shrink a model",
+        "make a model smaller",
+        "compress a model",
+        "smaller model",
+        "reduce model size",
+        "4 bit",
+        "8 bit",
+        "int4",
+        "int8"
+      ],
+      "pages": [
+        {
+          "id": "quantization",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-distill-ish",
+      "phrases": [
+        "distilling",
+        "distill",
+        "big model into a small",
+        "large model into a small",
+        "teacher model",
+        "student model"
+      ],
+      "pages": [
+        {
+          "id": "knowledge-distillation",
+          "boost": 48
+        }
+      ]
+    },
+    {
+      "id": "rt-adapter",
+      "phrases": [
+        "adapter training",
+        "adapters instead",
+        "train adapters",
+        "update every weight",
+        "every weight",
+        "all the weights",
+        "full fine tune",
+        "consumer gpu",
+        "single consumer gpu",
+        "7b model on",
+        "fine tune a 7b",
+        "fine tune on a single",
+        "fine tune on one"
+      ],
+      "pages": [
+        {
+          "id": "lora-and-peft",
+          "boost": 44
+        },
+        {
+          "id": "lora-vs-full-fine-tuning",
+          "boost": 34
+        }
+      ]
+    },
+    {
+      "id": "rt-scale-budget",
+      "phrases": [
+        "pick model size and dataset size",
+        "model size and dataset size",
+        "training budget",
+        "how many tokens to train",
+        "bigger models better",
+        "does bigger help",
+        "scale up",
+        "compute optimal"
+      ],
+      "pages": [
+        {
+          "id": "scaling-laws",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-base-to-chat",
+      "phrases": [
+        "base models turned into chat",
+        "base model into a chat",
+        "turn a base model",
+        "chat assistants trained",
+        "how are chat models trained",
+        "how chatgpt was trained",
+        "base vs chat",
+        "base model vs chat model",
+        "thumbs up thumbs down",
+        "thumbs up and thumbs down",
+        "human ratings",
+        "human feedback",
+        "trained on ratings"
+      ],
+      "pages": [
+        {
+          "id": "instruction-tuning",
+          "boost": 38
+        },
+        {
+          "id": "rlhf",
+          "boost": 38
+        },
+        {
+          "id": "preference-optimization",
+          "boost": 20
+        }
+      ]
+    },
+    {
+      "id": "rt-latency",
+      "phrases": [
+        "longer prompts",
+        "slower with longer",
+        "inference slower",
+        "latency grows",
+        "prefill",
+        "why is inference slow",
+        "speed up llm responses",
+        "speed up responses",
+        "faster inference",
+        "reduce latency",
+        "time to first token"
+      ],
+      "pages": [
+        {
+          "id": "model-serving-and-inference",
+          "boost": 36
+        },
+        {
+          "id": "speculative-decoding",
+          "boost": 30
+        },
+        {
+          "id": "kv-cache",
+          "boost": 28
+        },
+        {
+          "id": "context-windows",
+          "boost": 14
+        }
+      ]
+    },
+    {
+      "id": "rt-vlm-ish",
+      "phrases": [
+        "understand images and text",
+        "images and text together",
+        "image and text together",
+        "reads screenshots",
+        "screenshots",
+        "describe an image",
+        "image to text",
+        "caption images",
+        "visual question",
+        "chat with images",
+        "upload an image"
+      ],
+      "pages": [
+        {
+          "id": "vision-language-models",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-computer-use2",
+      "phrases": [
+        "sees my screen and clicks",
+        "clicks buttons",
+        "click buttons",
+        "control my computer",
+        "operate my computer",
+        "operate my browser",
+        "browser automation with ai",
+        "use my computer",
+        "mouse and keyboard",
+        "controls my screen",
+        "sees my screen"
+      ],
+      "pages": [
+        {
+          "id": "computer-use-agents",
+          "boost": 52
+        }
+      ]
+    },
+    {
+      "id": "rt-ocr",
+      "phrases": [
+        "text inside photos",
+        "text in photos",
+        "text in images",
+        "read text from images",
+        "extract text from scanned",
+        "scanned invoices",
+        "scanned documents",
+        "ocr",
+        "invoices",
+        "receipts",
+        "handwriting",
+        "pdf extraction"
+      ],
+      "pages": [
+        {
+          "id": "document-understanding-ai",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-struct-extract",
+      "phrases": [
+        "messy emails",
+        "structured data out of",
+        "extract fields from",
+        "consistent structured data",
+        "extract structured data",
+        "pull structured fields",
+        "extract entities"
+      ],
+      "pages": [
+        {
+          "id": "structured-outputs",
+          "boost": 40
+        },
+        {
+          "id": "document-understanding-ai",
+          "boost": 24
+        }
+      ]
+    },
+    {
+      "id": "rt-clip-ish",
+      "phrases": [
+        "image and text embeddings",
+        "shared space",
+        "text to image search",
+        "search images with text",
+        "zero shot image"
+      ],
+      "pages": [
+        {
+          "id": "contrastive-learning-clip",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-speech-ish",
+      "phrases": [
+        "captions for video",
+        "automatic captions",
+        "subtitles",
+        "transcribe",
+        "transcription",
+        "meeting recordings",
+        "meeting notes",
+        "voice notes",
+        "clone my voice",
+        "voice cloning",
+        "text to speech",
+        "speech to text",
+        "dictation",
+        "voice assistant",
+        "audio to text",
+        "podcast transcripts"
+      ],
+      "pages": [
+        {
+          "id": "speech-ai",
+          "boost": 46
+        },
+        {
+          "id": "c2pa-content-provenance",
+          "boost": 10
+        }
+      ]
+    },
+    {
+      "id": "rt-robot-hard",
+      "phrases": [
+        "why is robotics harder",
+        "robots harder",
+        "robotics harder than",
+        "robots and ai",
+        "how do robots learn",
+        "robot learning",
+        "physical world ai",
+        "robot arms",
+        "robot manipulation",
+        "robotics and ai"
+      ],
+      "pages": [
+        {
+          "id": "embodied-ai",
+          "boost": 46
+        },
+        {
+          "id": "imitation-learning",
+          "boost": 12
+        },
+        {
+          "id": "reinforcement-learning",
+          "boost": 12
+        }
+      ]
+    },
+    {
+      "id": "rt-vla-ish",
+      "phrases": [
+        "conditioned on camera images and instructions",
+        "camera images and instructions",
+        "language instructions to actions",
+        "robot follows instructions",
+        "text to robot actions",
+        "instructions into robot actions"
+      ],
+      "pages": [
+        {
+          "id": "vision-language-action-models",
+          "boost": 48
+        }
+      ]
+    },
+    {
+      "id": "rt-wm-ish",
+      "phrases": [
+        "imagine future",
+        "imagines future",
+        "future states",
+        "plan inside a learned model",
+        "planning inside a learned",
+        "learned model of the environment",
+        "model of the environment",
+        "simulate the environment"
+      ],
+      "pages": [
+        {
+          "id": "world-models",
+          "boost": 48
+        }
+      ]
+    },
+    {
+      "id": "rt-sim-real2",
+      "phrases": [
+        "works in the simulator",
+        "simulator but not on hardware",
+        "simulation but",
+        "not on hardware",
+        "fails on hardware",
+        "not on the real robot",
+        "reality gap"
+      ],
+      "pages": [
+        {
+          "id": "sim-to-real-transfer",
+          "boost": 50
+        }
+      ]
+    },
+    {
+      "id": "rt-paste-data",
+      "phrases": [
+        "paste customer data",
+        "paste sensitive",
+        "sensitive data into",
+        "customer data into",
+        "confidential data into",
+        "private data into",
+        "is it ok to paste",
+        "safe to paste",
+        "what do i need to redact",
+        "redact before",
+        "personal data in prompts",
+        "pii in prompts"
+      ],
+      "pages": [
+        {
+          "id": "ai-privacy-and-security",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-red-team2",
+      "phrases": [
+        "testing a model for jailbreaks",
+        "before release",
+        "pen test",
+        "red team",
+        "adversarial testing",
+        "attack my model",
+        "try to break my model",
+        "break my chatbot"
+      ],
+      "pages": [
+        {
+          "id": "red-teaming",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-guardrails2",
+      "phrases": [
+        "filtering unsafe",
+        "unsafe outputs",
+        "harmful output",
+        "block harmful",
+        "moderation",
+        "content filter",
+        "safety filter",
+        "filter outputs"
+      ],
+      "pages": [
+        {
+          "id": "ai-guardrails",
+          "boost": 44
+        }
+      ]
+    },
+    {
+      "id": "rt-self-check",
+      "phrases": [
+        "check my own answers",
+        "check answers before sending",
+        "verify answers before",
+        "second model checks",
+        "model to check"
+      ],
+      "pages": [
+        {
+          "id": "ai-guardrails",
+          "boost": 34
+        },
+        {
+          "id": "llm-as-a-judge",
+          "boost": 30
+        },
+        {
+          "id": "how-to-reduce-hallucinations",
+          "boost": 22
+        }
+      ]
+    },
+    {
+      "id": "rt-provenance",
+      "phrases": [
+        "signed provenance",
+        "image was made by ai",
+        "made by ai",
+        "generated by ai image",
+        "is this ai generated",
+        "detect ai images",
+        "detect deepfakes",
+        "deepfake",
+        "watermark",
+        "provenance"
+      ],
+      "pages": [
+        {
+          "id": "c2pa-content-provenance",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-owasp-ish",
+      "phrases": [
+        "checklist of security risks",
+        "security risks for generative ai",
+        "security risks of llm",
+        "top security risks",
+        "llm security checklist",
+        "genai security",
+        "llm application security"
+      ],
+      "pages": [
+        {
+          "id": "owasp-llm-top-10",
+          "boost": 48
+        }
+      ]
+    },
+    {
+      "id": "rt-is-ai-good",
+      "phrases": [
+        "is my ai feature any good",
+        "know if my ai feature is good",
+        "test my ai feature",
+        "how good is my llm app",
+        "evaluate my llm app",
+        "measure quality",
+        "measure my ai quality",
+        "quality of my chatbot"
+      ],
+      "pages": [
+        {
+          "id": "ai-evaluation",
+          "boost": 42
+        },
+        {
+          "id": "llm-benchmarks-vs-task-evals",
+          "boost": 24
+        }
+      ]
+    },
+    {
+      "id": "rt-leaderboard-doubt",
+      "phrases": [
+        "leaderboards gamed",
+        "gamed",
+        "leaderboard rankings",
+        "rankings misleading",
+        "benchmark gaming",
+        "public leaderboards"
+      ],
+      "pages": [
+        {
+          "id": "benchmarks-and-leaderboards",
+          "boost": 38
+        },
+        {
+          "id": "benchmark-contamination",
+          "boost": 32
+        }
+      ]
+    },
+    {
+      "id": "rt-contam",
+      "phrases": [
+        "trained on my benchmark",
+        "not trained on",
+        "seen the test",
+        "test data leaked",
+        "leaked into training",
+        "memorized the test",
+        "benchmark leak"
+      ],
+      "pages": [
+        {
+          "id": "benchmark-contamination",
+          "boost": 48
+        }
+      ]
+    },
+    {
+      "id": "rt-rubric",
+      "phrases": [
+        "grade answers with a rubric",
+        "grading answers",
+        "rubric",
+        "grade another model",
+        "grade one model with another",
+        "strong model to grade",
+        "one model to grade another",
+        "use a model to grade"
+      ],
+      "pages": [
+        {
+          "id": "llm-as-a-judge",
+          "boost": 48
+        }
+      ]
+    },
+    {
+      "id": "rt-mmlu-ish",
+      "phrases": [
+        "57 subject",
+        "multiple choice benchmark",
+        "57 subjects"
+      ],
+      "pages": [
+        {
+          "id": "mmlu",
+          "boost": 50
+        }
+      ]
+    },
+    {
+      "id": "rt-swe-ish",
+      "phrases": [
+        "fix real github issues",
+        "real github issues",
+        "issues from github",
+        "coding agents benchmark"
+      ],
+      "pages": [
+        {
+          "id": "swe-bench",
+          "boost": 50
+        }
+      ]
+    },
+    {
+      "id": "rt-elo-ish",
+      "phrases": [
+        "elo",
+        "elo rankings",
+        "chatbot rankings",
+        "arena",
+        "head to head votes"
+      ],
+      "pages": [
+        {
+          "id": "human-preference-evaluation",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-metric-ish",
+      "phrases": [
+        "rare positives",
+        "imbalanced",
+        "class imbalance",
+        "precision recall",
+        "precision and recall",
+        "f1",
+        "confusion matrix",
+        "roc",
+        "auc",
+        "metrics for a classifier"
+      ],
+      "pages": [
+        {
+          "id": "evaluation-metrics-for-ai",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-mlops-ish",
+      "phrases": [
+        "keep ml models running",
+        "running reliably after launch",
+        "ml in production",
+        "productionize",
+        "productionise",
+        "deploy ml",
+        "model lifecycle",
+        "ml pipeline"
+      ],
+      "pages": [
+        {
+          "id": "mlops",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-drift-ish",
+      "phrases": [
+        "got worse after",
+        "gets worse after",
+        "worse after months",
+        "monitoring a deployed model",
+        "deployed model",
+        "stale model",
+        "model decay"
+      ],
+      "pages": [
+        {
+          "id": "model-drift-and-monitoring",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-gov-ish",
+      "phrases": [
+        "signs off on ai",
+        "who signs off",
+        "approve ai use",
+        "ai approval",
+        "accountable",
+        "accountability for ai",
+        "responsible ai checklist",
+        "ai policy for a company",
+        "company ai policy",
+        "ai oversight",
+        "review board"
+      ],
+      "pages": [
+        {
+          "id": "ai-governance",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-iso-ish",
+      "phrases": [
+        "certifiable standard",
+        "certifiable",
+        "certification for ai",
+        "management system"
+      ],
+      "pages": [
+        {
+          "id": "iso-iec-42001",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-eu-ish",
+      "phrases": [
+        "high risk ai system",
+        "what counts as high risk",
+        "banned ai",
+        "prohibited ai",
+        "europe ai law",
+        "ai law in europe",
+        "european ai law",
+        "eu law"
+      ],
+      "pages": [
+        {
+          "id": "eu-ai-act",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-bias-ish",
+      "phrases": [
+        "error rates",
+        "across demographic groups",
+        "demographic groups",
+        "across groups",
+        "fairness audit",
+        "audited for fairness",
+        "audit for fairness",
+        "discriminate",
+        "discrimination",
+        "biased model",
+        "unfair outcomes"
+      ],
+      "pages": [
+        {
+          "id": "ai-bias-and-fairness",
+          "boost": 48
+        }
+      ]
+    },
+    {
+      "id": "rt-card-ish",
+      "phrases": [
+        "documentation template",
+        "document a released model",
+        "documenting a model",
+        "release notes for a model",
+        "model documentation",
+        "what to document"
+      ],
+      "pages": [
+        {
+          "id": "model-cards",
+          "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "rt-flatter",
+      "phrases": [
+        "flatter",
+        "flattery",
+        "agrees with me",
+        "tells me what i want",
+        "yes man",
+        "chatbots flatter"
+      ],
+      "pages": [
+        {
+          "id": "sycophancy",
+          "boost": 48
+        }
+      ]
+    },
+    {
+      "id": "rt-dpo-loss",
+      "phrases": [
+        "loss over chosen and rejected",
+        "chosen and rejected completions",
+        "chosen rejected",
+        "preference pairs",
+        "preference loss"
+      ],
+      "pages": [
+        {
+          "id": "dpo",
+          "boost": 48
+        },
+        {
+          "id": "preference-optimization",
+          "boost": 20
+        }
+      ]
+    },
+    {
+      "id": "rt-rh-ish",
+      "phrases": [
+        "optimises the metric",
+        "optimizes the metric",
+        "instead of the goal",
+        "gaming the reward",
+        "exploits the reward",
+        "loophole in the reward"
+      ],
+      "pages": [
+        {
+          "id": "reward-hacking",
+          "boost": 48
+        }
+      ]
+    },
+    {
+      "id": "rt-cai-ish",
+      "phrases": [
+        "critiques its own",
+        "critique its own answers",
+        "written principles",
+        "self critique",
+        "principles to"
+      ],
+      "pages": [
+        {
+          "id": "constitutional-ai-and-rlaif",
+          "boost": 48
+        }
+      ]
+    },
+    {
+      "id": "rt-fold",
+      "phrases": [
+        "protein folding",
+        "fold proteins",
+        "protein shapes",
+        "amino acid sequence",
+        "predict 3d structure",
+        "protein structure"
+      ],
+      "pages": [
+        {
+          "id": "alphafold",
+          "boost": 50
+        }
+      ]
+    },
+    {
+      "id": "rt-pde",
+      "phrases": [
+        "solution operator",
+        "operator of a pde",
+        "pde",
+        "differential equation",
+        "physics equations",
+        "respect physics",
+        "obey physics",
+        "partial differential"
+      ],
+      "pages": [
+        {
+          "id": "physics-informed-neural-networks",
+          "boost": 48
+        }
+      ]
+    },
+    {
+      "id": "rt-wx",
+      "phrases": [
+        "forecast weather",
+        "weather forecasting",
+        "weather prediction",
+        "predict the weather"
+      ],
+      "pages": [
+        {
+          "id": "ai-weather-forecasting",
+          "boost": 48
+        }
+      ]
+    },
+    {
+      "id": "rt-mat",
+      "phrases": [
+        "battery materials",
+        "new materials",
+        "find materials",
+        "materials for batteries"
+      ],
+      "pages": [
+        {
+          "id": "ai-materials-discovery",
+          "boost": 48
+        }
+      ]
+    },
+    {
+      "id": "rt-start-ai",
+      "phrases": [
+        "how do i get started with ai",
+        "get started with ai",
+        "getting started with ai",
+        "start learning ai",
+        "learn ai",
+        "ai for beginners",
+        "beginner ai"
+      ],
+      "pages": [
+        {
+          "id": "what-is-ai",
+          "boost": 38
+        },
+        {
+          "id": "python-for-ai",
+          "boost": 20
+        },
+        {
+          "id": "large-language-models",
+          "boost": 20
+        }
+      ]
+    },
+    {
+      "id": "rt-ai-at-work",
+      "phrases": [
+        "use ai at work",
+        "ai at work",
+        "ai for work",
+        "ai in the workplace",
+        "ai at the office"
+      ],
+      "pages": [
+        {
+          "id": "ai-privacy-and-security",
+          "boost": 26
+        },
+        {
+          "id": "prompt-engineering",
+          "boost": 26
+        },
+        {
+          "id": "ai-governance",
+          "boost": 26
+        }
+      ]
+    },
+    {
+      "id": "rt-hitl",
+      "phrases": [
+        "hitl",
+        "human in the loop",
+        "human in loop"
+      ],
+      "pages": [
+        {
+          "id": "agentic-workflows",
+          "boost": 38
+        },
+        {
+          "id": "ai-agents",
+          "boost": 20
+        }
+      ]
+    },
+    {
+      "id": "rt-oss-models",
+      "phrases": [
+        "oss vs",
+        "oss models",
+        "proprietary models",
+        "closed models",
+        "closed source models",
+        "open vs closed",
+        "downloadable models",
+        "same as open source",
+        "open source vs open weights",
+        "is llama open source",
+        "llama open source",
+        "open source models",
+        "open source llms",
+        "models like llama",
+        "open models"
+      ],
+      "pages": [
+        {
+          "id": "open-weights-models",
+          "boost": 46
+        },
+        {
+          "id": "local-ai",
+          "boost": 14
+        }
+      ]
+    },
+    {
+      "id": "rt-vectors-bare",
+      "phrases": [
+        "vectors"
+      ],
+      "pages": [
+        {
+          "id": "embeddings",
+          "boost": 28
+        },
+        {
+          "id": "vector-databases",
+          "boost": 22
+        }
+      ]
+    },
+    {
+      "id": "rt-rl-is-dpo",
+      "phrases": [
+        "rl with unit test rewards",
+        "unit test rewards",
+        "verifiable reward",
+        "rewards from tests",
+        "reward from unit tests",
+        "rl for coding models",
+        "rl for code"
+      ],
+      "pages": [
+        {
+          "id": "reinforcement-learning-for-reasoning",
+          "boost": 48
+        }
+      ]
+    },
+    {
+      "id": "rt-dpo-vs-rl-sibling",
+      "phrases": [
+        "rlhf from human feedback",
+        "how rlhf works",
+        "how does rlhf work"
+      ],
+      "pages": [
+        {
+          "id": "rlhf",
+          "boost": 42
+        }
+      ]
+    },
+    {
+      "id": "rt-vdb-basics",
+      "phrases": [
+        "vector database basics",
+        "vector databases basics",
+        "what is a vector database",
+        "vector db basics",
+        "intro to vector databases",
+        "vector databases explained",
+        "vector database for beginners",
+        "how do vector databases work"
+      ],
+      "pages": [
+        {
+          "id": "vector-databases",
+          "boost": 50
+        }
+      ]
+    },
+    {
+      "id": "rt-variation-run",
+      "phrases": [
+        "giving different",
+        "different answers each time",
+        "answers change",
+        "varies each run",
+        "varies between runs",
+        "inconsistent answers",
+        "inconsistent outputs",
+        "non reproducible",
+        "not reproducible",
+        "random answers"
+      ],
+      "pages": [
+        {
+          "id": "sampling-and-decoding",
+          "boost": 50
+        },
+        {
+          "id": "common-prompting-mistakes",
+          "boost": -12
+        }
+      ]
+    },
+    {
+      "id": "rt-resnet-vs-vit",
+      "phrases": [
+        "vision transformer vs resnet",
+        "resnet vs vision transformer",
+        "resnet vs vit",
+        "convnet vs vit",
+        "convnets vs transformers",
+        "cnn or transformer",
+        "cnn versus transformer",
+        "cnn vs transformer",
+        "cnn vs vit",
+        "vit vs cnn"
+      ],
+      "pages": [
+        {
+          "id": "cnn-vs-vision-transformer",
+          "boost": 56
+        },
+        {
+          "id": "convolutional-neural-networks",
+          "boost": -20
+        },
+        {
+          "id": "vision-transformers",
+          "boost": -8
+        }
+      ]
+    },
+    {
+      "id": "rt-see-inside",
+      "phrases": [
+        "see inside",
+        "inside a neural network",
+        "inside the model",
+        "look inside",
+        "what is happening inside",
+        "open the black box",
+        "black box",
+        "explain model decisions",
+        "why did the model decide",
+        "understand why a model",
+        "interpret a model",
+        "explainability",
+        "explainable",
+        "interpretable"
+      ],
+      "pages": [
+        {
+          "id": "mechanistic-interpretability",
+          "boost": 48
+        },
+        {
+          "id": "neural-networks",
+          "boost": -15
+        }
+      ]
+    },
+    {
+      "id": "rt-bigger-better",
+      "phrases": [
+        "making llms bigger",
+        "bigger llms",
+        "bigger models",
+        "larger models",
+        "model size vs performance",
+        "more parameters",
+        "more compute",
+        "predictably",
+        "improve predictably"
+      ],
+      "pages": [
+        {
+          "id": "scaling-laws",
+          "boost": 46
+        },
+        {
+          "id": "large-language-models",
+          "boost": -12
+        }
+      ]
+    },
+    {
+      "id": "rt-db-access",
+      "phrases": [
+        "access to my database",
+        "access to a database",
+        "query my database",
+        "talk to my database",
+        "llm to query",
+        "text to sql",
+        "natural language to sql",
+        "let the model query",
+        "database access for an agent",
+        "connect an llm to a database",
+        "llm and my database"
+      ],
+      "pages": [
+        {
+          "id": "agent-tools",
+          "boost": 38
+        },
+        {
+          "id": "integration-permissions",
+          "boost": 32
+        },
+        {
+          "id": "databases-for-ai-apps",
+          "boost": 24
+        },
+        {
+          "id": "function-calling",
+          "boost": 24
+        },
+        {
+          "id": "prompt-injection",
+          "boost": 12
+        },
+        {
+          "id": "large-language-models",
+          "boost": -14
+        }
+      ]
+    },
+    {
+      "id": "rt-any-good",
+      "phrases": [
+        "any good",
+        "is it good",
+        "good enough",
+        "is my ai good",
+        "how good is",
+        "know if my ai",
+        "know if my chatbot",
+        "know if my model"
+      ],
+      "pages": [
+        {
+          "id": "ai-evaluation",
+          "boost": 38
+        },
+        {
+          "id": "llm-benchmarks-vs-task-evals",
+          "boost": 22
+        }
+      ]
+    },
+    {
+      "id": "rt-fact-check",
+      "phrases": [
+        "backed by the source",
+        "backed by source",
+        "claim is backed",
+        "each claim",
+        "claims are supported",
+        "supported by the source text",
+        "supported by sources",
+        "verify claims",
+        "fact check the answer",
+        "fact check an answer",
+        "check an answer against",
+        "grounded in the source",
+        "citations are real",
+        "verify citations",
+        "check the citations"
+      ],
+      "pages": [
+        {
+          "id": "how-to-reduce-hallucinations",
+          "boost": 38
+        },
+        {
+          "id": "ai-hallucinations",
+          "boost": 28
+        },
+        {
+          "id": "rag-evaluation",
+          "boost": 18
+        }
+      ]
+    },
+    {
+      "id": "rt-bert-gpt",
+      "phrases": [
+        "bert versus gpt",
+        "gpt versus bert",
+        "bert style",
+        "gpt style",
+        "bert and gpt",
+        "bert or gpt",
+        "encoder only vs decoder only",
+        "encoder vs decoder",
+        "bert vs gpt"
+      ],
+      "pages": [
+        {
+          "id": "encoder-decoder-vs-decoder-only",
+          "boost": 52
+        },
+        {
+          "id": "small-language-models",
+          "boost": -14
+        }
+      ]
+    },
+    {
+      "id": "rt-search-again",
+      "phrases": [
+        "decides to search again",
+        "search again",
+        "retry retrieval",
+        "retrieve again",
+        "re query",
+        "rewrite the query",
+        "query rewriting",
+        "self correcting retrieval",
+        "adaptive retrieval",
+        "if results look poor",
+        "corrective retrieval",
+        "retrieval loop"
+      ],
+      "pages": [
+        {
+          "id": "agentic-rag",
+          "boost": 50
+        }
+      ]
+    },
+    {
+      "id": "rt-validate-payload",
+      "phrases": [
+        "against a schema",
+        "validate a payload",
+        "validate payload",
+        "validate a request body",
+        "validate request",
+        "validate api input",
+        "schema validation",
+        "validate input",
+        "request validation",
+        "payload validation"
+      ],
+      "pages": [
+        {
+          "id": "json-validation",
+          "boost": 42
+        },
+        {
+          "id": "json-schema",
+          "boost": 34
+        }
+      ]
+    },
+    {
+      "id": "rt-pretty-print",
+      "phrases": [
+        "pretty print",
+        "pretty printing",
+        "format json",
+        "beautify json",
+        "validate json"
+      ],
+      "pages": [
+        {
+          "id": "json-validation",
+          "boost": 40
+        },
+        {
+          "id": "what-is-json",
+          "boost": 20
+        }
+      ]
+    },
+    {
+      "id": "rt-which-sdk",
+      "phrases": [
+        "which sdk",
+        "sdk should i use",
+        "sdk to call",
+        "call different models",
+        "multiple model providers",
+        "switch between models",
+        "switch model providers",
+        "vendor agnostic",
+        "provider agnostic",
+        "multi provider",
+        "unified api for models",
+        "litellm"
+      ],
+      "pages": [
+        {
+          "id": "ai-sdks",
+          "boost": 46
+        },
+        {
+          "id": "model-apis",
+          "boost": 30
+        },
+        {
+          "id": "framework-vs-direct-api",
+          "boost": 20
+        }
+      ]
+    },
+    {
+      "id": "rt-grammar-llamacpp",
+      "phrases": [
+        "llama cpp grammar",
+        "grammar file for json",
+        "grammar in llama cpp",
+        "grammars in llama cpp"
+      ],
+      "pages": [
+        {
+          "id": "gbnf-grammars",
+          "boost": 56
+        },
+        {
+          "id": "llama-cpp",
+          "boost": -28
+        }
+      ]
+    },
+    {
+      "id": "rt-hybrid-combine",
+      "phrases": [
+        "combine keyword and vector",
+        "keyword and vector search",
+        "keyword plus vector search",
+        "vector and keyword",
+        "combine bm25",
+        "combine keyword",
+        "hybrid retrieval"
+      ],
+      "pages": [
+        {
+          "id": "hybrid-search-and-reranking",
+          "boost": 56
+        },
+        {
+          "id": "vector-databases",
+          "boost": -26
+        }
+      ]
+    },
+    {
+      "id": "rt-auth-tokens",
+      "phrases": [
+        "refresh token",
+        "refresh tokens",
+        "access token",
+        "access tokens",
+        "bearer token",
+        "id token",
+        "token expiry",
+        "token refresh",
+        "jwt",
+        "api tokens",
+        "oauth tokens"
+      ],
+      "pages": [
+        {
+          "id": "oauth",
+          "boost": 42
+        },
+        {
+          "id": "json-web-tokens",
+          "boost": 32
+        },
+        {
+          "id": "openid-connect",
+          "boost": 16
+        },
+        {
+          "id": "tokens",
+          "boost": -34
+        },
+        {
+          "id": "api-keys",
+          "boost": 6
+        }
+      ]
+    },
+    {
+      "id": "rt-dpo-loss2",
+      "phrases": [
+        "loss function over chosen",
+        "chosen and rejected completions",
+        "loss over chosen",
+        "pairwise preference loss"
+      ],
+      "pages": [
+        {
+          "id": "dpo",
+          "boost": 56
+        },
+        {
+          "id": "preference-optimization",
+          "boost": -20
+        }
+      ]
+    },
+    {
+      "id": "rt-science-hubs",
+      "phrases": [
+        "protein folding",
+        "fold proteins",
+        "protein structure",
+        "pde",
+        "differential equation",
+        "weather forecast",
+        "battery materials",
+        "drug discovery"
+      ],
+      "pages": [
+        {
+          "id": "deep-learning",
+          "boost": -40
+        },
+        {
+          "id": "neural-networks",
+          "boost": -22
+        },
+        {
+          "id": "what-is-ai",
+          "boost": -22
+        }
+      ]
+    },
+    {
+      "id": "rt-kube",
+      "phrases": [
+        "kubernetes",
+        "k8s",
+        "kubectl",
+        "helm chart",
+        "helm charts",
+        "pods and deployments",
+        "statefulset",
+        "autoscale pods",
+        "horizontal pod autoscaler",
+        "ingress controller",
+        "kubernetes cluster",
+        "container orchestration",
+        "crashloopbackoff",
+        "imagepullbackoff"
+      ],
+      "pages": [
+        {
+          "id": "kubernetes",
+          "boost": 54
+        },
+        {
+          "id": "containers",
+          "boost": 6
+        }
+      ]
+    },
+    {
+      "id": "rt-detect",
+      "phrases": [
+        "object detection",
+        "yolo",
+        "bounding boxes",
+        "bounding box",
+        "iou",
+        "intersection over union",
+        "image segmentation",
+        "semantic segmentation",
+        "instance segmentation",
+        "opencv",
+        "face detection",
+        "detect objects",
+        "mask rcnn",
+        "detr",
+        "non max suppression",
+        "map metric",
+        "segment anything"
+      ],
+      "pages": [
+        {
+          "id": "object-detection",
+          "boost": 52
+        }
+      ]
+    },
+    {
+      "id": "rt-ros-ish",
+      "phrases": [
+        "ros",
+        "ros 2",
+        "ros2",
+        "robot operating system",
+        "rviz",
+        "gazebo",
+        "nav2",
+        "moveit",
+        "nodes and topics",
+        "ros nodes",
+        "rclpy",
+        "rosbag"
+      ],
+      "pages": [
+        {
+          "id": "robot-operating-system",
+          "boost": 54
+        }
+      ]
+    },
+    {
+      "id": "rt-gdpr",
+      "phrases": [
+        "gdpr",
+        "right to erasure",
+        "right to be forgotten",
+        "data subject rights",
+        "data protection regulation",
+        "dpia",
+        "data protection impact",
+        "personal data in training",
+        "lawful basis",
+        "automated decision making",
+        "article 22",
+        "erasure and machine learning"
+      ],
+      "pages": [
+        {
+          "id": "gdpr-and-ai",
+          "boost": 54
+        },
+        {
+          "id": "ai-privacy-and-security",
+          "boost": 10
+        }
+      ]
+    }
+  ],
+  "concepts": [],
+  "pageTechnologies": {},
+  "queryTechnologies": [],
+  "coverageGaps": [
+    {
+      "id": "rt-negative-context",
+      "phrases": [
+        "toy",
+        "toys",
+        "pet",
+        "pets",
+        "snake",
+        "snakes",
+        "venom",
+        "clothing",
+        "clothes",
+        "fashion",
+        "jeans",
+        "pants",
+        "coffee",
+        "beans",
+        "recipe",
+        "cooking",
+        "whisky",
+        "whiskey",
+        "wine",
+        "beer",
+        "lyrics",
+        "song",
+        "songs",
+        "concert tickets",
+        "movie",
+        "film",
+        "tour dates",
+        "zodiac",
+        "horoscope",
+        "star sign",
+        "gemstone",
+        "jewellery",
+        "puppy",
+        "kitten",
+        "cats",
+        "garden",
+        "bees",
+        "hotel",
+        "hotels",
+        "holiday",
+        "vacation",
+        "wedding",
+        "salary",
+        "job role",
+        "psychology",
+        "adhd",
+        "deficit",
+        "stroke",
+        "brain",
+        "sewing",
+        "doll",
+        "hobby",
+        "board game",
+        "shares",
+        "insurance",
+        "mortgage",
+        "tax",
+        "passport",
+        "gift",
+        "gifts",
+        "painting",
+        "monet",
+        "sesame street",
+        "farm",
+        "wool",
+        "zoo",
+        "logo",
+        "physics",
+        "velocity",
+        "relativity",
+        "heat",
+        "metal",
+        "bike",
+        "bicycle",
+        "fence",
+        "appetite",
+        "concrete",
+        "macbook",
+        "discount",
+        "real estate",
+        "model train",
+        "model trains",
+        "train set",
+        "figurine",
+        "collectible",
+        "merch",
+        "hoodie",
+        "tshirt",
+        "net worth",
+        "popcorn",
+        "bonds",
+        "voting",
+        "oil",
+        "construction jobs",
+        "at home for kids",
+        "for kids",
+        "art for",
+        "art for presentations",
+        "clip art",
+        "react to this",
+        "react to that",
+        "react to these",
+        "how to react",
+        "git gud",
+        "youtube video",
+        "wordpress",
+        "at university",
+        "in college",
+        "career choice",
+        "my career",
+        "greek",
+        "helmsman",
+        "unchained",
+        "kids book",
+        "animal facts",
+        "car wash"
+      ],
+      "withTerms": [
+        "transformer",
+        "transformers",
+        "mamba",
+        "python",
+        "react",
+        "docker",
+        "java",
+        "rust",
+        "git",
+        "rag",
+        "token",
+        "tokens",
+        "attention",
+        "clip",
+        "whisper",
+        "perplexity",
+        "distillation",
+        "dropout",
+        "embedding",
+        "embeddings",
+        "vector",
+        "vectors",
+        "agent",
+        "agents",
+        "azure",
+        "bert",
+        "llama",
+        "claude",
+        "gemini",
+        "mistral",
+        "falcon",
+        "bard",
+        "reinforcement learning",
+        "unsupervised learning",
+        "diffusion",
+        "neural",
+        "tensor",
+        "gradient",
+        "kernel",
+        "ruby",
+        "kotlin",
+        "swift",
+        "spring",
+        "oracle",
+        "spark",
+        "pandas",
+        "node",
+        "cloud",
+        "helm",
+        "kubernetes",
+        "django",
+        "mongo",
+        "redis",
+        "angular",
+        "scrum",
+        "proxy",
+        "bearer",
+        "swarm",
+        "pipeline",
+        "cookie",
+        "cookies",
+        "batch",
+        "go"
+      ],
+      "unlessPhrases": [
+        "code",
+        "coding",
+        "programming",
+        "programmer",
+        "developer",
+        "developers",
+        "software",
+        "api",
+        "apis",
+        "sdk",
+        "llm",
+        "llms",
+        "gpt",
+        "machine learning",
+        "deep learning",
+        "neural network",
+        "neural networks",
+        "ai model",
+        "ml model",
+        "language model",
+        "artificial intelligence",
+        "ai",
+        "ml",
+        "library",
+        "framework",
+        "algorithm",
+        "dataset",
+        "server",
+        "backend",
+        "frontend",
+        "app",
+        "application",
+        "database",
+        "sql",
+        "chatbot",
+        "openai",
+        "anthropic",
+        "tutorial",
+        "github",
+        "terminal",
+        "command line",
+        "install",
+        "function",
+        "script",
+        "repo",
+        "pull request",
+        "deploy",
+        "deployment",
+        "pytorch",
+        "tensorflow",
+        "hugging face",
+        "langchain",
+        "fastapi",
+        "flask",
+        "npm",
+        "pip",
+        "dockerfile",
+        "docker container",
+        "kubernetes cluster",
+        "pet project",
+        "side project",
+        "toy example",
+        "toy problem",
+        "toy dataset",
+        "toy model",
+        "toy rag",
+        "toy agent",
+        "architecture",
+        "attention is all you need",
+        "parameters",
+        "weights",
+        "inference",
+        "fine tune",
+        "fine tuning",
+        "benchmark",
+        "arxiv",
+        "paper",
+        "research",
+        "project",
+        "program",
+        "programs",
+        "open source",
+        "stack overflow",
+        "bug",
+        "error",
+        "exception",
+        "config",
+        "game in python",
+        "snake game",
+        "movie recommendations",
+        "recommender",
+        "recommend",
+        "classifier",
+        "training data",
+        "embedding model",
+        "vector database",
+        "vector store"
+      ],
+      "message": "This looks like it may be about something other than AI or software. Knowledge covers AI and developer topics.",
+      "suppressTools": true,
+      "suppressSolid": true
+    }
+  ]
+}

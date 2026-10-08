@@ -179,9 +179,9 @@ fs.writeFileSync(path.join(OUT, 'index.html'), indexPage());
 
 function mergeLexicon() {
   const dir = path.join(OUT, 'src');
-  const parts = ['lexicon-part-a.json', 'lexicon-part-b.json', 'lexicon-part-c.json', 'lexicon-part-d.json'].map(name => JSON.parse(fs.readFileSync(path.join(dir, name), 'utf8')));
+  const parts = ['lexicon-part-a.json', 'lexicon-part-b.json', 'lexicon-part-c.json', 'lexicon-part-d.json', 'lexicon-part-e.json'].map(name => JSON.parse(fs.readFileSync(path.join(dir, name), 'utf8')));
   const arrayKeys = new Set(['stopwords', 'intents', 'concepts', 'coverageGaps', 'tools', 'queryTechnologies']);
-  const objectKeys = new Set(['synonyms', 'pageTechnologies']);
+  const objectKeys = new Set(['synonyms', 'pageTechnologies', 'spelling']);
   const merged = {};
   for (const part of parts) {
     for (const [key, value] of Object.entries(part)) {
@@ -190,7 +190,7 @@ function mergeLexicon() {
       else merged[key] = value;
     }
   }
-  const order = ['version', 'minSolidScore', 'maxIntentBoost', 'glossaryBoost', 'stopwords', 'synonyms', 'intents', 'concepts', 'coverageGaps', 'tools', 'queryTechnologies', 'pageTechnologies'];
+  const order = ['version', 'minSolidScore', 'maxIntentBoost', 'glossaryBoost', 'stopwords', 'synonyms', 'spelling', 'intents', 'concepts', 'coverageGaps', 'tools', 'queryTechnologies', 'pageTechnologies'];
   const ordered = {};
   for (const key of order) if (Object.prototype.hasOwnProperty.call(merged, key)) ordered[key] = merged[key];
   for (const key of Object.keys(merged)) if (!Object.prototype.hasOwnProperty.call(ordered, key)) ordered[key] = merged[key];

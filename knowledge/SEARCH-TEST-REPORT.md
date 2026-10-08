@@ -13,12 +13,12 @@ Miss: 0
 | --- | --- | --- | --- | --- | --- | --- |
 | pass | AI fundamentals | What is AI? | what-is-ai | 58 | — | — |
 | pass | AI fundamentals | What is machine learning versus AI? | what-is-ai | 52 | — | — |
-| pass | AI fundamentals | What is generative AI? | generative-ai | 66 | — | — |
+| pass | AI fundamentals | What is generative AI? | generative-ai | 112 | — | — |
 | pass | LLMs | What is an LLM? | large-language-models | 27 | — | — |
 | pass | LLMs | How do LLMs generate text? | large-language-models | 38 | — | — |
-| pass | LLMs | What is a token? | tokens | 41 | — | — |
+| pass | LLMs | What is a token? | tokens | 77 | — | — |
 | pass | LLMs | What is a transformer and attention? | transformers | 67 | — | — |
-| pass | prompting | How do I write better prompts? | prompt-engineering | 71 | ai-prompt-builder | — |
+| pass | prompting | How do I write better prompts? | prompt-engineering | 117 | ai-prompt-builder | — |
 | pass | prompting | What is a system prompt? | system-prompts | 85 | — | — |
 | pass | prompting | Why are my prompts giving bad answers? | common-prompting-mistakes | 65 | — | — |
 | pass | hallucinations | Why is my LLM hallucinating? | ai-hallucinations | 52 | — | — |
@@ -28,13 +28,13 @@ Miss: 0
 | pass | RAG | let AI answer questions from my documents | rag | 52 | — | — |
 | pass | RAG | How should I chunk documents for retrieval? | chunking | 89 | — | — |
 | pass | embeddings | What are embeddings? | embeddings | 63 | — | — |
-| pass | embeddings | What is cosine similarity? | embeddings | 32 | — | — |
+| pass | embeddings | What is cosine similarity? | embeddings | 78 | — | — |
 | pass | vector databases | When do I need a vector database? | vector-database-vs-traditional-database | 87 | — | — |
 | pass | vector databases | vector database vs SQL | vector-database-vs-traditional-database | 106 | — | — |
 | pass | vector databases | What database should I use for embeddings? | embeddings | 46 | — | — |
-| pass | agents | What are AI agents? | ai-agents | 80 | — | — |
+| pass | agents | What are AI agents? | ai-agents | 124 | — | — |
 | pass | agents | What is the difference between an agent and a chatbot? | ai-agent-vs-chatbot | 109 | — | — |
-| pass | agents | How do agents call tools? | agent-tools | 58 | — | — |
+| pass | agents | How do agents call tools? | agent-tools | 96 | — | — |
 | pass | agent memory | How do I give an AI agent memory? | agent-memory | 80 | — | — |
 | pass | agent memory | AI keeps forgetting previous conversation | agent-memory | 78 | — | — |
 | pass | MCP | What is MCP? | mcp | 51 | — | — |
@@ -51,14 +51,14 @@ Miss: 0
 | pass | APIs | Node.js streaming responses from an API | streaming-ai-with-nodejs | 79 | — | — |
 | pass | databases | How do I use PostgreSQL with my app? | postgresql-for-ai-apps | 65 | — | — |
 | pass | AI security | What is prompt injection? | prompt-injection | 88 | — | — |
-| pass | AI security | How do I stop a jailbreak? | prompt-injection | 41 | — | — |
-| pass | AI security | Is it safe to paste customer data into an AI tool? | ai-privacy-and-security | 97 | — | — |
+| pass | AI security | How do I stop a jailbreak? | prompt-injection | 73 | — | — |
+| pass | AI security | Is it safe to paste customer data into an AI tool? | ai-privacy-and-security | 123 | — | — |
 | pass | AI security | How do I redact secrets before pasting a prompt? | ai-privacy-and-security | 52 | pii-secret-redactor | — |
-| pass | task | How can an AI agent access Gmail? | gmail-for-ai-agents | 83 | — | — |
+| pass | task | How can an AI agent access Gmail? | gmail-for-ai-agents | 135 | — | — |
 | pass | task | How do I evaluate a RAG system? | rag-evaluation | 102 | — | — |
 | pass | task | Design a multi-agent workflow with roles and handoffs | agentic-workflows | 66 | agentic-workflow-generator | — |
 | weak | task | Compare two prompt versions | system-prompts | 25 | prompt-diff | — |
-| pass | task | How do I validate JSON? | json-validation | 52 | json-formatter | — |
+| pass | task | How do I validate JSON? | json-validation | 92 | json-formatter | — |
 | pass | task | Can I fine-tune instead of prompting? | rag-vs-fine-tuning | 56 | — | — |
 
 ## Worked well

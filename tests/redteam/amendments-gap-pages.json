@@ -1,0 +1,15 @@
+{
+ "RT190":{"accept":["object-detection"],"reason":"Dedicated object-detection page added during remediation (genuine gap filled)"},
+ "RT191":{"accept":["object-detection"],"reason":"object-detection page added"},
+ "RT202":{"accept":["robot-operating-system"],"reason":"ROS page added"},
+ "RT238":{"accept":["gdpr-and-ai"],"reason":"GDPR page added"},
+ "RT290":{"accept":["kubernetes"],"reason":"Kubernetes page added"},
+ "RT296":{"accept":["kubernetes"],"reason":"Kubernetes page added"},
+ "RT297":{"accept":["kubernetes"],"reason":"Kubernetes page added"},
+ "H2-113":{"accept":["kubernetes"],"reason":"Kubernetes page added"},
+ "H2-114":{"accept":["kubernetes"],"reason":"Kubernetes page added"},
+ "H2-115":{"accept":["object-detection"],"reason":"object-detection page added"},
+ "H2-116":{"accept":["object-detection"],"reason":"object-detection page added"},
+ "H2-117":{"accept":["robot-operating-system"],"reason":"ROS page added"},
+ "H2-118":{"accept":["gdpr-and-ai"],"reason":"GDPR page added"}
+}

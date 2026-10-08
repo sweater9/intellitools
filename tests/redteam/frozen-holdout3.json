@@ -1,0 +1,2547 @@
+{
+ "name": "IntelliTools Knowledge V3 red-team holdout 3 (post-remediation)",
+ "version": 1,
+ "frozen": true,
+ "note": "Written AFTER remediation by the same author, without editing the lexicon afterwards. Evaluated against both the pre-remediation and post-remediation configurations. Same classification rules.",
+ "queries": [
+  {
+   "id": "H3-001",
+   "style": "beginner",
+   "topic": "ai",
+   "q": "im new here, what even is artificial intelligence",
+   "kind": "page",
+   "accept": [
+    "what-is-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-002",
+   "style": "beginner",
+   "topic": "llm",
+   "q": "why does my chat assistant sometimes confidently say wrong things",
+   "kind": "page",
+   "accept": [
+    "ai-hallucinations",
+    "how-to-reduce-hallucinations"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-003",
+   "style": "beginner",
+   "topic": "llm",
+   "q": "what are the little chunks of text a model reads called",
+   "kind": "page",
+   "accept": [
+    "tokens"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-004",
+   "style": "beginner",
+   "topic": "llm",
+   "q": "is there a cap on how many words i can paste into the assistant",
+   "kind": "page",
+   "accept": [
+    "context-windows",
+    "tokens"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-005",
+   "style": "concept",
+   "topic": "ml",
+   "q": "teaching software with examples that already have answers",
+   "kind": "page",
+   "accept": [
+    "supervised-learning"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-006",
+   "style": "concept",
+   "topic": "ml",
+   "q": "software that discovers groups by itself in raw data",
+   "kind": "page",
+   "accept": [
+    "unsupervised-learning"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-007",
+   "style": "concept",
+   "topic": "dl",
+   "q": "stacked layers of simple math units that learn patterns",
+   "kind": "page",
+   "accept": [
+    "neural-networks",
+    "deep-learning"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-008",
+   "style": "concept",
+   "topic": "dl",
+   "q": "how the error signal flows backwards through the layers",
+   "kind": "page",
+   "accept": [
+    "backpropagation-and-gradient-descent"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-009",
+   "style": "troubleshooting",
+   "topic": "ml",
+   "q": "accuracy looks perfect in my notebook but tanks after deployment",
+   "kind": "page",
+   "accept": [
+    "overfitting-and-regularization",
+    "model-drift-and-monitoring"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-010",
+   "style": "troubleshooting",
+   "topic": "dl",
+   "q": "my network outputs nan after a few steps",
+   "kind": "page",
+   "accept": [
+    "backpropagation-and-gradient-descent"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-011",
+   "style": "implementation",
+   "topic": "dl",
+   "q": "take a model trained on millions of photos and adapt it to x-rays",
+   "kind": "page",
+   "accept": [
+    "transfer-learning"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-012",
+   "style": "concept",
+   "topic": "rl",
+   "q": "software learns a policy by being scored on outcomes",
+   "kind": "page",
+   "accept": [
+    "reinforcement-learning"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-013",
+   "style": "concept",
+   "topic": "dl",
+   "q": "why convolutions suit pictures",
+   "kind": "page",
+   "accept": [
+    "convolutional-neural-networks"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-014",
+   "style": "concept",
+   "topic": "dl",
+   "q": "self attention versus recurrence for sequences",
+   "kind": "page",
+   "accept": [
+    "transformers",
+    "recurrent-neural-networks"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-015",
+   "style": "concept",
+   "topic": "dl",
+   "q": "noise to picture generators",
+   "kind": "page",
+   "accept": [
+    "diffusion-models"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-016",
+   "style": "concept",
+   "topic": "dl",
+   "q": "autoencoder with a probabilistic bottleneck",
+   "kind": "page",
+   "accept": [
+    "variational-autoencoders"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-017",
+   "style": "concept",
+   "topic": "dl",
+   "q": "networks for data that is linked together like friendships",
+   "kind": "page",
+   "accept": [
+    "graph-neural-networks"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-018",
+   "style": "concept",
+   "topic": "arch",
+   "q": "memory cost of storing past attention states while generating",
+   "kind": "page",
+   "accept": [
+    "kv-cache"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-019",
+   "style": "concept",
+   "topic": "arch",
+   "q": "how does a model keep track of where each word sits in the sentence",
+   "kind": "page",
+   "accept": [
+    "positional-encoding"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-020",
+   "style": "concept",
+   "topic": "arch",
+   "q": "architectures with many specialised subnetworks",
+   "kind": "page",
+   "accept": [
+    "mixture-of-experts"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-021",
+   "style": "concept",
+   "topic": "arch",
+   "q": "a more efficient sequence layer than attention for very long inputs",
+   "kind": "page",
+   "accept": [
+    "state-space-models"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-022",
+   "style": "concept",
+   "topic": "llm",
+   "q": "what does it mean to train longer on more text",
+   "kind": "page",
+   "accept": [
+    "scaling-laws"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-023",
+   "style": "concept",
+   "topic": "llm",
+   "q": "making the assistant polite and instruction following after pretraining",
+   "kind": "page",
+   "accept": [
+    "instruction-tuning",
+    "rlhf"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-024",
+   "style": "what-to-use",
+   "topic": "llm",
+   "q": "cheaper way to specialise a big model than retraining everything",
+   "kind": "page",
+   "accept": [
+    "lora-and-peft",
+    "lora-vs-full-fine-tuning"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-025",
+   "style": "what-to-use",
+   "topic": "llm",
+   "q": "make a model fit on a small graphics card",
+   "kind": "page",
+   "accept": [
+    "quantization",
+    "gpus-and-ai-accelerators"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-026",
+   "style": "concept",
+   "topic": "llm",
+   "q": "smaller model copying a larger one",
+   "kind": "page",
+   "accept": [
+    "knowledge-distillation"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-027",
+   "style": "concept",
+   "topic": "llm",
+   "q": "guess several words ahead and verify them",
+   "kind": "page",
+   "accept": [
+    "speculative-decoding"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-028",
+   "style": "concept",
+   "topic": "llm",
+   "q": "compact models for edge devices",
+   "kind": "page",
+   "accept": [
+    "small-language-models"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-029",
+   "style": "concept",
+   "topic": "llm",
+   "q": "can i legally use downloadable model weights in a product",
+   "kind": "page",
+   "accept": [
+    "open-weights-models"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-030",
+   "style": "concept",
+   "topic": "reason",
+   "q": "letting a model deliberate longer for harder questions",
+   "kind": "page",
+   "accept": [
+    "test-time-compute",
+    "reasoning-models"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-031",
+   "style": "concept",
+   "topic": "reason",
+   "q": "sample a bunch of solutions and go with the consensus",
+   "kind": "page",
+   "accept": [
+    "self-consistency"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-032",
+   "style": "concept",
+   "topic": "reason",
+   "q": "a scorer that checks each intermediate step",
+   "kind": "page",
+   "accept": [
+    "process-reward-model"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-033",
+   "style": "concept",
+   "topic": "reason",
+   "q": "training with rewards that come from automatic checkers",
+   "kind": "page",
+   "accept": [
+    "reinforcement-learning-for-reasoning"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-034",
+   "style": "concept",
+   "topic": "reason",
+   "q": "privacy of a model's inner deliberation",
+   "kind": "page",
+   "accept": [
+    "reasoning-transparency"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-035",
+   "style": "concept",
+   "topic": "reason",
+   "q": "should i pick a deliberating model or a quick one",
+   "kind": "page",
+   "accept": [
+    "reasoning-vs-standard-models",
+    "reasoning-models"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-036",
+   "style": "implementation",
+   "topic": "struct",
+   "q": "get typed objects back from an llm call",
+   "kind": "page",
+   "accept": [
+    "structured-outputs",
+    "constrained-decoding"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-037",
+   "style": "implementation",
+   "topic": "struct",
+   "q": "force an llm to stay inside a json schema",
+   "kind": "page",
+   "accept": [
+    "constrained-decoding",
+    "structured-outputs",
+    "json-schema"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-038",
+   "style": "concept",
+   "topic": "struct",
+   "q": "how do sampling knobs shape the text a model writes",
+   "kind": "page",
+   "accept": [
+    "sampling-and-decoding"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-039",
+   "style": "implementation",
+   "topic": "prompt",
+   "q": "how do i word my request so the answer comes out right",
+   "kind": "page",
+   "accept": [
+    "prompt-engineering",
+    "common-prompting-mistakes"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-040",
+   "style": "implementation",
+   "topic": "prompt",
+   "q": "setting the personality and rules for an assistant",
+   "kind": "page",
+   "accept": [
+    "system-prompts"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-041",
+   "style": "troubleshooting",
+   "topic": "prompt",
+   "q": "why do my prompts work on some inputs and fail on others",
+   "kind": "page",
+   "accept": [
+    "common-prompting-mistakes",
+    "prompt-engineering",
+    "ai-evaluation"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-042",
+   "style": "implementation",
+   "topic": "rag",
+   "q": "let a model answer from the files on my drive",
+   "kind": "page",
+   "accept": [
+    "rag"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-043",
+   "style": "implementation",
+   "topic": "rag",
+   "q": "splitting large documents sensibly before indexing",
+   "kind": "page",
+   "accept": [
+    "chunking"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-044",
+   "style": "concept",
+   "topic": "rag",
+   "q": "numbers that capture the meaning of a sentence",
+   "kind": "page",
+   "accept": [
+    "embeddings"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-045",
+   "style": "implementation",
+   "topic": "rag",
+   "q": "a database built for finding nearest vectors",
+   "kind": "page",
+   "accept": [
+    "vector-databases"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-046",
+   "style": "implementation",
+   "topic": "rag",
+   "q": "use my existing postgres for similarity search",
+   "kind": "page",
+   "accept": [
+    "pgvector",
+    "postgresql-for-ai-apps"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-047",
+   "style": "troubleshooting",
+   "topic": "rag",
+   "q": "good documents indexed but answers still miss the point",
+   "kind": "page",
+   "accept": [
+    "rag-evaluation",
+    "hybrid-search-and-reranking",
+    "chunking"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-048",
+   "style": "concept",
+   "topic": "rag",
+   "q": "retrieval that follows links between concepts",
+   "kind": "page",
+   "accept": [
+    "graph-rag"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-049",
+   "style": "implementation",
+   "topic": "rag",
+   "q": "measuring whether my retrieval is any good",
+   "kind": "page",
+   "accept": [
+    "rag-evaluation"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-050",
+   "style": "integration",
+   "topic": "agent",
+   "q": "assistant that can look through my mailbox and summarise it",
+   "kind": "page",
+   "accept": [
+    "gmail-for-ai-agents",
+    "connecting-agents-to-apps"
+   ],
+   "tool": null,
+   "path": [
+    "gmail-for-ai-agents",
+    "oauth-for-ai-agents",
+    "integration-permissions",
+    "agent-tools"
+   ]
+  },
+  {
+   "id": "H3-051",
+   "style": "integration",
+   "topic": "agent",
+   "q": "let a bot create tickets in our issue tracker",
+   "kind": "page",
+   "accept": [
+    "connecting-agents-to-apps",
+    "agent-tools",
+    "function-calling"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-052",
+   "style": "integration",
+   "topic": "agent",
+   "q": "which scopes does an assistant need to read my calendar",
+   "kind": "page",
+   "accept": [
+    "oauth-for-ai-agents",
+    "integration-permissions",
+    "connecting-agents-to-apps"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-053",
+   "style": "security",
+   "topic": "agent",
+   "q": "what could go wrong if an assistant can send emails by itself",
+   "kind": "page",
+   "accept": [
+    "integration-permissions",
+    "prompt-injection",
+    "gmail-for-ai-agents"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-054",
+   "style": "concept",
+   "topic": "agent",
+   "q": "software that plans acts and checks its own progress",
+   "kind": "page",
+   "accept": [
+    "ai-agents",
+    "react-agent-pattern",
+    "agent-planning"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-055",
+   "style": "architecture",
+   "topic": "agent",
+   "q": "how to coordinate a researcher agent and a writer agent",
+   "kind": "page",
+   "accept": [
+    "multi-agent-systems",
+    "agentic-workflows"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-056",
+   "style": "concept",
+   "topic": "agent",
+   "q": "giving a model the ability to run functions",
+   "kind": "page",
+   "accept": [
+    "function-calling",
+    "agent-tools"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-057",
+   "style": "architecture",
+   "topic": "agent",
+   "q": "keeping a long conversation history manageable for an agent",
+   "kind": "page",
+   "accept": [
+    "agent-memory",
+    "context-windows",
+    "context-engineering"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-058",
+   "style": "troubleshooting",
+   "topic": "agent",
+   "q": "my assistant calls the wrong tool half the time",
+   "kind": "page",
+   "accept": [
+    "agent-tools",
+    "function-calling",
+    "agent-evaluation"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-059",
+   "style": "what-to-use",
+   "topic": "agent",
+   "q": "pick a library for building agent loops",
+   "kind": "page",
+   "accept": [
+    "agent-frameworks-compared",
+    "choosing-an-agent-framework"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-060",
+   "style": "concept",
+   "topic": "mcp",
+   "q": "protocol that lets assistants plug into external services",
+   "kind": "page",
+   "accept": [
+    "mcp"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-061",
+   "style": "concept",
+   "topic": "mcp",
+   "q": "building a server that offers tools to ai apps",
+   "kind": "page",
+   "accept": [
+    "mcp-servers-and-clients"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-062",
+   "style": "security",
+   "topic": "mcp",
+   "q": "could a connected tool server steal my data",
+   "kind": "page",
+   "accept": [
+    "mcp-security"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-063",
+   "style": "concept",
+   "topic": "a2a",
+   "q": "protocol for agents built by different companies to cooperate",
+   "kind": "page",
+   "accept": [
+    "a2a-protocol",
+    "agent-protocol-landscape"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-064",
+   "style": "implementation",
+   "topic": "python",
+   "q": "send a prompt to a hosted model with the python sdk",
+   "kind": "page",
+   "accept": [
+    "calling-ai-apis-with-python"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-065",
+   "style": "implementation",
+   "topic": "python",
+   "q": "prepare tabular data for an llm in python",
+   "kind": "page",
+   "accept": [
+    "python-data-for-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-066",
+   "style": "implementation",
+   "topic": "js",
+   "q": "browser app talking to a model through my own backend",
+   "kind": "page",
+   "accept": [
+    "calling-ai-apis-with-javascript",
+    "nodejs-for-ai",
+    "api-keys"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-067",
+   "style": "implementation",
+   "topic": "ts",
+   "q": "make my api client type safe",
+   "kind": "page",
+   "accept": [
+    "typescript-api-client-types",
+    "typescript-for-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-068",
+   "style": "implementation",
+   "topic": "react",
+   "q": "ui components for a chat assistant",
+   "kind": "page",
+   "accept": [
+    "react-ai-interfaces",
+    "react-chatbot-state"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-069",
+   "style": "implementation",
+   "topic": "node",
+   "q": "run a model proxy on express",
+   "kind": "page",
+   "accept": [
+    "nodejs-for-ai",
+    "express"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-070",
+   "style": "concept",
+   "topic": "api",
+   "q": "how do two programs talk over http",
+   "kind": "page",
+   "accept": [
+    "what-is-an-api",
+    "rest-apis"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-071",
+   "style": "concept",
+   "topic": "api",
+   "q": "querying exactly the fields i need from an api",
+   "kind": "page",
+   "accept": [
+    "graphql",
+    "rest-vs-graphql"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-072",
+   "style": "security",
+   "topic": "api",
+   "q": "where do i put credentials so they do not leak into git",
+   "kind": "page",
+   "accept": [
+    "environment-variables",
+    "api-keys"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-073",
+   "style": "security",
+   "topic": "api",
+   "q": "login with google or microsoft for my web app",
+   "kind": "page",
+   "accept": [
+    "openid-connect",
+    "oauth"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-074",
+   "style": "concept",
+   "topic": "api",
+   "q": "signed tokens that carry claims",
+   "kind": "page",
+   "accept": [
+    "json-web-tokens"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-075",
+   "style": "concept",
+   "topic": "api",
+   "q": "why does my browser refuse the response from another domain",
+   "kind": "page",
+   "accept": [
+    "cors"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-076",
+   "style": "concept",
+   "topic": "api",
+   "q": "server calls me when something happens",
+   "kind": "page",
+   "accept": [
+    "webhooks"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-077",
+   "style": "concept",
+   "topic": "db",
+   "q": "structured query language for relational data",
+   "kind": "page",
+   "accept": [
+    "sql"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-078",
+   "style": "what-to-use",
+   "topic": "db",
+   "q": "document store or relational tables for flexible records",
+   "kind": "page",
+   "accept": [
+    "sql-vs-nosql",
+    "mongodb"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-079",
+   "style": "what-to-use",
+   "topic": "db",
+   "q": "lightweight embedded database",
+   "kind": "page",
+   "accept": [
+    "sqlite"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-080",
+   "style": "concept",
+   "topic": "db",
+   "q": "in memory key value store",
+   "kind": "page",
+   "accept": [
+    "redis"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-081",
+   "style": "concept",
+   "topic": "db",
+   "q": "mapping database rows to objects in code",
+   "kind": "page",
+   "accept": [
+    "prisma-and-orms"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-082",
+   "style": "beginner",
+   "topic": "cloud",
+   "q": "what can i host on amazon web services",
+   "kind": "page",
+   "accept": [
+    "aws-fundamentals"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-083",
+   "style": "beginner",
+   "topic": "cloud",
+   "q": "microsoft cloud basics for a developer",
+   "kind": "page",
+   "accept": [
+    "azure-fundamentals"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-084",
+   "style": "beginner",
+   "topic": "cloud",
+   "q": "googles cloud platform overview",
+   "kind": "page",
+   "accept": [
+    "gcp-fundamentals"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-085",
+   "style": "what-to-use",
+   "topic": "cloud",
+   "q": "which cloud gives gpus for model hosting",
+   "kind": "page",
+   "accept": [
+    "aws-fundamentals",
+    "azure-fundamentals",
+    "gcp-fundamentals",
+    "gpus-and-ai-accelerators"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-086",
+   "style": "beginner",
+   "topic": "devops",
+   "q": "wrap my app so it runs identically on any server",
+   "kind": "page",
+   "accept": [
+    "docker",
+    "containers"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-087",
+   "style": "beginner",
+   "topic": "devops",
+   "q": "keep track of changes to my code and collaborate",
+   "kind": "page",
+   "accept": [
+    "git",
+    "github"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-088",
+   "style": "implementation",
+   "topic": "devops",
+   "q": "run checks automatically whenever i push",
+   "kind": "page",
+   "accept": [
+    "cicd",
+    "github"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-089",
+   "style": "troubleshooting",
+   "topic": "devops",
+   "q": "my deployment keeps crashing and restarting in the cluster",
+   "kind": "page",
+   "accept": [
+    "kubernetes",
+    "containers"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-090",
+   "style": "concept",
+   "topic": "devops",
+   "q": "managing many containers across machines",
+   "kind": "page",
+   "accept": [
+    "kubernetes"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-091",
+   "style": "beginner",
+   "topic": "ms",
+   "q": "team intranet platform from microsoft",
+   "kind": "page",
+   "accept": [
+    "sharepoint"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-092",
+   "style": "implementation",
+   "topic": "ms",
+   "q": "custom client side components for modern sharepoint pages",
+   "kind": "page",
+   "accept": [
+    "sharepoint-framework",
+    "build-spfx-web-part"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-093",
+   "style": "integration",
+   "topic": "ms",
+   "q": "fetch mail and files from a users microsoft account",
+   "kind": "page",
+   "accept": [
+    "microsoft-graph"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-094",
+   "style": "concept",
+   "topic": "ms",
+   "q": "microsofts identity platform for sign in and permissions",
+   "kind": "page",
+   "accept": [
+    "microsoft-entra-id"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-095",
+   "style": "implementation",
+   "topic": "ms",
+   "q": "automate approvals without writing code",
+   "kind": "page",
+   "accept": [
+    "power-platform"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-096",
+   "style": "implementation",
+   "topic": "ms",
+   "q": "build an app that lives inside microsoft teams",
+   "kind": "page",
+   "accept": [
+    "teams-development"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-097",
+   "style": "beginner",
+   "topic": "fw",
+   "q": "libraries that help assemble llm apps",
+   "kind": "page",
+   "accept": [
+    "what-is-an-ai-framework",
+    "ai-sdks"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-098",
+   "style": "concept",
+   "topic": "fw",
+   "q": "the hub where people share pretrained models",
+   "kind": "page",
+   "accept": [
+    "hugging-face"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-099",
+   "style": "concept",
+   "topic": "runtime",
+   "q": "run open models offline on my machine",
+   "kind": "page",
+   "accept": [
+    "local-ai",
+    "ollama",
+    "llama-cpp"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-100",
+   "style": "what-to-use",
+   "topic": "runtime",
+   "q": "serving engine with continuous batching",
+   "kind": "page",
+   "accept": [
+    "vllm"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-101",
+   "style": "concept",
+   "topic": "runtime",
+   "q": "quantized model format for cpu inference",
+   "kind": "page",
+   "accept": [
+    "llama-cpp",
+    "quantization"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-102",
+   "style": "concept",
+   "topic": "runtime",
+   "q": "portable inference format for many platforms",
+   "kind": "page",
+   "accept": [
+    "onnx-runtime"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-103",
+   "style": "concept",
+   "topic": "runtime",
+   "q": "which deep learning library is most widely used for research",
+   "kind": "page",
+   "accept": [
+    "pytorch"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-104",
+   "style": "concept",
+   "topic": "mm",
+   "q": "model that reads pictures and answers questions about them",
+   "kind": "page",
+   "accept": [
+    "vision-language-models"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-105",
+   "style": "concept",
+   "topic": "mm",
+   "q": "turn recorded speech into text",
+   "kind": "page",
+   "accept": [
+    "speech-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-106",
+   "style": "concept",
+   "topic": "mm",
+   "q": "pull fields from scanned forms",
+   "kind": "page",
+   "accept": [
+    "document-understanding-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-107",
+   "style": "concept",
+   "topic": "mm",
+   "q": "generating clips from a text description",
+   "kind": "page",
+   "accept": [
+    "video-generation-models"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-108",
+   "style": "concept",
+   "topic": "cv",
+   "q": "locating and naming objects in photos",
+   "kind": "page",
+   "accept": [
+    "object-detection"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-109",
+   "style": "concept",
+   "topic": "robot",
+   "q": "software layer that connects sensors and motors in a robot",
+   "kind": "page",
+   "accept": [
+    "robot-operating-system",
+    "embodied-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-110",
+   "style": "concept",
+   "topic": "robot",
+   "q": "policy that maps pictures and words to motor commands",
+   "kind": "page",
+   "accept": [
+    "vision-language-action-models"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-111",
+   "style": "concept",
+   "topic": "robot",
+   "q": "teach manipulation by copying human operators",
+   "kind": "page",
+   "accept": [
+    "imitation-learning"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-112",
+   "style": "concept",
+   "topic": "robot",
+   "q": "transferring skills from a physics simulator to a real machine",
+   "kind": "page",
+   "accept": [
+    "sim-to-real-transfer"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-113",
+   "style": "concept",
+   "topic": "robot",
+   "q": "a learned simulator used for planning",
+   "kind": "page",
+   "accept": [
+    "world-models"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-114",
+   "style": "security",
+   "topic": "sec",
+   "q": "attack where crafted text overrides my assistants rules",
+   "kind": "page",
+   "accept": [
+    "prompt-injection"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-115",
+   "style": "security",
+   "topic": "sec",
+   "q": "what personal data should never go into a public chatbot",
+   "kind": "page",
+   "accept": [
+    "ai-privacy-and-security",
+    "gdpr-and-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-116",
+   "style": "security",
+   "topic": "sec",
+   "q": "probing my own assistant for weaknesses before launch",
+   "kind": "page",
+   "accept": [
+    "red-teaming"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-117",
+   "style": "security",
+   "topic": "sec",
+   "q": "runtime checks on what the model is allowed to say",
+   "kind": "page",
+   "accept": [
+    "ai-guardrails"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-118",
+   "style": "security",
+   "topic": "sec",
+   "q": "running untrusted generated scripts without risking my machine",
+   "kind": "page",
+   "accept": [
+    "code-execution-sandboxing"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-119",
+   "style": "security",
+   "topic": "sec",
+   "q": "labelling content as machine made",
+   "kind": "page",
+   "accept": [
+    "c2pa-content-provenance"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-120",
+   "style": "security",
+   "topic": "sec",
+   "q": "top vulnerabilities for generative ai applications",
+   "kind": "page",
+   "accept": [
+    "owasp-llm-top-10"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-121",
+   "style": "concept",
+   "topic": "eval",
+   "q": "are the scores on public model rankings reliable",
+   "kind": "page",
+   "accept": [
+    "benchmarks-and-leaderboards",
+    "benchmark-contamination"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-122",
+   "style": "concept",
+   "topic": "eval",
+   "q": "have a stronger model score weaker model answers",
+   "kind": "page",
+   "accept": [
+    "llm-as-a-judge"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-123",
+   "style": "concept",
+   "topic": "eval",
+   "q": "which numbers describe a classifier on imbalanced data",
+   "kind": "page",
+   "accept": [
+    "evaluation-metrics-for-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-124",
+   "style": "concept",
+   "topic": "eval",
+   "q": "how do i test my llm application end to end",
+   "kind": "page",
+   "accept": [
+    "ai-evaluation"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-125",
+   "style": "concept",
+   "topic": "eval",
+   "q": "is a coding benchmark of real repository bugs useful",
+   "kind": "page",
+   "accept": [
+    "swe-bench"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-126",
+   "style": "concept",
+   "topic": "mlops",
+   "q": "operational discipline for machine learning teams",
+   "kind": "page",
+   "accept": [
+    "mlops"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-127",
+   "style": "concept",
+   "topic": "mlops",
+   "q": "detect that live data no longer looks like training data",
+   "kind": "page",
+   "accept": [
+    "model-drift-and-monitoring"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-128",
+   "style": "concept",
+   "topic": "mlops",
+   "q": "record every prompt response and cost in production",
+   "kind": "page",
+   "accept": [
+    "llm-observability"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-129",
+   "style": "concept",
+   "topic": "mlops",
+   "q": "reduce what i pay per request to a hosted model",
+   "kind": "page",
+   "accept": [
+    "llm-cost-optimization",
+    "prompt-caching"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-130",
+   "style": "concept",
+   "topic": "mlops",
+   "q": "split a big training job across accelerators",
+   "kind": "page",
+   "accept": [
+    "distributed-training"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-131",
+   "style": "concept",
+   "topic": "mlops",
+   "q": "choose accelerators for inference",
+   "kind": "page",
+   "accept": [
+    "gpus-and-ai-accelerators"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-132",
+   "style": "concept",
+   "topic": "mlops",
+   "q": "logging runs and comparing model versions",
+   "kind": "page",
+   "accept": [
+    "mlflow"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-133",
+   "style": "concept",
+   "topic": "gov",
+   "q": "company policy for using generative ai",
+   "kind": "page",
+   "accept": [
+    "ai-governance"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-134",
+   "style": "concept",
+   "topic": "gov",
+   "q": "european law classing ai by risk level",
+   "kind": "page",
+   "accept": [
+    "eu-ai-act"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-135",
+   "style": "concept",
+   "topic": "gov",
+   "q": "us government framework for managing ai risk",
+   "kind": "page",
+   "accept": [
+    "nist-ai-rmf"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-136",
+   "style": "concept",
+   "topic": "gov",
+   "q": "auditable management system standard for ai",
+   "kind": "page",
+   "accept": [
+    "iso-iec-42001"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-137",
+   "style": "concept",
+   "topic": "gov",
+   "q": "do models treat different groups unequally",
+   "kind": "page",
+   "accept": [
+    "ai-bias-and-fairness"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-138",
+   "style": "concept",
+   "topic": "gov",
+   "q": "how do i document what my model can and cannot do",
+   "kind": "page",
+   "accept": [
+    "model-cards"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-139",
+   "style": "concept",
+   "topic": "safety",
+   "q": "tuning on pairs of preferred and dispreferred answers without a reward model",
+   "kind": "page",
+   "accept": [
+    "dpo",
+    "preference-optimization"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-140",
+   "style": "concept",
+   "topic": "safety",
+   "q": "models agreeing with whatever the user says",
+   "kind": "page",
+   "accept": [
+    "sycophancy"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-141",
+   "style": "concept",
+   "topic": "safety",
+   "q": "exploiting a flawed scoring rule",
+   "kind": "page",
+   "accept": [
+    "reward-hacking"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-142",
+   "style": "concept",
+   "topic": "safety",
+   "q": "making models follow human values",
+   "kind": "page",
+   "accept": [
+    "ai-alignment"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-143",
+   "style": "concept",
+   "topic": "science",
+   "q": "ml systems that predict how proteins fold",
+   "kind": "page",
+   "accept": [
+    "alphafold"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-144",
+   "style": "concept",
+   "topic": "science",
+   "q": "neural nets as fast stand ins for physics simulations",
+   "kind": "page",
+   "accept": [
+    "physics-informed-neural-networks",
+    "ai-for-science"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-145",
+   "style": "typo",
+   "topic": "dev",
+   "q": "kuberntes pods keep restarting",
+   "kind": "page",
+   "accept": [
+    "kubernetes"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-146",
+   "style": "typo",
+   "topic": "dev",
+   "q": "doker compose networking",
+   "kind": "page",
+   "accept": [
+    "docker",
+    "containers"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-147",
+   "style": "typo",
+   "topic": "ai",
+   "q": "retreival augmented generaton",
+   "kind": "page",
+   "accept": [
+    "rag"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-148",
+   "style": "typo",
+   "topic": "ai",
+   "q": "embeding model choise",
+   "kind": "page",
+   "accept": [
+    "embeddings"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-149",
+   "style": "typo",
+   "topic": "ai",
+   "q": "chain of thougth prompting",
+   "kind": "page",
+   "accept": [
+    "chain-of-thought"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-150",
+   "style": "typo",
+   "topic": "ai",
+   "q": "reasonning models explained",
+   "kind": "page",
+   "accept": [
+    "reasoning-models"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-151",
+   "style": "typo",
+   "topic": "ai",
+   "q": "vecotr search in postgress",
+   "kind": "page",
+   "accept": [
+    "pgvector",
+    "vector-databases"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-152",
+   "style": "typo",
+   "topic": "ai",
+   "q": "multimodel ai basics",
+   "kind": "page",
+   "accept": [
+    "multimodal-ai",
+    "vision-language-models"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-153",
+   "style": "typo",
+   "topic": "ai",
+   "q": "llama indxe vs langchan",
+   "kind": "page",
+   "accept": [
+    "llamaindex",
+    "langchain",
+    "rag-frameworks"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-154",
+   "style": "typo",
+   "topic": "ai",
+   "q": "agentc workflows",
+   "kind": "page",
+   "accept": [
+    "agentic-workflows"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-155",
+   "style": "vague",
+   "topic": "ai",
+   "q": "ai",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-156",
+   "style": "vague",
+   "topic": "ai",
+   "q": "prompts",
+   "kind": "page",
+   "accept": [
+    "prompt-engineering"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-157",
+   "style": "vague",
+   "topic": "ai",
+   "q": "embeddings and stuff",
+   "kind": "page",
+   "accept": [
+    "embeddings"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-158",
+   "style": "vague",
+   "topic": "dev",
+   "q": "devops",
+   "kind": "gap",
+   "accept": [
+    "cicd",
+    "docker",
+    "containers",
+    "git"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-159",
+   "style": "vague",
+   "topic": "dev",
+   "q": "something with tokens",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-160",
+   "style": "vague",
+   "topic": "ai",
+   "q": "safety",
+   "kind": "page",
+   "accept": [
+    "ai-alignment",
+    "ai-privacy-and-security",
+    "prompt-injection",
+    "ai-guardrails"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-161",
+   "style": "coverage-probe",
+   "topic": "devops",
+   "q": "ansible vs chef",
+   "kind": "gap",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-162",
+   "style": "coverage-probe",
+   "topic": "devops",
+   "q": "ssh key setup",
+   "kind": "gap",
+   "accept": [
+    "git",
+    "github"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-163",
+   "style": "coverage-probe",
+   "topic": "dev",
+   "q": "how do i debounce a function",
+   "kind": "gap",
+   "accept": [
+    "javascript"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-164",
+   "style": "coverage-probe",
+   "topic": "dev",
+   "q": "python decorators explained",
+   "kind": "gap",
+   "accept": [
+    "python"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-165",
+   "style": "coverage-probe",
+   "topic": "dev",
+   "q": "how to write a regex for emails",
+   "kind": "gap",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-166",
+   "style": "coverage-probe",
+   "topic": "dev",
+   "q": "svelte vs react",
+   "kind": "gap",
+   "accept": [
+    "react",
+    "frontend-and-backend"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-167",
+   "style": "coverage-probe",
+   "topic": "ai",
+   "q": "how do i build a recommendation engine",
+   "kind": "gap",
+   "accept": [
+    "embeddings",
+    "supervised-learning"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-168",
+   "style": "coverage-probe",
+   "topic": "ai",
+   "q": "speech synthesis voices that sound human",
+   "kind": "gap",
+   "accept": [
+    "speech-ai"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-169",
+   "style": "coverage-probe",
+   "topic": "ai",
+   "q": "which gpu to buy this year",
+   "kind": "gap",
+   "accept": [
+    "gpus-and-ai-accelerators"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-170",
+   "style": "coverage-probe",
+   "topic": "ai",
+   "q": "tensorflow lite for microcontrollers",
+   "kind": "gap",
+   "accept": [
+    "onnx-runtime",
+    "pytorch",
+    "small-language-models"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-171",
+   "style": "coverage-probe",
+   "topic": "ai",
+   "q": "what is jax",
+   "kind": "gap",
+   "accept": [
+    "pytorch"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-172",
+   "style": "coverage-probe",
+   "topic": "ai",
+   "q": "what does the nobel prize in chemistry have to do with ai",
+   "kind": "gap",
+   "accept": [
+    "alphafold"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-173",
+   "style": "coverage-probe",
+   "topic": "ms",
+   "q": "what is azure openai service pricing",
+   "kind": "gap",
+   "accept": [
+    "azure-fundamentals",
+    "model-apis"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-174",
+   "style": "coverage-probe",
+   "topic": "ms",
+   "q": "how to build a power bi report",
+   "kind": "gap",
+   "accept": [
+    "power-platform"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-175",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "transformer cosplay costume",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-176",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "mamba mentality tshirt",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-177",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "python regius ball care",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-178",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "react native vs flutter",
+   "kind": "gap",
+   "accept": [
+    "react",
+    "frontend-and-backend"
+   ],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-179",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "docker pants waterproof",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-180",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "estate agent fees when selling a flat",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-181",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "scale model train layouts",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-182",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "java island travel tips",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-183",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "go kart racing near me",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-184",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "spring break destinations",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-185",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "swift bird migration",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-186",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "gemini constellation stars",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-187",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "falcon bird of prey training",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-188",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "bert lahr wizard of oz",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-189",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "llama trekking in peru",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-190",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "claude debussy piano pieces",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-191",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "mistral breeze sailing",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-192",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "agent provocateur meaning",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-193",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "perplexed expression synonyms",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-194",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "training for a triathlon",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-195",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "attention to detail resume tips",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-196",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "vector illustration of birds",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-197",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "cookie consent banner wording for my shop",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-198",
+   "style": "ambiguous-or-off-topic",
+   "topic": "amb",
+   "q": "gradient descent hiking trail name",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-199",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "q": "how to apply for a visa",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-200",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "q": "best way to learn guitar",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-201",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "q": "what causes inflation",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-202",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "q": "traffic on the m25 right now",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-203",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "q": "cheapest flights to rome in march",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-204",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "q": "pasta carbonara authentic recipe",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-205",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "q": "bake a chocolate cake without eggs",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-206",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "q": "the score of last nights basketball game",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-207",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "q": "biggest city in canada",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-208",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "q": "how long does it take to boil an egg",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-209",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "q": "should i invest in the latest ai company stock",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-210",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "q": "which is the smartest ai right now",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  },
+  {
+   "id": "H3-211",
+   "style": "ambiguous-or-off-topic",
+   "topic": "off",
+   "q": "write a cover email for a job",
+   "kind": "neg",
+   "accept": [],
+   "tool": null,
+   "path": []
+  }
+ ]
+}

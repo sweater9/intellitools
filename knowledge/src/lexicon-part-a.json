@@ -277,7 +277,13 @@
         "create a system prompt",
         "improve my prompt",
         "fix my prompt",
-        "build a prompt"
+        "build a prompt",
+        "write a good prompt",
+        "write a prompt for",
+        "need to write a prompt",
+        "help me write a prompt",
+        "craft a prompt",
+        "good prompt for"
       ]
     },
     {
@@ -295,7 +301,14 @@
         "prompt regression",
         "prompt versions",
         "two prompt versions",
-        "compare two prompt"
+        "compare two prompt",
+        "old system prompt",
+        "new system prompt",
+        "compare my old",
+        "old prompt with the new",
+        "old and new prompt",
+        "two versions of my prompt",
+        "version of my prompt"
       ]
     },
     {
@@ -310,7 +323,14 @@
         "against the evidence",
         "against my source",
         "fact anchor",
-        "compare claims to"
+        "compare claims to",
+        "backed by the source",
+        "each claim",
+        "claims are supported",
+        "claim is backed",
+        "grounded in the source text",
+        "fact check the answer",
+        "verify each claim"
       ]
     },
     {
@@ -328,7 +348,16 @@
         "mask emails",
         "before pasting a prompt",
         "api keys out of",
-        "strip api keys"
+        "strip api keys",
+        "what do i need to redact",
+        "redact before",
+        "scrub secrets",
+        "remove api keys",
+        "remove emails",
+        "strip emails",
+        "redact customer data",
+        "redact personal data",
+        "secrets from a log"
       ]
     },
     {
@@ -341,7 +370,14 @@
         "design an agentic workflow",
         "roles and handoffs",
         "workflow with roles",
-        "handoffs and guardrails"
+        "handoffs and guardrails",
+        "who does what between agents",
+        "plan for who does what",
+        "which agent does what",
+        "agent roles",
+        "design roles for agents",
+        "handoffs between agents",
+        "hand offs between agents"
       ]
     },
     {
@@ -356,7 +392,16 @@
         "format json",
         "format this json",
         "invalid json",
-        "json syntax"
+        "json syntax",
+        "unexpected token in json",
+        "pretty print and validate",
+        "validate this json",
+        "check this json",
+        "is this valid json",
+        "beautify json",
+        "fix my json",
+        "json parse error",
+        "json is invalid"
       ]
     }
   ],

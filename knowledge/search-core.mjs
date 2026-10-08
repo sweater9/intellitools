@@ -66,8 +66,15 @@ function mentionedTechnologies(lexicon, query) {
 
 function matchingGaps(lexicon, query) {
   return (lexicon.coverageGaps || []).filter((gap) =>
-    (gap.phrases || []).some((phrase) => hasPhrase(query, phrase))
+    (gap.phrases || []).some((phrase) => hasPhrase(query, phrase)) &&
+    (!(gap.withTerms || []).length || gap.withTerms.some((term) => hasPhrase(query, term))) &&
+    !(gap.unlessPhrases || []).some((phrase) => hasPhrase(query, phrase))
   );
+}
+
+function applySpelling(query, spelling) {
+  if (!spelling) return query;
+  return query.split(" ").map((token) => (Object.prototype.hasOwnProperty.call(spelling, token) ? spelling[token] : token)).join(" ");
 }
 
 function matchingTools(lexicon, query, gaps) {
@@ -89,7 +96,7 @@ function matchingTools(lexicon, query, gaps) {
 
 export function searchKnowledge(index, lexicon, rawQuery) {
   const stop = new Set(lexicon.stopwords || []);
-  const query = normalize(rawQuery);
+  const query = applySpelling(normalize(rawQuery), lexicon.spelling);
   const baseTokens = tokensOf(query, stop);
   const queryTokens = expand(baseTokens, lexicon.synonyms || {});
   const minSolid = Number(lexicon.minSolidScore) || 20;
@@ -175,6 +182,7 @@ export function searchKnowledge(index, lexicon, rawQuery) {
   let top = ranked.find((row) => anchored(row) && row.score >= minSolid) || null;
   const topical = (row) => row && row.notes.some((note) => note.startsWith("intent:") || note.startsWith("concept:"));
   if (top && gaps.some((gap) => gap.demoteWithoutTopic) && !topical(top)) top = null;
+  if (top && gaps.some((gap) => gap.suppressSolid)) top = null;
   const solid = Boolean(top);
   const tools = matchingTools(lexicon, query, gaps);
 

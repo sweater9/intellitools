@@ -2,7 +2,7 @@
 import { validateEntities, toPage, toOntologyRecord, ENTITY_TYPES, FRESHNESS, AUTHORED } from './entity-model.mjs';
 import { entities as e1 } from './entities-reasoning.mjs';
 const modules = [e1];
-for (const name of ['entities-ml.mjs', 'entities-llm.mjs', 'entities-agents.mjs', 'entities-eval-infra.mjs', 'entities-safety-science.mjs']) {
+for (const name of ['entities-ml.mjs', 'entities-llm.mjs', 'entities-agents.mjs', 'entities-eval-infra.mjs', 'entities-safety-science.mjs', 'entities-redteam-gaps.mjs']) {
   try { modules.push((await import('./' + name)).entities); } catch (err) { if (err.code !== 'ERR_MODULE_NOT_FOUND') throw err; }
 }
 export const entities = modules.flat();
