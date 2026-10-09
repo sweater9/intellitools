@@ -42,7 +42,7 @@ function section(kicker, title) {
 function render(query) {
   results.replaceChildren();
   if (!index || !lexicon) {
-    status.textContent = "Search is still loading.";
+    status.textContent = "Search is loading.";
     return;
   }
   const q = query.trim();
@@ -68,11 +68,11 @@ function render(query) {
     results.append(note);
   }
   if (!found.solid) {
-    const block = section("Answer / guide", "We don't have a solid guide for this yet.");
+    const block = section("Answer / guide", "No confident match found.");
     const p = el("p");
     p.textContent = found.weak.length
-      ? "The closest pages are listed separately. They are not a confident match, so they are not shown as the answer."
-      : "Nothing in the Knowledge guides scored as a real match.";
+      ? "The closest pages are listed below. They are not confident matches, so none is shown as the answer."
+      : "No Knowledge guide matched this query.";
     block.append(p);
     results.append(block);
     if (found.weak.length) {
@@ -156,7 +156,7 @@ function render(query) {
     results.append(tools);
   }
 
-  const extra = found.gap ? " Coverage note shown." : "";
+  const extra = found.gap ? " A coverage note is shown." : "";
   const toolNote = found.tools.length ? " Tool suggested: " + found.tools.map((t) => t.name).join(", ") + "." : "";
   status.textContent = "Guide: " + page.title + "." + toolNote + extra;
 }
@@ -167,7 +167,7 @@ async function load() {
     fetch("search-lexicon.json")
   ]);
   if (!indexRes.ok || !lexiconRes.ok) {
-    status.textContent = "Search files could not be loaded.";
+    status.textContent = "Search could not be loaded. Refresh the page and try again.";
     return;
   }
   index = await indexRes.json();

@@ -77,7 +77,7 @@ const plain = s => s.replace(/\[\[([a-z0-9-]+)(?:\|([^\]]+))?\]\]/g, (_, sl, lb)
 const slugify = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
 const header = `<header><div class="wrap"><nav aria-label="Main navigation"><a class="brand" href="../index.html"><span>Intelli</span>Tools</a><div class="navlinks"><a href="../index.html#tools">All tools</a><a href="index.html">Knowledge</a><a href="../index.html#about">About</a></div></nav></div></header>`;
-const footer = `<footer><div class="wrap"><div class="footer-bottom"><span>© IntelliTools — free, browser-first, no account needed.</span><span><a href="index.html">Knowledge</a> · <a href="glossary.html">AI Glossary</a> · <a href="../privacy.html">Privacy</a> · <a href="../terms.html">Terms</a></span></div></div></footer>`;
+const footer = `<footer><div class="wrap"><div class="footer-bottom"><span>© IntelliTools. Free, browser-based tools.</span><span><a href="index.html">Knowledge</a> · <a href="glossary.html">AI Glossary</a> · <a href="../privacy.html">Privacy</a> · <a href="../terms.html">Terms</a></span></div></div></footer>`;
 
 function shell({ title, desc, file, body, ld }) {
   return `<!doctype html>
@@ -131,11 +131,11 @@ function glossaryPage() {
     const see = (g.see || []).map(t => { const f = glossary.find(x => x.term === t || x.term.startsWith(t + ' (')); if (!f) { errors.push('glossary ' + g.term + ' see missing ' + t); return ''; } return `<a href="#${slugify(f.term)}">${esc(t)}</a>`; }).filter(Boolean);
     html += `<div class="kn-term" id="${slugify(g.term)}"><dt>${esc(g.term)}${g.aka ? ` <span class="kn-aka">(${esc(g.aka)})</span>` : ''}</dt><dd>${inline(g.def)}${links.length ? `<div class="kn-term-links">Learn more: ${links.join(' · ')}</div>` : ''}${see.length ? `<div class="kn-term-links">See also: ${see.join(' · ')}</div>` : ''}</dd></div>`;
   }
-  const body = `<main><section class="kn-head"><div class="wrap kn-wrap"><nav class="kn-crumb"><a href="index.html">Knowledge</a> › <span>Glossary</span></nav><span class="eyebrow">REFERENCE</span><h1>AI Glossary A–Z</h1><p class="kn-lede">Plain-English definitions of ${glossary.length} AI terms, each linking to the deeper explanation where one exists.</p>
+  const body = `<main><section class="kn-head"><div class="wrap kn-wrap"><nav class="kn-crumb"><a href="index.html">Knowledge</a> › <span>Glossary</span></nav><span class="eyebrow">REFERENCE</span><h1>AI Glossary A–Z</h1><p class="kn-lede">Clear definitions of ${glossary.length} AI terms, with a link to the full explanation where one exists.</p>
 <div class="kn-letters">${letters.map(l => `<a href="#letter-${l}">${l}</a>`).join('')}</div></div></section>
 <div class="wrap kn-wrap"><dl class="kn-glossary">${html}</dl></div></main>`;
   const ld = { '@context': 'https://schema.org', '@type': 'DefinedTermSet', name: 'AI Glossary A–Z', url: SITE + 'glossary.html', hasDefinedTerm: sorted.map(g => ({ '@type': 'DefinedTerm', name: g.term, description: plain(g.def) })) };
-  return shell({ title: 'AI Glossary A–Z', desc: `Plain-English definitions of ${glossary.length} AI terms: tokens, embeddings, RAG, agents, MCP, hallucination and more.`, file: 'glossary.html', body, ld });
+  return shell({ title: 'AI Glossary A–Z', desc: `Definitions of ${glossary.length} AI terms, including tokens, embeddings, RAG, agents, MCP, and hallucination.`, file: 'glossary.html', body, ld });
 }
 
 function indexPage() {
@@ -149,7 +149,7 @@ function indexPage() {
 <input id="kn-q" name="q" type="search" placeholder="What do you want to know or build?" autocomplete="off" enterkeyhint="search" aria-describedby="kn-ask-note">
 <button class="btn" type="submit">Search</button>
 </div>
-<p id="kn-ask-note" class="kn-ask-note">Searches these guides in your browser. Nothing you type is sent to a server.</p>
+<p id="kn-ask-note" class="kn-ask-note">Search runs in your browser using files loaded from this site.</p>
 </form>
 <div id="kn-search-status" class="kn-sr" aria-live="polite"></div>
 <div id="kn-search-results" class="kn-results"></div>
@@ -159,7 +159,7 @@ ${groups.map(sec).join('')}
 <section class="kn-group"><h2>Comparisons</h2><div class="kn-cards">${pages.filter(p => p.kind === 'comparison').map(card).join('')}</div></section>
 <section class="kn-group"><h2>Reference</h2><div class="kn-cards"><a class="kn-card" href="glossary.html"><span class="kn-kind">Glossary</span><strong>AI Glossary A–Z</strong><small>${glossary.length} terms defined in plain English.</small></a></div></section></div></main>`;
   const ld = { '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'IntelliTools Knowledge', url: SITE, inLanguage: 'en' };
-  return shell({ title: 'Knowledge: understand AI, practically', desc: 'Explore free, accessible guides to artificial intelligence, AI agents, language models, prompting, and AI security.', file: 'index.html', body, ld }).replace('</body>', '<script type="module" src="search.js"></script></body>');
+  return shell({ title: 'Knowledge: Artificial Intelligence Guides', desc: 'Explore free, accessible guides to artificial intelligence, AI agents, language models, prompting, and AI security.', file: 'index.html', body, ld }).replace('</body>', '<script type="module" src="search.js"></script></body>');
 }
 
 // ---- validation ----
