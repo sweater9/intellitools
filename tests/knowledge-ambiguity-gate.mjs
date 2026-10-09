@@ -22,12 +22,12 @@ const cases = [
   ["What is the SharePoint Framework?", true],
   ["what is model context protocol", true],
   ["how to build RAG with Python", true],
-  ["how do I connect an AI agent to Gmail", true],
+  ["how do I connect an AI agent to Gmail", true, "agent-tools"],
 ];
 let failures = 0;
-for (const [query, expectedSolid] of cases) {
+for (const [query, expectedSolid, expectedPage] of cases) {
   const result = searchKnowledge(index, lexicon, query);
-  const pass = Boolean(result.solid) === expectedSolid;
+  const pass = Boolean(result.solid) === expectedSolid && (!expectedPage || result.answer?.page?.id === expectedPage);
   console.log(JSON.stringify({ pass, query, expectedSolid, actualSolid: Boolean(result.solid), answer: result.answer?.page?.id ?? null }));
   if (!pass) failures++;
 }
