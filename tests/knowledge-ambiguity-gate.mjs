@@ -7,6 +7,8 @@ const lexicon = JSON.parse(readFileSync(new URL("../knowledge/search-lexicon.jso
 const cases = [
   ["toy transformer robot for kids birthday", false],
   ["transformer toy", false],
+  ["transformer toy robots for kids", false],
+  ["ollama llama animal facts", false],
   ["can my python pet eat mice", false],
   ["docker is a clothing brand right", false],
   ["react to this message politely", false],
