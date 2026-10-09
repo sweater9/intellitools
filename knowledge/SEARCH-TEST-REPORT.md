@@ -15,7 +15,7 @@ Miss: 0
 | pass | AI fundamentals | What is machine learning versus AI? | what-is-ai | 52 | — | — |
 | pass | AI fundamentals | What is generative AI? | generative-ai | 66 | — | — |
 | pass | LLMs | What is an LLM? | large-language-models | 27 | — | — |
-| pass | LLMs | How do LLMs generate text? | large-language-models | 69 | — | — |
+| pass | LLMs | How do LLMs generate text? | large-language-models | 38 | — | — |
 | pass | LLMs | What is a token? | tokens | 41 | — | — |
 | pass | LLMs | What is a transformer and attention? | transformers | 67 | — | — |
 | pass | prompting | How do I write better prompts? | prompt-engineering | 71 | ai-prompt-builder | — |
@@ -43,22 +43,22 @@ Miss: 0
 | pass | function calling | function calling vs MCP | function-calling-vs-mcp | 129 | — | — |
 | pass | local AI | How do I run an LLM locally? | local-ai | 64 | — | — |
 | pass | local AI | Should I run AI locally or in the cloud? | local-ai-vs-cloud-ai | 93 | — | — |
-| pass | frameworks | Which framework can I use for an AI agent? | choosing-an-agent-framework | 116 | — | — |
+| pass | frameworks | Which framework can I use for an AI agent? | choosing-an-agent-framework | 80 | — | — |
 | pass | frameworks | Should I use RAG or fine-tuning? | rag-vs-fine-tuning | 126 | — | — |
-| pass | Python | How do I build RAG with Python? | rag-with-python | 129 | — | — |
-| pass | JavaScript/TypeScript | TypeScript types for an API client | typescript-api-client-types | 166 | — | — |
-| pass | JavaScript/TypeScript | React state for a chatbot | react-chatbot-state | 130 | — | — |
-| pass | APIs | Node.js streaming responses from an API | streaming-ai-with-nodejs | 135 | — | — |
-| pass | databases | How do I use PostgreSQL with my app? | postgresql-for-ai-apps | 105 | — | — |
+| pass | Python | How do I build RAG with Python? | rag-with-python | 79 | — | — |
+| pass | JavaScript/TypeScript | TypeScript types for an API client | typescript-api-client-types | 112 | — | — |
+| pass | JavaScript/TypeScript | React state for a chatbot | react-chatbot-state | 76 | — | — |
+| pass | APIs | Node.js streaming responses from an API | streaming-ai-with-nodejs | 79 | — | — |
+| pass | databases | How do I use PostgreSQL with my app? | postgresql-for-ai-apps | 65 | — | — |
 | pass | AI security | What is prompt injection? | prompt-injection | 88 | — | — |
 | pass | AI security | How do I stop a jailbreak? | prompt-injection | 41 | — | — |
 | pass | AI security | Is it safe to paste customer data into an AI tool? | ai-privacy-and-security | 97 | — | — |
 | pass | AI security | How do I redact secrets before pasting a prompt? | ai-privacy-and-security | 52 | pii-secret-redactor | — |
-| pass | task | How can an AI agent access Gmail? | gmail-for-ai-agents | 119 | — | — |
-| pass | task | How do I evaluate a RAG system? | ai-evaluation | 56 | — | — |
+| pass | task | How can an AI agent access Gmail? | gmail-for-ai-agents | 83 | — | — |
+| pass | task | How do I evaluate a RAG system? | rag-evaluation | 102 | — | — |
 | pass | task | Design a multi-agent workflow with roles and handoffs | agentic-workflows | 66 | agentic-workflow-generator | — |
 | weak | task | Compare two prompt versions | system-prompts | 25 | prompt-diff | — |
-| pass | task | How do I validate JSON? | json-validation | 108 | json-formatter | — |
+| pass | task | How do I validate JSON? | json-validation | 52 | json-formatter | — |
 | pass | task | Can I fine-tune instead of prompting? | rag-vs-fine-tuning | 56 | — | — |
 
 ## Worked well
@@ -106,7 +106,7 @@ Miss: 0
 - Is it safe to paste customer data into an AI tool? → ai-privacy-and-security
 - How do I redact secrets before pasting a prompt? → ai-privacy-and-security (tool: pii-secret-redactor)
 - How can an AI agent access Gmail? → gmail-for-ai-agents
-- How do I evaluate a RAG system? → ai-evaluation
+- How do I evaluate a RAG system? → rag-evaluation
 - Design a multi-agent workflow with roles and handoffs → agentic-workflows (tool: agentic-workflow-generator)
 - How do I validate JSON? → json-validation (tool: json-formatter)
 - Can I fine-tune instead of prompting? → rag-vs-fine-tuning

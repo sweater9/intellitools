@@ -74,3 +74,4 @@ a.kn-card:hover{transform:translateY(-2px);border-color:#c7c2f7;box-shadow:0 12p
   .kn-ask button{width:100%}
   .kn-result-block h2{font-size:20px}
 }
+.kn-meta{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px;font-size:12px}.kn-meta span{border:1px solid var(--line);background:#fff;border-radius:999px;padding:3px 10px;color:var(--muted)}.kn-meta span:last-child{border-color:#f2c36b;color:#8a5a00;background:#fff8e6}
