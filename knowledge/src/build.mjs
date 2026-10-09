@@ -142,7 +142,7 @@ function indexPage() {
   const groups = [...new Set(pages.filter(p => p.kind !== 'comparison').map(p => p.group))];
   const card = t => `<a class="kn-card" href="${t.slug}.html"><span class="kn-kind">${t.kind === 'comparison' ? 'Comparison' : 'Concept'}</span><strong>${esc(t.title)}</strong><small>${esc(plain(t.summary))}</small></a>`;
   const sec = g => `<section class="kn-group"><h2>${esc(g)}</h2><div class="kn-cards">${pages.filter(p => p.group === g && p.kind !== 'comparison').map(card).join('')}</div></section>`;
-  const body = `<main><section class="kn-head"><div class="wrap kn-wrap"><span class="eyebrow">INTELLITOOLS KNOWLEDGE</span><h1>Understand AI, practically</h1><p class="kn-lede">Free, plain-English explainers on how modern AI actually works — written for beginners, useful to developers. No account, no tracking requirement, nothing to install.</p>
+  const body = `<main><section class="kn-head"><div class="wrap kn-wrap"><span class="eyebrow">INTELLITOOLS KNOWLEDGE</span><h1>Explore Artificial Intelligence</h1><p class="kn-lede">Explore modern artificial intelligence through free, clear, and accessible guides that explain complex AI concepts in simple, practical language.</p>
 <form class="kn-ask" id="kn-search-form" role="search" action="index.html">
 <label for="kn-q">What do you want to know or build?</label>
 <div class="kn-ask-row">
@@ -159,7 +159,7 @@ ${groups.map(sec).join('')}
 <section class="kn-group"><h2>Comparisons</h2><div class="kn-cards">${pages.filter(p => p.kind === 'comparison').map(card).join('')}</div></section>
 <section class="kn-group"><h2>Reference</h2><div class="kn-cards"><a class="kn-card" href="glossary.html"><span class="kn-kind">Glossary</span><strong>AI Glossary A–Z</strong><small>${glossary.length} terms defined in plain English.</small></a></div></section></div></main>`;
   const ld = { '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'IntelliTools Knowledge', url: SITE, inLanguage: 'en' };
-  return shell({ title: 'Knowledge: understand AI, practically', desc: 'Free practical explainers on LLMs, tokens, RAG, embeddings, AI agents, MCP, prompting, evaluation and AI security.', file: 'index.html', body, ld }).replace('</body>', '<script type="module" src="search.js"></script></body>');
+  return shell({ title: 'Knowledge: understand AI, practically', desc: 'Explore free, accessible guides to artificial intelligence, AI agents, language models, prompting, and AI security.', file: 'index.html', body, ld }).replace('</body>', '<script type="module" src="search.js"></script></body>');
 }
 
 // ---- validation ----
