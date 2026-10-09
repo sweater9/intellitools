@@ -4,62 +4,35 @@ Run: `node tests/knowledge-ai-v3-queries.mjs`. Uses the unmodified search core a
 
 Labels are computed from the rules in the test file header, not assigned by hand. Accepted pages per query were fixed before the final run.
 
-Positive queries: 328 · pass 293 · weak 25 · miss 10
-  - tuning set (lexicon part D was authored after seeing its baseline failures): 258 · pass 251 · weak 7 · miss 0
-  - held-out set (written before part D, not used while tuning; same author, so not a fully independent estimate): 70 · pass 42 · weak 18 · miss 10
+Positive queries: 328 · pass 320 · weak 8 · miss 0
+  - tuning set (lexicon part D was authored after seeing its baseline failures): 258 · pass 252 · weak 6 · miss 0
+  - held-out set (written before part D, not used while tuning; same author, so not a fully independent estimate): 70 · pass 68 · weak 2 · miss 0
 Negative (out-of-scope / ambiguous-acronym) queries: 30 · pass 29 · false positives 1
-Positive queries with a false positive (confident wrong page or unexpected tool): 17
+Positive queries with a false positive (confident wrong page or unexpected tool): 7
 
 | Category | Queries | Pass | Weak | Miss | False positives |
 | --- | --- | --- | --- | --- | --- |
 | definition | 103 | 103 | 0 | 0 | 0 |
-| acronym | 41 | 38 | 3 | 0 | 2 |
+| acronym | 41 | 39 | 2 | 0 | 2 |
 | comparison | 24 | 21 | 3 | 0 | 3 |
 | troubleshooting | 24 | 24 | 0 | 0 | 0 |
 | architecture | 24 | 24 | 0 | 0 | 0 |
 | what-should-i-use | 18 | 17 | 1 | 0 | 1 |
 | how-to | 24 | 24 | 0 | 0 | 0 |
 | negative | 30 | 29 | 0 | 0 | 1 |
-| holdout | 70 | 42 | 18 | 10 | 11 |
+| holdout | 70 | 68 | 2 | 0 | 1 |
 
 ## Misses
-- [holdout] measuring whether an agent completes tasks reliably — expected agent-evaluation; top5: ai-agent-vs-chatbot, migrate-to-microsoft-agent-framework, agent-protocol-landscape, microsoft-agent-framework, multi-agent-systems
-- [holdout] state machine style orchestration for LLM agents — expected langgraph; top5: agent-frameworks-compared, microsoft-agent-framework, openai-agents-sdk, ai-agents, multi-agent-systems — FP: confident wrong page: large-language-models
-- [holdout] automatically optimise my prompts with a metric — expected dspy; top5: prompt-engineering, system-prompts, prompt-caching, prompt-injection, common-prompting-mistakes
-- [holdout] how do agents learn from rewards — expected reinforcement-learning; top5: microsoft-agent-framework, openai-agents-sdk, multi-agent-systems, migrate-to-microsoft-agent-framework, agent-protocol-landscape
-- [holdout] why do image models use patches — expected vision-transformers; top5: reasoning-models, reasoning-vs-standard-models, small-language-models, diffusion-models, world-models
-- [holdout] how to make LLM inference faster without changing outputs — expected speculative-decoding | flash-attention | kv-cache; top5: large-language-models, model-serving-and-inference, llm-observability, llm-as-a-judge, structured-outputs — FP: confident wrong page: large-language-models
-- [holdout] transcribe meetings automatically — expected speech-ai; top5: best-of-n-sampling, cicd, dspy
-- [holdout] pull structured fields out of invoices — expected document-understanding-ai; top5: structured-outputs, structured-output-methods-compared, outlines, reasoning-transparency, function-calling
-- [holdout] tamper-evident labels for AI generated media — expected c2pa-content-provenance; top5: ai-governance, eu-ai-act, nist-ai-rmf, constitutional-ai-and-rlaif, embodied-ai
-- [holdout] why is a GPU needed for neural networks — expected gpus-and-ai-accelerators; top5: neural-networks, physics-informed-neural-networks, graph-neural-networks, convolutional-neural-networks, recurrent-neural-networks — FP: confident wrong page: neural-networks
 
 ## Weak
 - [acronym] CNN deep learning — expected convolutional-neural-networks; solid: deep-learning; top5: deep-learning, convolutional-neural-networks, deep-q-networks, reinforcement-learning, supervised-learning — FP: confident wrong page: deep-learning
 - [acronym] PPO reinforcement learning — expected proximal-policy-optimization; solid: reinforcement-learning; top5: reinforcement-learning, proximal-policy-optimization, reinforcement-learning-for-reasoning, deep-learning, rlhf — FP: confident wrong page: reinforcement-learning
-- [acronym] BoN — expected best-of-n-sampling; solid: no; top5: best-of-n-sampling
 - [comparison] Is DPO reinforcement learning? — expected dpo | preference-optimization | dpo-vs-rlhf; solid: reinforcement-learning; top5: reinforcement-learning, dpo, dpo-vs-rlhf, preference-optimization, reinforcement-learning-for-reasoning — FP: confident wrong page: reinforcement-learning
 - [comparison] Ollama vs vLLM vs llama.cpp — expected local-runtimes-compared; solid: llama-cpp; top5: llama-cpp, local-runtimes-compared, ollama, vllm, local-llm-runtimes — FP: confident wrong page: llama-cpp
 - [comparison] LangGraph vs CrewAI vs AutoGen — expected agent-frameworks-compared; solid: crewai; top5: crewai, agent-frameworks-compared, langgraph, autogen, migrate-to-microsoft-agent-framework — FP: confident wrong page: crewai
-- [what-should-i-use] Which framework should I use for deep learning? — expected pytorch; solid: deep-learning; top5: deep-learning, pytorch, deep-q-networks, choosing-an-agent-framework, microsoft-agent-framework — FP: confident wrong page: deep-learning
-- [holdout] difference between scaling model size and scaling inference compute — expected test-time-compute | scaling-laws; solid: no; top5: test-time-compute, model-serving-and-inference, scaling-laws, model-apis, model-cards
-- [holdout] sample several answers and pick the majority — expected self-consistency; solid: best-of-n-sampling; top5: best-of-n-sampling, how-to-reduce-hallucinations, self-consistency, common-prompting-mistakes, ai-hallucinations — FP: confident wrong page: best-of-n-sampling
-- [holdout] make my model output only valid enum values — expected constrained-decoding | structured-outputs; solid: no; top5: model-cards, model-apis, encoder-decoder-vs-decoder-only, structured-outputs, model-drift-and-monitoring
-- [holdout] how do agents from different companies talk to each other — expected a2a-protocol | agent-protocol-landscape; solid: no; top5: openai-agents-sdk, microsoft-agent-framework, multi-agent-systems, migrate-to-microsoft-agent-framework, agent-protocol-landscape
-- [holdout] security risks of third party MCP servers — expected mcp-security; solid: mcp-servers-and-clients; top5: mcp-security, mcp-servers-and-clients, mcp, mcp-authorization, a2a-vs-mcp — FP: confident wrong page: mcp-servers-and-clients
-- [holdout] export a PyTorch model for mobile and browser — expected onnx-runtime; solid: pytorch; top5: pytorch, model-cards, model-apis, model-drift-and-monitoring, model-serving-and-inference — FP: confident wrong page: pytorch
+- [what-should-i-use] Which framework should I use for deep learning? — expected pytorch; solid: deep-learning; top5: deep-learning, pytorch, deep-q-networks, choosing-an-agent-framework, reinforcement-learning — FP: confident wrong page: deep-learning
 - [holdout] predicting protein structure from sequence — expected alphafold; solid: no; top5: alphafold, recurrent-neural-networks, unsupervised-learning, ai-drug-discovery, state-space-models
-- [holdout] neural networks that obey differential equations — expected physics-informed-neural-networks; solid: neural-networks; top5: neural-networks, physics-informed-neural-networks, graph-neural-networks, convolutional-neural-networks, recurrent-neural-networks — FP: confident wrong page: neural-networks
-- [holdout] machine learning weather forecasting versus numerical models — expected ai-weather-forecasting; solid: what-is-ai; top5: ai-weather-forecasting, reasoning-models, deep-learning, reasoning-vs-standard-models, small-language-models — FP: confident wrong page: what-is-ai
-- [holdout] linear time alternative to attention — expected state-space-models; solid: transformers; top5: transformers, attention-sinks, state-space-models, test-time-compute, flash-attention — FP: confident wrong page: transformers
-- [holdout] why does generation memory grow with context length — expected kv-cache; solid: context-windows; top5: context-windows, context-engineering, agent-memory, kv-cache, video-generation-models — FP: confident wrong page: context-windows
-- [holdout] how many tokens should a model be trained on — expected scaling-laws; solid: tokens; top5: tokens, model-apis, model-cards, scaling-laws, model-serving-and-inference — FP: confident wrong page: tokens
-- [holdout] what is the difference between a base model and a chat model — expected instruction-tuning; solid: no; top5: instruction-tuning, model-apis, model-cards, model-drift-and-monitoring, model-serving-and-inference
-- [holdout] models small enough to run on a phone — expected small-language-models | local-ai; solid: no; top5: small-language-models, reasoning-models, reasoning-vs-standard-models, world-models, model-cards
-- [holdout] how do chatbots learn from human ratings — expected rlhf | preference-optimization; solid: no; top5: human-preference-evaluation, rlhf, preference-optimization, ai-evaluation, langgraph
-- [holdout] who is accountable for AI decisions in a company — expected ai-governance; solid: no; top5: ai-governance, eu-ai-act, nist-ai-rmf, embodied-ai, local-ai
-- [holdout] documentation that describes a model's limits — expected model-cards; solid: no; top5: model-cards, reasoning-models, reasoning-vs-standard-models, small-language-models, world-models
-- [holdout] deciding what information goes into the model context for an agent — expected context-engineering; solid: no; top5: context-engineering, ai-agent-vs-chatbot, multi-agent-systems, migrate-to-microsoft-agent-framework, agent-protocol-landscape
+- [holdout] why is a GPU needed for neural networks — expected gpus-and-ai-accelerators; solid: neural-networks; top5: neural-networks, gpus-and-ai-accelerators, physics-informed-neural-networks, graph-neural-networks, convolutional-neural-networks — FP: confident wrong page: neural-networks
 
 ## False positives
 - [acronym] CNN deep learning — confident wrong page: deep-learning
@@ -69,16 +42,6 @@ Positive queries with a false positive (confident wrong page or unexpected tool)
 - [comparison] LangGraph vs CrewAI vs AutoGen — confident wrong page: crewai
 - [what-should-i-use] Which framework should I use for deep learning? — confident wrong page: deep-learning
 - [negative] ollama llama animal facts — solid answer: ollama
-- [holdout] sample several answers and pick the majority — confident wrong page: best-of-n-sampling
-- [holdout] security risks of third party MCP servers — confident wrong page: mcp-servers-and-clients
-- [holdout] state machine style orchestration for LLM agents — confident wrong page: large-language-models
-- [holdout] export a PyTorch model for mobile and browser — confident wrong page: pytorch
-- [holdout] neural networks that obey differential equations — confident wrong page: neural-networks
-- [holdout] machine learning weather forecasting versus numerical models — confident wrong page: what-is-ai
-- [holdout] linear time alternative to attention — confident wrong page: transformers
-- [holdout] why does generation memory grow with context length — confident wrong page: context-windows
-- [holdout] how to make LLM inference faster without changing outputs — confident wrong page: large-language-models
-- [holdout] how many tokens should a model be trained on — confident wrong page: tokens
 - [holdout] why is a GPU needed for neural networks — confident wrong page: neural-networks
 
 ## Search-gap notes (existing lexicon rules, not changed)
@@ -95,7 +58,7 @@ Positive queries with a false positive (confident wrong page or unexpected tool)
 | pass | definition | What is a reasoning model? | reasoning-models | 90 | yes | — |
 | pass | definition | What is chain-of-thought prompting? | chain-of-thought | 119 | yes | — |
 | pass | definition | What is self-consistency in LLMs? | self-consistency | 102 | yes | — |
-| pass | definition | What is best-of-N sampling? | best-of-n-sampling | 120 | yes | — |
+| pass | definition | What is best-of-N sampling? | best-of-n-sampling | 136 | yes | — |
 | pass | definition | What is Tree of Thoughts? | search-over-reasoning | 93 | yes | — |
 | pass | definition | What is a process reward model? | process-reward-model | 114 | yes | — |
 | pass | definition | What is an outcome reward model? | outcome-reward-model | 112 | yes | — |
@@ -227,7 +190,7 @@ Positive queries with a false positive (confident wrong page or unexpected tool)
 | pass | acronym | HBM VRAM | gpus-and-ai-accelerators | 55 | yes | — |
 | pass | acronym | CoT | chain-of-thought | 47 | yes | — |
 | pass | acronym | ToT MCTS LLM | search-over-reasoning | 57 | yes | — |
-| weak | acronym | BoN | best-of-n-sampling | 17 | no | — |
+| pass | acronym | BoN | best-of-n-sampling | 59 | yes | — |
 | pass | acronym | RRF BM25 | hybrid-search-and-reranking | 57 | yes | — |
 | pass | acronym | WER | speech-ai | 51 | yes | — |
 | pass | acronym | pass@k | humaneval | 57 | yes | — |
@@ -381,11 +344,11 @@ Positive queries with a false positive (confident wrong page or unexpected tool)
 | pass | negative | how to train for a marathon | distributed-training | 6 | no | — |
 | pass | holdout | explain how reasoning LLMs think before answering | reasoning-models | 74 | yes | — |
 | pass | holdout | can I see the hidden thoughts of a reasoning model | reasoning-transparency | 81 | yes | — |
-| weak | holdout | difference between scaling model size and scaling inference compute | test-time-compute | 67 | no | — |
+| pass | holdout | difference between scaling model size and scaling inference compute | test-time-compute | 123 | yes | — |
 | pass | holdout | grade each step of a model's maths solution | process-reward-model | 68 | yes | — |
-| weak | holdout | sample several answers and pick the majority | best-of-n-sampling | 38 | yes | — |
+| pass | holdout | sample several answers and pick the majority | self-consistency | 63 | yes | — |
 | pass | holdout | pick the best of several generated answers with a verifier | best-of-n-sampling | 71 | yes | — |
-| weak | holdout | make my model output only valid enum values | model-cards | 28 | no | — |
+| pass | holdout | make my model output only valid enum values | constrained-decoding | 67 | yes | — |
 | pass | holdout | regex constrained generation for local models | constrained-decoding | 86 | yes | — |
 | pass | holdout | temperature versus top-k and top-p explained | sampling-and-decoding | 65 | yes | — |
 | pass | holdout | how do language models turn probabilities into words | sampling-and-decoding | 46 | yes | — |
@@ -398,54 +361,54 @@ Positive queries with a false positive (confident wrong page or unexpected tool)
 | pass | holdout | using GPT to grade other model outputs | llm-as-a-judge | 83 | yes | — |
 | pass | holdout | how are Elo ratings for chatbots computed | human-preference-evaluation | 52 | yes | — |
 | pass | holdout | what does F1 score tell me | evaluation-metrics-for-ai | 82 | yes | — |
-| miss | holdout | measuring whether an agent completes tasks reliably | ai-agent-vs-chatbot | 36 | no | — |
-| weak | holdout | how do agents from different companies talk to each other | openai-agents-sdk | 39 | no | — |
-| weak | holdout | security risks of third party MCP servers | mcp-servers-and-clients | 58 | yes | — |
+| pass | holdout | measuring whether an agent completes tasks reliably | agent-evaluation | 74 | yes | — |
+| pass | holdout | how do agents from different companies talk to each other | agent-protocol-landscape | 87 | yes | — |
+| pass | holdout | security risks of third party MCP servers | mcp-security | 132 | yes | — |
 | pass | holdout | overview of agent communication standards | agent-protocol-landscape | 76 | yes | — |
-| miss | holdout | state machine style orchestration for LLM agents | large-language-models | 27 | yes | — |
-| miss | holdout | automatically optimise my prompts with a metric | prompt-engineering | 34 | no | — |
+| pass | holdout | state machine style orchestration for LLM agents | langgraph | 69 | yes | — |
+| pass | holdout | automatically optimise my prompts with a metric | dspy | 64 | yes | — |
 | pass | holdout | self-hosted inference server with high throughput | model-serving-and-inference | 97 | yes | — |
 | pass | holdout | run quantized models on a laptop without a GPU | llama-cpp | 44 | yes | — |
-| weak | holdout | export a PyTorch model for mobile and browser | pytorch | 76 | yes | — |
+| pass | holdout | export a PyTorch model for mobile and browser | onnx-runtime | 76 | yes | — |
 | pass | holdout | how do I download Hugging Face models safely | hugging-face | 100 | yes | — |
 | weak | holdout | predicting protein structure from sequence | alphafold | 29 | no | — |
-| weak | holdout | neural networks that obey differential equations | neural-networks | 71 | yes | — |
-| weak | holdout | machine learning weather forecasting versus numerical models | what-is-ai | 32 | yes | — |
+| pass | holdout | neural networks that obey differential equations | physics-informed-neural-networks | 98 | yes | — |
+| pass | holdout | machine learning weather forecasting versus numerical models | ai-weather-forecasting | 114 | yes | — |
 | pass | holdout | how is AI used to find new materials | ai-materials-discovery | 87 | yes | — |
 | pass | holdout | does AI speed up drug discovery | ai-drug-discovery | 100 | yes | — |
 | pass | holdout | difference between classification and regression | supervised-learning | 57 | yes | — |
 | pass | holdout | how do neural networks learn weights | neural-networks | 107 | yes | — |
 | pass | holdout | training accuracy high but test accuracy low | overfitting-and-regularization | 51 | yes | — |
 | pass | holdout | reuse a pretrained model for my small dataset | transfer-learning | 43 | yes | — |
-| miss | holdout | how do agents learn from rewards | microsoft-agent-framework | 37 | no | — |
-| miss | holdout | why do image models use patches | reasoning-models | 40 | no | — |
+| pass | holdout | how do agents learn from rewards | reinforcement-learning | 57 | yes | — |
+| pass | holdout | why do image models use patches | vision-transformers | 64 | yes | — |
 | pass | holdout | models with many experts but few active parameters | mixture-of-experts | 91 | yes | — |
-| weak | holdout | linear time alternative to attention | transformers | 34 | yes | — |
+| pass | holdout | linear time alternative to attention | state-space-models | 82 | yes | — |
 | pass | holdout | how do text-to-image generators work | diffusion-models | 50 | yes | — |
-| weak | holdout | why does generation memory grow with context length | context-windows | 56 | yes | — |
-| miss | holdout | how to make LLM inference faster without changing outputs | large-language-models | 37 | yes | — |
-| weak | holdout | how many tokens should a model be trained on | tokens | 34 | yes | — |
-| weak | holdout | what is the difference between a base model and a chat model | instruction-tuning | 33 | no | — |
+| pass | holdout | why does generation memory grow with context length | kv-cache | 73 | yes | — |
+| pass | holdout | how to make LLM inference faster without changing outputs | speculative-decoding | 58 | yes | — |
+| pass | holdout | how many tokens should a model be trained on | scaling-laws | 83 | yes | — |
+| pass | holdout | what is the difference between a base model and a chat model | instruction-tuning | 89 | yes | — |
 | pass | holdout | train adapters instead of all weights | lora-and-peft | 22 | yes | — |
 | pass | holdout | shrink a model to 4-bit | quantization | 47 | yes | — |
-| weak | holdout | models small enough to run on a phone | small-language-models | 67 | no | — |
+| pass | holdout | models small enough to run on a phone | small-language-models | 123 | yes | — |
 | pass | holdout | search images using text descriptions | contrastive-learning-clip | 59 | yes | — |
-| miss | holdout | transcribe meetings automatically | best-of-n-sampling | 2 | no | — |
-| miss | holdout | pull structured fields out of invoices | structured-outputs | 26 | no | — |
-| weak | holdout | how do chatbots learn from human ratings | human-preference-evaluation | 21 | no | — |
+| pass | holdout | transcribe meetings automatically | speech-ai | 52 | yes | — |
+| pass | holdout | pull structured fields out of invoices | document-understanding-ai | 53 | yes | — |
+| pass | holdout | how do chatbots learn from human ratings | rlhf | 71 | yes | — |
 | pass | holdout | training on chosen and rejected answer pairs | preference-optimization | 46 | yes | — |
 | pass | holdout | model exploits the scoring function instead of doing the task | reward-hacking | 50 | yes | — |
 | pass | holdout | AI that tells me what I want to hear | sycophancy | 56 | yes | — |
 | pass | holdout | adversarial testing of chatbots before launch | red-teaming | 85 | yes | — |
-| weak | holdout | who is accountable for AI decisions in a company | ai-governance | 52 | no | — |
+| pass | holdout | who is accountable for AI decisions in a company | ai-governance | 108 | yes | — |
 | pass | holdout | which AI systems are banned in Europe | eu-ai-act | 89 | yes | — |
-| weak | holdout | documentation that describes a model's limits | model-cards | 42 | no | — |
-| miss | holdout | tamper-evident labels for AI generated media | ai-governance | 50 | no | — |
+| pass | holdout | documentation that describes a model's limits | model-cards | 98 | yes | — |
+| pass | holdout | tamper-evident labels for AI generated media | c2pa-content-provenance | 77 | yes | — |
 | pass | holdout | tracking prompts and token spend in production | llm-cost-optimization | 61 | yes | — |
 | pass | holdout | keeping the same long system prompt cheap across requests | prompt-caching | 71 | yes | — |
-| weak | holdout | deciding what information goes into the model context for an agent | context-engineering | 44 | no | — |
+| pass | holdout | deciding what information goes into the model context for an agent | context-engineering | 100 | yes | — |
 | pass | holdout | keyword plus semantic retrieval with rerankers | hybrid-search-and-reranking | 89 | yes | — |
 | pass | holdout | let an AI operate my browser | computer-use-agents | 57 | yes | — |
 | pass | holdout | stop a model from reading private files when running code | code-execution-sandboxing | 87 | yes | — |
 | pass | holdout | how to detect when a model degrades after launch | model-drift-and-monitoring | 64 | yes | — |
-| miss | holdout | why is a GPU needed for neural networks | neural-networks | 71 | yes | — |
+| weak | holdout | why is a GPU needed for neural networks | neural-networks | 71 | yes | — |

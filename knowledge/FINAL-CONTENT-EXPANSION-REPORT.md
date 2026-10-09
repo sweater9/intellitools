@@ -3,6 +3,7 @@
 - **Branch:** `agent/knowledge-v3-final-expansion` → PR into `feature/knowledge-base-preview` (base commit `0b713df`)
 - **Check date:** 2026-10-09 (every "verified" statement below means *compared with the cited primary page on this date*)
 - **Scope:** content and factual verification only. Search ranking, lexicon parts, ambiguity rules and `search-core.mjs` / `search.js` were **not** changed (another engineer owns them). No merge, no `main` change, no deployment.
+- **Release-blocker pass (section 11) supersedes sections 7 and 10 where they differ.**
 - **Machine-readable records:** `knowledge/source-verification.json` (records, change log, sources) and `knowledge/ontology-v3.json` (`verification.source_check` per page).
 
 ## 1. Recommendation
@@ -141,3 +142,43 @@ Content was frozen; only corrections and a CSS fix were made. Sign-offs remain w
 **Commands**: `npm test`; `node tests/knowledge-ambiguity-gate.mjs`; `node knowledge/src/build.mjs`; `python3 knowledge/src/build-semantic.py <glove.json> --dim 64 --vocab 5000`; Playwright script at `/tmp/final/qa/qa.mjs` (not committed); same-answer and regression scripts under `/tmp/final` (not committed).
 
 **Reviewer sign-offs:** none recorded. Production approval remains separate.
+
+## 11. Release-blocker pass (search relevance, legacy URL, verification, QA)
+
+No new knowledge pages were added; no unrelated tools or existing tests were weakened. Every number below was produced on the commit that carries this report.
+
+### 11.1 Search relevance
+- **Root cause of most regressions:** generic tokens in the new pages' technology/keyword lists ("agent", "attention") gave them lexical overlap with unrelated agent/attention queries. Trimming those (`microsoft-agent-framework`, `migrate-to-microsoft-agent-framework`, `attention-sinks`) took the 10 regressions (2 top-1 + 8 top-3) down to 2 without touching ranking code.
+- **Remaining routing fixes** live in a new lexicon source `knowledge/src/lexicon-part-e.json` (9 intents), registered in `build.mjs`: Gmail agent connection, Gmail scopes/verification, MCP authorization, conversational multi-agent (AutoGen), attention alternatives (state-space models), planner/worker agents, cross-vendor agents, email-agent permissions, production agent framework. `search-core.mjs` and `search.js` are unchanged.
+- **Important disclosure:** the committed `search-lexicon.json` was **stale against its own source parts** (31 intents from `lexicon-part-d.json` were never merged into it). Rebuilding merges them. Effect on the 1,607 frozen queries versus the base commit: 10 answers change, **10 are fixes and 0 are breaks**; no non-page query became newly solid; the AI-V3 query report moves from pass 293 / weak 25 / miss 10 to **pass 320 / weak 8 / miss 0** (negatives 29 pass / 1 false positive, unchanged). `lexicon-part-d.generator.py` does **not** reproduce `lexicon-part-d.json` (it differs from line 57), so I edited neither; the ranking owner should decide which is canonical.
+- **Gmail:** `how do I connect an AI agent to Gmail` now answers `gmail-for-ai-agents` (112 vs 58) instead of `ai-agent-vs-chatbot`. The accepted learn-more result is preserved: `How can an AI agent access Gmail?` still lists `gmail-api-scopes-and-verification` and `oauth-for-ai-agents` (asserted in tests; the earlier edit to `tests/knowledge-search.mjs` is unchanged).
+- **MCP:** `mcp authorization`, `how does oauth work for mcp servers`, `oauth for mcp servers`, `how do I add OAuth to an MCP server`, `what is protected resource metadata` and `mcp token passthrough` all answer `mcp-authorization`. `how to secure an mcp server`, `is mcp safe to install`, `What is MCP?`, `mcp or a2a`, `What is OAuth?` keep their previous answers.
+- **Versus the base commit on all 1,607 frozen queries:** top-1 regressions 0, top-3 regressions 0.
+- **Tests:** new `tests/knowledge-search-regressions.mjs` (wired into `npm test` and `npm run test:ai-v3`) covers the 10 ranking cases, the Gmail answers and learn-more, Gmail scopes, MCP authorization, 8 neighbouring queries that must not change, and the redirect. Run against the pre-fix lexicon it fails 9 checks, so it detects the problems.
+
+### 11.2 Legacy Hugging Face URL
+- `knowledge/hugging-face-transformers.html` is now a generated redirect stub: meta refresh, canonical link to `hugging-face.html`, and a script redirect that preserves query string and hash. Static GitHub Pages has no server redirects, so this is the strongest available option; it is not an HTTP 301, and search engines treat meta refresh + canonical as a soft permanent redirect.
+- It is declared in `REDIRECTS` in `knowledge/src/build.mjs`, which validates that the target exists and that the source is not a real page. **Survival proven:** deleting the file and rebuilding regenerates it. It is excluded from the sitemap and search index.
+- The old page content (an earlier "Transformers and the Hub" article) is no longer served at that URL.
+
+### 11.3 Verification
+- **EU AI Act:** consolidated Regulation (EU) 2024/1689 as of 2026-07-27 (EUR-Lex document 02024R1689-20260727) read: general application 2 Aug 2026; Chapter V (GPAI) and other listed chapters from 2 Aug 2025 (except Article 101); Annex III high-risk 2 Dec 2027; Annex I 2 Aug 2028; Articles 102-110 from 27 Jul 2026; new Article 5(1) (ba)/(bb) and 1a/1b from 2 Dec 2026. The page now states these. **Still unverified:** the Article 50(2) transitional period to 2 Dec 2026 (secondary commentary only; Article 50 text not read), Commission guidance, national measures.
+- **MCP Authorization** and **Gmail API Scopes** pages: re-read in the previous pass; no new differences found. Open: MCP discovery and scope-selection sub-pages not read; Gmail verification fees/thresholds/unverified-app rules not read; add-on scopes unclassified.
+- **OpenAI / Sora (rechecked at the end of this pass):** o1, o1-pro, o3-mini, o4-mini 23 Oct 2026; o3, o3-pro 11 Dec 2026; Videos API and sora-2 models 24 Sep 2026; no row is marked as shut down. OpenAI's Sora help article still uses future tense and has no shutdown notice (its cache may be stale). **Sora API outcome remains unconfirmed.**
+- External source URLs: curl from the sandbox is blocked (000/403), so link reachability could not be tested that way; pages for the key sources were retrieved through a scraping tool during verification. A final reachability sweep from a normal network is still owed.
+
+### 11.4 QA (final state)
+| Check | Result |
+|---|---|
+| `npm test` | exit 0 |
+| `tests/knowledge-ambiguity-gate.mjs` | 18/18 |
+| 1,607 frozen queries, lexical, base commit vs now | 10 answer changes, 10 fixes, 0 breaks; 0 top-1 and 0 top-3 regressions |
+| Rebuilt `semantic-index.json` (270 pages, 3,346 units, `pageIds` equal to the search index) | limited-mode check on 1,607 queries: 0 violations for solid/answer/tools/gap/need/learn; top-1/3/5 lexical 494/662/728, hybrid 656/835/894 |
+| Internal links | 273 HTML files, 6,713 relative links, 0 broken |
+| Browser (headless Chromium, 375px and 1280px) | 0 of 273 pages overflow at 375px; 0 console errors; 8 search queries return the expected guide; offline search works; legacy Hugging Face URL lands on `hugging-face.html` with query and hash kept |
+| Staging URL | **not available** (none is configured or documented; production returns 404 for the new pages, as expected before release). Not tested |
+
+### 11.5 Outstanding before production
+**Independent approvals still outstanding (none recorded):** (1) legal/regulatory reviewer for `eu-ai-act`; (2) security reviewer for `mcp-authorization`; (3) privacy/platform-policy reviewer for `gmail-api-scopes-and-verification`; (4) owner decision on the search-lexicon change (lexicon was stale; part-d generator not canonical) and the redirect approach; (5) release-day recheck of the OpenAI 23 Oct shutdowns and the Sora API; (6) staging deployment and browser QA on the deployed URL, including real mobile devices and Safari/Firefox; (7) external-link reachability sweep.
+
+**Staging readiness: ready.** Tests, gate, link, semantic and browser checks are green on the branch. **Production readiness: not yet**; it depends on the approvals above.

@@ -13490,7 +13490,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 990
+   "words": 1049
   },
   {
    "id": "nist-ai-rmf",
@@ -14559,11 +14559,11 @@
     "Is Microsoft Agent Framework production ready"
    ],
    "keywords": [
-    "microsoft agent framework",
+    "maf",
     "dotnet",
     "foundry",
-    "python (agent-framework)",
-    ".net (microsoft.agents.ai)",
+    "python sdk",
+    ".net sdk",
     "microsoft foundry",
     "azure openai",
     "openai",
@@ -14638,9 +14638,9 @@
     "migration",
     "autogen",
     "semantic kernel",
-    "assistantagent → agent",
-    "functiontool → @tool",
-    "team / graphflow → workflow",
+    "assistantagent mapping",
+    "functiontool mapping",
+    "graphflow mapping",
     "agentsession",
     "mcp tools",
     "opentelemetry"
@@ -14677,7 +14677,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 1149
+   "words": 1144
   },
   {
    "id": "mcp-authorization",
@@ -15159,13 +15159,12 @@
     "How many sink tokens does StreamingLLM keep"
    ],
    "keywords": [
-    "attention sink",
-    "streaming",
-    "kv cache eviction",
+    "sink tokens",
     "streamingllm",
+    "kv cache eviction",
     "rolling kv cache",
     "sink token (pre-training)",
-    "window attention"
+    "sliding window cache"
    ],
    "related": [
     "context-windows",
@@ -15203,7 +15202,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 924
+   "words": 925
   },
   {
    "id": "flashattention-3",

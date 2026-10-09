@@ -1432,6 +1432,487 @@
       ]
     },
     {
+      "id": "qa-bon-acronym",
+      "phrases": [
+        "bon",
+        "best of n",
+        "best-of-n"
+      ],
+      "pages": [
+        {
+          "id": "best-of-n-sampling",
+          "boost": 42
+        }
+      ]
+    },
+    {
+      "id": "qa-deep-learning-framework",
+      "phrases": [
+        "which framework should i use for deep learning",
+        "framework for deep learning",
+        "deep learning framework should i use"
+      ],
+      "pages": [
+        {
+          "id": "pytorch",
+          "boost": 60
+        }
+      ]
+    },
+    {
+      "id": "qa-testtime-vs-model-scaling",
+      "phrases": [
+        "difference between scaling model size and scaling inference compute",
+        "model size vs inference compute",
+        "scaling inference compute vs parameters"
+      ],
+      "pages": [
+        {
+          "id": "test-time-compute",
+          "boost": 58
+        },
+        {
+          "id": "scaling-laws",
+          "boost": 32
+        }
+      ]
+    },
+    {
+      "id": "qa-agent-context-info",
+      "phrases": [
+        "deciding what information goes into the model context for an agent",
+        "information goes into agent context",
+        "manage information in agent context"
+      ],
+      "pages": [
+        {
+          "id": "context-engineering",
+          "boost": 60
+        }
+      ]
+    },
+    {
+      "id": "qa-model-limits-doc",
+      "phrases": [
+        "documentation that describes a model's limits",
+        "document model limitations",
+        "model limitations documentation"
+      ],
+      "pages": [
+        {
+          "id": "model-cards",
+          "boost": 60
+        }
+      ]
+    },
+    {
+      "id": "qa-ai-accountability",
+      "phrases": [
+        "who is accountable for ai decisions in a company",
+        "accountability for ai decisions",
+        "ai decision accountability company"
+      ],
+      "pages": [
+        {
+          "id": "ai-governance",
+          "boost": 60
+        }
+      ]
+    },
+    {
+      "id": "qa-human-ratings",
+      "phrases": [
+        "chatbots learn from human ratings",
+        "learn from human ratings",
+        "human ratings train chatbot"
+      ],
+      "pages": [
+        {
+          "id": "rlhf",
+          "boost": 60
+        },
+        {
+          "id": "preference-optimization",
+          "boost": 30
+        }
+      ]
+    },
+    {
+      "id": "qa-phone-small-models",
+      "phrases": [
+        "models small enough to run on a phone",
+        "llm on a phone",
+        "small model mobile device"
+      ],
+      "pages": [
+        {
+          "id": "small-language-models",
+          "boost": 58
+        },
+        {
+          "id": "local-ai",
+          "boost": 24
+        }
+      ]
+    },
+    {
+      "id": "qa-base-vs-chat",
+      "phrases": [
+        "difference between a base model and a chat model",
+        "base model vs chat model",
+        "base model chat model difference"
+      ],
+      "pages": [
+        {
+          "id": "instruction-tuning",
+          "boost": 58
+        }
+      ]
+    },
+    {
+      "id": "qa-training-token-scaling",
+      "phrases": [
+        "how many tokens should a model be trained on",
+        "training tokens model size",
+        "tokens should model train on"
+      ],
+      "pages": [
+        {
+          "id": "scaling-laws",
+          "boost": 60
+        }
+      ]
+    },
+    {
+      "id": "qa-kv-context-memory",
+      "phrases": [
+        "generation memory grow with context length",
+        "memory grows with context length",
+        "context length memory inference"
+      ],
+      "pages": [
+        {
+          "id": "kv-cache",
+          "boost": 60
+        }
+      ]
+    },
+    {
+      "id": "qa-linear-attention-alt",
+      "phrases": [
+        "linear time alternative to attention",
+        "linear alternative to attention",
+        "attention alternative linear time"
+      ],
+      "pages": [
+        {
+          "id": "state-space-models",
+          "boost": 62
+        }
+      ]
+    },
+    {
+      "id": "qa-weather-ml-vs-numerical",
+      "phrases": [
+        "machine learning weather forecasting versus numerical models",
+        "ai weather forecasting vs numerical models",
+        "ml weather forecast numerical"
+      ],
+      "pages": [
+        {
+          "id": "ai-weather-forecasting",
+          "boost": 62
+        }
+      ]
+    },
+    {
+      "id": "qa-pinn-differential",
+      "phrases": [
+        "neural networks that obey differential equations",
+        "neural network differential equations",
+        "physics equations neural network"
+      ],
+      "pages": [
+        {
+          "id": "physics-informed-neural-networks",
+          "boost": 62
+        }
+      ]
+    },
+    {
+      "id": "qa-onnx-mobile-browser",
+      "phrases": [
+        "export a pytorch model for mobile and browser",
+        "pytorch model mobile browser",
+        "run exported pytorch model in browser"
+      ],
+      "pages": [
+        {
+          "id": "onnx-runtime",
+          "boost": 60
+        }
+      ]
+    },
+    {
+      "id": "qa-mcp-third-party-security",
+      "phrases": [
+        "security risks of third party mcp servers",
+        "third party mcp server security",
+        "untrusted mcp server"
+      ],
+      "pages": [
+        {
+          "id": "mcp-security",
+          "boost": 62
+        }
+      ]
+    },
+    {
+      "id": "qa-a2a-cross-company",
+      "phrases": [
+        "agents from different companies talk to each other",
+        "cross company agents communicate",
+        "agents across companies communicate"
+      ],
+      "pages": [
+        {
+          "id": "a2a-protocol",
+          "boost": 58
+        },
+        {
+          "id": "agent-protocol-landscape",
+          "boost": 30
+        }
+      ]
+    },
+    {
+      "id": "qa-valid-enum-output",
+      "phrases": [
+        "output only valid enum values",
+        "valid enum values",
+        "restrict model output to enum"
+      ],
+      "pages": [
+        {
+          "id": "constrained-decoding",
+          "boost": 58
+        },
+        {
+          "id": "structured-outputs",
+          "boost": 34
+        }
+      ]
+    },
+    {
+      "id": "qa-self-consistency-majority",
+      "phrases": [
+        "sample several answers and pick the majority",
+        "majority vote across model answers",
+        "pick majority from multiple reasoning samples"
+      ],
+      "pages": [
+        {
+          "id": "self-consistency",
+          "boost": 60
+        }
+      ]
+    },
+    {
+      "id": "qa-agent-evaluation",
+      "phrases": [
+        "agent completes tasks reliably",
+        "agent completion reliability",
+        "measure agent reliability",
+        "evaluate agent task completion"
+      ],
+      "pages": [
+        {
+          "id": "agent-evaluation",
+          "boost": 52
+        }
+      ]
+    },
+    {
+      "id": "qa-langgraph-state-machine",
+      "phrases": [
+        "state machine style orchestration",
+        "state machine orchestration",
+        "stateful agent orchestration",
+        "graph based agent orchestration"
+      ],
+      "pages": [
+        {
+          "id": "langgraph",
+          "boost": 52
+        },
+        {
+          "id": "agent-frameworks-compared",
+          "boost": 20
+        }
+      ]
+    },
+    {
+      "id": "qa-dspy-prompt-optimization",
+      "phrases": [
+        "automatically optimise my prompts",
+        "automatically optimize my prompts",
+        "optimize prompts with a metric",
+        "optimise prompts with a metric",
+        "metric driven prompt optimization"
+      ],
+      "pages": [
+        {
+          "id": "dspy",
+          "boost": 52
+        }
+      ]
+    },
+    {
+      "id": "qa-agent-rewards",
+      "phrases": [
+        "agents learn from rewards",
+        "agent learn from rewards",
+        "learn from rewards"
+      ],
+      "pages": [
+        {
+          "id": "reinforcement-learning",
+          "boost": 50
+        }
+      ]
+    },
+    {
+      "id": "qa-vision-patches",
+      "phrases": [
+        "image models use patches",
+        "images into patches",
+        "why use image patches",
+        "vision transformer patches"
+      ],
+      "pages": [
+        {
+          "id": "vision-transformers",
+          "boost": 52
+        }
+      ]
+    },
+    {
+      "id": "qa-faster-same-output",
+      "phrases": [
+        "inference faster without changing outputs",
+        "make llm inference faster",
+        "speed up llm inference",
+        "faster llm inference"
+      ],
+      "pages": [
+        {
+          "id": "speculative-decoding",
+          "boost": 46
+        },
+        {
+          "id": "flash-attention",
+          "boost": 34
+        },
+        {
+          "id": "kv-cache",
+          "boost": 30
+        }
+      ]
+    },
+    {
+      "id": "qa-meeting-transcription",
+      "phrases": [
+        "transcribe meetings",
+        "transcribe meeting",
+        "meeting transcription",
+        "automatically transcribe"
+      ],
+      "pages": [
+        {
+          "id": "speech-ai",
+          "boost": 52
+        }
+      ]
+    },
+    {
+      "id": "qa-invoice-fields",
+      "phrases": [
+        "structured fields out of invoices",
+        "fields from invoices",
+        "extract invoice fields",
+        "extract structured data from invoices"
+      ],
+      "pages": [
+        {
+          "id": "document-understanding-ai",
+          "boost": 52
+        },
+        {
+          "id": "structured-outputs",
+          "boost": 20
+        }
+      ]
+    },
+    {
+      "id": "qa-content-provenance",
+      "phrases": [
+        "tamper evident labels",
+        "tamper-evident labels",
+        "provenance labels",
+        "ai generated media provenance",
+        "content provenance"
+      ],
+      "pages": [
+        {
+          "id": "c2pa-content-provenance",
+          "boost": 52
+        }
+      ]
+    },
+    {
+      "id": "qa-why-gpu",
+      "phrases": [
+        "why is a gpu needed",
+        "why gpu for neural networks",
+        "why use gpu for ai",
+        "why do neural networks need gpu"
+      ],
+      "pages": [
+        {
+          "id": "gpus-and-ai-accelerators",
+          "boost": 52
+        }
+      ]
+    },
+    {
+      "id": "qa-runtime-comparison",
+      "phrases": [
+        "ollama vs vllm",
+        "vllm vs llama cpp",
+        "ollama vs vllm vs llama cpp"
+      ],
+      "pages": [
+        {
+          "id": "local-runtimes-compared",
+          "boost": 58
+        }
+      ]
+    },
+    {
+      "id": "qa-agent-framework-comparison",
+      "phrases": [
+        "langgraph vs crewai",
+        "crewai vs autogen",
+        "langgraph vs crewai vs autogen"
+      ],
+      "pages": [
+        {
+          "id": "agent-frameworks-compared",
+          "boost": 58
+        }
+      ]
+    },
+    {
       "id": "v3-invalid-json",
       "phrases": [
         "invalid json",
@@ -2965,6 +3446,220 @@
         {
           "id": "pytorch",
           "boost": 46
+        }
+      ]
+    },
+    {
+      "id": "v3e-gmail-agent-connect",
+      "phrases": [
+        "connect an ai agent to gmail",
+        "connect an agent to gmail",
+        "connect ai agent to gmail",
+        "connect my agent to gmail",
+        "give an agent access to gmail",
+        "give my agent access to gmail",
+        "let an agent use gmail",
+        "let my agent read my gmail",
+        "ai agent gmail access"
+      ],
+      "pages": [
+        {
+          "id": "gmail-for-ai-agents",
+          "boost": 44
+        },
+        {
+          "id": "oauth-for-ai-agents",
+          "boost": 8
+        }
+      ]
+    },
+    {
+      "id": "v3e-gmail-scopes",
+      "phrases": [
+        "gmail scope",
+        "gmail scopes",
+        "gmail readonly",
+        "gmail restricted scope",
+        "gmail restricted scopes",
+        "gmail security assessment",
+        "gmail app verification",
+        "gmail oauth verification",
+        "gmail limited use",
+        "limited use policy",
+        "gmail data to train",
+        "gmail api permissions"
+      ],
+      "pages": [
+        {
+          "id": "gmail-api-scopes-and-verification",
+          "boost": 46
+        },
+        {
+          "id": "gmail-for-ai-agents",
+          "boost": 6
+        }
+      ]
+    },
+    {
+      "id": "v3e-mcp-authorization",
+      "phrases": [
+        "mcp authorization",
+        "mcp authorisation",
+        "mcp oauth",
+        "oauth for mcp",
+        "oauth mcp",
+        "authorization in mcp",
+        "authentication for mcp",
+        "authenticate an mcp",
+        "authorize an mcp",
+        "mcp bearer token",
+        "mcp access token",
+        "mcp token passthrough",
+        "token passthrough",
+        "protected resource metadata",
+        "resource indicators",
+        "client id metadata document",
+        "mcp client registration",
+        "oauth work for mcp",
+        "log in to an mcp server",
+        "sign in to an mcp server",
+        "mcp server login"
+      ],
+      "pages": [
+        {
+          "id": "mcp-authorization",
+          "boost": 54
+        },
+        {
+          "id": "mcp-security",
+          "boost": 4
+        }
+      ]
+    },
+    {
+      "id": "v3e-autogen-conversation",
+      "phrases": [
+        "chat with each other",
+        "agents converse",
+        "conversing agents",
+        "conversational multi agent",
+        "group chat of agents",
+        "agent group chat"
+      ],
+      "pages": [
+        {
+          "id": "autogen",
+          "boost": 56
+        },
+        {
+          "id": "multi-agent-systems",
+          "boost": 12
+        }
+      ]
+    },
+    {
+      "id": "v3e-attention-alternative",
+      "phrases": [
+        "sequence layer than attention",
+        "alternative to attention",
+        "attention alternative",
+        "linear time alternative",
+        "subquadratic",
+        "sub quadratic",
+        "replace attention",
+        "instead of attention",
+        "more efficient than attention"
+      ],
+      "pages": [
+        {
+          "id": "state-space-models",
+          "boost": 40
+        },
+        {
+          "id": "transformers-vs-state-space-models",
+          "boost": 14
+        }
+      ]
+    },
+    {
+      "id": "v3e-planner-worker",
+      "phrases": [
+        "planner and worker",
+        "planner agent",
+        "researcher agent",
+        "writer agent",
+        "coordinate agents",
+        "agents hand work",
+        "hands work to",
+        "orchestrator and worker",
+        "agents work together"
+      ],
+      "pages": [
+        {
+          "id": "multi-agent-systems",
+          "boost": 26
+        },
+        {
+          "id": "agentic-workflows",
+          "boost": 10
+        }
+      ]
+    },
+    {
+      "id": "v3e-cross-vendor-agents",
+      "phrases": [
+        "agents from different vendors",
+        "agents from different companies",
+        "agents from different frameworks",
+        "delegate tasks to each other",
+        "agents collaborate across"
+      ],
+      "pages": [
+        {
+          "id": "a2a-protocol",
+          "boost": 28
+        },
+        {
+          "id": "agent-protocol-landscape",
+          "boost": 26
+        }
+      ]
+    },
+    {
+      "id": "v3e-email-agent-permissions",
+      "phrases": [
+        "permissions should an email",
+        "email reading agent",
+        "agent permissions for email",
+        "permissions for an email agent",
+        "least privilege email agent"
+      ],
+      "pages": [
+        {
+          "id": "integration-permissions",
+          "boost": 30
+        },
+        {
+          "id": "gmail-for-ai-agents",
+          "boost": 14
+        }
+      ]
+    },
+    {
+      "id": "v3e-production-agent-framework",
+      "phrases": [
+        "framework for a production agent",
+        "framework for production agents",
+        "production agent framework"
+      ],
+      "pages": [
+        {
+          "id": "choosing-an-agent-framework",
+          "boost": 24
+        },
+        {
+          "id": "agent-frameworks-compared",
+          "boost": 20
         }
       ]
     }

@@ -127,7 +127,7 @@ E('attention-sinks', 'Attention Sinks and StreamingLLM', 'technique', A, {
   questions: ['What is an attention sink?', 'What is StreamingLLM?', 'Why does sliding window attention break when the first tokens are dropped?', 'Does StreamingLLM give infinite context?', 'How many sink tokens does StreamingLLM keep?'],
   pre: ['transformers', 'kv-cache'], rel: ['context-windows', 'positional-encoding', 'flash-attention', 'flashattention-3', 'state-space-models', 'vllm', 'streaming-ai-responses', 'quantization', 'large-language-models', 'mechanistic-interpretability'],
   vs: [['context-windows', 'A larger window increases how much the model can attend to; attention sinks keep a bounded cache stable.'], ['kv-cache', 'The KV cache is the storage; attention sinks are a policy for which entries to keep.'], ['state-space-models', 'SSMs change the architecture to avoid growing caches; sinks keep standard attention workable with a bounded cache.']],
-  tech: ['StreamingLLM', 'rolling KV cache', 'sink token (pre-training)', 'window attention'],
+  tech: ['StreamingLLM', 'rolling KV cache', 'sink token (pre-training)', 'sliding window cache'],
   patterns: ['Keep the first N tokens (sinks) plus the last W tokens in the cache; evict the middle.', 'Pre-train or fine-tune with a dedicated sink token if you control training.', 'Pair with summaries or retrieval when old facts must stay reachable ([[rag]]).'],
   fails: ['Evicting the first tokens in a sliding window and seeing perplexity explode.', 'Assuming a model can answer questions about evicted text.', 'Reporting "4M tokens" as the usable context for tasks that need long-range recall.', 'Mixing sink handling with position schemes that the implementation does not support.'],
   fix: [['Output degrades after the cache fills', 'Keep the initial tokens in the cache rather than evicting oldest-first.'], ['Model forgets earlier facts', 'Expected: use retrieval, summaries or a longer window.'], ['Library flag has no effect', 'Check the model architecture and library version support the sink-aware cache.']],
@@ -149,7 +149,7 @@ E('attention-sinks', 'Attention Sinks and StreamingLLM', 'technique', A, {
     ],
     unverified: ['The statement that evicted tokens are unavailable and that the method does not extend memory is an inference from the method, not a quotation (the repository FAQ was not read).', 'Whether specific serving libraries implement sink-aware caches today.', 'Why sinks form (explanations in later literature were not reviewed).']
   },
-  keywords: ['attention sink', 'streaming', 'kv cache eviction']
+  keywords: ['sink tokens', 'streamingllm', 'kv cache eviction']
 }),
 
 E('flashattention-3', 'FlashAttention-3 (and FlashAttention-4)', 'technique', A, {

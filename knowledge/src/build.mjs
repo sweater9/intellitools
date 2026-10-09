@@ -173,13 +173,29 @@ if (new Set(pages.map(p => p.slug)).size !== pages.length) errors.push('duplicat
 for (const pa of paths) for (const s of pa.steps) if (!bySlug.has(s)) errors.push('path ' + pa.title + ' missing ' + s);
 
 for (const p of pages) fs.writeFileSync(path.join(OUT, p.slug + '.html'), articlePage(p));
+// Legacy URLs that must keep working. Static hosting (GitHub Pages) has no server redirects, so each old URL is a small
+// stub: meta refresh + canonical + script redirect. Add new entries here, never hand-edit the generated stub.
+const REDIRECTS = { 'hugging-face-transformers': 'hugging-face' };
+for (const [from, to] of Object.entries(REDIRECTS)) {
+  if (!pages.some(p => p.slug === to)) errors.push('redirect target does not exist: ' + from + ' -> ' + to);
+  if (pages.some(p => p.slug === from)) errors.push('redirect source collides with a real page: ' + from);
+  const target = to + '.html', abs = 'https://intellitools.online/knowledge/' + target;
+  fs.writeFileSync(path.join(OUT, from + '.html'), `<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Moved: ${esc(titleOfSlug(to))} | IntelliTools Knowledge</title>
+<meta http-equiv="refresh" content="0; url=${target}"><link rel="canonical" href="${abs}">
+<script>location.replace(${JSON.stringify(target)} + location.search + location.hash);</script></head>
+<body><p>This guide moved to <a href="${target}">${esc(titleOfSlug(to))}</a>.</p></body></html>
+`);
+}
+function titleOfSlug(slug) { return (pages.find(p => p.slug === slug) || { title: slug }).title; }
 fs.writeFileSync(path.join(OUT, 'glossary.html'), glossaryPage());
 fs.writeFileSync(path.join(OUT, 'index.html'), indexPage());
 
 
 function mergeLexicon() {
   const dir = path.join(OUT, 'src');
-  const parts = ['lexicon-part-a.json', 'lexicon-part-b.json', 'lexicon-part-c.json', 'lexicon-part-d.json'].map(name => JSON.parse(fs.readFileSync(path.join(dir, name), 'utf8')));
+  const parts = ['lexicon-part-a.json', 'lexicon-part-b.json', 'lexicon-part-c.json', 'lexicon-part-d.json', 'lexicon-part-e.json'].map(name => JSON.parse(fs.readFileSync(path.join(dir, name), 'utf8')));
   const arrayKeys = new Set(['stopwords', 'intents', 'concepts', 'coverageGaps', 'tools', 'queryTechnologies']);
   const objectKeys = new Set(['synonyms', 'pageTechnologies']);
   const merged = {};

@@ -14533,7 +14533,7 @@
    "page_kind": "concept",
    "url": "knowledge/eu-ai-act.html",
    "plain_english_definition": "The EU AI Act sorts AI uses by risk. A few uses are banned outright, risky ones (like AI used in hiring or credit) must meet strict requirements, some need clear disclosure (like chatbots and deepfakes), and the big general-purpose models have their own duties.",
-   "technical_definition": "Regulation (EU) 2024/1689 entered into force in 2024 with phased application. As commonly summarised: prohibitions and AI-literacy duties applied first; obligations for general-purpose AI models followed; most remaining provisions, including high-risk system requirements in the Act's annexed use cases, apply later, with a longer transition for AI embedded in products covered by existing safety legislation. Roles include provider, deployer, importer and distributor, each with different duties; penalties scale with turnover. The timetable has already been amended: Regulation (EU) 2026/1744 (the Digital Omnibus on AI), published in the Official Journal on 24 July 2026 and in force from 27 July 2026, moved high-risk obligations for Annex III systems to 2 December 2027 and for AI in products covered by Annex I to 2 August 2028, and added new Article 5 prohibitions that apply from 2 December 2026 (point (ba): AI systems that generate or manipulate realistic intimate or sexually explicit images, video or audio of an identifiable person without explicit consent; point (bb): AI systems that generate or manipulate child sexual abuse material within the meaning of Directive 2011/93/EU; new paragraphs 1a and 1b limit the prohibition to systems whose intended purpose or foreseeable, unsafeguarded outcome is that generation, and to deployers who use a system for that purpose); the original prohibitions have applied since 2 February 2025. Implementing acts, harmonised standards, guidance and corrigenda can still change the practical picture, so exact dates and scope must be checked against the consolidated Official Journal text and current Commission guidance.",
+   "technical_definition": "Regulation (EU) 2024/1689 entered into force in 2024 with phased application. As commonly summarised: prohibitions and AI-literacy duties applied first; obligations for general-purpose AI models followed; most remaining provisions, including high-risk system requirements in the Act's annexed use cases, apply later, with a longer transition for AI embedded in products covered by existing safety legislation. Roles include provider, deployer, importer and distributor, each with different duties; penalties scale with turnover. The timetable has already been amended: Regulation (EU) 2026/1744 (the Digital Omnibus on AI), published in the Official Journal on 24 July 2026 and in force from 27 July 2026, moved high-risk obligations for Annex III systems to 2 December 2027 and for AI in products covered by Annex I to 2 August 2028, and added new Article 5 prohibitions that apply from 2 December 2026 (point (ba): AI systems that generate or manipulate realistic intimate or sexually explicit images, video or audio of an identifiable person without explicit consent; point (bb): AI systems that generate or manipulate child sexual abuse material within the meaning of Directive 2011/93/EU; new paragraphs 1a and 1b limit the prohibition to systems whose intended purpose or foreseeable, unsafeguarded outcome is that generation, and to deployers who use a system for that purpose); the original prohibitions have applied since 2 February 2025, and Chapter V (general-purpose AI models) has applied since 2 August 2025 (Article 113 as consolidated on 2026-07-27). Implementing acts, harmonised standards, guidance and corrigenda can still change the practical picture, so exact dates and scope must be checked against the consolidated Official Journal text and current Commission guidance.",
    "aliases": [
     "EU AI Act",
     "AI Act",
@@ -14642,6 +14642,7 @@
       "Regulation (EU) 2026/1744 of 8 July 2026 amends Regulation (EU) 2024/1689 (and (EU) 2018/1139 and (EU) 2023/1230); published as OJ L, 2026/1744 on 24.7.2026; enters into force on the third day after publication (EUR-Lex records first entry into force as 2026-07-27).",
       "Amended Article 113: Chapters I and II apply from 2 February 2025, except Article 5(1) first subparagraph points (ba) and (bb) and Article 5(1a) and (1b), which apply from 2 December 2026.",
       "High-risk systems under Article 6(2) and Annex III apply from 2 December 2027; systems under Article 6(1) and Annex I apply from 2 August 2028.",
+      "Consolidated Article 113 (document 02024R1689-20260727): general application 2 August 2026; Chapter III Section 4, Chapter V, Chapter VII, Chapter XII and Article 78 from 2 August 2025 (except Article 101); Articles 102 to 110 from 27 July 2026.",
       "Article 5(1) points (ba) and (bb) and paragraphs 1a and 1b, as inserted by the amending regulation: non-consensual intimate-imagery generation and child-sexual-abuse-material generation, with the stated purpose/foreseeability limits (re-read on 2026-10-09)."
      ],
      "sources": [
@@ -14656,7 +14657,7 @@
      ],
      "not_independently_verified": [
       "Article 5 paragraph 1a/1b details beyond the summary given (re-read the Official Journal text before any legal use).",
-      "Dates for general-purpose AI model obligations and Article 50 transparency duties after the amendment (not read in the primary text).",
+      "The Article 50(2) transitional period to 2 December 2026 (reported by secondary commentary only; the Article 50 text itself was not read).",
       "The consolidated text of Regulation (EU) 2024/1689 as amended.",
       "Implementing acts, guidance and national measures.",
       "Anything about how the law applies to a particular product; this is orientation, not legal advice."
@@ -16640,8 +16641,8 @@
     }
    ],
    "technologies_frameworks": [
-    "Python (agent-framework)",
-    ".NET (Microsoft.Agents.AI)",
+    "Python SDK",
+    ".NET SDK",
     "Microsoft Foundry",
     "Azure OpenAI",
     "OpenAI",
@@ -16826,9 +16827,9 @@
     }
    ],
    "technologies_frameworks": [
-    "AssistantAgent → Agent",
-    "FunctionTool → @tool",
-    "Team / GraphFlow → Workflow",
+    "AssistantAgent mapping",
+    "FunctionTool mapping",
+    "GraphFlow mapping",
     "AgentSession",
     "MCP tools",
     "OpenTelemetry"
@@ -18095,7 +18096,7 @@
     "StreamingLLM",
     "rolling KV cache",
     "sink token (pre-training)",
-    "window attention"
+    "sliding window cache"
    ],
    "implementation_patterns": [
     "Keep the first N tokens (sinks) plus the last W tokens in the cache; evict the middle.",
