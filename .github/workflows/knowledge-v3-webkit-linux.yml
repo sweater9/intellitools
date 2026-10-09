@@ -1,0 +1,53 @@
+name: Knowledge V3 WebKit Independent QA
+on:
+  push:
+    branches: [qa/knowledge-v3-macos-browser]
+    paths:
+      - .github/workflows/knowledge-v3-webkit-linux.yml
+      - qa/knowledge-v3-linux/**
+permissions:
+  contents: read
+jobs:
+  webkit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        target: [local, staging]
+        width: [1280, 375]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: harness
+      - uses: actions/checkout@v4
+        with:
+          ref: b2efe6f32b47743e22362284f4a30169ae0a12bd
+          path: app
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install WebKit with system dependencies
+        working-directory: harness
+        run: |
+          npm install --no-save --package-lock=false playwright@1.62.1
+          npx playwright install --with-deps webkit
+      - name: Test exact release
+        shell: bash
+        env:
+          QA_ROOT: ${{ github.workspace }}/app
+          QA_OUT: ${{ github.workspace }}/browser-results
+          QA_ENGINE: webkit
+          QA_TARGET: ${{ matrix.target }}
+          QA_WIDTH: ${{ matrix.width }}
+        run: |
+          mkdir -p "$QA_OUT"
+          git -C app rev-parse HEAD | tee "$QA_OUT/commit.txt"
+          test "$(git -C app rev-parse HEAD)" = b2efe6f32b47743e22362284f4a30169ae0a12bd
+          timeout 420s node harness/qa/knowledge-v3-linux/release-browser.cjs 2>&1 | tee "$QA_OUT/browser-run.log"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: webkit-${{ matrix.target }}-${{ matrix.width }}
+          path: browser-results/
+          retention-days: 14
