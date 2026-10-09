@@ -7,7 +7,7 @@ Labels are computed from the rules in the test file header, not assigned by hand
 Positive queries: 328 · pass 293 · weak 25 · miss 10
   - tuning set (lexicon part D was authored after seeing its baseline failures): 258 · pass 251 · weak 7 · miss 0
   - held-out set (written before part D, not used while tuning; same author, so not a fully independent estimate): 70 · pass 42 · weak 18 · miss 10
-Negative (out-of-scope / ambiguous-acronym) queries: 30 · pass 28 · false positives 2
+Negative (out-of-scope / ambiguous-acronym) queries: 30 · pass 29 · false positives 1
 Positive queries with a false positive (confident wrong page or unexpected tool): 17
 
 | Category | Queries | Pass | Weak | Miss | False positives |
@@ -19,14 +19,14 @@ Positive queries with a false positive (confident wrong page or unexpected tool)
 | architecture | 24 | 24 | 0 | 0 | 0 |
 | what-should-i-use | 18 | 17 | 1 | 0 | 1 |
 | how-to | 24 | 24 | 0 | 0 | 0 |
-| negative | 30 | 28 | 0 | 0 | 2 |
+| negative | 30 | 29 | 0 | 0 | 1 |
 | holdout | 70 | 42 | 18 | 10 | 11 |
 
 ## Misses
-- [holdout] measuring whether an agent completes tasks reliably — expected agent-evaluation; top5: ai-agent-vs-chatbot, agent-protocol-landscape, multi-agent-systems, choosing-an-agent-framework, agent-frameworks-compared
-- [holdout] state machine style orchestration for LLM agents — expected langgraph; top5: agent-frameworks-compared, openai-agents-sdk, ai-agents, multi-agent-systems, llm-as-a-judge — FP: confident wrong page: large-language-models
+- [holdout] measuring whether an agent completes tasks reliably — expected agent-evaluation; top5: ai-agent-vs-chatbot, migrate-to-microsoft-agent-framework, agent-protocol-landscape, microsoft-agent-framework, multi-agent-systems
+- [holdout] state machine style orchestration for LLM agents — expected langgraph; top5: agent-frameworks-compared, microsoft-agent-framework, openai-agents-sdk, ai-agents, multi-agent-systems — FP: confident wrong page: large-language-models
 - [holdout] automatically optimise my prompts with a metric — expected dspy; top5: prompt-engineering, system-prompts, prompt-caching, prompt-injection, common-prompting-mistakes
-- [holdout] how do agents learn from rewards — expected reinforcement-learning; top5: openai-agents-sdk, multi-agent-systems, agent-protocol-landscape, agent-frameworks-compared, gmail-for-ai-agents
+- [holdout] how do agents learn from rewards — expected reinforcement-learning; top5: microsoft-agent-framework, openai-agents-sdk, multi-agent-systems, migrate-to-microsoft-agent-framework, agent-protocol-landscape
 - [holdout] why do image models use patches — expected vision-transformers; top5: reasoning-models, reasoning-vs-standard-models, small-language-models, diffusion-models, world-models
 - [holdout] how to make LLM inference faster without changing outputs — expected speculative-decoding | flash-attention | kv-cache; top5: large-language-models, model-serving-and-inference, llm-observability, llm-as-a-judge, structured-outputs — FP: confident wrong page: large-language-models
 - [holdout] transcribe meetings automatically — expected speech-ai; top5: best-of-n-sampling, cicd, dspy
@@ -40,18 +40,18 @@ Positive queries with a false positive (confident wrong page or unexpected tool)
 - [acronym] BoN — expected best-of-n-sampling; solid: no; top5: best-of-n-sampling
 - [comparison] Is DPO reinforcement learning? — expected dpo | preference-optimization | dpo-vs-rlhf; solid: reinforcement-learning; top5: reinforcement-learning, dpo, dpo-vs-rlhf, preference-optimization, reinforcement-learning-for-reasoning — FP: confident wrong page: reinforcement-learning
 - [comparison] Ollama vs vLLM vs llama.cpp — expected local-runtimes-compared; solid: llama-cpp; top5: llama-cpp, local-runtimes-compared, ollama, vllm, local-llm-runtimes — FP: confident wrong page: llama-cpp
-- [comparison] LangGraph vs CrewAI vs AutoGen — expected agent-frameworks-compared; solid: crewai; top5: crewai, agent-frameworks-compared, langgraph, autogen, choosing-an-agent-framework — FP: confident wrong page: crewai
-- [what-should-i-use] Which framework should I use for deep learning? — expected pytorch; solid: deep-learning; top5: deep-learning, pytorch, deep-q-networks, choosing-an-agent-framework, reinforcement-learning — FP: confident wrong page: deep-learning
+- [comparison] LangGraph vs CrewAI vs AutoGen — expected agent-frameworks-compared; solid: crewai; top5: crewai, agent-frameworks-compared, langgraph, autogen, migrate-to-microsoft-agent-framework — FP: confident wrong page: crewai
+- [what-should-i-use] Which framework should I use for deep learning? — expected pytorch; solid: deep-learning; top5: deep-learning, pytorch, deep-q-networks, choosing-an-agent-framework, microsoft-agent-framework — FP: confident wrong page: deep-learning
 - [holdout] difference between scaling model size and scaling inference compute — expected test-time-compute | scaling-laws; solid: no; top5: test-time-compute, model-serving-and-inference, scaling-laws, model-apis, model-cards
 - [holdout] sample several answers and pick the majority — expected self-consistency; solid: best-of-n-sampling; top5: best-of-n-sampling, how-to-reduce-hallucinations, self-consistency, common-prompting-mistakes, ai-hallucinations — FP: confident wrong page: best-of-n-sampling
 - [holdout] make my model output only valid enum values — expected constrained-decoding | structured-outputs; solid: no; top5: model-cards, model-apis, encoder-decoder-vs-decoder-only, structured-outputs, model-drift-and-monitoring
-- [holdout] how do agents from different companies talk to each other — expected a2a-protocol | agent-protocol-landscape; solid: no; top5: openai-agents-sdk, multi-agent-systems, agent-protocol-landscape, agent-frameworks-compared, gmail-for-ai-agents
-- [holdout] security risks of third party MCP servers — expected mcp-security; solid: mcp-servers-and-clients; top5: mcp-security, mcp-servers-and-clients, mcp, a2a-vs-mcp, ai-privacy-and-security — FP: confident wrong page: mcp-servers-and-clients
+- [holdout] how do agents from different companies talk to each other — expected a2a-protocol | agent-protocol-landscape; solid: no; top5: openai-agents-sdk, microsoft-agent-framework, multi-agent-systems, migrate-to-microsoft-agent-framework, agent-protocol-landscape
+- [holdout] security risks of third party MCP servers — expected mcp-security; solid: mcp-servers-and-clients; top5: mcp-security, mcp-servers-and-clients, mcp, mcp-authorization, a2a-vs-mcp — FP: confident wrong page: mcp-servers-and-clients
 - [holdout] export a PyTorch model for mobile and browser — expected onnx-runtime; solid: pytorch; top5: pytorch, model-cards, model-apis, model-drift-and-monitoring, model-serving-and-inference — FP: confident wrong page: pytorch
 - [holdout] predicting protein structure from sequence — expected alphafold; solid: no; top5: alphafold, recurrent-neural-networks, unsupervised-learning, ai-drug-discovery, state-space-models
 - [holdout] neural networks that obey differential equations — expected physics-informed-neural-networks; solid: neural-networks; top5: neural-networks, physics-informed-neural-networks, graph-neural-networks, convolutional-neural-networks, recurrent-neural-networks — FP: confident wrong page: neural-networks
 - [holdout] machine learning weather forecasting versus numerical models — expected ai-weather-forecasting; solid: what-is-ai; top5: ai-weather-forecasting, reasoning-models, deep-learning, reasoning-vs-standard-models, small-language-models — FP: confident wrong page: what-is-ai
-- [holdout] linear time alternative to attention — expected state-space-models; solid: transformers; top5: transformers, state-space-models, test-time-compute, flash-attention, kv-cache — FP: confident wrong page: transformers
+- [holdout] linear time alternative to attention — expected state-space-models; solid: transformers; top5: transformers, attention-sinks, state-space-models, test-time-compute, flash-attention — FP: confident wrong page: transformers
 - [holdout] why does generation memory grow with context length — expected kv-cache; solid: context-windows; top5: context-windows, context-engineering, agent-memory, kv-cache, video-generation-models — FP: confident wrong page: context-windows
 - [holdout] how many tokens should a model be trained on — expected scaling-laws; solid: tokens; top5: tokens, model-apis, model-cards, scaling-laws, model-serving-and-inference — FP: confident wrong page: tokens
 - [holdout] what is the difference between a base model and a chat model — expected instruction-tuning; solid: no; top5: instruction-tuning, model-apis, model-cards, model-drift-and-monitoring, model-serving-and-inference
@@ -59,7 +59,7 @@ Positive queries with a false positive (confident wrong page or unexpected tool)
 - [holdout] how do chatbots learn from human ratings — expected rlhf | preference-optimization; solid: no; top5: human-preference-evaluation, rlhf, preference-optimization, ai-evaluation, langgraph
 - [holdout] who is accountable for AI decisions in a company — expected ai-governance; solid: no; top5: ai-governance, eu-ai-act, nist-ai-rmf, embodied-ai, local-ai
 - [holdout] documentation that describes a model's limits — expected model-cards; solid: no; top5: model-cards, reasoning-models, reasoning-vs-standard-models, small-language-models, world-models
-- [holdout] deciding what information goes into the model context for an agent — expected context-engineering; solid: no; top5: context-engineering, ai-agent-vs-chatbot, multi-agent-systems, agent-protocol-landscape, model-cards
+- [holdout] deciding what information goes into the model context for an agent — expected context-engineering; solid: no; top5: context-engineering, ai-agent-vs-chatbot, multi-agent-systems, migrate-to-microsoft-agent-framework, agent-protocol-landscape
 
 ## False positives
 - [acronym] CNN deep learning — confident wrong page: deep-learning
@@ -68,7 +68,6 @@ Positive queries with a false positive (confident wrong page or unexpected tool)
 - [comparison] Ollama vs vLLM vs llama.cpp — confident wrong page: llama-cpp
 - [comparison] LangGraph vs CrewAI vs AutoGen — confident wrong page: crewai
 - [what-should-i-use] Which framework should I use for deep learning? — confident wrong page: deep-learning
-- [negative] transformer toy robots for kids — solid answer: transformers
 - [negative] ollama llama animal facts — solid answer: ollama
 - [holdout] sample several answers and pick the majority — confident wrong page: best-of-n-sampling
 - [holdout] security risks of third party MCP servers — confident wrong page: mcp-servers-and-clients
@@ -86,7 +85,7 @@ Positive queries with a false positive (confident wrong page or unexpected tool)
 - does DPO stand for data protection officer → gap rule `v3-not-ai-context` fired (solid: no)
 - the PRM job role in project management → gap rule `v3-not-ai-context` fired (solid: no)
 - Mamba snake venom → gap rule `v3-not-ai-context` fired (solid: no)
-- transformer toy robots for kids → gap rule `v3-not-ai-context` fired (solid: transformers)
+- transformer toy robots for kids → gap rule `v3-not-ai-context` fired (solid: no)
 - ollama llama animal facts → gap rule `v3-not-ai-context` fired (solid: ollama)
 
 ## All results
@@ -357,7 +356,7 @@ Positive queries with a false positive (confident wrong page or unexpected tool)
 | pass | negative | bitcoin price today | — | 0 | no | — |
 | pass | negative | how to fix a leaking tap | common-prompting-mistakes | 8 | no | — |
 | pass | negative | cheap flights to Lisbon | — | 0 | no | — |
-| pass | negative | NVIDIA stock price | gpus-and-ai-accelerators | 4 | no | — |
+| pass | negative | NVIDIA stock price | nvidia-cosmos | 24 | no | — |
 | pass | negative | which AI model is best today | ai-governance | 54 | no | — |
 | pass | negative | latest ChatGPT release date | large-language-models | 57 | no | — |
 | pass | negative | how many parameters does GPT-6 have | large-language-models | 69 | no | — |
@@ -373,7 +372,7 @@ Positive queries with a false positive (confident wrong page or unexpected tool)
 | pass | negative | does DPO stand for data protection officer | dpo | 39 | no | — |
 | pass | negative | the PRM job role in project management | process-reward-model | 23 | no | — |
 | pass | negative | Mamba snake venom | state-space-models | 31 | no | — |
-| fail | negative | transformer toy robots for kids | transformers | 50 | yes | — |
+| pass | negative | transformer toy robots for kids | transformers | 50 | no | — |
 | pass | negative | diffusion of innovation theory in marketing | diffusion-models | 34 | no | — |
 | fail | negative | ollama llama animal facts | ollama | 94 | yes | — |
 | pass | negative | kubernetes ingress controller setup | mcp-servers-and-clients | 6 | no | — |
@@ -418,7 +417,7 @@ Positive queries with a false positive (confident wrong page or unexpected tool)
 | pass | holdout | how do neural networks learn weights | neural-networks | 107 | yes | — |
 | pass | holdout | training accuracy high but test accuracy low | overfitting-and-regularization | 51 | yes | — |
 | pass | holdout | reuse a pretrained model for my small dataset | transfer-learning | 43 | yes | — |
-| miss | holdout | how do agents learn from rewards | openai-agents-sdk | 36 | no | — |
+| miss | holdout | how do agents learn from rewards | microsoft-agent-framework | 37 | no | — |
 | miss | holdout | why do image models use patches | reasoning-models | 40 | no | — |
 | pass | holdout | models with many experts but few active parameters | mixture-of-experts | 91 | yes | — |
 | weak | holdout | linear time alternative to attention | transformers | 34 | yes | — |

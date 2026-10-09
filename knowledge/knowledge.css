@@ -10,6 +10,7 @@
 .kn-article h2{font-size:26px;letter-spacing:-.03em;margin:38px 0 10px;scroll-margin-top:90px}
 .kn-article section:first-child h2{margin-top:0}
 .kn-article p,.kn-article li{font-size:16.5px;line-height:1.7}
+.kn-article p,.kn-article li{overflow-wrap:anywhere}
 .kn-article ul,.kn-article ol{padding-left:22px}.kn-article li{margin:5px 0}
 .kn-article code{background:var(--surface-2);padding:1px 6px;border-radius:6px;font-size:.9em}
 .kn-article pre{background:#17182f;color:#ecebff;border-radius:14px;padding:16px 18px;overflow:auto;line-height:1.55}

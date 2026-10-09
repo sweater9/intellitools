@@ -89,7 +89,7 @@ Not run: any browser/UI test (no UI code changed), any deployment.
 
 ## 7. Notes for the search/ranking engineer (not acted on)
 
-- New pages enter lexical results but never became a confident answer on any of 1,607 frozen queries. They do take **top-1 on 34 non-confident queries**, mostly low-score tie noise. Two meaningful shifts: `planner and worker agents` (was `multi-agent-systems`, now `microsoft-agent-framework`, 37 vs 36) and `which framework for a production agent` (was `choosing-an-agent-framework`).
+- New pages enter lexical results but never became a confident answer on any of 1,607 frozen queries. They do take **top-1 on 34 non-confident queries** (27 after the Gmail title was shortened in the review pass, §10), mostly low-score tie noise. Two meaningful shifts: `planner and worker agents` (was `multi-agent-systems`, now `microsoft-agent-framework`, 37 vs 36) and `which framework for a production agent` (was `choosing-an-agent-framework`).
 - `How can an AI agent access Gmail?` now lists `gmail-api-scopes-and-verification` in its five "learn more" slots, displacing `connecting-agents-to-apps`. I changed the **existing** `within` expectation in `tests/knowledge-search.mjs` from `connecting-agents-to-apps` to the new page (still two related pages must appear). Revert that edit if you prefer to change ranking instead.
 - `how do I connect an AI agent to Gmail` answers `ai-agent-vs-chatbot` (pre-existing; the gate only checks it is solid).
 - Generic words in titles, tech lists and first questions drive lexical overlap; I removed generic aliases/keywords from the new pages (for example "Agent Framework", "Data-Use Rules") to limit noise.
@@ -108,8 +108,36 @@ Generated artefacts were rebuilt with `node knowledge/src/build.mjs` (and `pytho
 
 **Records and tests:** `knowledge/source-verification.json`, `knowledge/SOURCE-VERIFICATION-REPORT.md`, `package.json` (new test wired into `test` and `test:ai-v3`), `tests/knowledge-search.mjs` (one expectation, see §7).
 
+**Review pass (§10) also touched:** `knowledge/knowledge.css` (one overflow-wrap rule), `knowledge/src/entities-final-expansion.mjs` and `entities-safety-science.mjs` (Gmail scope list, EU Article 5 wording), and regenerated pages, indexes and records.
+
 **Not touched:** `search-core.mjs`, `search.js`, `hybrid-search.mjs`, `semantic-core.mjs`, lexicon parts, `search-lexicon.json`, `sw.js`, tools, `main`.
 
 ## 9. Ideas for V3.1 (not done)
 
 Read the Semantic Kernel migration guide and add mappings; add a Gemini/Claude reasoning-terminology comparison page; verify the remaining "staging only" pages (`ai-governance`, `computer-use-agents`, `prompt-caching`); add GDPR/AI and DSAR pages with primary-source checks; add Inspect code samples after reading the tutorial; give legacy pages source sections; re-check Sora, OpenAI deprecations and MCP revisions on a monthly schedule.
+
+## 10. Release-gate review pass (2026-10-09, after the handoff review on PR #30)
+
+Content was frozen; only corrections and a CSS fix were made. Sign-offs remain with the human reviewers.
+
+**Independent re-reads of primary sources (fresh fetches, `maxAge: 0`)**
+- EU AI Act: EUR-Lex text of Regulation (EU) 2026/1744 re-read. Article 5(1) points (ba) (intimate-image generation without explicit consent) and (bb) (child sexual abuse material generation), and paragraphs 1a/1b (purpose/foreseeability limits), apply from 2 December 2026; Annex III 2 December 2027; Annex I 2 August 2028. The page now quotes the primary text instead of secondary commentary. Not re-read: Article 50 and GPAI date handling.
+- MCP: revision 2026-07-28 authorization page re-read; every requirement stated on the page matches. New nuance noted by the source: a future revision is expected to raise `iss` inclusion from SHOULD to MUST.
+- Gmail: scope page and Workspace policy re-read. **Correction made:** `gmail.settings.sharing` is also restricted and was missing from the list; add-on scopes exist and are not classified on the page. Policy page still reads "Last updated 2026-09-03 UTC" and the AI/ML prohibition sentence is unchanged.
+- OpenAI deprecations page re-read: o1, o1-pro, o3-mini, o4-mini still 23 October 2026; Sora/Videos API rows unchanged (24 September 2026). **Sora API outcome still not confirmed**: search results are pre-shutdown blog posts and OpenAI's help page; no post-24-September source was found.
+
+**Browser QA** (headless Chromium, local static server, 375px and 1280px, all 10 new pages + search):
+- Found and fixed: **horizontal overflow at 375px** on 5 new pages and on `a2a-protocol`, caused by long source URLs in the new source-check lists. Fix: `overflow-wrap:anywhere` for `.kn-article p, li` in `knowledge/knowledge.css`. After the fix 0 of 273 pages overflow at 375px.
+- 0 console errors; every new page returns 200 and shows the "key claims checked 2026-10-09" chip.
+- Search in the page: "is sora still available" and "what is nvidia cosmos" show the right guide; offline (network disabled after load) search for "what is an attention sink" still returns `attention-sinks`. `how does oauth work for mcp servers` shows the existing OAuth 2.0 guide as the answer and does **not** surface `mcp-authorization` in its learn-more list (lexical ranking: new page is in the ranked top 3 but not selected).
+- Not done: real devices, Safari/Firefox, the deployed staging URL, and per-link reachability checks of every external source URL.
+
+**Items named in the review**
+1. *Top-1 changes:* with the shorter Gmail title the count is now **27** (it was 34). Against the expected pages in the frozen sets there are **2 top-1 regressions** (`which framework for a production agent`: `choosing-an-agent-framework` to `microsoft-agent-framework`; `planner and worker agents`: `multi-agent-systems` to `microsoft-agent-framework`) and **8 top-3 regressions** (all agent-framework/protocol or attention queries, e.g. `microsoft framework where agents chat with each other to solve tasks` no longer lists `autogen` in the top 3). No improvements. None changed a confident answer, tool or gap.
+2. *Gmail learn-more:* new page legitimately enters the five "learn more" slots (score 53) and pushes `connecting-agents-to-apps` out. The test edit is the minimum change; the alternative is a ranking change.
+3. *Pre-existing Gmail misrouting:* `how do I connect an AI agent to Gmail` ranks `gmail-for-ai-agents` first (68) but the answer is `ai-agent-vs-chatbot` (58) because the answer selector requires an anchored match (alias/intent/concept) and `gmail-for-ai-agents` has no alias for this phrasing. Identical on the base commit. A one-line alias would fix it but changes a confident answer, so it was not applied.
+4. *`hugging-face-transformers.html`:* a stale generated page from commit `da370dd` (title "Hugging Face Transformers and the Hub"), self-canonical, no source module, not in the index or sitemap, not linked from any page; superseded by `hugging-face.html`. Not removed; the owner should decide between deleting it and adding a redirect, because the old URL may be indexed externally.
+
+**Commands**: `npm test`; `node tests/knowledge-ambiguity-gate.mjs`; `node knowledge/src/build.mjs`; `python3 knowledge/src/build-semantic.py <glove.json> --dim 64 --vocab 5000`; Playwright script at `/tmp/final/qa/qa.mjs` (not committed); same-answer and regression scripts under `/tmp/final` (not committed).
+
+**Reviewer sign-offs:** none recorded. Production approval remains separate.
