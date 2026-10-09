@@ -14,6 +14,14 @@ if (!form || !input || !results) throw new Error("Knowledge search markup missin
 let index = null;
 let lexicon = null;
 let timer = 0;
+let loadFailed = false;
+const LOAD_ERROR = "Search could not be loaded. Refresh the page and try again.";
+
+// The status region is visually hidden, so a load failure is also shown in the results area.
+function showLoadError() {
+  results.replaceChildren(el("p", "kn-gap", LOAD_ERROR));
+  status.textContent = LOAD_ERROR;
+}
 
 function el(tag, className, text) {
   const node = document.createElement(tag);
@@ -42,7 +50,8 @@ function section(kicker, title) {
 function render(query) {
   results.replaceChildren();
   if (!index || !lexicon) {
-    status.textContent = "Search is loading.";
+    if (loadFailed) showLoadError();
+    else status.textContent = "Search is loading.";
     return;
   }
   const q = query.trim();
@@ -162,16 +171,19 @@ function render(query) {
 }
 
 async function load() {
-  const [indexRes, lexiconRes] = await Promise.all([
-    fetch("search-index.json"),
-    fetch("search-lexicon.json")
-  ]);
-  if (!indexRes.ok || !lexiconRes.ok) {
-    status.textContent = "Search could not be loaded. Refresh the page and try again.";
+  try {
+    const [indexRes, lexiconRes] = await Promise.all([
+      fetch("search-index.json"),
+      fetch("search-lexicon.json")
+    ]);
+    if (!indexRes.ok || !lexiconRes.ok) throw new Error("HTTP error");
+    index = await indexRes.json();
+    lexicon = await lexiconRes.json();
+  } catch {
+    loadFailed = true;
+    showLoadError();
     return;
   }
-  index = await indexRes.json();
-  lexicon = await lexiconRes.json();
   if (SEMANTIC) {
     // Lazy: lexical search is usable immediately; the ~1 MB (gzipped) semantic index loads in the background.
     Promise.all([import("./hybrid-search.mjs"), import("./semantic-core.mjs"), fetch("semantic-index.json").then((r) => r.json())])
