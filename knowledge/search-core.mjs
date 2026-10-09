@@ -191,7 +191,8 @@ export function searchKnowledge(index, lexicon, rawQuery) {
   const anchored = (row) => row.notes.some((note) => note === "title" || note === "question" || note === "alias" || note.startsWith("intent:") || note.startsWith("concept:") || note.startsWith("glossary:"));
   let top = ranked.find((row) => anchored(row) && row.score >= minSolid) || null;
   const topical = (row) => row && row.notes.some((note) => note.startsWith("intent:") || note.startsWith("concept:"));
-  if (top && gaps.some((gap) => gap.demoteWithoutTopic) && !topical(top)) top = null;\n  if (suppressAmbiguousTop(top, query)) top = null;
+  if (top && gaps.some((gap) => gap.demoteWithoutTopic) && !topical(top)) top = null;
+  if (suppressAmbiguousTop(top, query)) top = null;
   const solid = Boolean(top);
   const tools = matchingTools(lexicon, query, gaps);
 
