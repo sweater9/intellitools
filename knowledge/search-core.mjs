@@ -222,6 +222,7 @@ export function searchKnowledge(index, lexicon, rawQuery) {
     tools,
     weak,
     ranked: ranked.slice(0, 8),
+    rankedAll: ranked,
     intentHits
   };
 }
