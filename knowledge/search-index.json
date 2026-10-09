@@ -3006,7 +3006,7 @@
     "How to get started",
     "Cautions and trade-offs"
    ],
-   "words": 837
+   "words": 880
   },
   {
    "id": "build-spfx-web-part",
@@ -3056,7 +3056,7 @@
     "How to get started",
     "Cautions and trade-offs"
    ],
-   "words": 708
+   "words": 778
   },
   {
    "id": "microsoft-365",
@@ -6188,7 +6188,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 521
+   "words": 557
   },
   {
    "id": "reinforcement-learning-for-reasoning",
@@ -9434,7 +9434,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 625
+   "words": 660
   },
   {
    "id": "agent-protocol-landscape",
@@ -9744,7 +9744,7 @@
    "type": "concept",
    "group": "Agent Protocols, Frameworks & Runtimes",
    "question": "What is AutoGen?",
-   "summary": "AutoGen is an open-source Microsoft Research framework for building multi-agent LLM applications where agents converse and collaborate; it has undergone major redesigns.",
+   "summary": "AutoGen is an open-source Microsoft Research framework for multi-agent LLM applications where agents converse and collaborate. Its repository now states it is in maintenance mode, with Microsoft Agent Framework as the recommended successor for new projects.",
    "aliases": [
     "AutoGen",
     "autogen studio",
@@ -9796,7 +9796,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 460
+   "words": 516
   },
   {
    "id": "crewai",
@@ -9912,7 +9912,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 421
+   "words": 473
   },
   {
    "id": "openai-agents-sdk",
@@ -9970,7 +9970,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 399
+   "words": 426
   },
   {
    "id": "agent-frameworks-compared",
@@ -10035,7 +10035,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 539
+   "words": 553
   },
   {
    "id": "vllm",
@@ -10100,7 +10100,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 465
+   "words": 473
   },
   {
    "id": "llama-cpp",
@@ -10354,7 +10354,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 403
+   "words": 417
   },
   {
    "id": "local-runtimes-compared",
@@ -11188,7 +11188,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 455
+   "words": 482
   },
   {
    "id": "mmlu",
@@ -11377,7 +11377,7 @@
    "type": "concept",
    "group": "Evaluation & Benchmarks",
    "question": "What is GSM8K?",
-   "summary": "GSM8K (grade-school maths word problems) and MATH (competition problems) are common reasoning benchmarks; GSM8K is now close to saturated, and harder maths sets are used for frontier models.",
+   "summary": "GSM8K (grade-school maths word problems) and MATH (competition problems) are common reasoning benchmarks; GSM8K has been widely reported as close to saturated for strong models (a time-sensitive judgement), so harder maths sets are used to separate them.",
    "aliases": [
     "GSM8K",
     "MATH benchmark",
@@ -12037,7 +12037,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 477
+   "words": 493
   },
   {
    "id": "model-drift-and-monitoring",
@@ -12288,7 +12288,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 404
+   "words": 405
   },
   {
    "id": "ray",
@@ -12351,7 +12351,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 405
+   "words": 408
   },
   {
    "id": "pgvector",
@@ -13349,7 +13349,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 589
+   "words": 658
   },
   {
    "id": "nist-ai-rmf",
@@ -13657,7 +13657,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 417
+   "words": 476
   },
   {
    "id": "ai-for-science",
@@ -13786,7 +13786,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 528
+   "words": 549
   },
   {
    "id": "physics-informed-neural-networks",
@@ -13915,7 +13915,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 500
+   "words": 528
   },
   {
    "id": "ai-drug-discovery",

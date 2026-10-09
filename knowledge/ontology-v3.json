@@ -1150,7 +1150,7 @@
    "page_kind": "comparison",
    "url": "knowledge/prm-vs-orm.html",
    "plain_english_definition": "Both are \"graders\" for reasoning. A PRM grades every step; an ORM grades only the end result. Step grading tells you *where* it went wrong and gives richer feedback, but needs expensive step-by-step labels. Result grading is cheap but blunt.",
-   "technical_definition": "| | PRM | ORM | |---|---|---| | Scores | Each step / prefix | Complete solution | | Labels | Step-level (human or automatic) | Final-answer correctness | | Signal | Dense | Sparse | | Error location | Yes | No | | Label cost | High | Low | | Typical risk | Noisy or biased step labels; over-optimisation | Rewards flawed reasoning with right answers | | Fit | Search, error diagnosis, dense RL rewards | Reranking, terminal RL reward, verifiable tasks | Published comparisons on maths tasks (Uesato et al., 2022; Lightman et al., 2023) report advantages for process supervision in their settings; results depend on domain and labelling method and should not be assumed to transfer.",
+   "technical_definition": "| | PRM | ORM | |---|---|---| | Scores | Each step / prefix | Complete solution | | Labels | Step-level (human or automatic) | Final-answer correctness | | Signal | Dense | Sparse | | Error location | Yes | No | | Label cost | High | Low | | Typical risk | Noisy or biased step labels; over-optimisation | Rewards flawed reasoning with right answers | | Fit | Search, error diagnosis, dense RL rewards | Reranking, terminal RL reward, verifiable tasks | Published comparisons on maths tasks differ in what they find: Uesato et al. (2022, GSM8K) report that outcome-based supervision reached similar final-answer error rates with less labelling, while process-based supervision (or reward models that emulate it) was needed for correct reasoning steps; Lightman et al. (2023, MATH) report that process supervision significantly outperformed outcome supervision. Results depend on domain, model scale and labelling method and should not be assumed to transfer.",
    "aliases": [
     "PRM vs ORM",
     "process vs outcome reward model",
@@ -7097,7 +7097,7 @@
    "page_kind": "concept",
    "url": "knowledge/a2a-protocol.html",
    "plain_english_definition": "MCP is how an agent plugs into tools and data. A2A is how one agent talks to *another agent* — possibly built by a different company on a different framework. They publish what they can do, hand tasks to each other and send back results, so agents can cooperate without sharing internals.",
-   "technical_definition": "A2A was announced by Google in April 2025 and subsequently moved under Linux Foundation governance (verify current status). Core concepts as commonly described: an Agent Card (a JSON description of an agent's identity, endpoint, skills and auth requirements, served at a well-known URL); tasks with lifecycle states; messages made of typed parts; artifacts as outputs; and streaming/push updates for long-running work. Transport is HTTP-based with JSON-RPC-style messaging in early versions; later versions may add other bindings. The specification is evolving, so field names, paths and transports must be checked in the current spec.",
+   "technical_definition": "A2A was announced by Google on 9 April 2025 and contributed to the Linux Foundation, which launched the Agent2Agent project on 23 June 2025; the project released its first stable specification, version 1.0.0, in 2026 (time-sensitive). Core concepts as commonly described: an Agent Card (a JSON description of an agent's identity, endpoint, skills and auth requirements, served at a well-known URL — /.well-known/agent-card.json in the current specification); tasks with lifecycle states; messages made of typed parts; artifacts as outputs; and streaming/push updates for long-running work. The current specification separates an abstract data model and operations from protocol bindings, and defines JSON-RPC 2.0, gRPC and HTTP/REST bindings, with Server-Sent Events for streaming. The specification is evolving, so field names, paths and transports must be checked in the current spec.",
    "aliases": [
     "A2A",
     "Agent2Agent",
@@ -8013,7 +8013,7 @@
    "page_kind": "concept",
    "url": "knowledge/autogen.html",
    "plain_english_definition": "AutoGen lets several AI agents \"talk\" to each other and to humans to solve a task — one writes code, another reviews, a proxy runs it. It influenced many later frameworks. Because it has been redesigned and related Microsoft projects have changed, check what is current before starting.",
-   "technical_definition": "The AutoGen paper (Wu et al., 2023) describes conversable agents and conversation programming. Subsequent major versions introduced a layered, event-driven redesign and tooling such as a visual studio; Microsoft also maintains related agent SDKs (see Semantic Kernel). The relationship and recommended path between these projects has shifted over time and must be verified against Microsoft's current announcements and repositories.",
+   "technical_definition": "The AutoGen paper (Wu et al., 2023) describes conversable agents and conversation programming. Subsequent major versions introduced a layered, event-driven redesign and tooling such as a visual studio; Microsoft also maintains related agent SDKs (see Semantic Kernel). As of 2026-10-09 the AutoGen repository states that AutoGen is in maintenance mode and that Microsoft Agent Framework (Python and .NET; repository github.com/microsoft/agent-framework) is its successor; the Semantic Kernel repository names the same successor. Existing AutoGen code keeps working but will not receive new features. Community forks with related names (for example AG2) are separate projects.",
    "aliases": [
     "AutoGen",
     "autogen studio",
@@ -8091,7 +8091,7 @@
     "Cap turns and tokens.",
     "Evaluate on tasks (How to Evaluate AI Systems and Outputs)."
    ],
-   "when_to_use": "Consider for conversational multi-agent prototypes; verify project direction first.",
+   "when_to_use": "For new projects, evaluate Microsoft Agent Framework (the stated successor) rather than starting on AutoGen; keep AutoGen for maintaining existing systems or reading earlier research code.",
    "canonical_sources": [
     {
      "title": "Wu et al., AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation (2023)",
@@ -8099,8 +8099,13 @@
      "verified": false
     },
     {
-     "title": "AutoGen repository and documentation",
-     "locator": "github.com/microsoft/autogen (verify current status)",
+     "title": "AutoGen repository README (maintenance-mode notice)",
+     "locator": "github.com/microsoft/autogen",
+     "verified": false
+    },
+    {
+     "title": "Microsoft Agent Framework repository",
+     "locator": "github.com/microsoft/agent-framework",
      "verified": false
     }
    ],
@@ -8231,7 +8236,7 @@
    "page_kind": "concept",
    "url": "knowledge/semantic-kernel.html",
    "plain_english_definition": "Semantic Kernel is Microsoft's toolkit for adding AI to apps, especially in .NET and enterprise settings. You register your code as plugins the model can call, and the kernel manages prompts, tools and agents.",
-   "technical_definition": "Concepts: kernel, plugins/functions exposed to models via function calling, prompt templates, connectors for models and vector stores, agent framework and process framework. Language support and feature parity vary across C#, Python and Java. Microsoft's broader agent strategy, including newer framework announcements and consolidation with AutoGen lineage, should be verified in current official sources.",
+   "technical_definition": "Concepts: kernel, plugins/functions exposed to models via function calling, prompt templates, connectors for models and vector stores, agent framework and process framework. Language support and feature parity vary across C#, Python and Java. As of 2026-10-09 the Semantic Kernel repository states that Microsoft Agent Framework (MAF) is the enterprise-ready successor to Semantic Kernel, available as a 1.0 production release, and links a migration guide; the AutoGen repository names the same successor. Treat Semantic Kernel as an established SDK for existing systems and evaluate MAF for new agent work.",
    "aliases": [
     "SK",
     "Semantic Kernel SDK",
@@ -8301,7 +8306,7 @@
     "Test tool selection with realistic prompts.",
     "Pin versions."
    ],
-   "when_to_use": "Natural fit for .NET/Microsoft-stack teams.",
+   "when_to_use": "Existing .NET/Microsoft-stack systems built on it; for new Microsoft-stack agent projects, compare with Microsoft Agent Framework, which Microsoft positions as the successor.",
    "canonical_sources": [
     {
      "title": "Semantic Kernel documentation",
@@ -8337,7 +8342,7 @@
    "page_kind": "concept",
    "url": "knowledge/openai-agents-sdk.html",
    "plain_english_definition": "A small toolkit from OpenAI for building agents: you define an agent with instructions and tools, let it hand work to other agents, add guardrails to check inputs and outputs, and trace what happened.",
-   "technical_definition": "Introduced in 2025 as a production-oriented evolution of an earlier experimental library (Swarm). Documented primitives include agents, tools (function tools, hosted tools), handoffs between agents, guardrails (input/output validation), sessions/memory and tracing. Availability of language SDKs, non-OpenAI model support and feature parity with the hosted Responses API should be verified in current documentation.",
+   "technical_definition": "Introduced in 2025 as a production-oriented evolution of an earlier experimental library (Swarm). Documented primitives include agents, tools (function tools, hosted tools), handoffs between agents, guardrails (input/output validation), sessions/memory and tracing. As of 2026-10-09 there are Python and JavaScript/TypeScript SDKs, and the Python README describes the SDK as provider-agnostic (OpenAI Responses and Chat Completions APIs plus other LLMs through adapters such as LiteLLM). Feature parity with hosted OpenAI tools still varies by provider and should be checked per feature.",
    "aliases": [
     "OpenAI Agents SDK",
     "agents sdk",
@@ -8442,7 +8447,7 @@
    "page_kind": "comparison",
    "url": "knowledge/agent-frameworks-compared.html",
    "plain_english_definition": "There is no single best agent framework. Some give you fine control, some get you a prototype fast, some are strongest at working with your documents. Often the simplest answer is a few direct API calls.",
-   "technical_definition": "| Framework | Typical emphasis | Language(s) | Consider when | |---|---|---|---| | LangChain | Broad integrations and components | Python, JS/TS | You need many connectors | | LangGraph | Stateful graph orchestration, persistence, approvals | Python, JS/TS | You need control over loops | | LlamaIndex | Data ingestion, indexing, retrieval | Python, TS | RAG-centred work | | DSPy | Programmatic pipelines with optimisation | Python | You have a metric and examples | | AutoGen (Microsoft) | Conversational multi-agent | Python, .NET | You want agent conversations (verify status) | | CrewAI | Role/task crews | Python | Fast role-based prototypes | | Semantic Kernel | Enterprise SDK with plugins | C#, Python, Java | Microsoft stack | | OpenAI Agents SDK | Lightweight primitives, handoffs, guardrails | Python, JS (verify) | Building on that vendor's API | This table is a neutral orientation, not a recommendation or ranking; feature claims need verification against current docs.",
+   "technical_definition": "| Framework | Typical emphasis | Language(s) | Consider when | |---|---|---|---| | LangChain | Broad integrations and components | Python, JS/TS | You need many connectors | | LangGraph | Stateful graph orchestration, persistence, approvals | Python, JS/TS | You need control over loops | | LlamaIndex | Data ingestion, indexing, retrieval | Python, TS | RAG-centred work | | DSPy | Programmatic pipelines with optimisation | Python | You have a metric and examples | | AutoGen (Microsoft) | Conversational multi-agent (maintenance mode; successor: Microsoft Agent Framework) | Python, .NET | Maintaining existing AutoGen systems | | CrewAI | Role/task crews | Python | Fast role-based prototypes | | Semantic Kernel | Enterprise SDK with plugins (successor named: Microsoft Agent Framework) | C#, Python, Java | Existing Microsoft-stack systems | | OpenAI Agents SDK | Lightweight primitives, handoffs, guardrails | Python, JavaScript/TypeScript | Building on that vendor's API (README describes it as provider-agnostic) | This table is a neutral orientation, not a recommendation or ranking; feature claims need verification against current docs.",
    "aliases": [
     "which agent framework",
     "best agent framework",
@@ -8550,7 +8555,7 @@
    "page_kind": "concept",
    "url": "knowledge/vllm.html",
    "plain_english_definition": "vLLM is software for running language models efficiently for many users at once. It manages GPU memory cleverly and batches requests continuously, so a single GPU server can answer far more requests than a naive setup.",
-   "technical_definition": "Introduced with PagedAttention (Kwon et al., 2023), vLLM stores KV cache in non-contiguous blocks to reduce fragmentation, and schedules requests with continuous batching. Common features: OpenAI-compatible HTTP server, tensor/pipeline parallelism, prefix caching, quantisation support, speculative decoding, guided decoding backends (Constrained Decoding (Guided Generation)), LoRA adapter serving, and multi-modal model support. Hardware support (NVIDIA, AMD, others), supported models and flags change frequently.",
+   "technical_definition": "Introduced with PagedAttention (Kwon et al., 2023) and a PyTorch Foundation hosted project since 2025, vLLM stores KV cache in non-contiguous blocks to reduce fragmentation, and schedules requests with continuous batching. Common features: OpenAI-compatible HTTP server, tensor/pipeline parallelism, prefix caching, quantisation support, speculative decoding, guided decoding backends (Constrained Decoding (Guided Generation)), LoRA adapter serving, and multi-modal model support. Hardware support (NVIDIA, AMD, others), supported models and flags change frequently.",
    "aliases": [
     "vLLM server",
     "vllm serve",
@@ -9128,7 +9133,7 @@
    "page_kind": "concept",
    "url": "knowledge/pytorch.html",
    "plain_english_definition": "PyTorch is the toolkit most AI researchers and engineers use to build and train neural networks in Python. It handles the heavy maths on GPUs and computes the gradients needed for learning automatically.",
-   "technical_definition": "Key features: dynamic computation graphs, autograd, torch.nn, DataLoader, distributed training (DDP/FSDP, see Distributed Training (Data, Tensor and Pipeline Parallelism)), mixed precision, torch.compile, and export paths (TorchScript legacy, ONNX, ExecuTorch). Governance: hosted by the PyTorch Foundation under the Linux Foundation (verify current structure). Competing frameworks include JAX and TensorFlow, which differ in programming model and ecosystem.",
+   "technical_definition": "Key features: dynamic computation graphs, autograd, torch.nn, DataLoader, distributed training (DDP/FSDP, see Distributed Training (Data, Tensor and Pipeline Parallelism)), mixed precision, torch.compile, and export paths (TorchScript legacy, ONNX, ExecuTorch). Governance: hosted by the PyTorch Foundation, part of the Linux Foundation, which since 2025 has also hosted projects such as vLLM, DeepSpeed and Ray (as of 2026-10-09). Competing frameworks include JAX and TensorFlow, which differ in programming model and ecosystem.",
    "aliases": [
     "torch",
     "pytorch tutorial",
@@ -10613,7 +10618,7 @@
    "page_kind": "concept",
    "url": "knowledge/human-preference-evaluation.html",
    "plain_english_definition": "Show people two answers without saying which model wrote them, ask which they prefer, and repeat thousands of times. The votes produce a ranking. It captures what people like — which may include confident tone and formatting — not strictly what is true.",
-   "technical_definition": "Chatbot Arena (Chiang et al., 2024) crowdsources pairwise comparisons and fits Bradley–Terry style ratings with confidence intervals; related work studies style-control and prompt-difficulty adjustments. Biases include verbosity and formatting preference, population skew, prompt distribution and gaming risks. Private human evaluation uses the same idea with controlled raters and rubrics. Leaderboard specifics (methodology, style control, categories) change and should be read from the current source.",
+   "technical_definition": "Chatbot Arena (Chiang et al., 2024) crowdsources pairwise comparisons and fits Bradley–Terry style ratings with confidence intervals; related work studies style-control and prompt-difficulty adjustments. Biases include verbosity and formatting preference, population skew, prompt distribution and gaming risks. Private human evaluation uses the same idea with controlled raters and rubrics. The best-known public arena has been renamed more than once — Chatbot Arena, then LMArena, and since January 2026 \"Arena\" at arena.ai (name and ownership are time-sensitive). Leaderboard specifics (methodology, style control, categories) change and should be read from the current source.",
    "aliases": [
     "chatbot arena",
     "LMArena",
@@ -12158,7 +12163,7 @@
    "canonical_sources": [
     {
      "title": "OpenTelemetry semantic conventions for generative AI",
-     "locator": "opentelemetry.io/docs/specs/semconv/gen-ai (verify status)",
+     "locator": "OpenTelemetry GenAI semantic conventions (now maintained in a dedicated repository linked from opentelemetry.io/docs/specs/semconv/; status: in development as of 2026-10-09)",
      "verified": false
     },
     {
@@ -12530,7 +12535,7 @@
    "page_kind": "concept",
    "url": "knowledge/mlflow.html",
    "plain_english_definition": "MLflow is a notebook for machine-learning work: it records what you tried (settings, results, files), keeps versions of finished models and helps move them to production, so experiments are reproducible.",
-   "technical_definition": "Components commonly described: Tracking (runs, parameters, metrics, artefacts), Models (packaging flavours), Model Registry (versioning, stages/aliases) and Projects; recent releases add LLM/GenAI capabilities such as tracing and evaluation. It is hosted as an open-source project under the Linux Foundation (verify) and also offered as managed services by data/cloud vendors. Feature naming and defaults change between versions.",
+   "technical_definition": "Components commonly described: Tracking (runs, parameters, metrics, artefacts), Models (packaging flavours), Model Registry (versioning, stages/aliases) and Projects; recent releases add LLM/GenAI capabilities such as tracing and evaluation. It has been an open-source project of the Linux Foundation since June 2020 and also offered as managed services by data/cloud vendors. Feature naming and defaults change between versions.",
    "aliases": [
     "mlflow tracking",
     "mlflow model registry",
@@ -12632,7 +12637,7 @@
    "page_kind": "concept",
    "url": "knowledge/ray.html",
    "plain_english_definition": "Ray lets you run Python code across many machines almost as if it were one. AI teams use it to process big datasets, train models in parallel, tune settings and serve models.",
-   "technical_definition": "Core primitives: remote functions (tasks), stateful actors and a shared object store; libraries include Ray Data, Ray Train, Ray Tune, Ray Serve and RLlib. It integrates with PyTorch, vLLM and Kubernetes (KubeRay). Developed originally at UC Berkeley and commercially supported by Anyscale; the project has moved under the PyTorch Foundation in recent years (verify current governance).",
+   "technical_definition": "Core primitives: remote functions (tasks), stateful actors and a shared object store; libraries include Ray Data, Ray Train, Ray Tune, Ray Serve and RLlib. It integrates with PyTorch, vLLM and Kubernetes (KubeRay). Developed originally at UC Berkeley and commercially supported by Anyscale; Ray became a hosted project of the PyTorch Foundation (part of the Linux Foundation) in October 2025.",
    "aliases": [
     "Ray Serve",
     "Ray Train",
@@ -14440,7 +14445,7 @@
    "page_kind": "concept",
    "url": "knowledge/eu-ai-act.html",
    "plain_english_definition": "The EU AI Act sorts AI uses by risk. A few uses are banned outright, risky ones (like AI used in hiring or credit) must meet strict requirements, some need clear disclosure (like chatbots and deepfakes), and the big general-purpose models have their own duties.",
-   "technical_definition": "Regulation (EU) 2024/1689 entered into force in 2024 with phased application. As commonly summarised: prohibitions and AI-literacy duties applied first; obligations for general-purpose AI models followed; most remaining provisions, including high-risk system requirements in the Act's annexed use cases, apply later, with a longer transition for AI embedded in products covered by existing safety legislation. Roles include provider, deployer, importer and distributor, each with different duties; penalties scale with turnover. Implementing acts, harmonised standards, guidance and proposals to adjust timelines may change the practical picture, so exact dates and scope must be checked against the Official Journal text and current Commission guidance.",
+   "technical_definition": "Regulation (EU) 2024/1689 entered into force in 2024 with phased application. As commonly summarised: prohibitions and AI-literacy duties applied first; obligations for general-purpose AI models followed; most remaining provisions, including high-risk system requirements in the Act's annexed use cases, apply later, with a longer transition for AI embedded in products covered by existing safety legislation. Roles include provider, deployer, importer and distributor, each with different duties; penalties scale with turnover. The timetable has already been amended: Regulation (EU) 2026/1744 (the Digital Omnibus on AI), published in the Official Journal on 24 July 2026 and in force from 27 July 2026, moved high-risk obligations for Annex III systems to 2 December 2027 and for AI in products covered by Annex I to 2 August 2028, and added a new prohibited practice; prohibitions and general-purpose AI model obligations kept their earlier dates. Implementing acts, harmonised standards, guidance and corrigenda can still change the practical picture, so exact dates and scope must be checked against the consolidated Official Journal text and current Commission guidance.",
    "aliases": [
     "EU AI Act",
     "AI Act",
@@ -14984,7 +14989,7 @@
    "page_kind": "concept",
    "url": "knowledge/owasp-llm-top-10.html",
    "plain_english_definition": "OWASP is the group famous for the \"Top 10\" web-security risks. They publish a similar list for AI applications, so teams have a shared checklist of what tends to go wrong and how to defend against it.",
-   "technical_definition": "Maintained under the OWASP GenAI Security Project. The first version appeared in 2023; an updated edition followed (2025), with changes to categories and naming. Prompt injection has been listed as the top-ranked risk in editions known to the author (verify current numbering). Other recurring themes: sensitive-information disclosure, supply-chain vulnerabilities, data and model poisoning, improper output handling, excessive agency, system-prompt leakage, vector and embedding weaknesses, misinformation and unbounded consumption. Use as a taxonomy, not a complete security programme.",
+   "technical_definition": "Maintained under the OWASP GenAI Security Project. Version 1.0 was published in August 2023, a 2025 edition followed, and the OWASP GenAI LLM Top 10 2026 was published on 4 August 2026 (current edition as of 2026-10-09). The 2026 list is: LLM01 Prompt Injection, LLM02 Sensitive Information Disclosure, LLM03 Excessive Agency, LLM04 Supply Chain, LLM05 Data and Model Poisoning, LLM06 Unbounded Consumption, LLM07 Misinformation, LLM08 Hidden Context Exposure, LLM09 Vector and Embedding Weaknesses, LLM10 Improper Output Handling. Prompt injection was also first in the 2023 list. Category names and order change between editions (for example, the 2025 edition's system-prompt leakage category does not appear under that name in 2026), so always cite the edition. Use as a taxonomy, not a complete security programme.",
    "aliases": [
     "OWASP LLM Top 10",
     "OWASP GenAI",
@@ -15057,8 +15062,18 @@
    "when_to_use": "Standard starting point for LLM-app security review.",
    "canonical_sources": [
     {
-     "title": "OWASP Top 10 for LLM Applications / GenAI Security Project",
-     "locator": "genai.owasp.org (verify current edition and numbering)",
+     "title": "OWASP GenAI LLM Top 10 2026 (current edition at review)",
+     "locator": "genai.owasp.org/resource/owasp-genai-llm-top-10-2026/",
+     "verified": false
+    },
+    {
+     "title": "OWASP Top 10 for LLM Applications 2025 (archived edition)",
+     "locator": "genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+     "verified": false
+    },
+    {
+     "title": "Active source repository",
+     "locator": "github.com/GenAI-Security-Project/GenAI-LLM-Top10",
      "verified": false
     }
    ],
@@ -15194,7 +15209,7 @@
    "page_kind": "concept",
    "url": "knowledge/alphafold.html",
    "plain_english_definition": "Proteins are chains of amino acids that fold into complex 3-D shapes which determine their function. AlphaFold predicts that shape from the sequence, which used to take months or years of lab work per protein. The predictions are very useful but still need care, especially where the model is not confident.",
-   "technical_definition": "AlphaFold 2 (Jumper et al., Nature, 2021) used an attention-based architecture (Evoformer plus a structure module) with multiple-sequence-alignment and template inputs, producing per-residue confidence (pLDDT) and predicted aligned error. The AlphaFold Protein Structure Database made hundreds of millions of predictions openly available (verify current scale and hosting, EMBL-EBI). AlphaFold 3 (Abramson et al., Nature, 2024) uses a diffusion-based approach to predict joint structures of proteins, nucleic acids, ligands and ions; its access terms differ from AlphaFold 2's open-source release (verify). The 2024 Nobel Prize in Chemistry recognised Demis Hassabis and John Jumper (for AlphaFold) and David Baker (computational protein design). Related models include ESMFold and RoseTTAFold.",
+   "technical_definition": "AlphaFold 2 (Jumper et al., Nature, 2021) used an attention-based architecture (Evoformer plus a structure module) with multiple-sequence-alignment and template inputs, producing per-residue confidence (pLDDT) and predicted aligned error. The AlphaFold Protein Structure Database made hundreds of millions of predictions openly available (verify current scale and hosting, EMBL-EBI). AlphaFold 3 (Abramson et al., Nature, 2024) uses a diffusion-based approach to predict joint structures of proteins, nucleic acids, ligands and ions; its code is published on GitHub, but the model weights are provided separately under their own terms of use, and the AlphaFold Server offers non-commercial use (access terms as of 2026-10-09). The 2024 Nobel Prize in Chemistry recognised Demis Hassabis and John Jumper (for AlphaFold) and David Baker (computational protein design). Related models include ESMFold and RoseTTAFold.",
    "aliases": [
     "AlphaFold",
     "AlphaFold2",
@@ -15426,7 +15441,7 @@
    "page_kind": "concept",
    "url": "knowledge/ai-weather-forecasting.html",
    "plain_english_definition": "Traditional weather forecasts simulate the atmosphere on supercomputers. AI models learn patterns from past weather records and can produce a forecast much faster. Early results are impressive on common measures, though meteorologists still study how well they handle rare, extreme events.",
-   "technical_definition": "Lam et al. (2023, Science) present GraphCast, a graph neural network operating on a multi-mesh over the globe trained on ECMWF ERA5 reanalysis, reporting skill competitive with ECMWF's HRES on many variables and lead times. Bi et al. (2023, Nature) present Pangu-Weather using 3-D Earth-specific transformers. Others include FourCastNet (Pathak et al., 2022). Forecasting centres have begun operationalising ML systems (for example ECMWF's AIFS; verify status and details). Open questions include probabilistic/ensemble forecasting, extreme-event fidelity, long-lead and climate-scale applicability, and dependence on physics-based data assimilation for initial conditions.",
+   "technical_definition": "Lam et al. (2023, Science) present GraphCast, a graph neural network operating on a multi-mesh over the globe trained on ECMWF ERA5 reanalysis, reporting that it significantly outperformed the most accurate operational deterministic system (ECMWF HRES) on 90% of 1,380 verification targets in the paper's evaluation. Bi et al. (2023, Nature) present Pangu-Weather using 3-D Earth-specific transformers. Others include FourCastNet (Pathak et al., 2022). Forecasting centres have operationalised ML systems: ECMWF's AIFS Single became operational on 25 February 2025 and its ensemble version (AIFS ENS) on 1 July 2025, running alongside the physics-based IFS (status time-sensitive). Open questions include probabilistic/ensemble forecasting, extreme-event fidelity, long-lead and climate-scale applicability, and dependence on physics-based data assimilation for initial conditions.",
    "aliases": [
     "GraphCast",
     "Pangu-Weather",
