@@ -114,6 +114,15 @@ export function searchHybrid(index, lexicon, sem, rawQuery, mode = "gated", opts
     }
   }
 
+  // Limited-release mode: semantic retrieval may reorder discovery results, but
+  // the lexical engine remains the sole authority for confident answers.
+  // Setting limitedConfidence=true prevents fused ordering from swapping one
+  // lexically-qualified answer for another (for example RT409).
+  if (mode === "gated" && o.limitedConfidence) {
+    top = lex.solid ? fused.find((r) => r.page.id === lex.answer.page.id) || null : null;
+    how = top ? "lexical-authoritative" : "";
+  }
+
   const solid = Boolean(top);
   let learnMore = [];
   if (solid) {
