@@ -7,7 +7,7 @@ Static, browser-friendly Knowledge content: 35 articles (29 explainers, 6 compar
 - `src/build.mjs` — `node knowledge/src/build.mjs` regenerates every `.html`, `search-index.json` and `sitemap-fragment.xml`. Generated files are committed so the folder can be served as-is.
 - `knowledge.css` — small stylesheet that reuses `v2.css` tokens.
 - `search-index.json` — for the primary workstream's local Knowledge Search: per page `title`, `question`, `summary`, `aliases`, `keywords`, `related`, `headings`, `relatedTools`; plus `glossary` and `paths`.
-- `sitemap-fragment.xml` — URLs to merge into `sitemap.xml` at integration (not wired in).
+- `sitemap-fragment.xml` — the generated list of canonical Knowledge URLs. The same URLs are written into the root `sitemap.xml` by `src/build.mjs` (block between the `knowledge:start` and `knowledge:end` comments, replaced on every build). Redirect stubs such as `hugging-face-transformers.html` are never listed.
 
 ## Tool recommendations (deliberately sparse)
 `relatedTools` is non-empty on only a few pages; the rest are Knowledge-only. Search should treat an empty `relatedTools` as "show Knowledge results only".
@@ -26,3 +26,14 @@ Static, browser-friendly Knowledge content: 35 articles (29 explainers, 6 compar
 
 ## V3 AI ontology (feature/knowledge-ai-v3-ontology)
 140 additional entity pages, `ontology-v3.json`, 52 glossary terms and 7 learning paths, authored from the V3 topic specification (not converted from a V2 file). Nothing is source-verified. See `V3-AI-ONTOLOGY-NOTES.md`, `spec/ENTITY-SCHEMA-V3.md`, `AI-V3-QUERY-REPORT.md`. Tests: `npm run test:ai-v3`.
+
+## Offline behaviour (limitation — not a full offline mode)
+Knowledge is **not** an offline-first section and should not be described as one.
+- The service worker (`/sw.js`) is registered only by the tools home page. Knowledge pages never register it and it does not precache them.
+- If a visitor opens the tools home page first and then Knowledge online, the Knowledge index, search and the articles they visited keep working without a network. An article that was never visited falls back to the tools home page.
+- A visitor who lands directly on a Knowledge page has no service worker; offline reload then depends only on the browser's HTTP cache.
+- Search itself runs in the browser from `search-index.json` and `search-lexicon.json`; it needs those files to have loaded once.
+- Making Knowledge properly offline (registering the worker here and precaching the index, lexicon and pages) is a separate piece of work.
+
+## Legacy URLs
+`hugging-face-transformers.html` is a generated redirect stub (meta refresh, canonical link and script that keeps the query string and hash) pointing to `hugging-face.html`. Redirects are declared in `REDIRECTS` in `src/build.mjs` and regenerated on every build. GitHub Pages cannot send an HTTP 301, so this is a soft redirect.

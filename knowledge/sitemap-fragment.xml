@@ -1,4 +1,4 @@
-<!-- Merge into sitemap.xml at integration; not wired in automatically. -->
+<!-- Generated. The same URLs are written into the root sitemap.xml by this build (block between the knowledge:start and knowledge:end markers). -->
 <url><loc>https://intellitools.online/knowledge/index.html</loc></url>
 <url><loc>https://intellitools.online/knowledge/glossary.html</loc></url>
 <url><loc>https://intellitools.online/knowledge/what-is-ai.html</loc></url>
