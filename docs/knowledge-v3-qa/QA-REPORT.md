@@ -40,7 +40,7 @@ Legend: PASS, FAIL, PARTIAL, NOT TESTED. "Staging" = the deployed Render site, r
 | 23 | New search regression tests (10 ranking, Gmail, MCP, neighbours, redirect) | Local | PASS | `tests/knowledge-search-regressions.mjs` |
 | 24 | 1,607 frozen queries, base commit vs now | Local | PASS: 10 answer changes, all fixes, 0 breaks, 0 top-1 and 0 top-3 regressions | `results/fullcmp.mjs` |
 | 25 | Rebuilt semantic index, limited mode, 1,607 queries | Local | PASS: 0 violations for solid/answer/tools/gap/need/learn; page ids match the search index (270) | `results/semantic-limited-mode-check.json` |
-| 26 | CI on PR head | GitHub | PASS on `1fd211d`; `d859afd` pending at time of writing | PR checks |
+| 26 | CI on PR head | GitHub | PASS on `1fd211d` and on `d859afd` | PR checks |
 
 ## Offline detail (test 15)
 - The service worker (`sw.js`) is registered only by the tools home (`v2-tools.js`). Knowledge pages never register it and `sw.js` does not precache Knowledge files.
