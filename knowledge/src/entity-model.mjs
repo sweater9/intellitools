@@ -89,7 +89,7 @@ export function toPage(e, allSlugs, titleOf) {
     : '**Status: not independently verified.** This entry was authored on ' + AUTHORED + ' from general technical knowledge, without live checking of the sources below. Treat every source as a lead to confirm (identifier, title, authorship, current version) before publication or citation.\n\n';
   if (ck) {
     ver += '**Checked against primary sources (' + ck.date + '):**\n' + list(ck.claims) + '\n\n';
-    ver += '**Primary sources consulted:**\n' + list(ck.sources.map(([t, u]) => t + ' — ' + u)) + '\n\n';
+    ver += '**Primary sources consulted:**\n' + list(ck.sources.map(([t, u]) => '[' + t + '](' + u + ')')) + '\n\n';
     ver += ck.unverified.length ? '**Not independently verified:**\n' + list(ck.unverified) + '\n\n' : '';
   }
   ver += '**Freshness class:** ' + e.fresh + ' — ' + FRESHNESS[e.fresh] + '\n\n';

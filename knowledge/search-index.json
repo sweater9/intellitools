@@ -9507,7 +9507,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 853
+   "words": 845
   },
   {
    "id": "agent-protocol-landscape",
@@ -9878,7 +9878,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 640
+   "words": 636
   },
   {
    "id": "crewai",
@@ -9998,7 +9998,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 568
+   "words": 564
   },
   {
    "id": "openai-agents-sdk",
@@ -13490,7 +13490,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 1049
+   "words": 1045
   },
   {
    "id": "nist-ai-rmf",
@@ -13551,7 +13551,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 734
+   "words": 726
   },
   {
    "id": "iso-iec-42001",
@@ -13803,7 +13803,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 629
+   "words": 623
   },
   {
    "id": "ai-for-science",
@@ -14609,7 +14609,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 1165
+   "words": 1157
   },
   {
    "id": "migrate-to-microsoft-agent-framework",
@@ -14677,7 +14677,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 1144
+   "words": 1138
   },
   {
    "id": "mcp-authorization",
@@ -14752,7 +14752,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 1267
+   "words": 1261
   },
   {
    "id": "gmail-api-scopes-and-verification",
@@ -14820,7 +14820,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 1218
+   "words": 1212
   },
   {
    "id": "inspect-ai-evaluation-framework",
@@ -14896,7 +14896,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 1157
+   "words": 1151
   },
   {
    "id": "openai-reasoning-models",
@@ -14980,7 +14980,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 1248
+   "words": 1212
   },
   {
    "id": "sora-ai-video",
@@ -15052,7 +15052,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 1104
+   "words": 1096
   },
   {
    "id": "nvidia-cosmos",
@@ -15133,7 +15133,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 1116
+   "words": 1110
   },
   {
    "id": "attention-sinks",
@@ -15202,7 +15202,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 925
+   "words": 921
   },
   {
    "id": "flashattention-3",
@@ -15275,7 +15275,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 862
+   "words": 858
   }
  ],
  "glossary": [

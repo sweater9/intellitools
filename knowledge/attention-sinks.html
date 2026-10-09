@@ -27,7 +27,7 @@
 <p><strong>Checked against primary sources (2026-10-09):</strong></p>
 <ul><li>Window attention fails once text exceeds the cache size; keeping initial tokens' KV largely recovers performance (the &quot;attention sink&quot; observation).</li><li>StreamingLLM enables finite-window models to generalise to infinite lengths without fine-tuning; Llama-2, MPT, Falcon and Pythia named; up to 4 million tokens and more.</li><li>A dedicated placeholder sink token in pre-training can improve streaming; up to 22.2× speedup over sliding-window recomputation.</li><li>Four initial tokens are used as attention sinks by default in the experiments; accepted at ICLR 2024 per the arXiv comment.</li></ul>
 <p><strong>Primary sources consulted:</strong></p>
-<ul><li>arXiv:2309.17453 abstract and PDF excerpts — https://arxiv.org/abs/2309.17453</li><li>StreamingLLM GitHub repository — https://github.com/mit-han-lab/streaming-llm</li></ul>
+<ul><li><a href="https://arxiv.org/abs/2309.17453" rel="noopener noreferrer">arXiv:2309.17453 abstract and PDF excerpts</a></li><li><a href="https://github.com/mit-han-lab/streaming-llm" rel="noopener noreferrer">StreamingLLM GitHub repository</a></li></ul>
 <p><strong>Not independently verified:</strong></p>
 <ul><li>The statement that evicted tokens are unavailable and that the method does not extend memory is an inference from the method, not a quotation (the repository FAQ was not read).</li><li>Whether specific serving libraries implement sink-aware caches today.</li><li>Why sinks form (explanations in later literature were not reviewed).</li></ul>
 <p><strong>Freshness class:</strong> evolving — Established techniques whose best practice shifts as research and tooling move. Re-review every 6 months.</p>

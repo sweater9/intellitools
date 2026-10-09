@@ -17614,7 +17614,7 @@
       "Effort values listed in the guide: none, minimal, low, medium, high, xhigh, max, with model-specific limits; summary parameter values concise, detailed, auto.",
       "Persisted reasoning does not expose raw reasoning; switching model families omits incompatible reasoning.",
       "Deprecation rows: o1-preview (2025-07-28) and o1-mini (2025-10-27) announced 2025-04-28; o1, o1-pro, o3-mini, o4-mini shutdown 2026-10-23; o3, o3-pro and dated GPT-5 snapshots shutdown 2026-12-11; o3-deep-research and o4-mini-deep-research shut down 2026-07-23.",
-      "OpenAI announced o1-preview and o1-mini in September 2024 and o3 and o4-mini in April 2025 (dates from OpenAI announcement titles and a search summary)."
+      "OpenAI's \"Introducing OpenAI o3 and o4-mini\" page is dated April 16, 2025, and its o1-preview announcement page is dated September 12, 2024."
      ],
      "sources": [
       {
@@ -17636,7 +17636,6 @@
      ],
      "not_independently_verified": [
       "Current model names: the guide and the deprecations page named different \"current\" models on the same day, so no current model is named here.",
-      "Exact launch dates of o1-preview (12 Sept 2024) and of o3/o4-mini (16 Apr 2025) beyond OpenAI's announcement titles — dates came from a search summary.",
       "Claims that o3 makes fewer errors than o1 or similar performance comparisons.",
       "Pricing.",
       "Whether the o-series retirement dates will hold; OpenAI revises schedules."

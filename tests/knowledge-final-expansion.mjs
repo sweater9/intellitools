@@ -44,6 +44,9 @@ for (const id of [...NEW, ...UPDATED_CHECKED]) {
   need(sc && sc.sources.length >= 1 && sc.sources.every((s) => /^https:\/\//.test(s.url) && s.title), id + ": source_check sources need title and https URL");
   need(sc && Array.isArray(sc.not_independently_verified) && sc.not_independently_verified.length >= 1, id + ": must list what could not be verified");
   need(e.canonical_sources.every((s) => s.verified === false), id + ": canonical_sources must stay unverified leads");
+  // Every checked source must be a clickable external link that opens safely.
+  const html = read(id + ".html");
+  for (const s of sc ? sc.sources : []) need(html.includes('<a href="' + s.url + '" rel="noopener noreferrer">'), id + ": source not rendered as a link: " + s.url);
   const t = text(id);
   need(/key claims checked on 2026-10-09/.test(t) && /not independently verified/.test(t), id + ": page must state the check date and what is not verified");
   need(!/\bverified\b\s*:\s*true/i.test(read(id + ".html")), id + ": must not claim verified:true");
