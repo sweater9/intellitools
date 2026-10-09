@@ -1,0 +1,52 @@
+name: Knowledge V3 macOS Browser QA
+
+on:
+  push:
+    branches: [qa/knowledge-v3-macos-browser]
+    paths:
+      - .github/workflows/knowledge-v3-macos-browser.yml
+      - qa/knowledge-v3-macos/**
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  browser:
+    runs-on: macos-14
+    timeout-minutes: 20
+    steps:
+      - name: Checkout QA harness
+        uses: actions/checkout@v4
+        with:
+          path: harness
+      - name: Checkout exact release application
+        uses: actions/checkout@v4
+        with:
+          ref: b2efe6f32b47743e22362284f4a30169ae0a12bd
+          path: app
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install pinned Playwright and actual engines
+        working-directory: harness
+        run: |
+          npm install --no-save --package-lock=false playwright@1.62.1
+          npx playwright install firefox webkit
+      - name: Verify release commit and run browsers
+        env:
+          QA_ROOT: ${{ github.workspace }}/app
+          QA_OUT: ${{ github.workspace }}/browser-results
+        run: |
+          mkdir -p "$QA_OUT"
+          git -C app rev-parse HEAD | tee "$QA_OUT/commit.txt"
+          test "$(git -C app rev-parse HEAD)" = b2efe6f32b47743e22362284f4a30169ae0a12bd
+          node harness/qa/knowledge-v3-macos/release-browser.cjs 2>&1 | tee "$QA_OUT/browser-run.log"
+      - name: Upload screenshots and browser logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: knowledge-v3-macos-browser-evidence
+          path: browser-results/
+          if-no-files-found: warn
+          retention-days: 14
