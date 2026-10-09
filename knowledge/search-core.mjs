@@ -68,6 +68,7 @@ function mentionedTechnologies(lexicon, query) {
 // This is deliberately narrow: technical context wins, so legitimate developer queries keep ranking normally.
 const AMBIGUOUS_CONTEXT = {
   transformers: { everyday: ["toy", "toys", "kids", "birthday", "robot", "robots"], technical: ["ai", "model", "models", "attention", "llm", "nlp", "machine learning", "neural"] },
+  ollama: { everyday: ["animal", "animals", "llama animal", "animal facts"], technical: ["model", "models", "llm", "local", "run", "install", "api", "inference", "ai"] },
   python: { everyday: ["pet", "snake", "mice", "reptile", "feed", "eat"], technical: ["code", "coding", "programming", "script", "pip", "django", "flask", "ai", "rag", "api"] },
   docker: { everyday: ["clothing", "clothes", "brand", "pants", "shoes"], technical: ["container", "containers", "image", "compose", "kubernetes", "devops", "deploy"] },
   rust: { everyday: ["bicycle", "chain", "corrosion", "remove rust"], technical: ["ownership", "borrowing", "cargo", "compiler", "programming", "code"] },
