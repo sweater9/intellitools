@@ -64,6 +64,26 @@ function mentionedTechnologies(lexicon, query) {
   return found;
 }
 
+// Guard overloaded technology names only when the query contains clear everyday-language context.
+// This is deliberately narrow: technical context wins, so legitimate developer queries keep ranking normally.
+const AMBIGUOUS_CONTEXT = {
+  transformers: { everyday: ["toy", "toys", "kids", "birthday", "robot"], technical: ["ai", "model", "models", "attention", "llm", "nlp", "machine learning", "neural"] },
+  python: { everyday: ["pet", "snake", "mice", "reptile", "feed", "eat"], technical: ["code", "coding", "programming", "script", "pip", "django", "flask", "ai", "rag", "api"] },
+  docker: { everyday: ["clothing", "clothes", "brand", "pants", "shoes"], technical: ["container", "containers", "image", "compose", "kubernetes", "devops", "deploy"] },
+  rust: { everyday: ["bicycle", "chain", "corrosion", "remove rust"], technical: ["ownership", "borrowing", "cargo", "compiler", "programming", "code"] },
+  java: { everyday: ["coffee", "beans", "espresso"], technical: ["spring", "api", "jdk", "jvm", "programming", "code"] },
+  tokens: { everyday: ["arcade", "collection", "coin"], technical: ["llm", "ai", "model", "context", "limit", "limits", "api", "tokenization"] },
+  react: { everyday: ["message", "politely", "emotion", "respond", "reaction"], technical: ["javascript", "typescript", "component", "state", "hook", "jsx", "frontend", "app", "chatbot"] }
+};
+
+function suppressAmbiguousTop(row, query) {
+  if (!row) return false;
+  const rule = AMBIGUOUS_CONTEXT[row.page.id];
+  if (!rule) return false;
+  if (rule.technical.some((phrase) => hasPhrase(query, phrase))) return false;
+  return rule.everyday.some((phrase) => hasPhrase(query, phrase));
+}
+
 function matchingGaps(lexicon, query) {
   return (lexicon.coverageGaps || []).filter((gap) =>
     (gap.phrases || []).some((phrase) => hasPhrase(query, phrase))
@@ -175,6 +195,7 @@ export function searchKnowledge(index, lexicon, rawQuery) {
   let top = ranked.find((row) => anchored(row) && row.score >= minSolid) || null;
   const topical = (row) => row && row.notes.some((note) => note.startsWith("intent:") || note.startsWith("concept:"));
   if (top && gaps.some((gap) => gap.demoteWithoutTopic) && !topical(top)) top = null;
+  if (suppressAmbiguousTop(top, query)) top = null;
   const solid = Boolean(top);
   const tools = matchingTools(lexicon, query, gaps);
 
