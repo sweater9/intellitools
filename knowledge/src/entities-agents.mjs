@@ -19,6 +19,22 @@ E('a2a-protocol', 'A2A (Agent2Agent) Protocol', 'protocol', P, {
   when: 'Consider when independently owned agents must interoperate; for in-process orchestration use your framework\'s native multi-agent features.',
   sources: [['A2A protocol specification and documentation', 'a2a-protocol.org (verify current canonical location)'], ['A2A project repository', 'github.com/a2aproject/A2A (verify)'], ['Google announcement of A2A (April 2025)', null]],
   fresh: 'volatile', tsc: ['Governance and hosting of the project (announced by Google; Linux Foundation involvement to be verified).', 'Agent-card path, field names and transport bindings by version.', 'SDK availability and maturity.', 'Industry adoption claims.'],
+  checked: {
+    date: '2026-10-09',
+    claims: [
+      'A2A was announced by Google on 9 April 2025 (Google Developers Blog).',
+      'The Linux Foundation announced the Agent2Agent project on 23 June 2025 as an open protocol created by Google, to be vendor neutral under its governance.',
+      'A Linux Foundation release of 9 April 2026 says the A2A project is hosted by the Linux Foundation, was originally developed by Google, and has more than 150 supporting organisations.',
+      'The specification repository lists 1.0.0 as the latest released version, defines JSON-RPC 2.0, gRPC and HTTP/REST bindings, and serves the agent card at /.well-known/agent-card.json (read 2026-10-09 in the earlier audit).'
+    ],
+    sources: [
+      ['Announcing the Agent2Agent Protocol (Google Developers Blog)', 'https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/'],
+      ['Linux Foundation launches the Agent2Agent Protocol project (23 June 2025)', 'https://www.linuxfoundation.org/press/linux-foundation-launches-the-agent2agent-protocol-project-to-enable-secure-intelligent-communication-between-ai-agents'],
+      ['A2A protocol surpasses 150 organizations (Linux Foundation, 9 April 2026)', 'https://www.linuxfoundation.org/press/a2a-protocol-surpasses-150-organizations-lands-in-major-cloud-platforms-and-sees-enterprise-production-use-in-first-year'],
+      ['A2A specification and repository', 'https://github.com/a2aproject/A2A']
+    ],
+    unverified: ['The 150-organisation figure is the project\'s own announcement, not independently verified.', 'SDK maturity and per-language availability.', 'Whether the 1.0.0 specification is still the latest release.']
+  },
   keywords: ['agent interoperability', 'agent card', 'delegation']
 }),
 
@@ -73,7 +89,7 @@ E('mcp-security', 'MCP Security Risks and Mitigations', 'technique', P, {
   aliases: ['MCP risks', 'tool poisoning', 'MCP prompt injection', 'secure MCP servers', 'MCP authorization', 'MCP best practices security', 'malicious MCP server', 'MCP supply chain', 'confused deputy MCP'],
   intents: ['assess whether an MCP server is safe', 'harden an MCP deployment'],
   questions: ['Is MCP secure?', 'What is tool poisoning in MCP?', 'How do I secure an MCP server?', 'Is it safe to install a community MCP server?', 'How should MCP authentication work?'],
-  pre: ['mcp', 'mcp-servers-and-clients', 'prompt-injection'], rel: ['ai-privacy-and-security', 'owasp-llm-top-10', 'agent-tools', 'api-authentication', 'ai-guardrails', 'a2a-protocol'],
+  pre: ['mcp', 'mcp-servers-and-clients', 'prompt-injection'], rel: ['mcp-authorization', 'ai-privacy-and-security', 'owasp-llm-top-10', 'agent-tools', 'api-authentication', 'ai-guardrails', 'a2a-protocol'],
   vs: [['prompt-injection', 'Prompt injection is the general attack class; MCP security is its application to a tool ecosystem and supply chain.']],
   tech: ['MCP specification security guidance', 'OAuth 2.x', 'sandboxing (containers, microVMs)', 'secret managers', 'allow-lists'],
   patterns: ['Vendor review and pinning of server versions/hashes.', 'Per-server least-privilege credentials, short-lived tokens.', 'Human confirmation for writes, deletes, payments and external sends.', 'Run local servers in a sandbox with restricted file/network access.', 'Log tool calls and review anomalies.'],
@@ -180,7 +196,7 @@ E('autogen', 'AutoGen (Microsoft)', 'framework', P, {
   aliases: ['AutoGen', 'autogen studio', 'microsoft autogen', 'autogen agents', 'AG2', 'conversable agent', 'group chat agents', 'Microsoft Agent Framework'],
   intents: ['evaluate AutoGen for multi-agent systems', 'work out which Microsoft agent framework is current'],
   questions: ['What is AutoGen?', 'AutoGen vs CrewAI vs LangGraph?', 'Is AutoGen still maintained?', 'What is the Microsoft Agent Framework?'],
-  pre: ['multi-agent-systems', 'ai-agents'], rel: ['semantic-kernel', 'agent-frameworks-compared', 'crewai', 'langgraph', 'code-execution-sandboxing'],
+  pre: ['multi-agent-systems', 'ai-agents'], rel: ['microsoft-agent-framework', 'migrate-to-microsoft-agent-framework', 'semantic-kernel', 'agent-frameworks-compared', 'crewai', 'langgraph', 'code-execution-sandboxing'],
   vs: [['langgraph', 'LangGraph is graph-state-machine oriented; AutoGen centres on agent conversations/events.'], ['crewai', 'CrewAI uses role/task crews; AutoGen uses conversational agent teams.']],
   tech: ['AutoGen (Python / .NET)', 'AutoGen Studio', 'Docker for code execution'],
   patterns: ['Assistant + code-executor agents with sandboxed execution.', 'Group chat with a manager selecting speakers.', 'Human proxy for approvals.'],
@@ -190,6 +206,19 @@ E('autogen', 'AutoGen (Microsoft)', 'framework', P, {
   when: 'For new projects, evaluate Microsoft Agent Framework (the stated successor) rather than starting on AutoGen; keep AutoGen for maintaining existing systems or reading earlier research code.',
   sources: [['Wu et al., AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation (2023)', 'arXiv:2308.08155'], ['AutoGen repository README (maintenance-mode notice)', 'github.com/microsoft/autogen'], ['Microsoft Agent Framework repository', 'github.com/microsoft/agent-framework']],
   fresh: 'volatile', tsc: ['Project status, forks (e.g. AG2), Microsoft agent-framework lineage and versions.', 'Package names and APIs.'],
+  checked: {
+    date: '2026-10-09',
+    claims: [
+      'The AutoGen README states AutoGen is in maintenance mode, will not receive new features or enhancements and is community managed.',
+      'It recommends Microsoft Agent Framework for new users and links the AutoGen migration guide; contributions are limited to bug fixes, security patches and documentation.',
+      'The AutoGen paper is arXiv:2308.08155 (resolved in the earlier citation audit).'
+    ],
+    sources: [
+      ['AutoGen README (maintenance-mode notice)', 'https://github.com/microsoft/autogen'],
+      ['AutoGen to Microsoft Agent Framework migration guide', 'https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-autogen/']
+    ],
+    unverified: ['Whether the maintenance-mode status changes later.', 'The relationship of community forks such as AG2 to Microsoft\'s project beyond the fact they are separate repositories.']
+  },
   keywords: ['multi-agent', 'conversation', 'microsoft']
 }),
 
@@ -222,7 +251,7 @@ E('semantic-kernel', 'Semantic Kernel', 'framework', P, {
   aliases: ['SK', 'Semantic Kernel SDK', 'semantic kernel plugins', 'microsoft semantic kernel', 'semantic kernel agents', 'semantic kernel C#'],
   intents: ['add LLM features to a .NET application', 'choose among Microsoft agent SDKs'],
   questions: ['What is Semantic Kernel?', 'Semantic Kernel vs LangChain?', 'How do plugins work in Semantic Kernel?', 'Is Semantic Kernel being replaced?'],
-  pre: ['function-calling', 'agent-tools'], rel: ['autogen', 'langchain', 'agent-frameworks-compared', 'azure-fundamentals', 'framework-vs-direct-api'],
+  pre: ['function-calling', 'agent-tools'], rel: ['microsoft-agent-framework', 'migrate-to-microsoft-agent-framework', 'autogen', 'langchain', 'agent-frameworks-compared', 'azure-fundamentals', 'framework-vs-direct-api'],
   vs: [['langchain', 'LangChain is Python/JS-first with broad community integrations; Semantic Kernel is Microsoft-stack oriented with first-class .NET.']],
   tech: ['Semantic Kernel (C#, Python, Java)', 'Azure OpenAI integrations', 'plugins'],
   patterns: ['Expose domain services as plugins with clear descriptions.', 'Use function-calling to let the model select plugins.', 'Keep permissions and auth in plugin code.'],
@@ -232,6 +261,17 @@ E('semantic-kernel', 'Semantic Kernel', 'framework', P, {
   when: 'Existing .NET/Microsoft-stack systems built on it; for new Microsoft-stack agent projects, compare with Microsoft Agent Framework, which Microsoft positions as the successor.',
   sources: [['Semantic Kernel documentation', 'learn.microsoft.com/semantic-kernel (verify)'], ['Semantic Kernel repository', 'github.com/microsoft/semantic-kernel']],
   fresh: 'volatile', tsc: ['Roadmap and relationship to other Microsoft agent frameworks.', 'Per-language feature support and versions.'],
+  checked: {
+    date: '2026-10-09',
+    claims: [
+      'The Semantic Kernel README states Microsoft Agent Framework is its enterprise-ready successor, available at version 1.0 as a production-ready release, and links a migration guide and an Agent Framework blog post.'
+    ],
+    sources: [
+      ['Semantic Kernel README (successor notice)', 'https://github.com/microsoft/semantic-kernel'],
+      ['Semantic Kernel and Microsoft Agent Framework (Agent Framework blog)', 'https://devblogs.microsoft.com/agent-framework/semantic-kernel-and-microsoft-agent-framework/']
+    ],
+    unverified: ['Per-language feature coverage and the long-term support policy for Semantic Kernel itself.', 'The contents of the migration guide.']
+  },
   keywords: ['.NET', 'plugins', 'Microsoft']
 }),
 
@@ -261,11 +301,11 @@ E('agent-frameworks-compared', 'AI Agent Frameworks Compared', 'concept', P, {
   summary: 'Agent frameworks differ in abstraction level, control, language and ecosystem. Compare by what you need — state control, retrieval, multi-agent, enterprise language — not by popularity.',
   short: 'Choose by **needs**: low-level control and persistence (graph/state-machine style), data/retrieval depth (RAG-first), fast role-based prototypes, .NET/enterprise integration, or plain SDK calls. Always verify current versions; the field changes monthly.',
   plain: `There is no single best agent framework. Some give you fine control, some get you a prototype fast, some are strongest at working with your documents. Often the simplest answer is a few direct API calls.`,
-  technical: `| Framework | Typical emphasis | Language(s) | Consider when |\n|---|---|---|---|\n| [[langchain]] | Broad integrations and components | Python, JS/TS | You need many connectors |\n| [[langgraph]] | Stateful graph orchestration, persistence, approvals | Python, JS/TS | You need control over loops |\n| [[llamaindex]] | Data ingestion, indexing, retrieval | Python, TS | RAG-centred work |\n| [[dspy]] | Programmatic pipelines with optimisation | Python | You have a metric and examples |\n| [[autogen]] | Conversational multi-agent (maintenance mode; successor: Microsoft Agent Framework) | Python, .NET | Maintaining existing AutoGen systems |\n| [[crewai]] | Role/task crews | Python | Fast role-based prototypes |\n| [[semantic-kernel]] | Enterprise SDK with plugins (successor named: Microsoft Agent Framework) | C#, Python, Java | Existing Microsoft-stack systems |\n| [[openai-agents-sdk]] | Lightweight primitives, handoffs, guardrails | Python, JavaScript/TypeScript | Building on that vendor's API (README describes it as provider-agnostic) |\n\nThis table is a neutral orientation, not a recommendation or ranking; feature claims need verification against current docs.`,
+  technical: `| Framework | Typical emphasis | Language(s) | Consider when |\n|---|---|---|---|\n| [[langchain]] | Broad integrations and components | Python, JS/TS | You need many connectors |\n| [[langgraph]] | Stateful graph orchestration, persistence, approvals | Python, JS/TS | You need control over loops |\n| [[llamaindex]] | Data ingestion, indexing, retrieval | Python, TS | RAG-centred work |\n| [[dspy]] | Programmatic pipelines with optimisation | Python | You have a metric and examples |\n| [[microsoft-agent-framework]] | Agents and graph-based workflows with checkpointing and human-in-the-loop; Microsoft's stated successor to AutoGen and Semantic Kernel ([[migrate-to-microsoft-agent-framework]]) | Python, .NET (Go in a separate repo) | New projects on the Microsoft stack or migrating from those two |\n| [[autogen]] | Conversational multi-agent (maintenance mode; successor: Microsoft Agent Framework) | Python, .NET | Maintaining existing AutoGen systems |\n| [[crewai]] | Role/task crews | Python | Fast role-based prototypes |\n| [[semantic-kernel]] | Enterprise SDK with plugins (successor named: Microsoft Agent Framework) | C#, Python, Java | Existing Microsoft-stack systems |\n| [[openai-agents-sdk]] | Lightweight primitives, handoffs, guardrails | Python, JavaScript/TypeScript | Building on that vendor's API (README describes it as provider-agnostic) |\n\nThis table is a neutral orientation, not a recommendation or ranking; feature claims need verification against current docs.`,
   aliases: ['which agent framework', 'best agent framework', 'LangGraph vs CrewAI vs AutoGen', 'agent framework comparison', 'what framework should I use for AI agents', 'LLM framework comparison', 'langchain alternatives'],
   intents: ['choose an agent framework', 'decide whether a framework is needed'],
   questions: ['Which AI agent framework should I use?', 'LangGraph vs CrewAI vs AutoGen?', 'Do I need an agent framework?', 'What are alternatives to LangChain?'],
-  pre: ['ai-agents', 'agentic-workflows'], rel: ['choosing-an-agent-framework', 'what-is-an-ai-framework', 'framework-vs-direct-api', 'multi-agent-systems', 'mcp', 'a2a-protocol'],
+  pre: ['ai-agents', 'agentic-workflows'], rel: ['microsoft-agent-framework', 'choosing-an-agent-framework', 'what-is-an-ai-framework', 'framework-vs-direct-api', 'multi-agent-systems', 'mcp', 'a2a-protocol'],
   vs: [['framework-vs-direct-api', 'The baseline alternative to any framework.']],
   tech: ['LangChain', 'LangGraph', 'LlamaIndex', 'DSPy', 'AutoGen', 'CrewAI', 'Semantic Kernel', 'OpenAI Agents SDK'],
   patterns: ['Prototype with direct SDK calls; adopt a framework when specific needs appear.', 'Wrap framework code behind your own interfaces.', 'Evaluate on your tasks, not demos.'],

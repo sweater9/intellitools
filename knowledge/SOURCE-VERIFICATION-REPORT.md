@@ -3,6 +3,7 @@
 - **Branch:** `audit/knowledge-v3-source-verification` (from `origin/feature/knowledge-integration-v3` @ `51ddf44`)
 - **Verification date:** 2026-10-09 · **Auditor:** independent review on this branch (Claude)
 - **Machine-readable record:** `knowledge/source-verification.json` (per page: status, freshness, claims, sources, dates, notes; full change log)
+- **Update 2026-10-09 (final content expansion, branch `agent/knowledge-v3-final-expansion`):** 10 pages added and 6 existing pages re-checked against primary sources; counts below include them. See `FINAL-CONTENT-EXPANSION-REPORT.md` for what was added, what could not be verified and the test results. The audit-branch text below is otherwise unchanged.
 - **Scope note:** the baseline has 260 pages (120 legacy pages + 140 V3 entity pages; 3 further V3 entities overlay legacy pages). The four red-team gap pages (kubernetes, object-detection, robot-operating-system, gdpr-and-ai) exist only on the red-team/semantic branches, not on this baseline, and were **not** audited.
 
 ## How to read the statuses
@@ -19,14 +20,14 @@
 
 | Measure | Count |
 |---|---|
-| Pages/entities reviewed (automated scan + citation check: all) | 260 pages (+3 overlay entities merged into their pages) |
-| Pages VERIFIED (key claims) | 51 |
+| Pages/entities reviewed (automated scan + citation check: all) | 270 pages (+3 overlay entities merged into their pages); 260 from the original audit + 10 added in the final content expansion |
+| Pages VERIFIED (key claims) | 62 (51 + 10 new pages + NIST AI RMF) |
 | Pages NEEDS CORRECTION (corrections proposed) | 19 |
-| Pages INSUFFICIENT EVIDENCE | 2 |
+| Pages INSUFFICIENT EVIDENCE | 1 |
 | Pages UNVERIFIED (no claim-level check) | 188 |
-| Pages flagged time-sensitive | 73 |
-| Claim records | 574 — VERIFIED 294, NEEDS CORRECTION 19, TIME-SENSITIVE 136, INSUFFICIENT EVIDENCE 3, UNVERIFIED 122 |
-| Corrections proposed (change-log entries) | 41 across 19 pages |
+| Pages flagged time-sensitive | 82 |
+| Claim records | 736 — VERIFIED 361, NEEDS CORRECTION 19, TIME-SENSITIVE 173, INSUFFICIENT EVIDENCE 61, UNVERIFIED 122 (the INSUFFICIENT EVIDENCE rows now also list claims that were deliberately left unchecked on the new and re-checked pages) |
+| Corrections proposed (change-log entries) | 52 across 25 pages (41 across 19 pages in the original audit; the rest are final-content-expansion entries tagged `pass: final-content-expansion`) |
 | Cited arXiv identifiers checked | 176 unique (206 citations): **176/176 resolve and titles match** |
 | Cited DOIs checked | 11/11 resolve and titles/authors match |
 | Fabricated or mismatched citations found | **0** |
@@ -34,13 +35,13 @@
 ## Highest-risk factual issues
 
 1. **EU AI Act timetable was out of date (legal).** The page referred only to "proposals to adjust timelines". Regulation (EU) 2026/1744 (Digital Omnibus on AI) was published in the OJ on 24 July 2026 and has applied since 27 July 2026: Annex III high-risk obligations move to 2 Dec 2027, Annex I to 2 Aug 2028, and a new prohibition was added. Corrected on this branch with dates; still orientation, not legal advice.
-2. **AutoGen and Semantic Kernel are no longer the recommended Microsoft path.** Both repositories now name **Microsoft Agent Framework** as the successor (AutoGen: maintenance mode). The pages and the framework comparison table told readers to "verify status". Corrected; there is no Microsoft Agent Framework page (coverage gap).
+2. **AutoGen and Semantic Kernel are no longer the recommended Microsoft path.** Both repositories now name **Microsoft Agent Framework** as the successor (AutoGen: maintenance mode). The pages and the framework comparison table told readers to "verify status". Corrected; a dedicated Microsoft Agent Framework page and an AutoGen/Semantic Kernel migration page were added in the final content expansion.
 3. **SPFx build instructions described only the legacy gulp toolchain.** From SPFx v1.22, new projects use Heft (`heft start`, `heft build --production`, `heft package-solution --production`, `heft trust-dev-cert`). Corrected on both SPFx pages, with gulp kept as the legacy path for v1.0–v1.21.1 and on-premises.
 4. **OWASP LLM Top 10 edition was out of date.** The 2026 edition (published 4 Aug 2026) was unknown to the page; category names changed (e.g. "Insecure Output Handling" → "Improper Output Handling"; "Hidden Context Exposure" in 2026). Corrected with the full 2026 list and edition-specific sources.
 5. **PRM vs ORM overgeneralised the evidence.** The page said Uesato et al. (2022) and Lightman et al. (2023) both favour process supervision; Uesato et al. found outcome supervision matches final-answer error with less labelling, and process supervision mattered for reasoning-step correctness. Corrected from the abstracts.
 6. **Most of the corpus is still unverified at claim level.** 188 of 260 pages had no claim-level check in this audit. All V3 entity pages already carry a visible "not independently verified" banner; the 120 legacy pages have no source section at all.
 7. **Understated or placeholder claims** (lower risk): GraphCast's published result was understated; ECMWF AIFS operational status, A2A governance/version, vLLM/Ray/MLflow/PyTorch governance, OpenAI Agents SDK language/provider support and AlphaFold 3 access terms were left as "verify" placeholders. All resolved with dated primary sources.
-8. **Coverage gaps for priority topics (nothing to verify, but users will look for them):** OpenAI o-series model names, NVIDIA Cosmos, Sora, Inspect (UK AI Security Institute), attention sinks, FlashAttention-3 details, Microsoft Agent Framework (no dedicated page). No page mentions OpenAI o-series models by name, NVIDIA Cosmos, Sora, Inspect or attention sinks, so no claims about them could be wrong — but they are absent.
+8. **Coverage gaps for priority topics — closed in the final content expansion:** OpenAI o-series model names and reasoning terminology, NVIDIA Cosmos, Sora, Inspect (UK AI Security Institute), attention sinks, FlashAttention-3 and Microsoft Agent Framework now have dedicated pages with dated source-check blocks (see `FINAL-CONTENT-EXPANSION-REPORT.md`). At audit time none of these existed, so there was nothing to verify.
 
 ## Taxonomy checks (all passed)
 
@@ -149,6 +150,21 @@ Every correction is a sourced, factual change in `knowledge/src/*.mjs`; generate
 - **RFC 8259, The JSON Data Interchange Format** — `rfc-editor.org/rfc/rfc8259` (source date: 2017-12)
 - **Anthropic, Building effective agents** — `anthropic.com/engineering/building-effective-agents` (source date: 2024-12-19)
 - **NVIDIA PhysicsNeMo README** — `github.com/NVIDIA/physicsnemo` (source date: read 2026-10-09)
+
+- **Microsoft Agent Framework README** — `github.com/microsoft/agent-framework` (source date: read 2026-10-09) *(final content expansion)*
+- **AutoGen to Microsoft Agent Framework Migration Guide** — `learn.microsoft.com/en-us/agent-framework/migration-guide/from-autogen/` (source date: read 2026-10-09) *(final content expansion)*
+- **MCP specification revision 2026-07-28 (Key Changes; Authorization overview; Client registration)** — `modelcontextprotocol.io/specification/2026-07-28/` (source date: read 2026-10-09) *(final content expansion)*
+- **Choose Gmail API scopes** — `developers.google.com/workspace/gmail/api/auth/scopes` (source date: read 2026-10-09) *(final content expansion)*
+- **Google Workspace user data and developer policy (last updated 2026-09-03)** — `developers.google.com/workspace/workspace-api-user-data-developer-policy` (source date: read 2026-10-09) *(final content expansion)*
+- **OpenAI Sora report, Sora 2 announcement, Sora discontinuation help article** — `openai.com/index/video-generation-models-as-world-simulators/; openai.com/index/sora-2/; help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation` (source date: read 2026-10-09) *(final content expansion)*
+- **NVIDIA Cosmos README and Cosmos-Predict2.5 README** — `github.com/NVIDIA/cosmos; github.com/nvidia-cosmos/cosmos-predict2.5` (source date: read 2026-10-09) *(final content expansion)*
+- **Inspect documentation index and READMEs (inspect_ai, inspect_evals)** — `inspect.aisi.org.uk/llms.txt; github.com/UKGovernmentBEIS/inspect_ai; github.com/UKGovernmentBEIS/inspect_evals` (source date: read 2026-10-09) *(final content expansion)*
+- **arXiv:2309.17453 Efficient Streaming Language Models with Attention Sinks** — `arxiv.org/abs/2309.17453` (source date: read 2026-10-09) *(final content expansion)*
+- **arXiv:2407.08608 FlashAttention-3 and flash-attention README** — `arxiv.org/abs/2407.08608; github.com/Dao-AILab/flash-attention` (source date: read 2026-10-09) *(final content expansion)*
+- **Regulation (EU) 2026/1744, EUR-Lex English text** — `eur-lex.europa.eu/eli/reg/2026/1744/oj/eng` (source date: read 2026-10-09) *(final content expansion)*
+- **NIST AI RMF page, AI 100-1 record, Playbook page** — `nist.gov/itl/ai-risk-management-framework` (source date: read 2026-10-09) *(final content expansion)*
+- **Linux Foundation A2A press releases (23 June 2025; 9 April 2026)** — `linuxfoundation.org/press/` (source date: read 2026-10-09) *(final content expansion)*
+- **OWASP GenAI LLM Top 10 2026 resource page** — `genai.owasp.org/resource/owasp-genai-llm-top-10-2026/` (source date: read 2026-10-09) *(final content expansion)*
 
 Fetch notes: arXiv, Crossref, GitHub raw files, OpenAI/Claude docs, ECMWF, OSI, ISO, NIST, Nobel, Linux Foundation, PyTorch and europa.eu pages were reached through the session's search/scrape tools; direct EUR-Lex HTML could not be rendered, so the OJ reference and dates come from europa.eu search results (EUR-Lex OJ entry, Commission news, Council document) — re-read the OJ text before any legal use.
 

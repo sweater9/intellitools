@@ -1370,6 +1370,7 @@
    ],
    "related": [
     "mcp-servers-and-clients",
+    "mcp-authorization",
     "mcp-vs-api",
     "function-calling-vs-mcp",
     "agent-tools",
@@ -1386,7 +1387,7 @@
     "When should I use it?",
     "Common mistakes"
    ],
-   "words": 560
+   "words": 616
   },
   {
    "id": "mcp-servers-and-clients",
@@ -1424,6 +1425,7 @@
    ],
    "related": [
     "mcp",
+    "mcp-authorization",
     "mcp-vs-api",
     "function-calling-vs-mcp",
     "agent-tools",
@@ -1439,7 +1441,7 @@
     "When should I use it?",
     "Common mistakes"
    ],
-   "words": 592
+   "words": 697
   },
   {
    "id": "rag-vs-fine-tuning",
@@ -2604,6 +2606,7 @@
    "related": [
     "connecting-agents-to-apps",
     "oauth-for-ai-agents",
+    "gmail-api-scopes-and-verification",
     "integration-permissions",
     "agent-tools",
     "function-calling",
@@ -2621,7 +2624,7 @@
     "Practical notes",
     "Common mistakes"
    ],
-   "words": 437
+   "words": 527
   },
   {
    "id": "oauth-for-ai-agents",
@@ -2646,6 +2649,7 @@
    ],
    "related": [
     "gmail-for-ai-agents",
+    "mcp-authorization",
     "connecting-agents-to-apps",
     "integration-permissions",
     "api-authentication",
@@ -2661,7 +2665,7 @@
     "Practical notes",
     "Common mistakes"
    ],
-   "words": 464
+   "words": 473
   },
   {
    "id": "integration-permissions",
@@ -5615,6 +5619,7 @@
     "entity_type": "concept",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -5668,6 +5673,7 @@
     "hugging face transformers"
    ],
    "related": [
+    "openai-reasoning-models",
     "test-time-compute",
     "chain-of-thought",
     "reasoning-transparency",
@@ -5684,6 +5690,7 @@
     "entity_type": "concept",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -5700,7 +5707,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 736
+   "words": 737
   },
   {
    "id": "chain-of-thought",
@@ -5746,6 +5753,7 @@
     "entity_type": "technique",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -5812,6 +5820,7 @@
     "entity_type": "concept",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -5871,6 +5880,7 @@
     "entity_type": "technique",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -5934,6 +5944,7 @@
     "entity_type": "technique",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -5995,6 +6006,7 @@
     "entity_type": "technique",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -6056,6 +6068,7 @@
     "entity_type": "model",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -6115,6 +6128,7 @@
     "entity_type": "model",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -6172,6 +6186,7 @@
     "entity_type": "concept",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -6238,6 +6253,7 @@
     "entity_type": "technique",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -6297,6 +6313,7 @@
     "entity_type": "technique",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -6354,6 +6371,7 @@
     "entity_type": "concept",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -6421,6 +6439,7 @@
     "entity_type": "concept",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -6489,6 +6508,7 @@
     "entity_type": "technique",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -6558,6 +6578,7 @@
     "entity_type": "concept",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -6615,6 +6636,7 @@
     "entity_type": "concept",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -6673,6 +6695,7 @@
     "entity_type": "technique",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -6730,6 +6753,7 @@
     "entity_type": "language",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -6787,6 +6811,7 @@
     "entity_type": "standard",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -6844,6 +6869,7 @@
     "entity_type": "library",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -6904,6 +6930,7 @@
     "entity_type": "concept",
     "freshness": "stable",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -6963,6 +6990,7 @@
     "entity_type": "concept",
     "freshness": "stable",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -7025,6 +7053,7 @@
     "entity_type": "technique",
     "freshness": "stable",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -7085,6 +7114,7 @@
     "entity_type": "concept",
     "freshness": "stable",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -7144,6 +7174,7 @@
     "entity_type": "concept",
     "freshness": "stable",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -7208,6 +7239,7 @@
     "entity_type": "technique",
     "freshness": "stable",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -7273,6 +7305,7 @@
     "entity_type": "concept",
     "freshness": "stable",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -7332,6 +7365,7 @@
     "entity_type": "technique",
     "freshness": "stable",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -7397,6 +7431,7 @@
     "entity_type": "concept",
     "freshness": "stable",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -7457,6 +7492,7 @@
     "entity_type": "concept",
     "freshness": "stable",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -7519,6 +7555,7 @@
     "entity_type": "technique",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -7577,6 +7614,7 @@
     "entity_type": "technique",
     "freshness": "stable",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -7639,6 +7677,7 @@
     "entity_type": "concept",
     "freshness": "stable",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -7699,6 +7738,7 @@
     "entity_type": "concept",
     "freshness": "stable",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -7758,6 +7798,7 @@
     "entity_type": "model",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -7812,6 +7853,7 @@
     "entity_type": "concept",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -7874,6 +7916,7 @@
     "entity_type": "technique",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -7934,6 +7977,7 @@
     "entity_type": "concept",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -7989,6 +8033,7 @@
     "entity_type": "concept",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -8054,6 +8099,7 @@
     "entity_type": "concept",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -8112,6 +8158,7 @@
     "entity_type": "concept",
     "freshness": "stable",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -8172,6 +8219,7 @@
     "entity_type": "concept",
     "freshness": "stable",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -8235,6 +8283,7 @@
     "entity_type": "concept",
     "freshness": "stable",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -8296,6 +8345,7 @@
     "entity_type": "concept",
     "freshness": "stable",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -8345,6 +8395,7 @@
     "tensorrt-llm"
    ],
    "related": [
+    "attention-sinks",
     "vllm",
     "prompt-caching",
     "flash-attention",
@@ -8359,6 +8410,7 @@
     "entity_type": "technique",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -8375,7 +8427,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 451
+   "words": 452
   },
   {
    "id": "flash-attention",
@@ -8407,6 +8459,8 @@
     "vllm"
    ],
    "related": [
+    "flashattention-3",
+    "attention-sinks",
     "kv-cache",
     "gpus-and-ai-accelerators",
     "distributed-training",
@@ -8419,6 +8473,7 @@
     "entity_type": "technique",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -8435,7 +8490,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 390
+   "words": 408
   },
   {
    "id": "positional-encoding",
@@ -8481,6 +8536,7 @@
     "entity_type": "technique",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -8540,6 +8596,7 @@
     "entity_type": "concept",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -8603,6 +8660,7 @@
     "entity_type": "technique",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -8670,6 +8728,7 @@
     "entity_type": "technique",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -8724,6 +8783,7 @@
     "entity_type": "concept",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -8795,6 +8855,7 @@
     "entity_type": "technique",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -8853,6 +8914,7 @@
     "entity_type": "technique",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -8913,6 +8975,7 @@
     "entity_type": "technique",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -8975,6 +9038,7 @@
     "entity_type": "concept",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -9038,6 +9102,7 @@
     "entity_type": "concept",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -9103,6 +9168,7 @@
     "entity_type": "concept",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -9165,6 +9231,7 @@
     "entity_type": "model",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -9230,6 +9297,7 @@
     "entity_type": "concept",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -9295,6 +9363,7 @@
     "entity_type": "concept",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -9342,6 +9411,8 @@
    ],
    "related": [
     "world-models",
+    "sora-ai-video",
+    "nvidia-cosmos",
     "c2pa-content-provenance",
     "ai-governance",
     "vision-language-models",
@@ -9353,6 +9424,7 @@
     "entity_type": "concept",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -9369,7 +9441,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 430
+   "words": 486
   },
   {
    "id": "a2a-protocol",
@@ -9417,7 +9489,8 @@
    "entity": {
     "entity_type": "protocol",
     "freshness": "volatile",
-    "verification_status": "needs-verification",
+    "verification_status": "key-claims-checked",
+    "checked_date": "2026-10-09",
     "parent": null
    },
    "headings": [
@@ -9434,7 +9507,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 660
+   "words": 853
   },
   {
    "id": "agent-protocol-landscape",
@@ -9479,6 +9552,7 @@
     "entity_type": "concept",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -9534,6 +9608,7 @@
     "entity_type": "concept",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -9586,6 +9661,7 @@
     "allow-lists"
    ],
    "related": [
+    "mcp-authorization",
     "ai-privacy-and-security",
     "owasp-llm-top-10",
     "agent-tools",
@@ -9601,6 +9677,7 @@
     "entity_type": "technique",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -9617,7 +9694,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 552
+   "words": 553
   },
   {
    "id": "langgraph",
@@ -9660,6 +9737,7 @@
     "entity_type": "framework",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -9719,6 +9797,7 @@
     "entity_type": "framework",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -9767,6 +9846,8 @@
     "docker for code execution"
    ],
    "related": [
+    "microsoft-agent-framework",
+    "migrate-to-microsoft-agent-framework",
     "semantic-kernel",
     "agent-frameworks-compared",
     "crewai",
@@ -9779,7 +9860,8 @@
    "entity": {
     "entity_type": "framework",
     "freshness": "volatile",
-    "verification_status": "needs-verification",
+    "verification_status": "key-claims-checked",
+    "checked_date": "2026-10-09",
     "parent": null
    },
    "headings": [
@@ -9796,7 +9878,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 516
+   "words": 640
   },
   {
    "id": "crewai",
@@ -9838,6 +9920,7 @@
     "entity_type": "framework",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -9883,6 +9966,8 @@
     "azure openai integrations"
    ],
    "related": [
+    "microsoft-agent-framework",
+    "migrate-to-microsoft-agent-framework",
     "autogen",
     "langchain",
     "agent-frameworks-compared",
@@ -9895,7 +9980,8 @@
    "entity": {
     "entity_type": "framework",
     "freshness": "volatile",
-    "verification_status": "needs-verification",
+    "verification_status": "key-claims-checked",
+    "checked_date": "2026-10-09",
     "parent": null
    },
    "headings": [
@@ -9912,7 +9998,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 473
+   "words": 568
   },
   {
    "id": "openai-agents-sdk",
@@ -9954,6 +10040,7 @@
     "entity_type": "framework",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -10005,6 +10092,7 @@
     "openai agents sdk"
    ],
    "related": [
+    "microsoft-agent-framework",
     "choosing-an-agent-framework",
     "what-is-an-ai-framework",
     "framework-vs-direct-api",
@@ -10019,6 +10107,7 @@
     "entity_type": "concept",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -10035,7 +10124,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 553
+   "words": 595
   },
   {
    "id": "vllm",
@@ -10084,6 +10173,7 @@
     "entity_type": "runtime",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -10148,6 +10238,7 @@
     "entity_type": "runtime",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -10209,6 +10300,7 @@
     "entity_type": "runtime",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -10273,6 +10365,7 @@
     "entity_type": "runtime",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -10338,6 +10431,7 @@
     "entity_type": "framework",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -10399,6 +10493,7 @@
     "entity_type": "concept",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -10460,6 +10555,7 @@
     "entity_type": "technique",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -10521,6 +10617,7 @@
     "entity_type": "technique",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -10586,6 +10683,7 @@
     "entity_type": "concept",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -10649,6 +10747,7 @@
     "entity_type": "technique",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -10717,6 +10816,7 @@
     "entity_type": "technique",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -10779,6 +10879,7 @@
     "entity_type": "technique",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -10844,6 +10945,7 @@
     "entity_type": "technique",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -10913,6 +11015,7 @@
     "entity_type": "concept",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -10983,6 +11086,7 @@
     "entity_type": "concept",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -11045,6 +11149,7 @@
     "entity_type": "concept",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -11111,6 +11216,7 @@
     "entity_type": "technique",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -11172,6 +11278,7 @@
     "entity_type": "technique",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -11231,6 +11338,7 @@
     "entity_type": "benchmark",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -11292,6 +11400,7 @@
     "entity_type": "benchmark",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -11352,6 +11461,7 @@
     "entity_type": "benchmark",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -11411,6 +11521,7 @@
     "entity_type": "benchmark",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -11467,6 +11578,7 @@
     "entity_type": "concept",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -11541,6 +11653,7 @@
     "entity_type": "technique",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -11594,6 +11707,7 @@
     "tracing tools"
    ],
    "related": [
+    "inspect-ai-evaluation-framework",
     "llm-as-a-judge",
     "swe-bench",
     "react-agent-pattern",
@@ -11608,6 +11722,7 @@
     "entity_type": "technique",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -11624,7 +11739,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 457
+   "words": 458
   },
   {
    "id": "evaluation-metrics-for-ai",
@@ -11674,6 +11789,7 @@
     "entity_type": "concept",
     "freshness": "stable",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -11742,6 +11858,7 @@
     "entity_type": "concept",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -11811,6 +11928,7 @@
     "entity_type": "concept",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -11880,6 +11998,7 @@
     "entity_type": "concept",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -11948,6 +12067,7 @@
     "entity_type": "technique",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -12021,6 +12141,7 @@
     "entity_type": "technique",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -12086,6 +12207,7 @@
     "entity_type": "concept",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -12146,6 +12268,7 @@
     "entity_type": "technique",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -12213,6 +12336,7 @@
     "entity_type": "technique",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -12272,6 +12396,7 @@
     "entity_type": "platform",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -12335,6 +12460,7 @@
     "entity_type": "framework",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -12398,6 +12524,7 @@
     "entity_type": "database",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -12468,6 +12595,7 @@
     "entity_type": "concept",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -12540,6 +12668,7 @@
     "entity_type": "concept",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -12614,6 +12743,7 @@
     "entity_type": "technique",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": "preference-optimization"
    },
    "headings": [
@@ -12672,6 +12802,7 @@
     "entity_type": "concept",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -12740,6 +12871,7 @@
     "entity_type": "technique",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -12802,6 +12934,7 @@
     "entity_type": "technique",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -12867,6 +13000,7 @@
     "entity_type": "concept",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -12929,6 +13063,7 @@
     "entity_type": "concept",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -12996,6 +13131,7 @@
     "entity_type": "technique",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -13064,6 +13200,7 @@
     "entity_type": "technique",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -13133,6 +13270,7 @@
     "entity_type": "technique",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -13198,6 +13336,7 @@
     "entity_type": "concept",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -13267,6 +13406,7 @@
     "entity_type": "concept",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -13332,7 +13472,8 @@
    "entity": {
     "entity_type": "regulation",
     "freshness": "volatile",
-    "verification_status": "needs-verification",
+    "verification_status": "key-claims-checked",
+    "checked_date": "2026-10-09",
     "parent": null
    },
    "headings": [
@@ -13349,7 +13490,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 658
+   "words": 915
   },
   {
    "id": "nist-ai-rmf",
@@ -13392,7 +13533,8 @@
    "entity": {
     "entity_type": "standard",
     "freshness": "volatile",
-    "verification_status": "needs-verification",
+    "verification_status": "key-claims-checked",
+    "checked_date": "2026-10-09",
     "parent": null
    },
    "headings": [
@@ -13409,7 +13551,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 460
+   "words": 734
   },
   {
    "id": "iso-iec-42001",
@@ -13452,6 +13594,7 @@
     "entity_type": "standard",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -13514,6 +13657,7 @@
     "entity_type": "standard",
     "freshness": "stable",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -13578,6 +13722,7 @@
     "entity_type": "standard",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -13640,7 +13785,8 @@
    "entity": {
     "entity_type": "standard",
     "freshness": "volatile",
-    "verification_status": "needs-verification",
+    "verification_status": "key-claims-checked",
+    "checked_date": "2026-10-09",
     "parent": null
    },
    "headings": [
@@ -13657,7 +13803,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 476
+   "words": 629
   },
   {
    "id": "ai-for-science",
@@ -13705,6 +13851,7 @@
     "entity_type": "concept",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -13770,6 +13917,7 @@
     "entity_type": "model",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -13835,6 +13983,7 @@
     "entity_type": "technique",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -13899,6 +14048,7 @@
     "entity_type": "concept",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -13964,6 +14114,7 @@
     "entity_type": "concept",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -14028,6 +14179,7 @@
     "entity_type": "concept",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -14095,6 +14247,7 @@
     "entity_type": "concept",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -14165,6 +14318,7 @@
     "entity_type": "model",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -14221,6 +14375,8 @@
     "embodied-ai",
     "vision-language-action-models",
     "video-generation-models",
+    "nvidia-cosmos",
+    "sora-ai-video",
     "diffusion-models",
     "markov-decision-processes",
     "sim-to-real-transfer",
@@ -14232,6 +14388,7 @@
     "entity_type": "concept",
     "freshness": "volatile",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -14248,7 +14405,7 @@
     "Questions this page answers",
     "Sources and verification"
    ],
-   "words": 564
+   "words": 589
   },
   {
    "id": "imitation-learning",
@@ -14297,6 +14454,7 @@
     "entity_type": "technique",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -14362,6 +14520,7 @@
     "entity_type": "technique",
     "freshness": "evolving",
     "verification_status": "needs-verification",
+    "checked_date": null,
     "parent": null
    },
    "headings": [
@@ -14379,6 +14538,745 @@
     "Sources and verification"
    ],
    "words": 461
+  },
+  {
+   "id": "microsoft-agent-framework",
+   "url": "knowledge/microsoft-agent-framework.html",
+   "title": "Microsoft Agent Framework",
+   "type": "concept",
+   "group": "Agent Protocols, Frameworks & Runtimes",
+   "question": "What is Microsoft Agent Framework?",
+   "summary": "Microsoft Agent Framework (MAF) is Microsoft's open-source framework for building agents and multi-agent workflows in .NET and Python, positioned by Microsoft as the successor to both AutoGen and Semantic Kernel.",
+   "aliases": [
+    "Microsoft Agent Framework",
+    "MAF Microsoft",
+    "Microsoft.Agents.AI",
+    "AutoGen successor",
+    "Semantic Kernel successor",
+    "Is Microsoft Agent Framework the replacement for AutoGen and Semantic Kernel",
+    "Does Microsoft Agent Framework support Python and .NET",
+    "How do I build a workflow in Microsoft Agent Framework",
+    "Is Microsoft Agent Framework production ready"
+   ],
+   "keywords": [
+    "microsoft agent framework",
+    "dotnet",
+    "foundry",
+    "python (agent-framework)",
+    ".net (microsoft.agents.ai)",
+    "microsoft foundry",
+    "azure openai",
+    "openai",
+    "opentelemetry",
+    "mcp",
+    "a2a",
+    "devui"
+   ],
+   "related": [
+    "migrate-to-microsoft-agent-framework",
+    "autogen",
+    "semantic-kernel",
+    "agent-frameworks-compared",
+    "choosing-an-agent-framework",
+    "mcp",
+    "a2a-protocol",
+    "multi-agent-systems",
+    "agentic-workflows",
+    "llm-observability",
+    "azure-fundamentals",
+    "ai-agents",
+    "function-calling"
+   ],
+   "relatedTools": [],
+   "entity": {
+    "entity_type": "framework",
+    "freshness": "volatile",
+    "verification_status": "key-claims-checked",
+    "checked_date": "2026-10-09",
+    "parent": null
+   },
+   "headings": [
+    "What is it?",
+    "Technical definition",
+    "When should I use it?",
+    "Prerequisites and related concepts",
+    "Implementation patterns",
+    "Technologies and frameworks",
+    "Practical guide",
+    "Common failure modes",
+    "Troubleshooting",
+    "Contrasted with",
+    "Questions this page answers",
+    "Sources and verification"
+   ],
+   "words": 1165
+  },
+  {
+   "id": "migrate-to-microsoft-agent-framework",
+   "url": "knowledge/migrate-to-microsoft-agent-framework.html",
+   "title": "Migrating from AutoGen or Semantic Kernel to Microsoft Agent Framework",
+   "type": "comparison",
+   "group": "Agent Protocols, Frameworks & Runtimes",
+   "question": "How do I migrate from AutoGen to Microsoft Agent Framework?",
+   "summary": "A practical map for moving AutoGen or Semantic Kernel code to Microsoft Agent Framework: what stays the same, what changes (teams become workflows, FunctionTool becomes @tool), and how to migrate in safe steps.",
+   "aliases": [
+    "AutoGen to Agent Framework migration",
+    "Semantic Kernel to Agent Framework migration",
+    "migrate AutoGen",
+    "migrate Semantic Kernel",
+    "AutoGen migration guide",
+    "AssistantAgent to Agent",
+    "GraphFlow to Workflow",
+    "AutoGen vs Microsoft Agent Framework",
+    "upgrade from AutoGen",
+    "How do I migrate from Semantic Kernel to Microsoft Agent Framework",
+    "What replaces AutoGen's AssistantAgent and Team",
+    "What is the difference between AutoGen GraphFlow and Agent Framework Workflow",
+    "Should I migrate an existing AutoGen project"
+   ],
+   "keywords": [
+    "migration",
+    "autogen",
+    "semantic kernel",
+    "assistantagent → agent",
+    "functiontool → @tool",
+    "team / graphflow → workflow",
+    "agentsession",
+    "mcp tools",
+    "opentelemetry"
+   ],
+   "related": [
+    "agent-frameworks-compared",
+    "multi-agent-systems",
+    "agentic-workflows",
+    "mcp",
+    "agent-evaluation",
+    "autogen",
+    "semantic-kernel",
+    "microsoft-agent-framework"
+   ],
+   "relatedTools": [],
+   "entity": {
+    "entity_type": "technique",
+    "freshness": "volatile",
+    "verification_status": "key-claims-checked",
+    "checked_date": "2026-10-09",
+    "parent": null
+   },
+   "headings": [
+    "What is it?",
+    "Technical definition",
+    "When should I use it?",
+    "Prerequisites and related concepts",
+    "Implementation patterns",
+    "Technologies and frameworks",
+    "Practical guide",
+    "Common failure modes",
+    "Troubleshooting",
+    "Contrasted with",
+    "Questions this page answers",
+    "Sources and verification"
+   ],
+   "words": 1149
+  },
+  {
+   "id": "mcp-authorization",
+   "url": "knowledge/mcp-authorization.html",
+   "title": "MCP Authorization (OAuth for MCP Servers)",
+   "type": "concept",
+   "group": "Agent Protocols, Frameworks & Runtimes",
+   "question": "How does authorization work in MCP?",
+   "summary": "MCP authorization lets a client call a protected remote MCP server using OAuth 2.1: the server publishes protected-resource metadata, the client discovers the authorization server, requests a token bound to that server, and sends it as a bearer token on every request.",
+   "aliases": [
+    "MCP OAuth",
+    "MCP authorization",
+    "MCP auth",
+    "OAuth for MCP servers",
+    "protected resource metadata",
+    "RFC 9728",
+    "RFC 8707 resource indicators",
+    "client ID metadata documents",
+    "MCP remote server authentication",
+    "MCP bearer token",
+    "How do I add OAuth to an MCP server",
+    "What is protected resource metadata in MCP",
+    "Why does MCP use the resource parameter",
+    "Do stdio MCP servers use OAuth",
+    "What is token passthrough and why is it forbidden in MCP"
+   ],
+   "keywords": [
+    "oauth",
+    "bearer token",
+    "resource server",
+    "audience",
+    "oauth 2.1 (ietf draft)",
+    "rfc 9728 protected resource metadata",
+    "rfc 8414 / oidc discovery",
+    "rfc 8707 resource indicators",
+    "rfc 9207 issuer identification",
+    "client id metadata documents",
+    "pkce"
+   ],
+   "related": [
+    "mcp-security",
+    "mcp-servers-and-clients",
+    "oauth-for-ai-agents",
+    "openid-connect",
+    "authentication-vs-authorization",
+    "json-web-tokens",
+    "integration-permissions",
+    "microsoft-entra-id",
+    "mcp",
+    "oauth",
+    "api-authentication"
+   ],
+   "relatedTools": [],
+   "entity": {
+    "entity_type": "protocol",
+    "freshness": "volatile",
+    "verification_status": "key-claims-checked",
+    "checked_date": "2026-10-09",
+    "parent": null
+   },
+   "headings": [
+    "What is it?",
+    "Technical definition",
+    "When should I use it?",
+    "Prerequisites and related concepts",
+    "Implementation patterns",
+    "Technologies and frameworks",
+    "Practical guide",
+    "Common failure modes",
+    "Troubleshooting",
+    "Contrasted with",
+    "Questions this page answers",
+    "Sources and verification"
+   ],
+   "words": 1267
+  },
+  {
+   "id": "gmail-api-scopes-and-verification",
+   "url": "knowledge/gmail-api-scopes-and-verification.html",
+   "title": "Gmail API Scopes and Verification",
+   "type": "concept",
+   "group": "Integrations",
+   "question": "Which Gmail scope should my AI agent use?",
+   "summary": "Gmail API scopes fall into non-sensitive, sensitive and restricted classes. Restricted scopes (including gmail.readonly) require OAuth app verification, a security assessment if you store the data on servers, and Google's Limited Use rules, which bar using that data to train generalised AI models.",
+   "aliases": [
+    "Gmail restricted scopes",
+    "gmail.readonly restricted",
+    "Gmail OAuth scopes",
+    "Google OAuth app verification",
+    "Google security assessment CASA",
+    "Limited Use policy Gmail",
+    "Google user data policy AI training",
+    "Gmail API permissions for agents",
+    "Gmail scope for sending only",
+    "Is gmail.readonly a restricted scope",
+    "Do I need a security assessment for a Gmail AI app",
+    "Can I use Gmail data to train an AI model",
+    "What is the Google Limited Use policy"
+   ],
+   "keywords": [
+    "gmail",
+    "restricted scope",
+    "verification",
+    "limited use",
+    "gmail api",
+    "google oauth 2.0",
+    "restricted-scope verification",
+    "limited use policy"
+   ],
+   "related": [
+    "integration-permissions",
+    "ai-privacy-and-security",
+    "connecting-agents-to-apps",
+    "prompt-injection",
+    "ai-governance",
+    "mcp-authorization",
+    "agent-tools",
+    "oauth-for-ai-agents",
+    "gmail-for-ai-agents"
+   ],
+   "relatedTools": [],
+   "entity": {
+    "entity_type": "standard",
+    "freshness": "volatile",
+    "verification_status": "key-claims-checked",
+    "checked_date": "2026-10-09",
+    "parent": null
+   },
+   "headings": [
+    "What is it?",
+    "Technical definition",
+    "When should I use it?",
+    "Prerequisites and related concepts",
+    "Implementation patterns",
+    "Technologies and frameworks",
+    "Practical guide",
+    "Common failure modes",
+    "Troubleshooting",
+    "Contrasted with",
+    "Questions this page answers",
+    "Sources and verification"
+   ],
+   "words": 1183
+  },
+  {
+   "id": "inspect-ai-evaluation-framework",
+   "url": "knowledge/inspect-ai-evaluation-framework.html",
+   "title": "Inspect (UK AI Security Institute Evaluation Framework)",
+   "type": "concept",
+   "group": "Evaluation & Benchmarks",
+   "question": "What is Inspect from the UK AI Security Institute?",
+   "summary": "Inspect is an open-source Python framework from the UK AI Security Institute for running LLM evaluations: you define a task from a dataset, a solver and a scorer, and Inspect runs it against any supported model and logs everything for review.",
+   "aliases": [
+    "Inspect AI",
+    "inspect_ai",
+    "UK AISI Inspect",
+    "AI Security Institute Inspect",
+    "Inspect evals",
+    "inspect_evals",
+    "Inspect framework",
+    "UK AI Safety Institute evaluation framework",
+    "AISI evals",
+    "How do I write an evaluation in Inspect",
+    "What are solvers and scorers in Inspect",
+    "How does Inspect sandbox agent tools",
+    "Where do I find ready-made Inspect evaluations"
+   ],
+   "keywords": [
+    "evals",
+    "solver",
+    "scorer",
+    "sandbox",
+    "AISI",
+    "inspect_ai (python)",
+    "inspect evals",
+    "inspect view",
+    "vs code extension",
+    "docker-based sandboxes",
+    "model providers via a uniform api"
+   ],
+   "related": [
+    "agent-evaluation",
+    "llm-as-a-judge",
+    "code-execution-sandboxing",
+    "red-teaming",
+    "benchmarks-and-leaderboards",
+    "benchmark-contamination",
+    "evaluation-metrics-for-ai",
+    "swe-bench",
+    "humaneval",
+    "mmlu",
+    "mcp",
+    "ai-governance",
+    "ai-evaluation",
+    "llm-benchmarks-vs-task-evals"
+   ],
+   "relatedTools": [],
+   "entity": {
+    "entity_type": "framework",
+    "freshness": "volatile",
+    "verification_status": "key-claims-checked",
+    "checked_date": "2026-10-09",
+    "parent": null
+   },
+   "headings": [
+    "What is it?",
+    "Technical definition",
+    "When should I use it?",
+    "Prerequisites and related concepts",
+    "Implementation patterns",
+    "Technologies and frameworks",
+    "Practical guide",
+    "Common failure modes",
+    "Troubleshooting",
+    "Contrasted with",
+    "Questions this page answers",
+    "Sources and verification"
+   ],
+   "words": 1157
+  },
+  {
+   "id": "openai-reasoning-models",
+   "url": "knowledge/openai-reasoning-models.html",
+   "title": "OpenAI Reasoning Models: o-series, Effort, Reasoning Tokens and Deprecations",
+   "type": "concept",
+   "group": "Reasoning & Test-Time Compute",
+   "question": "What are OpenAI reasoning models?",
+   "summary": "OpenAI's reasoning models think before answering. The API bills hidden reasoning tokens as output, lets you set a reasoning effort and request a summary (never the raw reasoning), and older o-series models are being retired on published dates.",
+   "aliases": [
+    "OpenAI o1",
+    "OpenAI o3",
+    "o4-mini",
+    "o-series models",
+    "OpenAI reasoning models",
+    "reasoning tokens",
+    "reasoning effort",
+    "reasoning summary",
+    "reasoning_effort parameter",
+    "o1-preview",
+    "o3-mini",
+    "GPT-5 thinking",
+    "o1 deprecation",
+    "o3 deprecation",
+    "max_output_tokens reasoning",
+    "hidden reasoning tokens billed",
+    "What are reasoning tokens and how are they billed",
+    "What does reasoning effort do in the OpenAI API",
+    "Can I see the raw chain of thought from an OpenAI reasoning model",
+    "When are o1, o3 and o4-mini being shut down",
+    "Why did my reasoning model return an empty answer"
+   ],
+   "keywords": [
+    "o1",
+    "o3",
+    "o4-mini",
+    "reasoning effort",
+    "reasoning tokens",
+    "responses api",
+    "reasoning.effort",
+    "reasoning summaries",
+    "usage.output_tokens_details.reasoning_tokens",
+    "max_output_tokens",
+    "persisted reasoning items"
+   ],
+   "related": [
+    "reasoning-vs-standard-models",
+    "thinking-budgets",
+    "test-time-compute",
+    "reasoning-transparency",
+    "chain-of-thought",
+    "reinforcement-learning-for-reasoning",
+    "llm-cost-optimization",
+    "model-apis",
+    "context-windows",
+    "openai-agents-sdk",
+    "function-calling",
+    "reasoning-models",
+    "tokens",
+    "large-language-models"
+   ],
+   "relatedTools": [],
+   "entity": {
+    "entity_type": "model",
+    "freshness": "volatile",
+    "verification_status": "key-claims-checked",
+    "checked_date": "2026-10-09",
+    "parent": null
+   },
+   "headings": [
+    "What is it?",
+    "Technical definition",
+    "When should I use it?",
+    "Prerequisites and related concepts",
+    "Implementation patterns",
+    "Technologies and frameworks",
+    "Practical guide",
+    "Common failure modes",
+    "Troubleshooting",
+    "Contrasted with",
+    "Questions this page answers",
+    "Sources and verification"
+   ],
+   "words": 1248
+  },
+  {
+   "id": "sora-ai-video",
+   "url": "knowledge/sora-ai-video.html",
+   "title": "Sora (OpenAI Video Generation) and Its Discontinuation",
+   "type": "concept",
+   "group": "Multimodal AI",
+   "question": "What is Sora?",
+   "summary": "Sora was OpenAI's text-to-video model family. Sora 2 launched on 30 September 2025 with synchronised audio; OpenAI says the Sora product was discontinued on 26 April 2026 and scheduled the API's shutdown for 24 September 2026.",
+   "aliases": [
+    "Sora",
+    "OpenAI Sora",
+    "Sora 2",
+    "sora-2",
+    "Sora API",
+    "Videos API",
+    "OpenAI video generation",
+    "Sora shutdown",
+    "Sora discontinued",
+    "Sora alternatives",
+    "text to video OpenAI",
+    "video generation models as world simulators",
+    "Is Sora still available",
+    "When is the Sora API shutting down",
+    "How did Sora generate video",
+    "What replaces the Sora API",
+    "How do I export my Sora videos"
+   ],
+   "keywords": [
+    "sora",
+    "text-to-video",
+    "discontinued",
+    "video api",
+    "diffusion transformer",
+    "spacetime patches",
+    "synchronised audio generation"
+   ],
+   "related": [
+    "world-models",
+    "nvidia-cosmos",
+    "multimodal-ai",
+    "c2pa-content-provenance",
+    "ai-governance",
+    "transformers",
+    "model-apis",
+    "open-weights-models",
+    "diffusion-models",
+    "video-generation-models"
+   ],
+   "relatedTools": [],
+   "entity": {
+    "entity_type": "model",
+    "freshness": "volatile",
+    "verification_status": "key-claims-checked",
+    "checked_date": "2026-10-09",
+    "parent": null
+   },
+   "headings": [
+    "What is it?",
+    "Technical definition",
+    "When should I use it?",
+    "Prerequisites and related concepts",
+    "Implementation patterns",
+    "Technologies and frameworks",
+    "Practical guide",
+    "Common failure modes",
+    "Troubleshooting",
+    "Contrasted with",
+    "Questions this page answers",
+    "Sources and verification"
+   ],
+   "words": 1104
+  },
+  {
+   "id": "nvidia-cosmos",
+   "url": "knowledge/nvidia-cosmos.html",
+   "title": "NVIDIA Cosmos (World Foundation Models for Physical AI)",
+   "type": "concept",
+   "group": "Robotics & Embodied AI",
+   "question": "What is NVIDIA Cosmos?",
+   "summary": "NVIDIA Cosmos is an open platform of world foundation models for physical AI — robots, autonomous vehicles and smart spaces. Cosmos 3 combines a reasoner and a generator in one omnimodal family released in three sizes.",
+   "aliases": [
+    "NVIDIA Cosmos",
+    "Cosmos 3",
+    "Cosmos world foundation models",
+    "Cosmos WFM",
+    "Cosmos Predict",
+    "Cosmos Transfer",
+    "Cosmos Reason",
+    "Cosmos3-Super",
+    "Cosmos3-Nano",
+    "Cosmos3-Edge",
+    "physical AI foundation models",
+    "world foundation model NVIDIA",
+    "What are world foundation models",
+    "What is the difference between Cosmos Reasoner and Generator",
+    "Which Cosmos 3 model size should I use",
+    "Is Cosmos open source",
+    "Can Cosmos be used for autonomous vehicles"
+   ],
+   "keywords": [
+    "cosmos",
+    "world foundation model",
+    "physical AI",
+    "nvidia",
+    "cosmos 3 (super/nano/edge)",
+    "cosmos framework",
+    "cosmos curator",
+    "cosmos evaluator",
+    "hugging face diffusers",
+    "vllm / vllm-omni / nim",
+    "paibench",
+    "physics-iq"
+   ],
+   "related": [
+    "video-generation-models",
+    "sora-ai-video",
+    "vision-language-action-models",
+    "sim-to-real-transfer",
+    "imitation-learning",
+    "multimodal-ai",
+    "mixture-of-experts",
+    "gpus-and-ai-accelerators",
+    "vllm",
+    "open-weights-models",
+    "physics-informed-neural-networks",
+    "world-models",
+    "embodied-ai",
+    "diffusion-models"
+   ],
+   "relatedTools": [],
+   "entity": {
+    "entity_type": "platform",
+    "freshness": "volatile",
+    "verification_status": "key-claims-checked",
+    "checked_date": "2026-10-09",
+    "parent": null
+   },
+   "headings": [
+    "What is it?",
+    "Technical definition",
+    "When should I use it?",
+    "Prerequisites and related concepts",
+    "Implementation patterns",
+    "Technologies and frameworks",
+    "Practical guide",
+    "Common failure modes",
+    "Troubleshooting",
+    "Contrasted with",
+    "Questions this page answers",
+    "Sources and verification"
+   ],
+   "words": 1116
+  },
+  {
+   "id": "attention-sinks",
+   "url": "knowledge/attention-sinks.html",
+   "title": "Attention Sinks and StreamingLLM",
+   "type": "concept",
+   "group": "Model Architectures",
+   "question": "What is an attention sink?",
+   "summary": "Attention sinks are the first few tokens of a sequence that transformers attend to heavily even when they carry little meaning. StreamingLLM keeps those tokens plus a recent window in the KV cache so a model can stream indefinitely without collapsing.",
+   "aliases": [
+    "attention sink",
+    "StreamingLLM",
+    "streaming LLM",
+    "sink tokens",
+    "sliding window attention failure",
+    "infinite context streaming",
+    "rolling KV cache",
+    "first token attention",
+    "efficient streaming language models",
+    "What is StreamingLLM",
+    "Why does sliding window attention break when the first tokens are dropped",
+    "Does StreamingLLM give infinite context",
+    "How many sink tokens does StreamingLLM keep"
+   ],
+   "keywords": [
+    "attention sink",
+    "streaming",
+    "kv cache eviction",
+    "streamingllm",
+    "rolling kv cache",
+    "sink token (pre-training)",
+    "window attention"
+   ],
+   "related": [
+    "context-windows",
+    "positional-encoding",
+    "flash-attention",
+    "flashattention-3",
+    "state-space-models",
+    "vllm",
+    "streaming-ai-responses",
+    "quantization",
+    "large-language-models",
+    "mechanistic-interpretability",
+    "transformers",
+    "kv-cache"
+   ],
+   "relatedTools": [],
+   "entity": {
+    "entity_type": "technique",
+    "freshness": "evolving",
+    "verification_status": "key-claims-checked",
+    "checked_date": "2026-10-09",
+    "parent": null
+   },
+   "headings": [
+    "What is it?",
+    "Technical definition",
+    "When should I use it?",
+    "Prerequisites and related concepts",
+    "Implementation patterns",
+    "Technologies and frameworks",
+    "Practical guide",
+    "Common failure modes",
+    "Troubleshooting",
+    "Contrasted with",
+    "Questions this page answers",
+    "Sources and verification"
+   ],
+   "words": 924
+  },
+  {
+   "id": "flashattention-3",
+   "url": "knowledge/flashattention-3.html",
+   "title": "FlashAttention-3 (and FlashAttention-4)",
+   "type": "concept",
+   "group": "Model Architectures",
+   "question": "What is FlashAttention-3?",
+   "summary": "FlashAttention-3 is an exact attention implementation redesigned for NVIDIA Hopper GPUs. It overlaps data movement and computation, interleaves matrix multiplication with softmax, and uses FP8 low-precision, reaching up to about 740 TFLOPs/s in FP16 on H100.",
+   "aliases": [
+    "FlashAttention-3",
+    "FlashAttention 3",
+    "FA3",
+    "flash attention 3",
+    "FlashAttention-4",
+    "FA4",
+    "Hopper attention kernel",
+    "H100 attention",
+    "FP8 attention",
+    "flash-attn-3",
+    "flash-attn-4",
+    "How is FlashAttention-3 different from FlashAttention-2",
+    "Does FlashAttention-3 work on A100 GPUs",
+    "Is FP8 attention less accurate",
+    "What is FlashAttention-4"
+   ],
+   "keywords": [
+    "flashattention",
+    "hopper",
+    "fp8",
+    "h100",
+    "flash-attn library",
+    "hopper (h100/h800)",
+    "tensor cores",
+    "tma",
+    "cutedsl",
+    "pytorch sdpa"
+   ],
+   "related": [
+    "attention-sinks",
+    "kv-cache",
+    "quantization",
+    "transformers",
+    "distributed-training",
+    "vllm",
+    "model-serving-and-inference",
+    "positional-encoding",
+    "flash-attention",
+    "gpus-and-ai-accelerators"
+   ],
+   "relatedTools": [],
+   "entity": {
+    "entity_type": "technique",
+    "freshness": "volatile",
+    "verification_status": "key-claims-checked",
+    "checked_date": "2026-10-09",
+    "parent": null
+   },
+   "headings": [
+    "What is it?",
+    "Technical definition",
+    "When should I use it?",
+    "Prerequisites and related concepts",
+    "Implementation patterns",
+    "Technologies and frameworks",
+    "Practical guide",
+    "Common failure modes",
+    "Troubleshooting",
+    "Contrasted with",
+    "Questions this page answers",
+    "Sources and verification"
+   ],
+   "words": 862
   }
  ],
  "glossary": [

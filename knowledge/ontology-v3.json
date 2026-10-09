@@ -1,7 +1,7 @@
 {
  "schema_version": "3.0.0",
  "authored": "2026-10-06",
- "provenance": "Authored from the V3 topic specification. NOT a conversion of the V2 ontology document, which was not available. No source has been verified against a live copy; verification_date is null throughout.",
+ "provenance": "Authored from the V3 topic specification. NOT a conversion of the V2 ontology document, which was not available. Most entries were authored without live source checks. Entries whose verification.status is key-claims-checked carry a source_check block listing the claims compared with primary sources, those sources, the check date and what could not be verified; no entry is marked verified and verification_date is null throughout.",
  "entity_types": [
   "concept",
   "protocol",
@@ -35,7 +35,8 @@
   "AI Infrastructure & MLOps",
   "Safety, Alignment & Governance",
   "AI for Science",
-  "Robotics & Embodied AI"
+  "Robotics & Embodied AI",
+  "Integrations"
  ],
  "entities": [
   {
@@ -207,6 +208,7 @@
     "context-windows"
    ],
    "related_concepts": [
+    "openai-reasoning-models",
     "test-time-compute",
     "chain-of-thought",
     "reasoning-transparency",
@@ -5214,6 +5216,7 @@
     "context-windows"
    ],
    "related_concepts": [
+    "attention-sinks",
     "vllm",
     "prompt-caching",
     "flash-attention",
@@ -5298,7 +5301,7 @@
    "page_kind": "concept",
    "url": "knowledge/flash-attention.html",
    "plain_english_definition": "Standard attention writes a very large table of scores to slow memory. FlashAttention processes it in small blocks that fit in the chip's fast memory, so the same answer is computed faster and with less memory.",
-   "technical_definition": "Dao et al. (2022) present an IO-aware exact attention using tiling and online softmax, reducing reads/writes between GPU HBM and SRAM; subsequent versions (FlashAttention-2, -3) improve parallelism and hardware utilisation. It is exact attention (not an approximation), so quality is unaffected apart from floating-point differences. Typically enabled through framework or library flags rather than hand-written.",
+   "technical_definition": "Dao et al. (2022) present an IO-aware exact attention using tiling and online softmax, reducing reads/writes between GPU HBM and SRAM; subsequent versions improve parallelism and hardware utilisation: FlashAttention-3 targets Hopper GPUs with asynchrony and FP8 (FlashAttention-3 (and FlashAttention-4)). For bounded-memory streaming with a rolling cache see Attention Sinks and StreamingLLM. It is exact attention (not an approximation), so quality is unaffected apart from floating-point differences. Typically enabled through framework or library flags rather than hand-written.",
    "aliases": [
     "flash attention",
     "FlashAttention-2",
@@ -5323,6 +5326,8 @@
     "transformers"
    ],
    "related_concepts": [
+    "flashattention-3",
+    "attention-sinks",
     "kv-cache",
     "gpus-and-ai-accelerators",
     "distributed-training",
@@ -6990,7 +6995,7 @@
    "page_kind": "concept",
    "url": "knowledge/video-generation-models.html",
    "plain_english_definition": "Video AI comes in two flavours: models that create video from text or images, and models that watch video and describe or answer questions about it. Both are harder than images because things must stay consistent across time.",
-   "technical_definition": "Generation commonly uses latent diffusion with spatio-temporal attention or diffusion transformers (Diffusion Models), trained on large video–text datasets; understanding uses frame sampling plus vision encoders feeding a language model (Vision-Language Models (VLMs)). Open problems include long-range consistency, physical plausibility, text/hand rendering, evaluation (human preference dominates), compute cost, and provenance of synthetic media (C2PA and Content Provenance (Content Credentials)).",
+   "technical_definition": "Generation commonly uses latent diffusion with spatio-temporal attention or diffusion transformers (Diffusion Models), trained on large video–text datasets; understanding uses frame sampling plus vision encoders feeding a language model (Vision-Language Models (VLMs)). Products in this area change fast: OpenAI's Sora, for example, was discontinued as an app on 26 April 2026 and its API was scheduled to shut down on 24 September 2026 (Sora (OpenAI Video Generation) and Its Discontinuation), so confirm that any service you plan to use still exists. Open-weight alternatives for physical-AI video exist, such as NVIDIA Cosmos (NVIDIA Cosmos (World Foundation Models for Physical AI)). Open problems include long-range consistency, physical plausibility, text/hand rendering, evaluation (human preference dominates), compute cost, and provenance of synthetic media (C2PA and Content Provenance (Content Credentials)).",
    "aliases": [
     "text to video",
     "AI video generation",
@@ -7018,6 +7023,8 @@
    ],
    "related_concepts": [
     "world-models",
+    "sora-ai-video",
+    "nvidia-cosmos",
     "c2pa-content-provenance",
     "ai-governance",
     "vision-language-models"
@@ -7207,8 +7214,40 @@
     "verified": false,
     "verification_date": null,
     "authored_date": "2026-10-06",
-    "status": "needs-verification",
-    "basis": "authored from topic specification and general knowledge; no live source check performed"
+    "status": "key-claims-checked",
+    "basis": "key claims compared with the primary sources in source_check on the date given; the entry as a whole is not independently verified",
+    "source_check": {
+     "date": "2026-10-09",
+     "claims_checked": [
+      "A2A was announced by Google on 9 April 2025 (Google Developers Blog).",
+      "The Linux Foundation announced the Agent2Agent project on 23 June 2025 as an open protocol created by Google, to be vendor neutral under its governance.",
+      "A Linux Foundation release of 9 April 2026 says the A2A project is hosted by the Linux Foundation, was originally developed by Google, and has more than 150 supporting organisations.",
+      "The specification repository lists 1.0.0 as the latest released version, defines JSON-RPC 2.0, gRPC and HTTP/REST bindings, and serves the agent card at /.well-known/agent-card.json (read 2026-10-09 in the earlier audit)."
+     ],
+     "sources": [
+      {
+       "title": "Announcing the Agent2Agent Protocol (Google Developers Blog)",
+       "url": "https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/"
+      },
+      {
+       "title": "Linux Foundation launches the Agent2Agent Protocol project (23 June 2025)",
+       "url": "https://www.linuxfoundation.org/press/linux-foundation-launches-the-agent2agent-protocol-project-to-enable-secure-intelligent-communication-between-ai-agents"
+      },
+      {
+       "title": "A2A protocol surpasses 150 organizations (Linux Foundation, 9 April 2026)",
+       "url": "https://www.linuxfoundation.org/press/a2a-protocol-surpasses-150-organizations-lands-in-major-cloud-platforms-and-sees-enterprise-production-use-in-first-year"
+      },
+      {
+       "title": "A2A specification and repository",
+       "url": "https://github.com/a2aproject/A2A"
+      }
+     ],
+     "not_independently_verified": [
+      "The 150-organisation figure is the project's own announcement, not independently verified.",
+      "SDK maturity and per-language availability.",
+      "Whether the 1.0.0 specification is still the latest release."
+     ]
+    }
    },
    "freshness_class": "volatile",
    "time_sensitive_claims_to_verify": [
@@ -7472,6 +7511,7 @@
     "prompt-injection"
    ],
    "related_concepts": [
+    "mcp-authorization",
     "ai-privacy-and-security",
     "owasp-llm-top-10",
     "agent-tools",
@@ -8040,6 +8080,8 @@
     "ai-agents"
    ],
    "related_concepts": [
+    "microsoft-agent-framework",
+    "migrate-to-microsoft-agent-framework",
     "semantic-kernel",
     "agent-frameworks-compared",
     "crewai",
@@ -8113,8 +8155,30 @@
     "verified": false,
     "verification_date": null,
     "authored_date": "2026-10-06",
-    "status": "needs-verification",
-    "basis": "authored from topic specification and general knowledge; no live source check performed"
+    "status": "key-claims-checked",
+    "basis": "key claims compared with the primary sources in source_check on the date given; the entry as a whole is not independently verified",
+    "source_check": {
+     "date": "2026-10-09",
+     "claims_checked": [
+      "The AutoGen README states AutoGen is in maintenance mode, will not receive new features or enhancements and is community managed.",
+      "It recommends Microsoft Agent Framework for new users and links the AutoGen migration guide; contributions are limited to bug fixes, security patches and documentation.",
+      "The AutoGen paper is arXiv:2308.08155 (resolved in the earlier citation audit)."
+     ],
+     "sources": [
+      {
+       "title": "AutoGen README (maintenance-mode notice)",
+       "url": "https://github.com/microsoft/autogen"
+      },
+      {
+       "title": "AutoGen to Microsoft Agent Framework migration guide",
+       "url": "https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-autogen/"
+      }
+     ],
+     "not_independently_verified": [
+      "Whether the maintenance-mode status changes later.",
+      "The relationship of community forks such as AG2 to Microsoft's project beyond the fact they are separate repositories."
+     ]
+    }
    },
    "freshness_class": "volatile",
    "time_sensitive_claims_to_verify": [
@@ -8261,6 +8325,8 @@
     "agent-tools"
    ],
    "related_concepts": [
+    "microsoft-agent-framework",
+    "migrate-to-microsoft-agent-framework",
     "autogen",
     "langchain",
     "agent-frameworks-compared",
@@ -8323,8 +8389,28 @@
     "verified": false,
     "verification_date": null,
     "authored_date": "2026-10-06",
-    "status": "needs-verification",
-    "basis": "authored from topic specification and general knowledge; no live source check performed"
+    "status": "key-claims-checked",
+    "basis": "key claims compared with the primary sources in source_check on the date given; the entry as a whole is not independently verified",
+    "source_check": {
+     "date": "2026-10-09",
+     "claims_checked": [
+      "The Semantic Kernel README states Microsoft Agent Framework is its enterprise-ready successor, available at version 1.0 as a production-ready release, and links a migration guide and an Agent Framework blog post."
+     ],
+     "sources": [
+      {
+       "title": "Semantic Kernel README (successor notice)",
+       "url": "https://github.com/microsoft/semantic-kernel"
+      },
+      {
+       "title": "Semantic Kernel and Microsoft Agent Framework (Agent Framework blog)",
+       "url": "https://devblogs.microsoft.com/agent-framework/semantic-kernel-and-microsoft-agent-framework/"
+      }
+     ],
+     "not_independently_verified": [
+      "Per-language feature coverage and the long-term support policy for Semantic Kernel itself.",
+      "The contents of the migration guide."
+     ]
+    }
    },
    "freshness_class": "volatile",
    "time_sensitive_claims_to_verify": [
@@ -8447,7 +8533,7 @@
    "page_kind": "comparison",
    "url": "knowledge/agent-frameworks-compared.html",
    "plain_english_definition": "There is no single best agent framework. Some give you fine control, some get you a prototype fast, some are strongest at working with your documents. Often the simplest answer is a few direct API calls.",
-   "technical_definition": "| Framework | Typical emphasis | Language(s) | Consider when | |---|---|---|---| | LangChain | Broad integrations and components | Python, JS/TS | You need many connectors | | LangGraph | Stateful graph orchestration, persistence, approvals | Python, JS/TS | You need control over loops | | LlamaIndex | Data ingestion, indexing, retrieval | Python, TS | RAG-centred work | | DSPy | Programmatic pipelines with optimisation | Python | You have a metric and examples | | AutoGen (Microsoft) | Conversational multi-agent (maintenance mode; successor: Microsoft Agent Framework) | Python, .NET | Maintaining existing AutoGen systems | | CrewAI | Role/task crews | Python | Fast role-based prototypes | | Semantic Kernel | Enterprise SDK with plugins (successor named: Microsoft Agent Framework) | C#, Python, Java | Existing Microsoft-stack systems | | OpenAI Agents SDK | Lightweight primitives, handoffs, guardrails | Python, JavaScript/TypeScript | Building on that vendor's API (README describes it as provider-agnostic) | This table is a neutral orientation, not a recommendation or ranking; feature claims need verification against current docs.",
+   "technical_definition": "| Framework | Typical emphasis | Language(s) | Consider when | |---|---|---|---| | LangChain | Broad integrations and components | Python, JS/TS | You need many connectors | | LangGraph | Stateful graph orchestration, persistence, approvals | Python, JS/TS | You need control over loops | | LlamaIndex | Data ingestion, indexing, retrieval | Python, TS | RAG-centred work | | DSPy | Programmatic pipelines with optimisation | Python | You have a metric and examples | | Microsoft Agent Framework | Agents and graph-based workflows with checkpointing and human-in-the-loop; Microsoft's stated successor to AutoGen and Semantic Kernel (Migrating from AutoGen or Semantic Kernel to Microsoft Agent Framework) | Python, .NET (Go in a separate repo) | New projects on the Microsoft stack or migrating from those two | | AutoGen (Microsoft) | Conversational multi-agent (maintenance mode; successor: Microsoft Agent Framework) | Python, .NET | Maintaining existing AutoGen systems | | CrewAI | Role/task crews | Python | Fast role-based prototypes | | Semantic Kernel | Enterprise SDK with plugins (successor named: Microsoft Agent Framework) | C#, Python, Java | Existing Microsoft-stack systems | | OpenAI Agents SDK | Lightweight primitives, handoffs, guardrails | Python, JavaScript/TypeScript | Building on that vendor's API (README describes it as provider-agnostic) | This table is a neutral orientation, not a recommendation or ranking; feature claims need verification against current docs.",
    "aliases": [
     "which agent framework",
     "best agent framework",
@@ -8473,6 +8559,7 @@
     "agentic-workflows"
    ],
    "related_concepts": [
+    "microsoft-agent-framework",
     "choosing-an-agent-framework",
     "what-is-an-ai-framework",
     "framework-vs-direct-api",
@@ -11399,6 +11486,7 @@
     "ai-evaluation"
    ],
    "related_concepts": [
+    "inspect-ai-evaluation-framework",
     "llm-as-a-judge",
     "swe-bench",
     "react-agent-pattern",
@@ -14445,7 +14533,7 @@
    "page_kind": "concept",
    "url": "knowledge/eu-ai-act.html",
    "plain_english_definition": "The EU AI Act sorts AI uses by risk. A few uses are banned outright, risky ones (like AI used in hiring or credit) must meet strict requirements, some need clear disclosure (like chatbots and deepfakes), and the big general-purpose models have their own duties.",
-   "technical_definition": "Regulation (EU) 2024/1689 entered into force in 2024 with phased application. As commonly summarised: prohibitions and AI-literacy duties applied first; obligations for general-purpose AI models followed; most remaining provisions, including high-risk system requirements in the Act's annexed use cases, apply later, with a longer transition for AI embedded in products covered by existing safety legislation. Roles include provider, deployer, importer and distributor, each with different duties; penalties scale with turnover. The timetable has already been amended: Regulation (EU) 2026/1744 (the Digital Omnibus on AI), published in the Official Journal on 24 July 2026 and in force from 27 July 2026, moved high-risk obligations for Annex III systems to 2 December 2027 and for AI in products covered by Annex I to 2 August 2028, and added a new prohibited practice; prohibitions and general-purpose AI model obligations kept their earlier dates. Implementing acts, harmonised standards, guidance and corrigenda can still change the practical picture, so exact dates and scope must be checked against the consolidated Official Journal text and current Commission guidance.",
+   "technical_definition": "Regulation (EU) 2024/1689 entered into force in 2024 with phased application. As commonly summarised: prohibitions and AI-literacy duties applied first; obligations for general-purpose AI models followed; most remaining provisions, including high-risk system requirements in the Act's annexed use cases, apply later, with a longer transition for AI embedded in products covered by existing safety legislation. Roles include provider, deployer, importer and distributor, each with different duties; penalties scale with turnover. The timetable has already been amended: Regulation (EU) 2026/1744 (the Digital Omnibus on AI), published in the Official Journal on 24 July 2026 and in force from 27 July 2026, moved high-risk obligations for Annex III systems to 2 December 2027 and for AI in products covered by Annex I to 2 August 2028, and added new Article 5 prohibitions that apply from 2 December 2026 (secondary legal commentary describes them as covering AI systems that generate non-consensual intimate imagery or child sexual abuse material); the original prohibitions have applied since 2 February 2025. Implementing acts, harmonised standards, guidance and corrigenda can still change the practical picture, so exact dates and scope must be checked against the consolidated Official Journal text and current Commission guidance.",
    "aliases": [
     "EU AI Act",
     "AI Act",
@@ -14546,8 +14634,33 @@
     "verified": false,
     "verification_date": null,
     "authored_date": "2026-10-06",
-    "status": "needs-verification",
-    "basis": "authored from topic specification and general knowledge; no live source check performed"
+    "status": "key-claims-checked",
+    "basis": "key claims compared with the primary sources in source_check on the date given; the entry as a whole is not independently verified",
+    "source_check": {
+     "date": "2026-10-09",
+     "claims_checked": [
+      "Regulation (EU) 2026/1744 of 8 July 2026 amends Regulation (EU) 2024/1689 (and (EU) 2018/1139 and (EU) 2023/1230); published as OJ L, 2026/1744 on 24.7.2026; enters into force on the third day after publication (EUR-Lex records first entry into force as 2026-07-27).",
+      "Amended Article 113: Chapters I and II apply from 2 February 2025, except Article 5(1) first subparagraph points (ba) and (bb) and Article 5(1a) and (1b), which apply from 2 December 2026.",
+      "High-risk systems under Article 6(2) and Annex III apply from 2 December 2027; systems under Article 6(1) and Annex I apply from 2 August 2028."
+     ],
+     "sources": [
+      {
+       "title": "Regulation (EU) 2026/1744 (Digital Omnibus on AI), EUR-Lex, English text",
+       "url": "https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng"
+      },
+      {
+       "title": "White & Case, EU AI Omnibus enters into force (secondary commentary)",
+       "url": "https://www.whitecase.com/insight-alert/eu-ai-omnibus-enters-force-amending-ai-act"
+      }
+     ],
+     "not_independently_verified": [
+      "What the new Article 5 prohibitions cover exactly: the EUR-Lex extract read confirmed only their point numbers and 2 December 2026 date; the description comes from secondary commentary.",
+      "Dates for general-purpose AI model obligations and Article 50 transparency duties after the amendment (not read in the primary text).",
+      "The consolidated text of Regulation (EU) 2024/1689 as amended.",
+      "Implementing acts, guidance and national measures.",
+      "Anything about how the law applies to a particular product; this is orientation, not legal advice."
+     ]
+    }
    },
    "freshness_class": "volatile",
    "time_sensitive_claims_to_verify": [
@@ -14567,7 +14680,7 @@
    "page_kind": "concept",
    "url": "knowledge/nist-ai-rmf.html",
    "plain_english_definition": "NIST's framework is a checklist-style guide to thinking about AI risk: set up governance, understand the context, measure the risks and act on them. Organisations use it to organise their own AI risk practices.",
-   "technical_definition": "The framework defines trustworthiness characteristics (valid and reliable, safe, secure and resilient, accountable and transparent, explainable and interpretable, privacy-enhanced, fair with harmful bias managed) and four core functions with categories and subcategories. A Playbook offers suggested actions, and the Generative AI Profile (NIST AI 600-1, published 2024) maps generative-AI-specific risks (such as confabulation, information integrity, data privacy and CBRN information) to actions. Publication details and updates should be verified on NIST's site.",
+   "technical_definition": "The framework defines trustworthiness characteristics (valid and reliable, safe, secure and resilient, accountable and transparent, explainable and interpretable, privacy-enhanced, fair with harmful bias managed) and four core functions with categories and subcategories. A Playbook offers suggested actions, and the Generative AI Profile (NIST AI 600-1, published 2024) maps generative-AI-specific risks (such as confabulation, information integrity, data privacy and CBRN information) to actions. AI RMF 1.0 was released on 26 January 2023 as NIST AI 100-1. As of 2026-10-09 NIST's AI RMF page states that AI RMF 1.0 is being revised as part of the White House AI Action Plan and that the Playbook will be updated after the revision; NIST also released a concept note for a critical-infrastructure profile on 7 April 2026. Check NIST's site for the current revision status.",
    "aliases": [
     "NIST AI RMF",
     "AI RMF",
@@ -14648,8 +14761,8 @@
      "verified": false
     },
     {
-     "title": "NIST AI 600-1, Generative AI Profile (2024)",
-     "locator": "nist.gov (verify)",
+     "title": "NIST AI 600-1, Generative AI Profile (July 2024)",
+     "locator": "nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
      "verified": false
     }
    ],
@@ -14657,12 +14770,45 @@
     "verified": false,
     "verification_date": null,
     "authored_date": "2026-10-06",
-    "status": "needs-verification",
-    "basis": "authored from topic specification and general knowledge; no live source check performed"
+    "status": "key-claims-checked",
+    "basis": "key claims compared with the primary sources in source_check on the date given; the entry as a whole is not independently verified",
+    "source_check": {
+     "date": "2026-10-09",
+     "claims_checked": [
+      "AI RMF 1.0 is NIST AI 100-1, released on 26 January 2023 (NIST AI RMF page and NIST publication record).",
+      "NIST states AI RMF 1.0 is being revised as part of the White House AI Action Plan; the Playbook (created 8 July 2022, updated 10 June 2026) will be updated after the revision.",
+      "NIST released a concept note for an AI RMF Profile on Trustworthy AI in Critical Infrastructure on 7 April 2026.",
+      "The Generative AI Profile is a cross-sectoral companion profile to AI RMF 1.0 (NIST AI 600-1, July 2024 per the earlier audit)."
+     ],
+     "sources": [
+      {
+       "title": "NIST AI Risk Management Framework",
+       "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+      },
+      {
+       "title": "NIST AI RMF 1.0 publication record (NIST AI 100-1)",
+       "url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10"
+      },
+      {
+       "title": "NIST AI RMF Playbook",
+       "url": "https://www.nist.gov/itl/ai-risk-management-framework/nist-ai-rmf-playbook"
+      },
+      {
+       "title": "NIST AI 600-1 Generative AI Profile",
+       "url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence"
+      }
+     ],
+     "not_independently_verified": [
+      "The four functions, trustworthiness characteristics and GenAI risk list in the technical definition were not re-read against the PDF in this pass.",
+      "The scope and timing of the revision.",
+      "The exact publication month of AI 600-1 (taken from the earlier audit)."
+     ]
+    }
    },
    "freshness_class": "volatile",
    "time_sensitive_claims_to_verify": [
-    "Current versions, profiles and any updates; US policy context around the framework."
+    "Current versions, profiles and any updates; US policy context around the framework.",
+    "Status of the announced revision of AI RMF 1.0 and of the Playbook update."
    ],
    "intellitools_mappings": []
   },
@@ -14989,7 +15135,7 @@
    "page_kind": "concept",
    "url": "knowledge/owasp-llm-top-10.html",
    "plain_english_definition": "OWASP is the group famous for the \"Top 10\" web-security risks. They publish a similar list for AI applications, so teams have a shared checklist of what tends to go wrong and how to defend against it.",
-   "technical_definition": "Maintained under the OWASP GenAI Security Project. Version 1.0 was published in August 2023, a 2025 edition followed, and the OWASP GenAI LLM Top 10 2026 was published on 4 August 2026 (current edition as of 2026-10-09). The 2026 list is: LLM01 Prompt Injection, LLM02 Sensitive Information Disclosure, LLM03 Excessive Agency, LLM04 Supply Chain, LLM05 Data and Model Poisoning, LLM06 Unbounded Consumption, LLM07 Misinformation, LLM08 Hidden Context Exposure, LLM09 Vector and Embedding Weaknesses, LLM10 Improper Output Handling. Prompt injection was also first in the 2023 list. Category names and order change between editions (for example, the 2025 edition's system-prompt leakage category does not appear under that name in 2026), so always cite the edition. Use as a taxonomy, not a complete security programme.",
+   "technical_definition": "Maintained under the OWASP GenAI Security Project. Version 1.0 was published in August 2023, a 2025 edition followed, and the OWASP GenAI LLM Top 10 2026 was published in early August 2026 (OWASP's resource page is dated 3 August, its repository README says 4 August; current edition as of 2026-10-09). The 2026 list is: LLM01 Prompt Injection, LLM02 Sensitive Information Disclosure, LLM03 Excessive Agency, LLM04 Supply Chain, LLM05 Data and Model Poisoning, LLM06 Unbounded Consumption, LLM07 Misinformation, LLM08 Hidden Context Exposure, LLM09 Vector and Embedding Weaknesses, LLM10 Improper Output Handling. Prompt injection was also first in the 2023 list. Category names and order change between editions (for example, the 2025 edition's system-prompt leakage category does not appear under that name in 2026), so always cite the edition. Use as a taxonomy, not a complete security programme.",
    "aliases": [
     "OWASP LLM Top 10",
     "OWASP GenAI",
@@ -15081,8 +15227,33 @@
     "verified": false,
     "verification_date": null,
     "authored_date": "2026-10-06",
-    "status": "needs-verification",
-    "basis": "authored from topic specification and general knowledge; no live source check performed"
+    "status": "key-claims-checked",
+    "basis": "key claims compared with the primary sources in source_check on the date given; the entry as a whole is not independently verified",
+    "source_check": {
+     "date": "2026-10-09",
+     "claims_checked": [
+      "The OWASP GenAI Security Project publishes an \"OWASP GenAI LLM Top 10 2026\"; its resource page is dated 3 August 2026 and the repository README (read in the earlier audit) gives 4 August 2026.",
+      "The 2026 list as read from the repository README, and the 2023 v1.0 publication date of August 2023, as recorded in the earlier audit."
+     ],
+     "sources": [
+      {
+       "title": "OWASP GenAI LLM Top 10 2026 (resource page)",
+       "url": "https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/"
+      },
+      {
+       "title": "GenAI-LLM-Top10 repository",
+       "url": "https://github.com/GenAI-Security-Project/GenAI-LLM-Top10"
+      },
+      {
+       "title": "OWASP Top 10 for LLM Applications 2025 (archive)",
+       "url": "https://genai.owasp.org/llm-top-10/"
+      }
+     ],
+     "not_independently_verified": [
+      "The exact publication day (3 versus 4 August 2026): the two OWASP sources differ by one day, so this page says \"early August 2026\".",
+      "Each category description beyond its name."
+     ]
+    }
    },
    "freshness_class": "volatile",
    "time_sensitive_claims_to_verify": [
@@ -16040,7 +16211,7 @@
    "page_kind": "concept",
    "url": "knowledge/world-models.html",
    "plain_english_definition": "Humans can imagine what will happen if we push a glass off a table without doing it. A world model gives an AI that kind of mental simulator: it predicts what comes next if it takes an action, so it can plan or practise in imagination instead of in the real world.",
-   "technical_definition": "Ha & Schmidhuber (2018) popularised learned world models (a VAE for perception plus a recurrent dynamics model) for training controllers inside the model. The Dreamer line (Hafner et al., 2019–2023) learns latent dynamics and trains policies on imagined rollouts (Reinforcement Learning). LeCun (2022) proposes joint-embedding predictive architectures as a path to world models for autonomous intelligence. Generative interactive environments such as Genie (Bruce et al., 2024) and large video models are sometimes described as world simulators (Video Generation and Video Understanding Models); whether they learn accurate physics or just plausible appearance is debated. Challenges: compounding error over long rollouts, partial observability, action controllability and evaluation.",
+   "technical_definition": "Ha & Schmidhuber (2018) popularised learned world models (a VAE for perception plus a recurrent dynamics model) for training controllers inside the model. The Dreamer line (Hafner et al., 2019–2023) learns latent dynamics and trains policies on imagined rollouts (Reinforcement Learning). LeCun (2022) proposes joint-embedding predictive architectures as a path to world models for autonomous intelligence. Generative interactive environments such as Genie (Bruce et al., 2024) and large video models are sometimes described as world simulators (Video Generation and Video Understanding Models; OpenAI's 2024 Sora report used that framing while listing basic physics failures, see Sora (OpenAI Video Generation) and Its Discontinuation); NVIDIA's open Cosmos family targets physical AI explicitly (NVIDIA Cosmos (World Foundation Models for Physical AI)); whether they learn accurate physics or just plausible appearance is debated. Challenges: compounding error over long rollouts, partial observability, action controllability and evaluation.",
    "aliases": [
     "world model",
     "learned simulator",
@@ -16074,6 +16245,8 @@
     "embodied-ai",
     "vision-language-action-models",
     "video-generation-models",
+    "nvidia-cosmos",
+    "sora-ai-video",
     "diffusion-models",
     "markov-decision-processes",
     "sim-to-real-transfer"
@@ -16394,6 +16567,1774 @@
    },
    "freshness_class": "evolving",
    "time_sensitive_claims_to_verify": [],
+   "intellitools_mappings": []
+  },
+  {
+   "id": "microsoft-agent-framework",
+   "canonical_name": "Microsoft Agent Framework",
+   "entity_type": "framework",
+   "domain": "Agent Protocols, Frameworks & Runtimes",
+   "parent": null,
+   "page_kind": "concept",
+   "url": "knowledge/microsoft-agent-framework.html",
+   "plain_english_definition": "Microsoft built two well-known agent toolkits: AutoGen (research-born, conversation-style multi-agent) and Semantic Kernel (enterprise SDK, strong in .NET). Microsoft Agent Framework is the single framework that replaces both. You build an agent from a model client, instructions and tools; for anything bigger than one agent you describe a workflow — a graph of steps that can include agents, plain functions and other workflows — with checkpoints, streaming and human approval steps built in.",
+   "technical_definition": "Microsoft's repository describes MAF as an open, multi-language framework for production-grade AI agents and multi-agent workflows in .NET and Python (the Go SDK lives in a separate repository). Documented capabilities include: multiple model providers (Microsoft Foundry, Azure OpenAI, OpenAI and the GitHub Copilot SDK among them); a middleware system for request/response processing; graph-based workflows with sequential, concurrent, handoff and group-collaboration patterns, plus checkpointing, streaming, human-in-the-loop and \"time-travel\"; built-in OpenTelemetry observability; declarative (YAML) agents; \"agent skills\"; a developer UI called DevUI; Foundry-hosted agents; and an experimental \"AF Labs\" package set. Install names given in the README are pip install agent-framework for Python and dotnet add package Microsoft.Agents.AI for .NET. The AutoGen and Semantic Kernel READMEs each describe MAF as their enterprise-ready successor, and the Semantic Kernel README says MAF reached version 1.0 as a production-ready release with stable APIs. Interoperability with What is MCP (Model Context Protocol)? and A2A (Agent2Agent) Protocol is stated in that README. Version numbers, provider lists and package names change; confirm them in the repository and Microsoft Learn.",
+   "aliases": [
+    "Microsoft Agent Framework",
+    "MAF Microsoft",
+    "Microsoft.Agents.AI",
+    "AutoGen successor",
+    "Semantic Kernel successor"
+   ],
+   "acronyms": [],
+   "user_intents": [
+    "decide whether to build on Microsoft Agent Framework",
+    "understand how it relates to AutoGen and Semantic Kernel",
+    "build a first agent or workflow with it"
+   ],
+   "natural_language_questions": [
+    "What is Microsoft Agent Framework?",
+    "Is Microsoft Agent Framework the replacement for AutoGen and Semantic Kernel?",
+    "Does Microsoft Agent Framework support Python and .NET?",
+    "How do I build a workflow in Microsoft Agent Framework?",
+    "Is Microsoft Agent Framework production ready?"
+   ],
+   "prerequisites": [
+    "ai-agents",
+    "function-calling"
+   ],
+   "related_concepts": [
+    "migrate-to-microsoft-agent-framework",
+    "autogen",
+    "semantic-kernel",
+    "agent-frameworks-compared",
+    "choosing-an-agent-framework",
+    "mcp",
+    "a2a-protocol",
+    "multi-agent-systems",
+    "agentic-workflows",
+    "llm-observability",
+    "azure-fundamentals"
+   ],
+   "contrasted_with": [
+    {
+     "ref": "autogen",
+     "difference": "AutoGen is in maintenance mode (no new features, community managed) and recommends MAF for new projects.",
+     "resolves_to_page": true
+    },
+    {
+     "ref": "semantic-kernel",
+     "difference": "Semantic Kernel's README announces MAF as its successor; existing Semantic Kernel code needs a migration plan.",
+     "resolves_to_page": true
+    },
+    {
+     "ref": "langgraph",
+     "difference": "LangGraph is an independent, graph-based agent runtime from LangChain; MAF is Microsoft's equivalent-scope framework with first-class .NET.",
+     "resolves_to_page": true
+    },
+    {
+     "ref": "openai-agents-sdk",
+     "difference": "OpenAI's SDK is lighter and OpenAI-centred; MAF targets multiple providers and enterprise hosting.",
+     "resolves_to_page": true
+    }
+   ],
+   "technologies_frameworks": [
+    "Python (agent-framework)",
+    ".NET (Microsoft.Agents.AI)",
+    "Microsoft Foundry",
+    "Azure OpenAI",
+    "OpenAI",
+    "OpenTelemetry",
+    "MCP",
+    "A2A",
+    "DevUI"
+   ],
+   "implementation_patterns": [
+    "Single agent: a client, instructions and a few tools, run with the agent's run method.",
+    "Workflow graph: executors (agents, functions or sub-workflows) joined by edges that route typed messages.",
+    "Human-in-the-loop: pause a workflow on a request, resume it with the person's response.",
+    "Checkpoint long workflows so a failure resumes instead of restarting.",
+    "Add middleware for logging, content filtering and error handling around every model or tool call.",
+    "Expose tools through MCP servers rather than bespoke glue."
+   ],
+   "common_failure_modes": [
+    "Copying AutoGen's event-driven or Semantic Kernel's plugin code across unchanged — the programming model differs (see Migrating from AutoGen or Semantic Kernel to Microsoft Agent Framework).",
+    "Building a workflow for what a single agent with tools can do.",
+    "Granting an agent broad credentials; MAF does not remove the need for Permissions and Security for AI Integrations.",
+    "Treating tutorial snippets as stable: names and packages have changed between releases.",
+    "Assuming distributed execution exists because AutoGen had an experimental distributed runtime — the migration guide describes single-process composition."
+   ],
+   "troubleshooting": [
+    {
+     "symptom": "Sample from a blog post does not run",
+     "remedy": "Compare against the repository samples for your installed version; APIs and package names move."
+    },
+    {
+     "symptom": "Authentication to the model provider fails",
+     "remedy": "Follow the provider-specific sample (for example Azure CLI sign-in for Foundry) and check the endpoint and model environment variables."
+    },
+    {
+     "symptom": "Workflow stalls",
+     "remedy": "Check that every executor's output type matches the next executor's input and that human-input requests are answered."
+    }
+   ],
+   "practical_guide": [
+    "Write down whether you need one agent, a fixed pipeline, or dynamic multi-agent collaboration.",
+    "Install the Python or .NET package and run the repository's quick-start sample against a test model deployment.",
+    "Add tools one at a time; keep write actions behind approval (Permissions and Security for AI Integrations).",
+    "Move to a workflow only when you need branching, parallelism, checkpoints or human approval.",
+    "Turn on OpenTelemetry tracing early (LLM Observability (Tracing, Logging and Monitoring)).",
+    "Pin versions and re-read the release notes before upgrading."
+   ],
+   "when_to_use": "Consider for new agent projects on the Microsoft stack, or for teams moving off AutoGen or Semantic Kernel. If you only need one prompt and a tool or two, a direct API call is simpler (AI Framework vs Direct Model API).",
+   "canonical_sources": [
+    {
+     "title": "Microsoft Agent Framework repository README",
+     "locator": "github.com/microsoft/agent-framework",
+     "verified": false
+    },
+    {
+     "title": "Microsoft Agent Framework documentation",
+     "locator": "learn.microsoft.com/agent-framework",
+     "verified": false
+    },
+    {
+     "title": "AutoGen repository README (maintenance-mode notice)",
+     "locator": "github.com/microsoft/autogen",
+     "verified": false
+    },
+    {
+     "title": "Semantic Kernel repository README (successor notice)",
+     "locator": "github.com/microsoft/semantic-kernel",
+     "verified": false
+    }
+   ],
+   "verification": {
+    "verified": false,
+    "verification_date": null,
+    "authored_date": "2026-10-06",
+    "status": "key-claims-checked",
+    "basis": "key claims compared with the primary sources in source_check on the date given; the entry as a whole is not independently verified",
+    "source_check": {
+     "date": "2026-10-09",
+     "claims_checked": [
+      "MAF is described as an open, multi-language framework for production-grade AI agents and multi-agent workflows in .NET and Python, with the Go SDK in a separate repository.",
+      "README feature list: multiple providers, middleware, graph workflows (sequential, concurrent, handoff, group collaboration) with checkpointing, streaming, human-in-the-loop and time-travel, OpenTelemetry, declarative YAML agents, agent skills, DevUI, AF Labs.",
+      "Install commands: pip install agent-framework; dotnet add package Microsoft.Agents.AI.",
+      "The AutoGen README states AutoGen is in maintenance mode and names MAF as the enterprise-ready successor.",
+      "The Semantic Kernel README states MAF is its enterprise-ready successor and that MAF reached version 1.0 as a production-ready release.",
+      "The migration guide states MAF is developed by the core AutoGen and Semantic Kernel teams."
+     ],
+     "sources": [
+      {
+       "title": "Microsoft Agent Framework README (GitHub)",
+       "url": "https://github.com/microsoft/agent-framework"
+      },
+      {
+       "title": "AutoGen README (GitHub)",
+       "url": "https://github.com/microsoft/autogen"
+      },
+      {
+       "title": "Semantic Kernel README (GitHub)",
+       "url": "https://github.com/microsoft/semantic-kernel"
+      },
+      {
+       "title": "AutoGen to Microsoft Agent Framework migration guide (Microsoft Learn)",
+       "url": "https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-autogen/"
+      }
+     ],
+     "not_independently_verified": [
+      "The exact current release number and date of each SDK.",
+      "The licence.",
+      "Claims about adoption, performance or \"enterprise\" suitability, which are vendor positioning rather than testable facts.",
+      "Feature parity between the Python and .NET SDKs."
+     ]
+    }
+   },
+   "freshness_class": "volatile",
+   "time_sensitive_claims_to_verify": [
+    "Current version number and release status of each language SDK (README was read on the check date).",
+    "Supported providers and hosting options.",
+    "Go SDK status (separate repository).",
+    "Whether distributed multi-process execution has shipped (the AutoGen migration guide says it is planned).",
+    "Licence terms (not checked)."
+   ],
+   "intellitools_mappings": []
+  },
+  {
+   "id": "migrate-to-microsoft-agent-framework",
+   "canonical_name": "Migrating from AutoGen or Semantic Kernel to Microsoft Agent Framework",
+   "entity_type": "technique",
+   "domain": "Agent Protocols, Frameworks & Runtimes",
+   "parent": null,
+   "page_kind": "comparison",
+   "url": "knowledge/migrate-to-microsoft-agent-framework.html",
+   "plain_english_definition": "If your AutoGen agent is \"a model, some instructions and a few tools\", moving it is mostly renaming. If you built group chats or custom event loops, you will redesign them as workflows: nodes that pass typed data along edges. Semantic Kernel users have an official guide too. Either way the safe approach is the same: port one agent at a time, keep a test that checks its behaviour, and cut over only when old and new agree.",
+   "technical_definition": "Microsoft's AutoGen guide (Python SDK) states what stays the same — agents wrap a model client, take instructions and tools, and both libraries support function tools, token streaming, multimodal content and async I/O — and lists key differences: (1) orchestration — AutoGen pairs an event-driven core with a high-level Team, whereas Agent Framework centres on a typed, graph-based Workflow that routes data along edges and activates executors when inputs are ready; (2) tools — AutoGen's FunctionTool becomes the @tool decorator with automatically inferred schemas, plus hosted tools such as a code interpreter and web search; (3) agent behaviour — AutoGen's AssistantAgent is single-turn unless max_tool_iterations is raised, while Agent is multi-turn by default and keeps calling tools until it can answer; (4) runtime — AutoGen offered embedded and experimental distributed runtimes, while Agent Framework focuses on single-process composition (distributed execution is described as planned). Conversation state moves to an AgentSession object. GraphFlow versus Workflow: control-flow edges become data-flow edges, nodes can be agents, functions or sub-workflows, and typing is strong. The guide also covers MCP tools (stdio, streamable HTTP, websocket), agent-as-a-tool, middleware, human-in-the-loop via a request/response API, checkpointing and resuming, and OpenTelemetry. The Semantic Kernel README points to its own migration guide; this page does not restate that guide because its contents could not be extracted at check time.",
+   "aliases": [
+    "AutoGen to Agent Framework migration",
+    "Semantic Kernel to Agent Framework migration",
+    "migrate AutoGen",
+    "migrate Semantic Kernel",
+    "AutoGen migration guide",
+    "AssistantAgent to Agent",
+    "GraphFlow to Workflow",
+    "AutoGen vs Microsoft Agent Framework",
+    "upgrade from AutoGen"
+   ],
+   "acronyms": [],
+   "user_intents": [
+    "port existing AutoGen code",
+    "port existing Semantic Kernel code",
+    "estimate the effort and risks of migrating"
+   ],
+   "natural_language_questions": [
+    "How do I migrate from AutoGen to Microsoft Agent Framework?",
+    "How do I migrate from Semantic Kernel to Microsoft Agent Framework?",
+    "What replaces AutoGen's AssistantAgent and Team?",
+    "What is the difference between AutoGen GraphFlow and Agent Framework Workflow?",
+    "Should I migrate an existing AutoGen project?"
+   ],
+   "prerequisites": [
+    "autogen",
+    "semantic-kernel",
+    "microsoft-agent-framework"
+   ],
+   "related_concepts": [
+    "agent-frameworks-compared",
+    "multi-agent-systems",
+    "agentic-workflows",
+    "mcp",
+    "agent-evaluation"
+   ],
+   "contrasted_with": [
+    {
+     "ref": "autogen",
+     "difference": "The source framework (maintenance mode).",
+     "resolves_to_page": true
+    },
+    {
+     "ref": "semantic-kernel",
+     "difference": "The other source framework; Microsoft publishes a separate guide.",
+     "resolves_to_page": true
+    },
+    {
+     "ref": "microsoft-agent-framework",
+     "difference": "The target.",
+     "resolves_to_page": true
+    }
+   ],
+   "technologies_frameworks": [
+    "AssistantAgent → Agent",
+    "FunctionTool → @tool",
+    "Team / GraphFlow → Workflow",
+    "AgentSession",
+    "MCP tools",
+    "OpenTelemetry"
+   ],
+   "implementation_patterns": [
+    "Strangler migration: run old and new agents side by side on the same test inputs and compare outputs.",
+    "Port tools first (they are the most mechanical), then single agents, then orchestration.",
+    "Replace broadcast group chats with explicit edges so data flow is visible and testable.",
+    "Keep an evaluation set of real tasks and re-run it after each ported component (Agent Evaluation)."
+   ],
+   "common_failure_modes": [
+    "Assuming AutoGen's single-turn default carries over: the new Agent loops on tools until it can answer, which changes cost and latency.",
+    "Porting a group chat line-for-line instead of redesigning as a workflow.",
+    "Relying on the experimental distributed runtime without a plan: the guide describes single-process composition.",
+    "Trusting the guide's \"future patterns\" note as current: it lists Swarm and SelectorGroupChat as in development while the framework README lists handoff and group collaboration as supported — check the repository.",
+    "Migrating on a deadline with no behaviour tests."
+   ],
+   "troubleshooting": [
+    {
+     "symptom": "Agent now makes many more tool calls",
+     "remedy": "Agent is multi-turn by default; set limits and review tool descriptions."
+    },
+    {
+     "symptom": "Lost conversation memory",
+     "remedy": "Pass an AgentSession across calls; without a session each call is independent."
+    },
+    {
+     "symptom": "Pattern you used in AutoGen has no direct equivalent",
+     "remedy": "Check the guide's pattern sections and the repository samples; otherwise rebuild it as a workflow graph."
+    }
+   ],
+   "practical_guide": [
+    "Inventory agents, tools, teams, runtimes and model clients in the old codebase.",
+    "Write or collect representative tasks and expected behaviours.",
+    "Port model clients and tools; confirm tool schemas match.",
+    "Port each single agent; compare outputs with the old agent on the test set.",
+    "Redesign multi-agent orchestration as workflows; add checkpoints and human approval where the old system lacked them.",
+    "Add tracing, then cut over gradually and keep the old code until results match."
+   ],
+   "when_to_use": "Plan a migration if you rely on AutoGen or Semantic Kernel for a system that must stay supported; both repositories now recommend MAF for new work. A stable legacy system may reasonably stay put until you have capacity and tests.",
+   "canonical_sources": [
+    {
+     "title": "AutoGen to Microsoft Agent Framework Migration Guide",
+     "locator": "learn.microsoft.com/en-us/agent-framework/migration-guide/from-autogen/",
+     "verified": false
+    },
+    {
+     "title": "Semantic Kernel to Agent Framework migration guide",
+     "locator": "learn.microsoft.com/en-us/agent-framework/migration-guide/from-semantic-kernel",
+     "verified": false
+    },
+    {
+     "title": "Semantic Kernel and Microsoft Agent Framework (Agent Framework blog)",
+     "locator": "devblogs.microsoft.com/agent-framework/semantic-kernel-and-microsoft-agent-framework/",
+     "verified": false
+    }
+   ],
+   "verification": {
+    "verified": false,
+    "verification_date": null,
+    "authored_date": "2026-10-06",
+    "status": "key-claims-checked",
+    "basis": "key claims compared with the primary sources in source_check on the date given; the entry as a whole is not independently verified",
+    "source_check": {
+     "date": "2026-10-09",
+     "claims_checked": [
+      "What stays the same and the four key differences (orchestration style, tools, agent turn behaviour, runtime) as stated in the AutoGen migration guide.",
+      "GraphFlow versus Workflow comparison table (control flow vs data flow; agents-only vs agents/functions/sub-workflows; typing).",
+      "The guide covers MCP tools, agent-as-a-tool, middleware, human-in-the-loop, checkpointing and observability.",
+      "The guide's \"Future Patterns\" note lists Swarm and SelectorGroupChat as in development, while the MAF README lists handoff and group collaboration among supported patterns (an inconsistency, reported rather than resolved).",
+      "The Semantic Kernel README links to a Semantic Kernel migration guide and to an Agent Framework blog post."
+     ],
+     "sources": [
+      {
+       "title": "AutoGen to Microsoft Agent Framework Migration Guide (Microsoft Learn)",
+       "url": "https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-autogen/"
+      },
+      {
+       "title": "Microsoft Agent Framework README (GitHub)",
+       "url": "https://github.com/microsoft/agent-framework"
+      },
+      {
+       "title": "Semantic Kernel README (GitHub)",
+       "url": "https://github.com/microsoft/semantic-kernel"
+      }
+     ],
+     "not_independently_verified": [
+      "The contents of the Semantic Kernel migration guide (the page could not be read at check time), so no Semantic Kernel API mappings are given.",
+      "Whether the guide's code samples run unchanged on the current release.",
+      "The suggested migration steps and patterns above are general engineering practice, not Microsoft guidance."
+     ]
+    }
+   },
+   "freshness_class": "volatile",
+   "time_sensitive_claims_to_verify": [
+    "Which AutoGen patterns have first-class equivalents (the guide's roadmap note may be stale).",
+    "Whether distributed execution has shipped.",
+    "API and package names, which changed during the framework's development."
+   ],
+   "intellitools_mappings": []
+  },
+  {
+   "id": "mcp-authorization",
+   "canonical_name": "MCP Authorization (OAuth for MCP Servers)",
+   "entity_type": "protocol",
+   "domain": "Agent Protocols, Frameworks & Runtimes",
+   "parent": null,
+   "page_kind": "concept",
+   "url": "knowledge/mcp-authorization.html",
+   "plain_english_definition": "A remote MCP server often fronts private data. MCP borrows standard OAuth so the user logs in at an identity provider, approves access, and the client gets a token it presents to the server. The server tells clients where to log in, and the token is tied to that one server so it cannot be replayed elsewhere. A local server that runs on your machine does not use this flow; it just reads credentials from its environment.",
+   "technical_definition": "Based on MCP specification revision 2026-07-28: authorization is optional. Implementations on HTTP-based transports SHOULD conform; stdio implementations SHOULD NOT and instead retrieve credentials from the environment. The MCP server is an OAuth 2.1 resource server; the MCP client is an OAuth 2.1 client; the authorization server may be separate. (The specification cites OAuth 2.1 by its IETF draft number, i.e. it is still a draft.) Requirements stated include: servers MUST implement OAuth 2.0 Protected Resource Metadata (RFC 9728) and clients MUST use it to find the authorization server; authorization servers MUST provide RFC 8414 or OpenID Connect discovery; clients and authorization servers SHOULD support OAuth Client ID Metadata Documents, while Dynamic Client Registration (RFC 7591) is deprecated and kept for backward compatibility; clients MUST send the RFC 8707 resource parameter, naming the MCP server's canonical URI, in both authorization and token requests; clients MUST send the token in the Authorization: Bearer header on every HTTP request and MUST NOT put it in the query string; servers MUST validate that tokens were issued for them as audience, MUST respond 401 to invalid or expired tokens, and MUST NOT accept or transit other tokens (no token passthrough); authorization servers SHOULD return the RFC 9207 iss parameter and clients MUST validate it when present; refresh tokens MUST be kept confidential and clients MUST NOT assume they will be issued; insufficient-scope errors can trigger a step-up authorization flow. Earlier revisions differ in detail — check the revision your SDK implements.",
+   "aliases": [
+    "MCP OAuth",
+    "MCP authorization",
+    "MCP auth",
+    "OAuth for MCP servers",
+    "protected resource metadata",
+    "RFC 9728",
+    "RFC 8707 resource indicators",
+    "client ID metadata documents",
+    "MCP remote server authentication",
+    "MCP bearer token"
+   ],
+   "acronyms": [],
+   "user_intents": [
+    "secure a remote MCP server with OAuth",
+    "understand how an MCP client logs in to a server",
+    "avoid MCP token-passthrough mistakes"
+   ],
+   "natural_language_questions": [
+    "How does authorization work in MCP?",
+    "How do I add OAuth to an MCP server?",
+    "What is protected resource metadata in MCP?",
+    "Why does MCP use the resource parameter?",
+    "Do stdio MCP servers use OAuth?",
+    "What is token passthrough and why is it forbidden in MCP?"
+   ],
+   "prerequisites": [
+    "mcp",
+    "oauth",
+    "api-authentication"
+   ],
+   "related_concepts": [
+    "mcp-security",
+    "mcp-servers-and-clients",
+    "oauth-for-ai-agents",
+    "openid-connect",
+    "authentication-vs-authorization",
+    "json-web-tokens",
+    "integration-permissions",
+    "microsoft-entra-id"
+   ],
+   "contrasted_with": [
+    {
+     "ref": "oauth-for-ai-agents",
+     "difference": "That page covers an agent app calling a provider API such as Gmail; MCP authorization is the standard flow between an MCP client and an MCP server.",
+     "resolves_to_page": true
+    },
+    {
+     "ref": "api-keys",
+     "difference": "Static keys are simpler but identify an app, not a consenting user, and cannot be scoped or revoked per user.",
+     "resolves_to_page": true
+    }
+   ],
+   "technologies_frameworks": [
+    "OAuth 2.1 (IETF draft)",
+    "RFC 9728 protected resource metadata",
+    "RFC 8414 / OIDC discovery",
+    "RFC 8707 resource indicators",
+    "RFC 9207 issuer identification",
+    "Client ID Metadata Documents",
+    "PKCE"
+   ],
+   "implementation_patterns": [
+    "Separate roles: the MCP server only validates tokens; a dedicated authorization server issues them.",
+    "Validate audience on every request; reject tokens minted for another resource.",
+    "Give each tool the narrowest scope and request more only when a call needs it (step-up).",
+    "For downstream APIs, have the MCP server obtain its own token for the downstream service rather than forwarding the client's.",
+    "Use stdio plus environment credentials for single-user local tools."
+   ],
+   "common_failure_modes": [
+    "Token passthrough: forwarding the client's token to an upstream API, which the specification forbids.",
+    "Skipping audience validation, so a token for one server works on another.",
+    "Putting tokens in URLs or logs.",
+    "Requesting one all-powerful scope at first login.",
+    "Treating protocol-level authorisation as enough: tool-level permissions and confirmation are still needed (MCP Security Risks and Mitigations).",
+    "Following an older tutorial that assumes Dynamic Client Registration is the default."
+   ],
+   "troubleshooting": [
+    {
+     "symptom": "Client gets 401 and does not know where to log in",
+     "remedy": "Serve protected-resource metadata and a WWW-Authenticate challenge pointing to it, per the specification."
+    },
+    {
+     "symptom": "Token accepted by the wrong server",
+     "remedy": "Check the audience claim and the resource parameter the client sent."
+    },
+    {
+     "symptom": "Login loop with an enterprise identity provider",
+     "remedy": "Check the issuer, redirect URIs and the application type used at registration."
+    }
+   ],
+   "practical_guide": [
+    "Decide whether the server is remote (use this flow) or local stdio (use environment credentials).",
+    "Choose an authorization server; confirm it supports discovery and, ideally, Client ID Metadata Documents.",
+    "Publish protected-resource metadata for your server.",
+    "Validate bearer tokens: signature, expiry, issuer and audience.",
+    "Define scopes per tool; return insufficient-scope errors so clients can step up.",
+    "Test with a real client, log denials without logging tokens, and review MCP Security Risks and Mitigations."
+   ],
+   "when_to_use": "Use for remote MCP servers that expose user-specific or sensitive data. Not needed for a local stdio server that runs as the user.",
+   "canonical_sources": [
+    {
+     "title": "MCP specification — Authorization (revision 2026-07-28)",
+     "locator": "modelcontextprotocol.io/specification/2026-07-28/basic/authorization",
+     "verified": false
+    },
+    {
+     "title": "RFC 9728 — OAuth 2.0 Protected Resource Metadata",
+     "locator": "rfc-editor.org/rfc/rfc9728",
+     "verified": false
+    },
+    {
+     "title": "RFC 8707 — Resource Indicators for OAuth 2.0",
+     "locator": "rfc-editor.org/rfc/rfc8707",
+     "verified": false
+    },
+    {
+     "title": "RFC 9207 — OAuth 2.0 Authorization Server Issuer Identification",
+     "locator": "rfc-editor.org/rfc/rfc9207",
+     "verified": false
+    }
+   ],
+   "verification": {
+    "verified": false,
+    "verification_date": null,
+    "authored_date": "2026-10-06",
+    "status": "key-claims-checked",
+    "basis": "key claims compared with the primary sources in source_check on the date given; the entry as a whole is not independently verified",
+    "source_check": {
+     "date": "2026-10-09",
+     "claims_checked": [
+      "Authorization is optional; HTTP transports SHOULD conform, stdio SHOULD NOT and should take credentials from the environment.",
+      "MCP server = OAuth 2.1 resource server; MCP client = OAuth 2.1 client; OAuth 2.1 is cited as IETF draft draft-ietf-oauth-v2-1-13.",
+      "Servers MUST implement RFC 9728; clients MUST use it for authorization-server discovery.",
+      "Clients and authorization servers SHOULD support Client ID Metadata Documents; Dynamic Client Registration is deprecated and retained for backward compatibility.",
+      "Clients MUST send the RFC 8707 resource parameter in authorization and token requests; bearer token in the Authorization header on every request and never in the query string.",
+      "Servers MUST validate the token audience, return 401 for invalid or expired tokens, and MUST NOT accept or transit other tokens.",
+      "RFC 9207 iss: SHOULD be returned by authorization servers; clients MUST validate it when present.",
+      "Refresh tokens: clients MUST keep them confidential and MUST NOT assume they are issued."
+     ],
+     "sources": [
+      {
+       "title": "MCP specification 2026-07-28 — Authorization overview",
+       "url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization"
+      },
+      {
+       "title": "MCP specification 2026-07-28 — Client registration",
+       "url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization/client-registration"
+      },
+      {
+       "title": "MCP specification 2026-07-28 — Key changes",
+       "url": "https://modelcontextprotocol.io/specification/2026-07-28/changelog"
+      }
+     ],
+     "not_independently_verified": [
+      "That 2026-07-28 is still the newest revision when you read this.",
+      "The text of the discovery and scope-selection sub-pages (they could not be retrieved; only the overview page was read).",
+      "How much of this individual SDKs or hosted MCP clients implement.",
+      "Details of the step-up flow beyond its existence."
+     ]
+    }
+   },
+   "freshness_class": "volatile",
+   "time_sensitive_claims_to_verify": [
+    "Which specification revision your SDK and clients implement.",
+    "Status of OAuth 2.1 and the Client ID Metadata Document draft (both cited as IETF drafts).",
+    "Deprecation status of Dynamic Client Registration.",
+    "Requirements differ between revisions (for example 2025-11-25 and 2026-07-28)."
+   ],
+   "intellitools_mappings": []
+  },
+  {
+   "id": "gmail-api-scopes-and-verification",
+   "canonical_name": "Gmail API Scopes and Verification",
+   "entity_type": "standard",
+   "domain": "Integrations",
+   "parent": null,
+   "page_kind": "concept",
+   "url": "knowledge/gmail-api-scopes-and-verification.html",
+   "plain_english_definition": "\"Readonly\" sounds harmless, but for Gmail Google treats reading mail as one of its most sensitive permissions. If your app is for other people, you must pass Google's verification review, and if you keep their email data on a server you may need an independent security assessment. Google's rules also limit what you can do with the data: you can show it to the user inside your feature, but you cannot use it to train a general AI model or sell it. That matters a lot when the product is an AI agent.",
+   "technical_definition": "Google's Gmail API scope page (checked on the date below) classifies scopes as: https://www.googleapis.com/auth/gmail.labels — non-sensitive; gmail.send — sensitive; and restricted: https://mail.google.com/, gmail.readonly, gmail.compose, gmail.insert, gmail.modify, gmail.metadata and gmail.settings.basic. The page says restricted scopes \"provide wide access to Google user data and require restricted scope OAuth App Verification\" and that if you store restricted-scope data on servers (or transmit it) you must go through a security assessment. Google's Workspace user-data and developer policy (last updated 2026-09-03 on the date checked) sets Limited Use rules: limit use to providing or improving visible user-facing features; restrict transfers to consented feature delivery, security, legal compliance or an acquisition with consent; do not let humans read user data except with documented consent, for security, for legal compliance, or in aggregated and anonymised form; and prohibits transferring, selling or using user data to serve ads, to determine creditworthiness, or \"to create, train, or improve a machine learning or artificial intelligence model beyond that specific user's personalized model for the appropriate use case or user-facing feature\". Apps must include an attestation sentence about adhering to the Google User Data Policy including Limited Use. The older Google API Services User Data Policy page (last updated 2024-02-15) contains the human-reading and transfer limits but the AI/ML sentence was not found on it at check time, so treat the Workspace policy page as the source for that rule.",
+   "aliases": [
+    "Gmail restricted scopes",
+    "gmail.readonly restricted",
+    "Gmail OAuth scopes",
+    "Google OAuth app verification",
+    "Google security assessment CASA",
+    "Limited Use policy Gmail",
+    "Google user data policy AI training",
+    "Gmail API permissions for agents",
+    "Gmail scope for sending only"
+   ],
+   "acronyms": [],
+   "user_intents": [
+    "pick the minimum Gmail scope for an agent",
+    "understand the verification burden before building a Gmail agent",
+    "check whether email data can be used to improve a model"
+   ],
+   "natural_language_questions": [
+    "Which Gmail scope should my AI agent use?",
+    "Is gmail.readonly a restricted scope?",
+    "Do I need a security assessment for a Gmail AI app?",
+    "Can I use Gmail data to train an AI model?",
+    "What is the Google Limited Use policy?"
+   ],
+   "prerequisites": [
+    "oauth-for-ai-agents",
+    "gmail-for-ai-agents"
+   ],
+   "related_concepts": [
+    "integration-permissions",
+    "ai-privacy-and-security",
+    "connecting-agents-to-apps",
+    "prompt-injection",
+    "ai-governance",
+    "mcp-authorization",
+    "agent-tools"
+   ],
+   "contrasted_with": [
+    {
+     "ref": "gmail-for-ai-agents",
+     "difference": "That page shows how to build the integration; this one covers which permissions you may request and what Google lets you do with the data.",
+     "resolves_to_page": true
+    },
+    {
+     "ref": "oauth-for-ai-agents",
+     "difference": "Generic OAuth handling for agent apps.",
+     "resolves_to_page": true
+    }
+   ],
+   "technologies_frameworks": [
+    "Gmail API",
+    "Google OAuth 2.0",
+    "restricted-scope verification",
+    "Limited Use policy"
+   ],
+   "implementation_patterns": [
+    "Map each tool to one scope: labelling → gmail.labels; sending → gmail.send; reading → a restricted scope (plan for verification).",
+    "Keep restricted-scope data off your servers where you can (client-side or per-request processing) to reduce assessment burden — confirm with Google's current requirements.",
+    "Never feed mailbox content into training or fine-tuning sets.",
+    "Document data flows and retention in the privacy policy and in the verification submission."
+   ],
+   "common_failure_modes": [
+    "Assuming \"readonly\" is a low-friction scope.",
+    "Shipping a prototype on a restricted scope to external users without verification.",
+    "Logging message bodies into an observability or evaluation dataset that is later used to tune a model.",
+    "Letting engineers browse user mail for debugging without the documented consent the policy requires.",
+    "Using the full-access scope mail.google.com when a narrower one exists."
+   ],
+   "troubleshooting": [
+    {
+     "symptom": "Verification is rejected",
+     "remedy": "Reduce requested scopes to what visible features need and explain each in the submission."
+    },
+    {
+     "symptom": "Need to debug with real messages",
+     "remedy": "Use synthetic or consented test accounts; do not read user mail without documented consent."
+    },
+    {
+     "symptom": "Want to improve summaries using users' mail",
+     "remedy": "Do not train a generalised model on it; per-user personalisation inside the feature is the allowed carve-out under the policy wording."
+    }
+   ],
+   "practical_guide": [
+    "List the exact actions the agent needs.",
+    "Select the narrowest scope per action and check its class on the scopes page.",
+    "Decide whether you will store mail data server-side; if so plan for the security assessment.",
+    "Add the Limited Use attestation and a plain-language data-use notice.",
+    "Exclude mail content from training, tuning and shared evaluation sets.",
+    "Re-check Google's pages before launch — classes and policies change."
+   ],
+   "when_to_use": "Read before choosing scopes for any Gmail-connected agent or when drafting a privacy notice for one. Not legal advice; confirm with Google's current policy and your counsel.",
+   "canonical_sources": [
+    {
+     "title": "Choose Gmail API scopes (Google for Developers)",
+     "locator": "developers.google.com/workspace/gmail/api/auth/scopes",
+     "verified": false
+    },
+    {
+     "title": "Google Workspace user data and developer policy",
+     "locator": "developers.google.com/workspace/workspace-api-user-data-developer-policy",
+     "verified": false
+    },
+    {
+     "title": "Google API Services User Data Policy",
+     "locator": "developers.google.com/terms/api-services-user-data-policy",
+     "verified": false
+    }
+   ],
+   "verification": {
+    "verified": false,
+    "verification_date": null,
+    "authored_date": "2026-10-06",
+    "status": "key-claims-checked",
+    "basis": "key claims compared with the primary sources in source_check on the date given; the entry as a whole is not independently verified",
+    "source_check": {
+     "date": "2026-10-09",
+     "claims_checked": [
+      "Scope classes: gmail.labels non-sensitive; gmail.send sensitive; mail.google.com, gmail.readonly, gmail.compose, gmail.insert, gmail.modify, gmail.metadata and gmail.settings.basic restricted.",
+      "Restricted scopes require restricted scope OAuth app verification; storing restricted-scope data on servers (or transmitting it) requires a security assessment.",
+      "Workspace policy Limited Use text: transfer limits, human-reading limits and the prohibition on using user data to create, train or improve an ML/AI model beyond that user's personalised model for the feature.",
+      "The Workspace policy page shows \"Last updated 2026-09-03 UTC\"; the older API Services policy page shows 2024-02-15 and did not contain the AI/ML sentence in the extracted text."
+     ],
+     "sources": [
+      {
+       "title": "Choose Gmail API scopes",
+       "url": "https://developers.google.com/workspace/gmail/api/auth/scopes"
+      },
+      {
+       "title": "Google Workspace user data and developer policy",
+       "url": "https://developers.google.com/workspace/workspace-api-user-data-developer-policy"
+      },
+      {
+       "title": "Google API Services User Data Policy",
+       "url": "https://developers.google.com/terms/api-services-user-data-policy"
+      }
+     ],
+     "not_independently_verified": [
+      "Fees, timelines and exact thresholds for verification and the security assessment.",
+      "Rules for unverified or internal-only apps (user caps, test-mode behaviour).",
+      "How the policy applies to consumer versus Workspace accounts and to enterprise admins who install an app for their own domain.",
+      "Whether the older API Services page omits the AI/ML sentence or the text extraction missed it.",
+      "Anything about legal obligations such as GDPR; this entry covers Google's platform rules only."
+     ]
+    }
+   },
+   "freshness_class": "volatile",
+   "time_sensitive_claims_to_verify": [
+    "Which scopes are in each class.",
+    "Verification and security-assessment requirements, thresholds and fees.",
+    "Limited Use wording, including the AI/ML restriction (the Workspace page was last updated 2026-09-03).",
+    "Differences between consumer Gmail and Workspace-managed accounts."
+   ],
+   "intellitools_mappings": []
+  },
+  {
+   "id": "inspect-ai-evaluation-framework",
+   "canonical_name": "Inspect (UK AI Security Institute Evaluation Framework)",
+   "entity_type": "framework",
+   "domain": "Evaluation & Benchmarks",
+   "parent": null,
+   "page_kind": "concept",
+   "url": "knowledge/inspect-ai-evaluation-framework.html",
+   "plain_english_definition": "Think of Inspect as a test harness for AI models. You write down questions (the dataset), how the model should attempt them (the solver — a plain prompt, a tool-using agent, a multi-step plan), and how to mark the answers (the scorer — exact match, a model acting as a grader, or custom code). Inspect runs it against whichever model you point it at, keeps detailed logs, and gives you a viewer to see exactly what happened.",
+   "technical_definition": "Inspect's README describes it as a framework for large language model evaluations created by the UK AI Security Institute, with built-in components for prompt engineering, tool usage, multi-turn dialogue and model-graded evaluations, extensible through other Python packages, and a collection of over 200 pre-built evaluations. Its documentation organises the framework into: Tasks (datasets, solvers and scorers brought together), Datasets, Solvers (prompt engineering and other elicitation strategies), Scorers (including text-matching, multiple-choice, model-graded and math scorers, with metrics and epoch reduction); Models (a uniform API across providers, plus caching, concurrency control, batch mode, reasoning-model options and structured output); Agents (ReAct agent, a \"deep agent\", multi-agent composition, custom agents, an agent bridge for frameworks such as OpenAI Agents SDK, LangChain and Pydantic AI, and a human agent for baselining); Tools (custom tools, standard tools for code execution, text editing, computer use, web search and browsing, and MCP tools); Sandboxing to isolate model-generated code; tool approval and result-review policies; limits on time, messages, tokens and cost; eval sets for running many tasks; log files, dataframes and a log viewer (\"Inspect View\") with a VS Code extension; and scanners that review transcripts for problems such as misconfigured environments or refusals. The pre-built evaluations live in the separate Inspect Evals repository, which is maintained by Generality Labs with contributions from the UK AI Security Institute and others, not by the Institute alone. The source repository licence is MIT.",
+   "aliases": [
+    "Inspect AI",
+    "inspect_ai",
+    "UK AISI Inspect",
+    "AI Security Institute Inspect",
+    "Inspect evals",
+    "inspect_evals",
+    "Inspect framework",
+    "UK AI Safety Institute evaluation framework",
+    "AISI evals"
+   ],
+   "acronyms": [],
+   "user_intents": [
+    "run standard LLM evaluations reproducibly",
+    "build a custom evaluation with scoring and logs",
+    "evaluate an agent with sandboxed tools"
+   ],
+   "natural_language_questions": [
+    "What is Inspect from the UK AI Security Institute?",
+    "How do I write an evaluation in Inspect?",
+    "What are solvers and scorers in Inspect?",
+    "How does Inspect sandbox agent tools?",
+    "Where do I find ready-made Inspect evaluations?"
+   ],
+   "prerequisites": [
+    "ai-evaluation",
+    "llm-benchmarks-vs-task-evals"
+   ],
+   "related_concepts": [
+    "agent-evaluation",
+    "llm-as-a-judge",
+    "code-execution-sandboxing",
+    "red-teaming",
+    "benchmarks-and-leaderboards",
+    "benchmark-contamination",
+    "evaluation-metrics-for-ai",
+    "swe-bench",
+    "humaneval",
+    "mmlu",
+    "mcp",
+    "ai-governance"
+   ],
+   "contrasted_with": [
+    {
+     "ref": "mlflow",
+     "difference": "MLflow tracks experiments and models across the ML lifecycle; Inspect specialises in LLM evaluation harness features (solvers, scorers, sandboxes).",
+     "resolves_to_page": true
+    },
+    {
+     "ref": "llm-as-a-judge",
+     "difference": "Model grading is one scorer type inside Inspect, not a replacement for the framework.",
+     "resolves_to_page": true
+    },
+    {
+     "ref": "humaneval",
+     "difference": "HumanEval is a benchmark; Inspect is the harness that can run benchmarks like it.",
+     "resolves_to_page": true
+    }
+   ],
+   "technologies_frameworks": [
+    "inspect_ai (Python)",
+    "Inspect Evals",
+    "Inspect View",
+    "VS Code extension",
+    "Docker-based sandboxes",
+    "model providers via a uniform API"
+   ],
+   "implementation_patterns": [
+    "Define a Task from a dataset, a solver and a scorer; run it with the inspect CLI against a model identifier.",
+    "Use model-graded scorers for open-ended answers, and spot-check them against human labels.",
+    "Run agent evaluations inside a sandbox with limits on tokens, messages and time.",
+    "Re-score saved logs without re-running the model.",
+    "Run eval sets across several models and compare with the analysis tools."
+   ],
+   "common_failure_modes": [
+    "Treating a pre-built eval score as proof of real-world safety or capability (Public Benchmarks vs Task-Specific Evals).",
+    "Letting an agent run unsandboxed code with real credentials.",
+    "Trusting a model-graded score without calibration against humans (LLM-as-a-Judge).",
+    "Comparing scores across runs with different prompts, epochs or limits.",
+    "Evaluating on data the model may have seen (Benchmark Contamination and Data Leakage)."
+   ],
+   "troubleshooting": [
+    {
+     "symptom": "Scores differ between runs",
+     "remedy": "Fix seeds where supported, set the number of epochs, and report uncertainty rather than a single number."
+    },
+    {
+     "symptom": "Agent evaluation hangs or costs too much",
+     "remedy": "Set message, token, time and cost limits on the task."
+    },
+    {
+     "symptom": "Cannot reproduce a published result",
+     "remedy": "Check the eval version, prompt, model snapshot and scorer settings recorded in the log."
+    }
+   ],
+   "practical_guide": [
+    "Write 20–50 representative samples with clear targets.",
+    "Choose the simplest solver that reflects real use (plain generation first, tools later).",
+    "Pick a scorer you can audit; add a model-graded scorer only when exact checks are impossible.",
+    "Run against a small model first to debug, then your target models.",
+    "Open the log viewer and read failures before reading the aggregate score.",
+    "Record versions and settings so others can reproduce the run."
+   ],
+   "when_to_use": "Use when you need repeatable, inspectable LLM or agent evaluations, particularly with tools and sandboxes. For a quick check of one prompt, a handful of manual test cases may be enough.",
+   "canonical_sources": [
+    {
+     "title": "Inspect documentation",
+     "locator": "inspect.aisi.org.uk",
+     "verified": false
+    },
+    {
+     "title": "Inspect repository (UKGovernmentBEIS/inspect_ai)",
+     "locator": "github.com/UKGovernmentBEIS/inspect_ai",
+     "verified": false
+    },
+    {
+     "title": "Inspect Evals repository and docs",
+     "locator": "github.com/UKGovernmentBEIS/inspect_evals",
+     "verified": false
+    }
+   ],
+   "verification": {
+    "verified": false,
+    "verification_date": null,
+    "authored_date": "2026-10-06",
+    "status": "key-claims-checked",
+    "basis": "key claims compared with the primary sources in source_check on the date given; the entry as a whole is not independently verified",
+    "source_check": {
+     "date": "2026-10-09",
+     "claims_checked": [
+      "Inspect is a framework for LLM evaluations created by the UK AI Security Institute; built-in components cover prompt engineering, tool use, multi-turn dialogue and model-graded evaluations; extensible through Python packages.",
+      "README states over 200 pre-built evaluations; the repository licence text is MIT, copyright UK AI Security Institute.",
+      "Documentation structure: Tasks combine datasets, solvers and scorers; agents (ReAct, deep agent, multi-agent, agent bridge, human agent); tools (standard tools including code execution, computer use, web search and browsing; MCP tools); sandboxing; tool approval; limits; eval sets; logs, dataframes, viewer, VS Code extension; scanners.",
+      "The Inspect Evals repository says it is maintained by Generality Labs, founded in 2024 with contributions from the UK AI Security Institute, Arcadia Impact and the Vector Institute."
+     ],
+     "sources": [
+      {
+       "title": "Inspect documentation index (llms.txt)",
+       "url": "https://inspect.aisi.org.uk/llms.txt"
+      },
+      {
+       "title": "Inspect repository README (GitHub)",
+       "url": "https://github.com/UKGovernmentBEIS/inspect_ai"
+      },
+      {
+       "title": "Inspect Evals README (GitHub)",
+       "url": "https://github.com/UKGovernmentBEIS/inspect_evals"
+      }
+     ],
+     "not_independently_verified": [
+      "Exact import paths, function names and CLI flags: this page deliberately includes no code sketch because the tutorial was not read in full.",
+      "The PyPI package name and current version.",
+      "The number of evaluations today.",
+      "The Institute's name history (the organisation was previously called the AI Safety Institute); not checked."
+     ]
+    }
+   },
+   "freshness_class": "volatile",
+   "time_sensitive_claims_to_verify": [
+    "Component names and APIs (the project is actively developed).",
+    "The number and list of pre-built evaluations (\"over 200\" per the README on the check date).",
+    "Supported providers and sandbox types.",
+    "Maintenance and ownership of Inspect Evals."
+   ],
+   "intellitools_mappings": []
+  },
+  {
+   "id": "openai-reasoning-models",
+   "canonical_name": "OpenAI Reasoning Models: o-series, Effort, Reasoning Tokens and Deprecations",
+   "entity_type": "model",
+   "domain": "Reasoning & Test-Time Compute",
+   "parent": null,
+   "page_kind": "concept",
+   "url": "knowledge/openai-reasoning-models.html",
+   "plain_english_definition": "A reasoning model works through the problem internally before it replies. You pay for that hidden work (as \"reasoning tokens\"), you can ask it to think less or more (the effort setting), and you can ask for a short summary of its thinking, but you never receive the raw thinking itself. Because model names and retirement dates change quickly, the safe habit is to read OpenAI's own model and deprecation pages on the day you build rather than trusting a blog post.",
+   "technical_definition": "Terminology from OpenAI's documentation, checked on the date below: \"reasoning tokens\" are generated in addition to input and output tokens and can run from a few hundred to tens of thousands per request; the exact count appears in the response usage object (output_tokens_details.reasoning_tokens); they are billed as output tokens but the raw reasoning tokens are not exposed through the API. If generation reaches the context limit or max_output_tokens, the response can be \"incomplete\" with reason max_output_tokens, possibly before any visible output, so you can pay for input and reasoning without getting an answer. The reasoning guide lists effort values none, minimal, low, medium, high, xhigh and max, with model-specific support (some models do not accept none or minimal and have different defaults). A summary parameter can return a concise, detailed or auto-selected summary of the reasoning. On supported models, persisted reasoning items let a model use earlier-turn reasoning in later turns without exposing the raw text, and switching model families drops incompatible reasoning. The guide is written for the Responses API. History as documented by OpenAI and its search-visible announcements: o1-preview and o1-mini (September 2024); o3 and o4-mini (April 2025); the GPT-5 family in the API (August 2025), whose system card compares gpt-5-thinking variants against o3 and o4-mini. Deprecations page, as read: o1-preview (shutdown 2025-07-28) and o1-mini (2025-10-27) were announced on 2025-04-28; o1, o1-pro, o3-mini and o4-mini are listed with shutdown 2026-10-23; o3, o3-pro and the dated GPT-5 snapshots with shutdown 2026-12-11; the o3-deep-research and o4-mini-deep-research models were shut down 2026-07-23.",
+   "aliases": [
+    "OpenAI o1",
+    "OpenAI o3",
+    "o4-mini",
+    "o-series models",
+    "OpenAI reasoning models",
+    "reasoning tokens",
+    "reasoning effort",
+    "reasoning summary",
+    "reasoning_effort parameter",
+    "o1-preview",
+    "o3-mini",
+    "GPT-5 thinking",
+    "o1 deprecation",
+    "o3 deprecation",
+    "max_output_tokens reasoning",
+    "hidden reasoning tokens billed"
+   ],
+   "acronyms": [],
+   "user_intents": [
+    "understand what reasoning tokens and effort mean for cost",
+    "know which OpenAI reasoning models are being retired",
+    "use reasoning models without losing the answer to the token limit"
+   ],
+   "natural_language_questions": [
+    "What are OpenAI reasoning models?",
+    "What are reasoning tokens and how are they billed?",
+    "What does reasoning effort do in the OpenAI API?",
+    "Can I see the raw chain of thought from an OpenAI reasoning model?",
+    "When are o1, o3 and o4-mini being shut down?",
+    "Why did my reasoning model return an empty answer?"
+   ],
+   "prerequisites": [
+    "reasoning-models",
+    "tokens",
+    "large-language-models"
+   ],
+   "related_concepts": [
+    "reasoning-vs-standard-models",
+    "thinking-budgets",
+    "test-time-compute",
+    "reasoning-transparency",
+    "chain-of-thought",
+    "reinforcement-learning-for-reasoning",
+    "llm-cost-optimization",
+    "model-apis",
+    "context-windows",
+    "openai-agents-sdk",
+    "function-calling"
+   ],
+   "contrasted_with": [
+    {
+     "ref": "reasoning-vs-standard-models",
+     "difference": "General comparison; this page is the OpenAI-specific vocabulary and operational detail.",
+     "resolves_to_page": true
+    },
+    {
+     "ref": "thinking-budgets",
+     "difference": "Budget controls exist across vendors under different names; OpenAI uses an effort setting.",
+     "resolves_to_page": true
+    },
+    {
+     "ref": "reasoning-transparency",
+     "difference": "Explains why raw reasoning is not shown and why you should not build features that depend on it.",
+     "resolves_to_page": true
+    }
+   ],
+   "technologies_frameworks": [
+    "Responses API",
+    "reasoning.effort",
+    "reasoning summaries",
+    "usage.output_tokens_details.reasoning_tokens",
+    "max_output_tokens",
+    "persisted reasoning items"
+   ],
+   "implementation_patterns": [
+    "Start at a lower effort and raise it only if an evaluation shows gains.",
+    "Set a generous max_output_tokens and handle the \"incomplete\" status explicitly.",
+    "Log reasoning-token counts per request to track cost.",
+    "Ask for a reasoning summary only if you need to show users why — not as a source of truth.",
+    "Pin to a dated snapshot and track its retirement date; plan replacement testing before it."
+   ],
+   "common_failure_modes": [
+    "Setting max_output_tokens too low and getting no visible answer while still paying for reasoning.",
+    "Using high effort for simple extraction tasks.",
+    "Treating a reasoning summary as a faithful transcript of the model's internal process.",
+    "Copying a model name from a blog post that has since been retired.",
+    "Assuming prompts tuned for a non-reasoning model carry over (long step-by-step instructions can be unnecessary)."
+   ],
+   "troubleshooting": [
+    {
+     "symptom": "Empty or truncated answer",
+     "remedy": "Check status and incomplete_details; raise max_output_tokens or lower effort."
+    },
+    {
+     "symptom": "Costs jumped after switching models",
+     "remedy": "Compare reasoning_tokens in usage; lower effort or switch to a non-reasoning model for easy tasks."
+    },
+    {
+     "symptom": "Model not found / deprecated error",
+     "remedy": "Check the deprecations page for the shutdown date and the listed replacement; re-run your evaluations on the replacement."
+    }
+   ],
+   "practical_guide": [
+    "Open the current OpenAI model list and deprecations page and choose a dated snapshot.",
+    "Run your evaluation set at two effort levels and compare quality and cost.",
+    "Set output limits that leave room for reasoning plus the answer.",
+    "Handle incomplete responses and log usage details.",
+    "Schedule a re-evaluation before any announced shutdown date."
+   ],
+   "when_to_use": "Use reasoning models for multi-step problems where accuracy matters more than latency and cost; use faster non-reasoning models for simple tasks.",
+   "canonical_sources": [
+    {
+     "title": "OpenAI reasoning models guide",
+     "locator": "developers.openai.com/api/docs/guides/reasoning",
+     "verified": false
+    },
+    {
+     "title": "OpenAI API deprecations",
+     "locator": "developers.openai.com/api/docs/deprecations",
+     "verified": false
+    },
+    {
+     "title": "Introducing OpenAI o3 and o4-mini",
+     "locator": "openai.com/index/introducing-o3-and-o4-mini/",
+     "verified": false
+    },
+    {
+     "title": "Introducing OpenAI o1-preview",
+     "locator": "openai.com/index/introducing-openai-o1-preview/",
+     "verified": false
+    },
+    {
+     "title": "GPT-5 system card (August 2025)",
+     "locator": "cdn.openai.com/gpt-5-system-card.pdf",
+     "verified": false
+    }
+   ],
+   "verification": {
+    "verified": false,
+    "verification_date": null,
+    "authored_date": "2026-10-06",
+    "status": "key-claims-checked",
+    "basis": "key claims compared with the primary sources in source_check on the date given; the entry as a whole is not independently verified",
+    "source_check": {
+     "date": "2026-10-09",
+     "claims_checked": [
+      "Reasoning tokens are in addition to input and output tokens, counted in usage.output_tokens_details.reasoning_tokens, billed as output tokens, and raw reasoning tokens are not exposed via the API.",
+      "Incomplete responses can occur with reason max_output_tokens before any visible output.",
+      "Effort values listed in the guide: none, minimal, low, medium, high, xhigh, max, with model-specific limits; summary parameter values concise, detailed, auto.",
+      "Persisted reasoning does not expose raw reasoning; switching model families omits incompatible reasoning.",
+      "Deprecation rows: o1-preview (2025-07-28) and o1-mini (2025-10-27) announced 2025-04-28; o1, o1-pro, o3-mini, o4-mini shutdown 2026-10-23; o3, o3-pro and dated GPT-5 snapshots shutdown 2026-12-11; o3-deep-research and o4-mini-deep-research shut down 2026-07-23.",
+      "OpenAI announced o1-preview and o1-mini in September 2024 and o3 and o4-mini in April 2025 (dates from OpenAI announcement titles and a search summary)."
+     ],
+     "sources": [
+      {
+       "title": "Reasoning models | OpenAI API",
+       "url": "https://developers.openai.com/api/docs/guides/reasoning"
+      },
+      {
+       "title": "Deprecations | OpenAI API",
+       "url": "https://developers.openai.com/api/docs/deprecations"
+      },
+      {
+       "title": "Introducing OpenAI o3 and o4-mini",
+       "url": "https://openai.com/index/introducing-o3-and-o4-mini/"
+      },
+      {
+       "title": "Introducing OpenAI o1-preview",
+       "url": "https://openai.com/index/introducing-openai-o1-preview/"
+      }
+     ],
+     "not_independently_verified": [
+      "Current model names: the guide and the deprecations page named different \"current\" models on the same day, so no current model is named here.",
+      "Exact launch dates of o1-preview (12 Sept 2024) and of o3/o4-mini (16 Apr 2025) beyond OpenAI's announcement titles — dates came from a search summary.",
+      "Claims that o3 makes fewer errors than o1 or similar performance comparisons.",
+      "Pricing.",
+      "Whether the o-series retirement dates will hold; OpenAI revises schedules."
+     ]
+    }
+   },
+   "freshness_class": "volatile",
+   "time_sensitive_claims_to_verify": [
+    "Which models exist, their names and their effort support (the reasoning guide and the deprecations page used different current-model names on the check date).",
+    "Shutdown dates, which can be revised.",
+    "Pricing and billing rules.",
+    "Parameter names and allowed effort values.",
+    "Whether the o-series naming is still used for new models."
+   ],
+   "intellitools_mappings": []
+  },
+  {
+   "id": "sora-ai-video",
+   "canonical_name": "Sora (OpenAI Video Generation) and Its Discontinuation",
+   "entity_type": "model",
+   "domain": "Multimodal AI",
+   "parent": null,
+   "page_kind": "concept",
+   "url": "knowledge/sora-ai-video.html",
+   "plain_english_definition": "Sora is a good case study in how fast AI products can appear and vanish. It turned text prompts into video, first as a research preview and later as a consumer app and an API. OpenAI has since announced it is discontinuing the product and its API. If you saw demos or tutorials built on Sora, the underlying service may no longer exist, so check the vendor's notices before relying on any AI product.",
+   "technical_definition": "OpenAI's February 2024 report \"Video generation models as world simulators\" describes a transformer that operates on spacetime patches of video and image latent codes, trained as text-conditional diffusion models on videos and images of variable duration, resolution and aspect ratio; the report says the largest model could generate a minute of high-fidelity video and lists limitations, for example that it does not accurately model the physics of many basic interactions such as glass shattering. The Sora 2 announcement (30 September 2025) claims improved physical accuracy, realism and controllability and describes synchronised dialogue and sound effects and a companion iOS \"Sora\" app; these are the vendor's claims. The announcement page now carries a banner stating that as of 26 April 2026 the Sora product is no longer available. OpenAI's help-centre article says the Sora web and app experiences were discontinued on 26 April 2026 and the API on 24 September 2026, explains how to export content, and says OpenAI will permanently delete data associated with use of Sora after any final export window. OpenAI's API deprecations page records a 24 March 2026 notice that the Videos API and the sora-2, sora-2-pro and dated snapshot models would be removed on 24 September 2026, with no recommended replacement. The Sora 2 system card describes the safety approach, including restrictions on uploads of photorealistic people. Provenance and disclosure matter for any synthetic video (C2PA and Content Provenance (Content Credentials)).",
+   "aliases": [
+    "Sora",
+    "OpenAI Sora",
+    "Sora 2",
+    "sora-2",
+    "Sora API",
+    "Videos API",
+    "OpenAI video generation",
+    "Sora shutdown",
+    "Sora discontinued",
+    "Sora alternatives",
+    "text to video OpenAI",
+    "video generation models as world simulators"
+   ],
+   "acronyms": [],
+   "user_intents": [
+    "find out whether Sora is still available",
+    "understand what Sora was and how it worked",
+    "plan around a discontinued AI API"
+   ],
+   "natural_language_questions": [
+    "What is Sora?",
+    "Is Sora still available?",
+    "When is the Sora API shutting down?",
+    "How did Sora generate video?",
+    "What replaces the Sora API?",
+    "How do I export my Sora videos?"
+   ],
+   "prerequisites": [
+    "diffusion-models",
+    "video-generation-models"
+   ],
+   "related_concepts": [
+    "world-models",
+    "nvidia-cosmos",
+    "multimodal-ai",
+    "c2pa-content-provenance",
+    "ai-governance",
+    "transformers",
+    "model-apis",
+    "open-weights-models"
+   ],
+   "contrasted_with": [
+    {
+     "ref": "video-generation-models",
+     "difference": "The general explanation of video models; Sora is one historic example.",
+     "resolves_to_page": true
+    },
+    {
+     "ref": "nvidia-cosmos",
+     "difference": "Cosmos is an open world-model platform aimed at physical AI; Sora was a closed consumer/API video product.",
+     "resolves_to_page": true
+    },
+    {
+     "ref": "world-models",
+     "difference": "OpenAI's 2024 report framed video generators as possible world simulators and listed concrete physics failures.",
+     "resolves_to_page": true
+    }
+   ],
+   "technologies_frameworks": [
+    "diffusion transformer",
+    "spacetime patches",
+    "text-to-video",
+    "synchronised audio generation"
+   ],
+   "implementation_patterns": [
+    "Abstract the video provider behind your own interface so a shutdown means swapping an adapter.",
+    "Keep prompts, seeds and outputs you are entitled to keep, and export before a provider's cut-off.",
+    "Label synthetic video and attach provenance metadata.",
+    "Check the vendor deprecations page when adopting any AI API."
+   ],
+   "common_failure_modes": [
+    "Building a product on a single closed API with no exit plan.",
+    "Trusting old tutorials and demos as evidence a service exists.",
+    "Treating vendor claims of \"physical accuracy\" as measured guarantees.",
+    "Publishing synthetic video without disclosure."
+   ],
+   "troubleshooting": [
+    {
+     "symptom": "Sora API calls fail",
+     "remedy": "Check the deprecations page: the Videos API had a published shutdown date of 24 September 2026."
+    },
+    {
+     "symptom": "Need your old content",
+     "remedy": "Follow the export instructions in OpenAI's help article; the availability of any final export window was not verified."
+    },
+    {
+     "symptom": "Need a replacement",
+     "remedy": "Evaluate current video providers or open-weight options on your own prompts; no OpenAI replacement was listed."
+    }
+   ],
+   "practical_guide": [
+    "Confirm current availability on the vendor's own pages.",
+    "If migrating, list which Sora features you used (audio, length, characters) and test candidates on the same prompts.",
+    "Add provenance and disclosure to outputs.",
+    "Record the model, date and settings used for each asset."
+   ],
+   "when_to_use": "Read for history and for lessons about vendor dependency; do not start new work on Sora.",
+   "canonical_sources": [
+    {
+     "title": "Video generation models as world simulators (OpenAI, Feb 2024)",
+     "locator": "openai.com/index/video-generation-models-as-world-simulators/",
+     "verified": false
+    },
+    {
+     "title": "Sora 2 is here (OpenAI, 30 Sep 2025)",
+     "locator": "openai.com/index/sora-2/",
+     "verified": false
+    },
+    {
+     "title": "What to know about the Sora discontinuation (OpenAI Help Center)",
+     "locator": "help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation",
+     "verified": false
+    },
+    {
+     "title": "OpenAI API deprecations",
+     "locator": "developers.openai.com/api/docs/deprecations",
+     "verified": false
+    },
+    {
+     "title": "Sora 2 System Card",
+     "locator": "openai.com/index/sora-2-system-card/",
+     "verified": false
+    }
+   ],
+   "verification": {
+    "verified": false,
+    "verification_date": null,
+    "authored_date": "2026-10-06",
+    "status": "key-claims-checked",
+    "basis": "key claims compared with the primary sources in source_check on the date given; the entry as a whole is not independently verified",
+    "source_check": {
+     "date": "2026-10-09",
+     "claims_checked": [
+      "Feb 2024 report: transformer on spacetime patches of video and image latent codes; a minute of high-fidelity video; Sora \"does not accurately model the physics of many basic interactions, like glass shattering\".",
+      "Sora 2 announcement dated 30 September 2025: claims of physical accuracy, realism, controllability, synchronised dialogue and sound; companion Sora iOS app; banner \"As of April 26, 2026, the Sora product is no longer available.\"",
+      "Help Center: app/web discontinued 26 April 2026; API discontinued 24 September 2026; export via the sunset page; data permanently deleted after any final export window.",
+      "Deprecations page: notice dated 2026-03-24; Videos API, sora-2, sora-2-pro and dated snapshots removed 2026-09-24; no replacement listed."
+     ],
+     "sources": [
+      {
+       "title": "Video generation models as world simulators",
+       "url": "https://openai.com/index/video-generation-models-as-world-simulators/"
+      },
+      {
+       "title": "Sora 2 is here",
+       "url": "https://openai.com/index/sora-2/"
+      },
+      {
+       "title": "What to know about the Sora discontinuation",
+       "url": "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation"
+      },
+      {
+       "title": "Deprecations | OpenAI API",
+       "url": "https://developers.openai.com/api/docs/deprecations"
+      }
+     ],
+     "not_independently_verified": [
+      "Whether the API actually stopped working on 24 September 2026 (the check date, 9 October 2026, is after it; no source confirming the shutdown happened was found).",
+      "The retirement of Sora 1 for US users (reported as 13 March 2026 on a developer forum only).",
+      "Azure OpenAI's end date for Sora 2 (a forum thread mentioned 6 June 2026).",
+      "March 2026 API additions (longer clips, characters, 1080p) reported in a search summary.",
+      "The reasons for discontinuation (not stated on the help page)."
+     ]
+    }
+   },
+   "freshness_class": "volatile",
+   "time_sensitive_claims_to_verify": [
+    "Whether the API shutdown on 2026-09-24 took effect as scheduled.",
+    "Availability of export windows.",
+    "Azure OpenAI's separate Sora timeline.",
+    "Any successor product from OpenAI."
+   ],
+   "intellitools_mappings": []
+  },
+  {
+   "id": "nvidia-cosmos",
+   "canonical_name": "NVIDIA Cosmos (World Foundation Models for Physical AI)",
+   "entity_type": "platform",
+   "domain": "Robotics & Embodied AI",
+   "parent": null,
+   "page_kind": "concept",
+   "url": "knowledge/nvidia-cosmos.html",
+   "plain_english_definition": "Robots and self-driving cars need huge amounts of realistic training data, and real-world data is slow and risky to collect. A world model predicts what happens next in a scene, so it can generate realistic video and sensor-like data, simulate \"what if\" situations, and reason about physical situations (\"a rolling ball may mean a child will follow\"). Cosmos is NVIDIA's open set of such models, plus tools for curating data, training and evaluating.",
+   "technical_definition": "The repository README (checked on the date below) describes NVIDIA Cosmos as an open platform for building physical AI applications and Cosmos 3 as its current model family: omnimodal world models built on a unified Mixture-of-Transformers architecture, with two surfaces — a Reasoner (inputs text and vision, outputs text; world understanding, grounding, task planning, embodied reasoning) and a Generator (inputs text, vision, sound and action; outputs vision, sound and action; world simulation, future prediction, synthetic data, policy learning). Three base models are listed: Cosmos3-Super (64B; H200/B200/GB200 class GPUs), Cosmos3-Nano (16B; RTX Pro 6000/H100/B200) and Cosmos3-Edge (4B; Jetson AGX Orin/Thor/RTX Pro 6000, released July 2026). Example post-trained checkpoints are labelled capability demonstrations, not products. Training (SFT, LoRA, RL, distillation) is in the separate Cosmos Framework; data curation and evaluation have separate Curator and Evaluator repositories; evaluation suites named include PAIBench, Physics-IQ and VLMEvalKit; serving options include an OpenAI-compatible API through vLLM, vLLM-Omni or NVIDIA NIM. A guardrail model is gated behind access conditions on Hugging Face and generation ships with guardrails on by default. Source code and models are released under OpenMDW-1.1. The README's limitations section says outputs can show artifacts in long, high-resolution or physically complex scenes (temporal inconsistency, object morphing, implausible dynamics) and that safety-critical applications need additional validation and system-level safety analysis. Earlier Cosmos families (Predict2.5, Transfer2.5, Reason1) have repositories that encourage migrating to Cosmos 3; the Predict2.5 and Transfer2.5 pages cite arXiv:2511.00062 and the Reason1 page cites arXiv:2503.15558.",
+   "aliases": [
+    "NVIDIA Cosmos",
+    "Cosmos 3",
+    "Cosmos world foundation models",
+    "Cosmos WFM",
+    "Cosmos Predict",
+    "Cosmos Transfer",
+    "Cosmos Reason",
+    "Cosmos3-Super",
+    "Cosmos3-Nano",
+    "Cosmos3-Edge",
+    "physical AI foundation models",
+    "world foundation model NVIDIA"
+   ],
+   "acronyms": [],
+   "user_intents": [
+    "understand what Cosmos is and which model to use",
+    "generate synthetic data for robotics or driving",
+    "evaluate whether a world model is safe to rely on"
+   ],
+   "natural_language_questions": [
+    "What is NVIDIA Cosmos?",
+    "What are world foundation models?",
+    "What is the difference between Cosmos Reasoner and Generator?",
+    "Which Cosmos 3 model size should I use?",
+    "Is Cosmos open source?",
+    "Can Cosmos be used for autonomous vehicles?"
+   ],
+   "prerequisites": [
+    "world-models",
+    "embodied-ai",
+    "diffusion-models"
+   ],
+   "related_concepts": [
+    "video-generation-models",
+    "sora-ai-video",
+    "vision-language-action-models",
+    "sim-to-real-transfer",
+    "imitation-learning",
+    "multimodal-ai",
+    "mixture-of-experts",
+    "gpus-and-ai-accelerators",
+    "vllm",
+    "open-weights-models",
+    "physics-informed-neural-networks"
+   ],
+   "contrasted_with": [
+    {
+     "ref": "sora-ai-video",
+     "difference": "Sora was a closed, now discontinued video product; Cosmos is an open model family aimed at robotics and driving, including action as an input/output.",
+     "resolves_to_page": true
+    },
+    {
+     "ref": "world-models",
+     "difference": "The general idea; Cosmos is one concrete platform.",
+     "resolves_to_page": true
+    },
+    {
+     "ref": "vision-language-action-models",
+     "difference": "VLAs output robot actions from vision and language; Cosmos 3 can also generate actions but is broader (video, sound, reasoning).",
+     "resolves_to_page": true
+    }
+   ],
+   "technologies_frameworks": [
+    "Cosmos 3 (Super/Nano/Edge)",
+    "Cosmos Framework",
+    "Cosmos Curator",
+    "Cosmos Evaluator",
+    "Hugging Face Diffusers",
+    "vLLM / vLLM-Omni / NIM",
+    "PAIBench",
+    "Physics-IQ"
+   ],
+   "implementation_patterns": [
+    "Generate varied synthetic scenes (weather, lighting, rare events) to augment real driving or robot data.",
+    "Post-train a base model on your own robot data, then evaluate before use.",
+    "Use the Reasoner to label or critique video clips for task planning.",
+    "Distil a large teacher into an edge-size model for on-device policies."
+   ],
+   "common_failure_modes": [
+    "Treating generated video as physically accurate ground truth.",
+    "Training a perception model only on synthetic data and skipping real-world validation (Sim-to-Real Transfer).",
+    "Ignoring licence and gated-model conditions.",
+    "Choosing the largest model when hardware cannot serve it.",
+    "Using unvalidated outputs in safety-critical decisions."
+   ],
+   "troubleshooting": [
+    {
+     "symptom": "First run is very slow",
+     "remedy": "The README warns the first run downloads a large checkpoint and diffusion steps are compute-heavy."
+    },
+    {
+     "symptom": "Cannot download the guardrail model",
+     "remedy": "Request access on Hugging Face and log in with a token from the account that was granted access."
+    },
+    {
+     "symptom": "Videos show morphing or impossible motion",
+     "remedy": "Shorten clips or lower resolution; the README lists these artifacts as known limitations."
+    }
+   ],
+   "practical_guide": [
+    "Decide the job: synthetic data, simulation, reasoning or policy.",
+    "Pick the smallest model size that meets quality needs on your hardware.",
+    "Run the repository quick-start with guardrails on.",
+    "Evaluate outputs with physics and task metrics, not only visual inspection.",
+    "Review the OpenMDW-1.1 licence and any gated-model terms before shipping."
+   ],
+   "when_to_use": "Consider when you need open world models for robotics, driving or video-based physical reasoning and have suitable GPUs. Not a drop-in safety-validated simulator.",
+   "canonical_sources": [
+    {
+     "title": "NVIDIA Cosmos repository README",
+     "locator": "github.com/NVIDIA/cosmos",
+     "verified": false
+    },
+    {
+     "title": "Cosmos 3 technical report",
+     "locator": "research.nvidia.com/labs/cosmos-lab/cosmos3/technical-report.pdf",
+     "verified": false
+    },
+    {
+     "title": "Cosmos-Predict2.5 / Transfer2.5 paper",
+     "locator": "arXiv:2511.00062",
+     "verified": false
+    },
+    {
+     "title": "Cosmos-Reason1",
+     "locator": "arXiv:2503.15558",
+     "verified": false
+    }
+   ],
+   "verification": {
+    "verified": false,
+    "verification_date": null,
+    "authored_date": "2026-10-06",
+    "status": "key-claims-checked",
+    "basis": "key claims compared with the primary sources in source_check on the date given; the entry as a whole is not independently verified",
+    "source_check": {
+     "date": "2026-10-09",
+     "claims_checked": [
+      "Cosmos described as an open platform for physical AI; Cosmos 3 is the current family, omnimodal world models on a unified Mixture-of-Transformers architecture; Reasoner and Generator input/output modalities as listed.",
+      "Three base models: Super 64B, Nano 16B, Edge 4B with the hardware tiers named in the README; Cosmos 3 released May 2026 and Cosmos3-Edge July 2026 per the \"What's new\" list.",
+      "Training, curation and evaluation live in separate repositories; serving via vLLM, vLLM-Omni or NIM; guardrail model is gated.",
+      "Code and models released under OpenMDW-1.1; limitations and safety paragraph as summarised.",
+      "The Cosmos-Predict2.5 README encourages migrating to Cosmos 3 and cites arXiv:2511.00062; the Reason1 page cites arXiv:2503.15558."
+     ],
+     "sources": [
+      {
+       "title": "NVIDIA/cosmos README (GitHub)",
+       "url": "https://github.com/NVIDIA/cosmos"
+      },
+      {
+       "title": "Cosmos-Predict2.5 README (GitHub)",
+       "url": "https://github.com/nvidia-cosmos/cosmos-predict2.5"
+      },
+      {
+       "title": "Cosmos Cookbook README (GitHub)",
+       "url": "https://github.com/nvidia-cosmos/cosmos-cookbook"
+      }
+     ],
+     "not_independently_verified": [
+      "The Cosmos 3 technical report itself was not read; its benchmark claims are not repeated.",
+      "The original January 2025 Cosmos platform paper and launch details.",
+      "Independent evaluations of Cosmos output quality or physical accuracy.",
+      "Whether the OpenMDW-1.1 licence is \"open source\" in the OSI sense (the README calls it a licence for source code and models).",
+      "Commercial availability, pricing and NIM packaging."
+     ]
+    }
+   },
+   "freshness_class": "volatile",
+   "time_sensitive_claims_to_verify": [
+    "Model names, sizes, hardware targets and release dates.",
+    "Licence terms (OpenMDW-1.1 per the README).",
+    "Benchmark claims.",
+    "Which earlier Cosmos families remain supported."
+   ],
+   "intellitools_mappings": []
+  },
+  {
+   "id": "attention-sinks",
+   "canonical_name": "Attention Sinks and StreamingLLM",
+   "entity_type": "technique",
+   "domain": "Model Architectures",
+   "parent": null,
+   "page_kind": "concept",
+   "url": "knowledge/attention-sinks.html",
+   "plain_english_definition": "When a chat or stream gets longer than the memory a model keeps, the usual trick is a sliding window: forget the oldest words, keep the newest. Oddly, that makes the model fall apart — because the very first words act as an anchor the attention mechanism leans on. The fix is simple: always keep those first few tokens, plus the recent ones. The model then stays stable for a very long stream, though it still cannot recall what was thrown away.",
+   "technical_definition": "Xiao, Tian, Chen, Han and Lewis (ICLR 2024; arXiv:2309.17453) observe that window attention, which caches only the most recent keys and values, fails once text length exceeds the cache size, and that keeping the key/value states of the initial tokens largely recovers performance; they call this phenomenon an \"attention sink\". StreamingLLM keeps the sink tokens' KV (four initial tokens sufficed in their experiments) together with a rolling window of recent tokens, letting models trained with a finite window (Llama-2, MPT, Falcon, Pythia are named) run stable language modelling for up to 4 million tokens and more without fine-tuning, with up to 22.2× speedup over the sliding-window-with-recomputation baseline. They also report that pre-training with a dedicated placeholder \"sink token\" improves streaming deployment. Implications that follow from the design (not additional claims from the paper): evicted tokens are not available to later attention, so the method stabilises long streams but does not extend effective memory; and sink tokens work with the KV-cache management used in serving engines (KV Cache). Exact positional handling and implementation details vary between libraries.",
+   "aliases": [
+    "attention sink",
+    "StreamingLLM",
+    "streaming LLM",
+    "sink tokens",
+    "sliding window attention failure",
+    "infinite context streaming",
+    "rolling KV cache",
+    "first token attention",
+    "efficient streaming language models"
+   ],
+   "acronyms": [],
+   "user_intents": [
+    "keep a model stable on endless input streams",
+    "understand why dropping the first tokens breaks generation",
+    "reduce KV cache memory for long chats"
+   ],
+   "natural_language_questions": [
+    "What is an attention sink?",
+    "What is StreamingLLM?",
+    "Why does sliding window attention break when the first tokens are dropped?",
+    "Does StreamingLLM give infinite context?",
+    "How many sink tokens does StreamingLLM keep?"
+   ],
+   "prerequisites": [
+    "transformers",
+    "kv-cache"
+   ],
+   "related_concepts": [
+    "context-windows",
+    "positional-encoding",
+    "flash-attention",
+    "flashattention-3",
+    "state-space-models",
+    "vllm",
+    "streaming-ai-responses",
+    "quantization",
+    "large-language-models",
+    "mechanistic-interpretability"
+   ],
+   "contrasted_with": [
+    {
+     "ref": "context-windows",
+     "difference": "A larger window increases how much the model can attend to; attention sinks keep a bounded cache stable.",
+     "resolves_to_page": true
+    },
+    {
+     "ref": "kv-cache",
+     "difference": "The KV cache is the storage; attention sinks are a policy for which entries to keep.",
+     "resolves_to_page": true
+    },
+    {
+     "ref": "state-space-models",
+     "difference": "SSMs change the architecture to avoid growing caches; sinks keep standard attention workable with a bounded cache.",
+     "resolves_to_page": true
+    }
+   ],
+   "technologies_frameworks": [
+    "StreamingLLM",
+    "rolling KV cache",
+    "sink token (pre-training)",
+    "window attention"
+   ],
+   "implementation_patterns": [
+    "Keep the first N tokens (sinks) plus the last W tokens in the cache; evict the middle.",
+    "Pre-train or fine-tune with a dedicated sink token if you control training.",
+    "Pair with summaries or retrieval when old facts must stay reachable (What is RAG (Retrieval-Augmented Generation)?)."
+   ],
+   "common_failure_modes": [
+    "Evicting the first tokens in a sliding window and seeing perplexity explode.",
+    "Assuming a model can answer questions about evicted text.",
+    "Reporting \"4M tokens\" as the usable context for tasks that need long-range recall.",
+    "Mixing sink handling with position schemes that the implementation does not support."
+   ],
+   "troubleshooting": [
+    {
+     "symptom": "Output degrades after the cache fills",
+     "remedy": "Keep the initial tokens in the cache rather than evicting oldest-first."
+    },
+    {
+     "symptom": "Model forgets earlier facts",
+     "remedy": "Expected: use retrieval, summaries or a longer window."
+    },
+    {
+     "symptom": "Library flag has no effect",
+     "remedy": "Check the model architecture and library version support the sink-aware cache."
+    }
+   ],
+   "practical_guide": [
+    "Measure perplexity or task quality with a plain sliding window to confirm the failure.",
+    "Switch to sink + recent-window caching and compare.",
+    "Set the number of sink tokens (the paper defaults to four) and the window size to your memory budget.",
+    "Test on tasks that need recall, not only fluency."
+   ],
+   "when_to_use": "Use when serving unbounded streams (long chats, logs) with a bounded memory budget and when losing old details is acceptable.",
+   "canonical_sources": [
+    {
+     "title": "Xiao et al., Efficient Streaming Language Models with Attention Sinks (ICLR 2024)",
+     "locator": "arXiv:2309.17453",
+     "verified": false
+    },
+    {
+     "title": "StreamingLLM repository (MIT HAN Lab)",
+     "locator": "github.com/mit-han-lab/streaming-llm",
+     "verified": false
+    }
+   ],
+   "verification": {
+    "verified": false,
+    "verification_date": null,
+    "authored_date": "2026-10-06",
+    "status": "key-claims-checked",
+    "basis": "key claims compared with the primary sources in source_check on the date given; the entry as a whole is not independently verified",
+    "source_check": {
+     "date": "2026-10-09",
+     "claims_checked": [
+      "Window attention fails once text exceeds the cache size; keeping initial tokens' KV largely recovers performance (the \"attention sink\" observation).",
+      "StreamingLLM enables finite-window models to generalise to infinite lengths without fine-tuning; Llama-2, MPT, Falcon and Pythia named; up to 4 million tokens and more.",
+      "A dedicated placeholder sink token in pre-training can improve streaming; up to 22.2× speedup over sliding-window recomputation.",
+      "Four initial tokens are used as attention sinks by default in the experiments; accepted at ICLR 2024 per the arXiv comment."
+     ],
+     "sources": [
+      {
+       "title": "arXiv:2309.17453 abstract and PDF excerpts",
+       "url": "https://arxiv.org/abs/2309.17453"
+      },
+      {
+       "title": "StreamingLLM GitHub repository",
+       "url": "https://github.com/mit-han-lab/streaming-llm"
+      }
+     ],
+     "not_independently_verified": [
+      "The statement that evicted tokens are unavailable and that the method does not extend memory is an inference from the method, not a quotation (the repository FAQ was not read).",
+      "Whether specific serving libraries implement sink-aware caches today.",
+      "Why sinks form (explanations in later literature were not reviewed)."
+     ]
+    }
+   },
+   "freshness_class": "evolving",
+   "time_sensitive_claims_to_verify": [],
+   "intellitools_mappings": []
+  },
+  {
+   "id": "flashattention-3",
+   "canonical_name": "FlashAttention-3 (and FlashAttention-4)",
+   "entity_type": "technique",
+   "domain": "Model Architectures",
+   "parent": null,
+   "page_kind": "concept",
+   "url": "knowledge/flashattention-3.html",
+   "plain_english_definition": "FlashAttention already avoided wasting memory bandwidth. The next problem was that new GPUs (the H100) can do several things at once, and FlashAttention-2 left much of that on the table. FlashAttention-3 reorganises the work so loading data, multiplying matrices and computing softmax overlap instead of waiting for each other, and it can use the GPU's faster 8-bit floating-point maths. The answer is the same attention, computed faster.",
+   "technical_definition": "The paper (Shah, Bikshandi, Zhang, Thakkar, Ramani and Dao, 2024; arXiv:2407.08608) states that FlashAttention-2 achieved only 35% utilisation on H100 and proposes three techniques for Hopper GPUs: exploiting the asynchrony of Tensor Cores and the Tensor Memory Accelerator (TMA) to overlap computation and data movement through warp specialisation; interleaving block-wise matrix multiplication and softmax; and block quantisation with incoherent processing to exploit hardware FP8 support. Reported results: 1.5–2.0× speedup on H100 with FP16 reaching up to 740 TFLOPs/s (75% utilisation), FP8 close to 1.2 PFLOPs/s, and FP8 FlashAttention-3 with 2.6× lower numerical error than a baseline FP8 attention. These are the authors' measurements on specific hardware and shapes. The repository README (as read on the check date) describes FlashAttention-3 as a beta release for H100/H800 GPUs, CUDA 12.3 or later (12.8 recommended), supporting FP16/BF16 forward and backward and FP8 forward; and describes FlashAttention-4, written in CuTeDSL, as optimised for Hopper and Blackwell GPUs and installable as flash-attn-4. Because FlashAttention-3 is exact attention in the same sense as FlashAttention, quality is unchanged apart from low-precision effects when FP8 is used.",
+   "aliases": [
+    "FlashAttention-3",
+    "FlashAttention 3",
+    "FA3",
+    "flash attention 3",
+    "FlashAttention-4",
+    "FA4",
+    "Hopper attention kernel",
+    "H100 attention",
+    "FP8 attention",
+    "flash-attn-3",
+    "flash-attn-4"
+   ],
+   "acronyms": [],
+   "user_intents": [
+    "understand what changed from FlashAttention-2 to 3",
+    "decide whether FlashAttention-3 applies to your GPUs",
+    "use FP8 attention safely"
+   ],
+   "natural_language_questions": [
+    "What is FlashAttention-3?",
+    "How is FlashAttention-3 different from FlashAttention-2?",
+    "Does FlashAttention-3 work on A100 GPUs?",
+    "Is FP8 attention less accurate?",
+    "What is FlashAttention-4?"
+   ],
+   "prerequisites": [
+    "flash-attention",
+    "gpus-and-ai-accelerators"
+   ],
+   "related_concepts": [
+    "attention-sinks",
+    "kv-cache",
+    "quantization",
+    "transformers",
+    "distributed-training",
+    "vllm",
+    "model-serving-and-inference",
+    "positional-encoding"
+   ],
+   "contrasted_with": [
+    {
+     "ref": "flash-attention",
+     "difference": "The original IO-aware algorithm; FlashAttention-3 targets Hopper-specific hardware features.",
+     "resolves_to_page": true
+    },
+    {
+     "ref": "quantization",
+     "difference": "FP8 attention quantises the attention computation; weight quantisation shrinks stored weights.",
+     "resolves_to_page": true
+    }
+   ],
+   "technologies_frameworks": [
+    "flash-attn library",
+    "Hopper (H100/H800)",
+    "Tensor Cores",
+    "TMA",
+    "FP8",
+    "CuTeDSL",
+    "PyTorch SDPA"
+   ],
+   "implementation_patterns": [
+    "Let the framework or serving engine select the best attention backend for your GPU.",
+    "Benchmark FP16/BF16 first; trial FP8 only with an accuracy check.",
+    "Pin library, CUDA and PyTorch versions together."
+   ],
+   "common_failure_modes": [
+    "Expecting Hopper-only speedups on older GPUs.",
+    "Installing a beta build into production without testing.",
+    "Turning on FP8 without checking quality.",
+    "Quoting peak TFLOPs from the paper as expected end-to-end speedup."
+   ],
+   "troubleshooting": [
+    {
+     "symptom": "Build or import errors",
+     "remedy": "Match the library with CUDA (12.3+ per the README), PyTorch and GPU architecture."
+    },
+    {
+     "symptom": "No speedup",
+     "remedy": "Check the GPU is Hopper and the backend is actually selected; other GPUs need other kernels."
+    },
+    {
+     "symptom": "Accuracy drop with FP8",
+     "remedy": "Fall back to BF16 or evaluate on your own tasks."
+    }
+   ],
+   "practical_guide": [
+    "Identify your GPU architecture.",
+    "Use your framework's default attention backend and read its logs for the kernel chosen.",
+    "Benchmark with your real sequence lengths and batch sizes.",
+    "Evaluate quality before any FP8 use.",
+    "Re-check the README for current requirements and status."
+   ],
+   "when_to_use": "Relevant when training or serving transformers on H100/H800 (or newer) GPUs. Usually enabled through a framework rather than hand-written.",
+   "canonical_sources": [
+    {
+     "title": "Shah et al., FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision (2024)",
+     "locator": "arXiv:2407.08608",
+     "verified": false
+    },
+    {
+     "title": "flash-attention repository README",
+     "locator": "github.com/Dao-AILab/flash-attention",
+     "verified": false
+    },
+    {
+     "title": "Dao et al., FlashAttention (2022)",
+     "locator": "arXiv:2205.14135",
+     "verified": false
+    }
+   ],
+   "verification": {
+    "verified": false,
+    "verification_date": null,
+    "authored_date": "2026-10-06",
+    "status": "key-claims-checked",
+    "basis": "key claims compared with the primary sources in source_check on the date given; the entry as a whole is not independently verified",
+    "source_check": {
+     "date": "2026-10-09",
+     "claims_checked": [
+      "Abstract: FlashAttention-2 reached only 35% utilisation on H100; three techniques (asynchrony with warp specialisation, interleaved matmul/softmax, FP8 block quantisation with incoherent processing).",
+      "Reported results: 1.5–2.0× speedup, FP16 up to 740 TFLOPs/s (75% utilisation), FP8 close to 1.2 PFLOPs/s, 2.6× lower numerical error than a baseline FP8 attention.",
+      "Authors: Shah, Bikshandi, Zhang, Thakkar, Ramani, Dao; submitted July 2024.",
+      "Repository README: FlashAttention-3 beta for H100/H800, CUDA >= 12.3 (12.8 recommended), FP16/BF16 forward and backward, FP8 forward; FlashAttention-4 in CuTeDSL for Hopper and Blackwell, install flash-attn-4."
+     ],
+     "sources": [
+      {
+       "title": "arXiv:2407.08608 (abstract)",
+       "url": "https://arxiv.org/abs/2407.08608"
+      },
+      {
+       "title": "Dao-AILab/flash-attention README",
+       "url": "https://github.com/Dao-AILab/flash-attention"
+      }
+     ],
+     "not_independently_verified": [
+      "Independent reproductions of the speedups.",
+      "The README's beta status may have changed since it was read.",
+      "FlashAttention-4 has no paper cited here; its claims rest only on the README line.",
+      "Which serving engines enable FlashAttention-3 by default."
+     ]
+    }
+   },
+   "freshness_class": "volatile",
+   "time_sensitive_claims_to_verify": [
+    "Beta/stable status and supported GPUs of FlashAttention-3.",
+    "FlashAttention-4 maturity and hardware support.",
+    "CUDA and PyTorch version requirements.",
+    "Benchmark numbers on newer GPUs."
+   ],
    "intellitools_mappings": []
   }
  ]

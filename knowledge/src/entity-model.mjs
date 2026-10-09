@@ -38,6 +38,13 @@ export function validateEntities(entities, existingSlugs) {
       if (!Array.isArray(v) || v.length !== 2) { errors.push(at + 'vs entries must be [ref, difference]'); continue; }
       if (/^[a-z0-9-]+$/.test(v[0]) && !ids.has(v[0]) && !existingSlugs.has(v[0])) errors.push(at + 'vs ref does not resolve: ' + v[0]);
     }
+    if (e.checked) {
+      const c = e.checked;
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(c.date || '')) errors.push(at + 'checked.date must be YYYY-MM-DD');
+      if (!Array.isArray(c.sources) || !c.sources.length || c.sources.some(x => !Array.isArray(x) || x.length !== 2 || !/^https:\/\//.test(x[1]))) errors.push(at + 'checked.sources must be [title, https URL] pairs');
+      if (!Array.isArray(c.claims) || !c.claims.length) errors.push(at + 'checked.claims must list what was checked');
+      if (!Array.isArray(c.unverified)) errors.push(at + 'checked.unverified must be an array (empty only if nothing was left unchecked)');
+    }
     if (e.tool && !TOOLS_PAGE_LEVEL.has(e.tool.id)) errors.push(at + 'unsupported page-level tool ' + e.tool.id);
     if (e.tool_note_only && !e.tool_note_only.id) errors.push(at + 'bad tool_note_only');
   }
@@ -76,10 +83,18 @@ export function toPage(e, allSlugs, titleOf) {
   sec.push(['Common failure modes', list(e.fails)]);
   sec.push(['Troubleshooting', list(e.fix.map(([s, r]) => '**' + s + '** — ' + r))]);
   if (e.vs.length) sec.push(['Contrasted with', list(e.vs.map(([r, d]) => '**' + L(r) + '** — ' + d))]);
-  let ver = '**Status: not independently verified.** This entry was authored on ' + AUTHORED + ' from general technical knowledge, without live checking of the sources below. Treat every source as a lead to confirm (identifier, title, authorship, current version) before publication or citation.\n\n';
+  const ck = e.checked;
+  let ver = ck
+    ? '**Status: key claims checked on ' + ck.date + ' against the primary sources listed below; everything else is not independently verified.** The claims under "Checked against primary sources" were compared with the linked pages on that date. Pages change, so re-check anything time-sensitive before relying on it.\n\n'
+    : '**Status: not independently verified.** This entry was authored on ' + AUTHORED + ' from general technical knowledge, without live checking of the sources below. Treat every source as a lead to confirm (identifier, title, authorship, current version) before publication or citation.\n\n';
+  if (ck) {
+    ver += '**Checked against primary sources (' + ck.date + '):**\n' + list(ck.claims) + '\n\n';
+    ver += '**Primary sources consulted:**\n' + list(ck.sources.map(([t, u]) => t + ' — ' + u)) + '\n\n';
+    ver += ck.unverified.length ? '**Not independently verified:**\n' + list(ck.unverified) + '\n\n' : '';
+  }
   ver += '**Freshness class:** ' + e.fresh + ' — ' + FRESHNESS[e.fresh] + '\n\n';
   if (e.tsc && e.tsc.length) ver += '**Time-sensitive claims to verify before relying on them:**\n' + list(e.tsc) + '\n\n';
-  ver += '**Canonical sources (unverified leads):**\n' + list(e.sources.map(([t, loc]) => t + (loc ? ' — ' + loc : ' — locator to be identified')));
+  ver += (ck ? '**Further reading and canonical sources (not all checked):**\n' : '**Canonical sources (unverified leads):**\n') + list(e.sources.map(([t, loc]) => t + (loc ? ' — ' + loc : ' — locator to be identified')));
   sec.push(['Questions this page answers', list(e.questions) + '\n\n**Typical goals:** ' + e.intents.join('; ') + '.']);
   sec.push(['Sources and verification', ver]);
   const page = {
@@ -89,7 +104,7 @@ export function toPage(e, allSlugs, titleOf) {
     keywords: [...new Set([...(e.keywords || []), ...(e.tech || []).map(s => s.toLowerCase())])],
     related: [...new Set([...(e.rel || []), ...(e.pre || [])])].filter(r => allSlugs.has(r)),
     sections: sec,
-    entity: { entity_type: e.entity_type, freshness: e.fresh, verification_status: 'needs-verification', parent: e.parent || null }
+    entity: { entity_type: e.entity_type, freshness: e.fresh, verification_status: ck ? 'key-claims-checked' : 'needs-verification', checked_date: ck ? ck.date : null, parent: e.parent || null }
   };
   if (e.tool) page.tool = e.tool;
   return page;
@@ -110,7 +125,9 @@ export function toOntologyRecord(e, allSlugs, titles = new Map()) {
     troubleshooting: e.fix.map(([symptom, remedy]) => ({ symptom: clean(symptom), remedy: clean(remedy) })), practical_guide: cl(e.guide),
     when_to_use: clean(e.when) || null,
     canonical_sources: e.sources.map(([title, locator]) => ({ title, locator: locator || null, verified: false })),
-    verification: { verified: false, verification_date: null, authored_date: AUTHORED, status: 'needs-verification', basis: 'authored from topic specification and general knowledge; no live source check performed' },
+    verification: e.checked
+      ? { verified: false, verification_date: null, authored_date: AUTHORED, status: 'key-claims-checked', basis: 'key claims compared with the primary sources in source_check on the date given; the entry as a whole is not independently verified', source_check: { date: e.checked.date, claims_checked: e.checked.claims, sources: e.checked.sources.map(([title, url]) => ({ title, url })), not_independently_verified: e.checked.unverified } }
+      : { verified: false, verification_date: null, authored_date: AUTHORED, status: 'needs-verification', basis: 'authored from topic specification and general knowledge; no live source check performed' },
     freshness_class: e.fresh, time_sensitive_claims_to_verify: cl(e.tsc),
     intellitools_mappings: [
       ...(e.tool ? [{ tool_id: e.tool.id, surface: 'page-block', why: e.tool.note.replace(/\*\*/g, '') }] : []),

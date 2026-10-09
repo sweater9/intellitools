@@ -216,7 +216,7 @@ E('agent-evaluation', 'Agent Evaluation', 'technique', V, {
   aliases: ['evaluating AI agents', 'agent benchmarks', 'tau-bench', 'AgentBench', 'WebArena', 'trajectory evaluation', 'agent testing', 'agent reliability', 'pass^k', 'tool call accuracy'],
   intents: ['test an agent before deployment', 'measure agent reliability and safety'],
   questions: ['How do I evaluate an AI agent?', 'What is trajectory evaluation?', 'How do I measure tool-call accuracy?', 'Why do agents fail intermittently?', 'What is τ-bench?'],
-  pre: ['ai-agents', 'ai-evaluation'], rel: ['llm-as-a-judge', 'swe-bench', 'react-agent-pattern', 'computer-use-agents', 'agentic-workflows', 'ai-guardrails'],
+  pre: ['ai-agents', 'ai-evaluation'], rel: ['inspect-ai-evaluation-framework', 'llm-as-a-judge', 'swe-bench', 'react-agent-pattern', 'computer-use-agents', 'agentic-workflows', 'ai-guardrails'],
   vs: [['rag-evaluation', 'RAG evaluation focuses on retrieval and groundedness; agent evaluation adds actions, state and safety.']],
   tech: ['WebArena', 'AgentBench', 'τ-bench', 'sandboxed environments', 'tracing tools'],
   patterns: ['Define tasks with programmatic end-state checks.', 'Run each task N times; report success rate and variance.', 'Log trajectories; classify failure types.', 'Test permission boundaries with adversarial scenarios.', 'Track cost per successful task.'],

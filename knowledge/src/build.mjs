@@ -111,7 +111,7 @@ function articlePage(p) {
     toolBlock = `<section class="kn-tool" id="try-it-with-intellitools"><h2>Try it with IntelliTools</h2>${md(p.tool.note)}<p><a class="btn" href="../tools/${p.tool.id}.html">Open ${esc(t.name)}</a></p><p class="kn-small">${esc(t.privacy)}</p></section>`;
   }
   const body = `<main><section class="kn-head"><div class="wrap kn-wrap"><nav class="kn-crumb" aria-label="Breadcrumb"><a href="index.html">Knowledge</a> › <span>${p.kind === 'comparison' ? 'Comparisons' : esc(p.group)}</span></nav>
-<span class="eyebrow">${p.kind === 'comparison' ? 'COMPARISON' : 'EXPLAINER'}</span><h1>${esc(p.title)}</h1>${p.entity ? `<p class="kn-meta"><span>${esc(p.entity.entity_type)}</span><span>freshness: ${esc(p.entity.freshness)}</span><span>sources not yet verified</span></p>` : ''}<p class="kn-lede">${inline(p.summary)}</p>
+<span class="eyebrow">${p.kind === 'comparison' ? 'COMPARISON' : 'EXPLAINER'}</span><h1>${esc(p.title)}</h1>${p.entity ? `<p class="kn-meta"><span>${esc(p.entity.entity_type)}</span><span>freshness: ${esc(p.entity.freshness)}</span><span>${p.entity.checked_date ? 'key claims checked ' + esc(p.entity.checked_date) : 'sources not yet verified'}</span></p>` : ''}<p class="kn-lede">${inline(p.summary)}</p>
 <p class="kn-quick"><strong>Short answer:</strong> ${inline(p.short)}</p></div></section>
 <div class="wrap kn-wrap kn-layout"><article class="kn-article">${secs.map(s => `<section id="${s.id}"><h2>${esc(s.h)}</h2>${s.html}</section>`).join('\n')}${toolBlock}
 ${rel ? `<section id="related-concepts"><h2>Related concepts</h2><div class="kn-cards">${rel}</div></section>` : ''}${pn}</article>
