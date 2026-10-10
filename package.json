@@ -6,6 +6,7 @@
   "scripts": {
     "test": "node --check tools.js && node --check v2-tools.js && node --check v21-tools.js && node --check discovery.js && node --check sw.js && node tests/smoke.mjs && node tests/knowledge-search.mjs && node tests/knowledge-ontology-v3.mjs && node tests/knowledge-final-expansion.mjs && node tests/knowledge-search-regressions.mjs && node tests/knowledge-integration.mjs && node tests/knowledge-editorial.mjs && node tests/knowledge-ai-v3-queries.mjs && node tests/knowledge-v4-learning.mjs",
     "test:ai-v3": "node tests/knowledge-ontology-v3.mjs && node tests/knowledge-final-expansion.mjs && node tests/knowledge-search-regressions.mjs && node tests/knowledge-integration.mjs && node tests/knowledge-editorial.mjs && node tests/knowledge-ai-v3-queries.mjs",
-    "test:v4": "node tests/knowledge-v4-learning.mjs"
+    "test:v4": "node tests/knowledge-v4-learning.mjs",
+    "test:v4:browser": "node tests/knowledge-v4-browser.mjs"
   }
 }

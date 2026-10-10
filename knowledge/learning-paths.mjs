@@ -22,3 +22,14 @@ export function recommendPath(topic, level, pages) {
   const lookup = new Map(pages.map(p => [p.id, p]));
   return PATHS[topic][level].filter(id => lookup.has(id)).map(id => lookup.get(id));
 }
+
+export const LEVEL_DETAILS = {
+  beginner: 'Start here if these concepts are new to you. No previous AI experience required.',
+  intermediate: 'Build on the basics and connect the concepts to practical applications.',
+  advanced: 'Explore implementation choices, trade-offs, and evaluation. Familiarity with the basics is recommended.'
+};
+export const TOPIC_GOALS = {
+  'AI fundamentals': 'Understand how AI works, steer language models, and judge their results.',
+  'Build AI agents': 'Follow the journey from model responses to tools, memory, and reliable workflows.',
+  'Learn programming': 'Explore languages and developer tools, then learn how applications connect to model APIs.'
+};
