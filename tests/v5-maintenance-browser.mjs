@@ -152,7 +152,19 @@ try {
    for(const path of ['/labs/workflow/index.html','/labs/api-playground/index.html','/play/daily/index.html','/play/word-logic/index.html']) assert.ok(cached.includes(path),`uncached ${path}`);
    if (!production) {
     serverUnavailable = true;
-    try { await page.reload({waitUntil:'domcontentloaded'}); assert.equal(await page.locator('#activeCount').innerText(),'54'); }
+    try {
+     await page.reload({waitUntil:'domcontentloaded'});
+     assert.equal(await page.locator('#activeCount').innerText(),'54');
+     for (const [route, app] of [['/labs/workflow/','workflowApp'],['/labs/api-playground/','apiPlaygroundApp'],['/play/daily/','dailyChallengeApp'],['/play/word-logic/','wordLogicApp']]) {
+      const response = await page.goto(new URL(route,base).href,{waitUntil:'domcontentloaded'});
+      assert.ok(response?.ok(),`offline route ${route}`);
+      await page.waitForFunction(name=>!!window[name],app);
+      await overflow();
+     }
+     await page.locator('#slotsContainer').waitFor();
+     await page.keyboard.type('CODE');await page.keyboard.press('Enter');
+     assert.ok(await page.evaluate(()=>window.wordLogicApp.isCompleted),'offline word puzzle must execute');
+    }
     finally { serverUnavailable = false; }
    } else if (engine === 'chromium') {
     phase = 'offline';
