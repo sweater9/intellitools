@@ -1,0 +1,120 @@
+/** Run against the checkout or live production; production defects are reported separately. */
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+const pw = await import(process.env.PLAYWRIGHT_PACKAGE || 'playwright');
+const engine = process.argv[2] || 'chromium';
+const base = process.env.BASE_URL || 'http://127.0.0.1:8765';
+const production = process.env.PRODUCTION_SMOKE === '1';
+const dir = process.env.MAINTENANCE_ARTIFACTS || `artifacts/v5-maintenance-${production ? 'production' : 'candidate'}-${engine}`;
+await fs.mkdir(dir, { recursive: true });
+const results = [], issues = [], defects = [];
+const browser = await pw[engine].launch({ headless: true, ...(process.env.BROWSER_EXECUTABLE ? { executablePath: process.env.BROWSER_EXECUTABLE } : {}) });
+const privacy = {
+ eyebrow: 'PRIVATE BY DESIGN · INTELLITOOLS',
+ headline: 'Your Data.Your Browser.Your Control.',
+ body: 'IntelliTools is designed with your privacy in mind. Our browser-based tools process your files and information directly on your device, giving you greater control over your data. Our tools also work without an internet connection, and no account is required.',
+ indicators: ['✓ On-device processing', '✓ Works offline', '✓ No account required']
+};
+async function check(name, fn) { try { await fn(); results.push(name); console.log("PASS " + name); } catch (e) { issues.push(`${name}: ${e.message}`); console.error("FAIL " + name + ": " + e.message); } }
+async function maintenance(name, fn) { if (!production) return fn(); try { await fn(); } catch(e) { defects.push(`${name}: ${e.message}`); } }
+try {
+ for (const width of [1440,1024,390,375]) {
+  const context = await browser.newContext({ viewport: {width,height:900} });
+  if (!production) await context.route("https://pagead2.googlesyndication.com/**", route => route.fulfill({status:200,body:"",contentType:"application/javascript"}));
+  const page = await context.newPage();
+  page.setDefaultTimeout(10000);
+  page.on('pageerror', e => issues.push(`${width} JS: ${e.stack}`));
+  page.on('console', m => { if(m.type()==='error') issues.push(`${width} console: ${m.text()}`); });
+  async function goto(path) { const r = await page.goto(new URL(path,base).href,{waitUntil:'networkidle',timeout:45000}); assert.ok(r?.ok(),`${path}: HTTP ${r?.status()}`); }
+  async function overflow() { assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth <= innerWidth+2),`horizontal overflow at ${width}`); }
+  await check(`${width}: homepage, catalogue, shortcuts, privacy, navigation`, async()=>{
+   await goto('/');
+   assert.equal(await page.locator('#activeCount').innerText(),'54');
+   assert.equal(await page.locator('#toolCatalog .toolcard').count(),54);
+   assert.equal(await page.locator('.hero .eyebrow').innerText(),privacy.eyebrow);
+   assert.equal(await page.locator('.hero h1').textContent(),privacy.headline);
+   assert.equal(await page.locator('.hero-grid > div > p').innerText(),privacy.body);
+   assert.deepEqual(await page.locator('.hero-privacy-points span').allTextContents(),privacy.indicators);
+   await maintenance('D1 literal escape', async()=>assert.ok(!(await page.locator('body').innerText()).includes('\\n')));
+   await maintenance('D2 search label', async()=>assert.equal(await page.locator('#toolSearch').getAttribute('aria-label'),'Search tools by task or result'));
+   await page.locator('#toolSearch').fill('json');
+   assert.ok(await page.locator('#toolCatalog .toolcard').count()>0);
+   assert.ok(await page.locator('#toolCatalog .toolcard').count()<54);
+   await page.locator('#toolSearch').fill('');
+   await page.locator('.favorite-btn').first().click();
+   assert.ok((await page.locator('#discoveryShelf').innerText()).toLowerCase().includes('favourites'));
+   await page.locator('#toolCatalog .toolcard .btn').first().click();
+   await page.reload({waitUntil:'networkidle'});
+   assert.ok((await page.locator('#discoveryShelf').innerText()).toLowerCase().includes('recently used'));
+   assert.equal(await page.locator('.favorite-btn').first().getAttribute('aria-pressed'),'true');
+   await maintenance('D4 touch targets',async()=>{
+    const bad=await page.locator('button,input,select,.btn,.navlinks a,footer a').evaluateAll(els=>els.filter(e=>{const r=e.getBoundingClientRect();return r.width>0&&r.height>0&&(r.height<43.5||r.width<43.5)}).map(e=>({text:e.textContent?.trim(),id:e.id,width:e.getBoundingClientRect().width,height:e.getBoundingClientRect().height})));
+    assert.deepEqual(bad,[]);
+   });
+   await maintenance('D5 Quick Start alignment',async()=>{
+    const rows=await page.locator('.hero-card button').evaluateAll(es=>es.map(e=>{let r=e.getBoundingClientRect(), t=e.children[1].getBoundingClientRect(), a=e.children[2].getBoundingClientRect();return {height:r.height,textX:t.x,arrowX:a.x}}));
+    assert.ok(Math.max(...rows.map(r=>r.height))-Math.min(...rows.map(r=>r.height))<1);
+    assert.ok(rows.every(r=>Math.abs(r.textX-rows[0].textX)<1&&Math.abs(r.arrowX-rows[0].arrowX)<1));
+   });
+   const hrefs=await page.locator('a[href]').evaluateAll(es=>[...new Set(es.map(e=>e.getAttribute('href')).filter(h=>h&&!h.startsWith('#')&&!h.startsWith('mailto:')))]);
+   for(const href of hrefs){const url=new URL(href,page.url());if(url.origin===new URL(base).origin){const r=await context.request.get(url.href);assert.ok(r.ok(),`navigation ${url.href}: ${r.status()}`);}}
+   await overflow();
+   await page.screenshot({path:`${dir}/home-${width}.png`,fullPage:false});
+  });
+  await check(`${width}: existing tool workspaces`,async()=>{
+   for(const id of ['ai-prompt-builder','json-formatter','password']){
+    await goto('/?tool='+id); assert.ok((await page.locator('#workspace').innerText()).trim().length>50,`empty ${id}`); await overflow();
+   }
+  });
+  await check(`${width}: Knowledge search and result navigation`,async()=>{
+   await goto('/knowledge/');await page.locator('#kn-q').fill('What is an LLM?');await page.waitForSelector('#kn-search-results .kn-read');
+   const href=await page.locator('#kn-search-results .kn-read').first().getAttribute('href');await goto(new URL(href,page.url()).href);await overflow();
+  });
+  await check(`${width}: Visual Workflow Lab simulation and persistence`,async()=>{
+   await goto('/labs/workflow/');await page.locator('#btnStartSim').click();await page.locator('#btnRunAllSim').click();
+   assert.ok((await page.locator('#simLogContainer').innerText()).length>30);assert.notEqual(await page.locator('#simContextContainer').innerText(),'{}');
+   await page.locator('#btnSaveWorkflow').click();assert.ok(await page.evaluate(()=>localStorage.getItem('it_workflow_current')));await overflow();
+   await page.screenshot({path:`${dir}/workflow-${width}.png`,fullPage:false});
+  });
+  await check(`${width}: API & JSON Playground response and validation`,async()=>{
+   await goto('/labs/api-playground/');await page.locator('#btnSendRequest').click();await page.waitForFunction(()=>document.querySelector('#responseStatusBadge').textContent.includes('200'));
+   assert.ok((await page.locator('#responseBodyPre').innerText()).includes('id'));
+   await page.locator('#bodyTextarea').fill('{"bad": <img src=x onerror="window.__xss=true">}');assert.equal(await page.locator('#jsonValidationStatus img').count(),0);assert.ok(!(await page.evaluate(()=>window.__xss)));await overflow();
+  });
+  await check(`${width}: Daily Knowledge Challenge completion and persistence`,async()=>{
+   await goto('/play/daily/');
+   await maintenance('D3 radiogroup keyboard',async()=>{
+    assert.equal(await page.locator('[role=radio][tabindex="0"]').count(),1);
+    const wrong = await page.evaluate(()=>(window.dailyChallengeApp.questions[0].correctIndex+1)%4);
+    await page.locator('[role=radio]').nth((wrong+3)%4).focus();await page.keyboard.press('ArrowRight');
+    assert.equal(await page.locator('[role=radio][aria-checked=true]').count(),1);
+    assert.equal(await page.locator('[role=radio][aria-checked=true]').getAttribute('data-idx'),String(wrong));
+    assert.equal(await page.locator('[role=radio][aria-checked=true]').getAttribute('aria-disabled'),'true');
+    await page.keyboard.press('Tab');assert.equal(await page.locator('#btnNext').evaluate(e=>e===document.activeElement),true);
+    await page.keyboard.press('Enter');assert.equal(await page.locator('#progressLabel').innerText(),'Question 2 of 5');
+   });
+   while(await page.locator('.quiz-option').count()){
+    await page.locator('.quiz-option').first().click();await page.locator('#btnNext').click();
+   }
+   assert.ok((await page.locator('#quizContainer').innerText()).includes("Today's Score:"));await page.reload({waitUntil:'networkidle'});assert.ok((await page.locator('#quizContainer').innerText()).toLowerCase().includes('challenge completed'));await overflow();
+  });
+  await check(`${width}: Word & Logic Challenge solve`,async()=>{
+   await goto('/play/word-logic/');await page.keyboard.type('CODE');await page.keyboard.press('Enter');
+   await page.waitForFunction(()=>document.querySelector('#slotsContainer').textContent.includes('C'));
+   assert.ok(await page.evaluate(()=>window.wordLogicApp?.isCompleted));await overflow();
+  });
+  await check(`${width}: service worker cache and offline reload`,async()=>{
+   await goto('/');await page.evaluate(()=>navigator.serviceWorker.ready);
+   await page.reload({waitUntil:'networkidle'});assert.ok(await page.evaluate(()=>!!navigator.serviceWorker.controller));
+   const cached=await page.evaluate(async()=>{const c=await caches.open('intellitools-v5-0');return (await c.keys()).map(r=>new URL(r.url).pathname)});
+   for(const path of ['/labs/workflow/index.html','/labs/api-playground/index.html','/play/daily/index.html','/play/word-logic/index.html']) assert.ok(cached.includes(path),`uncached ${path}`);
+   await context.setOffline(true);await page.reload({waitUntil:'domcontentloaded'});assert.equal(await page.locator('#activeCount').innerText(),'54');await context.setOffline(false);
+  });
+  await context.close();
+ }
+} finally {
+ await browser.close();
+ await fs.writeFile(`${dir}/results.json`,JSON.stringify({engine,base,production,results,issues,defects},null,2));
+}
+console.log(JSON.stringify({engine,base,checks:results.length,issues,defects},null,2));
+if(issues.length)process.exitCode=1;

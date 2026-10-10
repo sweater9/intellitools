@@ -413,7 +413,7 @@
   font-weight: 550;
   gap: 14px;
 }
-.quiz-option:hover:not(:disabled) {
+.quiz-option:hover:not(:disabled):not([aria-disabled="true"]) {
   border-color: var(--brand);
   background: var(--soft);
   transform: translateX(4px);

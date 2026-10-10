@@ -47,3 +47,13 @@ header{box-shadow:0 8px 30px rgba(26,22,67,.04)}.eyebrow{background:linear-gradi
 .hero-card .mini-label{padding-left:2px}
 .hero-card button span:nth-child(2){min-width:0}
 .hero-card button b{justify-self:end;text-align:right}
+
+/* V5 maintenance: homepage targets and uniform Quick Start rows. */
+.homepage :is(button,input,select,.btn,.navlinks a,footer a,.tool-share-link){min-height:44px}
+.homepage .favorite-btn{width:44px;height:44px}
+.homepage .nav-search{min-width:44px}
+.homepage :is(.navlinks a,footer a,.tool-share-link){display:inline-flex;align-items:center;min-width:44px}
+.homepage .hero-card{align-self:start;display:grid;grid-template-rows:auto repeat(4,1fr)}
+.homepage .hero-card button{min-height:88px;grid-template-columns:42px minmax(0,1fr) 22px}
+.homepage .hero-card button strong{line-height:1.35}
+.homepage .hero-card small{line-height:1.4;min-height:2.8em}
