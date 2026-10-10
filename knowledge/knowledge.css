@@ -78,13 +78,3 @@ a.kn-card:hover{transform:translateY(-2px);border-color:#c7c2f7;box-shadow:0 12p
   .kn-result-block h2{font-size:20px}
 }
 .kn-meta{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px;font-size:12px}.kn-meta span{border:1px solid var(--line);background:#fff;border-radius:999px;padding:3px 10px;color:var(--muted)}.kn-meta span:last-child{border-color:#f2c36b;color:#8a5a00;background:#fff8e6}
-
-/* V4 opt-in learning-path chooser */
-.kn-v4-learning{margin:22px 0 0;padding:20px;border:1px solid var(--line);border-radius:16px;background:#fff;max-width:820px}
-.kn-v4-learning h2{margin:0 0 6px;font-size:22px}
-.kn-v4-learning p{color:var(--muted);font-size:14px;line-height:1.5;margin:0 0 14px}
-.kn-v4-controls{display:flex;gap:14px;flex-wrap:wrap}
-.kn-v4-controls label{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:650;flex:1;min-width:180px}
-.kn-v4-controls select{width:100%;min-height:42px;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink)}
-.kn-v4-steps{margin:16px 0 0;padding-left:23px;line-height:1.8}
-.kn-v4-steps a{color:var(--brand);font-weight:650}

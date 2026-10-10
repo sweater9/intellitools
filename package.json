@@ -9,6 +9,7 @@
     "test:v4": "node tests/knowledge-v4-learning.mjs",
     "test:search-intelligence": "node tests/knowledge-tool-map.mjs && node tests/knowledge-search-intelligence.mjs && node tests/knowledge-search-relevance.mjs && node tests/knowledge-search-heldout.mjs && node tests/knowledge-legacy-compat.mjs && node knowledge/src/build-relations.mjs --check",
     "test:search-browser": "node tests/knowledge-search-browser.mjs",
-    "build:relations": "node knowledge/src/build-relations.mjs"
+    "build:relations": "node knowledge/src/build-relations.mjs",
+    "test:v4:browser": "node tests/knowledge-v4-browser.mjs"
   }
 }

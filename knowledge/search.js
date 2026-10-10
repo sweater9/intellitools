@@ -1,6 +1,5 @@
 // Browser wrapper. Loads the local index and lexicon, then renders searchKnowledge.
 import { searchKnowledge } from "./search-core.mjs";
-import { PATHS, LEVELS, recommendPath } from "./learning-paths.mjs";
 // Experimental, opt-in only (?semantic=1). Default behaviour is unchanged lexical search.
 const SEMANTIC = new URLSearchParams(location.search).get("semantic") === "1";
 let semantic = null;
@@ -209,62 +208,6 @@ function render(query) {
   status.textContent = "Guide: " + page.title + "." + toolNote + extra;
 }
 
-function setupLearningPaths() {
-  const form = document.querySelector("#kn-search-form");
-  if (!form || document.querySelector("#kn-v4-learning")) return;
-  const panel = el("section", "kn-v4-learning");
-  panel.id = "kn-v4-learning";
-  panel.setAttribute("aria-label", "Personalized learning paths");
-  panel.append(el("h2", null, "Choose your learning path"));
-  panel.append(el("p", null, "Select a subject and difficulty level to explore guides in a useful order. Your choices stay in this browser session."));
-  const topicLabel = el("label", null, "I'm interested in");
-  const topic = document.createElement("select");
-  topic.setAttribute("aria-label", "Learning subject");
-  for (const name of Object.keys(PATHS)) {
-    const option = document.createElement("option");
-    option.value = name;
-    option.textContent = name;
-    topic.append(option);
-  }
-  const levelLabel = el("label", null, "My level");
-  const level = document.createElement("select");
-  level.setAttribute("aria-label", "Learning difficulty");
-  for (const name of LEVELS) {
-    const option = document.createElement("option");
-    option.value = name;
-    option.textContent = name.charAt(0).toUpperCase() + name.slice(1);
-    level.append(option);
-  }
-  const output = el("ol", "kn-v4-steps");
-  output.setAttribute("aria-live", "polite");
-  function update() {
-    output.replaceChildren();
-    const pages = recommendPath(topic.value, level.value, index?.pages || []);
-    if (!pages.length) {
-      output.append(el("li", null, "Guides are loading or this path is not yet available."));
-      return;
-    }
-    for (const page of pages) {
-      const item = el("li");
-      const link = el("a");
-      link.href = pageHref(page);
-      link.textContent = page.title;
-      item.append(link);
-      output.append(item);
-    }
-  }
-  topic.addEventListener("change", update);
-  level.addEventListener("change", update);
-  topicLabel.append(topic);
-  levelLabel.append(level);
-  const controls = el("div", "kn-v4-controls");
-  controls.append(topicLabel, levelLabel);
-  panel.append(controls, output);
-  form.insertAdjacentElement("afterend", panel);
-  update();
-  return update;
-}
-
 async function load() {
   try {
     const [indexRes, lexiconRes] = await Promise.all([
@@ -274,7 +217,6 @@ async function load() {
     if (!indexRes.ok || !lexiconRes.ok) throw new Error("HTTP error");
     index = await indexRes.json();
     lexicon = await lexiconRes.json();
-    setupLearningPaths();
   } catch {
     loadFailed = true;
     showLoadError();
