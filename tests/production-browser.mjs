@@ -31,7 +31,7 @@ try {
   }
   const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2);
   if(overflow)issues.push(engine+' '+width+' horizontal overflow');
-  await page.screenshot({path:'artifacts/'+engine+'-'+width+'.png',fullPage:true});
+  await page.screenshot({path:'artifacts/'+engine+'-'+width+'.png',fullPage:false});
   await page.close();
  }
  const home=await browser.newPage();
