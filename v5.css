@@ -594,3 +594,16 @@
   padding: 0 14px;
   font-size: 12px;
 }
+
+/* Keep the 1200px workflow canvas scrollable within its panel on narrow screens.
+   Grid children otherwise retain intrinsic min-width and overflow the page. */
+.workflow-app,
+.workflow-app > .panel-container {
+  min-width: 0;
+  max-width: 100%;
+}
+.workflow-app > .canvas-container {
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+}
