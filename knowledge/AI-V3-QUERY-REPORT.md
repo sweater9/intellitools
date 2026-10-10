@@ -199,15 +199,15 @@ Positive queries with a false positive (confident wrong page or unexpected tool)
 | pass | acronym | MDP POMDP | markov-decision-processes | 55 | yes | — |
 | pass | acronym | GBNF | gbnf-grammars | 73 | yes | — |
 | pass | comparison | PRM vs ORM | prm-vs-orm | 95 | yes | — |
-| pass | comparison | DPO vs RLHF | dpo-vs-rlhf | 122 | yes | — |
+| pass | comparison | DPO vs RLHF | dpo-vs-rlhf | 150 | yes | — |
 | pass | comparison | DPO vs PPO | dpo-vs-rlhf | 83 | yes | — |
 | weak | comparison | Is DPO reinforcement learning? | reinforcement-learning | 90 | yes | — |
-| pass | comparison | A2A vs MCP | a2a-vs-mcp | 132 | yes | — |
+| pass | comparison | A2A vs MCP | a2a-vs-mcp | 160 | yes | — |
 | weak | comparison | Ollama vs vLLM vs llama.cpp | llama-cpp | 116 | yes | — |
 | weak | comparison | LangGraph vs CrewAI vs AutoGen | crewai | 93 | yes | — |
-| pass | comparison | CNN vs Vision Transformer | cnn-vs-vision-transformer | 116 | yes | — |
+| pass | comparison | CNN vs Vision Transformer | cnn-vs-vision-transformer | 144 | yes | — |
 | pass | comparison | Mamba vs transformer | transformers-vs-state-space-models | 81 | yes | — |
-| pass | comparison | LoRA vs full fine-tuning | lora-vs-full-fine-tuning | 158 | yes | — |
+| pass | comparison | LoRA vs full fine-tuning | lora-vs-full-fine-tuning | 186 | yes | — |
 | pass | comparison | Reasoning model vs regular LLM | reasoning-vs-standard-models | 112 | yes | — |
 | pass | comparison | JSON mode vs structured outputs | structured-output-methods-compared | 114 | yes | — |
 | pass | comparison | BERT vs GPT | encoder-decoder-vs-decoder-only | 75 | yes | — |

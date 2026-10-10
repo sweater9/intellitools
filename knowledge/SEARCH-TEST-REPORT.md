@@ -40,7 +40,7 @@ Miss: 0
 | pass | MCP | What is MCP? | mcp | 51 | — | — |
 | pass | MCP | How is MCP different from an API? | mcp-vs-api | 94 | — | — |
 | pass | function calling | What is function calling? | function-calling | 72 | — | — |
-| pass | function calling | function calling vs MCP | function-calling-vs-mcp | 129 | — | — |
+| pass | function calling | function calling vs MCP | function-calling-vs-mcp | 157 | — | — |
 | pass | local AI | How do I run an LLM locally? | local-ai | 64 | — | — |
 | pass | local AI | Should I run AI locally or in the cloud? | local-ai-vs-cloud-ai | 93 | — | — |
 | pass | frameworks | Which framework can I use for an AI agent? | choosing-an-agent-framework | 80 | — | — |
