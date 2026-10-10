@@ -83,17 +83,28 @@ class DailyChallengeApp {
   }
 
   bindEvents() {
-    // Keyboard navigation
-    window.addEventListener('keydown', (e) => {
-      if (this.alreadyCompletedData) return;
+    // Keep shortcuts scoped to the quiz; native button activation owns Enter/Space.
+    this.quizContainer.addEventListener('keydown', (e) => {
+      if (e.altKey || e.ctrlKey || e.metaKey || this.alreadyCompletedData) return;
+      const options = [...this.quizContainer.querySelectorAll('.quiz-option')];
+      const current = options.indexOf(document.activeElement);
+      if (!this.hasAnsweredCurrent && current >= 0) {
+        let next;
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') next = (current + 1) % options.length;
+        else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') next = (current + options.length - 1) % options.length;
+        else if (e.key === 'Home') next = 0;
+        else if (e.key === 'End') next = options.length - 1;
+        if (next !== undefined) {
+          e.preventDefault();
+          this.selectOption(next);
+          return;
+        }
+      }
       const key = e.key.toUpperCase();
-      if (!this.hasAnsweredCurrent) {
-        if (key === '1' || key === 'A') this.selectOption(0);
-        else if (key === '2' || key === 'B') this.selectOption(1);
-        else if (key === '3' || key === 'C') this.selectOption(2);
-        else if (key === '4' || key === 'D') this.selectOption(3);
-      } else {
-        if (key === 'ENTER') this.nextQuestion();
+      const idx = '1234'.includes(key) ? '1234'.indexOf(key) : 'ABCD'.indexOf(key);
+      if (!this.hasAnsweredCurrent && idx >= 0) {
+        e.preventDefault();
+        this.selectOption(idx);
       }
     });
 
@@ -122,7 +133,7 @@ class DailyChallengeApp {
 
         <div class="options-list" role="radiogroup" aria-label="Answer options">
           ${q.options.map((opt, idx) => `
-            <button type="button" class="quiz-option" data-idx="${idx}" role="radio" aria-checked="false">
+            <button type="button" class="quiz-option" data-idx="${idx}" role="radio" aria-checked="false" tabindex="${idx === 0 ? 0 : -1}">
               <span class="quiz-option-letter">${letters[idx]}</span>
               <span>${this.escapeHtml(opt)}</span>
             </button>
@@ -167,13 +178,13 @@ class DailyChallengeApp {
     // Update option buttons UI
     const optionBtns = this.quizContainer.querySelectorAll('.quiz-option');
     optionBtns.forEach((btn, i) => {
-      btn.disabled = true;
+      btn.setAttribute("aria-disabled", "true");
+      btn.tabIndex = i === idx ? 0 : -1;
+      btn.setAttribute("aria-checked", String(i === idx));
       if (i === q.correctIndex) {
         btn.classList.add('correct');
-        btn.setAttribute('aria-checked', 'true');
       } else if (i === idx && !isCorrect) {
         btn.classList.add('incorrect');
-        btn.setAttribute('aria-checked', 'true');
       }
     });
 
@@ -193,12 +204,15 @@ class DailyChallengeApp {
     // Reveal Next button
     const actionRow = document.getElementById('actionRow');
     if (actionRow) actionRow.style.display = 'flex';
+    optionBtns[idx]?.focus();
   }
 
   nextQuestion() {
+    if (!this.hasAnsweredCurrent) return;
     if (this.currentIndex < this.questions.length - 1) {
       this.currentIndex++;
       this.renderQuestionView();
+      this.quizContainer.querySelector(".quiz-option")?.focus();
     } else {
       this.completeChallenge();
     }
