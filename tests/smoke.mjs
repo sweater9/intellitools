@@ -25,7 +25,7 @@ const growthPages = [
 const v21Expected=["agentic-workflow-generator","link-fingerprint","oauth-jwt-decoder","cookie-impact-estimator","sql-mock-builder","env-diff","table-formatter","cron-humanizer","prompt-diff","keyword-balancer","email-preview","hourly-rate","saas-economics","expense-splitter"];
 const failures = [];
 for (const id of v21Expected) if (!v21.includes(`["${id}"`)) failures.push(`Missing V2.1 tool: ${id}`);
-for (const marker of ["function runV21","function v21Template","failure_policy"]) if (!v21.includes(marker)) failures.push(`V2.1 implementation missing: ${marker}`);
+for (const marker of ["function runV21","function v21Template","failure_policy","if(typeof renderCatalog===\"function\")renderCatalog()"]) if (!v21.includes(marker)) failures.push(`V2.1 implementation missing: ${marker}`);
 for (const file of ["robots.txt","sitemap.xml",...growthPages]) if (!existsSync(file)) failures.push(`Missing growth file: ${file}`);
 const sitemap = readFileSync("sitemap.xml","utf8");
 for (const file of growthPages) {
