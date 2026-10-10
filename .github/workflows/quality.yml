@@ -2,9 +2,9 @@ name: Quality
 
 on:
   push:
-    branches: [main, feature/intellitools-v2, release/v2-full-integration]
+    branches: [main, feature/intellitools-v2, release/v2-full-integration, feature/knowledge-integration-v3, qa/knowledge-v3-ambiguity-gate]
   pull_request:
-    branches: [main]
+    branches: [main, feature/knowledge-base-preview]
 
 permissions:
   contents: read
@@ -19,3 +19,4 @@ jobs:
         with:
           node-version: 22
       - run: npm test
+      - run: node tests/knowledge-ambiguity-gate.mjs
