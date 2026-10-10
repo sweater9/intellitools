@@ -20,7 +20,7 @@ if (!production) {
   if (serverUnavailable) { req.socket.destroy(); return; }
   try {
    let file = path.resolve(root, '.' + decodeURIComponent(new URL(req.url,'http://localhost').pathname));
-   if (!file.startsWith(root)) { res.writeHead(403).end(); return; }
+   if (file !== path.resolve(root) && !file.startsWith(root)) { res.writeHead(403).end(); return; }
    if ((await fs.stat(file)).isDirectory()) file = path.join(file,'index.html');
    let body = await fs.readFile(file);
    if (file === path.join(root,'index.html')) body = Buffer.from(body.toString().replace(/<script async src="https:\/\/pagead2\.googlesyndication\.com[^>]*><\/script>/g,''));
@@ -45,7 +45,7 @@ try {
   const context = await browser.newContext({ viewport: {width,height:900} });
   const page = await context.newPage();
   page.setDefaultTimeout(10000);
-  page.on('pageerror', e => issues.push(`${width} JS: ${e.stack}`));
+  page.on('pageerror', e => issues.push(`${width} JS: ${e.stack || e.message}`));
   page.on('console', m => { if(m.type()==='error') issues.push(`${width} console: ${m.text()}`); });
   async function goto(path) { const r = await page.goto(new URL(path,base).href,{waitUntil:'networkidle',timeout:45000}); assert.ok(r?.ok(),`${path}: HTTP ${r?.status()}`); }
   async function overflow() { assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth <= innerWidth+2),`horizontal overflow at ${width}`); }
@@ -81,7 +81,9 @@ try {
    const hrefs=await page.locator('a[href]').evaluateAll(es=>[...new Set(es.map(e=>e.getAttribute('href')).filter(h=>h&&!h.startsWith('#')&&!h.startsWith('mailto:')))]);
    for(const href of hrefs){const url=new URL(href,page.url());if(url.origin===new URL(base).origin){const r=await context.request.get(url.href);assert.ok(r.ok(),`navigation ${url.href}: ${r.status()}`);}}
    await overflow();
+   await page.evaluate(()=>scrollTo({top:0,behavior:"instant"}));
    await page.screenshot({path:`${dir}/home-${width}.png`,fullPage:false});
+   await page.locator(".hero-card").screenshot({path:`${dir}/quick-start-${width}.png`});
   });
   await check(`${width}: existing tool workspaces`,async()=>{
    for(const id of ['ai-prompt-builder','json-formatter','password']){
