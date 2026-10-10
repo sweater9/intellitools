@@ -14,6 +14,14 @@ if (!form || !input || !results) throw new Error("Knowledge search markup missin
 let index = null;
 let lexicon = null;
 let timer = 0;
+let loadFailed = false;
+const LOAD_ERROR = "Search could not be loaded. Refresh the page and try again.";
+
+// The status region is visually hidden, so a load failure is also shown in the results area.
+function showLoadError() {
+  results.replaceChildren(el("p", "kn-gap", LOAD_ERROR));
+  status.textContent = LOAD_ERROR;
+}
 
 function el(tag, className, text) {
   const node = document.createElement(tag);
@@ -42,7 +50,8 @@ function section(kicker, title) {
 function render(query) {
   results.replaceChildren();
   if (!index || !lexicon) {
-    status.textContent = "Search is still loading.";
+    if (loadFailed) showLoadError();
+    else status.textContent = "Search is loading.";
     return;
   }
   const q = query.trim();
@@ -68,11 +77,11 @@ function render(query) {
     results.append(note);
   }
   if (!found.solid) {
-    const block = section("Answer / guide", "We don't have a solid guide for this yet.");
+    const block = section("Answer / guide", "No confident match found.");
     const p = el("p");
     p.textContent = found.weak.length
-      ? "The closest pages are listed separately. They are not a confident match, so they are not shown as the answer."
-      : "Nothing in the Knowledge guides scored as a real match.";
+      ? "The closest pages are listed below. They are not confident matches, so none is shown as the answer."
+      : "No Knowledge guide matched this query.";
     block.append(p);
     results.append(block);
     if (found.weak.length) {
@@ -156,22 +165,25 @@ function render(query) {
     results.append(tools);
   }
 
-  const extra = found.gap ? " Coverage note shown." : "";
+  const extra = found.gap ? " A coverage note is shown." : "";
   const toolNote = found.tools.length ? " Tool suggested: " + found.tools.map((t) => t.name).join(", ") + "." : "";
   status.textContent = "Guide: " + page.title + "." + toolNote + extra;
 }
 
 async function load() {
-  const [indexRes, lexiconRes] = await Promise.all([
-    fetch("search-index.json"),
-    fetch("search-lexicon.json")
-  ]);
-  if (!indexRes.ok || !lexiconRes.ok) {
-    status.textContent = "Search files could not be loaded.";
+  try {
+    const [indexRes, lexiconRes] = await Promise.all([
+      fetch("search-index.json"),
+      fetch("search-lexicon.json")
+    ]);
+    if (!indexRes.ok || !lexiconRes.ok) throw new Error("HTTP error");
+    index = await indexRes.json();
+    lexicon = await lexiconRes.json();
+  } catch {
+    loadFailed = true;
+    showLoadError();
     return;
   }
-  index = await indexRes.json();
-  lexicon = await lexiconRes.json();
   if (SEMANTIC) {
     // Lazy: lexical search is usable immediately; the ~1 MB (gzipped) semantic index loads in the background.
     Promise.all([import("./hybrid-search.mjs"), import("./semantic-core.mjs"), fetch("semantic-index.json").then((r) => r.json())])

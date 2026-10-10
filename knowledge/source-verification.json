@@ -293,17 +293,107 @@
    "title": "NVIDIA PhysicsNeMo README",
    "locator": "github.com/NVIDIA/physicsnemo",
    "source_date": "read 2026-10-09"
+  },
+  {
+   "id": "maf-readme",
+   "title": "Microsoft Agent Framework README",
+   "locator": "github.com/microsoft/agent-framework",
+   "source_date": "read 2026-10-09",
+   "pass": "final-content-expansion"
+  },
+  {
+   "id": "maf-from-autogen",
+   "title": "AutoGen to Microsoft Agent Framework Migration Guide",
+   "locator": "learn.microsoft.com/en-us/agent-framework/migration-guide/from-autogen/",
+   "source_date": "read 2026-10-09",
+   "pass": "final-content-expansion"
+  },
+  {
+   "id": "mcp-2026-07-28",
+   "title": "MCP specification revision 2026-07-28 (Key Changes; Authorization overview; Client registration)",
+   "locator": "modelcontextprotocol.io/specification/2026-07-28/",
+   "source_date": "read 2026-10-09",
+   "pass": "final-content-expansion"
+  },
+  {
+   "id": "gmail-scopes",
+   "title": "Choose Gmail API scopes",
+   "locator": "developers.google.com/workspace/gmail/api/auth/scopes",
+   "source_date": "read 2026-10-09",
+   "pass": "final-content-expansion"
+  },
+  {
+   "id": "workspace-policy",
+   "title": "Google Workspace user data and developer policy (last updated 2026-09-03)",
+   "locator": "developers.google.com/workspace/workspace-api-user-data-developer-policy",
+   "source_date": "read 2026-10-09",
+   "pass": "final-content-expansion"
+  },
+  {
+   "id": "openai-sora",
+   "title": "OpenAI Sora report, Sora 2 announcement, Sora discontinuation help article",
+   "locator": "openai.com/index/video-generation-models-as-world-simulators/; openai.com/index/sora-2/; help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation",
+   "source_date": "read 2026-10-09",
+   "pass": "final-content-expansion"
+  },
+  {
+   "id": "cosmos-readme",
+   "title": "NVIDIA Cosmos README and Cosmos-Predict2.5 README",
+   "locator": "github.com/NVIDIA/cosmos; github.com/nvidia-cosmos/cosmos-predict2.5",
+   "source_date": "read 2026-10-09",
+   "pass": "final-content-expansion"
+  },
+  {
+   "id": "inspect-docs",
+   "title": "Inspect documentation index and READMEs (inspect_ai, inspect_evals)",
+   "locator": "inspect.aisi.org.uk/llms.txt; github.com/UKGovernmentBEIS/inspect_ai; github.com/UKGovernmentBEIS/inspect_evals",
+   "source_date": "read 2026-10-09",
+   "pass": "final-content-expansion"
+  },
+  {
+   "id": "streamingllm",
+   "title": "arXiv:2309.17453 Efficient Streaming Language Models with Attention Sinks",
+   "locator": "arxiv.org/abs/2309.17453",
+   "source_date": "read 2026-10-09",
+   "pass": "final-content-expansion"
+  },
+  {
+   "id": "fa3",
+   "title": "arXiv:2407.08608 FlashAttention-3 and flash-attention README",
+   "locator": "arxiv.org/abs/2407.08608; github.com/Dao-AILab/flash-attention",
+   "source_date": "read 2026-10-09",
+   "pass": "final-content-expansion"
+  },
+  {
+   "id": "eurlex-2026-1744",
+   "title": "Regulation (EU) 2026/1744, EUR-Lex English text",
+   "locator": "eur-lex.europa.eu/eli/reg/2026/1744/oj/eng",
+   "source_date": "read 2026-10-09",
+   "pass": "final-content-expansion"
+  },
+  {
+   "id": "nist-rmf-pages",
+   "title": "NIST AI RMF page, AI 100-1 record, Playbook page",
+   "locator": "nist.gov/itl/ai-risk-management-framework",
+   "source_date": "read 2026-10-09",
+   "pass": "final-content-expansion"
+  },
+  {
+   "id": "lf-a2a-2026",
+   "title": "Linux Foundation A2A press releases (23 June 2025; 9 April 2026)",
+   "locator": "linuxfoundation.org/press/",
+   "source_date": "read 2026-10-09",
+   "pass": "final-content-expansion"
+  },
+  {
+   "id": "owasp-resource",
+   "title": "OWASP GenAI LLM Top 10 2026 resource page",
+   "locator": "genai.owasp.org/resource/owasp-genai-llm-top-10-2026/",
+   "source_date": "read 2026-10-09",
+   "pass": "final-content-expansion"
   }
  ],
- "not_present_in_content": [
-  "OpenAI o-series model names",
-  "NVIDIA Cosmos",
-  "Sora",
-  "Inspect (UK AI Security Institute)",
-  "attention sinks",
-  "FlashAttention-3 details",
-  "Microsoft Agent Framework (no dedicated page)"
- ],
+ "not_present_in_content": [],
  "records": [
   {
    "page": "what-is-ai",
@@ -5621,9 +5711,66 @@
      "source_date": "read 2026-10-09",
      "verification_date": "2026-10-09",
      "notes": "Will change."
+    },
+    {
+     "claim": "A2A was announced by Google on 9 April 2025 (Google Developers Blog).",
+     "status": "VERIFIED",
+     "primary_source": "https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/; https://www.linuxfoundation.org/press/linux-foundation-launches-the-agent2agent-protocol-project-to-enable-secure-intelligent-communication-between-ai-agents; https://www.linuxfoundation.org/press/a2a-protocol-surpasses-150-organizations-lands-in-major-cloud-platforms-and-sees-enterprise-production-use-in-first-year; https://github.com/a2aproject/A2A",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "The Linux Foundation announced the Agent2Agent project on 23 June 2025 as an open protocol created by Google, to be vendor neutral under its governance.",
+     "status": "VERIFIED",
+     "primary_source": "https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/; https://www.linuxfoundation.org/press/linux-foundation-launches-the-agent2agent-protocol-project-to-enable-secure-intelligent-communication-between-ai-agents; https://www.linuxfoundation.org/press/a2a-protocol-surpasses-150-organizations-lands-in-major-cloud-platforms-and-sees-enterprise-production-use-in-first-year; https://github.com/a2aproject/A2A",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "A Linux Foundation release of 9 April 2026 says the A2A project is hosted by the Linux Foundation, was originally developed by Google, and has more than 150 supporting organisations.",
+     "status": "VERIFIED",
+     "primary_source": "https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/; https://www.linuxfoundation.org/press/linux-foundation-launches-the-agent2agent-protocol-project-to-enable-secure-intelligent-communication-between-ai-agents; https://www.linuxfoundation.org/press/a2a-protocol-surpasses-150-organizations-lands-in-major-cloud-platforms-and-sees-enterprise-production-use-in-first-year; https://github.com/a2aproject/A2A",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "The specification repository lists 1.0.0 as the latest released version, defines JSON-RPC 2.0, gRPC and HTTP/REST bindings, and serves the agent card at /.well-known/agent-card.json (read 2026-10-09 in the earlier audit).",
+     "status": "VERIFIED",
+     "primary_source": "https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/; https://www.linuxfoundation.org/press/linux-foundation-launches-the-agent2agent-protocol-project-to-enable-secure-intelligent-communication-between-ai-agents; https://www.linuxfoundation.org/press/a2a-protocol-surpasses-150-organizations-lands-in-major-cloud-platforms-and-sees-enterprise-production-use-in-first-year; https://github.com/a2aproject/A2A",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "The 150-organisation figure is the project's own announcement, not independently verified.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "SDK maturity and per-language availability.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "Whether the 1.0.0 specification is still the latest release.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
     }
    ],
-   "publication_recommendation": "HOLD-UNTIL-CORRECTION-REVIEWED"
+   "publication_recommendation": "HOLD-UNTIL-CORRECTION-REVIEWED",
+   "final_expansion_note": "Source-check block added on the page (final content expansion); earlier claim rows retained."
   },
   {
    "page": "agent-protocol-landscape",
@@ -5969,9 +6116,50 @@
      "source_date": "live, 2026-10-09",
      "verification_date": "2026-10-09",
      "notes": ""
+    },
+    {
+     "claim": "The AutoGen README states AutoGen is in maintenance mode, will not receive new features or enhancements and is community managed.",
+     "status": "VERIFIED",
+     "primary_source": "https://github.com/microsoft/autogen; https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-autogen/",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "It recommends Microsoft Agent Framework for new users and links the AutoGen migration guide; contributions are limited to bug fixes, security patches and documentation.",
+     "status": "VERIFIED",
+     "primary_source": "https://github.com/microsoft/autogen; https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-autogen/",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "The AutoGen paper is arXiv:2308.08155 (resolved in the earlier citation audit).",
+     "status": "VERIFIED",
+     "primary_source": "https://github.com/microsoft/autogen; https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-autogen/",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "Whether the maintenance-mode status changes later.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "The relationship of community forks such as AG2 to Microsoft's project beyond the fact they are separate repositories.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
     }
    ],
-   "publication_recommendation": "HOLD-UNTIL-CORRECTION-REVIEWED"
+   "publication_recommendation": "HOLD-UNTIL-CORRECTION-REVIEWED",
+   "final_expansion_note": "Source-check block added on the page (final content expansion); earlier claim rows retained."
   },
   {
    "page": "crewai",
@@ -6077,9 +6265,34 @@
      "source_date": "read 2026-10-09; read 2026-10-09",
      "verification_date": "2026-10-09",
      "notes": "SK README names Microsoft Agent Framework (1.0) as successor. Corrected."
+    },
+    {
+     "claim": "The Semantic Kernel README states Microsoft Agent Framework is its enterprise-ready successor, available at version 1.0 as a production-ready release, and links a migration guide and an Agent Framework blog post.",
+     "status": "VERIFIED",
+     "primary_source": "https://github.com/microsoft/semantic-kernel; https://devblogs.microsoft.com/agent-framework/semantic-kernel-and-microsoft-agent-framework/",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "Per-language feature coverage and the long-term support policy for Semantic Kernel itself.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "The contents of the migration guide.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
     }
    ],
-   "publication_recommendation": "HOLD-UNTIL-CORRECTION-REVIEWED"
+   "publication_recommendation": "HOLD-UNTIL-CORRECTION-REVIEWED",
+   "final_expansion_note": "Source-check block added on the page (final content expansion); earlier claim rows retained."
   },
   {
    "page": "openai-agents-sdk",
@@ -8583,9 +8796,74 @@
      "source_date": "2026-07-24 (OJ); in force 2026-07-27",
      "verification_date": "2026-10-09",
      "notes": "Amended by Regulation (EU) 2026/1744 (in force 27 Jul 2026). Corrected."
+    },
+    {
+     "claim": "Regulation (EU) 2026/1744 of 8 July 2026 amends Regulation (EU) 2024/1689 (and (EU) 2018/1139 and (EU) 2023/1230); published as OJ L, 2026/1744 on 24.7.2026; enters into force on the third day after publication (EUR-Lex records first entry into force as 2026-07-27).",
+     "status": "VERIFIED",
+     "primary_source": "https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng; https://www.whitecase.com/insight-alert/eu-ai-omnibus-enters-force-amending-ai-act",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "Amended Article 113: Chapters I and II apply from 2 February 2025, except Article 5(1) first subparagraph points (ba) and (bb) and Article 5(1a) and (1b), which apply from 2 December 2026.",
+     "status": "VERIFIED",
+     "primary_source": "https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng; https://www.whitecase.com/insight-alert/eu-ai-omnibus-enters-force-amending-ai-act",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "High-risk systems under Article 6(2) and Annex III apply from 2 December 2027; systems under Article 6(1) and Annex I apply from 2 August 2028.",
+     "status": "VERIFIED",
+     "primary_source": "https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng; https://www.whitecase.com/insight-alert/eu-ai-omnibus-enters-force-amending-ai-act",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "What the new Article 5 prohibitions cover exactly: the EUR-Lex extract read confirmed only their point numbers and 2 December 2026 date; the description comes from secondary commentary.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "Dates for general-purpose AI model obligations and Article 50 transparency duties after the amendment (not read in the primary text).",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "The consolidated text of Regulation (EU) 2024/1689 as amended.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "Implementing acts, guidance and national measures.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "Anything about how the law applies to a particular product; this is orientation, not legal advice.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
     }
    ],
-   "publication_recommendation": "HOLD-UNTIL-CORRECTION-REVIEWED"
+   "publication_recommendation": "HOLD-UNTIL-CORRECTION-REVIEWED",
+   "final_expansion_note": "Source-check block added on the page (final content expansion); earlier claim rows retained."
   },
   {
    "page": "nist-ai-rmf",
@@ -8593,8 +8871,8 @@
    "group": "Safety, Alignment & Governance",
    "record_type": "v3-entity",
    "overlay_entity": false,
-   "verification_status": "INSUFFICIENT EVIDENCE",
-   "status_after_proposed_corrections": "INSUFFICIENT EVIDENCE",
+   "verification_status": "VERIFIED",
+   "status_after_proposed_corrections": "VERIFIED",
    "time_sensitive": true,
    "freshness_category": "TIME-SENSITIVE",
    "entity_freshness_class": "volatile",
@@ -8635,15 +8913,64 @@
      "notes": ""
     },
     {
-     "claim": "AI RMF 1.0 = NIST AI 100-1, January 2023",
+     "claim": "AI RMF 1.0 is NIST AI 100-1, released on 26 January 2023 (NIST AI RMF page and NIST publication record).",
+     "status": "VERIFIED",
+     "primary_source": "https://www.nist.gov/itl/ai-risk-management-framework; https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10; https://www.nist.gov/itl/ai-risk-management-framework/nist-ai-rmf-playbook; https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "NIST states AI RMF 1.0 is being revised as part of the White House AI Action Plan; the Playbook (created 8 July 2022, updated 10 June 2026) will be updated after the revision.",
+     "status": "VERIFIED",
+     "primary_source": "https://www.nist.gov/itl/ai-risk-management-framework; https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10; https://www.nist.gov/itl/ai-risk-management-framework/nist-ai-rmf-playbook; https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "NIST released a concept note for an AI RMF Profile on Trustworthy AI in Critical Infrastructure on 7 April 2026.",
+     "status": "VERIFIED",
+     "primary_source": "https://www.nist.gov/itl/ai-risk-management-framework; https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10; https://www.nist.gov/itl/ai-risk-management-framework/nist-ai-rmf-playbook; https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "The Generative AI Profile is a cross-sectoral companion profile to AI RMF 1.0 (NIST AI 600-1, July 2024 per the earlier audit).",
+     "status": "VERIFIED",
+     "primary_source": "https://www.nist.gov/itl/ai-risk-management-framework; https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10; https://www.nist.gov/itl/ai-risk-management-framework/nist-ai-rmf-playbook; https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "The four functions, trustworthiness characteristics and GenAI risk list in the technical definition were not re-read against the PDF in this pass.",
      "status": "INSUFFICIENT EVIDENCE",
      "primary_source": null,
      "source_date": null,
-     "verification_date": null,
-     "notes": "Not fetched from nist.gov in this session."
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "The scope and timing of the revision.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "The exact publication month of AI 600-1 (taken from the earlier audit).",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
     }
    ],
-   "publication_recommendation": "STAGING ONLY — verify time-sensitive claims before production"
+   "publication_recommendation": "PRODUCTION-CANDIDATE (after reviewer sign-off)",
+   "final_expansion_note": "Source-check block added on the page (final content expansion); earlier claim rows retained."
   },
   {
    "page": "iso-iec-42001",
@@ -8825,9 +9152,42 @@
      "source_date": "2026-08-04 publication; read 2026-10-09; 2023-08-01",
      "verification_date": "2026-10-09",
      "notes": "2026 edition (4 Aug 2026) missing; category names updated."
+    },
+    {
+     "claim": "The OWASP GenAI Security Project publishes an \"OWASP GenAI LLM Top 10 2026\"; its resource page is dated 3 August 2026 and the repository README (read in the earlier audit) gives 4 August 2026.",
+     "status": "VERIFIED",
+     "primary_source": "https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/; https://github.com/GenAI-Security-Project/GenAI-LLM-Top10; https://genai.owasp.org/llm-top-10/",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "The 2026 list as read from the repository README, and the 2023 v1.0 publication date of August 2023, as recorded in the earlier audit.",
+     "status": "VERIFIED",
+     "primary_source": "https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/; https://github.com/GenAI-Security-Project/GenAI-LLM-Top10; https://genai.owasp.org/llm-top-10/",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "The exact publication day (3 versus 4 August 2026): the two OWASP sources differ by one day, so this page says \"early August 2026\".",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "Each category description beyond its name.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
     }
    ],
-   "publication_recommendation": "HOLD-UNTIL-CORRECTION-REVIEWED"
+   "publication_recommendation": "HOLD-UNTIL-CORRECTION-REVIEWED",
+   "final_expansion_note": "Source-check block added on the page (final content expansion); earlier claim rows retained."
   },
   {
    "page": "ai-for-science",
@@ -9474,6 +9834,1218 @@
     }
    ],
    "publication_recommendation": "STAGING — low-risk unverified content; verify before production"
+  },
+  {
+   "page": "microsoft-agent-framework",
+   "title": "Microsoft Agent Framework",
+   "group": "Agent Protocols, Frameworks & Runtimes",
+   "record_type": "v3-entity-final-expansion",
+   "overlay_entity": false,
+   "verification_status": "VERIFIED",
+   "status_after_proposed_corrections": "VERIFIED",
+   "time_sensitive": true,
+   "freshness_category": "REVIEW MONTHLY",
+   "entity_freshness_class": "volatile",
+   "citations_resolved": "n/a (new page; arXiv IDs checked individually)",
+   "corrections_proposed": 0,
+   "verification_date": "2026-10-09",
+   "claims": [
+    {
+     "claim": "MAF is described as an open, multi-language framework for production-grade AI agents and multi-agent workflows in .NET and Python, with the Go SDK in a separate repository.",
+     "status": "VERIFIED",
+     "primary_source": "https://github.com/microsoft/agent-framework; https://github.com/microsoft/autogen; https://github.com/microsoft/semantic-kernel; https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-autogen/",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "README feature list: multiple providers, middleware, graph workflows (sequential, concurrent, handoff, group collaboration) with checkpointing, streaming, human-in-the-loop and time-travel, OpenTelemetry, declarative YAML agents, agent skills, DevUI, AF Labs.",
+     "status": "VERIFIED",
+     "primary_source": "https://github.com/microsoft/agent-framework; https://github.com/microsoft/autogen; https://github.com/microsoft/semantic-kernel; https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-autogen/",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "Install commands: pip install agent-framework; dotnet add package Microsoft.Agents.AI.",
+     "status": "VERIFIED",
+     "primary_source": "https://github.com/microsoft/agent-framework; https://github.com/microsoft/autogen; https://github.com/microsoft/semantic-kernel; https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-autogen/",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "The AutoGen README states AutoGen is in maintenance mode and names MAF as the enterprise-ready successor.",
+     "status": "VERIFIED",
+     "primary_source": "https://github.com/microsoft/agent-framework; https://github.com/microsoft/autogen; https://github.com/microsoft/semantic-kernel; https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-autogen/",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "The Semantic Kernel README states MAF is its enterprise-ready successor and that MAF reached version 1.0 as a production-ready release.",
+     "status": "VERIFIED",
+     "primary_source": "https://github.com/microsoft/agent-framework; https://github.com/microsoft/autogen; https://github.com/microsoft/semantic-kernel; https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-autogen/",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "The migration guide states MAF is developed by the core AutoGen and Semantic Kernel teams.",
+     "status": "VERIFIED",
+     "primary_source": "https://github.com/microsoft/agent-framework; https://github.com/microsoft/autogen; https://github.com/microsoft/semantic-kernel; https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-autogen/",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "The exact current release number and date of each SDK.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "The licence.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "Claims about adoption, performance or \"enterprise\" suitability, which are vendor positioning rather than testable facts.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "Feature parity between the Python and .NET SDKs.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "Time-sensitive: Current version number and release status of each language SDK (README was read on the check date).",
+     "status": "TIME-SENSITIVE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": null,
+     "notes": "Listed on the page as needing re-verification on the freshness schedule."
+    },
+    {
+     "claim": "Time-sensitive: Supported providers and hosting options.",
+     "status": "TIME-SENSITIVE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": null,
+     "notes": "Listed on the page as needing re-verification on the freshness schedule."
+    },
+    {
+     "claim": "Time-sensitive: Go SDK status (separate repository).",
+     "status": "TIME-SENSITIVE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": null,
+     "notes": "Listed on the page as needing re-verification on the freshness schedule."
+    },
+    {
+     "claim": "Time-sensitive: Whether distributed multi-process execution has shipped (the AutoGen migration guide says it is planned).",
+     "status": "TIME-SENSITIVE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": null,
+     "notes": "Listed on the page as needing re-verification on the freshness schedule."
+    },
+    {
+     "claim": "Time-sensitive: Licence terms (not checked).",
+     "status": "TIME-SENSITIVE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": null,
+     "notes": "Listed on the page as needing re-verification on the freshness schedule."
+    }
+   ],
+   "publication_recommendation": "PRODUCTION-CANDIDATE (after reviewer sign-off; key claims only, see claims marked INSUFFICIENT EVIDENCE)"
+  },
+  {
+   "page": "migrate-to-microsoft-agent-framework",
+   "title": "Migrating from AutoGen or Semantic Kernel to Microsoft Agent Framework",
+   "group": "Agent Protocols, Frameworks & Runtimes",
+   "record_type": "v3-entity-final-expansion",
+   "overlay_entity": false,
+   "verification_status": "VERIFIED",
+   "status_after_proposed_corrections": "VERIFIED",
+   "time_sensitive": true,
+   "freshness_category": "REVIEW MONTHLY",
+   "entity_freshness_class": "volatile",
+   "citations_resolved": "n/a (new page; arXiv IDs checked individually)",
+   "corrections_proposed": 0,
+   "verification_date": "2026-10-09",
+   "claims": [
+    {
+     "claim": "What stays the same and the four key differences (orchestration style, tools, agent turn behaviour, runtime) as stated in the AutoGen migration guide.",
+     "status": "VERIFIED",
+     "primary_source": "https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-autogen/; https://github.com/microsoft/agent-framework; https://github.com/microsoft/semantic-kernel",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "GraphFlow versus Workflow comparison table (control flow vs data flow; agents-only vs agents/functions/sub-workflows; typing).",
+     "status": "VERIFIED",
+     "primary_source": "https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-autogen/; https://github.com/microsoft/agent-framework; https://github.com/microsoft/semantic-kernel",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "The guide covers MCP tools, agent-as-a-tool, middleware, human-in-the-loop, checkpointing and observability.",
+     "status": "VERIFIED",
+     "primary_source": "https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-autogen/; https://github.com/microsoft/agent-framework; https://github.com/microsoft/semantic-kernel",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "The guide's \"Future Patterns\" note lists Swarm and SelectorGroupChat as in development, while the MAF README lists handoff and group collaboration among supported patterns (an inconsistency, reported rather than resolved).",
+     "status": "VERIFIED",
+     "primary_source": "https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-autogen/; https://github.com/microsoft/agent-framework; https://github.com/microsoft/semantic-kernel",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "The Semantic Kernel README links to a Semantic Kernel migration guide and to an Agent Framework blog post.",
+     "status": "VERIFIED",
+     "primary_source": "https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-autogen/; https://github.com/microsoft/agent-framework; https://github.com/microsoft/semantic-kernel",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "The contents of the Semantic Kernel migration guide (the page could not be read at check time), so no Semantic Kernel API mappings are given.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "Whether the guide's code samples run unchanged on the current release.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "The suggested migration steps and patterns above are general engineering practice, not Microsoft guidance.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "Time-sensitive: Which AutoGen patterns have first-class equivalents (the guide's roadmap note may be stale).",
+     "status": "TIME-SENSITIVE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": null,
+     "notes": "Listed on the page as needing re-verification on the freshness schedule."
+    },
+    {
+     "claim": "Time-sensitive: Whether distributed execution has shipped.",
+     "status": "TIME-SENSITIVE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": null,
+     "notes": "Listed on the page as needing re-verification on the freshness schedule."
+    },
+    {
+     "claim": "Time-sensitive: API and package names, which changed during the framework's development.",
+     "status": "TIME-SENSITIVE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": null,
+     "notes": "Listed on the page as needing re-verification on the freshness schedule."
+    }
+   ],
+   "publication_recommendation": "PRODUCTION-CANDIDATE (after reviewer sign-off; key claims only, see claims marked INSUFFICIENT EVIDENCE)"
+  },
+  {
+   "page": "mcp-authorization",
+   "title": "MCP Authorization (OAuth for MCP Servers)",
+   "group": "Agent Protocols, Frameworks & Runtimes",
+   "record_type": "v3-entity-final-expansion",
+   "overlay_entity": false,
+   "verification_status": "VERIFIED",
+   "status_after_proposed_corrections": "VERIFIED",
+   "time_sensitive": true,
+   "freshness_category": "REVIEW MONTHLY",
+   "entity_freshness_class": "volatile",
+   "citations_resolved": "n/a (new page; arXiv IDs checked individually)",
+   "corrections_proposed": 0,
+   "verification_date": "2026-10-09",
+   "claims": [
+    {
+     "claim": "Authorization is optional; HTTP transports SHOULD conform, stdio SHOULD NOT and should take credentials from the environment.",
+     "status": "VERIFIED",
+     "primary_source": "https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization; https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization/client-registration; https://modelcontextprotocol.io/specification/2026-07-28/changelog",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "MCP server = OAuth 2.1 resource server; MCP client = OAuth 2.1 client; OAuth 2.1 is cited as IETF draft draft-ietf-oauth-v2-1-13.",
+     "status": "VERIFIED",
+     "primary_source": "https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization; https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization/client-registration; https://modelcontextprotocol.io/specification/2026-07-28/changelog",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "Servers MUST implement RFC 9728; clients MUST use it for authorization-server discovery.",
+     "status": "VERIFIED",
+     "primary_source": "https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization; https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization/client-registration; https://modelcontextprotocol.io/specification/2026-07-28/changelog",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "Clients and authorization servers SHOULD support Client ID Metadata Documents; Dynamic Client Registration is deprecated and retained for backward compatibility.",
+     "status": "VERIFIED",
+     "primary_source": "https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization; https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization/client-registration; https://modelcontextprotocol.io/specification/2026-07-28/changelog",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "Clients MUST send the RFC 8707 resource parameter in authorization and token requests; bearer token in the Authorization header on every request and never in the query string.",
+     "status": "VERIFIED",
+     "primary_source": "https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization; https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization/client-registration; https://modelcontextprotocol.io/specification/2026-07-28/changelog",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "Servers MUST validate the token audience, return 401 for invalid or expired tokens, and MUST NOT accept or transit other tokens.",
+     "status": "VERIFIED",
+     "primary_source": "https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization; https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization/client-registration; https://modelcontextprotocol.io/specification/2026-07-28/changelog",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "RFC 9207 iss: SHOULD be returned by authorization servers; clients MUST validate it when present.",
+     "status": "VERIFIED",
+     "primary_source": "https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization; https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization/client-registration; https://modelcontextprotocol.io/specification/2026-07-28/changelog",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "Refresh tokens: clients MUST keep them confidential and MUST NOT assume they are issued.",
+     "status": "VERIFIED",
+     "primary_source": "https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization; https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization/client-registration; https://modelcontextprotocol.io/specification/2026-07-28/changelog",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "That 2026-07-28 is still the newest revision when you read this.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "The text of the discovery and scope-selection sub-pages (they could not be retrieved; only the overview page was read).",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "How much of this individual SDKs or hosted MCP clients implement.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "Details of the step-up flow beyond its existence.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "Time-sensitive: Which specification revision your SDK and clients implement.",
+     "status": "TIME-SENSITIVE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": null,
+     "notes": "Listed on the page as needing re-verification on the freshness schedule."
+    },
+    {
+     "claim": "Time-sensitive: Status of OAuth 2.1 and the Client ID Metadata Document draft (both cited as IETF drafts).",
+     "status": "TIME-SENSITIVE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": null,
+     "notes": "Listed on the page as needing re-verification on the freshness schedule."
+    },
+    {
+     "claim": "Time-sensitive: Deprecation status of Dynamic Client Registration.",
+     "status": "TIME-SENSITIVE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": null,
+     "notes": "Listed on the page as needing re-verification on the freshness schedule."
+    },
+    {
+     "claim": "Time-sensitive: Requirements differ between revisions (for example 2025-11-25 and 2026-07-28).",
+     "status": "TIME-SENSITIVE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": null,
+     "notes": "Listed on the page as needing re-verification on the freshness schedule."
+    }
+   ],
+   "publication_recommendation": "PRODUCTION-CANDIDATE (after reviewer sign-off; key claims only, see claims marked INSUFFICIENT EVIDENCE)"
+  },
+  {
+   "page": "gmail-api-scopes-and-verification",
+   "title": "Gmail API Scopes and Verification",
+   "group": "Integrations",
+   "record_type": "v3-entity-final-expansion",
+   "overlay_entity": false,
+   "verification_status": "VERIFIED",
+   "status_after_proposed_corrections": "VERIFIED",
+   "time_sensitive": true,
+   "freshness_category": "REVIEW MONTHLY",
+   "entity_freshness_class": "volatile",
+   "citations_resolved": "n/a (new page; arXiv IDs checked individually)",
+   "corrections_proposed": 0,
+   "verification_date": "2026-10-09",
+   "claims": [
+    {
+     "claim": "Scope classes: gmail.labels non-sensitive; gmail.send sensitive; mail.google.com, gmail.readonly, gmail.compose, gmail.insert, gmail.modify, gmail.metadata and gmail.settings.basic restricted.",
+     "status": "VERIFIED",
+     "primary_source": "https://developers.google.com/workspace/gmail/api/auth/scopes; https://developers.google.com/workspace/workspace-api-user-data-developer-policy; https://developers.google.com/terms/api-services-user-data-policy",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "Restricted scopes require restricted scope OAuth app verification; storing restricted-scope data on servers (or transmitting it) requires a security assessment.",
+     "status": "VERIFIED",
+     "primary_source": "https://developers.google.com/workspace/gmail/api/auth/scopes; https://developers.google.com/workspace/workspace-api-user-data-developer-policy; https://developers.google.com/terms/api-services-user-data-policy",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "Workspace policy Limited Use text: transfer limits, human-reading limits and the prohibition on using user data to create, train or improve an ML/AI model beyond that user's personalised model for the feature.",
+     "status": "VERIFIED",
+     "primary_source": "https://developers.google.com/workspace/gmail/api/auth/scopes; https://developers.google.com/workspace/workspace-api-user-data-developer-policy; https://developers.google.com/terms/api-services-user-data-policy",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "The Workspace policy page shows \"Last updated 2026-09-03 UTC\"; the older API Services policy page shows 2024-02-15 and did not contain the AI/ML sentence in the extracted text.",
+     "status": "VERIFIED",
+     "primary_source": "https://developers.google.com/workspace/gmail/api/auth/scopes; https://developers.google.com/workspace/workspace-api-user-data-developer-policy; https://developers.google.com/terms/api-services-user-data-policy",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "Fees, timelines and exact thresholds for verification and the security assessment.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "Rules for unverified or internal-only apps (user caps, test-mode behaviour).",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "How the policy applies to consumer versus Workspace accounts and to enterprise admins who install an app for their own domain.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "Whether the older API Services page omits the AI/ML sentence or the text extraction missed it.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "Anything about legal obligations such as GDPR; this entry covers Google's platform rules only.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "Time-sensitive: Which scopes are in each class.",
+     "status": "TIME-SENSITIVE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": null,
+     "notes": "Listed on the page as needing re-verification on the freshness schedule."
+    },
+    {
+     "claim": "Time-sensitive: Verification and security-assessment requirements, thresholds and fees.",
+     "status": "TIME-SENSITIVE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": null,
+     "notes": "Listed on the page as needing re-verification on the freshness schedule."
+    },
+    {
+     "claim": "Time-sensitive: Limited Use wording, including the AI/ML restriction (the Workspace page was last updated 2026-09-03).",
+     "status": "TIME-SENSITIVE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": null,
+     "notes": "Listed on the page as needing re-verification on the freshness schedule."
+    },
+    {
+     "claim": "Time-sensitive: Differences between consumer Gmail and Workspace-managed accounts.",
+     "status": "TIME-SENSITIVE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": null,
+     "notes": "Listed on the page as needing re-verification on the freshness schedule."
+    }
+   ],
+   "publication_recommendation": "PRODUCTION-CANDIDATE (after reviewer sign-off; key claims only, see claims marked INSUFFICIENT EVIDENCE)"
+  },
+  {
+   "page": "inspect-ai-evaluation-framework",
+   "title": "Inspect (UK AI Security Institute Evaluation Framework)",
+   "group": "Evaluation & Benchmarks",
+   "record_type": "v3-entity-final-expansion",
+   "overlay_entity": false,
+   "verification_status": "VERIFIED",
+   "status_after_proposed_corrections": "VERIFIED",
+   "time_sensitive": true,
+   "freshness_category": "REVIEW MONTHLY",
+   "entity_freshness_class": "volatile",
+   "citations_resolved": "n/a (new page; arXiv IDs checked individually)",
+   "corrections_proposed": 0,
+   "verification_date": "2026-10-09",
+   "claims": [
+    {
+     "claim": "Inspect is a framework for LLM evaluations created by the UK AI Security Institute; built-in components cover prompt engineering, tool use, multi-turn dialogue and model-graded evaluations; extensible through Python packages.",
+     "status": "VERIFIED",
+     "primary_source": "https://inspect.aisi.org.uk/llms.txt; https://github.com/UKGovernmentBEIS/inspect_ai; https://github.com/UKGovernmentBEIS/inspect_evals",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "README states over 200 pre-built evaluations; the repository licence text is MIT, copyright UK AI Security Institute.",
+     "status": "VERIFIED",
+     "primary_source": "https://inspect.aisi.org.uk/llms.txt; https://github.com/UKGovernmentBEIS/inspect_ai; https://github.com/UKGovernmentBEIS/inspect_evals",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "Documentation structure: Tasks combine datasets, solvers and scorers; agents (ReAct, deep agent, multi-agent, agent bridge, human agent); tools (standard tools including code execution, computer use, web search and browsing; MCP tools); sandboxing; tool approval; limits; eval sets; logs, dataframes, viewer, VS Code extension; scanners.",
+     "status": "VERIFIED",
+     "primary_source": "https://inspect.aisi.org.uk/llms.txt; https://github.com/UKGovernmentBEIS/inspect_ai; https://github.com/UKGovernmentBEIS/inspect_evals",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "The Inspect Evals repository says it is maintained by Generality Labs, founded in 2024 with contributions from the UK AI Security Institute, Arcadia Impact and the Vector Institute.",
+     "status": "VERIFIED",
+     "primary_source": "https://inspect.aisi.org.uk/llms.txt; https://github.com/UKGovernmentBEIS/inspect_ai; https://github.com/UKGovernmentBEIS/inspect_evals",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "Exact import paths, function names and CLI flags: this page deliberately includes no code sketch because the tutorial was not read in full.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "The PyPI package name and current version.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "The number of evaluations today.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "The Institute's name history (the organisation was previously called the AI Safety Institute); not checked.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "Time-sensitive: Component names and APIs (the project is actively developed).",
+     "status": "TIME-SENSITIVE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": null,
+     "notes": "Listed on the page as needing re-verification on the freshness schedule."
+    },
+    {
+     "claim": "Time-sensitive: The number and list of pre-built evaluations (\"over 200\" per the README on the check date).",
+     "status": "TIME-SENSITIVE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": null,
+     "notes": "Listed on the page as needing re-verification on the freshness schedule."
+    },
+    {
+     "claim": "Time-sensitive: Supported providers and sandbox types.",
+     "status": "TIME-SENSITIVE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": null,
+     "notes": "Listed on the page as needing re-verification on the freshness schedule."
+    },
+    {
+     "claim": "Time-sensitive: Maintenance and ownership of Inspect Evals.",
+     "status": "TIME-SENSITIVE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": null,
+     "notes": "Listed on the page as needing re-verification on the freshness schedule."
+    }
+   ],
+   "publication_recommendation": "PRODUCTION-CANDIDATE (after reviewer sign-off; key claims only, see claims marked INSUFFICIENT EVIDENCE)"
+  },
+  {
+   "page": "openai-reasoning-models",
+   "title": "OpenAI Reasoning Models: o-series, Effort, Reasoning Tokens and Deprecations",
+   "group": "Reasoning & Test-Time Compute",
+   "record_type": "v3-entity-final-expansion",
+   "overlay_entity": false,
+   "verification_status": "VERIFIED",
+   "status_after_proposed_corrections": "VERIFIED",
+   "time_sensitive": true,
+   "freshness_category": "REVIEW MONTHLY",
+   "entity_freshness_class": "volatile",
+   "citations_resolved": "n/a (new page; arXiv IDs checked individually)",
+   "corrections_proposed": 0,
+   "verification_date": "2026-10-09",
+   "claims": [
+    {
+     "claim": "Reasoning tokens are in addition to input and output tokens, counted in usage.output_tokens_details.reasoning_tokens, billed as output tokens, and raw reasoning tokens are not exposed via the API.",
+     "status": "VERIFIED",
+     "primary_source": "https://developers.openai.com/api/docs/guides/reasoning; https://developers.openai.com/api/docs/deprecations; https://openai.com/index/introducing-o3-and-o4-mini/; https://openai.com/index/introducing-openai-o1-preview/",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "Incomplete responses can occur with reason max_output_tokens before any visible output.",
+     "status": "VERIFIED",
+     "primary_source": "https://developers.openai.com/api/docs/guides/reasoning; https://developers.openai.com/api/docs/deprecations; https://openai.com/index/introducing-o3-and-o4-mini/; https://openai.com/index/introducing-openai-o1-preview/",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "Effort values listed in the guide: none, minimal, low, medium, high, xhigh, max, with model-specific limits; summary parameter values concise, detailed, auto.",
+     "status": "VERIFIED",
+     "primary_source": "https://developers.openai.com/api/docs/guides/reasoning; https://developers.openai.com/api/docs/deprecations; https://openai.com/index/introducing-o3-and-o4-mini/; https://openai.com/index/introducing-openai-o1-preview/",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "Persisted reasoning does not expose raw reasoning; switching model families omits incompatible reasoning.",
+     "status": "VERIFIED",
+     "primary_source": "https://developers.openai.com/api/docs/guides/reasoning; https://developers.openai.com/api/docs/deprecations; https://openai.com/index/introducing-o3-and-o4-mini/; https://openai.com/index/introducing-openai-o1-preview/",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "Deprecation rows: o1-preview (2025-07-28) and o1-mini (2025-10-27) announced 2025-04-28; o1, o1-pro, o3-mini, o4-mini shutdown 2026-10-23; o3, o3-pro and dated GPT-5 snapshots shutdown 2026-12-11; o3-deep-research and o4-mini-deep-research shut down 2026-07-23.",
+     "status": "VERIFIED",
+     "primary_source": "https://developers.openai.com/api/docs/guides/reasoning; https://developers.openai.com/api/docs/deprecations; https://openai.com/index/introducing-o3-and-o4-mini/; https://openai.com/index/introducing-openai-o1-preview/",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "OpenAI announced o1-preview and o1-mini in September 2024 and o3 and o4-mini in April 2025 (dates from OpenAI announcement titles and a search summary).",
+     "status": "VERIFIED",
+     "primary_source": "https://developers.openai.com/api/docs/guides/reasoning; https://developers.openai.com/api/docs/deprecations; https://openai.com/index/introducing-o3-and-o4-mini/; https://openai.com/index/introducing-openai-o1-preview/",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "Current model names: the guide and the deprecations page named different \"current\" models on the same day, so no current model is named here.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "Exact launch dates of o1-preview (12 Sept 2024) and of o3/o4-mini (16 Apr 2025) beyond OpenAI's announcement titles — dates came from a search summary.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "Claims that o3 makes fewer errors than o1 or similar performance comparisons.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "Pricing.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "Whether the o-series retirement dates will hold; OpenAI revises schedules.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "Time-sensitive: Which models exist, their names and their effort support (the reasoning guide and the deprecations page used different current-model names on the check date).",
+     "status": "TIME-SENSITIVE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": null,
+     "notes": "Listed on the page as needing re-verification on the freshness schedule."
+    },
+    {
+     "claim": "Time-sensitive: Shutdown dates, which can be revised.",
+     "status": "TIME-SENSITIVE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": null,
+     "notes": "Listed on the page as needing re-verification on the freshness schedule."
+    },
+    {
+     "claim": "Time-sensitive: Pricing and billing rules.",
+     "status": "TIME-SENSITIVE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": null,
+     "notes": "Listed on the page as needing re-verification on the freshness schedule."
+    },
+    {
+     "claim": "Time-sensitive: Parameter names and allowed effort values.",
+     "status": "TIME-SENSITIVE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": null,
+     "notes": "Listed on the page as needing re-verification on the freshness schedule."
+    },
+    {
+     "claim": "Time-sensitive: Whether the o-series naming is still used for new models.",
+     "status": "TIME-SENSITIVE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": null,
+     "notes": "Listed on the page as needing re-verification on the freshness schedule."
+    }
+   ],
+   "publication_recommendation": "PRODUCTION-CANDIDATE (after reviewer sign-off; key claims only, see claims marked INSUFFICIENT EVIDENCE)"
+  },
+  {
+   "page": "sora-ai-video",
+   "title": "Sora (OpenAI Video Generation) and Its Discontinuation",
+   "group": "Multimodal AI",
+   "record_type": "v3-entity-final-expansion",
+   "overlay_entity": false,
+   "verification_status": "VERIFIED",
+   "status_after_proposed_corrections": "VERIFIED",
+   "time_sensitive": true,
+   "freshness_category": "REVIEW MONTHLY",
+   "entity_freshness_class": "volatile",
+   "citations_resolved": "n/a (new page; arXiv IDs checked individually)",
+   "corrections_proposed": 0,
+   "verification_date": "2026-10-09",
+   "claims": [
+    {
+     "claim": "Feb 2024 report: transformer on spacetime patches of video and image latent codes; a minute of high-fidelity video; Sora \"does not accurately model the physics of many basic interactions, like glass shattering\".",
+     "status": "VERIFIED",
+     "primary_source": "https://openai.com/index/video-generation-models-as-world-simulators/; https://openai.com/index/sora-2/; https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation; https://developers.openai.com/api/docs/deprecations",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "Sora 2 announcement dated 30 September 2025: claims of physical accuracy, realism, controllability, synchronised dialogue and sound; companion Sora iOS app; banner \"As of April 26, 2026, the Sora product is no longer available.\"",
+     "status": "VERIFIED",
+     "primary_source": "https://openai.com/index/video-generation-models-as-world-simulators/; https://openai.com/index/sora-2/; https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation; https://developers.openai.com/api/docs/deprecations",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "Help Center: app/web discontinued 26 April 2026; API discontinued 24 September 2026; export via the sunset page; data permanently deleted after any final export window.",
+     "status": "VERIFIED",
+     "primary_source": "https://openai.com/index/video-generation-models-as-world-simulators/; https://openai.com/index/sora-2/; https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation; https://developers.openai.com/api/docs/deprecations",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "Deprecations page: notice dated 2026-03-24; Videos API, sora-2, sora-2-pro and dated snapshots removed 2026-09-24; no replacement listed.",
+     "status": "VERIFIED",
+     "primary_source": "https://openai.com/index/video-generation-models-as-world-simulators/; https://openai.com/index/sora-2/; https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation; https://developers.openai.com/api/docs/deprecations",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "Whether the API actually stopped working on 24 September 2026 (the check date, 9 October 2026, is after it; no source confirming the shutdown happened was found).",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "The retirement of Sora 1 for US users (reported as 13 March 2026 on a developer forum only).",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "Azure OpenAI's end date for Sora 2 (a forum thread mentioned 6 June 2026).",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "March 2026 API additions (longer clips, characters, 1080p) reported in a search summary.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "The reasons for discontinuation (not stated on the help page).",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "Time-sensitive: Whether the API shutdown on 2026-09-24 took effect as scheduled.",
+     "status": "TIME-SENSITIVE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": null,
+     "notes": "Listed on the page as needing re-verification on the freshness schedule."
+    },
+    {
+     "claim": "Time-sensitive: Availability of export windows.",
+     "status": "TIME-SENSITIVE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": null,
+     "notes": "Listed on the page as needing re-verification on the freshness schedule."
+    },
+    {
+     "claim": "Time-sensitive: Azure OpenAI's separate Sora timeline.",
+     "status": "TIME-SENSITIVE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": null,
+     "notes": "Listed on the page as needing re-verification on the freshness schedule."
+    },
+    {
+     "claim": "Time-sensitive: Any successor product from OpenAI.",
+     "status": "TIME-SENSITIVE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": null,
+     "notes": "Listed on the page as needing re-verification on the freshness schedule."
+    }
+   ],
+   "publication_recommendation": "PRODUCTION-CANDIDATE (after reviewer sign-off; key claims only, see claims marked INSUFFICIENT EVIDENCE)"
+  },
+  {
+   "page": "nvidia-cosmos",
+   "title": "NVIDIA Cosmos (World Foundation Models for Physical AI)",
+   "group": "Robotics & Embodied AI",
+   "record_type": "v3-entity-final-expansion",
+   "overlay_entity": false,
+   "verification_status": "VERIFIED",
+   "status_after_proposed_corrections": "VERIFIED",
+   "time_sensitive": true,
+   "freshness_category": "REVIEW MONTHLY",
+   "entity_freshness_class": "volatile",
+   "citations_resolved": "n/a (new page; arXiv IDs checked individually)",
+   "corrections_proposed": 0,
+   "verification_date": "2026-10-09",
+   "claims": [
+    {
+     "claim": "Cosmos described as an open platform for physical AI; Cosmos 3 is the current family, omnimodal world models on a unified Mixture-of-Transformers architecture; Reasoner and Generator input/output modalities as listed.",
+     "status": "VERIFIED",
+     "primary_source": "https://github.com/NVIDIA/cosmos; https://github.com/nvidia-cosmos/cosmos-predict2.5; https://github.com/nvidia-cosmos/cosmos-cookbook",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "Three base models: Super 64B, Nano 16B, Edge 4B with the hardware tiers named in the README; Cosmos 3 released May 2026 and Cosmos3-Edge July 2026 per the \"What's new\" list.",
+     "status": "VERIFIED",
+     "primary_source": "https://github.com/NVIDIA/cosmos; https://github.com/nvidia-cosmos/cosmos-predict2.5; https://github.com/nvidia-cosmos/cosmos-cookbook",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "Training, curation and evaluation live in separate repositories; serving via vLLM, vLLM-Omni or NIM; guardrail model is gated.",
+     "status": "VERIFIED",
+     "primary_source": "https://github.com/NVIDIA/cosmos; https://github.com/nvidia-cosmos/cosmos-predict2.5; https://github.com/nvidia-cosmos/cosmos-cookbook",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "Code and models released under OpenMDW-1.1; limitations and safety paragraph as summarised.",
+     "status": "VERIFIED",
+     "primary_source": "https://github.com/NVIDIA/cosmos; https://github.com/nvidia-cosmos/cosmos-predict2.5; https://github.com/nvidia-cosmos/cosmos-cookbook",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "The Cosmos-Predict2.5 README encourages migrating to Cosmos 3 and cites arXiv:2511.00062; the Reason1 page cites arXiv:2503.15558.",
+     "status": "VERIFIED",
+     "primary_source": "https://github.com/NVIDIA/cosmos; https://github.com/nvidia-cosmos/cosmos-predict2.5; https://github.com/nvidia-cosmos/cosmos-cookbook",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "The Cosmos 3 technical report itself was not read; its benchmark claims are not repeated.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "The original January 2025 Cosmos platform paper and launch details.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "Independent evaluations of Cosmos output quality or physical accuracy.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "Whether the OpenMDW-1.1 licence is \"open source\" in the OSI sense (the README calls it a licence for source code and models).",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "Commercial availability, pricing and NIM packaging.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "Time-sensitive: Model names, sizes, hardware targets and release dates.",
+     "status": "TIME-SENSITIVE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": null,
+     "notes": "Listed on the page as needing re-verification on the freshness schedule."
+    },
+    {
+     "claim": "Time-sensitive: Licence terms (OpenMDW-1.1 per the README).",
+     "status": "TIME-SENSITIVE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": null,
+     "notes": "Listed on the page as needing re-verification on the freshness schedule."
+    },
+    {
+     "claim": "Time-sensitive: Benchmark claims.",
+     "status": "TIME-SENSITIVE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": null,
+     "notes": "Listed on the page as needing re-verification on the freshness schedule."
+    },
+    {
+     "claim": "Time-sensitive: Which earlier Cosmos families remain supported.",
+     "status": "TIME-SENSITIVE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": null,
+     "notes": "Listed on the page as needing re-verification on the freshness schedule."
+    }
+   ],
+   "publication_recommendation": "PRODUCTION-CANDIDATE (after reviewer sign-off; key claims only, see claims marked INSUFFICIENT EVIDENCE)"
+  },
+  {
+   "page": "attention-sinks",
+   "title": "Attention Sinks and StreamingLLM",
+   "group": "Model Architectures",
+   "record_type": "v3-entity-final-expansion",
+   "overlay_entity": false,
+   "verification_status": "VERIFIED",
+   "status_after_proposed_corrections": "VERIFIED",
+   "time_sensitive": false,
+   "freshness_category": "REVIEW QUARTERLY",
+   "entity_freshness_class": "evolving",
+   "citations_resolved": "n/a (new page; arXiv IDs checked individually)",
+   "corrections_proposed": 0,
+   "verification_date": "2026-10-09",
+   "claims": [
+    {
+     "claim": "Window attention fails once text exceeds the cache size; keeping initial tokens' KV largely recovers performance (the \"attention sink\" observation).",
+     "status": "VERIFIED",
+     "primary_source": "https://arxiv.org/abs/2309.17453; https://github.com/mit-han-lab/streaming-llm",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "StreamingLLM enables finite-window models to generalise to infinite lengths without fine-tuning; Llama-2, MPT, Falcon and Pythia named; up to 4 million tokens and more.",
+     "status": "VERIFIED",
+     "primary_source": "https://arxiv.org/abs/2309.17453; https://github.com/mit-han-lab/streaming-llm",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "A dedicated placeholder sink token in pre-training can improve streaming; up to 22.2× speedup over sliding-window recomputation.",
+     "status": "VERIFIED",
+     "primary_source": "https://arxiv.org/abs/2309.17453; https://github.com/mit-han-lab/streaming-llm",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "Four initial tokens are used as attention sinks by default in the experiments; accepted at ICLR 2024 per the arXiv comment.",
+     "status": "VERIFIED",
+     "primary_source": "https://arxiv.org/abs/2309.17453; https://github.com/mit-han-lab/streaming-llm",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "The statement that evicted tokens are unavailable and that the method does not extend memory is an inference from the method, not a quotation (the repository FAQ was not read).",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "Whether specific serving libraries implement sink-aware caches today.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "Why sinks form (explanations in later literature were not reviewed).",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    }
+   ],
+   "publication_recommendation": "PRODUCTION-CANDIDATE (after reviewer sign-off; key claims only, see claims marked INSUFFICIENT EVIDENCE)"
+  },
+  {
+   "page": "flashattention-3",
+   "title": "FlashAttention-3 (and FlashAttention-4)",
+   "group": "Model Architectures",
+   "record_type": "v3-entity-final-expansion",
+   "overlay_entity": false,
+   "verification_status": "VERIFIED",
+   "status_after_proposed_corrections": "VERIFIED",
+   "time_sensitive": true,
+   "freshness_category": "REVIEW MONTHLY",
+   "entity_freshness_class": "volatile",
+   "citations_resolved": "n/a (new page; arXiv IDs checked individually)",
+   "corrections_proposed": 0,
+   "verification_date": "2026-10-09",
+   "claims": [
+    {
+     "claim": "Abstract: FlashAttention-2 reached only 35% utilisation on H100; three techniques (asynchrony with warp specialisation, interleaved matmul/softmax, FP8 block quantisation with incoherent processing).",
+     "status": "VERIFIED",
+     "primary_source": "https://arxiv.org/abs/2407.08608; https://github.com/Dao-AILab/flash-attention",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "Reported results: 1.5–2.0× speedup, FP16 up to 740 TFLOPs/s (75% utilisation), FP8 close to 1.2 PFLOPs/s, 2.6× lower numerical error than a baseline FP8 attention.",
+     "status": "VERIFIED",
+     "primary_source": "https://arxiv.org/abs/2407.08608; https://github.com/Dao-AILab/flash-attention",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "Authors: Shah, Bikshandi, Zhang, Thakkar, Ramani, Dao; submitted July 2024.",
+     "status": "VERIFIED",
+     "primary_source": "https://arxiv.org/abs/2407.08608; https://github.com/Dao-AILab/flash-attention",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "Repository README: FlashAttention-3 beta for H100/H800, CUDA >= 12.3 (12.8 recommended), FP16/BF16 forward and backward, FP8 forward; FlashAttention-4 in CuTeDSL for Hopper and Blackwell, install flash-attn-4.",
+     "status": "VERIFIED",
+     "primary_source": "https://arxiv.org/abs/2407.08608; https://github.com/Dao-AILab/flash-attention",
+     "source_date": "read 2026-10-09",
+     "verification_date": "2026-10-09",
+     "notes": "Compared with the cited primary pages on the check date (final content expansion). Vendor/documentation statements are recorded as what the source says, not as independent confirmation of the product's behaviour."
+    },
+    {
+     "claim": "Independent reproductions of the speedups.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "The README's beta status may have changed since it was read.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "FlashAttention-4 has no paper cited here; its claims rest only on the README line.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "Which serving engines enable FlashAttention-3 by default.",
+     "status": "INSUFFICIENT EVIDENCE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": "2026-10-09",
+     "notes": "Could not be confirmed from a primary source in this pass; the page says so in its Sources and verification section."
+    },
+    {
+     "claim": "Time-sensitive: Beta/stable status and supported GPUs of FlashAttention-3.",
+     "status": "TIME-SENSITIVE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": null,
+     "notes": "Listed on the page as needing re-verification on the freshness schedule."
+    },
+    {
+     "claim": "Time-sensitive: FlashAttention-4 maturity and hardware support.",
+     "status": "TIME-SENSITIVE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": null,
+     "notes": "Listed on the page as needing re-verification on the freshness schedule."
+    },
+    {
+     "claim": "Time-sensitive: CUDA and PyTorch version requirements.",
+     "status": "TIME-SENSITIVE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": null,
+     "notes": "Listed on the page as needing re-verification on the freshness schedule."
+    },
+    {
+     "claim": "Time-sensitive: Benchmark numbers on newer GPUs.",
+     "status": "TIME-SENSITIVE",
+     "primary_source": null,
+     "source_date": null,
+     "verification_date": null,
+     "notes": "Listed on the page as needing re-verification on the freshness schedule."
+    }
+   ],
+   "publication_recommendation": "PRODUCTION-CANDIDATE (after reviewer sign-off; key claims only, see claims marked INSUFFICIENT EVIDENCE)"
   }
  ],
  "change_log": [
@@ -9804,6 +11376,131 @@
    "corrected": "Published comparisons on maths tasks differ in what they find: Uesato et al. (2022, GSM8K) report that outcome-based supervision reached similar final-answer error rates with less labelling, while process-based supervision (or reward models that emulate it) was needed for correct reasoning steps; Lightman et al. (2023, MATH) report that process supervision significantly outperformed outcome supervision. Results depend on domain, model scale and labelling method and should not be assumed to transfer.",
    "reason": "Overgeneralised: Uesato et al. did not find a final-answer advantage for process supervision.",
    "source": "arXiv:2211.14275 and arXiv:2305.20050 abstracts (verified 2026-10-09)"
+  },
+  {
+   "page": "mcp",
+   "file": "knowledge/src/pages-agents.mjs",
+   "original": "A connection begins with an initialisation handshake in which both sides declare what they support; then the client can list and call tools, read resources and so on.",
+   "corrected": "In specification revisions up to 2025-11-25, a connection begins with an initialisation handshake ... Revision 2026-07-28 removed that handshake and protocol-level sessions: every request now carries the protocol version and client capabilities, and servers advertise theirs through a server/discover call.",
+   "reason": "Revision 2026-07-28 of the MCP specification removed the initialize handshake and Mcp-Session-Id sessions; the page described only the older model.",
+   "source": "MCP specification 2026-07-28 Key Changes (modelcontextprotocol.io/specification/2026-07-28/changelog), read 2026-10-09",
+   "pass": "final-content-expansion"
+  },
+  {
+   "page": "mcp-servers-and-clients",
+   "file": "knowledge/src/pages-agents.mjs",
+   "original": "Lifecycle: 1. Client connects and sends an initialize request ... 4. The connection closes ...",
+   "corrected": "Lifecycle split into revisions up to 2025-11-25 (stateful handshake) and revision 2026-07-28 (stateless: no initialize, no sessions, server/discover, handles as tool arguments, multi round-trip pattern replacing server-initiated requests).",
+   "reason": "Same specification change as above.",
+   "source": "MCP specification 2026-07-28 Key Changes, read 2026-10-09",
+   "pass": "final-content-expansion"
+  },
+  {
+   "page": "gmail-for-ai-agents",
+   "file": "knowledge/src/pages-building-platforms.mjs",
+   "original": "choose minimal Gmail scopes (prefer readonly while prototyping).",
+   "corrected": "choose minimal Gmail scopes. Note that gmail.readonly is a restricted scope ... apps for other users need restricted-scope verification, and storing the data on your servers can require a security assessment. gmail.send is sensitive and gmail.labels non-sensitive.",
+   "reason": "gmail.readonly is classified Restricted by Google, so 'prefer readonly while prototyping' understated the verification burden for any app used by other people.",
+   "source": "developers.google.com/workspace/gmail/api/auth/scopes, read 2026-10-09",
+   "pass": "final-content-expansion"
+  },
+  {
+   "page": "gmail-for-ai-agents",
+   "file": "knowledge/src/pages-building-platforms.mjs",
+   "original": "Review Google’s API services user data policies in addition to your own checklist.",
+   "corrected": "Review Google's user data policies ...: Google's Workspace developer policy sets Limited Use rules and, as read on 2026-10-09, bars using user data to create, train or improve a machine-learning or AI model beyond that user's own personalised feature.",
+   "reason": "The page said only 'review the policies'; the Workspace policy contains an AI/ML training prohibition relevant to AI-agent products.",
+   "source": "developers.google.com/workspace/workspace-api-user-data-developer-policy (last updated 2026-09-03), read 2026-10-09",
+   "pass": "final-content-expansion"
+  },
+  {
+   "page": "gmail-for-ai-agents",
+   "file": "knowledge/src/pages-building-platforms.mjs",
+   "original": "Common mistakes: Using overly broad scopes (mail.google.com full access) when readonly suffices.",
+   "corrected": "... when a narrower one suffices, and forgetting that readonly is itself restricted.",
+   "reason": "Consistency with the scope classification.",
+   "source": "developers.google.com/workspace/gmail/api/auth/scopes, read 2026-10-09",
+   "pass": "final-content-expansion"
+  },
+  {
+   "page": "oauth-for-ai-agents",
+   "file": "knowledge/src/pages-building-platforms.mjs",
+   "original": "Scopes for a read-only mail summariser might include Gmail readonly only.",
+   "corrected": "... (a restricted scope with extra review requirements; see the Gmail scopes page).",
+   "reason": "Avoid implying readonly is low-friction.",
+   "source": "developers.google.com/workspace/gmail/api/auth/scopes, read 2026-10-09",
+   "pass": "final-content-expansion"
+  },
+  {
+   "page": "video-generation-models",
+   "file": "knowledge/src/entities-llm.mjs",
+   "original": "Alias list included 'Sora' with no status note.",
+   "corrected": "Added: OpenAI's Sora app was discontinued on 26 April 2026 and its API was scheduled to shut down on 24 September 2026; confirm any service still exists.",
+   "reason": "Time-sensitive product status; Sora discontinued per OpenAI.",
+   "source": "help.openai.com article 20001152 and developers.openai.com/api/docs/deprecations, read 2026-10-09",
+   "pass": "final-content-expansion"
+  },
+  {
+   "page": "agent-frameworks-compared",
+   "file": "knowledge/src/entities-agents.mjs",
+   "original": "Table had no row for Microsoft Agent Framework (only successor mentions in the AutoGen and Semantic Kernel rows).",
+   "corrected": "Added a Microsoft Agent Framework row and a link to the migration page.",
+   "reason": "Coverage gap closed.",
+   "source": "github.com/microsoft/agent-framework README, read 2026-10-09",
+   "pass": "final-content-expansion"
+  },
+  {
+   "page": "nist-ai-rmf",
+   "file": "knowledge/src/entities-safety-science.mjs",
+   "original": "Publication details and updates should be verified on NIST's site. (sources: 'NIST AI 600-1 ... nist.gov (verify)')",
+   "corrected": "AI RMF 1.0 was released on 26 January 2023 as NIST AI 100-1; NIST states it is being revised as part of the White House AI Action Plan; Playbook to be updated afterwards; concept note for a critical-infrastructure profile released 7 April 2026. 600-1 locator replaced with the PDF URL.",
+   "reason": "Resolves INSUFFICIENT EVIDENCE for AI RMF 1.0 date; adds the announced revision.",
+   "source": "nist.gov/itl/ai-risk-management-framework and the AI RMF Playbook page, read 2026-10-09",
+   "pass": "final-content-expansion"
+  },
+  {
+   "page": "eu-ai-act",
+   "file": "knowledge/src/entities-safety-science.mjs",
+   "original": "... and added a new prohibited practice; prohibitions and general-purpose AI model obligations kept their earlier dates.",
+   "corrected": "... and added new Article 5 prohibitions that apply from 2 December 2026 (secondary commentary describes them as covering non-consensual intimate imagery and child sexual abuse material); the original prohibitions have applied since 2 February 2025.",
+   "reason": "Primary text read: Article 113 amendment lists Article 5(1) points (ba),(bb) and 5(1a),(1b) from 2 December 2026. 'A new prohibited practice' (singular) and 'kept their earlier dates' were not supported by the text read.",
+   "source": "EUR-Lex: eur-lex.europa.eu/eli/reg/2026/1744/oj/eng (OJ L, 2026/1744, 24.7.2026), read 2026-10-09",
+   "pass": "final-content-expansion"
+  },
+  {
+   "page": "owasp-llm-top-10",
+   "file": "knowledge/src/entities-safety-science.mjs",
+   "original": "...the OWASP GenAI LLM Top 10 2026 was published on 4 August 2026...",
+   "corrected": "...was published in early August 2026 (OWASP's resource page is dated 3 August, its repository README says 4 August).",
+   "reason": "OWASP's own pages disagree by a day; the page now avoids a single day.",
+   "source": "genai.owasp.org/resource/owasp-genai-llm-top-10-2026/ and the repository README, read 2026-10-09",
+   "pass": "final-content-expansion"
   }
- ]
+ ],
+ "final_expansion": {
+  "date": "2026-10-09",
+  "branch": "agent/knowledge-v3-final-expansion",
+  "base": "origin/feature/knowledge-base-preview @ 0b713df",
+  "pages_added": [
+   "microsoft-agent-framework",
+   "migrate-to-microsoft-agent-framework",
+   "mcp-authorization",
+   "gmail-api-scopes-and-verification",
+   "inspect-ai-evaluation-framework",
+   "openai-reasoning-models",
+   "sora-ai-video",
+   "nvidia-cosmos",
+   "attention-sinks",
+   "flashattention-3"
+  ],
+  "existing_pages_with_source_check_block": [
+   "a2a-protocol",
+   "autogen",
+   "semantic-kernel",
+   "eu-ai-act",
+   "nist-ai-rmf",
+   "owasp-llm-top-10"
+  ],
+  "note": "Records for the added pages use record_type v3-entity-final-expansion. 'VERIFIED' means the key claims listed were compared with the cited primary pages on the date shown; rows marked INSUFFICIENT EVIDENCE list claims that could not be confirmed."
+ }
 }

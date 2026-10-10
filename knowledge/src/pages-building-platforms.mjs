@@ -244,13 +244,13 @@ summary: 'An agent accesses Gmail through your server: the user completes Google
 short: 'For Gmail, build **OAuth + server-held tokens + narrow tools**. The model never sees your client secret. IntelliTools does not provide a Gmail connector.',
 aliases: ['How can an AI agent access Gmail?', 'Gmail for AI agents', 'AI agent Gmail access', 'Google mail agent integration', 'connect agent to Gmail'],
 keywords: ['gmail', 'google', 'OAuth', 'scopes', 'refresh token', 'agent tool'],
-related: ['connecting-agents-to-apps', 'oauth-for-ai-agents', 'integration-permissions', 'agent-tools', 'function-calling', 'mcp', 'prompt-injection', 'ai-privacy-and-security'],
+related: ['connecting-agents-to-apps', 'oauth-for-ai-agents', 'gmail-api-scopes-and-verification', 'integration-permissions', 'agent-tools', 'function-calling', 'mcp', 'prompt-injection', 'ai-privacy-and-security'],
 sections: [
 ['What is it?', `Gmail access for an agent is an **application integration**, not a model feature. Your product registers a Google Cloud OAuth client, the user consents to limited scopes, your **server** stores the refresh token, and tools you define call the Gmail API. **IntelliTools has no Gmail connector** and does not send mail on your behalf.`],
 ['Why it matters', `People ask "How can an AI agent access Gmail?" expecting a switch to flip. Without OAuth, tools and careful permissions, either nothing works or credentials leak. Email bodies are also a classic [[prompt-injection]] channel.`],
 ['How to do it', `Architecture:
 
-1. Create a Google Cloud project; configure OAuth consent; choose minimal Gmail scopes (prefer readonly while prototyping).
+1. Create a Google Cloud project; configure OAuth consent; choose minimal Gmail scopes. Note that \`gmail.readonly\` is a **restricted** scope, not a lightweight one: apps for other users need Google's restricted-scope verification, and storing the data on your servers can require a security assessment ([[gmail-api-scopes-and-verification]]). \`gmail.send\` is a sensitive scope and \`gmail.labels\` is non-sensitive.
 2. Implement the OAuth authorization code flow on your server ([[oauth-for-ai-agents]]).
 3. Encrypt and store refresh tokens per user; never log them; never put them in front-end code.
 4. Expose tools such as \`list_unread\`, \`get_message\`, \`create_draft\` — not "send any MIME".
@@ -267,8 +267,8 @@ Do not paste client secrets into chat prompts or repositories.`],
 
 Your handler loads the user's refresh token, exchanges for an access token, calls Gmail REST, maps errors to safe messages. The model only sees the tool results you return.`],
 ['When to use it', `Build Gmail tools when the product requires inbox workflows. For "summarise this email" where the user pastes text, skip OAuth entirely.`],
-['Practical notes', `Compliance notes: mail often contains personal data under privacy laws. Minimise retention of message bodies; consider storing ids and summaries instead of full MIME. Provide an in-product "disconnect Google" that revokes tokens. If you sync mail into a datastore for RAG, apply the same access controls as the mailbox itself — do not let one user retrieve another user's chunks. Test with a dedicated Google Workspace test user. Document clearly to customers that **IntelliTools itself does not ship a Gmail connector**; any access is via software you build or a third-party host you trust. Review Google’s API services user data policies in addition to your own [[ai-privacy-and-security]] checklist.`],
-['Common mistakes', `- Using overly broad scopes (\`mail.google.com\` full access) when readonly suffices.
+['Practical notes', `Compliance notes: mail often contains personal data under privacy laws. Minimise retention of message bodies; consider storing ids and summaries instead of full MIME. Provide an in-product "disconnect Google" that revokes tokens. If you sync mail into a datastore for RAG, apply the same access controls as the mailbox itself — do not let one user retrieve another user's chunks. Test with a dedicated Google Workspace test user. Document clearly to customers that **IntelliTools itself does not ship a Gmail connector**; any access is via software you build or a third-party host you trust. Review Google’s user data policies in addition to your own [[ai-privacy-and-security]] checklist: Google's Workspace developer policy sets Limited Use rules and, as read on 2026-10-09, bars using user data to create, train or improve a machine-learning or AI model beyond that user's own personalised feature — so keep mailbox content out of training and shared evaluation sets ([[gmail-api-scopes-and-verification]]).`],
+['Common mistakes', `- Using overly broad scopes (\`mail.google.com\` full access) when a narrower one suffices, and forgetting that readonly is itself restricted.
 - Shipping the OAuth client secret to a mobile/web client incorrectly.
 - Auto-sending mail without confirmation.
 - Ignoring that IntelliTools itself does not connect to Gmail.`],
@@ -282,7 +282,7 @@ summary: 'OAuth lets a user grant your agent app limited access to a provider wi
 short: 'OAuth for agents means **user consent, access vs refresh tokens, server-side storage, least privilege** — the model is never the OAuth client.',
 aliases: ['OAuth for AI agents', 'OAuth agents', 'agent OAuth tokens', 'refresh token AI app'],
 keywords: ['OAuth', 'access token', 'refresh token', 'scopes', 'consent'],
-related: ['gmail-for-ai-agents', 'connecting-agents-to-apps', 'integration-permissions', 'api-authentication', 'ai-privacy-and-security'],
+related: ['gmail-for-ai-agents', 'mcp-authorization', 'connecting-agents-to-apps', 'integration-permissions', 'api-authentication', 'ai-privacy-and-security'],
 sections: [
 ['What is it?', `**OAuth 2.0** is how a user authorises *your application* to call an API (Gmail, calendar, GitHub) without giving you their password. For agents, OAuth still happens between the **user, your server, and the provider**. The LLM is not a party to the handshake; it only requests tools that your server may execute if tokens and policy allow.`],
 ['Why it matters', `Agents amplify token risk: a manipulated prompt might try to trigger a send-mail tool. Correct OAuth storage and scopes limit blast radius ([[integration-permissions]]).`],
@@ -293,7 +293,7 @@ sections: [
 5. Use access tokens for API calls; refresh when expired; revoke on logout.
 6. Map each agent tool to the minimum scopes it needs.
 7. Separate "user connected Google" (OAuth) from "model may call tool" (your authZ policy).`],
-['Example', `Scopes for a read-only mail summariser might include Gmail readonly only. A draft tool might need compose scope but still leave final send to a human. Document the scopes in your privacy policy ([[ai-privacy-and-security]]).`],
+['Example', `Scopes for a read-only mail summariser might include Gmail readonly only (a restricted scope with extra review requirements; see [[gmail-api-scopes-and-verification]]). A draft tool might need compose scope but still leave final send to a human. Document the scopes in your privacy policy ([[ai-privacy-and-security]]).`],
 ['When to use it', `Use OAuth when calling APIs on behalf of a user. Use a service account or API key only for non-user systems you fully control — and still do not give those credentials to the model.`],
 ['Practical notes', `Implementation details that prevent outages: handle refresh-token rotation when providers invalidate old refresh tokens, clock-skew when validating JWTs, and missing scopes when you add a new tool later (re-consent flow). Use PKCE for public clients; keep confidential clients on the server. Separate "connect account" UX from "enable agent tool" UX so users understand both steps. Monitor auth error rates distinctly from model error rates. When acting for a user, stamp tool logs with the user id and OAuth client id used. Read [[api-authentication]] for how OAuth sits beside API keys and sessions, and [[integration-permissions]] for approval gates after tokens exist. Work through one real request end to end, write down the failure modes you observed, and add a regression test so the next change does not silently drop validation, auth, or logging. Prefer boring, reviewable code over a clever abstraction until the second or third product needs the same pattern. Work through one real request end to end, write down the failure modes you observed, and add a regression test so the next change does not silently drop validation, auth, or logging. Prefer boring, reviewable code over a clever abstraction until the second or third product needs the same pattern.`],
 ['Common mistakes', `- Putting refresh tokens in localStorage.

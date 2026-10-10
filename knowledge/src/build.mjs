@@ -77,7 +77,7 @@ const plain = s => s.replace(/\[\[([a-z0-9-]+)(?:\|([^\]]+))?\]\]/g, (_, sl, lb)
 const slugify = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
 const header = `<header><div class="wrap"><nav aria-label="Main navigation"><a class="brand" href="../index.html"><span>Intelli</span>Tools</a><div class="navlinks"><a href="../index.html#tools">All tools</a><a href="index.html">Knowledge</a><a href="../index.html#about">About</a></div></nav></div></header>`;
-const footer = `<footer><div class="wrap"><div class="footer-bottom"><span>© IntelliTools — free, browser-first, no account needed.</span><span><a href="index.html">Knowledge</a> · <a href="glossary.html">AI Glossary</a> · <a href="../privacy.html">Privacy</a> · <a href="../terms.html">Terms</a></span></div></div></footer>`;
+const footer = `<footer><div class="wrap"><div class="footer-bottom"><span>© IntelliTools. Free, browser-based tools.</span><span><a href="index.html">Knowledge</a> · <a href="glossary.html">AI Glossary</a> · <a href="../privacy.html">Privacy</a> · <a href="../terms.html">Terms</a></span></div></div></footer>`;
 
 function shell({ title, desc, file, body, ld }) {
   return `<!doctype html>
@@ -111,7 +111,7 @@ function articlePage(p) {
     toolBlock = `<section class="kn-tool" id="try-it-with-intellitools"><h2>Try it with IntelliTools</h2>${md(p.tool.note)}<p><a class="btn" href="../tools/${p.tool.id}.html">Open ${esc(t.name)}</a></p><p class="kn-small">${esc(t.privacy)}</p></section>`;
   }
   const body = `<main><section class="kn-head"><div class="wrap kn-wrap"><nav class="kn-crumb" aria-label="Breadcrumb"><a href="index.html">Knowledge</a> › <span>${p.kind === 'comparison' ? 'Comparisons' : esc(p.group)}</span></nav>
-<span class="eyebrow">${p.kind === 'comparison' ? 'COMPARISON' : 'EXPLAINER'}</span><h1>${esc(p.title)}</h1>${p.entity ? `<p class="kn-meta"><span>${esc(p.entity.entity_type)}</span><span>freshness: ${esc(p.entity.freshness)}</span><span>sources not yet verified</span></p>` : ''}<p class="kn-lede">${inline(p.summary)}</p>
+<span class="eyebrow">${p.kind === 'comparison' ? 'COMPARISON' : 'EXPLAINER'}</span><h1>${esc(p.title)}</h1>${p.entity ? `<p class="kn-meta"><span>${esc(p.entity.entity_type)}</span><span>freshness: ${esc(p.entity.freshness)}</span><span>${p.entity.checked_date ? 'key claims checked ' + esc(p.entity.checked_date) : 'sources not yet verified'}</span></p>` : ''}<p class="kn-lede">${inline(p.summary)}</p>
 <p class="kn-quick"><strong>Short answer:</strong> ${inline(p.short)}</p></div></section>
 <div class="wrap kn-wrap kn-layout"><article class="kn-article">${secs.map(s => `<section id="${s.id}"><h2>${esc(s.h)}</h2>${s.html}</section>`).join('\n')}${toolBlock}
 ${rel ? `<section id="related-concepts"><h2>Related concepts</h2><div class="kn-cards">${rel}</div></section>` : ''}${pn}</article>
@@ -131,25 +131,25 @@ function glossaryPage() {
     const see = (g.see || []).map(t => { const f = glossary.find(x => x.term === t || x.term.startsWith(t + ' (')); if (!f) { errors.push('glossary ' + g.term + ' see missing ' + t); return ''; } return `<a href="#${slugify(f.term)}">${esc(t)}</a>`; }).filter(Boolean);
     html += `<div class="kn-term" id="${slugify(g.term)}"><dt>${esc(g.term)}${g.aka ? ` <span class="kn-aka">(${esc(g.aka)})</span>` : ''}</dt><dd>${inline(g.def)}${links.length ? `<div class="kn-term-links">Learn more: ${links.join(' · ')}</div>` : ''}${see.length ? `<div class="kn-term-links">See also: ${see.join(' · ')}</div>` : ''}</dd></div>`;
   }
-  const body = `<main><section class="kn-head"><div class="wrap kn-wrap"><nav class="kn-crumb"><a href="index.html">Knowledge</a> › <span>Glossary</span></nav><span class="eyebrow">REFERENCE</span><h1>AI Glossary A–Z</h1><p class="kn-lede">Plain-English definitions of ${glossary.length} AI terms, each linking to the deeper explanation where one exists.</p>
+  const body = `<main><section class="kn-head"><div class="wrap kn-wrap"><nav class="kn-crumb"><a href="index.html">Knowledge</a> › <span>Glossary</span></nav><span class="eyebrow">REFERENCE</span><h1>AI Glossary A–Z</h1><p class="kn-lede">Clear definitions of ${glossary.length} AI terms, with a link to the full explanation where one exists.</p>
 <div class="kn-letters">${letters.map(l => `<a href="#letter-${l}">${l}</a>`).join('')}</div></div></section>
 <div class="wrap kn-wrap"><dl class="kn-glossary">${html}</dl></div></main>`;
   const ld = { '@context': 'https://schema.org', '@type': 'DefinedTermSet', name: 'AI Glossary A–Z', url: SITE + 'glossary.html', hasDefinedTerm: sorted.map(g => ({ '@type': 'DefinedTerm', name: g.term, description: plain(g.def) })) };
-  return shell({ title: 'AI Glossary A–Z', desc: `Plain-English definitions of ${glossary.length} AI terms: tokens, embeddings, RAG, agents, MCP, hallucination and more.`, file: 'glossary.html', body, ld });
+  return shell({ title: 'AI Glossary A–Z', desc: `Definitions of ${glossary.length} AI terms, including tokens, embeddings, RAG, agents, MCP, and hallucination.`, file: 'glossary.html', body, ld });
 }
 
 function indexPage() {
   const groups = [...new Set(pages.filter(p => p.kind !== 'comparison').map(p => p.group))];
   const card = t => `<a class="kn-card" href="${t.slug}.html"><span class="kn-kind">${t.kind === 'comparison' ? 'Comparison' : 'Concept'}</span><strong>${esc(t.title)}</strong><small>${esc(plain(t.summary))}</small></a>`;
   const sec = g => `<section class="kn-group"><h2>${esc(g)}</h2><div class="kn-cards">${pages.filter(p => p.group === g && p.kind !== 'comparison').map(card).join('')}</div></section>`;
-  const body = `<main><section class="kn-head"><div class="wrap kn-wrap"><span class="eyebrow">INTELLITOOLS KNOWLEDGE</span><h1>Understand AI, practically</h1><p class="kn-lede">Free, plain-English explainers on how modern AI actually works — written for beginners, useful to developers. No account, no tracking requirement, nothing to install.</p>
+  const body = `<main><section class="kn-head"><div class="wrap kn-wrap"><span class="eyebrow">INTELLITOOLS KNOWLEDGE</span><h1>Explore Artificial Intelligence</h1><p class="kn-lede">Explore modern artificial intelligence through free, clear, and accessible guides that explain complex AI concepts in simple, practical language.</p>
 <form class="kn-ask" id="kn-search-form" role="search" action="index.html">
 <label for="kn-q">What do you want to know or build?</label>
 <div class="kn-ask-row">
 <input id="kn-q" name="q" type="search" placeholder="What do you want to know or build?" autocomplete="off" enterkeyhint="search" aria-describedby="kn-ask-note">
 <button class="btn" type="submit">Search</button>
 </div>
-<p id="kn-ask-note" class="kn-ask-note">Searches these guides in your browser. Nothing you type is sent to a server.</p>
+<p id="kn-ask-note" class="kn-ask-note">Search runs in your browser using files loaded from this site.</p>
 </form>
 <div id="kn-search-status" class="kn-sr" aria-live="polite"></div>
 <div id="kn-search-results" class="kn-results"></div>
@@ -159,7 +159,7 @@ ${groups.map(sec).join('')}
 <section class="kn-group"><h2>Comparisons</h2><div class="kn-cards">${pages.filter(p => p.kind === 'comparison').map(card).join('')}</div></section>
 <section class="kn-group"><h2>Reference</h2><div class="kn-cards"><a class="kn-card" href="glossary.html"><span class="kn-kind">Glossary</span><strong>AI Glossary A–Z</strong><small>${glossary.length} terms defined in plain English.</small></a></div></section></div></main>`;
   const ld = { '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'IntelliTools Knowledge', url: SITE, inLanguage: 'en' };
-  return shell({ title: 'Knowledge: understand AI, practically', desc: 'Free practical explainers on LLMs, tokens, RAG, embeddings, AI agents, MCP, prompting, evaluation and AI security.', file: 'index.html', body, ld }).replace('</body>', '<script type="module" src="search.js"></script></body>');
+  return shell({ title: 'Knowledge: Artificial Intelligence Guides', desc: 'Explore free, accessible guides to artificial intelligence, AI agents, language models, prompting, and AI security.', file: 'index.html', body, ld }).replace('</body>', '<script type="module" src="search.js"></script></body>');
 }
 
 // ---- validation ----
@@ -173,13 +173,29 @@ if (new Set(pages.map(p => p.slug)).size !== pages.length) errors.push('duplicat
 for (const pa of paths) for (const s of pa.steps) if (!bySlug.has(s)) errors.push('path ' + pa.title + ' missing ' + s);
 
 for (const p of pages) fs.writeFileSync(path.join(OUT, p.slug + '.html'), articlePage(p));
+// Legacy URLs that must keep working. Static hosting (GitHub Pages) has no server redirects, so each old URL is a small
+// stub: meta refresh + canonical + script redirect. Add new entries here, never hand-edit the generated stub.
+const REDIRECTS = { 'hugging-face-transformers': 'hugging-face' };
+for (const [from, to] of Object.entries(REDIRECTS)) {
+  if (!pages.some(p => p.slug === to)) errors.push('redirect target does not exist: ' + from + ' -> ' + to);
+  if (pages.some(p => p.slug === from)) errors.push('redirect source collides with a real page: ' + from);
+  const target = to + '.html', abs = 'https://intellitools.online/knowledge/' + target;
+  fs.writeFileSync(path.join(OUT, from + '.html'), `<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Moved: ${esc(titleOfSlug(to))} | IntelliTools Knowledge</title>
+<meta http-equiv="refresh" content="0; url=${target}"><link rel="canonical" href="${abs}">
+<script>location.replace(${JSON.stringify(target)} + location.search + location.hash);</script></head>
+<body><p>This guide moved to <a href="${target}">${esc(titleOfSlug(to))}</a>.</p></body></html>
+`);
+}
+function titleOfSlug(slug) { return (pages.find(p => p.slug === slug) || { title: slug }).title; }
 fs.writeFileSync(path.join(OUT, 'glossary.html'), glossaryPage());
 fs.writeFileSync(path.join(OUT, 'index.html'), indexPage());
 
 
 function mergeLexicon() {
   const dir = path.join(OUT, 'src');
-  const parts = ['lexicon-part-a.json', 'lexicon-part-b.json', 'lexicon-part-c.json', 'lexicon-part-d.json'].map(name => JSON.parse(fs.readFileSync(path.join(dir, name), 'utf8')));
+  const parts = ['lexicon-part-a.json', 'lexicon-part-b.json', 'lexicon-part-c.json', 'lexicon-part-d.json', 'lexicon-part-e.json'].map(name => JSON.parse(fs.readFileSync(path.join(dir, name), 'utf8')));
   const arrayKeys = new Set(['stopwords', 'intents', 'concepts', 'coverageGaps', 'tools', 'queryTechnologies']);
   const objectKeys = new Set(['synonyms', 'pageTechnologies']);
   const merged = {};
@@ -214,7 +230,22 @@ fs.writeFileSync(path.join(OUT, 'ontology-v3.json'), JSON.stringify(ent.ontology
 fs.writeFileSync(path.join(OUT, 'search-index.json'), JSON.stringify(index, null, 1));
 fs.writeFileSync(path.join(OUT, 'search-lexicon.json'), JSON.stringify(mergeLexicon(), null, 2) + '\n');
 const urls = ['index.html', 'glossary.html', ...pages.map(p => p.slug + '.html')];
-fs.writeFileSync(path.join(OUT, 'sitemap-fragment.xml'), '<!-- Merge into sitemap.xml at integration; not wired in automatically. -->\n' + urls.map(u => `<url><loc>${SITE}${u}</loc></url>`).join('\n') + '\n');
+fs.writeFileSync(path.join(OUT, 'sitemap-fragment.xml'), '<!-- Generated. The same URLs are written into the root sitemap.xml by this build (block between the knowledge:start and knowledge:end markers). -->\n' + urls.map(u => `<url><loc>${SITE}${u}</loc></url>`).join('\n') + '\n');
 
 if (errors.length) { console.error('BUILD ERRORS:\n' + errors.join('\n')); process.exit(1); }
+
+// Keep the root sitemap.xml in sync: a generated block of canonical Knowledge URLs (index, glossary, every article).
+// Redirect stubs are never listed. The block is replaced on each build, so the result is repeatable and idempotent.
+{
+  const rootSitemap = path.join(OUT, '..', 'sitemap.xml');
+  const START = '  <!-- knowledge:start (generated by knowledge/src/build.mjs; do not edit by hand) -->';
+  const END = '  <!-- knowledge:end -->';
+  let xml = fs.readFileSync(rootSitemap, 'utf8');
+  xml = xml.replace(new RegExp('\\n?' + START.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '[\\s\\S]*?' + END.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\n?'), '\n');
+  const entries = urls.map(u => `  <url><loc>${SITE}${u}</loc><priority>${u === 'index.html' ? '0.8' : '0.6'}</priority></url>`);
+  const block = START + '\n' + entries.join('\n') + '\n' + END + '\n';
+  if (!xml.includes('</urlset>')) throw new Error('root sitemap.xml has no </urlset>');
+  xml = xml.replace(/\n*<\/urlset>\s*$/, '\n' + block + '</urlset>\n');
+  fs.writeFileSync(rootSitemap, xml);
+}
 console.log('Built ' + pages.length + ' articles, ' + glossary.length + ' glossary terms.');

@@ -301,7 +301,7 @@ summary: 'MCP is an open protocol that standardises how AI applications connect 
 short: 'MCP (Model Context Protocol) is an **open standard for connecting AI applications to tools and data**. An MCP *server* exposes capabilities; an MCP *client* inside an AI app discovers and uses them — a common "plug" instead of custom integrations for every pairing.',
 aliases: ['MCP', 'Model Context Protocol', 'what is MCP', 'MCP protocol', 'MCP explained', 'Anthropic MCP', 'model context protocol servers', 'USB-C for AI'],
 keywords: ['protocol', 'JSON-RPC', 'tools', 'resources', 'prompts', 'server', 'client', 'host', 'stdio', 'integration', 'standard', 'connector'],
-related: ['mcp-servers-and-clients', 'mcp-vs-api', 'function-calling-vs-mcp', 'agent-tools', 'function-calling', 'ai-agents', 'ai-privacy-and-security'],
+related: ['mcp-servers-and-clients', 'mcp-authorization', 'mcp-vs-api', 'function-calling-vs-mcp', 'agent-tools', 'function-calling', 'ai-agents', 'ai-privacy-and-security'],
 sections: [
 ['What is it?', `The **Model Context Protocol (MCP)** is an open protocol, introduced by Anthropic in late 2024, that defines a standard way for AI applications to connect to external systems: files, databases, SaaS apps, developer tools and more.
 
@@ -326,7 +326,7 @@ A server can offer three main kinds of capability:
 - **Resources** — data the application can read, such as files or records, for context.
 - **Prompts** — reusable prompt templates users can select.
 
-Messages use **JSON-RPC 2.0**. Servers can run locally (the client launches them and talks over standard input/output) or remotely over HTTP. A connection begins with an initialisation handshake in which both sides declare what they support; then the client can list and call tools, read resources and so on.
+Messages use **JSON-RPC 2.0**. Servers can run locally (the client launches them and talks over standard input/output) or remotely over HTTP. In specification revisions up to 2025-11-25, a connection begins with an initialisation handshake in which both sides declare what they support. Revision 2026-07-28 removed that handshake and protocol-level sessions: every request now carries the protocol version and client capabilities, and servers advertise theirs through a \`server/discover\` call. Which model your SDK implements depends on its version, so check ([[mcp-servers-and-clients]]). Either way, the client then lists and calls tools, reads resources and so on.
 
 \`\`\`json
 // Client asks a server what tools it has
@@ -337,7 +337,7 @@ Messages use **JSON-RPC 2.0**. Servers can run locally (the client launches them
   "params": { "name": "search_issues", "arguments": { "query": "login bug" } } }
 \`\`\`
 
-(Simplified; consult the specification for exact fields and the initialisation sequence.)`],
+(Simplified; consult the specification revision your SDK implements for the exact fields and the connection sequence. For protecting remote servers, see [[mcp-authorization]].)`],
 ['Example', `A developer connects their IDE assistant to a Git hosting MCP server and a database MCP server. The assistant can now list open issues, read a failing test, query a staging database (read-only credentials), and propose a fix — all through the same protocol. Swapping to a different MCP-compatible assistant later does not require rewriting those two integrations.`],
 ['When should I use it?', `MCP makes sense when you want tools reusable across applications, when you consume third-party integrations, or when building an ecosystem where many clients should reach your service. For a single application calling a couple of internal functions, plain [[function-calling]] may be simpler. See [[function-calling-vs-mcp]] and [[mcp-vs-api]].`],
 ['Common mistakes', `- **Thinking MCP replaces APIs.** MCP servers usually wrap APIs ([[mcp-vs-api]]).
@@ -355,7 +355,7 @@ summary: 'In MCP, a host application runs clients that each connect to a server;
 short: 'The **host** is the AI app, a **client** is the connection component inside it, and a **server** is the program that exposes tools, resources and prompts. Local servers typically use stdio; remote servers use HTTP.',
 aliases: ['MCP server', 'MCP client', 'MCP host', 'MCP servers and clients', 'build an MCP server', 'MCP transport', 'stdio MCP', 'remote MCP server', 'MCP architecture', 'MCP tools resources prompts'],
 keywords: ['stdio', 'streamable HTTP', 'SSE', 'initialize', 'capabilities', 'tools/list', 'tools/call', 'resources', 'prompts', 'sampling', 'SDK', 'authorization'],
-related: ['mcp', 'mcp-vs-api', 'function-calling-vs-mcp', 'agent-tools', 'prompt-injection', 'ai-privacy-and-security'],
+related: ['mcp', 'mcp-authorization', 'mcp-vs-api', 'function-calling-vs-mcp', 'agent-tools', 'prompt-injection', 'ai-privacy-and-security'],
 sections: [
 ['What is it?', `[[mcp|MCP]] has three roles:
 
@@ -376,14 +376,18 @@ Clients may also offer features back to servers, such as asking the host's model
 **Transports** (how messages travel):
 
 - **stdio:** the host launches the server as a local subprocess and exchanges JSON-RPC messages over standard input/output. Simple and common for local tools.
-- **HTTP-based (Streamable HTTP):** the server runs as a web service; the client sends requests over HTTP and the server can stream responses. Suited to remote and shared servers, and the area where authorization requirements apply. Earlier versions of the spec used HTTP with Server-Sent Events; the specification has changed over time, so use the current docs.
+- **HTTP-based (Streamable HTTP):** the server runs as a web service; the client sends requests over HTTP and the server can stream responses. Suited to remote and shared servers, and the area where authorization requirements apply ([[mcp-authorization]]). Earlier versions of the spec used HTTP with Server-Sent Events; the specification has changed over time, so use the current docs.
 
 **Lifecycle**
+
+*Specification revisions up to 2025-11-25 (stateful):*
 
 1. Client connects and sends an \`initialize\` request with its supported protocol version and capabilities.
 2. Server replies with its own; the client confirms.
 3. Client lists tools/resources/prompts and uses them during the session.
 4. The connection closes when the host shuts down or the user disconnects.
+
+*Revision 2026-07-28 (stateless):* the \`initialize\` handshake and protocol-level sessions (the \`Mcp-Session-Id\` header) were removed. Each request carries the protocol version and client capabilities in its metadata; servers must implement a \`server/discover\` call that advertises supported versions, capabilities and identity; and servers that need state across calls use explicit handles passed as ordinary tool arguments. The same revision replaced server-initiated requests such as sampling and elicitation with a multi round-trip pattern in which the server returns an "input required" result and the client retries with the answers. Check which revision your SDK and host implement before following a tutorial.
 
 **Building a server:** official SDKs exist for several languages. You define tools (name, description, input schema, handler) and the SDK handles the protocol. The handler is ordinary code — which is where you validate input and enforce permissions.`],
 ['Example', `A typical local configuration, as used by several desktop clients (the exact file name and keys differ per host — this is illustrative only):

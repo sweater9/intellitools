@@ -270,7 +270,7 @@ E('eu-ai-act', 'EU AI Act', 'regulation', S, {
   summary: 'The EU AI Act (Regulation (EU) 2024/1689) is a risk-based law regulating AI systems placed on or used in the EU market, with prohibited practices, obligations for high-risk systems, transparency duties and rules for general-purpose AI models.',
   short: 'A **risk-based EU regulation**: some AI practices are prohibited; **high-risk** systems face requirements (risk management, data governance, documentation, human oversight); some systems have **transparency** duties; **general-purpose AI models** have their own obligations. Application dates are phased and were amended in 2026 by Regulation (EU) 2026/1744 — verify the current consolidated timetable. This is orientation, not legal advice.',
   plain: `The EU AI Act sorts AI uses by risk. A few uses are banned outright, risky ones (like AI used in hiring or credit) must meet strict requirements, some need clear disclosure (like chatbots and deepfakes), and the big general-purpose models have their own duties.`,
-  technical: `Regulation (EU) 2024/1689 entered into force in 2024 with phased application. As commonly summarised: prohibitions and AI-literacy duties applied first; obligations for general-purpose AI models followed; most remaining provisions, including high-risk system requirements in the Act\'s annexed use cases, apply later, with a longer transition for AI embedded in products covered by existing safety legislation. Roles include provider, deployer, importer and distributor, each with different duties; penalties scale with turnover. The timetable has already been amended: Regulation (EU) 2026/1744 (the Digital Omnibus on AI), published in the Official Journal on 24 July 2026 and in force from 27 July 2026, moved high-risk obligations for Annex III systems to 2 December 2027 and for AI in products covered by Annex I to 2 August 2028, and added a new prohibited practice; prohibitions and general-purpose AI model obligations kept their earlier dates. Implementing acts, harmonised standards, guidance and corrigenda can still change the practical picture, so exact dates and scope must be checked against the consolidated Official Journal text and current Commission guidance.`,
+  technical: `Regulation (EU) 2024/1689 entered into force in 2024 with phased application. As commonly summarised: prohibitions and AI-literacy duties applied first; obligations for general-purpose AI models followed; most remaining provisions, including high-risk system requirements in the Act\'s annexed use cases, apply later, with a longer transition for AI embedded in products covered by existing safety legislation. Roles include provider, deployer, importer and distributor, each with different duties; penalties scale with turnover. The timetable has already been amended: Regulation (EU) 2026/1744 (the Digital Omnibus on AI), published in the Official Journal on 24 July 2026 and in force from 27 July 2026, moved high-risk obligations for Annex III systems to 2 December 2027 and for AI in products covered by Annex I to 2 August 2028, and added new Article 5 prohibitions that apply from 2 December 2026 (point (ba): AI systems that generate or manipulate realistic intimate or sexually explicit images, video or audio of an identifiable person without explicit consent; point (bb): AI systems that generate or manipulate child sexual abuse material within the meaning of Directive 2011/93/EU; new paragraphs 1a and 1b limit the prohibition to systems whose intended purpose or foreseeable, unsafeguarded outcome is that generation, and to deployers who use a system for that purpose); the original prohibitions have applied since 2 February 2025, and Chapter V (general-purpose AI models) has applied since 2 August 2025 (Article 113 as consolidated on 2026-07-27). Implementing acts, harmonised standards, guidance and corrigenda can still change the practical picture, so exact dates and scope must be checked against the consolidated Official Journal text and current Commission guidance.`,
   aliases: ['EU AI Act', 'AI Act', 'European AI regulation', 'Regulation 2024/1689', 'high-risk AI systems', 'prohibited AI practices', 'general purpose AI obligations', 'GPAI code of practice', 'AI Act compliance', 'AI Act timeline', 'AI Office'],
   intents: ['understand if the AI Act applies to my product', 'prepare for compliance'],
   questions: ['What is the EU AI Act?', 'Does the EU AI Act apply to me?', 'What are high-risk AI systems under the AI Act?', 'When does the EU AI Act take effect?', 'What does the AI Act require of general-purpose models?'],
@@ -284,6 +284,21 @@ E('eu-ai-act', 'EU AI Act', 'regulation', S, {
   when: 'Relevant to anyone offering or deploying AI in or into the EU.',
   sources: [['Regulation (EU) 2024/1689 of the European Parliament and of the Council (Artificial Intelligence Act), Official Journal of the EU', 'eur-lex.europa.eu (locate consolidated text)'], ['European Commission AI Act pages and AI Office guidance', 'digital-strategy.ec.europa.eu (verify)']],
   fresh: 'volatile', tsc: ['All application dates and transitional periods.', 'Any amendment, delay or simplification proposals and their status.', 'Details of GPAI obligations, codes of practice and thresholds.', 'Penalty levels and classification of specific use cases.'],
+  checked: {
+    date: '2026-10-09',
+    claims: [
+      'Regulation (EU) 2026/1744 of 8 July 2026 amends Regulation (EU) 2024/1689 (and (EU) 2018/1139 and (EU) 2023/1230); published as OJ L, 2026/1744 on 24.7.2026; enters into force on the third day after publication (EUR-Lex records first entry into force as 2026-07-27).',
+      'Amended Article 113: Chapters I and II apply from 2 February 2025, except Article 5(1) first subparagraph points (ba) and (bb) and Article 5(1a) and (1b), which apply from 2 December 2026.',
+      'High-risk systems under Article 6(2) and Annex III apply from 2 December 2027; systems under Article 6(1) and Annex I apply from 2 August 2028.',
+      'Consolidated Article 113 (document 02024R1689-20260727): general application 2 August 2026; Chapter III Section 4, Chapter V, Chapter VII, Chapter XII and Article 78 from 2 August 2025 (except Article 101); Articles 102 to 110 from 27 July 2026.',
+      'Article 5(1) points (ba) and (bb) and paragraphs 1a and 1b, as inserted by the amending regulation: non-consensual intimate-imagery generation and child-sexual-abuse-material generation, with the stated purpose/foreseeability limits (re-read on 2026-10-09).'
+    ],
+    sources: [
+      ['Regulation (EU) 2026/1744 (Digital Omnibus on AI), EUR-Lex, English text', 'https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng'],
+      ['White & Case, EU AI Omnibus enters into force (secondary commentary)', 'https://www.whitecase.com/insight-alert/eu-ai-omnibus-enters-force-amending-ai-act']
+    ],
+    unverified: ['Article 5 paragraph 1a/1b details beyond the summary given (re-read the Official Journal text before any legal use).', 'The Article 50(2) transitional period to 2 December 2026 (reported by secondary commentary only; the Article 50 text itself was not read).', 'The consolidated text of Regulation (EU) 2024/1689 as amended.', 'Implementing acts, guidance and national measures.', 'Anything about how the law applies to a particular product; this is orientation, not legal advice.']
+  },
   keywords: ['regulation', 'high-risk', 'compliance', 'EU']
 }),
 
@@ -291,7 +306,7 @@ E('nist-ai-rmf', 'NIST AI Risk Management Framework', 'standard', S, {
   summary: 'The NIST AI RMF is a voluntary US framework for managing AI risks, organised around four functions — Govern, Map, Measure and Manage — with a companion profile for generative AI.',
   short: 'AI RMF 1.0 (NIST AI 100-1, January 2023) structures risk work into **Govern, Map, Measure, Manage** and describes trustworthy-AI characteristics. A Generative AI Profile (NIST AI 600-1, 2024) adds generative-specific risks. It is voluntary guidance, not law.',
   plain: `NIST's framework is a checklist-style guide to thinking about AI risk: set up governance, understand the context, measure the risks and act on them. Organisations use it to organise their own AI risk practices.`,
-  technical: `The framework defines trustworthiness characteristics (valid and reliable, safe, secure and resilient, accountable and transparent, explainable and interpretable, privacy-enhanced, fair with harmful bias managed) and four core functions with categories and subcategories. A Playbook offers suggested actions, and the Generative AI Profile (NIST AI 600-1, published 2024) maps generative-AI-specific risks (such as confabulation, information integrity, data privacy and CBRN information) to actions. Publication details and updates should be verified on NIST\'s site.`,
+  technical: `The framework defines trustworthiness characteristics (valid and reliable, safe, secure and resilient, accountable and transparent, explainable and interpretable, privacy-enhanced, fair with harmful bias managed) and four core functions with categories and subcategories. A Playbook offers suggested actions, and the Generative AI Profile (NIST AI 600-1, published 2024) maps generative-AI-specific risks (such as confabulation, information integrity, data privacy and CBRN information) to actions. AI RMF 1.0 was released on 26 January 2023 as NIST AI 100-1. As of 2026-10-09 NIST\'s AI RMF page states that AI RMF 1.0 is being revised as part of the White House AI Action Plan and that the Playbook will be updated after the revision; NIST also released a concept note for a critical-infrastructure profile on 7 April 2026. Check NIST\'s site for the current revision status.`,
   aliases: ['NIST AI RMF', 'AI RMF', 'NIST AI 100-1', 'NIST AI 600-1', 'generative AI profile', 'Govern Map Measure Manage', 'AI risk management framework', 'trustworthy AI characteristics'],
   intents: ['adopt a recognised AI risk framework', 'map controls to generative AI risks'],
   questions: ['What is the NIST AI RMF?', 'What are the four functions of the AI RMF?', 'Is the NIST AI RMF mandatory?', 'What is the NIST generative AI profile?'],
@@ -303,8 +318,24 @@ E('nist-ai-rmf', 'NIST AI Risk Management Framework', 'standard', S, {
   fix: [['Do not know where to start', 'Start with Govern: owners, policy and inventory; then Map one system end-to-end.']],
   guide: ['Read the framework overview.', 'Create an inventory.', 'Map one system.', 'Define measures.', 'Review and iterate.'],
   when: 'Useful baseline for organisations of any size, especially US-facing.',
-  sources: [['NIST AI 100-1, Artificial Intelligence Risk Management Framework (AI RMF 1.0) (January 2023)', 'nist.gov/itl/ai-risk-management-framework'], ['NIST AI 600-1, Generative AI Profile (2024)', 'nist.gov (verify)']],
-  fresh: 'volatile', tsc: ['Current versions, profiles and any updates; US policy context around the framework.'],
+  sources: [['NIST AI 100-1, Artificial Intelligence Risk Management Framework (AI RMF 1.0) (January 2023)', 'nist.gov/itl/ai-risk-management-framework'], ['NIST AI 600-1, Generative AI Profile (July 2024)', 'nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf']],
+  fresh: 'volatile', tsc: ['Current versions, profiles and any updates; US policy context around the framework.', 'Status of the announced revision of AI RMF 1.0 and of the Playbook update.'],
+  checked: {
+    date: '2026-10-09',
+    claims: [
+      'AI RMF 1.0 is NIST AI 100-1, released on 26 January 2023 (NIST AI RMF page and NIST publication record).',
+      'NIST states AI RMF 1.0 is being revised as part of the White House AI Action Plan; the Playbook (created 8 July 2022, updated 10 June 2026) will be updated after the revision.',
+      'NIST released a concept note for an AI RMF Profile on Trustworthy AI in Critical Infrastructure on 7 April 2026.',
+      'The Generative AI Profile is a cross-sectoral companion profile to AI RMF 1.0 (NIST AI 600-1, July 2024 per the earlier audit).'
+    ],
+    sources: [
+      ['NIST AI Risk Management Framework', 'https://www.nist.gov/itl/ai-risk-management-framework'],
+      ['NIST AI RMF 1.0 publication record (NIST AI 100-1)', 'https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10'],
+      ['NIST AI RMF Playbook', 'https://www.nist.gov/itl/ai-risk-management-framework/nist-ai-rmf-playbook'],
+      ['NIST AI 600-1 Generative AI Profile', 'https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence']
+    ],
+    unverified: ['The four functions, trustworthiness characteristics and GenAI risk list in the technical definition were not re-read against the PDF in this pass.', 'The scope and timing of the revision.', 'The exact publication month of AI 600-1 (taken from the earlier audit).']
+  },
   keywords: ['risk framework', 'trustworthy AI', 'NIST']
 }),
 
@@ -374,7 +405,7 @@ E('owasp-llm-top-10', 'OWASP Top 10 for LLM Applications', 'standard', S, {
   summary: 'The OWASP Top 10 for LLM Applications is a community-maintained list of the most critical security risks in LLM-based applications, such as prompt injection, sensitive information disclosure and excessive agency.',
   short: 'A **checklist of top LLM-app risks** (including prompt injection, improper output handling, sensitive information disclosure, supply-chain issues, excessive agency). Use it to structure threat modelling and testing; categories and numbering differ between editions, so cite the version.',
   plain: `OWASP is the group famous for the "Top 10" web-security risks. They publish a similar list for AI applications, so teams have a shared checklist of what tends to go wrong and how to defend against it.`,
-  technical: `Maintained under the OWASP GenAI Security Project. Version 1.0 was published in August 2023, a 2025 edition followed, and the OWASP GenAI LLM Top 10 2026 was published on 4 August 2026 (current edition as of 2026-10-09). The 2026 list is: LLM01 Prompt Injection, LLM02 Sensitive Information Disclosure, LLM03 Excessive Agency, LLM04 Supply Chain, LLM05 Data and Model Poisoning, LLM06 Unbounded Consumption, LLM07 Misinformation, LLM08 Hidden Context Exposure, LLM09 Vector and Embedding Weaknesses, LLM10 Improper Output Handling. Prompt injection was also first in the 2023 list. Category names and order change between editions (for example, the 2025 edition's system-prompt leakage category does not appear under that name in 2026), so always cite the edition. Use as a taxonomy, not a complete security programme.`,
+  technical: `Maintained under the OWASP GenAI Security Project. Version 1.0 was published in August 2023, a 2025 edition followed, and the OWASP GenAI LLM Top 10 2026 was published in early August 2026 (OWASP\'s resource page is dated 3 August, its repository README says 4 August; current edition as of 2026-10-09). The 2026 list is: LLM01 Prompt Injection, LLM02 Sensitive Information Disclosure, LLM03 Excessive Agency, LLM04 Supply Chain, LLM05 Data and Model Poisoning, LLM06 Unbounded Consumption, LLM07 Misinformation, LLM08 Hidden Context Exposure, LLM09 Vector and Embedding Weaknesses, LLM10 Improper Output Handling. Prompt injection was also first in the 2023 list. Category names and order change between editions (for example, the 2025 edition's system-prompt leakage category does not appear under that name in 2026), so always cite the edition. Use as a taxonomy, not a complete security programme.`,
   aliases: ['OWASP LLM Top 10', 'OWASP GenAI', 'LLM01 prompt injection', 'excessive agency', 'insecure output handling', 'LLM security risks', 'LLM application security checklist', 'OWASP AI security', 'OWASP top 10 AI'],
   intents: ['threat-model an LLM application', 'cite a recognised risk taxonomy'],
   questions: ['What is the OWASP Top 10 for LLMs?', 'What is excessive agency?', 'What are the biggest security risks of LLM apps?', 'What is LLM01?'],
@@ -388,6 +419,19 @@ E('owasp-llm-top-10', 'OWASP Top 10 for LLM Applications', 'standard', S, {
   when: 'Standard starting point for LLM-app security review.',
   sources: [['OWASP GenAI LLM Top 10 2026 (current edition at review)', 'genai.owasp.org/resource/owasp-genai-llm-top-10-2026/'], ['OWASP Top 10 for LLM Applications 2025 (archived edition)', 'genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/'], ['Active source repository', 'github.com/GenAI-Security-Project/GenAI-LLM-Top10']],
   fresh: 'volatile', tsc: ['Edition, category names and ranking.'],
+  checked: {
+    date: '2026-10-09',
+    claims: [
+      'The OWASP GenAI Security Project publishes an "OWASP GenAI LLM Top 10 2026"; its resource page is dated 3 August 2026 and the repository README (read in the earlier audit) gives 4 August 2026.',
+      'The 2026 list as read from the repository README, and the 2023 v1.0 publication date of August 2023, as recorded in the earlier audit.'
+    ],
+    sources: [
+      ['OWASP GenAI LLM Top 10 2026 (resource page)', 'https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/'],
+      ['GenAI-LLM-Top10 repository', 'https://github.com/GenAI-Security-Project/GenAI-LLM-Top10'],
+      ['OWASP Top 10 for LLM Applications 2025 (archive)', 'https://genai.owasp.org/llm-top-10/']
+    ],
+    unverified: ['The exact publication day (3 versus 4 August 2026): the two OWASP sources differ by one day, so this page says "early August 2026".', 'Each category description beyond its name.']
+  },
   keywords: ['security', 'checklist', 'prompt injection']
 }),
 
@@ -563,11 +607,11 @@ E('world-models', 'World Models', 'concept', B, {
   summary: 'A world model is a learned model of how an environment evolves in response to actions, used to imagine outcomes for planning, to train agents cheaply, or to generate interactive simulations.',
   short: 'World models **predict future observations or latent states given actions**, enabling planning and "learning in imagination" (Dreamer) or interactive generated environments (Genie-style models). The term is used broadly and loosely — check what a given model actually predicts and how well it stays consistent over long horizons.',
   plain: `Humans can imagine what will happen if we push a glass off a table without doing it. A world model gives an AI that kind of mental simulator: it predicts what comes next if it takes an action, so it can plan or practise in imagination instead of in the real world.`,
-  technical: `Ha & Schmidhuber (2018) popularised learned world models (a VAE for perception plus a recurrent dynamics model) for training controllers inside the model. The Dreamer line (Hafner et al., 2019–2023) learns latent dynamics and trains policies on imagined rollouts ([[reinforcement-learning]]). LeCun (2022) proposes joint-embedding predictive architectures as a path to world models for autonomous intelligence. Generative interactive environments such as Genie (Bruce et al., 2024) and large video models are sometimes described as world simulators ([[video-generation-models]]); whether they learn accurate physics or just plausible appearance is debated. Challenges: compounding error over long rollouts, partial observability, action controllability and evaluation.`,
+  technical: `Ha & Schmidhuber (2018) popularised learned world models (a VAE for perception plus a recurrent dynamics model) for training controllers inside the model. The Dreamer line (Hafner et al., 2019–2023) learns latent dynamics and trains policies on imagined rollouts ([[reinforcement-learning]]). LeCun (2022) proposes joint-embedding predictive architectures as a path to world models for autonomous intelligence. Generative interactive environments such as Genie (Bruce et al., 2024) and large video models are sometimes described as world simulators ([[video-generation-models]]; OpenAI's 2024 Sora report used that framing while listing basic physics failures, see [[sora-ai-video]]); NVIDIA's open Cosmos family targets physical AI explicitly ([[nvidia-cosmos]]); whether they learn accurate physics or just plausible appearance is debated. Challenges: compounding error over long rollouts, partial observability, action controllability and evaluation.`,
   aliases: ['world model', 'learned simulator', 'Dreamer', 'DreamerV3', 'model-based RL', 'JEPA', 'Genie world model', 'video world model', 'latent dynamics', 'imagination-based learning', 'world simulator'],
   intents: ['understand model-based RL and learned simulators', 'evaluate "world model" claims'],
   questions: ['What is a world model in AI?', 'What is Dreamer?', 'What is JEPA?', 'Are video generators world models?', 'What is model-based reinforcement learning?'],
-  pre: ['reinforcement-learning', 'variational-autoencoders'], rel: ['embodied-ai', 'vision-language-action-models', 'video-generation-models', 'diffusion-models', 'markov-decision-processes', 'sim-to-real-transfer'],
+  pre: ['reinforcement-learning', 'variational-autoencoders'], rel: ['embodied-ai', 'vision-language-action-models', 'video-generation-models', 'nvidia-cosmos', 'sora-ai-video', 'diffusion-models', 'markov-decision-processes', 'sim-to-real-transfer'],
   vs: [['reinforcement-learning', 'Model-free RL learns policies directly from experience; world-model methods also learn environment dynamics.'], ['video-generation-models', 'Video generators produce plausible footage; a world model must respond to actions and stay consistent.']],
   tech: ['DreamerV3', 'Genie', 'JEPA family', 'MuZero (model-based planning)'],
   patterns: ['Learn dynamics in a latent space; plan or train a policy on imagined rollouts.', 'Short-horizon rollouts with periodic real-data correction.', 'Ensemble models to estimate uncertainty.', 'Evaluate on action-conditioned prediction accuracy and downstream task success.'],
