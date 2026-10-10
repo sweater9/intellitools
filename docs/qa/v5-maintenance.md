@@ -14,7 +14,7 @@ The approved privacy eyebrow, headline, body and indicators remain byte-for-byte
 
 ## Browser reproduction
 
-Install Playwright and browser dependencies, serve this checkout on port 8765, then run:
+Install Playwright and browser dependencies, then run (the maintenance runner serves an isolated checkout automatically):
 
 ```sh
 npm test
@@ -31,9 +31,9 @@ BASE_URL=https://intellitools.online PRODUCTION_SMOKE=1 node tests/v5-maintenanc
 
 Repeat for Firefox and WebKit. The production workflow can be dispatched on this maintenance branch; it reads production and does not deploy.
 
-Each engine checks 1440, 1024, 390 and 375px widths, with 8 scenario groups per width: homepage/54-tool catalogue/privacy/navigation/shortcuts, three existing tool workspaces, Knowledge search and article navigation, workflow simulation/save, mock API response/invalid JSON, daily quiz completion/persistence, word puzzle solve, and service-worker precache/controller and offline homepage reload in Chromium and Firefox. WebKit cache contents/controller are verified, but offline transport/reload remains explicitly unverified: its local browser returned an internal navigation error and failed an offline fetch probe. This limitation is recorded in JSON, not presented as an offline pass. JSON results and homepage/workflow screenshots are uploaded by CI. Production reports D1–D5 findings separately from functional failures because those fixes have not been deployed. A smoke pass does not mean the production defects have disappeared.
+Each engine checks 1440, 1024, 390 and 375px widths, with 8 scenario groups per width: homepage/54-tool catalogue/privacy/navigation/shortcuts, three existing tool workspaces, Knowledge search and article navigation, workflow simulation/save, mock API response/invalid JSON, daily quiz completion/persistence, word puzzle solve, and service-worker precache/controller and offline fallback. Candidate tests simulate an actual localhost server outage, exercising service-worker fallback in all engines without Playwright offline transport restrictions. Production verifies offline reload in Chromium; Firefox/WebKit live offline navigation remains unverified because Playwright offline transport prevents service-worker dispatch. Their production cache/controller checks still execute. The limitation is recorded in JSON, not presented as an offline pass. JSON results and homepage/workflow screenshots are uploaded by CI. Production reports D1–D5 findings separately from functional failures because those fixes have not been deployed. A smoke pass does not mean the production defects have disappeared.
 
-Candidate tests stub the external advertising script to isolate application regressions; production tests do not. JavaScript and console errors fail the run. Missing Playwright or browser launch failures do not silently pass.
+The isolated candidate server omits only the external advertising script from served homepage HTML (including its service-worker precache) to isolate application regressions; the checkout and production HTML are not altered by the harness. Production tests do not intercept advertisements. JavaScript and console errors fail the run. Missing Playwright or browser launch failures do not silently pass.
 
 ## Deployment and environment evidence
 
