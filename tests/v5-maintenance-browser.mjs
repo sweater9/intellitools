@@ -11,6 +11,7 @@ const production = process.env.PRODUCTION_SMOKE === '1';
 const dir = process.env.MAINTENANCE_ARTIFACTS || `artifacts/v5-maintenance-${production ? 'production' : 'candidate'}-${engine}`;
 await fs.mkdir(dir, { recursive: true });
 const results = [], issues = [], defects = [], limitations = [];
+const productionDiagnostics = { exceptions: [], serviceWorkerHtmlForExternalRequests: [], responseReadFailures: [] };
 // A server outage tests SW fallback without Playwright's offline transport blocking SW dispatch.
 // Candidate HTML omits only the external ad script, including in the SW precache.
 let server, serverUnavailable = false;
@@ -45,7 +46,24 @@ try {
   const context = await browser.newContext({ viewport: {width,height:900} });
   const page = await context.newPage();
   page.setDefaultTimeout(10000);
-  page.on('pageerror', e => issues.push(`${width} JS: ${e.stack || e.message}`));
+  let phase = 'online';
+  const responseTasks = new Set();
+  page.on('pageerror', e => {
+   const stack = e.stack || e.message;
+   issues.push(`${width} JS: ${stack}`); // Every error still fails the run.
+   if (production) productionDiagnostics.exceptions.push({width,phase,stack,throwingScriptOrigin:stack.match(/https?:\/\/[^/\s)]+/)?.[0] || null});
+  });
+  if (production) page.on('response', response => {
+   if (!response.fromServiceWorker() || new URL(response.url()).origin === new URL(base).origin) return;
+   const request = response.request(), capturedPhase = phase;
+   const task = (async()=>{
+    try {
+     const body = await response.text();
+     if (/^\s*<!doctype html/i.test(body)) productionDiagnostics.serviceWorkerHtmlForExternalRequests.push({width,phase:capturedPhase,url:response.url(),resourceType:request.resourceType(),status:response.status(),contentType:response.headers()['content-type'],fromServiceWorker:true,bodyPrefix:body.slice(0,100)});
+    } catch(e) { productionDiagnostics.responseReadFailures.push({width,url:response.url(),message:e.message}); }
+   })();
+   responseTasks.add(task); task.finally(()=>responseTasks.delete(task));
+  });
   page.on('console', m => { if(m.type()==='error') issues.push(`${width} console: ${m.text()}`); });
   async function goto(path) { const r = await page.goto(new URL(path,base).href,{waitUntil:'networkidle',timeout:45000}); assert.ok(r?.ok(),`${path}: HTTP ${r?.status()}`); }
   async function overflow() { assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth <= innerWidth+2),`horizontal overflow at ${width}`); }
@@ -137,19 +155,21 @@ try {
     try { await page.reload({waitUntil:'domcontentloaded'}); assert.equal(await page.locator('#activeCount').innerText(),'54'); }
     finally { serverUnavailable = false; }
    } else if (engine === 'chromium') {
+    phase = 'offline';
     await context.setOffline(true);
-    try { await page.reload({waitUntil:'domcontentloaded'}); assert.equal(await page.locator('#activeCount').innerText(),'54'); }
-    finally { await context.setOffline(false); }
+    try { await page.reload({waitUntil:'domcontentloaded'}); assert.equal(await page.locator('#activeCount').innerText(),'54'); await page.waitForTimeout(1500); }
+    finally { await context.setOffline(false); phase = 'online'; }
    } else {
     limitations.push(`${width}: ${engine} live-production offline transport/reload not verified; cache population and active controller verified. Playwright offline transport prevents SW navigation in this engine.`);
    }
   });
+  await Promise.allSettled([...responseTasks]);
   await context.close();
  }
 } finally {
  await browser.close();
  if (server) await new Promise(resolve=>server.close(resolve));
- await fs.writeFile(`${dir}/results.json`,JSON.stringify({engine,base,production,results,issues,defects,limitations},null,2));
+ await fs.writeFile(`${dir}/results.json`,JSON.stringify({engine,base,production,results,issues,defects,limitations,productionDiagnostics},null,2));
 }
-console.log(JSON.stringify({engine,base,checks:results.length,issues,defects,limitations},null,2));
+console.log(JSON.stringify({engine,base,checks:results.length,issues,defects,limitations,productionDiagnostics},null,2));
 if(issues.length)process.exitCode=1;
