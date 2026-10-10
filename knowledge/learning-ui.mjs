@@ -23,7 +23,7 @@ async function init() {
   const status = node('p', 'Loading learning guides…', 'kn-learning-status');
   status.setAttribute('role', 'status');
   panel.append(heading, status);
-  if (form) form.insertAdjacentElement('afterend', panel); else host.append(panel);
+  if (form) document.querySelector('#kn-search-results').insertAdjacentElement('afterend', panel); else host.append(panel);
   let index;
   try {
     const response = await fetch('search-index.json');
