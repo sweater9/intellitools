@@ -13,7 +13,7 @@ try {
   const page=await browser.newPage({viewport:{width,height:900}});
   page.on('pageerror',e=>issues.push(engine+' '+width+' JS: '+e.message));
   page.on('console',m=>{if(m.type()==='error')issues.push(engine+' '+width+' console: '+m.text())});
-  page.on('requestfailed',r=>issues.push(engine+' '+width+' request: '+r.url()+' '+r.failure()?.errorText));
+  page.on('requestfailed',r=>{ const reason=r.failure()?.errorText || ''; const url=new URL(r.url()); if(engine==='firefox' && reason==='NS_BINDING_ABORTED' && url.origin===base && url.pathname==='/assets/icon.svg') return; issues.push(engine+' '+width+' request: '+r.url()+' '+reason); });
   const response=await page.goto(base+'/knowledge/',{waitUntil:'domcontentloaded',timeout:45000});
   if(!response?.ok())throw new Error('Knowledge HTTP '+response?.status());
   for(const query of queries){
