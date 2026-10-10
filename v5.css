@@ -607,3 +607,24 @@
   max-width: 100%;
   overflow-x: auto;
 }
+
+/* Mobile Workflow Lab containment: prevent canvas descendants from widening
+   the document while retaining horizontal panning inside the canvas panel. */
+@media (max-width: 600px) {
+  main#main:has(.workflow-app) {
+    overflow-x: clip;
+  }
+  .workflow-app {
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    min-width: 0;
+  }
+  .workflow-app > .panel-container {
+    width: 100%;
+    min-width: 0;
+  }
+  .workflow-app .canvas-container {
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+  }
+}
