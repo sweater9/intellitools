@@ -4,13 +4,16 @@ import fs from 'node:fs/promises';
 import http from 'node:http';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createHash } from 'node:crypto';
 const pw = await import(process.env.PLAYWRIGHT_PACKAGE || 'playwright');
 const engine = process.argv[2] || 'chromium';
 let base = process.env.BASE_URL || 'http://127.0.0.1:8765';
 const production = process.env.PRODUCTION_SMOKE === '1';
+const acceptance = production && process.env.PRODUCTION_ACCEPTANCE === '1';
 const dir = process.env.MAINTENANCE_ARTIFACTS || `artifacts/v5-maintenance-${production ? 'production' : 'candidate'}-${engine}`;
 await fs.mkdir(dir, { recursive: true });
 const results = [], issues = [], defects = [], limitations = [];
+const failedRequests = [], expectedOfflineExternalErrors = [], integrity = [], cacheUpdates = [], externalOfflineChecks = [];
 const productionDiagnostics = { exceptions: [], serviceWorkerHtmlForExternalRequests: [], responseReadFailures: [] };
 // A server outage tests SW fallback without Playwright's offline transport blocking SW dispatch.
 // Candidate HTML omits only the external ad script, including in the SW precache.
@@ -40,10 +43,19 @@ const privacy = {
  indicators: ['✓ On-device processing', '✓ Works offline', '✓ No account required']
 };
 async function check(name, fn) { try { await fn(); results.push(name); console.log("PASS " + name); } catch (e) { issues.push(`${name}: ${e.message}`); console.error("FAIL " + name + ": " + e.message); } }
-async function maintenance(name, fn) { if (!production) return fn(); try { await fn(); } catch(e) { defects.push(`${name}: ${e.message}`); } }
+async function maintenance(name, fn) { if (!production) return fn(); try { await fn(); } catch(e) { defects.push(`${name}: ${e.message}`); if (acceptance) issues.push(`${name}: ${e.message}`); } }
 try {
  for (const width of [1440,1024,390,375]) {
   const context = await browser.newContext({ viewport: {width,height:900} });
+  if (acceptance) await context.addInitScript(() => {
+   window.__acceptanceSeed = (async()=>{
+    if (sessionStorage.getItem('acceptance-cache-seeded')) return;
+    sessionStorage.setItem('acceptance-cache-seeded','1');
+    const cache = await caches.open('intellitools-v5-0');
+    await cache.put(new URL('/index.html',location.origin),new Response('<!doctype html>STALE_ACCEPTANCE_CACHE',{headers:{'Content-Type':'text/html'}}));
+    await caches.open('intellitools-acceptance-obsolete');
+   })();
+  });
   const page = await context.newPage();
   page.setDefaultTimeout(10000);
   let phase = 'online';
@@ -64,11 +76,35 @@ try {
    })();
    responseTasks.add(task); task.finally(()=>responseTasks.delete(task));
   });
-  page.on('console', m => { if(m.type()==='error') issues.push(`${width} console: ${m.text()}`); });
+  page.on('requestfailed', request => failedRequests.push({width,phase,url:request.url(),reason:request.failure()?.errorText}));
+  page.on('console', m => {
+   if(m.type()!=='error') return;
+   const url=m.location().url;
+   const external = url && /^https?:/.test(url) && new URL(url).origin !== new URL(base).origin;
+   const expected = acceptance && phase==='offline' && external && /(?:ERR_INTERNET_DISCONNECTED|NS_ERROR_OFFLINE|offline|Load failed|Failed to load resource)/i.test(m.text());
+   if(expected) expectedOfflineExternalErrors.push({width,url,message:m.text()});
+   else issues.push(`${width} console: ${m.text()}`);
+  });
   async function goto(path) { const r = await page.goto(new URL(path,base).href,{waitUntil:'networkidle',timeout:45000}); assert.ok(r?.ok(),`${path}: HTTP ${r?.status()}`); }
   async function overflow() { assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth <= innerWidth+2),`horizontal overflow at ${width}`); }
   await check(`${width}: homepage, catalogue, shortcuts, privacy, navigation`, async()=>{
    await goto('/');
+   if (acceptance) {
+    for(const asset of ['index.html','sw.js','v2.css','v5.css','play/daily/daily-app.js']) {
+     const response = await context.request.get(new URL('/'+asset,base).href,{headers:{'Cache-Control':'no-cache'}});
+     assert.ok(response.ok(),`deployed asset ${asset}: ${response.status()}`);
+     const actual=createHash('sha256').update(await response.body()).digest('hex');
+     const expected=createHash('sha256').update(await fs.readFile(new URL('../'+asset,import.meta.url))).digest('hex');
+     assert.equal(actual,expected,`deployed asset differs from expected merge: ${asset}`);
+     integrity.push({width,asset,sha256:actual});
+    }
+    await page.evaluate(()=>window.__acceptanceSeed);
+    await page.evaluate(()=>navigator.serviceWorker.ready);
+    await page.waitForFunction(async()=>!(await caches.keys()).includes('intellitools-acceptance-obsolete'));
+    const refreshed = await page.evaluate(async()=>{const cache=await caches.open('intellitools-v5-0');return (await cache.match(new URL('/index.html',location.origin))).text()});
+    assert.ok(!refreshed.includes('STALE_ACCEPTANCE_CACHE'),'installation failed to replace stale cached homepage');
+    cacheUpdates.push({width,staleHomepageReplaced:true,obsoleteCacheDeleted:true});
+   }
    assert.equal(await page.locator('#activeCount').innerText(),'54');
    assert.equal(await page.locator('#toolCatalog .toolcard').count(),54);
    assert.equal(await page.locator('.hero .eyebrow').innerText(),privacy.eyebrow);
@@ -148,6 +184,7 @@ try {
   await check(`${width}: service worker cache (offline reload where supported)`,async()=>{
    await goto('/');await page.evaluate(()=>navigator.serviceWorker.ready);
    await page.reload({waitUntil:'networkidle'});assert.ok(await page.evaluate(()=>!!navigator.serviceWorker.controller));
+   if (acceptance) await page.evaluate(async()=>{const registration=await navigator.serviceWorker.getRegistration();await registration.update()});
    const cached=await page.evaluate(async()=>{const c=await caches.open('intellitools-v5-0');return (await c.keys()).map(r=>new URL(r.url).pathname)});
    for(const path of ['/labs/workflow/index.html','/labs/api-playground/index.html','/play/daily/index.html','/play/word-logic/index.html']) assert.ok(cached.includes(path),`uncached ${path}`);
    if (!production) {
@@ -166,22 +203,39 @@ try {
      assert.ok(await page.evaluate(()=>window.wordLogicApp.isCompleted),'offline word puzzle must execute');
     }
     finally { serverUnavailable = false; }
-   } else if (engine === 'chromium') {
+   } else if (engine === 'chromium' || acceptance) {
     phase = 'offline';
     await context.setOffline(true);
-    try { await page.reload({waitUntil:'domcontentloaded'}); assert.equal(await page.locator('#activeCount').innerText(),'54'); await page.waitForTimeout(1500); }
+    try { await page.reload({waitUntil:'domcontentloaded'}); assert.equal(await page.locator('#activeCount').innerText(),'54'); await page.waitForTimeout(1500);
+     if (acceptance) {
+      for (const url of ['https://ep1.adtrafficquality.google/getconfig/sodar?acceptance=offline','https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?acceptance=offline']) {
+       const result = await page.evaluate(async url=>{try { const response=await fetch(url);const body=await response.text();return {status:response.status(),contentType:response.headers.get('content-type'),html:/^\s*<!doctype html/i.test(body),prefix:body.slice(0,80)}; } catch(e) {return {rejected:true,message:String(e)}}},url);
+       assert.ok(result.rejected,`external request must fail natively offline, not receive cached content: ${url} ${JSON.stringify(result)}`);
+       externalOfflineChecks.push({width,engine,url,...result});
+      }
+      for (const [route,app] of [['/labs/workflow/','workflowApp'],['/labs/api-playground/','apiPlaygroundApp'],['/play/daily/','dailyChallengeApp'],['/play/word-logic/','wordLogicApp']]) {
+       const response=await page.goto(new URL(route,base).href,{waitUntil:'domcontentloaded'});
+       assert.ok(response?.ok(),`live offline navigation ${route}`);
+       await page.waitForFunction(name=>!!window[name],app); await overflow();
+      }
+     }
+    }
     finally { await context.setOffline(false); phase = 'online'; }
    } else {
     limitations.push(`${width}: ${engine} live-production offline transport/reload not verified; cache population and active controller verified. Playwright offline transport prevents SW navigation in this engine.`);
    }
   });
   await Promise.allSettled([...responseTasks]);
+  if (acceptance) {
+   const wrong=productionDiagnostics.serviceWorkerHtmlForExternalRequests.filter(record=>record.width===width);
+   assert.deepEqual(wrong,[],'external requests received service-worker homepage HTML');
+  }
   await context.close();
  }
 } finally {
  await browser.close();
  if (server) await new Promise(resolve=>server.close(resolve));
- await fs.writeFile(`${dir}/results.json`,JSON.stringify({engine,base,production,results,issues,defects,limitations,productionDiagnostics},null,2));
+ await fs.writeFile(`${dir}/results.json`,JSON.stringify({engine,base,production,results,issues,defects,limitations,productionDiagnostics,acceptance,failedRequests,expectedOfflineExternalErrors,integrity,cacheUpdates,externalOfflineChecks},null,2));
 }
-console.log(JSON.stringify({engine,base,checks:results.length,issues,defects,limitations,productionDiagnostics},null,2));
+console.log(JSON.stringify({engine,base,checks:results.length,issues,defects,limitations,productionDiagnostics,acceptance,failedRequests,expectedOfflineExternalErrors,integrity,cacheUpdates,externalOfflineChecks},null,2));
 if(issues.length)process.exitCode=1;

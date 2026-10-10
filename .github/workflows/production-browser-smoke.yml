@@ -28,6 +28,7 @@ jobs:
         env:
           BASE_URL: https://intellitools.online
           PRODUCTION_SMOKE: "1"
+          PRODUCTION_ACCEPTANCE: "1"
         run: node tests/v5-maintenance-browser.mjs ${{ matrix.browser }}
       - if: always()
         uses: actions/upload-artifact@v4
