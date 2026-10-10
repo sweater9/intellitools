@@ -67,6 +67,16 @@ function appendTools(found) {
 }
 
 function render(query) {
+  try {
+    renderResults(query);
+  } catch {
+    const message = "Search could not complete. Try another query or refresh the page.";
+    results.replaceChildren(el("p", "kn-gap", message));
+    status.textContent = message;
+  }
+}
+
+function renderResults(query) {
   results.replaceChildren();
   if (!index || !lexicon) {
     if (loadFailed) showLoadError();

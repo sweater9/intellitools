@@ -73,6 +73,16 @@ need(stem("embeddings") === stem("embedding") && stem("models") === stem("model"
 const cmp = ask("rag vs fine tuning");
 need(answerOf(cmp) === "rag-vs-fine-tuning" && cmp.comparison, "comparison query should answer the comparison page");
 need(answerOf(ask("what is rag")) === "rag", "a plain definition must not be hijacked by a comparison page");
+need(answerOf(ask("transformers vs state space models")) === "transformers-vs-state-space-models", "exact comparison title must win over the broader state-space concept");
+need(searchKnowledge(index, lexicon, "transformers vs state space models").answer?.page.id === "transformers-vs-state-space-models", "comparison ranking also works in lexical fallback");
+for (const q of ["constructor", "what is a constructor in javascript", ...Object.getOwnPropertyNames(Object.prototype)]) {
+  need(Boolean(searchKnowledge(index, lexicon, q)), "inherited property query must not crash lexical search: " + q);
+  need(Boolean(ask(q)), "inherited property query must not crash intelligent search: " + q);
+}
+const inherited = Object.create({ constructor: ["rag"], inheritedtoken: ["rag"] });
+need(searchKnowledge(index, { ...lexicon, synonyms: inherited }, "inheritedtoken").solid === false, "inherited synonym definitions must not be used");
+need(Boolean(searchKnowledge(index, { ...lexicon, synonyms: { constructor: true } }, "constructor")), "malformed own synonyms must not crash search");
+
 
 // ---- 6. ambiguity -------------------------------------------------------------------------------------------------
 const amb = ask("graph");

@@ -39,11 +39,11 @@ async function results(page, q, { settle = 450 } = {}) {
 
 for (const name of wanted) {
   let browser;
-  try { browser = await pw[name].launch({ headless: true }); }
+  try { browser = await pw[name].launch({ headless: true, ...(process.env.BROWSER_EXECUTABLE ? { executablePath: process.env.BROWSER_EXECUTABLE } : {}) }); }
   catch (error) { lines.push("- " + name + ": SKIPPED (" + String(error.message).split("\n")[0] + ")"); continue; }
   const problems = [];
   const open = async (opts = {}) => {
-    const context = await browser.newContext({ viewport: { width: opts.width || 1280, height: 900 } });
+    const context = await browser.newContext({ viewport: { width: opts.width || 1280, height: opts.height || 900 } });
     const page = await context.newPage();
     page.on("pageerror", (e) => problems.push("JS error: " + e.message));
     page.on("console", (m) => { if (m.type() === "error" && !/Failed to load resource/.test(m.text())) problems.push("console: " + m.text()); });
@@ -81,6 +81,51 @@ for (const name of wanted) {
     // 7. typed learn-more labels
     const seq = await (await results(page, "what to learn after rag")).innerText();
     need(name, /next step/.test(seq), "next-step labels missing for 'what to learn after rag'");
+    await context.close();
+  }
+
+  // Release blockers: inherited object keys never crash; exact comparisons win.
+  {
+    const { page, context } = await open();
+    for (const query of ["constructor", "what is a constructor in javascript", ...Object.getOwnPropertyNames(Object.prototype)]) {
+      const text = await (await results(page, query)).innerText();
+      need(name, text.length > 0 && !/Search could not complete/.test(text), "inherited property query crashed: " + query);
+    }
+    const out = await results(page, "transformers vs state space models");
+    need(name, await out.locator(".kn-read").getAttribute("href") === "transformers-vs-state-space-models.html", "exact comparison article should win");
+    await context.close();
+  }
+  // D1: submitted result titles are actually within both requested viewports, without scrolling.
+  for (const width of [1280, 375]) {
+    const { page, context } = await open({ width, height: 800 });
+    need(name, await page.evaluate(() => scrollY) === 0, "initial page must start without scrolling");
+    await page.fill("#kn-q", "what is rag");
+    await page.keyboard.press("Enter");
+    const out = page.locator("#kn-search-results");
+    await out.locator(".kn-read").waitFor();
+    const title = await out.locator("h2").first().boundingBox();
+    need(name, title && title.y >= 0 && title.y + title.height <= 800, "first result title must be visible without scrolling at " + width + "x800");
+    need(name, await page.evaluate(() => scrollY) === 0, "submitting must not require scrolling at " + width + "x800");
+    need(name, await page.evaluate(() => Boolean(document.querySelector('#kn-search-results').compareDocumentPosition(document.querySelector('#kn-v4-learning')) & Node.DOCUMENT_POSITION_FOLLOWING)), "learning panel must follow search results");
+    await context.close();
+  }
+  // D2: a core failure (including the intelligence fallback) shows an error and recovers.
+  {
+    const context = await browser.newContext();
+    const page = await context.newPage();
+    page.on("pageerror", error => problems.push("JS error: " + error.message));
+    await page.route("**/search-core.mjs", async route => {
+      const response = await route.fetch();
+      const body = (await response.text()).replace('export function searchKnowledge(index, lexicon, rawQuery) {', 'export function searchKnowledge(index, lexicon, rawQuery) {\n if (rawQuery === "simulate failure") throw new Error("Injected search failure");');
+      await route.fulfill({response, body});
+    });
+    await page.goto(base + "/knowledge/");
+    await page.waitForTimeout(600);
+    const text = await (await results(page, "simulate failure")).innerText();
+    need(name, /Search could not complete/.test(text), "unexpected retrieval failure must display a safe message");
+    need(name, /Search could not complete/.test(await page.locator('#kn-search-status').innerText()), "error must also be announced");
+    const recovered = await (await results(page, "what is rag")).innerText();
+    need(name, /Read the guide/.test(recovered) && !/Search could not complete/.test(recovered), "next query must recover after an error");
     await context.close();
   }
 

@@ -32,8 +32,9 @@ function tokensOf(value, stop) {
 function expand(list, synonyms) {
   const out = new Set(list);
   for (const token of list) {
+    if (!Object.hasOwn(synonyms, token)) continue;
     const extra = synonyms[token];
-    if (!extra) continue;
+    if (!Array.isArray(extra)) continue;
     for (const phrase of extra) {
       for (const part of normalize(phrase).split(" ")) if (part) out.add(part);
     }
@@ -166,7 +167,8 @@ export function searchKnowledge(index, lexicon, rawQuery) {
     const keywordHit = overlap(queryTokens, (page.keywords || []).join(" "), stop);
     score += titleHit * 6 + questionHit * 4 + summaryHit * 1 + keywordHit * 4;
     if (hasPhrase(query, page.title)) {
-      score += 14;
+      // An exact comparison title must outrank a broad concept-intent boost.
+      score += normalize(page.title) === query && /\b(?:vs|versus)\b/.test(query) ? 42 : 14;
       notes.push("title");
     }
     if (hasPhrase(query, page.question)) {

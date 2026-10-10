@@ -27,6 +27,21 @@ try {
    assert.equal(await panel.locator('progress').getAttribute('max'), '4');
   }
  });
+ await check('search result titles are visible without scrolling at 1280x800 and 375x800', async () => {
+  for (const width of [1280, 375]) {
+   await page.setViewportSize({ width, height: 800 });
+   await home();
+   assert.equal(await page.evaluate(() => scrollY), 0);
+   await page.locator('#kn-q').fill('what is rag');
+   await page.keyboard.press('Enter');
+   await page.locator('#kn-search-results .kn-read').waitFor();
+   const title = await page.locator('#kn-search-results h2').first().boundingBox();
+   assert.ok(title && title.y >= 0 && title.y + title.height <= 800, `first result title below viewport at ${width}px`);
+   assert.equal(await page.evaluate(() => scrollY), 0, 'submitting must not require scrolling');
+   assert.equal(await page.evaluate(() => Boolean(document.querySelector('#kn-search-results').compareDocumentPosition(document.querySelector('#kn-v4-learning')) & Node.DOCUMENT_POSITION_FOLLOWING)), true, 'learning panel follows the results');
+  }
+  await page.setViewportSize({width:1280,height:900});
+ });
  await check('search stays usable and path selection preserves q/semantic parameters', async () => {
   await home('?q=What%20is%20an%20LLM%3F&semantic=1');
   await page.locator('#kn-search-results .kn-read').waitFor();
