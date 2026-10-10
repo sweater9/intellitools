@@ -1,12 +1,14 @@
 # V5 maintenance verification
 
-The maintenance candidate starts at production merge `3f7976af0763cda9107baf50944a8ed1252ea1eb` and fixes D1–D5 only. The existing `fix/v5-postlaunch-homepage-escape` commit `bce9f084228dd5cecd11384a3747cb7923bf13cf` was inspected; its one-line newline correction is included without merging that branch.
+The maintenance candidate starts at production merge `3f7976af0763cda9107baf50944a8ed1252ea1eb` and fixes D1–D5 and the service-worker fallback defect discovered during browser QA. The existing `fix/v5-postlaunch-homepage-escape` commit `bce9f084228dd5cecd11384a3747cb7923bf13cf` was inspected; its one-line newline correction is included without merging that branch.
 
 - D1: Replace the literal section separator `\n` with a newline.
 - D2: Give the homepage catalogue search an explicit accessible name.
 - D3: One tab stop in the labelled quiz radiogroup; arrow/Home/End answer selection; native Space/Enter activation; scoped A–D/1–4 shortcuts; retain focus on the chosen answer, then Tab to Next; focus the first answer in the next question. Only the user-selected answer is checked, including wrong answers. Locked answers use `aria-disabled` and cannot change the recorded result. Native Enter no longer advances twice.
 - D4: Homepage controls and navigation/footer links have at least 44px target height; narrow navigation links and favourite buttons also have 44px width. Rules are scoped to the homepage.
 - D5: Quick Start uses four equal grid rows with consistent text/icon/arrow columns and line heights.
+
+The service worker now leaves cross-origin requests to the browser, and returns a network error for uncached non-navigation assets rather than incorrectly returning homepage HTML as JavaScript or CSS. Cached assets and offline navigation fallback remain supported; `tests/v5-service-worker.mjs` covers these behaviors.
 
 The approved privacy eyebrow, headline, body and indicators remain byte-for-byte unchanged. `tests/v5-maintenance.mjs`, included in `npm test`, guards the full block.
 
