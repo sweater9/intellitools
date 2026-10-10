@@ -73,6 +73,22 @@ async function run() {
             await page.click('#btnStepSim').catch(() => {});
           } else if (item.name === 'labs-api') {
             await page.waitForSelector('#btnSendRequest', { timeout: 5000 });
+            // Security regression check: ensure malformed JSON containing HTML payload is never executed or parsed as DOM elements
+            await page.evaluate(() => {
+              const textarea = document.getElementById('bodyTextarea');
+              if (textarea) {
+                textarea.value = '{"malicious": <img src="x" onerror="window.__xss_fired=true">}';
+                textarea.dispatchEvent(new Event('input'));
+              }
+            });
+            const xssFired = await page.evaluate(() => window.__xss_fired);
+            if (xssFired) {
+              issues.push(`${engine} ${viewport.width}px XSS vulnerability detected in API Playground JSON validation`);
+            }
+            const imgCount = await page.evaluate(() => document.querySelectorAll('#jsonValidationStatus img').length);
+            if (imgCount > 0) {
+              issues.push(`${engine} ${viewport.width}px Unsanitized <img> element rendered in JSON validation status`);
+            }
           } else if (item.name === 'play-daily') {
             await page.waitForSelector('#quizContainer', { timeout: 5000 });
           } else if (item.name === 'play-wordlogic') {

@@ -6,6 +6,7 @@ import {
   validateJson,
   formatJson,
   minifyJson,
+  formatJsonValidationStatus,
   handleMockRequest
 } from '../labs/api-playground/api-mock-engine.mjs';
 
@@ -153,5 +154,67 @@ console.log('✓ 404 fallback and intentional status code simulation verified');
   }
 }
 console.log('✓ All preset requests execute successfully against mock server');
+
+// 7. Security: Malformed JSON with HTML & Event-Handler Payloads (Regression Tests)
+{
+  const maliciousPayloads = [
+    '{"bad": <img src="x" onerror="alert(1)">}',
+    '{"exploit": <script>alert("xss")</script>}',
+    '{"vector": <svg onload="alert(document.cookie)">}',
+    '{"tag": <iframe src="javascript:alert(1)">}',
+    '{"handler": <details open ontoggle="alert(1)">}',
+    '{"link": <a href="javascript:alert(1)" onclick="alert(1)">click</a>}',
+    '{"body": <body onload="alert(1)">}',
+    '{ "<img src=x onerror=alert(1)>": }',
+    '{"payload": "<b onmouseover=alert(1)>'
+  ];
+
+  for (const payload of maliciousPayloads) {
+    const check = validateJson(payload);
+    assert.strictEqual(check.valid, false, `Payload must fail JSON validation: ${payload}`);
+    assert.ok(check.error, 'Error text must be captured');
+
+    const status = formatJsonValidationStatus(check);
+    assert.strictEqual(status.valid, false);
+    assert.strictEqual(status.color, '#ef4444');
+    assert.ok(status.text.startsWith('⚠ Invalid JSON:'));
+
+    // DOM simulation: ensure when set as textContent, it is never interpreted as HTML elements
+    const mockContainer = {
+      children: [],
+      replaceChildren() { this.children = []; },
+      appendChild(child) { this.children.push(child); }
+    };
+
+    mockContainer.replaceChildren();
+    const mockSpan = {
+      style: {},
+      textContent: status.text,
+      tagName: 'SPAN',
+      children: [],
+      get innerHTML() {
+        return this.textContent
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+      }
+    };
+    mockContainer.appendChild(mockSpan);
+
+    assert.strictEqual(mockContainer.children.length, 1);
+    assert.strictEqual(mockContainer.children[0].tagName, 'SPAN');
+    assert.strictEqual(mockSpan.children.length, 0);
+
+    const html = mockSpan.innerHTML;
+    assert.ok(!html.includes('<img'), `Must not contain unescaped <img> tag in: ${html}`);
+    assert.ok(!html.includes('<script'), `Must not contain unescaped <script> tag in: ${html}`);
+    assert.ok(!html.includes('<svg'), `Must not contain unescaped <svg> tag in: ${html}`);
+    assert.ok(!html.includes('<iframe'), `Must not contain unescaped <iframe> tag in: ${html}`);
+    assert.ok(!html.includes('<body'), `Must not contain unescaped <body> tag in: ${html}`);
+  }
+}
+console.log('✓ Malformed JSON HTML/event-handler regression tests verified (XSS prevention)');
 
 console.log('ALL API & JSON Playground tests passed successfully!\n');

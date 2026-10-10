@@ -84,6 +84,25 @@ export function minifyJson(jsonStr) {
 }
 
 /**
+ * Formats a validation status record into safe text and display styling.
+ * Never returns HTML markup or unsanitized user content.
+ */
+export function formatJsonValidationStatus(check) {
+  if (!check) return { text: '', color: 'var(--muted)', valid: false };
+  if (check.empty) {
+    return { text: 'Empty payload (valid)', color: 'var(--muted)', valid: true };
+  }
+  if (check.valid) {
+    return { text: '✓ Valid JSON', color: '#10b981', valid: true };
+  }
+  return {
+    text: `⚠ Invalid JSON: ${check.error} (Line ${check.line}, Col ${check.column})`,
+    color: '#ef4444',
+    valid: false
+  };
+}
+
+/**
  * In-memory Mock Database
  */
 const INITIAL_DATABASE = {

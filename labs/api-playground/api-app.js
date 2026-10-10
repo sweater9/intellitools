@@ -5,6 +5,7 @@ import {
   validateJson,
   formatJson,
   minifyJson,
+  formatJsonValidationStatus,
   handleMockRequest
 } from './api-mock-engine.js';
 
@@ -171,18 +172,17 @@ class ApiPlaygroundApp {
 
   checkBodyJson() {
     const val = this.bodyTextarea.value;
-    if (!val.trim()) {
-      this.jsonValidationStatus.innerHTML = '<span style="color:var(--muted); font-size:12px;">Empty payload (valid)</span>';
-      return true;
-    }
+    if (!this.jsonValidationStatus) return true;
     const check = validateJson(val);
-    if (check.valid) {
-      this.jsonValidationStatus.innerHTML = '<span style="color:#10b981; font-weight:700; font-size:12px;">✓ Valid JSON</span>';
-      return true;
-    } else {
-      this.jsonValidationStatus.innerHTML = `<span style="color:#ef4444; font-weight:700; font-size:12px;">⚠ Invalid JSON: ${check.error} (Line ${check.line}, Col ${check.column})</span>`;
-      return false;
-    }
+    const status = formatJsonValidationStatus(check);
+
+    this.jsonValidationStatus.replaceChildren();
+    const span = document.createElement('span');
+    span.style.cssText = `color:${status.color}; font-weight:700; font-size:12px;`;
+    span.textContent = status.text;
+    this.jsonValidationStatus.appendChild(span);
+
+    return check.valid;
   }
 
   sendRequest() {
