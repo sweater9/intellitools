@@ -534,16 +534,19 @@
         "read my email",
         "send an email",
         "connect to email",
-        "gmail inbox"
+        "gmail inbox",
+        "connect an ai agent to gmail",
+        "connect ai agent to gmail",
+        "connect an agent to gmail"
       ],
       "pages": [
         {
           "id": "agent-tools",
-          "boost": 30
+          "boost": 42
         },
         {
           "id": "function-calling",
-          "boost": 22
+          "boost": 24
         },
         {
           "id": "mcp",

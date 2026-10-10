@@ -7,6 +7,8 @@ const lexicon = JSON.parse(readFileSync(new URL("../knowledge/search-lexicon.jso
 const cases = [
   ["toy transformer robot for kids birthday", false],
   ["transformer toy", false],
+  ["transformer toy robots for kids", false],
+  ["ollama llama animal facts", false],
   ["can my python pet eat mice", false],
   ["docker is a clothing brand right", false],
   ["react to this message politely", false],
@@ -22,12 +24,12 @@ const cases = [
   ["What is the SharePoint Framework?", true],
   ["what is model context protocol", true],
   ["how to build RAG with Python", true],
-  ["how do I connect an AI agent to Gmail", true],
+  ["how do I connect an AI agent to Gmail", true, "agent-tools"],
 ];
 let failures = 0;
-for (const [query, expectedSolid] of cases) {
+for (const [query, expectedSolid, expectedPage] of cases) {
   const result = searchKnowledge(index, lexicon, query);
-  const pass = Boolean(result.solid) === expectedSolid;
+  const pass = Boolean(result.solid) === expectedSolid && (!expectedPage || result.answer?.page?.id === expectedPage);
   console.log(JSON.stringify({ pass, query, expectedSolid, actualSolid: Boolean(result.solid), answer: result.answer?.page?.id ?? null }));
   if (!pass) failures++;
 }
