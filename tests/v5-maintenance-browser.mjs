@@ -70,7 +70,7 @@ try {
    assert.ok((await page.locator('#discoveryShelf').innerText()).toLowerCase().includes('recently used'));
    assert.equal(await page.locator('.favorite-btn').first().getAttribute('aria-pressed'),'true');
    await maintenance('D4 touch targets',async()=>{
-    const bad=await page.locator('button,input,select,.btn,.navlinks a,footer a').evaluateAll(els=>els.filter(e=>{const r=e.getBoundingClientRect();return r.width>0&&r.height>0&&(r.height<43.5||r.width<43.5)}).map(e=>({text:e.textContent?.trim(),id:e.id,width:e.getBoundingClientRect().width,height:e.getBoundingClientRect().height})));
+    const bad=await page.locator('a[href],button,input,select').evaluateAll(els=>els.filter(e=>{const r=e.getBoundingClientRect();return r.width>0&&r.height>0&&(r.height<43.5||r.width<43.5)}).map(e=>({text:e.textContent?.trim(),id:e.id,width:e.getBoundingClientRect().width,height:e.getBoundingClientRect().height})));
     assert.deepEqual(bad,[]);
    });
    await maintenance('D5 Quick Start alignment',async()=>{
