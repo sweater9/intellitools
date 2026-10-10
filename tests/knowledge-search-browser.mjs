@@ -161,5 +161,7 @@ console.log(lines.join("\n"));
 writeFileSync(new URL("../knowledge/SEARCH-INTELLIGENCE-BROWSER.md", import.meta.url), "# Knowledge search intelligence: browser results\n\nRun: `node tests/knowledge-search-browser.mjs` (local static server, no production traffic).\n\n" + lines.join("\n") + "\n");
 const ran = lines.filter((l) => /: (PASS|FAIL)/.test(l)).length;
 if (!ran) failures.push("no browser could be launched");
+// In CI every requested engine must actually run; a skipped engine is a failure there, never a silent pass.
+if (process.env.CI && lines.some((l) => /SKIPPED/.test(l))) failures.push("an engine was skipped in CI: " + lines.filter((l) => /SKIPPED/.test(l)).join("; "));
 if (failures.length) { console.error("BROWSER FAILURES (" + failures.length + "):\n" + failures.map((f) => "- " + f).join("\n")); process.exit(1); }
 console.log("browser checks passed");

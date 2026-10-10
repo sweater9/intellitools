@@ -2,7 +2,7 @@
 
 Run: `node tests/knowledge-search-browser.mjs` (local static server, no production traffic).
 
-- chromium: PASS (query render p50 34.2 ms, max 149.2 ms, page load 102 ms)
+- chromium: PASS (query render p50 30.1 ms, max 117.9 ms, page load 121 ms)
 
 Asset sizes (raw / gzip):
 - knowledge/search-core.mjs: 9.9 KB / 3.2 KB
