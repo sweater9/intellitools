@@ -14,7 +14,7 @@ try {
   page.on('pageerror',e=>issues.push(engine+' '+width+' JS: '+e.message));
   page.on('console',m=>{if(m.type()==='error')issues.push(engine+' '+width+' console: '+m.text())});
   page.on('requestfailed',r=>{ const reason=r.failure()?.errorText || ''; const url=new URL(r.url()); if(engine==='firefox' && reason==='NS_BINDING_ABORTED' && url.origin===base && url.pathname==='/assets/icon.svg') return; issues.push(engine+' '+width+' request: '+r.url()+' '+reason); });
-  const response=await page.goto(base+'/knowledge/',{waitUntil:'domcontentloaded',timeout:45000});
+  const response=await page.goto(base+'/knowledge/',{waitUntil:'load',timeout:45000});
   if(!response?.ok())throw new Error('Knowledge HTTP '+response?.status());
   for(const query of queries){
    await page.locator('#kn-q').fill(query);
@@ -24,9 +24,9 @@ try {
    if(!count)throw new Error(engine+' '+width+' no result link for '+query);
    const href=await links.first().getAttribute('href');
    const dest=new URL(href,page.url()).href;
-   const article=await page.goto(dest,{waitUntil:'domcontentloaded',timeout:45000});
+   const article=await page.goto(dest,{waitUntil:'load',timeout:45000});
    if(!article?.ok())throw new Error('Article HTTP '+article?.status()+' '+dest);
-   await page.goto(base+'/knowledge/',{waitUntil:'domcontentloaded'});
+   await page.goto(base+'/knowledge/',{waitUntil:'load'});
    output.push({engine,width,query,result:dest});
   }
   const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2);
@@ -35,10 +35,10 @@ try {
   await page.close();
  }
  const home=await browser.newPage();
- const response=await home.goto(base+'/',{waitUntil:'domcontentloaded',timeout:45000});
+ const response=await home.goto(base+'/',{waitUntil:'load',timeout:45000});
  if(!response?.ok())throw new Error('Homepage HTTP '+response?.status());
  for(const id of ['ai-prompt-builder','password-generator','json-formatter']){
-  const r=await home.goto(base+'/?tool='+id,{waitUntil:'domcontentloaded',timeout:45000});
+  const r=await home.goto(base+'/?tool='+id,{waitUntil:'load',timeout:45000});
   if(!r?.ok())throw new Error('Tool HTTP '+r?.status()+' '+id);
   await home.waitForTimeout(900);
   const text=(await home.locator('body').innerText()).toLowerCase();
