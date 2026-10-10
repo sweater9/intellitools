@@ -47,7 +47,8 @@ async function maintenance(name, fn) { if (!production) return fn(); try { await
 try {
  for (const width of [1440,1024,390,375]) {
   const context = await browser.newContext({ viewport: {width,height:900} });
-  if (acceptance) await context.addInitScript(() => {
+  if (acceptance) await context.addInitScript(({origin}) => {
+   if (location.origin !== origin || window !== window.top) return;
    window.__acceptanceSeed = (async()=>{
     if (sessionStorage.getItem('acceptance-cache-seeded')) return;
     sessionStorage.setItem('acceptance-cache-seeded','1');
@@ -55,7 +56,7 @@ try {
     await cache.put(new URL('/index.html',location.origin),new Response('<!doctype html>STALE_ACCEPTANCE_CACHE',{headers:{'Content-Type':'text/html'}}));
     await caches.open('intellitools-acceptance-obsolete');
    })();
-  });
+  }, {origin:new URL(base).origin});
   const page = await context.newPage();
   page.setDefaultTimeout(10000);
   let phase = 'online';
@@ -79,9 +80,9 @@ try {
   page.on('requestfailed', request => failedRequests.push({width,phase,url:request.url(),reason:request.failure()?.errorText}));
   page.on('console', m => {
    if(m.type()!=='error') return;
-   const url=m.location().url;
+   const url=m.location().url || (m.text().match(/https:\/\/(?:ep1\.adtrafficquality\.google|pagead2\.googlesyndication\.com)\/[^\s"']+/)?.[0] || '');
    const external = url && /^https?:/.test(url) && new URL(url).origin !== new URL(base).origin;
-   const expected = acceptance && phase==='offline' && external && /(?:ERR_INTERNET_DISCONNECTED|NS_ERROR_OFFLINE|offline|Load failed|Failed to load resource)/i.test(m.text());
+   const expected = acceptance && phase==='offline' && external && /(?:ERR_INTERNET_DISCONNECTED|NS_ERROR_OFFLINE|offline|Load failed|Failed to load resource|CORS request did not succeed)/i.test(m.text());
    if(expected) expectedOfflineExternalErrors.push({width,url,message:m.text()});
    else issues.push(`${width} console: ${m.text()}`);
   });
