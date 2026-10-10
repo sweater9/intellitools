@@ -84,11 +84,11 @@ function shell({ title, desc, file, body, ld }) {
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(title)} | IntelliTools Knowledge</title><meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${SITE}${file}"><meta property="og:type" content="article"><meta property="og:site_name" content="IntelliTools"><meta property="og:title" content="${esc(title)} | IntelliTools Knowledge"><meta property="og:description" content="${esc(desc)}"><meta property="og:url" content="${SITE}${file}">
-<meta name="twitter:card" content="summary"><link rel="icon" href="../assets/icon.svg" type="image/svg+xml"><link rel="stylesheet" href="../v2.css"><link rel="stylesheet" href="knowledge.css">
+<meta name="twitter:card" content="summary"><link rel="icon" href="../assets/icon.svg" type="image/svg+xml"><link rel="stylesheet" href="../v2.css"><link rel="stylesheet" href="knowledge.css"><link rel="stylesheet" href="learning.css">
 <script type="application/ld+json">${JSON.stringify(ld)}</script></head>
 <body>${header}
 ${body}
-${footer}</body></html>`;
+${footer}<script type="module" src="learning-ui.mjs"></script></body></html>`;
 }
 
 const pathsFor = slug => paths.filter(p => p.steps.includes(slug));

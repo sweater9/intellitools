@@ -4,6 +4,10 @@ import { searchKnowledge } from "./search-core.mjs";
 const SEMANTIC = new URLSearchParams(location.search).get("semantic") === "1";
 let semantic = null;
 let searchHybrid = null;
+// Search intelligence (additive): typo/abbreviation repair, topic clusters, tool and related-guide mapping.
+// Loaded lazily; if any of it fails the page keeps using the plain lexical engine.
+let intelligent = null;
+let extras = null;
 
 const form = document.querySelector("#kn-search-form");
 const input = document.querySelector("#kn-q");
@@ -47,7 +51,32 @@ function section(kicker, title) {
   return block;
 }
 
+function appendTools(found) {
+  if (!found.tools || !found.tools.length) return;
+  const tools = section("Use IntelliTools", null);
+  for (const tool of found.tools) {
+    const card = el("div", "kn-toolpick");
+    const a = el("a");
+    a.href = toolHref(tool.url);
+    a.textContent = tool.name;
+    card.append(a);
+    card.append(el("p", null, tool.reason));
+    tools.append(card);
+  }
+  results.append(tools);
+}
+
 function render(query) {
+  try {
+    renderResults(query);
+  } catch {
+    const message = "Search could not complete. Try another query or refresh the page.";
+    results.replaceChildren(el("p", "kn-gap", message));
+    status.textContent = message;
+  }
+}
+
+function renderResults(query) {
   results.replaceChildren();
   if (!index || !lexicon) {
     if (loadFailed) showLoadError();
@@ -59,18 +88,28 @@ function render(query) {
     status.textContent = "";
     return;
   }
-  const found = semantic
-    ? searchHybrid(index, lexicon, semantic, q, "gated", {
-        // Release mode: semantics improves ranking / Closest pages only.
-        // It must never create, withhold, or swap a confident lexical answer.
-        vetoZ: -1e9,
-        lexVetoCoverage: 0,
-        ovZ: 1e9,
-        contradictVeto: false,
-        dTauZ: 1e9,
-        limitedConfidence: true
-      })
-    : searchKnowledge(index, lexicon, q);
+  const hybrid = (text) => searchHybrid(index, lexicon, semantic, text, "gated", {
+    // Release mode: semantics improves ranking / Closest pages only.
+    // It must never create, withhold, or swap a confident lexical answer.
+    vetoZ: -1e9,
+    lexVetoCoverage: 0,
+    ovZ: 1e9,
+    contradictVeto: false,
+    dTauZ: 1e9,
+    limitedConfidence: true
+  });
+  const base = (text) => (semantic ? hybrid(text) : searchKnowledge(index, lexicon, text));
+  let found;
+  try {
+    found = intelligent ? intelligent(index, lexicon, q, extras || {}, { engine: base }) : base(q);
+  } catch {
+    found = base(q); // the intelligence layer must never take search down
+  }
+  if (found.rewrite) {
+    const note = el("p", "kn-rewrite");
+    note.textContent = "Showing results for “" + found.rewrite.to + "” (you typed “" + found.rewrite.from + "”).";
+    results.append(note);
+  }
   if (found.gap) {
     const note = el("p", "kn-gap");
     note.textContent = found.gap.message;
@@ -79,26 +118,30 @@ function render(query) {
   if (!found.solid) {
     const block = section("Answer / guide", "No confident match found.");
     const p = el("p");
-    p.textContent = found.weak.length
-      ? "The closest pages are listed below. They are not confident matches, so none is shown as the answer."
-      : "No Knowledge guide matched this query.";
+    p.textContent = found.disambiguation
+      ? "“" + found.disambiguation.term + "” can mean several things. Pick the one you mean."
+      : found.weak.length
+        ? "The closest pages are listed below. They are not confident matches, so none is shown as the answer."
+        : "No Knowledge guide matched this query.";
     block.append(p);
     results.append(block);
     if (found.weak.length) {
-      const weak = section("Closest pages", "Weak matches");
+      const weak = section(found.disambiguation ? "Which one do you mean?" : "Closest pages", found.disambiguation ? null : "Weak matches");
       const list = el("ul", "kn-linklist");
+      const labels = new Map((found.disambiguation ? found.disambiguation.options : []).map((o) => [o.page, o.label]));
       for (const row of found.weak) {
         const li = el("li");
         const a = el("a");
         a.href = pageHref(row.page);
-        a.textContent = row.page.title;
+        a.textContent = labels.get(row.page.id) || row.page.title;
         li.append(a);
         list.append(li);
       }
       weak.append(list);
       results.append(weak);
     }
-    status.textContent = "No solid guide for “" + q + "”.";
+    appendTools(found);
+    status.textContent = "No solid guide for “" + q + "”." + (found.tools && found.tools.length ? " Tool suggested: " + found.tools.map((t) => t.name).join(", ") + "." : "");
     return;
   }
 
@@ -119,6 +162,22 @@ function render(query) {
   more.append(link);
   answer.append(more);
   results.append(answer);
+
+  if (found.cluster && found.cluster.pages.length) {
+    const cluster = section("Related guides", found.cluster.title);
+    if (found.cluster.note) cluster.append(el("p", null, found.cluster.note));
+    const list = el("ul", "kn-linklist");
+    for (const row of found.cluster.pages) {
+      const li = el("li");
+      const a = el("a");
+      a.href = pageHref(row.page);
+      a.textContent = row.page.title;
+      li.append(a);
+      list.append(li);
+    }
+    cluster.append(list);
+    results.append(cluster);
+  }
 
   if (found.need.length) {
     const need = section("What you'll need", null);
@@ -145,25 +204,14 @@ function render(query) {
       const small = el("small");
       small.textContent = row.page.question || "";
       li.append(a, small);
+      if (row.relation && row.relation !== "related") li.append(el("em", "kn-relation", " " + row.relation));
       list.append(li);
     }
     learn.append(list);
     results.append(learn);
   }
 
-  if (found.tools.length) {
-    const tools = section("Use IntelliTools", null);
-    for (const tool of found.tools) {
-      const card = el("div", "kn-toolpick");
-      const a = el("a");
-      a.href = toolHref(tool.url);
-      a.textContent = tool.name;
-      card.append(a);
-      card.append(el("p", null, tool.reason));
-      tools.append(card);
-    }
-    results.append(tools);
-  }
+  appendTools(found);
 
   const extra = found.gap ? " A coverage note is shown." : "";
   const toolNote = found.tools.length ? " Tool suggested: " + found.tools.map((t) => t.name).join(", ") + "." : "";
@@ -184,6 +232,7 @@ async function load() {
     showLoadError();
     return;
   }
+  loadIntelligence();
   if (SEMANTIC) {
     // Lazy: lexical search is usable immediately; the ~1 MB (gzipped) semantic index loads in the background.
     Promise.all([import("./hybrid-search.mjs"), import("./semantic-core.mjs"), fetch("semantic-index.json").then((r) => r.json())])
@@ -195,6 +244,23 @@ async function load() {
   if (initial) {
     input.value = initial;
     render(initial);
+  }
+}
+
+// Optional layer: a failure of any piece leaves plain lexical search in place and is not shown to the visitor.
+async function loadIntelligence() {
+  try {
+    const files = ["query-understanding.json", "tool-map.json", "relations.json"];
+    const [mod, ...raw] = await Promise.all([
+      import("./search-intelligence.mjs"),
+      ...files.map((f) => fetch(f).then((r) => (r.ok ? r.json() : null)).catch(() => null))
+    ]);
+    const byFile = Object.fromEntries(files.map((f, i) => [f, raw[i]]));
+    extras = mod.loadExtras((rel) => byFile[rel] || null);
+    intelligent = mod.searchIntelligent;
+    if (input.value.trim()) render(input.value);
+  } catch {
+    intelligent = null;
   }
 }
 
