@@ -2,9 +2,9 @@ name: Quality
 
 on:
   push:
-    branches: [main, feature/intellitools-v2, release/v2-full-integration, feature/knowledge-integration-v3, qa/knowledge-v3-ambiguity-gate]
+    branches: [main, feature/intellitools-v2, release/v2-full-integration, feature/knowledge-integration-v3, qa/knowledge-v3-ambiguity-gate, feature/knowledge-v4-learning, feature/knowledge-v4-search-intelligence]
   pull_request:
-    branches: [main, feature/knowledge-base-preview]
+    branches: [main, feature/knowledge-base-preview, feature/knowledge-v4-learning]
 
 permissions:
   contents: read
@@ -20,3 +20,15 @@ jobs:
           node-version: 22
       - run: npm test
       - run: node tests/knowledge-ambiguity-gate.mjs
+
+  search-browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install --no-save playwright@1.56.0
+      - run: npx playwright install --with-deps chromium firefox webkit
+      - run: node tests/knowledge-search-browser.mjs

@@ -3,14 +3,24 @@
 
 const KEEP = new Set(["ai", "rag", "mcp", "llm", "api", "sql", "js", "ui"]);
 
+// Pure, so results are cached: every query re-normalizes the same page titles, summaries and keywords.
+const NORMALIZE_CACHE = new Map();
+const NORMALIZE_CACHE_MAX = 20000;
+
 export function normalize(value) {
-  return String(value || "")
+  const input = String(value || "");
+  const hit = NORMALIZE_CACHE.get(input);
+  if (hit !== undefined) return hit;
+  const out = input
     .toLowerCase()
     .replace(/[\u2019']/g, "")
     .replace(/&/g, " and ")
     .replace(/[^a-z0-9]+/g, " ")
     .trim()
     .replace(/\s+/g, " ");
+  if (NORMALIZE_CACHE.size >= NORMALIZE_CACHE_MAX) NORMALIZE_CACHE.clear();
+  NORMALIZE_CACHE.set(input, out);
+  return out;
 }
 
 function tokensOf(value, stop) {
@@ -76,7 +86,7 @@ const AMBIGUOUS_CONTEXT = {
   react: { everyday: ["message", "politely", "emotion", "respond", "reaction"], technical: ["javascript", "typescript", "component", "state", "hook", "jsx", "frontend", "app", "chatbot"] }
 };
 
-function suppressAmbiguousTop(row, query) {
+export function suppressAmbiguousTop(row, query) {
   if (!row) return false;
   const rule = AMBIGUOUS_CONTEXT[row.page.id];
   if (!rule) return false;
