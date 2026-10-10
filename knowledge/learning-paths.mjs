@@ -14,7 +14,7 @@ export const PATHS = {
   "Learn programming": {
     beginner: ["python", "javascript", "git", "github"],
     intermediate: ["python-for-ai", "typescript", "nodejs", "react"],
-    advanced: ["calling-ai-apis-with-python", "api-design", "docker", "cloud-computing"]
+    advanced: ["calling-ai-apis-with-python", "rest-apis", "api-authentication", "model-apis"]
   }
 };
 export function recommendPath(topic, level, pages) {
